@@ -13,10 +13,10 @@ type: docx
 token: XXUAdI8T2oOmw2x7iITc8vJgnjm
 sidebar_position: 18
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud
@@ -40,7 +40,7 @@ loadCollectionSync: ((data) => Promise<ResStatus>) = ...
 ## Request Syntax
 
 ```javascript
-milvusClient.loadCollectionSync({ 
+await milvusClient.loadCollectionSync({ 
     db_name: string,
     collection_name: string,
     refresh?: boolean,
@@ -109,7 +109,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.loadCollectionSync({ collection_name: 'my_collection' });
 ```
 

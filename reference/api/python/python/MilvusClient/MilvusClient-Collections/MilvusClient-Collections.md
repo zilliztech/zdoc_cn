@@ -12,10 +12,10 @@ token: CqXrfDyXZlkNSrdh5eJcI0Fznjh
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

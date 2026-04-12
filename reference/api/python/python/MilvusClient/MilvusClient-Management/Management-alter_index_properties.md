@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This operation changes the specified index properties. | Python | MilvusClient"
 type: docx
-token: TRFadKWOAofCVoxH3qYcdTvynHf
+token: QvyHdbEHholEqXxypKNcHHD5n0c
 sidebar_position: 14
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud

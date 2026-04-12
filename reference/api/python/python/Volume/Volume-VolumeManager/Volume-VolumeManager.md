@@ -13,10 +13,10 @@ type: docx
 token: XdZ6dFzA3oUu4dxWh7Kcz4dhnQg
 sidebar_position: 4
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -60,7 +60,7 @@ VolumeManager(
 
     **[REQUIRED]**
 
-    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com` (Global) or `https://api.cloud.zilliz.com.cn` (China), depending on the platform you have registered with.
+    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com`.
 
 - **api_key** (*str*) -
 

@@ -12,10 +12,10 @@ token: DFjqfW5yclNaqWdpjpqckLM2nud
 sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

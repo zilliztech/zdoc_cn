@@ -13,10 +13,10 @@ type: docx
 token: TEUDde2xbo0JT7xtVvtcF53Nnub
 sidebar_position: 2
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
@@ -169,16 +169,4 @@ res = client.get(
 #     }
 # ]
 ```
-
-## Related methods
-
-- [delete()](./Vector-delete)
-
-- [insert()](./Vector-insert)
-
-- [query()](./Vector-query)
-
-- [search()](./Vector-search)
-
-- [upsert()](./Vector-upsert)
 

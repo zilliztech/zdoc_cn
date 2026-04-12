@@ -12,10 +12,10 @@ token: Snf8fZZTklTziidxXP2cL4cRnOf
 sidebar_position: 6
 sidebar_label: "Partitions"
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud

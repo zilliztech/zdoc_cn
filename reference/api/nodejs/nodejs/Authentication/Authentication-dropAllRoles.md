@@ -13,10 +13,10 @@ type: docx
 token: E5rYdw3EWo2WKZxEyGac049an3e
 sidebar_position: 11
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops all roles in Milvus.
 
 ```javascript
-dropAllRoles(data?): Promise<ResStatus[]>
+await milvusClient.dropAllRoles(data?)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropAllRoles({
+await milvusClient.dropAllRoles({
    timeout?: number
 })
 ```

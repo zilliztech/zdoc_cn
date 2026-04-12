@@ -13,10 +13,10 @@ type: docx
 token: FZN8dtlIRoMSGBxF7b1cWX48n0b
 sidebar_position: 18
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

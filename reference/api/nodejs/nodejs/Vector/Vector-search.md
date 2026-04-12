@@ -11,12 +11,12 @@ notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Node.js"
 type: docx
 token: C8kgdOn3pozkrtxCBMLcqcSTnTb
-sidebar_position: 8
+sidebar_position: 7
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation conducts a vector similarity search with an optional scalar filtering expression.
 
 ```javascript
-search(data): Promise<ResStatus>
+await milvusClient.search(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.search({
+await milvusClient.search({
   db_name?: string,
   collection_name: string,
   partition_names?: string[];
@@ -222,7 +222,7 @@ milvusClient.search({
 
 - **hints** (*string*) -
 
-     A hints string to improve search performance.
+    A hints string to improve search performance.
 
 - **round_decimal** (*number*) -
 
@@ -369,7 +369,10 @@ This method returns a promise that resolves to a **SearchResults** object.
 ## Example
 
 ```plaintext
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const searchResults = await milvusClient.search({
    collection_name: 'my_collection',
    vector: [1, 2, 3, 4],

@@ -13,10 +13,10 @@ type: docx
 token: XAIndF6XWoQzvRxDvpLcgEE1nEb
 sidebar_position: 5
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -76,7 +76,7 @@ RemoteBulkWriterParam.newBuilder()
 
 - `withCollectionSchema(CreateCollectionReq.CollectionSchema collectionSchema)`
 
-    The schema of the target collection that is defined by instantiating [CreateCollectionReq.CollectionSchema](./v2-Collections-CollectionSchema).
+    The schema of the target collection that is defined by instantiating CreateCollectionReq.CollectionSchema.
 
 - `withConnectParam(StorageConnectParam connectParam)`
 

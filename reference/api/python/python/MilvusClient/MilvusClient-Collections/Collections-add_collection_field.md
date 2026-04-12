@@ -13,10 +13,10 @@ type: docx
 token: IquldHhyGo9s4IxF3cicOXGnnNf
 sidebar_position: 20
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
@@ -44,9 +44,6 @@ This operation adds a new scalar field to an existing collection without recreat
 ```python
 add_collection_field(
     collection_name: str,
-    field_name: str,
-    data_type: DataType,
-    desc: str = "",
     timeout: Optional[float] = None,
     **kwargs
 )

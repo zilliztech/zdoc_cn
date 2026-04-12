@@ -12,10 +12,10 @@ token: N5ynfBUN2l7doCdZw7ecFSl5nqb
 sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

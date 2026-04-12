@@ -11,12 +11,12 @@ notebook: false
 description: "This operation returns the data type of an Array of Structs field. | Java | v2"
 type: docx
 token: MPJ0dxzDIoNKYPxGA5PcD2F8nRb
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +45,7 @@ getDataType()
 
 **RETURN TYPE:**
 
-*DataType*
+*[DataType](./v2-Collections-DataType)*
 
 **RETURNS:**
 

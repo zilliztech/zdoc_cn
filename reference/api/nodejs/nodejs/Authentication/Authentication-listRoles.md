@@ -13,10 +13,10 @@ type: docx
 token: GIeMdvjlMoLwGrxUOu3cFw7bnWc
 sidebar_position: 20
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation lists all custom roles.
 
 ```javascript
-listRoles(data): Promise<SelectRoleResponse>
+await milvusClient.listRoles(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.listRoles(
+await milvusClient.listRoles(
     includeUserInfo?: boolean,
     timeout?: number
 )

@@ -13,10 +13,10 @@ type: docx
 token: Sh7HdgJOIoJipXx5AoNcicjMnyd
 sidebar_position: 5
 keywords: 
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud

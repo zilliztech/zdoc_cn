@@ -13,10 +13,10 @@ type: docx
 token: Kqlodu0AWoefKvxczcxc1c36nlf
 sidebar_position: 4
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud

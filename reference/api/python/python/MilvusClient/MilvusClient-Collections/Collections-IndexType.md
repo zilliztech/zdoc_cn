@@ -13,10 +13,10 @@ type: docx
 token: SlrCd1GEbooMh2xLylZc6Oirnrc
 sidebar_position: 15
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

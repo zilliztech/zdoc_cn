@@ -13,10 +13,10 @@ type: docx
 token: DCK5d56UZop0kGxpQu8cLqlvndg
 sidebar_position: 2
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation compacts and merges small segments into a larger one to save memory usage and improve search performance.
 
 ```javascript
-compact(data): Promise<CompactionResponse>
+await milvusClient.compact(data)
 ```
 
 ## Request Syntax
@@ -95,7 +95,10 @@ This method returns a promise that resolves to a *CompactionResponse* object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.compact({
       collection_name: 'my_collection',
  });

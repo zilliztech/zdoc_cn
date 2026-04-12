@@ -13,10 +13,10 @@ type: docx
 token: KVSUdHV0ho7nnwxeQKMcEL47nKe
 sidebar_position: 4
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud

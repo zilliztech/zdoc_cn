@@ -13,10 +13,10 @@ type: docx
 token: L6i8dmvsBogcmIxtORsc1Mu0nhg
 sidebar_position: 5
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

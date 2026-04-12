@@ -12,10 +12,10 @@ token: UJtvfGYb4lKoF1dy7iicFwcAnWr
 sidebar_position: 6
 sidebar_label: "Volume"
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud

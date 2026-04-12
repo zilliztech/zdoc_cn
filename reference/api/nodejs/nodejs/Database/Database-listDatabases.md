@@ -13,10 +13,10 @@ type: docx
 token: Kp9Dd2dIgoxyDixuqtqctPZXnFb
 sidebar_position: 5
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation lists all existing databases.
 
 ```javascript
-listDatabases(data?): Promise<ListDatabasesResponse>
+await milvusClient.listDatabases(data?)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.listDatabases({
+await milvusClient.listDatabases({
     timeout?: number
 })
 ```
@@ -53,7 +53,7 @@ milvusClient.listDatabases({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ListDatabaseResponse>*
+**RETURNS** *Promise |&lt;ListDatabaseResponse&gt;*
 
 This method returns a promise that resolves to a **ListDatabaseResponse** object.
 
@@ -93,6 +93,9 @@ This method returns a promise that resolves to a **ListDatabaseResponse** object
 ## Example
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const res = await milvusClient.listDatabases();
 ```

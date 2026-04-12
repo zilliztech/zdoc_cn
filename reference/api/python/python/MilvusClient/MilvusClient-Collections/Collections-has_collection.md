@@ -13,10 +13,10 @@ type: docx
 token: SSQ6dFGdxouy7hxRwCOcatnEn0e
 sidebar_position: 14
 keywords: 
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -94,22 +94,4 @@ client.has_collection(collection_name="test_collection_2")
 
 # False
 ```
-
-## Related methods
-
-- [create_collection()](./Collections-create_collection)
-
-- [create_schema()](./Collections-create_schema)
-
-- [describe_collection()](./Collections-describe_collection)
-
-- [drop_collection()](./Collections-drop_collection)
-
-- [get_collection_stats()](./Collections-get_collection_stats)
-
-- [list_collections()](./Collections-list_collections)
-
-- [rename_collection()](./Collections-rename_collection)
-
-- [DataType](./Collections-DataType)
 

@@ -13,10 +13,10 @@ type: docx
 token: EjnFdC5EfoIkoExSBOxcEC2hnbg
 sidebar_position: 3
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +54,6 @@ bulkImport.getImportProgress(
 
     ```python
     https://api.cloud.zilliz.com
-    # https://api.cloud.zilliz.com.cn 
     ```
 
 - **request** (*[BaseDescribeImportRequest](./v2-BulkImport-getImportProgress#basedescribeimportrequest)*) -  

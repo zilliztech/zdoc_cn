@@ -11,12 +11,12 @@ notebook: false
 description: "This operation gets the descriptions of multiple collections in a batch. | Java | v2"
 type: docx
 token: SRI6dEn82oNe4Uxro8hcyFV3n1d
-sidebar_position: 30
+sidebar_position: 32
 keywords: 
+  - milvus lite
+  - milvus benchmark
   - managed milvus
   - Serverless vector database
-  - milvus open source
-  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
@@ -59,7 +59,7 @@ batchDescribeCollection(BatchDescribeCollectionReq.builder()
 
 **RETURN TYPE:**
 
-*List\<DescribeCollectionResp>*
+*List&lt;DescribeCollectionResp&gt;*
 
 **RETURNS:**
 
@@ -121,7 +121,7 @@ A **DescribeCollectionResp** object that contains detailed information about the
 
     The time when the collection was created in UTC.
 
-- **consistencyLevel** (*ConsistencyLevel*) -
+- **[consistencyLevel](./v2-Collections-ConsistencyLevel)** (*[ConsistencyLevel](./v2-Collections-ConsistencyLevel)*) -
 
     The consistency level of the collection.
 

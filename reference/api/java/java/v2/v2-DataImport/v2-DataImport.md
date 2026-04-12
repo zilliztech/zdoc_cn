@@ -8,14 +8,14 @@ last_modified: false
 deprecate_since: false
 description: "Classes and methods related to BulkWriter and BulkImport, facilitating importing data to your collections. | Java | v2"
 type: folder
-token: AtkCfVN4Ll6GqMdVJfxcybHanDf
+token: JNwTf1Enil3jErdNcSQc04LKnRd
 sidebar_position: 9
 sidebar_label: "Data Import"
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud

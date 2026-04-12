@@ -12,10 +12,10 @@ token: A6atfZDQxl1INud6VYGcX54zngf
 sidebar_position: 2
 sidebar_label: "EmbeddingModels"
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud

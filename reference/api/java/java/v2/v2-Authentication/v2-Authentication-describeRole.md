@@ -13,10 +13,10 @@ type: docx
 token: VDKPdBJzdoAu7exEOE2czN2gnTd
 sidebar_position: 5
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

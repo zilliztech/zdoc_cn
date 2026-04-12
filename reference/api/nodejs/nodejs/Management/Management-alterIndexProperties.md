@@ -13,10 +13,10 @@ type: docx
 token: PcQcdDwthoSEZaxI6GncpUpGnBh
 sidebar_position: 1
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation modifies the settings of specific index properties.
 
 ```javascript
-alterIndexProperties(data): Promise<ResStatus>
+await milvusClient.alterIndexProperties(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.alterIndexProperties({
+await milvusClient.alterIndexProperties({
      db_name?: string,
      collection_name: string,
      index_name: string,

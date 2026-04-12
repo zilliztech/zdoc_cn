@@ -13,10 +13,10 @@ type: docx
 token: Vq2VdsWJaoufsGx5stJcTuyPnDb
 sidebar_position: 17
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud

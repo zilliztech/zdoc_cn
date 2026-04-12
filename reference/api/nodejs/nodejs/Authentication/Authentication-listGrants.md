@@ -13,10 +13,10 @@ type: docx
 token: CJ9DdmU1ooquOnxcK5AciA3sn3g
 sidebar_position: 18
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation lists the privileges granted to the specified role.
 
 ```javascript
-listGrants(data): Promise<SelectGrantResponse>
+await milvusClient.listGrants(data)
 ```
 
 ## Request Syntax

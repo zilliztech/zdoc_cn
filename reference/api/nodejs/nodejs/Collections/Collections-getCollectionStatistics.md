@@ -13,10 +13,10 @@ type: docx
 token: LQMGdRHjKogdeMxekCtcdBLqnNf
 sidebar_position: 12
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation lists the statistics collected on a specific collection.
 
 ```javascript
-getCollectionStatistics(data): Promise<StatisticsResponse>
+await milvusClient.getCollectionStatistics(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.getCollectionStatistics({ 
+await milvusClient.getCollectionStatistics({ 
     db_name: string,
     collection_name: string,
     timeout?: number 
@@ -100,7 +100,10 @@ This method returns a promise that resolves to a **StatisticsResponse** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const res = await milvusClient.getCollectionStatistics({ collection_name: 'my_collection' });
 ```
 

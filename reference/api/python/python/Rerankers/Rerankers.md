@@ -12,10 +12,10 @@ token: Ph7xfldrplFoihdiSAkciCuenyh
 sidebar_position: 5
 sidebar_label: "Rerankers"
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud

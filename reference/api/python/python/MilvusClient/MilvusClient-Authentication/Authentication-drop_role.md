@@ -4,19 +4,19 @@ title: "drop_role() | Python | MilvusClient"
 slug: /python/python/Authentication-drop_role
 sidebar_label: "drop_role()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a custom role. | Python | MilvusClient"
 type: docx
-token: Vmxpd3MttodOE3x3V11cVTeunDh
+token: KUAXdm3o3opQPex8N69cMlPbnTh
 sidebar_position: 8
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
@@ -38,7 +38,9 @@ This operation drops a custom role.
 ```python
 drop_role(
     role_name: str,
-    timeout: Optional[float] = None
+    force_drop: bool = False,
+    timeout: Optional[float] = None,
+    **kwargs,
 ) -> None
 ```
 
@@ -50,11 +52,13 @@ drop_role(
 
     The name of the role to drop.
 
-- **timeout** (*float* | *None*)  
+- **force_drop** (*bool*) -
 
-    The timeout duration for this operation. 
+    Whether to forcefully drop the role even if it has privileges or users assigned. Defaults to **False**.
 
-    Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+- **timeout** (*float* | *None*) -
+
+    The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
 **RETURN TYPE:**
 
@@ -79,15 +83,17 @@ None
 ```python
 from pymilvus import MilvusClient
 
-# 1. Create a milvus client
 client = MilvusClient(
     uri="YOUR_CLUSTER_ENDPOINT",
     token="YOUR_CLUSTER_TOKEN"
 )
 
-# 2. Create a role
+# Create a role
 client.create_role(role_name="read_only")
 
-# 3. Drop a role
+# Drop a role
 client.drop_role(role_name="read_only")
+
+# Force drop a role with assigned privileges
+client.drop_role(role_name="custom_role", force_drop=True)
 ```

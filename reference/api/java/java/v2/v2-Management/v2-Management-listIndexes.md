@@ -13,10 +13,10 @@ type: docx
 token: LxwIdeFiGoYaRAxKS72cdjNkneh
 sidebar_position: 12
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -64,7 +64,7 @@ listIndexes(ListIndexesReq.builder()
 
 **RETURNS:**
 
-*List\<String>*
+*List&lt;String&gt;*
 
 **EXCEPTIONS:**
 

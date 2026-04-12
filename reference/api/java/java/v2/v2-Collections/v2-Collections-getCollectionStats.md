@@ -13,10 +13,10 @@ type: docx
 token: E27SdesNPoKA8zx6jHkcejt0nWg
 sidebar_position: 17
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

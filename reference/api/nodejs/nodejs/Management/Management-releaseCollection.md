@@ -13,10 +13,10 @@ type: docx
 token: UxOXdeKF1oOIBuxTjPhcKBtPnRb
 sidebar_position: 20
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation releases the data of a specific collection from memory.
 
 ```javascript
-releaseCollection(data): Promise<ResStatus>
+await milvusClient.releaseCollection(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.releaseCollection({ 
+await milvusClient.releaseCollection({ 
     db_name: string,
     collection_name: 'my_collection',
     timeout?: number 
@@ -94,7 +94,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.releaseCollection({ collection_name: 'my_collection' });
 ```
 

@@ -13,10 +13,10 @@ type: docx
 token: VGofdSRi0o6EagxNkokc9Iinndf
 sidebar_position: 7
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation loads the data of specific partitions into memory. This is the synchronous function that helps to ensure that the specified partitions have been loaded.
 
 ```javascript
-loadPartitionsSync(data): Promise<ResStatus>
+await milvusClient.loadPartitionsSync(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.loadPartitionsSync({ 
+await milvusClient.loadPartitionsSync({ 
     db_name: string,
     collection_name: string,
     refresh?: boolean,
@@ -109,7 +109,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-new milvusClient(MILUVS_ADDRESS).loadPartitionsSync({
+new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).loadPartitionsSync({
     collection_name: 'my_collection',
     partition_names: ['my_partition'],
  });

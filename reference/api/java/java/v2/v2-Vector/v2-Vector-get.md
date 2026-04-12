@@ -13,10 +13,10 @@ type: docx
 token: DDshdoIEoo7X1BxpciBc66Rlndd
 sidebar_position: 2
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: HGpSdc7AOo7AV3xKCmOcWaIEnrd
 sidebar_position: 19
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation lists all privilege groups.
 
 ```javascript
-listPrivilegeGroups(data?): Promise<ListPrivilegeGroupsResponse>
+await milvusClient.listPrivilegeGroups(data?)
 ```
 
 ## Request Syntax

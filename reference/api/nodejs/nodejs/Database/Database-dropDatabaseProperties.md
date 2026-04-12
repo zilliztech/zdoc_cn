@@ -13,10 +13,10 @@ type: docx
 token: GulFdOWMboEK9bxnzMSc8Uf8n8b
 sidebar_position: 4
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation drops the setting of the specified properties.
 
 ```javascript
-dropDatabaseProperties(data): Promise<ResStatus>
+await milvusClient.dropDatabaseProperties(data)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
@@ -46,7 +46,7 @@ dropDatabaseProperties(data): Promise<ResStatus>
 ## Request Syntax
 
 ```javascript
-milvusClient.dropDatabaseProperties({
+await milvusClient.dropDatabaseProperties({
     db_name: string,
     delete_properties: string[],
     timeout?: number
@@ -95,7 +95,7 @@ milvusClient.dropDatabaseProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -124,7 +124,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.dropDatabaseProperties({ 
     db_name: 'new_db',
     delete_properties: ["database.replica.number"] 

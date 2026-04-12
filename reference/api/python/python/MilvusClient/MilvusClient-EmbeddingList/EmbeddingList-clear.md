@@ -13,10 +13,10 @@ type: docx
 token: M6mrdinAjo8CwrxirOQcR6E1nUc
 sidebar_position: 3
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud

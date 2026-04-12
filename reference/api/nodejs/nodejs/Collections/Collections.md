@@ -12,10 +12,10 @@ token: LOD4fz3qilpPyOdlfencoVEJnwd
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

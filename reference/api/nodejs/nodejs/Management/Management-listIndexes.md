@@ -13,10 +13,10 @@ type: docx
 token: N1fldMqhtoWBJPxh8VccivqxnZd
 sidebar_position: 16
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation lists the indexes of a specific collection
 
 ```javascript
-listIndexes(data): Promise<ListIndexResponse>
+await milvusClient.listIndexes(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.listIndexes({
+await milvusClient.listIndexes({
    db_name: string,
    collection_name: string,
    field_name?: string,

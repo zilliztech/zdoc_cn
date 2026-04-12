@@ -13,10 +13,10 @@ type: docx
 token: UUJWdoEnjoXx69xahsScdMVSnzf
 sidebar_position: 10
 keywords: 
+  - nlp search
+  - hallucinations llm
   - Multimodal search
   - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

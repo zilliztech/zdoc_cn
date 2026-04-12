@@ -13,10 +13,10 @@ type: docx
 token: LPJsdEnvwo6apcxjhZgc3rpDnuc
 sidebar_position: 16
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation grants a role to a user.
 
 ```javascript
-grantRole(data): Promise<ResStatus>
+await milvusClient.grantRole(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.grantRole({
+await milvusClient.grantRole({
    username: string,
    roleName: string,
    timeout?: number
@@ -96,7 +96,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient.grantRole({
+await milvusClient.grantRole({
    username: 'my',
    roleName: 'myrole'
  })

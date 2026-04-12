@@ -13,10 +13,10 @@ type: docx
 token: RQH5dhSenoDGjYxyBb2c3n1rnie
 sidebar_position: 2
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation modifies the properties of a specified collection field.
 
 ```javascript
-alterCollectionFieldProperties(data): Promise<ResStatus>
+await milvusClient.alterCollectionFieldProperties(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.alterCollectionFieldProperties({
+await milvusClient.alterCollectionFieldProperties({
    db_name?: string
    collection_name: string,
    field_name: string,
@@ -124,7 +124,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.alterCollectionField({
   collection_name: 'my-collection',
   field_name: 'my-field',

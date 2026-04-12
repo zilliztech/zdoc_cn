@@ -13,10 +13,10 @@ type: docx
 token: YtiQdxTYzoCaYDxEMZcc8TEenQb
 sidebar_position: 10
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud

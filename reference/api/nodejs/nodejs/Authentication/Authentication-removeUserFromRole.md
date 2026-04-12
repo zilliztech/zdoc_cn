@@ -13,10 +13,10 @@ type: docx
 token: XmyMdqvDLosr6oxzvhWcw8H2ntg
 sidebar_position: 23
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation removes a user from a specific role.
 
 ```javascript
-removeUserFromRole(data): Promise<ResStatus>
+await milvusClient.removeUserFromRole(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.removeUserFromRole({
+await milvusClient.removeUserFromRole({
    username: string,
    rolename: string,
    timeout?: number
@@ -96,7 +96,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient.removeUserFromRole({
+await milvusClient.removeUserFromRole({
    username: 'my',
    roleName: 'myrole'
  });

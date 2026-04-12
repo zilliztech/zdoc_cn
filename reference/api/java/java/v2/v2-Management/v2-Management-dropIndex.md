@@ -13,10 +13,10 @@ type: docx
 token: XHyydLsEAoPwB2xNhcwc9KBwn7g
 sidebar_position: 5
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud

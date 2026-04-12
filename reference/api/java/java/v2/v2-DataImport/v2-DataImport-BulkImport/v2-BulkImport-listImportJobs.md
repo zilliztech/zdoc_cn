@@ -13,10 +13,10 @@ type: docx
 token: CN9sdiCicoERZpx9GhmcLa4Wn7g
 sidebar_position: 4
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +54,6 @@ bulkImport.listImportJobs(
 
     ```python
     https://api.cloud.zilliz.com
-    # https://api.cloud.zilliz.com.cn 
     ```
 
 - **request** (*[BaseListImportRequest](./v2-BulkImport-listImportJobs#baselistimportrequest)*) -  

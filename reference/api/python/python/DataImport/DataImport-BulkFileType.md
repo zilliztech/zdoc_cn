@@ -13,10 +13,10 @@ type: docx
 token: NV3Ud1M9iojhaSxZY4ec8RjgnlP
 sidebar_position: 1
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
@@ -39,9 +39,9 @@ This is an enumeration that provides the following constants.
 
     Sets the file type to **NumPy** (*.npy*).
 
-- **JSON_RB** = 2
+- **JSON** = 2
 
-    Sets the file type to **JSON** (*.json*).
+    Sets the file type to **JSON** (*.json*). 
 
 - **PARQUET** = 3
 
@@ -61,6 +61,6 @@ local_writer = LocalBulkWriter(
     local_path=Path(OUTPUT_PATH).joinpath('json'),
     segment_size=4*1024*1024,
     # highlight-next
-    file_type=BulkFileType.JSON_RB
+    file_type=BulkFileType.PARQUET
 )
 ```

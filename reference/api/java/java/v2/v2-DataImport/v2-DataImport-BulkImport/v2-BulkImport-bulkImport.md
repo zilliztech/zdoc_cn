@@ -13,10 +13,10 @@ type: docx
 token: S0ITdsnpYoDpH9xKv9fcBhe5nWA
 sidebar_position: 2
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
@@ -54,7 +54,6 @@ bulkImport.bulkImport(
 
     ```python
     https://api.cloud.zilliz.com
-    # https://api.cloud.zilliz.com.cn 
     ```
 
 - **request** (*[BaseImportRequest](./v2-BulkImport-bulkImport#baseimportrequest)*) -  

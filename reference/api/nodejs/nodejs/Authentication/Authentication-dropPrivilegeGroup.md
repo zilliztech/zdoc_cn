@@ -13,10 +13,10 @@ type: docx
 token: I63tdWAY2ok8V1xrK4tcrkwjncd
 sidebar_position: 12
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation adds a user to a specific role.
 
 ```javascript
-dropPrivilegeGroup(data): Promise<ResStatus>
+await milvusClient.dropPrivilegeGroup(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropPrivilegeGroup({
+await milvusClient.dropPrivilegeGroup({
    timeout?: number
 })
 ```

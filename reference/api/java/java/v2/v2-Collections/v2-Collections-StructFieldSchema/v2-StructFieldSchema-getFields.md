@@ -11,12 +11,12 @@ notebook: false
 description: "This operation returns the fields of the Struct elements in an Array of Structs. | Java | v2"
 type: docx
 token: FIzIdKrRNooFttxaf3Pc1vOlnnc
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,7 +45,7 @@ getFields()
 
 **RETURN TYPE:**
 
-*List\<CreateCollectionReq.FieldSchema>*
+*List&lt;CreateCollectionReq.FieldSchema&gt;*
 
 **RETURNS:**
 

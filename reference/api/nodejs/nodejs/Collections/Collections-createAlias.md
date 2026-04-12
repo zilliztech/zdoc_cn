@@ -13,10 +13,10 @@ type: docx
 token: MPuIdwujBoXM6rx7Okfc3lhZnUd
 sidebar_position: 4
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation creates an alias for an existing collection.
 
 ```javascript
-createAlias(data): Promise<ResStatus>
+await milvusClient.createAlias(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.createAlias({
+await milvusClient.createAlias({
    alias: string,
    db_name: string,
    collection_name: string,
@@ -117,7 +117,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.createAlias({
    alias: 'my_collection_alias',
    collection_name: 'my_collection',

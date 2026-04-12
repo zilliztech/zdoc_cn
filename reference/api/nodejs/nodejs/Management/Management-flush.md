@@ -13,10 +13,10 @@ type: docx
 token: E2XJd4ZHvoc7QlxyrEJcrOJOn9f
 sidebar_position: 7
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation manually seals a segment and persists the data on disk. It is recommended that this operation be called after all the data has been inserted into a collection.
 
 ```javascript
-flush(data): Promise<FlushResult>
+await milvusClient.flush(data)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
@@ -46,7 +46,7 @@ flush(data): Promise<FlushResult>
 ## Request Syntax
 
 ```javascript
-milvusClient.flush({
+await milvusClient.flush({
     db_name?: string,
     collection_names: string[],
     timeout?: number
@@ -109,7 +109,10 @@ This method returns a promise that resolves to a **FlushResult** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const flushStatus = await milvusClient.flush({
     collection_names: ['my_collection'],
 });

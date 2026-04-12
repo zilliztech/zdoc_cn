@@ -13,10 +13,10 @@ type: docx
 token: JNZxdKEX3ohBl2xud7Wckhq7nVh
 sidebar_position: 7
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation creates a user.
 
 ```javascript
-createUser(data): Promise<ResStatus>
+await milvusClient.createUser(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.createUser({
+await milvusClient.createUser({
    username: string,
    password: string,
    timeout?: number
@@ -96,7 +96,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient.createUser({
+await milvusClient.createUser({
    username: 'exampleUser',
    password: 'examplePassword',
  })

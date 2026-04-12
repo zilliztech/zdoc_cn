@@ -13,10 +13,10 @@ type: docx
 token: Pyh3dttWKoBqcBx8FGhcArhAnqg
 sidebar_position: 6
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation loads a specific set of partitions in a specified collection into memory.
 
 ```javascript
-loadPartitions(data): Promise<ResStatus>
+await milvusClient.loadPartitions(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.loadPartitions({
+await milvusClient.loadPartitions({
     db_name: string,
     collection_name: string,
     partition_names: string[],
@@ -109,7 +109,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-new milvusClient(MILUVS_ADDRESS).loadPartitions({
+new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).loadPartitions({
     collection_name: 'my_collection',
     partition_names: ['my_partition'],
  });

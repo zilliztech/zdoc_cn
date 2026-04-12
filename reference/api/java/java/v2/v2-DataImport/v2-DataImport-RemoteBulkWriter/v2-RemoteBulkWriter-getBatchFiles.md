@@ -13,10 +13,10 @@ type: docx
 token: YlpQdEUnKoFR3xxizt2cCV8UnZb
 sidebar_position: 4
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

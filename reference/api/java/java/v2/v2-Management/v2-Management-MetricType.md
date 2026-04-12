@@ -13,10 +13,10 @@ type: docx
 token: GEcrdVWnboOetOx08RrcRHVhn3g
 sidebar_position: 14
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud

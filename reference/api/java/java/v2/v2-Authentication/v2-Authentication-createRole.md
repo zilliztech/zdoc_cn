@@ -13,10 +13,10 @@ type: docx
 token: V0xwdLOrhog7OBxTX76cQGQknSb
 sidebar_position: 3
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

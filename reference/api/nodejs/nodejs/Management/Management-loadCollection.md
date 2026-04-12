@@ -13,10 +13,10 @@ type: docx
 token: LoNvdRK80oWllFxV0H6co0HrnBe
 sidebar_position: 17
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation loads the data of a specific collection into memory.
 
 ```javascript
-loadCollection(data): Promise<ResStatus>
+await milvusClient.loadCollection(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.loadCollection({ 
+await milvusClient.loadCollection({ 
     db_name: string,
     collection_name: string,
     refresh?: boolean,
@@ -109,7 +109,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.loadCollection({ collection_name: 'my_collection' });
 ```
 

@@ -13,10 +13,10 @@ type: docx
 token: AtLEdt0ZWoUbHoxkfvHcq1ZunUg
 sidebar_position: 6
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

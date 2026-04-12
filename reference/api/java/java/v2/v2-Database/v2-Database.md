@@ -8,14 +8,14 @@ last_modified: false
 deprecate_since: false
 description: "Methods related to database operations. | Java | v2"
 type: folder
-token: TOZmfXZa3luWIMdjXUycMbaanCd
+token: GKUCfGIFEluyMgdvioDc9sH7nzh
 sidebar_position: 4
 sidebar_label: "Database"
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

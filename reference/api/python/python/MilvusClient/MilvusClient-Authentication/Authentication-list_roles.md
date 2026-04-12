@@ -13,10 +13,10 @@ type: docx
 token: MApVdDl17oU8OixzbMPcgceKnOh
 sidebar_position: 14
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
@@ -89,12 +89,4 @@ client.list_roles()
 <p>Each Zilliz Cloud cluster has three built-in roles, namely, <strong>db_ro</strong>, <strong>db_rw</strong>, and <strong>db_admin</strong>. For details, refer to <a href="/docs/user-roles#cluster-built-in-roles">Cluster Built-in Roles</a>.</p>
 
 </Admonition>
-
-## Related methods
-
-- [describe_role()](./Authentication-describe_role)
-
-- [grant_role()](./Authentication-grant_role)
-
-- [revoke_role()](./Authentication-revoke_role)
 

@@ -13,10 +13,10 @@ type: docx
 token: QHyGdm4FyoFwCzxDgUUc9yQrnPf
 sidebar_position: 4
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
@@ -62,7 +62,7 @@ VolumeManager(
 
     **[REQUIRED]**
 
-    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com` (Global) or `https://api.cloud.zilliz.com.cn` (China), depending on the platform you have registered with.
+    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com`.
 
 - **apiKey** (*str*) -
 

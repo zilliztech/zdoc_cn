@@ -12,10 +12,10 @@ token: JukBfPwp8luly7dRHdWc1MEBnge
 sidebar_position: 6
 sidebar_label: "Partitions"
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud

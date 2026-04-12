@@ -13,10 +13,10 @@ type: docx
 token: ItZPd1o4uoodqtx1sxIcq38hn7e
 sidebar_position: 9
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation describes a specific role.
 
 ```javascript
-describeRole(data): Promise<SelectRoleResponse>
+await milvusClient.describeRole(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.describeRole({
+await milvusClient.describeRole({
     includeUserInfo?: boolean,
     roleName: string,
     timeout?: number

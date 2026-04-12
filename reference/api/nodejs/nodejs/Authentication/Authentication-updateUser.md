@@ -13,10 +13,10 @@ type: docx
 token: BCGKdCttdotF32xUJTec8UFlndg
 sidebar_position: 28
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation updates the password of a specific user.
 
 ```javascript
-updateUser(data): Promise<ResStatus>
+await milvusClient.updateUser(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.updateUser({
+await milvusClient.updateUser({
    username: string,
    newPassword: string,
    oldPassword: string,
@@ -103,7 +103,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient.updateUser({
+await milvusClient.updateUser({
    username: 'exampleUser',
    newPassword: 'newPassword',
    oldPassword: 'oldPassword',

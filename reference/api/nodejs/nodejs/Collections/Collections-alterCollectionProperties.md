@@ -13,10 +13,10 @@ type: docx
 token: EHPGdbCP5o7UzCxlDnRc6y5Pn1c
 sidebar_position: 3
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation modifies the properties of a specified collection.
 
 ```javascript
-alterCollectionProperties(data): Promise<ResStatus>
+await milvusClient.alterCollectionProperties(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.alterCollectionProperties({
+await milvusClient.alterCollectionProperties({
    db_name?: string
    collection_name: string,
    delete_keys?: string[],
@@ -114,7 +114,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.alterCollection({
     collection_name: 'my-collection',
     properties: {"collection.ttl.seconds": 18000}

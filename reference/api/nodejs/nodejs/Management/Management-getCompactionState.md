@@ -13,10 +13,10 @@ type: docx
 token: CRFLdvgkhoeRikxMcMAcJk3qnIc
 sidebar_position: 9
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation lists the statistics collected on a specific collection.
 
 ```javascript
-getCompactionState(data): Promise<GetCompactionStateResponse>
+await milvusClient.getCompactionState(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.getCompactionState({ 
+await milvusClient.getCompactionState({ 
     compactionID: string | number,
     timeout?: number 
 })
@@ -115,7 +115,10 @@ This method returns a promise that resolves to a **GetCompactionStateResponse** 
 ## Example
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.getCompactionState({
     compactionID: 'your_compaction_id',
 });

@@ -13,10 +13,10 @@ type: docx
 token: Ehbdd1HRLoB34nxU6hQcRk2Mnug
 sidebar_position: 1
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: NNWed9Vd1o7vDkxY4pncM4wYnaf
 sidebar_position: 7
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation modifies the properties of the specified database.
 
 ```javascript
-alterDatabaseProperties(data): Promise<ResStatus>
+await milvusClient.alterDatabaseProperties(data)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
@@ -46,7 +46,7 @@ alterDatabaseProperties(data): Promise<ResStatus>
 ## Request Syntax
 
 ```javascript
-milvusClient.alterDatabaseProperties({
+await milvusClient.alterDatabaseProperties({
     db_name: string,
     delete_keys: Object,
     properties: Record<string, string | number | boolean>
@@ -124,7 +124,7 @@ milvusClient.alterDatabaseProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -153,7 +153,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.alterDatabaseProperties({ 
     db_name: 'new_db',
     delete_properties: {'database.replica.number': 3} 

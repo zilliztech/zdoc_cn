@@ -13,10 +13,10 @@ type: docx
 token: HSIDdxQGEoPdyaxkMDjcAWGQnpd
 sidebar_position: 17
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation lists the privileges granted to the specified role.
 
 ```javascript
-listGrant(data): Promise<SelectGrantResponse>
+await milvusClient.listGrant(data)
 ```
 
 ## Request Syntax

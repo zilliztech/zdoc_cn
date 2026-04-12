@@ -13,10 +13,10 @@ type: docx
 token: FhbbdNrlNouBXJxHIdKctXVKnmf
 sidebar_position: 13
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation checks whether a specific collection exists.
 
 ```javascript
-hasCollection(data): Promise<BoolResponse>
+await milvusClient.hasCollection(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.hasCollection({ 
+await milvusClient.hasCollection({ 
     db_name: string,
     collection_name: string,
     timeout?: number
@@ -99,7 +99,10 @@ This method returns a promise that resolves to a **BoolResponse** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const res = await milvusClient.hasCollection({ collection_name: 'my_collection' });
 ```
 

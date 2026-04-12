@@ -13,10 +13,10 @@ type: docx
 token: P66Mdx2aaooL9px9CnQcS2eTnng
 sidebar_position: 6
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation conducts a scalar filtering with a specified boolean expression.
 
 ```javascript
-query(data): Promise<ResStatus>
+await milvusClient.query(data)
 ```
 
 ## Request Syntax
@@ -156,7 +156,10 @@ This method returns a promise that resolves to a **QueryResults** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const queryResults = await milvusClient.query({
    collection_name: 'my_collection',
    filter: "age in [1,2,3,4,5,6,7,8]",

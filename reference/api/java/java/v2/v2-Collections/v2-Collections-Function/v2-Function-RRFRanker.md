@@ -13,10 +13,10 @@ type: docx
 token: FuSTdeSCdojDu0xSBEmcYgv9n4g
 sidebar_position: 6
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -72,7 +72,7 @@ RRFRanker.builder()
 
 **RETURNS:**
 
- A RRF ranker instance.
+A RRF ranker instance.
 
 ## Examples:
 

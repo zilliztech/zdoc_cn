@@ -13,10 +13,10 @@ type: docx
 token: IbWgdAwWOoTa1exF2LicP9henJJ
 sidebar_position: 2
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -61,7 +61,7 @@ VolumeFileManager(
 
     **[REQUIRED]**
 
-    The Zilliz Cloud endpoint, which is `https://api.cloud.zilliz.com` (Global) or `https://api.cloud.zilliz.com.cn` (China), depending on the platform you have registered with.
+    The Zilliz Cloud endpoint, which is `https://api.cloud.zilliz.com`.
 
 - **api_key** (*str*) -
 

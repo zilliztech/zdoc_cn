@@ -13,10 +13,10 @@ type: docx
 token: HtOGdjTpOoG0RcxpGv1cCBcEnAh
 sidebar_position: 3
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation closes the current connection to the Milvus server.
 
 ```javascript
-closeConnection(): Promise<CONNECT_STATUS>
+await milvusClient.closeConnection()
 ```
 
 ## Request Syntax

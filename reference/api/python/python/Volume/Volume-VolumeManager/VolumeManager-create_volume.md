@@ -13,10 +13,10 @@ type: docx
 token: HWYXdlaGIoTNVUx34GycfwjAnrb
 sidebar_position: 1
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud

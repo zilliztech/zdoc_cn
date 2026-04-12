@@ -13,10 +13,10 @@ type: docx
 token: Ja99dnnaOoncwbx2zIPc4PjunXx
 sidebar_position: 3
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation drops a database.
 
 ```javascript
-dropDatabase(data?): Promise<ResStatus>
+await milvusClient.dropDatabase(data?)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
@@ -46,7 +46,7 @@ dropDatabase(data?): Promise<ResStatus>
 ## Request Syntax
 
 ```javascript
-milvusClient.dropDatabase({
+await milvusClient.dropDatabase({
     db_name: string,
     timeout?: number
 })
@@ -66,7 +66,7 @@ milvusClient.dropDatabase({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -95,7 +95,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.dropDatabase({ db_name: 'db_to_drop' });
 ```
 

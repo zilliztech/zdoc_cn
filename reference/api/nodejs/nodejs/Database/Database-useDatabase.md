@@ -13,10 +13,10 @@ type: docx
 token: NDcldy9OLo62DLxw1a9cFSLsnYb
 sidebar_position: 6
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation sets the active database for the gRPC client.
 
 ```javascript
-useDatabase(data?): Promise<ResStatus>
+await milvusClient.useDatabase(data?)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.useDatabase({
+await milvusClient.useDatabase({
     db_name: string
 })
 ```
@@ -53,7 +53,7 @@ milvusClient.useDatabase({
 
     There should be a database with the specified name. Otherwise, exceptions will occur.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -82,6 +82,9 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.useDatabase({ db_name: 'new_db' });
 ```

@@ -13,10 +13,10 @@ type: docx
 token: PePIdiq9po6cplxAoF6ca5C2ntb
 sidebar_position: 4
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation describes a specific index.
 
 ```javascript
-describeIndex(data): Promise<DescribeIndexResponse>
+await milvusClient.describeIndex(data)
 ```
 
 ## Request Syntax

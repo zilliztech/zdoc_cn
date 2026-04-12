@@ -13,10 +13,10 @@ type: docx
 token: Da9KdvvWroKX9cxOwsmcLRBxnVb
 sidebar_position: 10
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This is a method template.
 
 ```javascript
-describeUser(data): Promise<SelectUserResponse>
+await milvusClient.describeUser(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.describeUser({
+await milvusClient.describeUser({
     includeRoleInfo?: boolean,
     timeout?: number,
     username: string

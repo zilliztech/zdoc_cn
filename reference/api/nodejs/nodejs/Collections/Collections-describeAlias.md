@@ -13,10 +13,10 @@ type: docx
 token: YCzNdg5yWoeZVrxj7jGcb1UXnBd
 sidebar_position: 7
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation describes a specific alias.
 
 ```javascript
-describeAlias(data): Promise<DescribeAliasResponse>
+await milvusClient.describeAlias(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.describeAlias({
+await milvusClient.describeAlias({
     db_name: string,
     alias: string,
     collection_name: string
@@ -127,7 +127,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const res = await milvusClient.describeAlias({
    alias: 'my_collection_alias',
    collection_name: 'my_collection',

@@ -11,12 +11,12 @@ notebook: false
 description: "This operation returns the maximum capacity of an Array of Structs field. | Java | v2"
 type: docx
 token: PSdEdxU7ZoTxelx7sLzcAAXsnQH
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud

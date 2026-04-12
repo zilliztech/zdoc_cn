@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This operation releases the data of a specific collection from memory. | Java | v2"
 type: docx
-token: KJArdiXZvoBtdIxumpocfe5knJc
+token: K5t2dl0XloN4VHx1lcpc6Uq3nye
 sidebar_position: 16
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -46,30 +46,26 @@ releaseCollection(ReleaseCollectionReq.builder()
     .async(Boolean async)
     .timeout(Long timeout)
     .build()
-)
+);
 ```
 
 **BUILDER METHODS:**
 
-- `databaseName(String databaseName)`
+- `databaseName(String databaseName)` -
 
-    The name of the database to which the target collection belongs.
+    The name of the database. Defaults to the current database if not specified.
 
-- `collectionName(String collectionName)`
+- `collectionName(String collectionName)` -
 
-    The name of a collection.
+    The name of the target collection.
 
-- `async(Boolean async)`
+- `async(Boolean async)` -
 
-    Whether this operation is asynchronous.
+    Whether to run the operation asynchronously. Defaults to `Boolean.TRUE`.
 
-    The value defaults to `Boolean.True`, indicating immediate return while the process may still run in the background.
+- `timeout(Long timeout)` -
 
-- `timeout(Long timeout)`
-
-    The timeout duration of the process. The process terminates after the specified duration expires.
-
-    The value defaults to `60000L`, indicating the timeout duration is one minute.
+    The timeout duration in milliseconds. Defaults to `60000L`.
 
 **RETURNS:**
 
@@ -77,7 +73,7 @@ releaseCollection(ReleaseCollectionReq.builder()
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+- **MilvusClientException**
 
     This exception will be raised when any error occurs during this operation.
 

@@ -13,10 +13,10 @@ type: docx
 token: DkImdRkJwoUmdqxzqn1cpQr9nhy
 sidebar_position: 13
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation gets the loading progress of a specific collection.
 
 ```javascript
-getLoadingProgress(data): Promise<GetLoadingProgressResponse>
+await milvusClient.getLoadingProgress(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.getLoadingProgress({
+await milvusClient.getLoadingProgress({
       db_name?: string,
       collection_name: string,
       partition_names?: string[]
@@ -112,7 +112,10 @@ This method returns a promise that resolves to a **GetLoadingProgressResponse** 
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.getLoadingProgress({
     collection_name: 'my_collection',
 });

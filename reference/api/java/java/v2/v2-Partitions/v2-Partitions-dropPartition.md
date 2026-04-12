@@ -13,10 +13,10 @@ type: docx
 token: CSaVdr3zao9zFpxaJBgcCTCYnPd
 sidebar_position: 2
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud

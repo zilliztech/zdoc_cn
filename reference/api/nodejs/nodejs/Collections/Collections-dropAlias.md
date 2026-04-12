@@ -13,10 +13,10 @@ type: docx
 token: FubcdxJ0LoyQiJxmUMjcZnbjnbc
 sidebar_position: 9
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops a specified collection alias. 
 
 ```javascript
-dropAlias(data): Promise<ResStatus>
+await milvusClient.dropAlias(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropAlias({
+await milvusClient.dropAlias({
    alias: string,
    db_name: string,
    collection_name: string,
@@ -101,7 +101,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.dropAlias({
    alias: 'my_collection_alias',
    collection_name: 'my_collection',

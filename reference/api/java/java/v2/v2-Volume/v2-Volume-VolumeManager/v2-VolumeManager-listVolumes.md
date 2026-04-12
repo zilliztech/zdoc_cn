@@ -13,10 +13,10 @@ type: docx
 token: Cde1dlUbDosa86xjuShcoKgQnvg
 sidebar_position: 3
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud
@@ -88,7 +88,7 @@ A **ListVolumesResponse** object that contains a list of volumes in a paginated 
 
     The maximum number of volumes per page.
 
-- **volumes** (*List\<VolumeInfo>*) -
+- **volumes** (*List&lt;VolumeInfo&gt;*) -
 
     A list of `VolumeInfo` instances.
 

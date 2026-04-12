@@ -13,10 +13,10 @@ type: docx
 token: Vv4NdWVa5o5BSrx11OZcNVnQnbh
 sidebar_position: 20
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud
@@ -53,11 +53,11 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
 **PARAMETERS:**
 
-- **collectionNames** (*List\<String>*)
+- **collectionNames** (*List&lt;String&gt;*)
 
     A list of strings containing the names of all existing collections.
 
-- **collectionInfos** (*List\<CollectionInfo>*)
+- **collectionInfos** (*List&lt;CollectionInfo&gt;*)
 
     A list of **CollectionInfo** objects. A **CollectionInfo** object has the following fields:
 

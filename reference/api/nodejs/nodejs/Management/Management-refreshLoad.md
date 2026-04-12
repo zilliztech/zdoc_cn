@@ -13,10 +13,10 @@ type: docx
 token: Jc43d397doxCRkxal2XcQ1Wyn2g
 sidebar_position: 19
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation refreshes the loading status of a specific collection.
 
 ```javascript
-refreshLoad(data): Promise<ResStatus>
+await milvusClient.refreshLoad(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.refreshLoad({
+await milvusClient.refreshLoad({
    db_name?: string,
    collection_name: string,
    timeout?: number
@@ -92,7 +92,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.refreshLoad({ collection_name: 'my_collection' });
 ```
 

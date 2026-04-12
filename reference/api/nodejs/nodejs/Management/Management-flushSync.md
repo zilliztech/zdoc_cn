@@ -13,10 +13,10 @@ type: docx
 token: QsTwdUbgyoZPV1xzCBxchX8Fnid
 sidebar_position: 8
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation manually seals a segment and persists the data on disk. It is recommended that this operation be called after all the data has been inserted into a collection. This is the synchronous function that ensures the flush operation is complete before the function returns.
 
 ```javascript
-flushSync(data): Promise<GetFlushStateResponse>
+await milvusClient.flushSync(data)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
@@ -46,7 +46,7 @@ flushSync(data): Promise<GetFlushStateResponse>
 ## Request Syntax
 
 ```javascript
-milvusClient.flushSync({
+await milvusClient.flushSync({
     db_name?: string,
     collection_names: string[],
     timeout?: number
@@ -109,7 +109,10 @@ This method returns a promise that resolves to a **GetFlushStateResponse** objec
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const flushSyncStatus = await milvusClient.flushSync({
     collection_names: ['my_collection'],
 });

@@ -13,10 +13,10 @@ type: docx
 token: QO5ldltYOoo5uFxS4ZJc24JWnUh
 sidebar_position: 1
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
@@ -108,7 +108,7 @@ BoostRanker.builder()
 
 **RETURNS:**
 
- A boost ranker instance.
+A boost ranker instance.
 
 ## Examples:
 

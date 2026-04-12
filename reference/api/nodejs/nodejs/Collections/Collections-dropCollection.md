@@ -13,10 +13,10 @@ type: docx
 token: KLknda2VtocQSBx7PKVc6F9Nnug
 sidebar_position: 10
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops a collection.
 
 ```javascript
-dropCollection(data): Promise<ResStatus>
+await milvusClient.dropCollection(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropCollection({ 
+await milvusClient.dropCollection({ 
     db_name: string,
     collection_name: string,
     timeout?: number
@@ -94,7 +94,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.dropCollection({ collection_name: 'my_collection' });
 ```
 

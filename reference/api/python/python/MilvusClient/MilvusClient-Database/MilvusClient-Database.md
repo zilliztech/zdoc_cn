@@ -12,10 +12,10 @@ token: JT0gfXjE3lCqEAdn6jPcFbHgnnd
 sidebar_position: 8
 sidebar_label: "Database"
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud

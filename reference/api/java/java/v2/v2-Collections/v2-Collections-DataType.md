@@ -13,10 +13,10 @@ type: docx
 token: RZ8idPxaho5yMoxJzGdc7QAcnNf
 sidebar_position: 10
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud
@@ -105,7 +105,7 @@ This is an enumeration that provides the following constants.
 
 - SparseFloatVector(104)
 
-      Sets the data type to **Sparse Vector**.
+Sets the data type to **Sparse Vector**.
 
 - Inv8Vector(105)
 

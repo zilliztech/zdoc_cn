@@ -13,10 +13,10 @@ type: docx
 token: WY4idJdzCozGGnxmLoFcIjC2ndw
 sidebar_position: 29
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud
@@ -62,11 +62,11 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
 **PARAMETERS:**
 
-- **collectionNames** (*List\<String>*)
+- **collectionNames** (*List&lt;String&gt;*)
 
     A list of strings containing the names of all existing collections.
 
-- **collectionInfos** (*List\<CollectionInfo>*)
+- **collectionInfos** (*List&lt;CollectionInfo&gt;*)
 
     A list of **CollectionInfo** objects. A **CollectionInfo** object has the following fields:
 

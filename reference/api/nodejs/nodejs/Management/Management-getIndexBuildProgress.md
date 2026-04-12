@@ -13,10 +13,10 @@ type: docx
 token: G6CGdbM4QoNgr5xS1ZAc94lhnFd
 sidebar_position: 11
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation gets the build progress of the specified index.
 
 ```javascript
-getIndexBuildProgress(data): Promise<GetIndexBuildProgressResponse>
+await milvusClient.getIndexBuildProgress(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.getIndexBuildProgress({
+await milvusClient.getIndexBuildProgress({
       db_name?: string,
       collection_name: string,
       field_name: string,

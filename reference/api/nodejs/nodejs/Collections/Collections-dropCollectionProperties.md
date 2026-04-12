@@ -13,10 +13,10 @@ type: docx
 token: EjFMdRFz0ofehXxxCPqc6raSnAg
 sidebar_position: 11
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation resets the properties of a specific collection to their default values.
 
 ```javascript
-dropCollectionProperties(data): Promise<ResStatus>
+await milvusClient.dropCollectionProperties(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropCollectionProperties({
+await milvusClient.dropCollectionProperties({
    db_name?: string
    collection_name: string,
    properties: string[],
@@ -109,7 +109,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.dropCollectionProperties({
     collection_name: 'my-collection',
     delete_keys: ["collection.ttl.seconds"]

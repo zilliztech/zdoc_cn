@@ -13,10 +13,10 @@ type: docx
 token: W7XJdZDHnoFECDxCYoMcrZqrnnd
 sidebar_position: 27
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation revokes the role assigned to a user.
 
 ```javascript
-revokeRole(data): Promise<ResStatus>
+await milvusClient.revokeRole(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.revokeRole({
+await milvusClient.revokeRole({
    username: string,
    roleName: string，
    timeout?: number
@@ -96,7 +96,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient.removeUserFromRole({
+await milvusClient.removeUserFromRole({
    username: 'my',
    roleName: 'myrole'
  });

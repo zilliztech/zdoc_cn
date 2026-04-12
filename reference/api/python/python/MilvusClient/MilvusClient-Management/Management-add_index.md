@@ -4,7 +4,7 @@ title: "add_index() | Python | MilvusClient"
 slug: /python/python/Management-add_index
 sidebar_label: "add_index()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: false
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,10 +13,10 @@ type: docx
 token: SM7ld0ZsEoYLqaxVMZxcSH82n9f
 sidebar_position: 1
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud

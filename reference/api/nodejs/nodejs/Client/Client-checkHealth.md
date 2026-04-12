@@ -13,10 +13,10 @@ type: docx
 token: DDvudeY20o6tV5xwwo4cKovjnHf
 sidebar_position: 2
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation checks the health status of the Milvus server.
 
 ```javascript
-checkHealth(): Promise<CheckHealthResponse>
+await milvusClient.checkHealth()
 ```
 
 ## Request Syntax

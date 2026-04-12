@@ -13,10 +13,10 @@ type: docx
 token: NIm8dRx2Aozt4Qxv1Q6cAm3Fn97
 sidebar_position: 1
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud

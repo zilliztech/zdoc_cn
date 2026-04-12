@@ -12,10 +12,10 @@ token: XkwkfO0XUlwfQzd6cficDg8enoh
 sidebar_position: 8
 sidebar_label: "Vector"
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud

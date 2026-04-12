@@ -13,10 +13,10 @@ type: docx
 token: UBbndftiQo2HdOxUNtocIISnnVh
 sidebar_position: 5
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops an index from a specific collection.
 
 ```javascript
-dropIndex(data): Promise<ResStatus>
+await milvusClient.dropIndex(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropPartition({
+await milvusClient.dropPartition({
     db_name: string,
     collection_name: string,
     field_name?: string,

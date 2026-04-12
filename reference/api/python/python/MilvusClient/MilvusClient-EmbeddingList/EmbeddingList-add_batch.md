@@ -13,10 +13,10 @@ type: docx
 token: TJundbM8FoU8UKxczaMcix3QnHb
 sidebar_position: 2
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud

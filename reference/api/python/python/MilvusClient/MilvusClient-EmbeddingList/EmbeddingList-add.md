@@ -13,10 +13,10 @@ type: docx
 token: R0E9dLzIAoYGCcxRVj6cjJmWnPe
 sidebar_position: 1
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: Djg7dlb5NoINz9xOAs1cyY67nsh
 sidebar_position: 15
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -123,7 +123,10 @@ This method returns a promise that resolves to a **ShowCollectionsResponse** obj
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const res = await milvusClient.listCollections({ collection_name: 'my_collection' });
 ```
 

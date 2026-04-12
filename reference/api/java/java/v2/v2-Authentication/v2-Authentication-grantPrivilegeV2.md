@@ -13,10 +13,10 @@ type: docx
 token: MFv3drbbXouqVxxE1OicBBl5ndf
 sidebar_position: 11
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

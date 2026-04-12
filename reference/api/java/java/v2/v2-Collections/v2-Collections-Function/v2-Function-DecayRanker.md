@@ -13,10 +13,10 @@ type: docx
 token: QIpldgpB1oP5IYxNSSdcyRNcn1c
 sidebar_position: 2
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
@@ -110,7 +110,7 @@ DecayRanker.builder()
 
 **RETURNS:**
 
- A decay ranker instance.
+A decay ranker instance.
 
 ## Examples:
 

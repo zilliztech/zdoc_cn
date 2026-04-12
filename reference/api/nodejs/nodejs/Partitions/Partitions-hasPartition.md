@@ -13,10 +13,10 @@ type: docx
 token: TVWPdTw2WoPAJYxsbGMc7MX6nEf
 sidebar_position: 4
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation checks whether the specified partition exists in the specified collection.
 
 ```javascript
-hasPartition(data): Promise<BoolResponse>
+await milvusClient.hasPartition(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.hasPartition({
+await milvusClient.hasPartition({
     db_name: string,
     collection_name: string,
     partition_name: string,
@@ -106,7 +106,10 @@ This method returns a promise that resolves to a BoolResponse object.
 ## Example
 
 ```java
-new milvusClient(MILUVS_ADDRESS).hasPartition({
+new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).hasPartition({
     collection_name: 'my_collection',
     partition_name: 'my_partition',
  });

@@ -13,10 +13,10 @@ type: docx
 token: Al8Pdbn4fomlIBxxYi0chTsgnWg
 sidebar_position: 5
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation creates a collection either with default or customized settings. 
 
 ```javascript
-createCollection(data): Promise<ResStatus>
+await milvusClient.createCollection(data)
 ```
 
 ## Request Syntax
@@ -46,7 +46,7 @@ This method has the following alternatives.
 Using this request body, you can create a collection by simply setting the collection name and dimension of the vector field.
 
 ```javascript
-milvusClient.createCollection({
+await milvusClient.createCollection({
     db_name?: string
     collection_name: string;
     dimension: number;
@@ -140,7 +140,7 @@ milvusClient.createCollection({
 Using this request body, you can customize the schema settings of the collection.
 
 ```javascript
-milvusClient.createCollection({
+await milvusClient.createCollection({
    db_name?: string,
    collection_name: string,
    consistency_level: number | string,
@@ -452,7 +452,7 @@ milvusClient.createCollection({
 Using this request body, you can customize the schema and index settings of the collection. Upon creation, the collection is automatically loaded.
 
 ```javascript
-milvusClient.createCollection({
+await milvusClient.createCollection({
    db_name?: string,
    collection_name: string,
    consistency_level: number | string,
@@ -818,7 +818,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.createCollection({
    collection_name: 'my_collection',
    fields: [

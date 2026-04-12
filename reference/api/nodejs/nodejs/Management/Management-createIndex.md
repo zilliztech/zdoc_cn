@@ -13,10 +13,10 @@ type: docx
 token: Nu0Id3wzGoJIFyxkC7IcmjAznNf
 sidebar_position: 3
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation creates an index for a specific collection.
 
 ```javascript
-createIndex(data): Promise<ResStatus>
+await milvusClient.createIndex(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.createIndex([
+await milvusClient.createIndex([
     {
        db_name?: string,
        collection_name: string,
@@ -132,7 +132,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient._createIndex({
+await milvusClient._createIndex({
    collection_name: "my_collection",
    field_name: "vector_field",
    index_name: "vector_index"

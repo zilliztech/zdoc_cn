@@ -13,10 +13,10 @@ type: docx
 token: WeXmdv8bioJ7AEx9sEtct6kgnUd
 sidebar_position: 16
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -81,13 +81,13 @@ CreateCollectionReq.FieldSchema.builder()
 
     The maximum number of characters a value should contain.
 
-    This is required if **dataType** of this field is set to **DataType.VarChar.**
+    This is required if **[dataType](./v2-Collections-DataType)** of this field is set to **DataType.VarChar.**
 
 - `dimension(int dimension)`
 
     The number of dimensions a value should have.
 
-    This is required if **dataType** of this field is set to **DataType.FloatVector**.
+    This is required if **[dataType](./v2-Collections-DataType)** of this field is set to **DataType.FloatVector**.
 
 - `isPrimaryKey(boolean isPrimaryKey)`
 

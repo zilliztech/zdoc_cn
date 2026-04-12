@@ -13,10 +13,10 @@ type: docx
 token: AnkUdEHXmob3Vwx9GIWcDOQanng
 sidebar_position: 13
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops a custom role.
 
 ```javascript
-dropRole(data): Promise<ResStatus>
+await milvusClient.dropRole(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropRole({
+await milvusClient.dropRole({
    roleName: string,
    timeout?: number
  })
@@ -89,7 +89,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient.dropRole({
+await milvusClient.dropRole({
    roleName: 'exampleRole',
  })
 ```

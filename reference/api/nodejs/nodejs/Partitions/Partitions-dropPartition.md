@@ -13,10 +13,10 @@ type: docx
 token: BBmsddqZEozxWyxkoADcFfzpncW
 sidebar_position: 2
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops a specified partition from the current collection.
 
 ```javascript
-dropPartition(data): Promise<ResStatus>
+await milvusClient.dropPartition(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropPartition({
+await milvusClient.dropPartition({
     db_name: string,
     collection_name: string,
     partition_name: string,
@@ -101,7 +101,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-new milvusClient(MILUVS_ADDRESS).dropPartition({
+new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).dropPartition({
     collection_name: 'my_collection',
     partition_name: 'my_partition',
  });

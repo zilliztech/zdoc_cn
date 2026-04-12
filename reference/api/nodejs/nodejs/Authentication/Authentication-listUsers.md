@@ -13,10 +13,10 @@ type: docx
 token: Z0EOd1PXooNeowx4SQgcq3synBc
 sidebar_position: 21
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation lists currently available users.
 
 ```javascript
-listUsers(data): Promise<ListCredUsersResponse>
+await milvusClient.listUsers(data)
 ```
 
 ## Request Syntax

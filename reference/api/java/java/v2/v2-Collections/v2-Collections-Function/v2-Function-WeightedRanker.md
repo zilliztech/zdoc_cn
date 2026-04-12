@@ -13,10 +13,10 @@ type: docx
 token: V9YUdnfxDoc5Gmx80Wec9P6Sn2d
 sidebar_position: 7
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -73,7 +73,7 @@ WeightedRanker.builder()
 
 **RETURNS:**
 
- A weighted ranker instance.
+A weighted ranker instance.
 
 ## Examples:
 

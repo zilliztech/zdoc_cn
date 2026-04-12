@@ -13,10 +13,10 @@ type: docx
 token: DXTLdtFCso7fo6xJHShc7XLpngh
 sidebar_position: 1
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation reassigns the alias of one collection to another.
 
 ```javascript
-alterAlias(data): Promise<ResStatus>
+await milvusClient.alterAlias(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.alterAlias({
+await milvusClient.alterAlias({
    alias: string,
    db_name: string
    collection_name: string,
@@ -119,7 +119,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.alterAlias({
    alias: 'my_collection_alias',
    collection_name: 'my_collection',

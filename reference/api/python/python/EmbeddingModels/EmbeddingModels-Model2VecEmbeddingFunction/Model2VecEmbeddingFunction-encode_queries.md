@@ -13,10 +13,10 @@ type: docx
 token: Px9Ydg6KSoNFV2xBumpcGBNqn8d
 sidebar_position: 2
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud

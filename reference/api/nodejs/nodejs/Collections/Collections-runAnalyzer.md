@@ -13,10 +13,10 @@ type: docx
 token: LsMldPd8GodoVqxCAZUcWYjdnwh
 sidebar_position: 18
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation runs an analyzer on the provided text for test purposes.
 
 ```javascript
-runAnalyzer(data): Promise<RunAnalyzerResponse>
+await milvusClient.runAnalyzer(data)
 ```
 
 ## Request Syntax

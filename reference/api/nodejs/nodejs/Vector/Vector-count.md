@@ -13,10 +13,10 @@ type: docx
 token: NaOadUNSpo1EsIxPMSfc0R4Hnfb
 sidebar_position: 1
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation counts the number of entities that match the specified filtering expression.
 
 ```javascript
-count(data): Promise<CountResult>
+await milvusClient.count(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.count({
+await milvusClient.count({
     db_name?: string,
     collection_name: string,
     expr?: string,
@@ -108,7 +108,10 @@ This method returns a promise that resolves to a **CountResult** object.
 ## Examples
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const num_entities = await milvusClient.count({
    collection_name: 'my_collection',
    expr: "age in [1,2,3,4,5,6,7,8]",

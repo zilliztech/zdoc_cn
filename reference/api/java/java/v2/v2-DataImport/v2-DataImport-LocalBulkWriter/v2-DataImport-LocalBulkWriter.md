@@ -13,10 +13,10 @@ type: docx
 token: G7F9dQ8DwoZsaVxExdnc7K6an3g
 sidebar_position: 5
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud
@@ -75,7 +75,7 @@ LocalBulkWriterParam.newBuilder()
 
 - `withCollectionSchema(CreateCollectionReq.CollectionSchema collectionSchema)`
 
-    The schema of the target collection that is defined by instantiating **[CreateCollectionReq.CollectionSchema](./v2-Collections-CollectionSchema)**.
+    The schema of the target collection that is defined by instantiating **CreateCollectionReq.CollectionSchema**.
 
 - `withLocalPath(String localPath)`
 

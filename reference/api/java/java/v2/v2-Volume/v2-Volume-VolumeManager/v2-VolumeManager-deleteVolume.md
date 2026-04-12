@@ -13,10 +13,10 @@ type: docx
 token: OalndLUMRoUqpMxr2QscYTCenre
 sidebar_position: 2
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

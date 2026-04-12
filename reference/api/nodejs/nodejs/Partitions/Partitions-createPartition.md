@@ -13,10 +13,10 @@ type: docx
 token: PPLtdSbtfomgF1x5MHncKPgPnSf
 sidebar_position: 1
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation creates a partition in the target collection.
 
 ```javascript
-createPartition(data): Promise<ResStatus>
+await milvusClient.createPartition(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.createPartition({
+await milvusClient.createPartition({
     db_name: string,
     collection_name: string,
     partition_name: string,
@@ -101,7 +101,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-new milvusClient(MILUVS_ADDRESS).createPartition({
+new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).createPartition({
     collection_name: 'my_collection',
     partition_name: 'my_partition',
  });

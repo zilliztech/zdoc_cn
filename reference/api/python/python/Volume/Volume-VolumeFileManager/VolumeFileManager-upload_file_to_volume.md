@@ -13,10 +13,10 @@ type: docx
 token: Fr3rdPTuXoC0Lzx7urIcwBqWnDb
 sidebar_position: 1
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

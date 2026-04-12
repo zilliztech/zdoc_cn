@@ -13,10 +13,10 @@ type: docx
 token: Acvxd7t9poXj6nxb0vMco0wsngh
 sidebar_position: 6
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation resets the index properties to their default values.
 
 ```javascript
-dropIndexProperties(data): Promise<ResStatus>
+await milvusClient.dropIndexProperties(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.dropIndexProperties({
+await milvusClient.dropIndexProperties({
      db_name?: string,
      collection_name: string,
      index_name: string,

@@ -13,10 +13,10 @@ type: docx
 token: QI87dhVnioL9JLxnNKxcM8jWnkh
 sidebar_position: 3
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
@@ -190,16 +190,4 @@ res = client.insert(
 
 # {'insert_count': 2}
 ```
-
-## Related methods
-
-- [delete()](./Vector-delete)
-
-- [get()](./Vector-get)
-
-- [query()](./Vector-query)
-
-- [search()](./Vector-search)
-
-- [upsert()](./Vector-upsert)
 

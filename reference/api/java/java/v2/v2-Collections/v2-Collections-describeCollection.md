@@ -13,10 +13,10 @@ type: docx
 token: F8lCdDCa3oD48WxWyURcmfoznYt
 sidebar_position: 12
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
@@ -121,7 +121,7 @@ A **DescribeCollectionResp** object that contains detailed information about the
 
     The time when the collection was created in UTC.
 
-- **consistencyLevel** (*ConsistencyLevel*) -
+- **[consistencyLevel](./v2-Collections-ConsistencyLevel)** (*[ConsistencyLevel](./v2-Collections-ConsistencyLevel)*) -
 
     The consistency level of the collection.
 

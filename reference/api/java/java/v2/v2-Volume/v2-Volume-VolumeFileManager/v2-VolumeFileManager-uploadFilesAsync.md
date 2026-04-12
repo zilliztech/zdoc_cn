@@ -13,10 +13,10 @@ type: docx
 token: GE25dbBmMoU8glxCWbJckYObnN1
 sidebar_position: 1
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
@@ -63,11 +63,11 @@ uploadFileAsync(UploadFilesRequest.builder()
 
 **RETURN TYPE**
 
-*CompletableFuture\<UploadFilesResult>*
+*CompletableFuture&lt;UploadFilesResult&gt;*
 
 **RETURNS**
 
-A **CompletableFuture\<UploadFilesResult>** instance that resolves to an **UploadFilesResult** instance that has the following attributes.
+A **CompletableFuture&lt;UploadFilesResult&gt;** instance that resolves to an **UploadFilesResult** instance that has the following attributes.
 
 - **volumeName** (*str*) -
 

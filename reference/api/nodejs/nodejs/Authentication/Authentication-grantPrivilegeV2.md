@@ -13,10 +13,10 @@ type: docx
 token: R618dfeMYo9GdmxMwe9cQLclncs
 sidebar_position: 15
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation assigns a privilege or a privilege group to a role.
 
 ```javascript
-grantPrivilegeV2(data): Promise<ResStatus>
+await milvusClient.grantPrivilegeV2(data)
 ```
 
 ## Request Syntax

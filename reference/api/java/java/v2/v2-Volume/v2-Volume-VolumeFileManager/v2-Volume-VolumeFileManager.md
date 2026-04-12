@@ -13,10 +13,10 @@ type: docx
 token: DK7ZdxRCyoepyxx0odzcH66xnu3
 sidebar_position: 2
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud
@@ -63,7 +63,7 @@ VolumeFileManager(
 
     **[REQUIRED]**
 
-    The Zilliz Cloud endpoint, which is `https://api.cloud.zilliz.com` (Global) or `https://api.cloud.zilliz.com.cn` (China), depending on the platform you have registered with.
+    The Zilliz Cloud endpoint, which is `https://api.cloud.zilliz.com`.
 
 - **apiKey** (*str*) -
 

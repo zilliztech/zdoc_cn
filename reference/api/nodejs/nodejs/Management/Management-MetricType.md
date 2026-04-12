@@ -13,10 +13,10 @@ type: docx
 token: KQDEdcccXozuKpxDg78cSmxYnQg
 sidebar_position: 21
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud

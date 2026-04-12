@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This operation renames an existing collection. | Java | v2"
 type: docx
-token: JCutdOT9Polf2dxej0mcoP24n9c
+token: EZw8dwHXzoggBsxB0SWc0MANnud
 sidebar_position: 21
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -45,26 +45,22 @@ renameCollection(RenameCollectionReq.builder()
     .collectionName(String collectionName)
     .newCollectionName(String newCollectionName)
     .build()
-)
+);
 ```
 
 **BUILDER METHODS:**
 
-- `databaseName(String databaseName)`
+- `databaseName(String databaseName)` -
 
-    The name of the database to which the target collection belongs.
+    The name of the database. Defaults to the current database if not specified.
 
-- `collectionName(String collectionName)`
+- `collectionName(String collectionName)` -
 
-    The name of an existing collection.
+    The name of the target collection.
 
-    Setting this to a non-existing collection results in a **MilvusException**.
+- `newCollectionName(String newCollectionName)` -
 
-- `newCollectionName(String newCollectionName)`
-
-    The name of the target collection after this operation.
-
-    Setting this to the value of **old_name** results in a **MilvusException**.
+    The new name for the collection.
 
 **RETURNS:**
 
@@ -72,7 +68,7 @@ renameCollection(RenameCollectionReq.builder()
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+- **MilvusClientException**
 
     This exception will be raised when any error occurs during this operation.
 
@@ -98,4 +94,3 @@ RenameCollectionReq renameCollectionReq = RenameCollectionReq.builder()
         .build();
 client.renameCollection(renameCollectionReq);
 ```
-

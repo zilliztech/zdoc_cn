@@ -8,14 +8,14 @@ last_modified: false
 deprecate_since: false
 description: "Methods related to implement role-based access control to your resources. | Node.js"
 type: folder
-token: H1JWfZh74lkVhgdfGiKcQfsinPg
+token: KWn3ff3dRlg3zndqerbcW0QXn1c
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

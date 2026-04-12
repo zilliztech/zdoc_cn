@@ -13,10 +13,10 @@ type: docx
 token: XDXid6aZ8oCHnVxxFpPcKAB9n0c
 sidebar_position: 3
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation displays the statistics collected on a specific partition.
 
 ```javascript
-getPartitionStatistics(data): Promise<StatisticsResponse>
+await milvusClient.getPartitionStatistics(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.getPartitionStatistics({
+await milvusClient.getPartitionStatistics({
     db_name: string,
     collection_name: string,
     partition_name: string,
@@ -111,7 +111,10 @@ This method returns a promise that resolves to a **StatisticsResponse** object.
 ## Example
 
 ```java
-new milvusClient(MILUVS_ADDRESS).getPartitionStatistics({
+new MilvusClient({
+    address: 'localhost:19530',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).getPartitionStatistics({
     collection_name: 'my_collection',
     partition_name: "_default",
  });

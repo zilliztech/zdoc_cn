@@ -13,10 +13,10 @@ type: docx
 token: HqE5d2jOroEuObxIjkZcHkX4nWX
 sidebar_position: 12
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation gets the status of the specified index.
 
 ```javascript
-getIndexState(data): Promise<GetIndexStateResponse>
+await milvusClient.getIndexState(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.getIndexState({
+await milvusClient.getIndexState({
       db_name?: string,
       collection_name: string,
       field_name?: string,

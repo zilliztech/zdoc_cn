@@ -13,10 +13,10 @@ type: docx
 token: MkWNdU1tvoqlBRxI05Rcu09cnEc
 sidebar_position: 2
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
@@ -63,7 +63,6 @@ pymilvus.get_import_progress(
 
     ```python
     https://api.cloud.zilliz.com
-    # https://api.cloud.zilliz.com.cn 
     ```
 
     Replace `cloud-region` with the ID of the region that accommodates your cluster. You can get the cloud region ID from the endpoint URL of your cluster.

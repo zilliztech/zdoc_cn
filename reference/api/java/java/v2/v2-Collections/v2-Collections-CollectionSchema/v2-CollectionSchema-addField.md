@@ -13,10 +13,10 @@ type: docx
 token: X6MudyTkmoIsE5x0XiKcbwPdntq
 sidebar_position: 1
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -89,7 +89,7 @@ CollectionSchema.addField(AddFieldReq.builder()
 
     The maximum number of characters a value should contain.
 
-    This is required if **dataType** of this field is set to **DataType.VarChar.**
+    This is required if **[dataType](./v2-Collections-DataType)** of this field is set to **DataType.VarChar.**
 
 - `isPrimaryKey(Boolean isPrimaryKey)`
 
@@ -117,19 +117,19 @@ CollectionSchema.addField(AddFieldReq.builder()
 
     The value should be greater than 1 and is usually determined by the embedding model in use.
 
-    This is required if **dataType** of this field is set to **DataType.FloatVector**.
+    This is required if **[dataType](./v2-Collections-DataType)** of this field is set to **DataType.FloatVector**.
 
 - `elementType(DataType elementType)`
 
     The data type of elements in array fields.
 
-    This is required if **dataType** of this field is set to **DataType.Array**.
+    This is required if **[dataType](./v2-Collections-DataType)** of this field is set to **DataType.Array**.
 
 - `maxCapacity(Integer maxCapacity)`
 
     The maximum number of elements that an array field can contain.
 
-    This is required if **dataType** of this field is set to **DataType.Array**.
+    This is required if **[dataType](./v2-Collections-DataType)** of this field is set to **DataType.Array**.
 
 - `isNullable(Boolean isNullable)`
 
@@ -180,7 +180,7 @@ CollectionSchema.addField(AddFieldReq.builder()
 
             Defines the tokenizer type. Possible values: `standard` (default), `whitespace`, `jieba`. For more information, refer to [Standard Tokenizer](https://milvus.io/docs/standard-tokenizer.md), [Whitespace Tokenizer](https://milvus.io/docs/whitespace-tokenizer.md), and [Jieba Tokenizer](https://milvus.io/docs/jieba-tokenizer.md).
 
-        - `filter` (*List\<String>*) -
+        - `filter` (*List&lt;String&gt;*) -
 
             Lists filters to refine tokens produced by the tokenizer, with options for built-in filters and custom filters. For more information, refer to [Alphanumonly Filter](https://milvus.io/docs/alphanumonly-filer.md) and others.
 
@@ -196,7 +196,7 @@ CollectionSchema.addField(AddFieldReq.builder()
 
     A list of fields in the Array of Structs field. 
 
-    This is required if **dataType** of this field is set to **DataType.Array** and **elementType** of this field is set to **DataType.Struct**.
+    This is required if **[dataType](./v2-Collections-DataType)** of this field is set to **DataType.Array** and **elementType** of this field is set to **DataType.Struct**.
 
 **RETURNS:**
 

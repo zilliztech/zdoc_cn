@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This operation flushes the streaming data onto the disk and seals the current segment. | Java | v2"
 type: docx
-token: PmHrdRirloGrFExMMfcc5un0n1g
+token: N4R0dHR6MoiW2Rx9ClGc9MSlnOe
 sidebar_position: 7
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,33 +42,35 @@ public void flush(FlushReq request)
 ```java
 flush(FlushReq.builder()
     .databaseName(String databaseName)
-    .collectionNames(List<String>)
-    .waitFlushedTimeoutMs(Long)
+    .collectionNames(List<String> collectionNames)
+    .waitFlushedTimeoutMs(Long waitFlushedTimeoutMs)
     .build()
-)
+);
 ```
 
 **BUILDER METHODS:**
 
-- `databaseName(String databaseName)`
+- `databaseName(String databaseName)` -
 
-    The name of the database to which the target collections belong.
+    The name of the database. Defaults to the current database if not specified.
 
-- `collectionNames(List<String>)`
+- `collectionNames(List<String> collectionNames)` -
 
-    The names of the the target collections.
+    A list of collection names.
 
-- `waitFlushedTimeoutMs(Long)`
+- `waitFlushedTimeoutMs(Long waitFlushedTimeoutMs)` -
 
-    The timeout duration for the current operation in milliseconds.
-
-**RETURN TYPE:**
-
-*void*
+    The timeout in milliseconds to wait for flush completion.
 
 **RETURNS:**
 
-N/A
+*void*
+
+**EXCEPTIONS:**
+
+- **MilvusClientException**
+
+    This exception will be raised when any error occurs during this operation.
 
 ## Example
 

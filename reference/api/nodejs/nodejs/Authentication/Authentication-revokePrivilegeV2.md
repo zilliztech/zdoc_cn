@@ -13,10 +13,10 @@ type: docx
 token: UlAUdLNkCo1Mp8xFZYWclSL9n6b
 sidebar_position: 26
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation revokes a privilege already assigned to a role.
 
 ```javascript
-revokePrivilegeV2(data): Promise<ResStatus>
+await milvusClient.revokePrivilegeV2(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.revokePrivilege({
+await milvusClient.revokePrivilege({
    role: string,
    privilege: string,
    db_name: string,

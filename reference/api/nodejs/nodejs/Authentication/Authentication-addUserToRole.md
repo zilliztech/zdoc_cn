@@ -13,10 +13,10 @@ type: docx
 token: Qc72dTKgroNdHjxIG2xcwNdmnHb
 sidebar_position: 2
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation adds a user to a specific role.
 
 ```javascript
-addUserToRole(data): Promise<ResStatus>
+await milvusClient.addUserToRole(data)
 ```
 
 ## Request Syntax
 
 ```javascript
-milvusClient.addUserToRole({
+await milvusClient.addUserToRole({
    username: string,
    rolename: string,
    timeout?: number
@@ -96,7 +96,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example
 
 ```java
-milvusClient.addUserToRole({
+await milvusClient.addUserToRole({
     username: 'myUser',
     roleName: 'myRole'
 });
