@@ -218,3 +218,19 @@ export async function ReferenceItemsGenerator ({
 
             return sidebarItems;
           }
+
+export async function AgentsItemsGenerator ({
+    defaultSidebarItemsGenerator, ...args
+}) {
+    var sidebarItems = defaultSidebarItemsGenerator(args)
+
+    sidebarItems = sidebarItems.map(item => {
+        if (item.type === 'category') {
+            item.collapsed = false;
+        }
+
+        return item;
+    })
+
+    return sidebarItems;
+}

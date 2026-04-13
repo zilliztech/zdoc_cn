@@ -2,7 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import larkDocsConfig from './config/lark-docs.config';
-import { tutorialsItemsGenerator, ReferenceItemsGenerator } from './config/sidebar-generators';
+import { tutorialsItemsGenerator, ReferenceItemsGenerator, AgentsItemsGenerator } from './config/sidebar-generators';
 import 'dotenv/config';
 
 // @ts-check
@@ -118,6 +118,19 @@ const config = {
             "path": "v2.4.11",
           }
         }
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'agents',
+        path: 'docs-agents',
+        routeBasePath: 'docs/agents',
+        sidebarPath: require.resolve('./sidebarsAgents.js'),
+        breadcrumbs: false,
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+        sidebarItemsGenerator: AgentsItemsGenerator,
       }
     ],
     [
@@ -239,6 +252,22 @@ const config = {
           },
           {
             type: 'dropdown',
+            label: 'Agents & CLI',
+            position: 'left',
+            className: 'navbar__item--new-badge',
+            items: [
+              {
+                label: 'Agent & Prompts',
+                to: '/docs/agents/agents-and-prompts',
+              },
+              {
+                label: 'Zilliz CLI',
+                to: '/reference/cli/overview',
+              },
+            ]
+          },
+          {
+            type: 'dropdown',
             label: '版本文档',
             position: 'left',
             items: [
@@ -251,18 +280,6 @@ const config = {
                 href: '/docs/release-notes',
               }
             ],
-          },
-          {
-            href: 'https://zilliz.com.cn/use-cases',
-            label: '场景用例',
-            position: 'left',
-            className: 'header-link',
-          },
-          {
-            href: 'https://zilliz.com.cn/pricing',
-            label: '定价',
-            position: 'left',
-            className: 'header-link',
           }
         ],
       },

@@ -20,3 +20,4 @@ plugins/lark-docs/**/*.json
 scripts/docs
 .claude
 .playwright*
+.qwen
