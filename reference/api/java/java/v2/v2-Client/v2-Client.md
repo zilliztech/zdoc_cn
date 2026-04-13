@@ -12,10 +12,10 @@ token: LxHMfE9RNlOtvOdHs9wcrGnWnGg
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
+  - multimodal vector database retrieval
   - Retrieval Augmented Generation
   - Large language model
   - Vectorization
-  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

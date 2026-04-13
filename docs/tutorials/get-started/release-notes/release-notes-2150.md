@@ -10,7 +10,7 @@ notebook: FALSE
 description: "我们很高兴地宣布，Zilliz Cloud 内测版现已推出在线迁移！无论您需要升级集群还是更改部署配置，例如从容量型 CU 切换到其它类型，您都可以轻松迁移数据，而不会中断任何服务。 | Cloud"
 type: origin
 token: S53KwdOb8i9D3xkawDXcJnDGnZe
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz
@@ -47,7 +47,7 @@ Zilliz Cloud 的原生迁移流程确保：
 
 - 在整个迁移过程中，源集群和目标集群之间的状态平滑转换。
 
-在线迁移现在可在 Zilliz Cloud 控制台的内测版中使用。现在登录，以开始您的第一次零停机迁移。有关详细操作步骤和限制，请参阅[在线迁移](./zero-downtime-migration)。
+在线迁移现在可在 Zilliz Cloud 控制台的内测版中使用。现在登录，以开始您的第一次零停机迁移。
 
 ## 其它增强\{#other-enhancements}
 

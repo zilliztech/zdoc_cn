@@ -78,8 +78,6 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 - [提取、转换和加载](./merge-data)（ETL）
 
-- [在线迁移](./zero-downtime-migration)
-
 - [导出备份文件](./export-backup-files)
 
 - [托管模型](./hosted-models)
@@ -93,6 +91,8 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 ### 公测版
 
 - [Text Embedding](./model-based-functions) 和 [Rerank](./reranking) Function
+
+- [访问日志](./access-logs)
 
 <Admonition type="info" icon="📘" title="说明">
 

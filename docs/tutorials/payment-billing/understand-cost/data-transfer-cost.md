@@ -69,8 +69,6 @@ import Admonition from '@theme/Admonition';
 
 - 转发[审计日志](./audit-logs)到云服务对象存储
 
-- [在线迁移](./zero-downtime-migration)数据同步
-
 - [离线迁移](./offline-migration)
 
 - [跨地域备份](/docs/backup-to-other-regions)
