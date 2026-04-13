@@ -1215,7 +1215,9 @@ class larkDocWriter {
         const valid_langs = ['Python', 'JavaScript', 'Java', 'Go', 'Bash']
         let lang = code.style.language ? this.code_langs[code['style']['language']] : 'plaintext'
         let elements = (await Promise.all(code['elements'].map( async x => {
-            return await this.__text_run(x, code['elements'], true)
+            let content = await this.__text_run(x, code['elements'], true);
+            content = content.replaceAll('&#36;', '$');
+            return content; 
         }))).join('') 
 
         elements = elements.replace(/zilliz.com(["|'])/g, 'zilliz.com.cn$1')
@@ -1276,7 +1278,7 @@ class larkDocWriter {
     }
 
     __code_block_split(elements, indent, lang, position, values=null) {
-        elements = elements.split('\n');
+        elements = elements.split('\n').map(line => line.replaceAll('`', '\\`'));
         var divider = elements.indexOf(elements.filter(x => x.match(/^[#\/]\/* ==*/))[0]);
         var tab_item_start = `${' '.repeat(indent)}<TabItem value='${lang.toLowerCase()}'>\n`;
         var tab_item_end = `${' '.repeat(indent)}</TabItem>`
