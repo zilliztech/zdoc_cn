@@ -334,6 +334,23 @@ const gov226 : Manual = {
     }
 }
 
+// cli =================================
+
+const cliv01 : Manual = {
+    root: 'PPuBfnEIWltim9dw8hxcC3EDnwb',
+    base: 'OAK4bJaNuac501sX6Y1cS3OGnzf',
+    sourceType: 'drive',
+    version: '0.1.x',
+    displayedSidebar: 'cliSidebar',
+    docSourceDir: './plugins/lark-docs/meta/sources/cli/v0.1.x',
+    targets: {
+        zilliz: {
+            outputDir: 'reference/cli/cli',
+            imageDir: 'static/img',
+        }
+    }
+}
+
 export default {
     guides,
     onpremise,
@@ -350,5 +367,6 @@ export default {
     nodejs26,
     gov1,
     gov2,
-    gov226
+    gov226,
+    cliv01
 }
