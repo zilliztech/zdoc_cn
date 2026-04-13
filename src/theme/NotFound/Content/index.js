@@ -29,7 +29,7 @@ export default function NotFoundContent({className}) {
           </p>
 
           <div style={{display: 'flex', justifyContent: 'center', gap: '12px', marginTop: '32px', flexWrap: 'wrap'}}>
-            <a className="button button--primary button--lg" href="/docs/home" style={{borderRadius: '8px', minWidth: '120px'}}>
+            <a className="button button--primary button--lg" href="/home" style={{borderRadius: '8px', minWidth: '120px'}}>
               <span className="button__text button__text--primary">返回首页</span>
             </a>
             <a className="button button--secondary button--lg" href="/docs/quick-start" style={{borderRadius: '8px', minWidth: '120px'}}>
