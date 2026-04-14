@@ -10,7 +10,7 @@ notebook: FALSE
 description: "版本说明书（2026/04） | Cloud"
 type: origin
 token: Ahgkw1upqiFne0kMJBaciMyEnac
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -37,7 +37,7 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        ## 全球集郡\{#global-cluster}
+        ## 全球集群\{#global-cluster}
 
         全球集群现已支持云地域级别的灾备和故障切换能力，并加强了相关平台能力。
 
@@ -53,39 +53,37 @@ import Grid from '@site/src/components/Grid';
 
         ## Collection 级别指标监控\{#collection-level-metrics}
 
-        更多详情，请参考 [指标快速参考](./metrics-alerts-reference#resources)。
+        以下指标现已支持 Collection 级别的细分展示，帮助您快速定位单个 Collection 的性能问题并进行容量规划：
 
-        ## 性能日志（访问日志） | PUBLIC \{#performance-logs-access-logs}
+        - QPS（读/写）
 
-        Zilliz Cloud 现已支持访问日志。您可以通过这种新的可观测性指标来获取您集群中查询活动的详细情况。访问日志记录了所有 Search、Hybrid Search 及 Query 请求。
+        - Latency（读/写，平均值及 P99）
 
-        与审计日志为所有操作提供完整的合规记录不同，访问日志的设计目的是可以为您的性能分析及业务洞察提供数据。通过异步、非阻塞式的日志系统，并提供可配置的采样率等指标，您可以在不影响业务延时的情况下方便地收集各种查询模式的相关数据。
+        - Entity Count
 
-        关键能力包括：
+        - Loaded Entities
 
-        - 可配置采样率：您可以通过调整采样率（如将其设置为 1%）来平衡统计准确度及高吞吐工作负载导致的存储成本。
+        您可以通过控制台、Prometheus 端点或 RESTful API 访问 Collection 级别指标。
 
-        - 可定制输出字段：您可以通过调整每条日志记录中包含的字段来控制日志的详细程度及相关成本。
+        更多详情，请参考 [指标快速参考](./metrics-alerts-reference)及 [Prometheus 监控](./prometheus-monitoring)。
 
-        - 热数据识别：您可以通过分析日志中记录的主键（`params.result_pks`）来发现哪些记录经常被访问，从而形成相应的数据缓存和分层访问策略。
+        ## 访问日志 | PUBLIC \{#performance-logs-access-logs}
 
-        - 结构化 JSONL 格式：每条日志记录均为一个完整的 JSON 对象。您可以将其纳入到任何数据仓库及分析流水线。
+        Zilliz Cloud 现已支持访问日志（Access log），可捕获集群查询活动（Search、Hybrid Search、Query），专为性能分析和业务洞察设计。主要能力：
+
+        - **可配置采样率** — 平衡统计精度与存储成本（如设置 1% 采样率）。
+
+        - **可定制输出字段** — 控制每条日志的详细程度与成本。
+
+        - **热数据识别** — 分析返回的主键，发现高频访问记录。
+
+        - **结构化 JSONL 格式** — 可直接接入任意数据仓库或分析管道。
 
         更多详情，请参考 [访问日志](./access-logs)。
 
         ## 运维窗口\{#maintenance-window}
 
-        Zilliz Cloud 重新设计了运维窗口功能的用户体验，为您提供可预测的定时升级计划及主动通知能力。
-
-        - 扩大可用范围：运维窗口设置现已向所有企业订阅组织开放。
-
-        - 拉长窗口范围：运维窗口的最短时间已由原来的 2 小时拉长为 4 小时，避免了升级耗时超过运维窗口的情况。您仍旧可以像之前一样配置运维窗口的起始时间。
-
-        - 升级通知系统：对于所有的主要升级，您都会在升级前  7  天、3 天、1 天接收到 Email 和控制台通知。您可以通过通知了解升级计划主配套 SDK 的推荐信息。
-
-        - 主动推迟升级：您可以根据您的业务需求在集群详情页面选择推迟升级。当前支持最多推迟 7 天。
-
-        更多详情，请参考[配置运维窗口](./organization-settings#set-up-preferred-maintenance-window)。
+        运维窗口功能体验已全面升级：最短窗口时长由 2 小时延长至 4 小时，升级前 7/3/1 天自动发送邮件及控制台通知，支持推迟升级最多 7 天，且已向所有企业版订阅组织开放。更多详情，请参考[配置运维窗口](./organization-settings#set-up-preferred-maintenance-window)。
 
         ## Cluster Admin 角色\{#cluster-admin-role}
 
@@ -97,7 +95,7 @@ import Grid from '@site/src/components/Grid';
 
         - 注意：自定义 API Key 不支持绑定 Cluster Admin 角色。
 
-        更多详情，可参考 [管理项目用户](./project-users#cluster-admin)。
+        更多详情，可参考 [管理项目用户](./project-users)。
 
         ## Zilliz Cloud BYOC 支持分层存储集群\{#zilliz-cloud-byoc-supports-tiered-storage-cluster}
 
@@ -110,4 +108,3 @@ import Grid from '@site/src/components/Grid';
     </div>
 
 </Grid>
-
