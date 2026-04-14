@@ -2,7 +2,7 @@
 title: "配置访问日志 | Cloud"
 slug: /configure-access-logs
 sidebar_label: "配置访问日志"
-beta: FALSE
+beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -33,6 +33,15 @@ import Procedures from '@site/src/components/Procedures';
 
 本指南涵盖 Zilliz Cloud 集群上访问日志的完整生命周期：启用、调整设置和停用。
 
+<Admonition type="info" icon="📘" title="说明">
+
+<ul>
+<li><p>本版本仅支持搜索和查询类操作的日志记录：Search、HybridSearch 和 Query。完整操作列表的支持将在后续版本中提供。</p></li>
+<li><p>本版本中，审计日志和访问日志互斥，同一时间只能开启其中一个。</p></li>
+</ul>
+
+</Admonition>
+
 ## 开始之前\{#before-you-start}
 
 - 在目标集群所在区域配置了对象存储集成。有关设置说明，请参阅集成[阿里云对象存储](./integrate-with-storage-bucket)或 [Amazon S3](./integrate-with-amazon-s3)。
@@ -59,7 +68,7 @@ import Procedures from '@site/src/components/Procedures';
 
     - **操作类型**：指定哪些操作类型（例如 Search 或 HybridSearch）会被记录为访问日志条目。
 
-    - **输出字段**：指定写入对象存储的每条访问日志中包含哪些元数据字段。标记为 **Always included** 的字段会在每条日志中记录，被选中的字段则会作为补充一并写入。
+    - **输出字段**：指定写入对象存储的每条访问日志中包含哪些元数据字段。标记为**固定包含**的字段会在每条日志中记录，被选中的字段则会作为补充一并写入。
 
 1. 点击**保存**。日志文件将在几分钟内出现在你的存储桶中，路径遵循 `/<Cluster ID>/Access/<Date>/<HH:MM:SS>-<UUID>.log` 约定。
 

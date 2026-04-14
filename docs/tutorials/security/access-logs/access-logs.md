@@ -2,7 +2,7 @@
 title: "访问日志 | Cloud"
 slug: /access-logs
 sidebar_label: "访问日志"
-beta: FALSE
+beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
