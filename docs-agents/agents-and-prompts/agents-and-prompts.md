@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 The Zilliz Cloud Agents and Prompts ecosystem provides AI-powered tools to help developers build with Zilliz Cloud more efficiently using natural language and intelligent assistance.
 
-## Zilliz Skill\{#zilliz-skill}
+## Zilliz Skill
 
 Zilliz Skills are reusable skill modules for Claude Code that provide specialized capabilities for working with Zilliz Cloud.
 
@@ -55,7 +55,7 @@ Zilliz Skills are reusable skill modules for Claude Code that provide specialize
 
 - Wraps Zilliz CLI for execution.
 
-## Zilliz Plugin\{#zilliz-plugin}
+## Zilliz Plugin
 
 A Claude Code plugin that brings Zilliz Cloud operations directly into your IDE with natural language commands.
 
@@ -79,7 +79,7 @@ A Claude Code plugin that brings Zilliz Cloud operations directly into your IDE 
 
 - Wraps Zilliz CLI for execution
 
-## MCP Server\{#mcp-server}
+## MCP Server
 
 A Model Context Protocol server that enables any AI agent to interact with Zilliz Cloud through standardized tools.
 
@@ -103,7 +103,7 @@ A Model Context Protocol server that enables any AI agent to interact with Zilli
 
 - RESTful HTTP transport option
 
-## AI Prompts\{#ai-prompts}
+## AI Prompts
 
 Curated prompt library for AI-powered IDEs to help AI assistants implement Zilliz Cloud features correctly.
 
@@ -125,7 +125,7 @@ Curated prompt library for AI-powered IDEs to help AI assistants implement Zilli
 
 - Covers resource planning, pricing, search, import, migrations, integrations, access control, and schema design
 
-## Decision Matrix\{#decision-matrix}
+## Decision Matrix
 
 <table>
    <tr>
@@ -160,7 +160,7 @@ Curated prompt library for AI-powered IDEs to help AI assistants implement Zilli
    </tr>
 </table>
 
-## Related Tools\{#related-tools}
+## Related Tools
 
 - **Zilliz CLI**: Command-line interface for scripting and automation. For details, refer to [Zilliz CLI Reference](/reference/cli/overview).
 
@@ -176,7 +176,7 @@ Curated prompt library for AI-powered IDEs to help AI assistants implement Zilli
 
     - [RESTful API](/reference/restful)
 
-## Getting Started\{#getting-started}
+## Getting Started
 
 1. **For Claude Code users**: Start with the Zilliz Plugin
 
@@ -184,7 +184,7 @@ Curated prompt library for AI-powered IDEs to help AI assistants implement Zilli
 
 1. **For any IDE**: Add AI Prompts to your project
 
-## What's more\{#whats-more}
+## What's more
 
 import DocCardList from '@theme/DocCardList';
 

@@ -1,5 +1,5 @@
 ---
-title: "Zilliz Plugin Capabilities | Cloud"
+title: "Zilliz Claude Code Plugin Capabilities | Cloud"
 slug: /zilliz-plugin-capabilities
 sidebar_label: "Core Capabilities"
 beta: FALSE
@@ -30,11 +30,11 @@ displayed_sidebar: agentsSidebar
 import Admonition from '@theme/Admonition';
 
 
-# Zilliz Plugin Capabilities
+# Zilliz Claude Code Plugin Capabilities
 
 The Zilliz Plugin offers capabilities across various areas for managing Zilliz Cloud resources using natural language. In this guide, you will find the main features related to managing clusters and collections, as well as vector operations.
 
-## Cluster Management\{#cluster-management}
+## Cluster Management
 
 **What you can do:**
 
@@ -67,7 +67,7 @@ zilliz cluster list
 zilliz cluster resume --cluster-id <id>
 ```
 
-## Collection Management\{#collection-management}
+## Collection Management
 
 **What you can do:**
 
@@ -95,7 +95,7 @@ zilliz collection load --name user_embeddings
 zilliz collection getstats --name products
 ```
 
-## Vector Operations\{#vector-operations}
+## Vector Operations
 
 **What you can do:**
 

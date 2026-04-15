@@ -31,21 +31,21 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Skills are reusable skill modules for Claude Code that provide specialized capabilities for working with Zilliz Cloud.
 
-## What are Zilliz Skills?\{#what-are-zilliz-skills}
+## What are Zilliz Skills?
 
-Skills are modular capabilities that extend Claude Code's functionality. The Zilliz Skills repository (https://github.com/zilliztech/zilliz-skill) contains pre-built skills for common Zilliz Cloud operations.
+Skills are modular capabilities that extend Claude Code's functionality. The [Zilliz Skills repository](https://github.com/zilliztech/zilliz-skill) contains pre-built skills for common Zilliz Cloud operations.
 
-## Setup\{#setup}
+## Setup
 
 Run the following command to install the Zilliz skill. Ensure that you have Node.js installed.
 
 ```bash
-npx skills add https://github.com/zilliztech/zilliz-skill
+npx skills add zilliztech/zilliz-skill
 ```
 
 This command will guide you in choosing the target tools and determining the installation scope.
 
-## Available Skills\{#available-skills}
+## Available Skills
 
 <table>
    <tr>
@@ -102,7 +102,7 @@ This command will guide you in choosing the target tools and determining the ins
    </tr>
 </table>
 
-## How to Use\{#how-to-use}
+## How to Use
 
 Skills are invoked with proper natural language prompts as follows:
 
@@ -114,7 +114,7 @@ Skills are invoked with proper natural language prompts as follows:
 "Create a role with read-only access to the analytics collection"
 ```
 
-## Next Steps\{#next-steps}
+## Next Steps
 
 - [Zilliz Plugin](./zilliz-plugin)
 

@@ -10,7 +10,7 @@ notebook: FALSE
 description: "The Zilliz Cloud AI prompt library offers curated prompts for AI-powered IDEs, helping AI assistants implement Zilliz Cloud features correctly and efficiently. | Cloud"
 type: origin
 token: Li1gwPA8HiBgsokLgO4cKA7nnDg
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - zilliz
   - vector database
@@ -28,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 The Zilliz Cloud AI prompt library offers curated prompts for AI-powered IDEs, helping AI assistants implement Zilliz Cloud features correctly and efficiently.
 
-## How to use these prompts\{#how-to-use-these-prompts}
+## How to use these prompts
 
 Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI tool when chatting. The table below demonstrates where to place the prompt in different tools.
 
@@ -60,7 +60,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
    </tr>
 </table>
 
-## Best practices\{#best-practices}
+## Best practices
 
 Use the base prompt for all Zilliz Cloud tasks.
 
@@ -68,7 +68,7 @@ Add the module prompt that matches the job you want the AI tool to help with.
 
 If you are building against the API or an SDK, tell the AI tool which interface you want to use: RESTful API, Python SDK, Java SDK, Go SDK, Node.js SDK, or Terraform.
 
-## Prompts\{#prompts}
+## Prompts
 
 <table>
    <tr>
