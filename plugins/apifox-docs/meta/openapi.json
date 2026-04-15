@@ -9677,10 +9677,10 @@
 												},
 												"cost": {
 													"type": "integer",
-													"description": "Cost of this operation.",
+													"description": "Cost of this operation.<include target=\"zilliz\"> This applies to free and serverless clusters only, indicating the vCU usage of the current request.</include>",
 													"x-i18n": {
 														"zh-CN": {
-															"description": "当前操作的花费。"
+															"description": "当前操作的花费。<include target=\"zilliz\">仅用于 Free 和 Serverless 集群，表示当前操作消耗的 vCU。"
 														}
 													}
 												},
@@ -18657,6 +18657,15 @@
 														}
 													}
 												},
+												"cost": {
+													"type": "integer",
+													"description": "Cost of this operation.<include target=\"zilliz\"> This applies to free and serverless clusters only, indicating the vCU usage of the current request.</include>",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "当前操作的花费。<include target=\"zilliz\">仅用于 Free 和 Serverless 集群，表示当前操作消耗的 vCU。"
+														}
+													}
+												},
 												"data": {
 													"type": "object",
 													"description": "Response payload which carries the results of this operation.",
@@ -23142,6 +23151,15 @@
 													"x-i18n": {
 														"zh-CN": {
 															"description": "响应码。"
+														}
+													}
+												},
+												"cost": {
+													"type": "integer",
+													"description": "Cost of this operation.<include target=\"zilliz\"> This applies to free and serverless clusters only, indicating the vCU usage of the current request.</include>",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "当前操作的花费。<include target=\"zilliz\">仅用于 Free 和 Serverless 集群，表示当前操作消耗的 vCU。"
 														}
 													}
 												},
@@ -31027,6 +31045,15 @@
 														}
 													}
 												},
+												"cost": {
+													"type": "integer",
+													"description": "Cost of this operation.<include target=\"zilliz\"> This applies to free and serverless clusters only, indicating the vCU usage of the current request.</include>",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "当前操作的花费。<include target=\"zilliz\">仅用于 Free 和 Serverless 集群，表示当前操作消耗的 vCU。"
+														}
+													}
+												},
 												"data": {
 													"type": "array",
 													"description": "A list of dictionaries with each dictionary representing a queried entity.",
@@ -33083,6 +33110,15 @@
 														}
 													}
 												},
+												"cost": {
+													"type": "integer",
+													"description": "Cost of this operation.<include target=\"zilliz\"> This applies to free and serverless clusters only, indicating the vCU usage of the current request.</include>",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "当前操作的花费。<include target=\"zilliz\">仅用于 Free 和 Serverless 集群，表示当前操作消耗的 vCU。"
+														}
+													}
+												},
 												"data": {
 													"type": "array",
 													"description": "A list of entity objects.",
@@ -33872,6 +33908,15 @@
 														}
 													}
 												},
+												"cost": {
+													"type": "integer",
+													"description": "Cost of this operation.<include target=\"zilliz\"> This applies to free and serverless clusters only, indicating the vCU usage of the current request.</include>",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "当前操作的花费。<include target=\"zilliz\">仅用于 Free 和 Serverless 集群，表示当前操作消耗的 vCU。"
+														}
+													}
+												},
 												"data": {
 													"type": "array",
 													"description": "Search results",
@@ -34324,6 +34369,15 @@
 													"x-i18n": {
 														"zh-CN": {
 															"description": "响应码。"
+														}
+													}
+												},
+												"cost": {
+													"type": "integer",
+													"description": "Cost of this operation.<include target=\"zilliz\"> This applies to free and serverless clusters only, indicating the vCU usage of the current request.</include>",
+													"x-i18n": {
+														"zh-CN": {
+															"description": "当前操作的花费。<include target=\"zilliz\">仅用于 Free 和 Serverless 集群，表示当前操作消耗的 vCU。"
 														}
 													}
 												},
