@@ -29,7 +29,7 @@ import Admonition from '@theme/Admonition';
 
 You can use this prompt for AI-powered IDEs, helping AI assistants implement Zilliz Cloud features correctly and efficiently.
 
-## How to use these prompts
+## How to use these prompts\{#how-to-use-these-prompts}
 
 Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI tool when chatting. The table below demonstrates where to place the prompt in different tools.
 
@@ -61,7 +61,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
    </tr>
 </table>
 
-## Prompt
+## Prompt\{#prompt}
 
 ```plaintext
   # Zilliz Cloud Import Prompt
@@ -123,7 +123,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
 
   ## Examples
   ### Import via Volume                                                                                                                                                                                      
-  ```
+  \`\`\`
   from pymilvus import MilvusClient                                                                                                                                                                         
   from pymilvus.bulk_writer import RemoteBulkWriter, BulkFileType                                                                                                                                         
                                                                                                                                                                                                             
@@ -152,7 +152,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
   )                                                                                                                                                                                                         
                                                                                                                                                                                                           
   for i in range(1000):                                                                                                                                                                                     
-      writer.append_row(\{
+      writer.append_row({
           "id": i,                                                                                                                                                                                          
           "text": f"document {i}",                                                                                                                                                                        
           "dense_vector": [0.1] * 768,                                                                                                                                                                      
@@ -169,10 +169,10 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
   # Step 4: Check progress                                                                                                                                                                                  
   progress = client.get_import_progress(job_id=job_id)
   print(progress)                                                                                                                                                                                           
-  ```                                                                                                                                                                                                          
+  \`\`\`                                                                                                                                                                                                          
   
   ### Import via External Storage                                                                                                                                                                            
-  ```                                                                                                                                                                                                        
+  \`\`\`                                                                                                                                                                                                        
   from pymilvus import MilvusClient
 
   client = MilvusClient(
@@ -184,7 +184,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
   resp = client.bulk_import(                                                                                                                                                                              
       collection_name="my_collection",
       files=[["data/batch_001.parquet"]],
-      options=\{
+      options={
           "sourceType": "s3",
           "bucketName": "my-data-bucket",                                                                                                                                                                   
           "rootPath": "exports/embeddings/",
@@ -199,7 +199,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
   resp = client.bulk_import(
       collection_name="my_collection",
       files=[["data/batch_001.parquet"]],
-      options=\{                                                                                                                                                                                             
+      options={                                                                                                                                                                                             
           "sourceType": "gcs",
           "bucketName": "my-gcs-bucket",                                                                                                                                                                    
           "rootPath": "exports/embeddings/",                                                                                                                                                              
@@ -211,9 +211,9 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
   resp = client.bulk_import(
       collection_name="my_collection",
       files=[["data/batch_001.parquet"]],
-      options=\{
+      options={
           "sourceType": "azure",
-          "bucketName": "my-ali-cn-hangzhou",
+          "bucketName": "my-azure-container",
           "rootPath": "exports/embeddings/",                                                                                                                                                                
           "accountName": "YOUR_STORAGE_ACCOUNT",
           "accountKey": "YOUR_STORAGE_KEY",                                                                                                                                                                 
@@ -223,7 +223,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
   # Check progress
   progress = client.get_import_progress(job_id=job_id)
   print(progress)  
-  ```
+  \`\`\`
   
   ## Validation step
 

@@ -34,11 +34,11 @@ import Procedures from '@site/src/components/Procedures';
 
 This guide provides multiple methods for integrating Zilliz Plugins into your LLM Agent-powered workflows.
 
-## Prerequisites
+## Prerequisites\{#prerequisites}
 
 - You have already installed [Claude Code](https://code.claude.com/).
 
-## Setup Procedure
+## Setup Procedure\{#setup-procedure}
 
 <Procedures>
 
@@ -62,7 +62,7 @@ This guide provides multiple methods for integrating Zilliz Plugins into your LL
 
 </Procedures>
 
-## Initial Setup
+## Initial Setup\{#initial-setup}
 
 After installation, run the quickstart wizard:
 
@@ -126,7 +126,7 @@ The wizard will guide you through:
 
 </Procedures>
 
-## Verification
+## Verification\{#verification}
 
 Test the plugin with a simple command:
 
@@ -136,7 +136,7 @@ You: "List my clusters"
 
 The plugin should display your Zilliz Cloud clusters.
 
-## Troubleshooting
+## Troubleshooting\{#troubleshooting}
 
 - **Plugin shows "CLI not found"**
 
@@ -185,7 +185,7 @@ The plugin should display your Zilliz Cloud clusters.
     zilliz context set --cluster-id <cluster-id>
     ```
 
-## Next Steps
+## Next Steps\{#next-steps}
 
 - [Capabilities Reference](./zilliz-plugin-capabilities)
 

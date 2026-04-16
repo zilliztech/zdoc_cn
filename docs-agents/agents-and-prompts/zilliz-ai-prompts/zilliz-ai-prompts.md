@@ -28,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 The Zilliz Cloud AI prompt library offers curated prompts for AI-powered IDEs, helping AI assistants implement Zilliz Cloud features correctly and efficiently.
 
-## How to use these prompts
+## How to use these prompts\{#how-to-use-these-prompts}
 
 Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI tool when chatting. The table below demonstrates where to place the prompt in different tools.
 
@@ -60,7 +60,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
    </tr>
 </table>
 
-## Best practices
+## Best practices\{#best-practices}
 
 Use the base prompt for all Zilliz Cloud tasks.
 
@@ -68,7 +68,7 @@ Add the module prompt that matches the job you want the AI tool to help with.
 
 If you are building against the API or an SDK, tell the AI tool which interface you want to use: RESTful API, Python SDK, Java SDK, Go SDK, Node.js SDK, or Terraform.
 
-## Prompts
+## Prompts\{#prompts}
 
 <table>
    <tr>
