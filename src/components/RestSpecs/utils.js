@@ -63,60 +63,51 @@ export const textFilter =  (text, targets) => {
     const converter = new Showdown.Converter();
     text = converter.makeHtml(text);
 
-    return text
+    return text;
 }
 
 const matchFilterTags = (text) => {
+    const startTagRegex = /<(include|exclude) target="(.+?)"/gm
+    const endTagRegex = /<\/(include|exclude)>/gm
+    const matches = [... text.matchAll(startTagRegex)]
     var returns = []
-    if (text) {
-        const startTagRegex = /<(include|exclude) target="(.+?)"/gm
-        const endTagRegex = /<\/(include|exclude)>/gm
-        var matches = []
-        if (text.matchAll(startTagRegex)) matches = [... text.matchAll(startTagRegex)]
-    
-    
-        matches.forEach(match => {
-            var tag = match[1]
-            var rest = text.slice(match.index)
-            
-            var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
-            var closeTagMatch = [... rest.matchAll(closeTagRegex)]
-            
-            var startIndex = match.index
-            var endIndex = 0
-            
-            for (let i = 0; i < closeTagMatch.length; i++) {
-                var t = text.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
-            
-                var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
-                var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
+
+    matches.forEach(match => {
+        var tag = match[1]
+        var rest = text.slice(match.index)
         
-                if (startCount === endCount) {
-                    endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
-                    break
-                }
+        var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
+        var closeTagMatch = [... rest.matchAll(closeTagRegex)]
+        
+        var startIndex = match.index
+        var endIndex = 0
+        
+        for (let i = 0; i < closeTagMatch.length; i++) {
+            var t = text.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
+        
+            var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
+            var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
+    
+            if (startCount === endCount) {
+                endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
+                break
             }
-            
-            returns.push({
-                tag: tag,
-                target: match[2],
-                startIndex: startIndex,
-                endIndex: endIndex
-            })           
-        })
-    }
+        }
+        
+        returns.push({
+            tag: tag,
+            target: match[2],
+            startIndex: startIndex,
+            endIndex: endIndex
+        })           
+    })
 
     return returns
 }
 
-export const getRandomString = (length) => {
-    var result = '';
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-       result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
+let _tabIdCounter = 0;
+export const getRandomString = () => {
+    return `tid${++_tabIdCounter}`;
 }
 
 export const chooseParamExample = (param, lang, target) => {
@@ -144,7 +135,7 @@ export const isControlPlane = (endpoint) => {
         endpoint.includes('backup') ||
         endpoint.includes('restore') ||
         endpoint.includes('usage') ||
-        endpoint.includes('invoice') ||
+        endpoint.includes('invoices') ||
         endpoint.includes('job') ||
         endpoint.includes('alert') ||
         endpoint.includes('etl') ||
@@ -157,4 +148,5 @@ export const isBeta = (endpoint) => {
         endpoint.includes('stage') ||
         endpoint.includes('usage') ||
         endpoint.includes('invoice')
-}    
+        
+}      
