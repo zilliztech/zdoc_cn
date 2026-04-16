@@ -61,16 +61,6 @@ zilliz project create
 
     Possible values: 
 
-    <exclude lang="zh-CN">
-
-    - `Free`,
-
-    - `Serverless`,
-
-    - `Standard`,
-
-    </exclude>
-
     - `Enterprise`.
 
 - **--output, -o** (*string*) -
