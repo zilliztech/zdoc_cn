@@ -33,7 +33,7 @@ import Procedures from '@site/src/components/Procedures';
 
 The Zilliz Cloud extension for Gemini CLI is a natural language interface that brings Zilliz Cloud operations directly into your IDE. Instead of memorizing CLI commands or switching to the web console, describe what you want in plain language and the plugin handles it.
 
-## What it does\{#what-it-does}
+## What it does
 
 - Translates natural-language requests into `zilliz-cli` commands
 
@@ -43,11 +43,11 @@ The Zilliz Cloud extension for Gemini CLI is a natural language interface that b
 
 - Requires explicit user confirmation before any destructive operation
 
-## Prerequisites\{#prerequisites}
+## Prerequisites
 
 - You have installed Gemini CLI.
 
-## Setup Procedure\{#setup-procedure}
+## Setup Procedure
 
 ```bash
 gemini extensions install https://github.com/zilliztech/gemini-cli-extension
@@ -59,7 +59,7 @@ Alternatively, you can first clone [this repo](https://github.com/zilliztech/gem
 gemini extensions link /path/to/gemini-cli-extension
 ```
 
-## Initial Setup\{#initial-setup}
+## Initial Setup
 
 After installation, run the quickstart wizard:
 
@@ -123,7 +123,7 @@ The wizard will guide you through:
 
 </Procedures>
 
-## Verification\{#verification}
+## Verification
 
 Test the plugin with a simple command:
 
@@ -133,7 +133,7 @@ You: "List my clusters"
 
 The plugin should display your Zilliz Cloud clusters.
 
-## Troubleshooting\{#troubleshooting}
+## Troubleshooting
 
 - **Plugin shows "CLI not found"**
 
@@ -182,6 +182,6 @@ The plugin should display your Zilliz Cloud clusters.
     zilliz context set --cluster-id <cluster-id>
     ```
 
-## Next Step\{#next-step}
+## Next Step
 
 Both Zilliz Claude Code Plugin and Zilliz Gemini CLI Extension share Zilliz CLI at the bottom. You can read [Zilliz Claude Code Plugin Capabilities](./zilliz-plugin-capabilities) and [Zilliz Claude Code Plugin Examples](./zilliz-plugin-examples) to learn how to write prompts.

@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 In this guide, you will find more examples that use natural language to provision infrastructure, perform data operations, back up and restore your data across clusters, and implement access control for the sake of cluster security.
 
-## Example 1: Infrastructure Provisioning\{#example-1-infrastructure-provisioning}
+## Example 1: Infrastructure Provisioning
 
 **Scenario**: Set up a new Zilliz Cloud environment
 
@@ -48,7 +48,7 @@ You: "Create a collection called products with 768-dimension vectors and fields:
 Plugin: Creates collection with schema
 ```
 
-## Example 2: Data Operations Workflow\{#example-2-data-operations-workflow}
+## Example 2: Data Operations Workflow
 
 **Scenario**: Insert data and perform searches
 
@@ -63,7 +63,7 @@ You: "Search for 5 similar products to vector [0.1, 0.2, ...]"
 Plugin: Executes vector search and returns results
 ```
 
-## Example 3: Backup and Restore\{#example-3-backup-and-restore}
+## Example 3: Backup and Restore
 
 **Scenario**: Set up automated backups
 
@@ -78,7 +78,7 @@ You: "Restore the users collection from yesterday's backup"
 Plugin: Restores from backup
 ```
 
-## Example 4: Access Control\{#example-4-access-control}
+## Example 4: Access Control
 
 **Scenario**: Set up RBAC for team members
 

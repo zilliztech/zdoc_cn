@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 The Zilliz Plugin offers capabilities across various areas for managing Zilliz Cloud resources using natural language. In this guide, you will find the main features related to managing clusters and collections, as well as vector operations.
 
-## Cluster Management\{#cluster-management}
+## Cluster Management
 
 **What you can do:**
 
@@ -67,7 +67,7 @@ zilliz cluster list
 zilliz cluster resume --cluster-id <id>
 ```
 
-## Collection Management\{#collection-management}
+## Collection Management
 
 **What you can do:**
 
@@ -95,7 +95,7 @@ zilliz collection load --name user_embeddings
 zilliz collection getstats --name products
 ```
 
-## Vector Operations\{#vector-operations}
+## Vector Operations
 
 **What you can do:**
 

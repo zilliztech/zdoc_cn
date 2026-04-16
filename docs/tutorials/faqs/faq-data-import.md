@@ -81,5 +81,5 @@ sidebar_position: 4
       username: 'username',
       password: 'your-pass',
       channelOptions: channelOptions
-    })`
+    })\`
     ```

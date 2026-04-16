@@ -29,7 +29,7 @@ import Admonition from '@theme/Admonition';
 
 You can use this prompt for AI-powered IDEs, helping AI assistants implement Zilliz Cloud features correctly and efficiently.
 
-## How to use these prompts\{#how-to-use-these-prompts}
+## How to use these prompts
 
 Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI tool when chatting. The table below demonstrates where to place the prompt in different tools.
 
@@ -61,7 +61,7 @@ Save the Zilliz Cloud prompt to a file in your repo, then include it in your AI 
    </tr>
 </table>
 
-## Prompt\{#prompt}
+## Prompt
 
 ```plaintext
   # Zilliz Cloud Cluster Connection Prompt

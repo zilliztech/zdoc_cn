@@ -30,13 +30,13 @@ import Admonition from '@theme/Admonition';
 
 The Zilliz Cloud plugin for Claude Code is a natural language interface that brings Zilliz Cloud operations directly into your IDE. Instead of memorizing CLI commands or switching to the web console, describe what you want in plain language and the plugin handles it.
 
-## What is the Zilliz Plugin?\{#what-is-the-zilliz-plugin}
+## What is the Zilliz Plugin?
 
 A Claude Code plugin that wraps the Zilliz CLI with natural language capabilities, enabling you to manage Zilliz Cloud resources through conversational commands.
 
-## Key Features\{#key-features}
+## Key Features
 
-### 14 Capability Areas\{#14-capability-areas}
+### 14 Capability Areas
 
 - **Clusters**: Create, delete, suspend, resume, modify clusters
 
@@ -66,7 +66,7 @@ A Claude Code plugin that wraps the Zilliz CLI with natural language capabilitie
 
 - **Setup**: Initial configuration and quickstart
 
-### Natural Language Interface\{#natural-language-interface}
+### Natural Language Interface
 
 ```plaintext
 You: "Create a serverless cluster in us-east-1 called my-vectors"
@@ -76,7 +76,7 @@ You: "Search for similar items in my product collection with filter age > 20"
 Plugin: Executes vector search with filters
 ```
 
-## Prerequisites\{#prerequisites}
+## Prerequisites
 
 - Python 3.10 or later
 
@@ -84,7 +84,7 @@ Plugin: Executes vector search with filters
 
 - Claude Code IDE
 
-## Quick Example\{#quick-example}
+## Quick Example
 
 After installation, run the quickstart:
 
@@ -102,7 +102,7 @@ This guides you through:
 
 1. First operations
 
-## Next Steps\{#next-steps}
+## Next Steps
 
 
 
