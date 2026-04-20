@@ -27,8 +27,12 @@ fs.readFile(nginxConfigPath, "utf8", (err, fileContents) => {
 			console.error(`stderr: ${stderr}`);
 			return;
 		}
-		const deletedSlugs = getDeletedSlugs(stdout, true); // Enable check for slugs existing elsewhere in docs/
-		validateChangedFiles(deletedSlugs, redirects);
+		const deletedSlugs = getDeletedSlugs(stdout, true);
+		if (deletedSlugs.length > 0) {
+			validateChangedFiles(deletedSlugs, redirects);
+		} else {
+			console.log("\x1b[90m%s\x1b[0m", `No deleted slugs to check`);
+		}
 		console.info(`***** 🎉 pre-check.js completed successfully *****\n`);
 	});
 });

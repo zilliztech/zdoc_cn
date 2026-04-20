@@ -1,6 +1,6 @@
 const fs = require("fs");
 const redirectRegex = /location\s+[=~]\s+(.+?)\s+{[^}]*return\s+301\s+(.+?);/gm;
-const locationRegex = /location\s*(=|~)/;
+const locationRegex = /location\s*(=|~)?/;
 const nginxConfigPath = 'default.conf';
 const IGNORE_SLUG = "\\s*(.*)/gm;";
 
@@ -9,7 +9,7 @@ const IGNORE_SLUG = "\\s*(.*)/gm;";
  * @param {string[]} directories - Array of directory paths to search
  * @returns {Object} Object mapping directory names to Sets of slugs
  */
-const getAllSlugsInDocs = (directories = ['docs', 'versioned_docs']) => {
+const getAllSlugsInDocs = (directories = ['docs', 'versioned_docs', 'docs-agents', 'onpremise/docs']) => {
 	const slugsByDir = {};
 
 	directories.forEach(docsPath => {
@@ -58,9 +58,11 @@ const getAllSlugsInDocs = (directories = ['docs', 'versioned_docs']) => {
  * @returns {Object} Object with filtered array and info about existing slugs
  */
 const filterSlugsThatExistInDocs = (deletedSlugs) => {
-	const slugsByDir = getAllSlugsInDocs(['docs', 'versioned_docs']);
+	const slugsByDir = getAllSlugsInDocs(['docs', 'versioned_docs', 'docs-agents', 'onpremise/docs']);
 	const docsSlugs = slugsByDir['docs'] || new Set();
 	const versionedSlugs = slugsByDir['versioned_docs'] || new Set();
+	const agentsSlugs = slugsByDir['docs-agents'] || new Set();
+	const onpremiseSlugs = slugsByDir['onpremise/docs'] || new Set();
 
 	// Get unique deleted slugs
 	const uniqueSlugs = [...new Set(deletedSlugs)];
@@ -74,6 +76,8 @@ const filterSlugsThatExistInDocs = (deletedSlugs) => {
 	uniqueSlugs.forEach(slug => {
 		const inDocs = docsSlugs.has(slug);
 		const inVersioned = versionedSlugs.has(slug);
+		const inAgents = agentsSlugs.has(slug);
+		const inOnpremise = onpremiseSlugs.has(slug);
 
 		if (inDocs && inVersioned) {
 			inBoth.push(slug);
@@ -81,6 +85,10 @@ const filterSlugsThatExistInDocs = (deletedSlugs) => {
 			onlyInDocs.push(slug);
 		} else if (inVersioned) {
 			onlyInVersioned.push(slug);
+		} else if (inAgents) {
+			console.log("\x1b[36m%s\x1b[0m", `slug existing in docs-agents/ (filtered out): `, slug);
+		} else if (inOnpremise) {
+			console.log("\x1b[36m%s\x1b[0m", `slug existing in onpremise/docs/ (filtered out): `, slug);
 		} else {
 			trulyDeleted.push(slug);
 		}
@@ -102,9 +110,11 @@ const filterSlugsThatExistInDocs = (deletedSlugs) => {
 		console.log("\x1b[90m%s\x1b[0m", `total slugs filtered: ${totalFiltered} (from ${deletedSlugs.length} total deletions)`);
 	}
 
+	const onlyInAgents = uniqueSlugs.filter(slug => agentsSlugs.has(slug));
+	const onlyInOnpremise = uniqueSlugs.filter(slug => onpremiseSlugs.has(slug));
 	return {
 		filtered: trulyDeleted,
-		existingElsewhere: [...onlyInDocs, ...onlyInVersioned, ...inBoth],
+		existingElsewhere: [...onlyInDocs, ...onlyInVersioned, ...inBoth, ...onlyInAgents, ...onlyInOnpremise],
 		onlyInDocs: onlyInDocs,
 		onlyInVersioned: onlyInVersioned,
 		inBoth: inBoth
@@ -117,10 +127,12 @@ const getNginxRedirects = fileContents => {
   while ((match = redirectRegex.exec(fileContents)) !== null) {
     const from = match[1].trim();
     const to = match[2].trim();
+    const operatorMatch = locationRegex.exec(match[0]);
+    const operator = operatorMatch ? operatorMatch[1] : '';
     redirects.push({
       from: from,
       to: to,
-      operator: locationRegex.exec(match[0])[1],
+      operator: operator,
     });
   }
   return redirects;
@@ -164,6 +176,9 @@ const validateChangedFiles = (changedSlugs, redirects) => {
 		const matchedRedirect = redirects.some((redirect) => {
 			if (redirect.operator === "=") {
 				return redirect.from.endsWith(slug);
+			}
+			if (!redirect.operator) {
+				return slug.startsWith(redirect.from);
 			}
 			return slug.match(redirect.from);
 		});
