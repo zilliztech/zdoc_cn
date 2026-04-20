@@ -1,13 +1,13 @@
 ---
 title: "使用 Partition Key | Cloud"
 slug: /use-partition-key
-sidebar_label: "使用 Partition Key"
+sidebar_label: "Partition Key (Namespace)"
 beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "Partition Key 是一种基于 Partition 的搜索优化方案。通过指定某个标量字段为 Partition Key 并在搜索时指定基于 Partition Key 的过滤条件表达式将搜索范围缩小到若干 Partition 中，从而提高搜索效率。本文将介绍如何使用 Partition key 及相关注意事项。 | Cloud"
+description: "Partition Key 是一种搜索优化解决方案，通过作为 Collection 的 Namespace 来实现逻辑数据隔离。通过将特定标量字段（如租户 ID 或项目名称）指定为 Partition Key，您可以在单个 Collection 内将数据有效分割成不同的 Namespace。这使得搜索请求能够通过筛选条件限定在特定 Namespace 内，从而显著缩小搜索范围并提升整体效率。本文介绍如何实现这种基于 Namepsace 的优化以及使用 Partition Key 时的注意事项。 | Cloud"
 type: origin
 token: QT2Vw3FvJiuwzBkeZvicRBlsnae
 sidebar_position: 17
@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 
 # 使用 Partition Key
 
-Partition Key 是一种基于 Partition 的搜索优化方案。通过指定某个标量字段为 Partition Key 并在搜索时指定基于 Partition Key 的过滤条件表达式将搜索范围缩小到若干 Partition 中，从而提高搜索效率。本文将介绍如何使用 Partition key 及相关注意事项。
+Partition Key 是一种搜索优化解决方案，通过作为 Collection 的 Namespace 来实现逻辑数据隔离。通过将特定标量字段（如租户 ID 或项目名称）指定为 Partition Key，您可以在单个 Collection 内将数据有效分割成不同的 Namespace。这使得搜索请求能够通过筛选条件限定在特定 Namespace 内，从而显著缩小搜索范围并提升整体效率。本文介绍如何实现这种基于 Namepsace 的优化以及使用 Partition Key 时的注意事项。
 
 ## 概述\{#overview}
 
