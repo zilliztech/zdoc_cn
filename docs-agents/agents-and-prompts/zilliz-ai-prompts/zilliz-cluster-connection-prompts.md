@@ -1,6 +1,6 @@
 ---
 title: "Cluster Connection | Cloud"
-slug: /agents/zilliz-cluster-connection-prompts
+slug: /zilliz-cluster-connection-prompts
 sidebar_label: "Cluster Connection"
 beta: FALSE
 added_since: FALSE

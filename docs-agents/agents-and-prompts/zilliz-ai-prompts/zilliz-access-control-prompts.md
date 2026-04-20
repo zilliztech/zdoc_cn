@@ -1,6 +1,6 @@
 ---
 title: "Access Control | Cloud"
-slug: /agents/zilliz-access-control-prompts
+slug: /zilliz-access-control-prompts
 sidebar_label: "Access Control"
 beta: FALSE
 added_since: FALSE

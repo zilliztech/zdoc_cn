@@ -1,6 +1,6 @@
 ---
 title: "Agents & Prompts | Cloud"
-slug: /agents/agents-and-prompts
+slug: /agents-and-prompts
 sidebar_label: "Agents & Prompts"
 beta: FALSE
 added_since: FALSE

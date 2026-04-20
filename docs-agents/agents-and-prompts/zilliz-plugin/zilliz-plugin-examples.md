@@ -1,6 +1,6 @@
 ---
 title: "Zilliz Claude Code Plugin Examples | Cloud"
-slug: /agents/zilliz-plugin-examples
+slug: /zilliz-plugin-examples
 sidebar_label: "More Examples"
 beta: FALSE
 added_since: FALSE

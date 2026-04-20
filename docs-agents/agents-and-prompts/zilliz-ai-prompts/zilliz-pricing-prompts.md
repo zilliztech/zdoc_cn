@@ -1,6 +1,6 @@
 ---
 title: "Pricing | Cloud"
-slug: /agents/zilliz-pricing-prompts
+slug: /zilliz-pricing-prompts
 sidebar_label: "Pricing"
 beta: FALSE
 added_since: FALSE

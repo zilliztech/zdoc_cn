@@ -1,6 +1,6 @@
 ---
 title: "Zilliz Claude Code Plugin Capabilities | Cloud"
-slug: /agents/zilliz-plugin-capabilities
+slug: /zilliz-plugin-capabilities
 sidebar_label: "Core Capabilities"
 beta: FALSE
 added_since: FALSE

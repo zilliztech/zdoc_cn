@@ -1,6 +1,6 @@
 ---
 title: "Search | Cloud"
-slug: /agents/zilliz-search-prompts
+slug: /zilliz-search-prompts
 sidebar_label: "Search"
 beta: FALSE
 added_since: FALSE

@@ -1,6 +1,6 @@
 ---
 title: "Resource Planning | Cloud"
-slug: /agents/zilliz-resource-planning-prompts
+slug: /zilliz-resource-planning-prompts
 sidebar_label: "Resource Planning"
 beta: FALSE
 added_since: FALSE

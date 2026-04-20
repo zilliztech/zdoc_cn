@@ -1,6 +1,6 @@
 ---
 title: "Schema Design | Cloud"
-slug: /agents/zilliz-schema-design-prompts
+slug: /zilliz-schema-design-prompts
 sidebar_label: "Schema Design"
 beta: FALSE
 added_since: FALSE

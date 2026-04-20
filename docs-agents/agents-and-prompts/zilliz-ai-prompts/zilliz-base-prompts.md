@@ -1,6 +1,6 @@
 ---
 title: "Base Prompt | Cloud"
-slug: /agents/zilliz-base-prompts
+slug: /zilliz-base-prompts
 sidebar_label: "Base Prompt"
 beta: FALSE
 added_since: FALSE
