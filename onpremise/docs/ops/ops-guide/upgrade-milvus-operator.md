@@ -18,6 +18,7 @@ keywords:
   - 大模型向量数据库
   - 部署运维手册
   - 升级 Milvus Operator
+displayed_sidebar: onPremiseSidebar
 
 ---
 

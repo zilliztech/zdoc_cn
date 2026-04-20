@@ -18,6 +18,7 @@ keywords:
   - 大模型向量数据库
   - 部署运维手册
   - 监控告警
+displayed_sidebar: onPremiseSidebar
 
 ---
 

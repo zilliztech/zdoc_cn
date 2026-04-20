@@ -18,6 +18,7 @@ keywords:
   - 大模型向量数据库
   - 部署运维手册
   - 变更集群配置
+displayed_sidebar: onPremiseSidebar
 
 ---
 
