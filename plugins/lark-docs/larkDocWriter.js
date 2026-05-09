@@ -308,10 +308,17 @@ class larkDocWriter {
     }
 
     async write_faqs (path) {
-        const source = this.__fetch_doc_source('slug', 'faqs')
+        let source
+        try {
+            source = this.__fetch_doc_source('title', '常见问题')
+        } catch {
+            source = this.__fetch_doc_source('slug', 'faqs')
+        }
+
         const title = source.title
         const blocks = source.blocks.items
         const suffix = path.includes('byoc') ? 'BYOC' : 'CLOUD'
+        const isChineseFaq = title === '常见问题'
 
         if (blocks) {
             this.page_blocks = blocks
@@ -343,23 +350,40 @@ class larkDocWriter {
 
             // Write FAQs root page
             let slug = 'faqs'
-            let front_matter = this.__front_matters(title, suffix, slug, null, null, source.node_type, source.node_token, 999, "", "", this.displayedSidebar, "Frequently asked questions")
-            const markdown = `${front_matter}\n\n# ${title}` + "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
+            const rootTitle = isChineseFaq ? 'FAQs' : title
+            const rootHeading = isChineseFaq ? '常见问题' : title
+            let front_matter = this.__front_matters(rootTitle, suffix, slug, null, null, source.node_type, source.node_token, 999, "", "", this.displayedSidebar, "Frequently asked questions")
+            const markdown = `${front_matter}\n\n# ${rootHeading}` + "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
             fs.writeFileSync(`${path}/${slug}.md`, markdown)
 
             sub_pages.forEach((sub_page, index) => {
                 let title = sub_page[0].indexOf('{/') > 0 ? sub_page[0].split('{/')[0].split('## ')[1] : sub_page[0].replace(/^## /g, '').replace(/{#[\w-]+}/g, '').trim()
                 let short_description = sub_page.filter(line => line.length > 0)[1]
-                let slug = sub_page[0].indexOf('{/') > 0 ? /{\/([\w-]+)}/.exec(sub_page[0])[1] : slugify(title, {lower: true, strict: true})
+                let slugMatch = /{\/([\w-]+)}/.exec(sub_page[0])
+                let slug = isChineseFaq
+                    ? (slugMatch ? slugMatch[1] : null)
+                    : (slugMatch ? slugMatch[1] : slugify(title, {lower: true, strict: true}))
+
+                if (!slug) {
+                    return
+                }
+
                 let front_matter = this.__front_matters(title, suffix, slug, null, null, source.node_type, source.node_token, index+1, "", "", this.displayedSidebar, short_description)
                 let links = []
 
                 sub_page = sub_page.map(line => {
                     if (line.startsWith('**')) {
-                        let qtext = line.indexOf('{#') > 0 ? line.split('{#')[0].split('**')[1] : line.replace(/\*/g, '').trim()
-                        let qslug = line.indexOf('{#') > 0 ? line.split('{#')[1]?.split('}')[0] : slugify(qtext, {lower: true, strict: true})
-                        line = `### ${qtext}{#${qslug}}`
-                        links.push(`- [${qtext}](#${qslug})`)
+                        if (isChineseFaq && line.includes('{#')) {
+                            let qtext = line.split('{#')[0].split('**')[1]
+                            let qslug = line.split('{#')[1].split('}')[0]
+                            line = `### ${qtext} \\{#${qslug}}`
+                            links.push(`- [${qtext}](#${qslug})`)
+                        } else if (!isChineseFaq) {
+                            let qtext = line.indexOf('{#') > 0 ? line.split('{#')[0].split('**')[1] : line.replace(/\*/g, '').trim()
+                            let qslug = line.indexOf('{#') > 0 ? line.split('{#')[1]?.split('}')[0] : slugify(qtext, {lower: true, strict: true})
+                            line = `### ${qtext}{#${qslug}}`
+                            links.push(`- [${qtext}](#${qslug})`)
+                        }
                     }
 
                     if (line == short_description) {
@@ -369,7 +393,9 @@ class larkDocWriter {
                     return line
                 })
 
-                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## Contents\n\n${links.join('\n')}\n\n## FAQs\n\n${sub_page.slice(1).join('\n')}`    
+                const tocHeading = isChineseFaq ? '目录' : 'Contents'
+                const faqHeading = isChineseFaq ? '问答' : 'FAQs'
+                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## ${tocHeading}\n\n${links.join('\n')}\n\n## ${faqHeading}\n\n${sub_page.slice(1).join('\n')}`
                 fs.writeFileSync(`${path}/${slug}.md`, markdown)
             })
         }
