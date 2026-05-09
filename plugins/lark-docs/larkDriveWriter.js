@@ -7,21 +7,21 @@ class larkDriveWriter extends larkDocWriter {
     constructor(
         root_token, 
         base_token, 
-        displayedSidebar, 
-        robots, 
-        docSourceDir, 
+        displayedSidebar,
+        robots,
+        docSourceDir,
         imageDir, 
         targets, 
-        skip_image_download=false, 
+        skip_image_download=false,
         upload_to_oss=false,
         manual
     ) {
         super(
             root_token, 
             base_token, 
-            displayedSidebar, 
-            robots, 
-            docSourceDir, 
+            displayedSidebar,
+            robots,
+            docSourceDir,
             imageDir, 
             targets, 
             skip_image_download,
@@ -193,9 +193,11 @@ class larkDriveWriter extends larkDocWriter {
                 })
 
                 current_path = node_path.join(current_path, page_slug + '.md')
-                const slug = `${this.displayedSidebar.replace('Sidebar', '')}/${page_slug}`
+                const slug = this.displayedSidebar === 'goSidebar'
+                    ? page_slug
+                    : `${this.displayedSidebar.replace('Sidebar', '')}/${page_slug}`
 
-                console.log(keywords)
+                console.log(addedSince, lastModified, deprecateSince)
                 var {front_matter, imports, markdown} = await this.__write_page({
                     title: page_title,
                     suffix: this.__title_suffix(current_path),
@@ -211,7 +213,7 @@ class larkDriveWriter extends larkDocWriter {
                 })
 
                 front_matter = front_matter.split('\n')
-                front_matter.splice(1, 0, `displayed_sidbar: ${this.displayedSidebar}`)
+                // front_matter.splice(front_matter.length - 1, 0, `displayed_sidebar: ${this.displayedSidebar}`)
                 front_matter.splice(5, 0, `added_since: ${addedSince ? addedSince : 'FALSE'}`)
                 front_matter.splice(6, 0, `last_modified: ${lastModified ? lastModified : 'FALSE'}`)
                 front_matter.splice(7, 0, `deprecate_since: ${deprecateSince ? deprecateSince : 'FALSE'}`)

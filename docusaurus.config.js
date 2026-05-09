@@ -4,6 +4,7 @@ import rehypeKatex from 'rehype-katex';
 import larkDocsConfig from './config/lark-docs.config';
 import { tutorialsItemsGenerator, ReferenceItemsGenerator, AgentsItemsGenerator } from './config/sidebar-generators';
 import 'dotenv/config';
+const planeConfig = require('./plugins/apifox-docs/meta/plane-config.json');
 
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
@@ -27,6 +28,8 @@ const config = {
   // projectName: 'zdoc_cn', // Usually your repo name.
 
   onBrokenLinks: 'warn',
+
+  customFields: { planeConfig },
 
   markdown: {
     mermaid: true,

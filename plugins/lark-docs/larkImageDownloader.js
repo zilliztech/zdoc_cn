@@ -20,17 +20,22 @@ class larkImageDownloader {
             maxConcurrent: 1,
             minTime: 52,
         });
-        this.client = new OSS({
+        const hasOssConfig = process.env.OSS_ACCESS_KEY_ID && process.env.OSS_ACCESS_KEY_SECRET && process.env.OSS_REGION && process.env.OSS_BUCKET && process.env.OSS_ENDPOINT
+        this.client = hasOssConfig ? new OSS({
             accessKeyId: process.env.OSS_ACCESS_KEY_ID,
             accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET,
             region: process.env.OSS_REGION,
             bucket: process.env.OSS_BUCKET,
             authorizationV4: true,
             endpoint: process.env.OSS_ENDPOINT,
-        })
+        }) : null
     }    
 
     async __uploadToOSS(buffer, key) {
+        if (!this.client) {
+            throw new Error('OSS client is not configured')
+        }
+
         const parser = new XMLParser();
         const headers = {
             'x-oss-storage-class': 'Standard',

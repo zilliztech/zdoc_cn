@@ -193,25 +193,26 @@ class larkUtils {
             fs.writeFileSync(`${outputDir}/${file}`, content, {encoding: 'utf-8', flag: 'w'})
         }
 
-        // rename folders
-        if (outputDir.includes('reference')) {
-            this.__rename_file_path(outputDir)
-        }
-
         // remove index files
         const folders = fs.readdirSync(outputDir, {recursive: true}).filter(path => fs.statSync(`${outputDir}/${path}`).isDirectory())
 
         for (const folder of folders) {
-            if (fs.existsSync(`${outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`)) {
-                const content = fs.readFileSync(`${outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`, {encoding: 'utf-8', flag: 'r'})
-                if (content.split('\n').length < 7) {
-                    fs.rmSync(`${outputDir}/${folder}/${folder.split('/').slice(-1)[0]}.md`, {recursive: true, force: true})
+            var index_page_name = folder.split('/').slice(-1)[0] + '.md'
+            if (fs.existsSync(`${outputDir}/${folder}/${index_page_name}`)) {
+                const content = fs.readFileSync(`${outputDir}/${folder}/${index_page_name}`, {encoding: 'utf-8', flag: 'r'})
+                if (content.split('\n').length < 15) {
+                    fs.rmSync(`${outputDir}/${folder}/${index_page_name}`, {recursive: true, force: true})
                 }
             }
         }
+
+        // rename folders
+        if (outputDir.includes('reference')) {
+            this.__rename_file_path(outputDir)
+        }
     }
 
-    async fetch_fallback_sources(docSourceDir, fallbackSourceDir, sourceType) {
+    fetch_fallback_sources(docSourceDir, fallbackSourceDir, sourceType) {
         const TITLE = sourceType === 'drive' ? 'name' : 'title'
         const TOKEN = sourceType === 'drive' ? 'token' : 'node_token'
         const PARENT = sourceType === 'drive' ? 'parent_token' : 'parent_node_token'
@@ -229,12 +230,12 @@ class larkUtils {
 
                 if (page_block_id) {
                     const regex = new RegExp(`docx%2F${page_block_id}`, 'g')
-                    const matchesBefore = [...raw.matchAll(regex)]
-                    console.log(matchesBefore.length)
-                    raw = raw.replace(regex, `wiki%2F${source[TOKEN]}`)
-                    const matchesAfter = [...raw.matchAll(regex)]
-                    console.log(matchesAfter.length)
-                    console.log('====')
+                    // const matchesBefore = [...raw.matchAll(regex)]
+                    // console.log(matchesBefore.length)
+                    raw = raw.replace(regex, sourceType === 'drive'? `docx%2F${source[TOKEN]}` : `wiki%2F${source[TOKEN]}`)
+                    // const matchesAfter = [...raw.matchAll(regex)]
+                    // console.log(matchesAfter.length)
+                    // console.log('====')
                 }
             }
 
@@ -248,7 +249,6 @@ class larkUtils {
         })
 
         var sourceRoot, fallbackRoot
-
 
         if (sourceType === 'drive') {
             sourceRoot = sources.find(source => !source?.type)
@@ -299,7 +299,7 @@ class larkUtils {
                             child.url = pair.url
                             child[TOKEN] = pair[TOKEN]
                         } else {
-                            child.parent_token = source.token
+                            child[PARENT] = source[TOKEN]
                             // fallbackSources.find(fb => fb.token === child.token).parent_token = source.token
                         }
                     })
@@ -335,16 +335,25 @@ class larkUtils {
             replaces.forEach(replace => {
                 raw = raw.replaceAll(replace.from, replace.to)
             })
-
+            
             fs.writeFileSync(file, raw, {encoding: 'utf-8', flag: 'w'})
         })
     }
 
     __convert_link(file, path, outputDir) {
         const folders = fs.readdirSync(outputDir, {recursive: true}).filter(path => fs.statSync(`${outputDir}/${path}`).isDirectory())
+        const files = fs.readdirSync(outputDir, {recursive: true}).filter(path => path.endsWith('.md'))
 
-        var parent = path.slice(2, path.lastIndexOf('-'))
         var section = path.indexOf("#") > -1 ? path.slice(path.lastIndexOf("#") + 1) : ""
+        var link_path = files.find(file => file.endsWith(path.slice(2).replace(`#${section}`, '') + '.md'))
+
+        if (!link_path) {
+            console.log(path, path.slice(2).replace(`#${section}`, '') + '.md', file)
+            throw new Error(`Cannot find linked file for ${path} in ${outputDir}`)
+        }
+
+        var parent = link_path.split('/').slice(0, -1).join('/')
+        
         var rel_path = ''
 
         var folder = folders.find(folder => folder.endsWith(parent))

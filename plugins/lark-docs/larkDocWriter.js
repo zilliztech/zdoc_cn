@@ -1,5 +1,5 @@
 const larkTokenFetcher = require('./larkTokenFetcher.js')
-const { removeTabsHallucinations, unescapeKnownJsxTags } = require('../mdx-parse/mdxPatcher')
+const { removeTabsHallucinations, unescapeKnownJsxTags, normalizeCodeTagContent } = require('../mdx-parse/mdxPatcher')
 const Downloader = require('./larkImageDownloader.js')
 const slugify = require('slugify')
 const fs = require('node:fs')
@@ -9,8 +9,7 @@ const node_path = require('node:path')
 const cheerio = require('cheerio')
 const showdown = require('showdown')
 const _ = require('lodash')
-
-require('dotenv/config')
+// MDX compilation will be loaded dynamically as it's an ES module
 
 const IMAGE_BED_URL = process.env.IMAGE_BED_URL || 'https://zdoc-imges.oss-cn-hangzhou.aliyuncs.com'
 
@@ -28,9 +27,9 @@ class larkDocWriter {
     constructor(
         root_token, 
         base_token, 
-        displayedSidebar, 
-        robots, 
-        docSourceDir='plugins/lark-docs/meta/sources', 
+        displayedSidebar,
+        robots,
+        docSourceDir='plugins/lark-docs/meta/sources',
         imageDir='static/img', 
         targets='zilliz.saas', 
         skip_image_download=false,
@@ -52,6 +51,7 @@ class larkDocWriter {
         this.tokenFetcher = new larkTokenFetcher()
         this.downloader = new Downloader({}, imageDir)
         this.upload_to_oss = upload_to_oss
+        this.api_compose_block_type_id = process.env.API_COMPOSE_BLOCK_TYPE_ID || 'blk_682093ba9580c002300d1ea7'
     }
 
     __fetch_doc_source (type, value, slug="") {
@@ -127,22 +127,23 @@ class larkDocWriter {
                             sidebar_label: labels,
                             keywords: keywords,
                             doc_card_list: true,
+                            page_tag: meta['tag'],
                         })
 
                         await this.write_docs(`${current_path}/${slug}`, token)
                     }
                 } else {
                     const meta = await this.__is_to_publish(child.title, child.slug)
-                    switch (child.title) {
-                        case '常见问题':
+                    switch (child.slug) {
+                        case 'faqs':
                             if (meta['publish']) {
                                 if (!fs.existsSync(`${current_path}/faqs`)) {
                                     fs.mkdirSync(`${current_path}/faqs`)
                                 }
-                                // this.__category_meta(`${current_path}/faqs`, '常见问题', index+1)
+                                // this.__category_meta(`${current_path}/faqs`, 'FAQs', index+1)
                                 await this.write_faqs(`${current_path}/faqs`)
                             }
-                            break;
+                            break;                           
                         default:
                             if (meta['publish']) {
                                 const token = child.node_token
@@ -171,6 +172,7 @@ class larkDocWriter {
                                     sidebar_label: labels,
                                     keywords: keywords,
                                     doc_card_list: false,
+                                    page_tag: meta['tag'],
                                 })
                             }
                             break;
@@ -181,8 +183,8 @@ class larkDocWriter {
     }
 
     async write_doc ({
-        path,  
-        page_title, 
+        path,
+        page_title,
         page_slug,
         page_beta,
         notebook,
@@ -194,7 +196,8 @@ class larkDocWriter {
         sidebar_position,
         sidebar_label,
         keywords,
-        doc_card_list
+        doc_card_list,
+        page_tag
     }) {
         let obj;
         let blocks;
@@ -220,23 +223,41 @@ class larkDocWriter {
             this.blocks = page.children.map(child => {
                 return this.__retrieve_block_by_id(child)
             })
-            await this.__write_page({
-                title: page_title,
-                suffix: this.__title_suffix(path),
-                slug: page_slug,
-                beta: page_beta,
-                notebook: notebook,
-                addedSince: addedSince,
-                lastModified: lastModified,
-                deprecateSince: deprecateSince,
-                path: path, 
-                type: page_type,
-                token: page_token,
-                sidebar_position: sidebar_position,
-                sidebar_label: sidebar_label,
-                keywords: keywords,
-                doc_card_list: doc_card_list,
-            })
+
+            // Detect ApiCompose add-on block
+            const apiComposeBlock = this.__find_api_compose_block(this.blocks)
+            if (apiComposeBlock) {
+                await this.__write_api_page({
+                    title: page_title,
+                    slug: page_slug,
+                    beta: page_beta,
+                    path: path,
+                    type: page_type,
+                    token: page_token,
+                    sidebar_position: sidebar_position,
+                    sidebar_label: sidebar_label,
+                    keywords: keywords,
+                    apiComposeBlock: apiComposeBlock,
+                })
+            } else {
+                await this.__write_page({
+                    title: page_title,
+                    suffix: this.__title_suffix(path),
+                    slug: page_slug,
+                    beta: page_beta,
+                    notebook: notebook,
+                    addedSince: addedSince,
+                    lastModified: lastModified,
+                    deprecateSince: deprecateSince,
+                    path: path,
+                    type: page_type,
+                    token: page_token,
+                    sidebar_position: sidebar_position,
+                    sidebar_label: sidebar_label,
+                    keywords: keywords,
+                    doc_card_list: doc_card_list,
+                })
+            }
         }
     }
 
@@ -287,7 +308,8 @@ class larkDocWriter {
     }
 
     async write_faqs (path) {
-        const source = this.__fetch_doc_source('title', '常见问题')
+        const source = this.__fetch_doc_source('slug', 'faqs')
+        const title = source.title
         const blocks = source.blocks.items
         const suffix = path.includes('byoc') ? 'BYOC' : 'CLOUD'
 
@@ -320,24 +342,23 @@ class larkDocWriter {
             }
 
             // Write FAQs root page
-            let title = '常见问题'
             let slug = 'faqs'
-            let front_matter = this.__front_matters('FAQs', suffix, slug, null, null, source.node_type, source.node_token, 999, "", "", this.displayedSidebar, "Frequently asked questions")
+            let front_matter = this.__front_matters(title, suffix, slug, null, null, source.node_type, source.node_token, 999, "", "", this.displayedSidebar, "Frequently asked questions")
             const markdown = `${front_matter}\n\n# ${title}` + "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
             fs.writeFileSync(`${path}/${slug}.md`, markdown)
 
             sub_pages.forEach((sub_page, index) => {
-                let title = sub_page[0].split('{/')[0].split('## ')[1]
+                let title = sub_page[0].indexOf('{/') > 0 ? sub_page[0].split('{/')[0].split('## ')[1] : sub_page[0].replace(/^## /g, '').replace(/{#[\w-]+}/g, '').trim()
                 let short_description = sub_page.filter(line => line.length > 0)[1]
-                let slug = /{\/([\w-]+)}/.exec(sub_page[0])[1]
-                let front_matter = this.__front_matters(title, suffix, slug, null, null, source.node_type, source.node_token, index+1, "", "", this.displayedSidebar)
+                let slug = sub_page[0].indexOf('{/') > 0 ? /{\/([\w-]+)}/.exec(sub_page[0])[1] : slugify(title, {lower: true, strict: true})
+                let front_matter = this.__front_matters(title, suffix, slug, null, null, source.node_type, source.node_token, index+1, "", "", this.displayedSidebar, short_description)
                 let links = []
 
                 sub_page = sub_page.map(line => {
-                    if (line.startsWith('**') && line.includes('{#')) {
-                        let qtext = line.split('{#')[0].split('**')[1]
-                        let qslug = line.split('{#')[1].split('}')[0]
-                        line = `### ${qtext} \\{#${qslug}}`
+                    if (line.startsWith('**')) {
+                        let qtext = line.indexOf('{#') > 0 ? line.split('{#')[0].split('**')[1] : line.replace(/\*/g, '').trim()
+                        let qslug = line.indexOf('{#') > 0 ? line.split('{#')[1]?.split('}')[0] : slugify(qtext, {lower: true, strict: true})
+                        line = `### ${qtext}{#${qslug}}`
                         links.push(`- [${qtext}](#${qslug})`)
                     }
 
@@ -348,7 +369,7 @@ class larkDocWriter {
                     return line
                 })
 
-                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## 目录\n\n${links.join('\n')}\n\n## 问答\n\n${sub_page.slice(1).join('\n')}`    
+                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## Contents\n\n${links.join('\n')}\n\n## FAQs\n\n${sub_page.slice(1).join('\n')}`    
                 fs.writeFileSync(`${path}/${slug}.md`, markdown)
             })
         }
@@ -383,7 +404,7 @@ class larkDocWriter {
         const result = this.records.filter(record => {
             const record_slug = record["fields"]["Slug"] instanceof Array ? record["fields"]["Slug"][0].text : record["fields"]["Slug"]
 
-            if (((record["fields"]["Docs"] && record["fields"]["Docs"]["text"] === title && record_slug == slug) || record["fields"]["Docs"]["link"].endsWith(token)) && record["fields"]["Targets"] && record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布" || record["fields"]["Progress"] === "Draft" || record["fields"]["Progress"] === "Published")) {
+            if (((record["fields"]["Docs"] && record["fields"]["Docs"]["text"] === title && record_slug == slug) || record["fields"]["Docs"]["link"].endsWith(token)) && record["fields"]["Targets"] && record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布" || record["fields"]["Progress"] === "Draft" || record["fields"]["Progress"] === "Published" || record["fields"]["Progress"] === "Publish")) {
 
                 const targets = record["fields"]["Targets"].map(item => item.trim().toLowerCase())
 
@@ -434,15 +455,15 @@ class larkDocWriter {
             if (matches[0].tag == 'include' && !isTargetValid || matches[0].tag == 'exclude' &&  isTargetValid) {
                 matchText = ""
             }
-
+ 
             markdown = this.__filter_content(preText + matchText + postText, targets)
         }
 
         return markdown.replace(/(\s*\n){3,}/g, '\n\n')
-        .replace(/<br>/g, '<br/>')
-        .replace(/(<br\/>){2,}/, "<br/>")
-        .replace("<br\/></p>", "</p>")
-        .replace(/\n\s*<tr>\n(\s*<td.*><p><\/p><\/td>\n)*\s*<\/tr>/g, '');
+            .replace(/<br>/g, '<br/>')
+            .replace(/(<br\/>){2,}/, "<br/>")
+            .replace("<br\/></p>", "</p>")
+            .replace(/\n\s*<tr>\n(\s*<td.*><p><\/p><\/td>\n)*\s*<\/tr>/g, '');
     }
 
     __match_filter_tags(markdown) {
@@ -475,7 +496,7 @@ class larkDocWriter {
             }
 
             if (endIndex === -1) console.warn(`No matching end tag for ${tag} tag at index ${match.index}`)
-            
+
             returns.push({
                 tag: tag,
                 target: target,
@@ -506,7 +527,7 @@ class larkDocWriter {
         markdown = markdown.replace(/^[\||\s][\s|\||<br\/>]*\|\n/gm, '')
         markdown = markdown.replace(/\s*<tr>\n(\s*<td>(<br\/>)*<\/td>\n)*\s*<\/tr>/g, '')
         markdown = this.__example_http_urls(markdown)
-        markdown = await this.__mdx_patches(markdown)
+        markdown = await this.__mdx_patches(markdown)  
 
         const description = this.__extract_description(markdown)
 
@@ -518,6 +539,11 @@ class larkDocWriter {
 
         let imports = this.__imports(tabs > 0)
 
+        // add sidebar_key attribute to doc frontmatter
+        front_matter = front_matter.split('\n')
+        front_matter.splice(3, 0, `sidebar_key: ${slug}`)
+        front_matter = front_matter.join('\n')
+
         if (doc_card_list) {
             markdown += "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
         }
@@ -527,6 +553,7 @@ class larkDocWriter {
         if (this.targets.split('.').includes('zilliz')) {
             markdown = markdown.replace(/http:\/\/localhost:19530/g, 'YOUR_CLUSTER_ENDPOINT')
             markdown = markdown.replace(/127.0.0.1:19530/g, 'YOUR_CLUSTER_ENDPOINT')
+            markdown = markdown.replace(/localhost:19530/g, 'YOUR_CLUSTER_ENDPOINT')
             markdown = markdown.replace(/root:Milvus/g, 'YOUR_CLUSTER_TOKEN')
         }
 
@@ -537,22 +564,22 @@ class larkDocWriter {
 
         if (slug === 'home') {
             let description = this.__extract_description(markdown)
- 
-             // remove title
-             markdown = markdown.split('\n').filter(line => line !== `# ${title}`).join('\n');
- 
-             // remove description
-             markdown = markdown.split('\n').filter(line => line !== description).join('\n');
- 
-             // add imports
-             imports = [...imports.split('\n'), ...[
-                 "import Hero from '@site/src/components/Hero';",
-                 "import Bars from '@site/src/components/Bars';",
-                 "import Blocks from '@site/src/components/Blocks';",
-                 "import Cards from '@site/src/components/Cards';",
-                 "import Stories from '@site/src/components/Stories';",
-                 "import Banner from '@site/src/components/Banner';"
-             ]].join('\n');            
+
+            // remove title
+            markdown = markdown.split('\n').filter(line => line !== `# ${title}`).join('\n');
+
+            // remove description
+            markdown = markdown.split('\n').filter(line => line !== description).join('\n');
+
+            // add imports
+            imports = [...imports.split('\n'), ...[
+                "\n\nimport Hero from '@site/src/components/Hero';",
+                "\n\nimport Bars from '@site/src/components/Bars';",
+                "\n\nimport Blocks from '@site/src/components/Blocks';",
+                "\n\nimport Cards from '@site/src/components/Cards';",
+                "\n\nimport Stories from '@site/src/components/Stories';",
+                "\n\nimport Banner from '@site/src/components/Banner';"
+            ]].join('\n');
         }
 
         if (markdown.match(/\<Supademo/g)) {
@@ -584,18 +611,78 @@ class larkDocWriter {
         }
     }
 
+    __find_api_compose_block(blocks) {
+        for (const block of blocks) {
+            if (this.block_types[block['block_type']-1] === 'add_ons') {
+                if (block['add_ons'] && block['add_ons']['component_type_id'] === this.api_compose_block_type_id) {
+                    return block['add_ons']
+                }
+            }
+            // Recursively check children if any
+            if (block['children'] && block['children'].length > 0) {
+                const children = block['children'].map(child => this.__retrieve_block_by_id(child))
+                const found = this.__find_api_compose_block(children)
+                if (found) return found
+            }
+        }
+        return null
+    }
+
+    async __write_api_page({title, slug, beta, path, type, token, sidebar_position, sidebar_label, keywords, apiComposeBlock}) {
+        let recordData
+        try {
+            recordData = JSON.parse(apiComposeBlock['record'] || '{}')
+        } catch (e) {
+            console.error(`Failed to parse ApiCompose record for ${slug}: ${e.message}`)
+            return
+        }
+
+        const specs = recordData
+        const method = (specs.method || 'get').toLowerCase()
+        const endpoint = specs.endpoint || ''
+        const description = (specs.summary || title || '').replace(/"/g, '\\"')
+
+        const frontMatter = `---
+displayed_sidebar: restfulSidebar
+sidebar_position: ${sidebar_position || 1}
+slug: /restful/${slug}
+beta: ${beta ? 'TRUE' : 'FALSE'}
+title: "${title || specs.summary || 'API'} | RESTful"
+description: "${description} | RESTful"
+hide_table_of_contents: true
+sidebar_label: "${sidebar_label || title || specs.summary || 'API'}"
+sidebar_custom_props: { badges: ['${method}'] }
+${keywords ? 'keywords: \n  - ' + keywords.split(',').map(k => k.trim()).join('\n  - ') + '\n' : ''}---`
+
+        const specsJson = JSON.stringify(specs, null, 2)
+        const mdxBody = `# ${title || specs.summary || 'API'}
+
+import RestSpecs from '@site/src/components/RestSpecs';
+
+<RestSpecs specs={specs} endpoint={endpoint} method={method} target="${this.targets}" lang="en-US" />
+
+export const specs = ${specsJson}
+export const endpoint = "${endpoint}"
+export const method = "${method}"`
+
+        const file_path = `${path}/${slug}.mdx`
+        fs.writeFileSync(file_path, frontMatter + '\n\n' + mdxBody)
+        console.log(`Generated API doc: ${file_path}`)
+    }
+
     __front_matters (title, suffix, slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar, description="") {
-        let meta = ''
+        let meta = '';
         let hide_title = '';
         let hide_toc = '';
         
         if (keywords !== "") {
+            // keywords = keywords + ',' + this.keyword_picker().join(',')
             keywords = "keywords: \n  - " + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
         }
 
         if (displayed_sidebar === 'default') {
             displayed_sidebar = ''
-        } else if (displayed_sidebar === 'agentsSidebar' || displayed_sidebar === 'onPremiseSidebar' ) {
+        } else if (displayed_sidebar === 'agentsSidebar' || displayed_sidebar === 'onPremiseSidebar') {
             displayed_sidebar = `displayed_sidebar: ${displayed_sidebar}\n`
         } else {
             slug = `${displayed_sidebar.replace('Sidebar', '').trim()}/${slug}`
@@ -621,7 +708,7 @@ class larkDocWriter {
             hide_toc = "hide_table_of_contents: true";
         }
 
-        let front_matter = '---\n' + 
+        let front_matter = '---\n' +
         `title: "${title} | ${suffix}"` + '\n' +
         `slug: /${slug}` + '\n' +
         `sidebar_label: "${sidebar_label !== "" ? sidebar_label : title}"` + '\n' +
@@ -649,7 +736,7 @@ class larkDocWriter {
             return ["import Admonition from '@theme/Admonition';", "import Tabs from '@theme/Tabs';",
             "import TabItem from '@theme/TabItem';"].join('\n')
         }
-        
+
         return "import Admonition from '@theme/Admonition';" + "\n"
     }
 
@@ -745,8 +832,8 @@ class larkDocWriter {
             return codeBlocks.some(block => pos >= block.start && pos < block.end);
         }
 
-        // Match URLs, including those containing <, >, [, ], {, }, but not </
-        const urlRegex = /https?:\/\/[^\s^：'")]+/g;
+        // Match URLs, including those containing <, >, [, ], {, }
+        const urlRegex = /https?:\/\/[^\s'")]+/g;
         let result = '';
         let lastIndex = 0;
 
@@ -761,7 +848,6 @@ class larkDocWriter {
             if (!isInCodeBlock(urlStart)) {
                 // If the url contains <, [, or {, treat it as an example and encode it
                 if (/[<\[\{]/.test(match[0])) {
-                    console.log(match[0])
                     result += match[0].replace('http', '<i>http</i>')
                 } else {
                     result += match[0];
@@ -815,6 +901,13 @@ class larkDocWriter {
     __escape_non_html_tags(content) {
         // Escape any lowercase tag whose name is not a known HTML element or a content-filter
         // tag used by this writer, outside fenced code blocks and inline code spans.
+        // Such tags are URL/API placeholder patterns (e.g. <bucket_name>, <region-code>,
+        // <container>, <blob>) that MDX would otherwise parse as JSX elements.
+        // Both opening and closing forms are escaped (e.g. </blob> → \</blob>).
+        // PascalCase JSX components (Tabs, TabItem, Admonition…) are never matched because
+        // the regex anchors on a leading lowercase letter.
+        // <include>/<exclude> filter tags are added so their orphaned closing forms are not
+        // accidentally escaped (they are removed by __filter_content before this runs anyway).
         const KNOWN_TAGS = new Set([
             // Standard HTML elements
             'a', 'abbr', 'address', 'area', 'article', 'aside', 'audio',
@@ -845,6 +938,9 @@ class larkDocWriter {
         ]);
 
         // Structural pre-scan: build set of safe uppercase/PascalCase tag names.
+        // A tag is safe if it appears with a close tag, self-closing form, or attributes
+        // anywhere in the document. Combined with a KNOWN_JSX fallback whitelist as a
+        // safety net for legitimate components that may be orphaned in edge cases.
         const safeUppercaseTags = new Set(KNOWN_JSX_TAGS);
         const upperScanRegex = /[<]([A-Z][A-Za-z0-9]*)/g;
         let upperMatch;
@@ -874,15 +970,20 @@ class larkDocWriter {
                 line = parts.map((part, i) => {
                     if (i % 2 === 0) {
                         // Escape non-HTML lowercase placeholder tags (e.g. <bucket_name>, <region-code>).
+                        // Tags with attributes won't match because the regex only allows \s*\/?>
                         part = part.replace(/(?<!\\)<\/?([a-z][a-z0-9]*(?:[_-][a-z0-9]+)*)\s*\/?>/g, (match, tagName) => {
                             return KNOWN_TAGS.has(tagName) ? match : '\\' + match;
                         });
                         // Escape uppercase/PascalCase tags not identified as real JSX components.
+                        // Uses HTML entities so the angle brackets render correctly in the output.
                         part = part.replace(/(?<!\\)<\/?([A-Z][A-Za-z0-9]*)\s*\/?>/g, (match, tagName) => {
                             if (safeUppercaseTags.has(tagName)) return match;
                             return match.replace(/</g, '&lt;').replace(/>/g, '&gt;');
                         });
-                        // Escape dotted-name PascalCase tags (e.g. <CreateCollectionReq.FieldSchema>).
+                        // Escape dotted-name PascalCase tags (e.g. <CreateCollectionReq.FieldSchema>),
+                        // which are Java/C# type references that MDX misparses as JSX member expressions.
+                        // Backslash escaping does not suppress MDX JSX parsing for dotted names, so
+                        // always convert to HTML entities, stripping any preceding backslash first.
                         part = part.replace(/\\?<\/?([A-Z][A-Za-z0-9]*(?:\.[A-Za-z][A-Za-z0-9]*)+)\s*\/?>/g, (match) => {
                             return match.replace(/^\\/, '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
                         });
@@ -898,36 +999,6 @@ class larkDocWriter {
         return result.join('\n');
     }
 
-    /**
-     * Convert showdown HTML to MDX-safe content for use inside JSX components.
-     * - Replaces <pre><code> blocks with markdown fenced code blocks
-     * - Escapes { and } outside <code> inline spans
-     */
-    __showdownToMdxSafe(html) {
-        // Escape { and } outside <code>...</code> and <pre>...</pre> spans first
-        // (before converting <pre><code> to fences, so code content is still protected)
-        const parts = html.split(/(<(?:code|pre)(?:\s[^>]*)?>[\s\S]*?<\/(?:code|pre)>)/g);
-        html = parts.map((part, i) => {
-            if (i % 2 === 0) {
-                return part.replace(/\{/g, '\\{').replace(/\}/g, '\\}');
-            }
-            return part;
-        }).join('');
-
-        // Convert <pre><code class="lang language-lang">...</code></pre> to fenced code blocks
-        html = html.replace(/<pre><code(?:\s+class="([^"]*)")?>([\s\S]*?)<\/code><\/pre>/g, (match, classAttr, code) => {
-            let lang = '';
-            if (classAttr) {
-                const langMatch = classAttr.match(/(?:^|\s)language-(\S+)/);
-                lang = langMatch ? langMatch[1] : (classAttr.split(/\s+/)[0] || '');
-            }
-            const decoded = code.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
-            return '\n```' + lang + '\n' + decoded.replace(/^\n|\n$/g, '') + '\n```\n';
-        });
-
-        return html;
-    }
-
     async __mdx_patches(content) {
         try {
             // Import MDX compiler dynamically as it's an ES module
@@ -937,6 +1008,7 @@ class larkDocWriter {
             // Pre-process: fix translation/editor artefacts, then escape problem characters
             let patchedContent = removeTabsHallucinations(content);
             patchedContent = unescapeKnownJsxTags(patchedContent);
+            patchedContent = normalizeCodeTagContent(patchedContent);
             patchedContent = this.__escape_currency_dollars(patchedContent);
             patchedContent = this.__escape_non_html_tags(patchedContent);
             let maxIterations = 50; // Prevent infinite loops
@@ -986,13 +1058,19 @@ class larkDocWriter {
                             }
                             break;
                         case 'end-tag-mismatch': {
+                            // Error: "Unexpected closing tag `</Y>`, expected corresponding closing tag for `<X>` (line:col-line:col)"
+                            // The position refers to the OPENING tag <X>.
+                            // Strategy: replace the wrong closing tag </Y> with the correct </X>.
+                            // Exception: if <X> is a non-standard tag (contains _ or -) it is a URL/API
+                            // placeholder, not a real element. Replacing the closing tag causes an
+                            // oscillating loop; instead fall through to the fallback (escape opening tag).
                             const wrongClose = error.message.match(/Unexpected closing tag `<\/([^>]+)>`/)?.[1];
                             const expectedOpen = error.message.match(/closing tag for `<([A-Za-z][^>/ ]*)(?:\s[^>]*)?>?`/)?.[1];
                             const posMatch = error.message.match(/(\d+):(\d+)-(\d+):(\d+)/);
                             const isPlaceholder = expectedOpen && /[_-]/.test(expectedOpen);
 
                             if (!isPlaceholder && wrongClose && expectedOpen && wrongClose !== expectedOpen && posMatch) {
-                                const openLine = parseInt(posMatch[1]) - 1;
+                                const openLine = parseInt(posMatch[1]) - 1; // 0-indexed
                                 const wrongCloseTag = `</${wrongClose}>`;
                                 const correctCloseTag = `</${expectedOpen}>`;
                                 const lines = patchedContent.split('\n');
@@ -1010,14 +1088,18 @@ class larkDocWriter {
                                     patchedContent = lines.join('\n');
                                 }
                             } else if (!wrongClose && expectedOpen && posMatch) {
+                                // Variant: "Expected a closing tag for `<X>` (line:col-line:col) before the end of `paragraph`"
                                 // Skip known JSX components — escaping their opening tag causes a
-                                // cascade destroying the component structure.
+                                // cascade: the orphaned </X> is then deleted by unexpected-closing-slash,
+                                // destroying the component structure. The real fix is inside the component
+                                // (e.g. unescaped braces) which the acorn handler will address.
                                 if (KNOWN_JSX_TAGS.has(expectedOpen)) {
                                     break;
                                 }
-                                // The opening tag is not closed within its paragraph. Escape it.
-                                const openLine = parseInt(posMatch[1]) - 1;
-                                const openCol = parseInt(posMatch[2]) - 1;
+                                // The opening tag is not closed within its paragraph. Escape it with &lt; so it
+                                // renders as literal text instead of being treated as a JSX element.
+                                const openLine = parseInt(posMatch[1]) - 1; // 0-indexed
+                                const openCol = parseInt(posMatch[2]) - 1;  // 0-indexed
                                 const lines = patchedContent.split('\n');
 
                                 if (openLine < lines.length && lines[openLine][openCol] === '<') {
@@ -1030,7 +1112,9 @@ class larkDocWriter {
                             break;
                         }
                         case 'unexpected-closing-slash': {
+                            // "Unexpected closing slash `/` in tag, expected an open tag first"
                             // The error offset points to the `/` inside the orphaned closing tag.
+                            // Strategy: walk back to find `<`, forward to find `>`, then remove the entire tag.
                             const slashOffset = error.place?.offset;
 
                             if (slashOffset !== undefined) {
@@ -1077,8 +1161,24 @@ class larkDocWriter {
                                 (error.message.includes('U+003D') || /U\+003[0-9]/.test(error.message)) &&
                                 offset !== undefined && offset > 0
                             ) {
-                                // `=` sign or a digit (0–9) unexpected — replace `<` with `&lt;`
+                                // `=` sign or a digit (0–9) unexpected — typically from `<=` or `<10` where
+                                // `<` was parsed as a JSX tag opener but the following char is not a valid name start.
+                                // Replace `<` with `&lt;` (not `\`) so the entity renders correctly in HTML.
                                 for (let i = offset - 1; i >= Math.max(0, offset - 10); i--) {
+                                    if (patchedContent[i] === '<') {
+                                        patchedContent = patchedContent.slice(0, i) + '&lt;' + patchedContent.slice(i + 1);
+                                        madeChanges = true;
+                                        break;
+                                    }
+                                }
+                            } else if (
+                                (error.message.includes('U+007C') || error.message.includes('U+0026')) &&
+                                offset !== undefined && offset > 0
+                            ) {
+                                // `|` (union types like `<number | string>`) or `&` (HTML entities like `&lt;`
+                                // inside angle brackets like `<SearchResults&lt;T&gt;>`) unexpected in JSX tag.
+                                // Walk backward to find `<` and replace with `&lt;`.
+                                for (let i = offset - 1; i >= Math.max(0, offset - 30); i--) {
                                     if (patchedContent[i] === '<') {
                                         patchedContent = patchedContent.slice(0, i) + '&lt;' + patchedContent.slice(i + 1);
                                         madeChanges = true;
@@ -1089,7 +1189,7 @@ class larkDocWriter {
                                 (error.message.includes('U+002C') || error.message.includes('U+002A') || error.message.includes('U+3001')) &&
                                 offset !== undefined && offset > 0 && offset < patchedContent.length
                             ) {
-                                // Comma, asterisk, or ideographic comma — escape the nearest preceding `<`
+                                // Comma, asterisk, or ideographic comma — escape the nearest preceding `<` with backslash
                                 for (let i = offset - 1; i >= 0; i--) {
                                     if (patchedContent[i] === '<') {
                                         patchedContent = patchedContent.slice(0, i) + '\\' + patchedContent.slice(i);
@@ -1099,7 +1199,7 @@ class larkDocWriter {
                                 }
                             }
                             break;
-                        default:
+                        default: 
                             madeChanges = false;
                             break;
                     }
@@ -1137,17 +1237,23 @@ class larkDocWriter {
         content = this.__clean_headings(content)
         
         if (content.length > 0) {
-            content = this.__filter_content(content, this.targets)
-
-            return '#'.repeat(level) + ' ' + content;
+            
+            if (content.indexOf('{#') < 0) {
+                let slug = slugify(content.split('|')[0].trim(), {lower: true, strict: true})
+                return '#'.repeat(level) + ' ' + content + '{#'+slug+'}';
+            } else {
+                return '#'.repeat(level) + ' ' + content;
+            }
         } else {
             return '';
         }
     }
 
     __clean_headings(content) {
+        // filter content 
+        content = this.__filter_content(content, this.targets)
         // remove html tags
-        // content = content.replace(/<\/?[^>]+(>|$)/g, "")
+        content = content.replace(/<\/?[^>]+(>|$)/g, "")
         // remove trailing and leading spaces
         content = content.trim()
 
@@ -1163,7 +1269,9 @@ class larkDocWriter {
             children = await this.__markdown(children, indent+4)
         }
 
-        return ' '.repeat(indent) + '- ' + await this.__text_elements(block['bullet']['elements']) + '\n\n' + children;
+        let content = await this.__text_elements(block['bullet']['elements'])
+
+        return ' '.repeat(indent) + '- ' + content + '\n\n' + children;
     }
 
     async __ordered(block, indent) {
@@ -1175,7 +1283,39 @@ class larkDocWriter {
             children = await this.__markdown(children, indent+4)
         }
 
-        return ' '.repeat(indent) + '1. ' + await this.__text_elements(block['ordered']['elements']) + '\n\n' + children;
+        let content = await this.__text_elements(block['ordered']['elements'])
+
+        return ' '.repeat(indent) + '1. ' + content + '\n\n' + children;
+    }
+
+    /**
+     * Convert showdown HTML to MDX-safe content for use inside JSX components.
+     * - Replaces <pre><code> blocks with markdown fenced code blocks
+     * - Escapes { and } outside <code> inline spans
+     */
+    __showdownToMdxSafe(html) {
+        // Escape { and } outside <code>...</code> and <pre>...</pre> spans first
+        // (before converting <pre><code> to fences, so code content is still protected)
+        const parts = html.split(/(<(?:code|pre)(?:\s[^>]*)?>[\s\S]*?<\/(?:code|pre)>)/g);
+        html = parts.map((part, i) => {
+            if (i % 2 === 0) {
+                return part.replace(/\{/g, '\\{').replace(/\}/g, '\\}');
+            }
+            return part;
+        }).join('');
+
+        // Convert <pre><code class="lang language-lang">...</code></pre> to fenced code blocks
+        html = html.replace(/<pre><code(?:\s+class="([^"]*)")?>([\s\S]*?)<\/code><\/pre>/g, (match, classAttr, code) => {
+            let lang = '';
+            if (classAttr) {
+                const langMatch = classAttr.match(/(?:^|\s)language-(\S+)/);
+                lang = langMatch ? langMatch[1] : (classAttr.split(/\s+/)[0] || '');
+            }
+            const decoded = code.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+            return '\n```' + lang + '\n' + decoded.replace(/^\n|\n$/g, '') + '\n```\n';
+        });
+
+        return html;
     }
 
     async __callout(block, indent) {
@@ -1217,10 +1357,10 @@ class larkDocWriter {
         const valid_langs = ['Python', 'JavaScript', 'Java', 'Go', 'Bash']
         let lang = code.style.language ? this.code_langs[code['style']['language']] : 'plaintext'
         let elements = (await Promise.all(code['elements'].map( async x => {
-            let content = await this.__text_run(x, code['elements'], true);
-            content = content.replaceAll('&#36;', '$');
-            return content; 
-        }))).join('') 
+            let content = await this.__text_run(x, code['elements'], true)
+            content = content.replaceAll('&#36;', '$')
+            return content
+        }))).join('')
 
         elements = elements.replace(/zilliz.com(["|'])/g, 'zilliz.com.cn$1')
             .replace(/gcp-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
@@ -1245,7 +1385,7 @@ class larkDocWriter {
             ) {
                 console.log('first block')
                 const values = this.__code_tabs(code, prev, next, blocks)
-                    .filter(tab => tab.value !== 'c++') // to be removed once c++ is supported
+                    .filter(tab => tab.value !== 'c++'); // to be removed once c++ is supported
 
                 return this.__code_block_split(elements, indent, lang, 'first', values);
             }
@@ -1385,11 +1525,16 @@ class larkDocWriter {
         });
         let res = (await this.__markdown(quotes, indent)).split('\n');
 
-        let type = 'info 说明';
-        if (res[0].includes('说明')) {
-            type = 'info 📘 说明';
-        } else if (res[0].includes('警告')) {
-            type = 'caution 🚧 警告';
+        let type = 'info Notes';
+        let possible_titles = ['Notes', 'Note', '说明', 'ノート', 'Warning', 'Warn', '警告']
+        let title = possible_titles.find((x, i) => res[0].includes(x));
+
+        if (title && ['Warning', 'Warn', '警告'].indexOf(title) == -1) {
+            type = `info 📘 ${title}`;
+        } else if (title) {
+            type = `caution 🚧 ${title}`;
+        } else {
+            type = 'info 📘 Notes';
         }
 
         type = `<Admonition type="${type.split(' ')[0]}" icon="${type.split(' ')[1]}" title="${type.split(' ')[2]}">`;
@@ -1405,46 +1550,51 @@ class larkDocWriter {
     
     async __image(image) {
         const root = this.upload_to_oss ? IMAGE_BED_URL : `/${this.imageDir.replace(/^static\//g, '')}`
+        const caption = image.caption?.content ? image.caption.content.trim() : image.token;
+        const key = image.token
 
         if (this.skip_image_download) {
-            return `![${image.token}](${root}/${image["token"]}.png)`;
+            return `![${caption}](${root}/${key}.png "${caption}")`;
         }
 
         try {
             const { buffer } = await this.downloader.__downloadImage(image.token)
             if (this.upload_to_oss) {
-                await this.downloader.__uploadToOSS(buffer, `${image["token"]}.png`);
+                await this.downloader.__uploadToOSS(buffer, `${key}.png`);
             } else {
-                fs.writeFileSync(`${this.downloader.target_path}/${image["token"]}.png`, buffer);
+                fs.writeFileSync(`${this.downloader.target_path}/${key}.png`, buffer);
             }
         } catch (error) {
-            console.error(`Failed to download image ${image.token}:`, error)
+            console.error(`Image ${image.token} error [${error.constructor.name}]: ${error.message}`)
         }
 
-        return `![${image.token}](${root}/${image["token"]}.png)`;
+        return `![${caption}](${root}/${key}.png "${caption}")`;
     }
 
     async __board(board, indent) {
-        const root = this.upload_to_oss ? IMAGE_BED_URL : `/${this.imageDir.replace(/^static\//g, '')}`
+        const root = this.upload_to_oss ? IMAGE_BED_URL : `/${ this.imageDir.replace(/^static\//g, '')}`
 
         if (this.skip_image_download) {
             return ' '.repeat(indent) + `![${board.token}](${root}/${board["token"]}.png)`;
         }
 
-        const result = await this.downloader.__downloadBoardPreview(board.token)
-        var buffers = [];
-        result.body.on('data', (chunk) => {
-            buffers.push(chunk);
-        });
-        result.body.on('end', async () => {
-            const buffer = Buffer.concat(buffers);
-            const trimmedBuffer = await this.__trim_white_borders(buffer);
-            if (this.upload_to_oss) {
-                await this.downloader.__uploadToOSS(trimmedBuffer, `${board["token"]}.png`);
+        try {
+            const result = await this.downloader.__downloadBoardPreview(board.token)
+            if (!result.ok) {
+                console.error(`Board ${board.token} download failed: HTTP ${result.status} ${result.statusText}`)
             } else {
-                fs.writeFileSync(`${this.downloader.target_path}/${board["token"]}.png`, trimmedBuffer);
+                const buffer = await result.buffer()
+                console.log(`Board ${board.token} buffer size: ${buffer.length} bytes`)
+                const trimmedBuffer = await this.__trim_white_borders(buffer);
+                if (this.upload_to_oss) {
+                    await this.downloader.__uploadToOSS(trimmedBuffer, `${board["token"]}.png`);
+                } else {
+                    fs.writeFileSync(`${this.downloader.target_path}/${board["token"]}.png`, trimmedBuffer);
+                }
             }
-        });
+        } catch (error) {
+            console.error(`Board ${board.token} error [${error.constructor.name}]: ${error.message}`)
+        }
 
         return ' '.repeat(indent) + `![${board.token}](${root}/${board["token"]}.png)`;
     }
@@ -1452,15 +1602,19 @@ class larkDocWriter {
     async __trim_white_borders(image) {
         const sharp = require('sharp');
 
+        const timeout = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error('sharp toBuffer() timed out after 30s')), 30000)
+        );
+
         try {
-            // Let Sharp auto-detect background from top-left pixel (likely white)
-            const trimmedImage = sharp(image)
+            console.log(`sharp trim: input ${image.length} bytes, magic ${image.slice(0,4).toString('hex')}`)
+            const trimmedImage = await sharp(image)
                 .trim({
                   background: { r: 255, g: 255, b: 255 },
-                  threshold: 10                    
+                  threshold: 10
                 }).png()
 
-            // Add a 10-pixel white border around the trimmed image
+            console.log(`sharp trim: pipeline built, calling toBuffer()`)
             const borderedImage = trimmedImage.extend({
                 top: 20,
                 bottom: 20,
@@ -1469,15 +1623,17 @@ class larkDocWriter {
                 background: { r: 255, g: 255, b: 255 }
             });
 
-            const buffer = await borderedImage.toBuffer();
+            const buffer = await Promise.race([borderedImage.toBuffer(), timeout]);
+            console.log(`sharp trim: output ${buffer.length} bytes`)
             return buffer;
+
         } catch (error) {
             throw new Error(`Failed to trim image borders: ${error.message}`);
         }
     }
 
     async __iframe(block) {
-        const root = this.upload_to_oss ? IMAGE_BED_URL : `/${this.imageDir.replace(/^static\//g, '')}`
+        const root = this.upload_to_oss ? IMAGE_BED_URL : `/${ this.imageDir.replace(/^static\//g, '')}`
         const block_id = block['block_id'];
         const iframe = block['iframe'];
         const existing_iframe = this.iframes.find(x => x.block_id === block_id)
@@ -1535,7 +1691,7 @@ class larkDocWriter {
         });
         const cell_texts = await Promise.all(cell_blocks.map(async (cell) => {
             let blocks = cell.map(block => this.__retrieve_block_by_id(block));
-            return (await this.__markdown(blocks, 1)).replace(/\n/g, '<br>');
+            return (await this.__markdown(blocks, 1)).replace(/\n/g, '<br/>');
         }));
 
         const row_size = table['property']['row_size'];
@@ -1567,13 +1723,39 @@ class larkDocWriter {
                     const rowspan = merge.row_span > 1 ? ` rowspan="${merge.row_span}"` : "";
                     let cell_text = this.__filter_content(cell_texts[cell_idx], this.targets).trim()
                         .replace(/^\n/, '')
-                        .replace(/<br\/>/g, '\n\n')
+                        .replace(/<br\/>/g, '\n\n');
+
+                    // Escape solitary tildes to prevent MDX strikethrough parsing
+                    cell_text = cell_text.replace(/(?<!~)~(?!~)/g, '&#126;');
+
+                    // Protect Admonition JSX from showdown's <p> wrapping
+                    var admonitions = [];
+                    cell_text = cell_text.replace(
+                        /<Admonition[^>]*>[\s\S]*?<\/Admonition>/g,
+                        (match) => {
+                            admonitions.push(match);
+                            return `%%ADMONITION_${admonitions.length - 1}%%`;
+                        }
+                    );
+
+                    admonitions = admonitions.map(admonition => admonition.replace(/\n/g, ''));
 
                     cell_text = converter.makeHtml(cell_text)
                         .replace(/\n/g, '')
                         .replace(/&amp;/g, '&')
                         .replace(/\*/g, '&ast;');
-                        
+
+                    admonitions = admonitions.map(admonition => admonition.replace(/\n/g, ''));
+
+                    // Restore Admonition components (strip <p> wrapper showdown added)
+                    cell_text = cell_text.replace(
+                        /<p>%%ADMONITION_(\d+)%%<\/p>/g,
+                        (_, idx) => admonitions[parseInt(idx)]
+                    );
+
+                    // escape { and } for MDX
+                    cell_text = cell_text.replace(/\{/g, '\\{').replace(/\}/g, '\\}');
+
                     if (i === 0) {
                         html += ` ${' '.repeat(indent)}    <th${colspan}${rowspan}>${cell_text}</th>\n`;
                     } else {
@@ -1714,7 +1896,9 @@ class larkDocWriter {
         // inline single equation 
         if ((!prev || prev_element_type === 'text_run') && (!next ||next_element_type === 'text_run')) {
             return `$${content.trim()}$`;
-        }     
+        }
+
+        return content;     
     }
 
     async __text_run(element, elements, asis=false) {
@@ -1730,7 +1914,7 @@ class larkDocWriter {
                 content = content.replaceAll('&#36;', '$')
                 content = content.replaceAll('&ast;', '*')
             }
-                       
+                         
             if (style['bold']) {
                 content = this.__style_markdown(element, elements, 'bold', '**');
             }
@@ -1763,10 +1947,7 @@ class larkDocWriter {
 
                 if (url) {
                     content = `${prefix}[${content.replace(prefix, '').replace(suffix, '')}](${url})${suffix}`;
-                } else {
-                    console.log(`Cannot find ${content}`)
                 }
-                
             }
         }
 
@@ -1830,7 +2011,13 @@ class larkDocWriter {
             const token = url.pathname.split('/').pop();
             const header = url.hash.slice(1);
             const key = url.pathname.split('/')[1] === 'wiki' ? 'origin_node_token' : ['token', 'obj_token']; // TODO
-            const page = this.__fetch_doc_source(key, token);
+            var page;
+
+            try {
+                page = this.__fetch_doc_source(key, token);
+            } catch (error) {
+                page = null;
+            }
 
             if (page) {
                 const title = page['title'];
@@ -1858,8 +2045,11 @@ class larkDocWriter {
                 console.log(newUrl)
 
                 url = newUrl.replace(/\/\//g, "/");
+            } else {
+                url = null;
             }
         }
+
 
         if (url?.startsWith('https://docs.zilliz.com.cn/')) {
             url = url.replace('https://docs.zilliz.com.cn/', '/');
@@ -1868,7 +2058,7 @@ class larkDocWriter {
         if (url?.startsWith('https://docs.zilliz.com/')) {
             url = url.replace('https://docs.zilliz.com/', '/');
         }
-            
+
         return url;
     }
 

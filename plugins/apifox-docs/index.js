@@ -1,7 +1,6 @@
 const RefGen = require('./refGen');
-const RestI18N = require('./resti18n');
 const fs = require('node:fs')
-
+const { loadSpecifications } = require('./specLoader')
 
 module.exports = function (context, options) {
     return {
@@ -26,34 +25,36 @@ module.exports = function (context, options) {
                         console.log('Please provide specifications')
                         return
                     } else {
-                        specifications = JSON.parse(fs.readFileSync(opts.specifications, 'utf-8'))
+                        try {
+                            specifications = loadSpecifications(opts.specifications)
+                        } catch (err) {
+                            console.error(`Failed to read OpenAPI spec from "${opts.specifications}": ${err.message}`)
+                            return
+                        }
                     }
 
-                    // if (opts.lang === 'zh-CN' && opts.strings === undefined) {
-                    //     console.log('Please provide the localization strings for Chinese docs')
-                    //     return
-                    // } 
+                    try {
+                        const refGen = new RefGen({
+                            specifications,
+                            lang,
+                            target,
+                            target_path,
+                            strings,
+                        })
 
-                    // if (opts.lang === 'zh-CN') {
-                    //     strings = fs.readFileSync(opts.strings, 'utf-8').split('\n')
-                    // }
+                        fs.mkdirSync(target_path, { recursive: true })
+                        const folders = fs.readdirSync(target_path, { recursive: true }).filter(f => fs.statSync(target_path + '/' + f).isDirectory())
+                        for (let folder of folders.filter(f => !f.endsWith('v1') && !f.endsWith('v2'))) {
+                            fs.rmSync(target_path + '/' + folder, { recursive: true, force: true })
+                        }
 
-                    const refGen = new RefGen({
-                        specifications,
-                        lang,
-                        target,
-                        target_path,
-                        strings,
-                    })
-
-                    const folders = fs.readdirSync(target_path, { recursive: true }).filter(f => fs.statSync(target_path + '/' + f).isDirectory())
-                    for (let folder of folders.filter(f => !f.endsWith('v1') && !f.endsWith('v2'))) {
-                        fs.rmSync(target_path + '/' + folder, { recursive: true, force: true })
+                        refGen.make_groups()
+                        refGen.write_refs()
+                    } catch (err) {
+                        console.error(`Failed to generate API reference: ${err.message}`)
+                        return
                     }
-
-                    refGen.make_groups()
-                    refGen.write_refs()
                 })
-            }
         }
     }
+}

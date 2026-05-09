@@ -3,10 +3,32 @@ const docWriter = require('./larkDocWriter.js')
 const driveWriter = require('./larkDriveWriter.js')
 const Utils = require('./larkUtils.js')
 const fs = require('node:fs')
-const inquirer = require('inquirer')
+const node_path = require('node:path')
+const inquirerModule = require('inquirer')
+const inquirer = inquirerModule.default ?? inquirerModule
 require('dotenv/config');
 
-module.exports = function (context, options) {
+function resolveRepoBranch(cwd = process.cwd()) {
+    const dotGitPath = node_path.join(cwd, '.git')
+    const dotGitStat = fs.statSync(dotGitPath)
+    let headPath
+
+    if (dotGitStat.isDirectory()) {
+        headPath = node_path.join(dotGitPath, 'HEAD')
+    } else {
+        const gitFile = fs.readFileSync(dotGitPath, 'utf8').trim()
+        const gitDir = gitFile.match(/^gitdir:\s*(.+)$/)?.[1]
+        if (!gitDir) {
+            throw new Error(`Cannot resolve git directory from ${dotGitPath}`)
+        }
+        headPath = node_path.join(node_path.isAbsolute(gitDir) ? gitDir : node_path.resolve(cwd, gitDir), 'HEAD')
+    }
+
+    const head = fs.readFileSync(headPath, 'utf8').trim()
+    return head.startsWith('ref: ') ? head.split('/').slice(-1)[0] : head
+}
+
+function fetchLarkDocsPlugin(context, options) {
     return {
         name: "fetch-lark-docs",
         extendCli(cli) {
@@ -24,7 +46,7 @@ module.exports = function (context, options) {
                 .option('-oss, --uploadToOSS', 'Upload images to OSS instead of local storage')
                 .action(async (opts) => {
                     const options = context.siteConfig.plugins.filter(plugin => plugin[0].includes('lark-docs'))[0][1]
-                    process.env.REPO_BRANCH = fs.readFileSync('.git/HEAD', 'utf8').split(': ')[1].trim().split('/').slice(-1)[0]
+                    process.env.REPO_BRANCH = resolveRepoBranch()
                     const manuals = Object.keys(options)
                     const utils = new Utils()
 
@@ -83,7 +105,7 @@ module.exports = function (context, options) {
                         }
 
                         const writer = sourceType === 'wiki' || sourceType === 'onePager' ? 
-                            new docWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.uploadToOSS) : 
+                            new docWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.uploadToOSS) :
                             new driveWriter(root, base, displayedSidebar, robots, docSourceDir, imageDir, opts.pubTarget, opts.skipImageDown, opts.uploadToOSS, opts.manual)
 
                         // Add necessary imports to category pages
@@ -126,7 +148,7 @@ module.exports = function (context, options) {
     
                             if (paths.length === 0) {
                                 console.log('Please provide a valid doc token or title')
-                                return
+                                process.exit(1)
                             }
 
                             var token;
@@ -224,7 +246,7 @@ module.exports = function (context, options) {
                                         }
                                     })
                                 }
-                                
+
                                 const req = {
                                     path: file_path.split('/').slice(0, -1).join('/'),
                                     page_title: opts.docTitle,
@@ -256,7 +278,7 @@ module.exports = function (context, options) {
     
                             var token = fs.readdirSync(docSourceDir).filter(file => {
                                 source = JSON.parse(fs.readFileSync(docSourceDir + '/' + file, 'utf8'))
-                                return source.title === 'FAQs'
+                                return source.slug === 'faqs'
                             }).map(file => {
                                 source = JSON.parse(fs.readFileSync(docSourceDir + '/' + file, 'utf8'))
                                 return source.node_token
@@ -283,3 +305,6 @@ module.exports = function (context, options) {
         }
     }
 }
+
+module.exports = fetchLarkDocsPlugin
+module.exports.resolveRepoBranch = resolveRepoBranch

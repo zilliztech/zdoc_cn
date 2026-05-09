@@ -164,7 +164,7 @@ class larkDocScraper {
             }   
         }
     } 
-
+    
     __fetch_block_children(block, node) {
         let children = [];
         if (block.children) {
