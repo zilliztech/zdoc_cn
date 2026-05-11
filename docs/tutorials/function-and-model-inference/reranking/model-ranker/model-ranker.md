@@ -1,11 +1,12 @@
 ---
 title: "Model Ranker | Cloud"
 slug: /model-ranker
+sidebar_key: model-ranker
 sidebar_label: "Model Ranker"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "Zilliz Cloud 的 Model Ranker 通过集成能够理解查询与文档之间语义关系的先进语言模型，优化搜索体验。使其不仅仅依赖向量相似度，还会评估内容含义和上下文，以提供更智能、更相关的搜索结果。 | Cloud"
 type: origin

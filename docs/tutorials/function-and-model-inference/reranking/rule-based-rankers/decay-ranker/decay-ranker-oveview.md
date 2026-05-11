@@ -1,11 +1,12 @@
 ---
 title: "Decay Ranker 概述 | Cloud"
 slug: /decay-ranker-oveview
+sidebar_key: decay-ranker-oveview
 sidebar_label: "Decay Ranker 概述"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在传统的向量搜索中，结果纯粹是按照向量相似度来排序的，即向量在数学空间中的匹配程度。但在实际应用中，使内容真正相关的因素往往不仅仅取决于语义相似度。 | Cloud"
 type: origin
@@ -116,7 +117,7 @@ final_score = max([normalized_score₁, normalized_score₂, ..., normalized_sco
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在这个示例中，衰减分数反映了相关性如何随时间减弱——较新的论文得分更接近1.0，较旧的论文得分较低。这些值是使用特定的 Decay Ranker 计算得出的。有关详细信息，请参阅<a href="./decay-ranker-oveview#choose-the-right-decay-ranker">选择合适的 Decay Ranker</a>。</p>
+在这个示例中，衰减分数反映了相关性如何随时间减弱——较新的论文得分更接近1.0，较旧的论文得分较低。这些值是使用特定的 Decay Ranker 计算得出的。有关详细信息，请参阅[选择合适的 Decay Ranker](./decay-ranker-oveview#choose-the-right-decay-ranker)。
 
 </Admonition>
 
@@ -221,7 +222,7 @@ Decay Ranker 可应用于 Zilliz Cloud 中的标准向量搜索和混合搜索�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考<a href="./tutorial-implement-time-based-ranking">教程：实现基于时间的搜索结果重排</a>。</p>
+在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考[教程：实现基于时间的搜索结果重排](./tutorial-implement-time-based-ranking)。
 
 </Admonition>
 

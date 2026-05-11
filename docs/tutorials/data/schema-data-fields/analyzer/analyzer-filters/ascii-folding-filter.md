@@ -1,11 +1,12 @@
 ---
 title: "ASCII folding | Cloud"
 slug: /ascii-folding-filter
+sidebar_key: ascii-folding-filter
 sidebar_label: "ASCII folding"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`asciifolding` 过滤器将基本拉丁Unicode块（前127个ASCII字符）之外的字符转换为其ASCII等效字符。例如，它将字符如 í 转换为 i，使得文本处理更加简单和一致，特别是对于多语言内容。 | Cloud"
 type: origin
@@ -222,7 +223,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

@@ -1,11 +1,12 @@
 ---
 title: "主键与 AutoID | Cloud"
 slug: /primary-field-auto-id
+sidebar_key: primary-field-auto-id
 sidebar_label: "主键与 AutoID"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "每个 Zilliz Cloud 的 Collection 都必须定义一个主键（Primary Field），用于唯一标识每个 Entity。 | Cloud"
 type: origin
@@ -91,7 +92,7 @@ Zilliz Cloud 支持两种主键分配方式：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果不确定选择哪种模式，建议使用 AutoID，它能简化数据写入流程并自动确保全局唯一性。</p>
+如果不确定选择哪种模式，建议使用 AutoID，它能简化数据写入流程并自动确保全局唯一性。
 
 </Admonition>
 
@@ -186,7 +187,7 @@ client.createCollection(requestCreate);
 import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
 
 const client = new MilvusClient({
-  address: "localhost:19530",
+  address: "YOUR_CLUSTER_ENDPOINT",
 });
 
 // Define schema fields
@@ -377,7 +378,7 @@ curl -X POST 'YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert' \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>当需要更新已存在的 Entity 时，建议使用 <code>upsert()</code> 替代 <code>insert()</code>，以避免主键重复错误。</p>
+当需要更新已存在的 Entity 时，建议使用 `upsert()` 替代 `insert()`，以避免主键重复错误。
 
 </Admonition>
 
@@ -473,7 +474,7 @@ client.createCollection(requestCreate);
 import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
 
 const client = new MilvusClient({
-  address: "localhost:19530",
+  address: "YOUR_CLUSTER_ENDPOINT",
   username: "username",
   password: "Aa12345!!",
 });
@@ -567,7 +568,7 @@ curl -X POST 'YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/create' \
 <TabItem value='python'>
 
 ```python
-# Each entity must contain the primary field `product_id`
+# Each entity must contain the primary field \`product_id\`
 data = [
     {"product_id": "PROD-001", "embedding": [0.1, 0.2, 0.3, 0.4], "category": "book"},
     {"product_id": "PROD-002", "embedding": [0.2, 0.3, 0.4, 0.5], "category": "toy"},

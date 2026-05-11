@@ -1,16 +1,17 @@
 ---
 title: "Phrase Match | Cloud"
 slug: /phrase-match
+sidebar_key: phrase-match
 sidebar_label: "Phrase Match"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "短语匹配允许您搜索包含查询词为精确短语的文档。默认情况下，这些词必须按相同顺序且彼此直接相邻出现。例如，查询 \"robotics machine learning\" 会匹配类似 \"…typical robotics machine learning models…\" 这样的文本，其中 \"robotics\"、\"machine\" 和 \"learning\" 按顺序出现，中间没有其他词。 | Cloud"
 type: origin
 token: AXhtwvmowicwpskTZCWcNhgOnog
-sidebar_position: 12
+sidebar_position: 14
 keywords: 
   - 向量数据库
   - zilliz
@@ -346,7 +347,7 @@ await client.createCollection(schema);
 ```bash
 # restful
 # check collection exist
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export COLLECTION_NAME="tech_articles"
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/has" \
   -H "Content-Type: application/json" \
@@ -598,7 +599,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/load" \
 
 <Admonition type="info" icon="📘" title="注释">
 
-<p><code>PHRASE_MATCH</code> 表达式不区分大小写。您可以使用 <code>PHRASE_MATCH</code> 或 <code>phrase_match</code>。</p>
+`PHRASE_MATCH` 表达式不区分大小写。您可以使用 `PHRASE_MATCH` 或 `phrase_match`。
 
 </Admonition>
 
@@ -835,7 +836,7 @@ const result_slop1 = await client.search({
 
 ```bash
 # restful
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export COLLECTION_NAME="tech_articles"
 export AUTH_TOKEN="your_token_here"
 
@@ -1058,7 +1059,7 @@ curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
 </TabItem>
 </Tabs>
 
-## 注意事项
+## 注意事项\{#}
 
 - 为字段启用短语匹配会触发倒排索引的创建，这会消耗存储资源。在决定启用此功能时，请考虑对存储的影响，因为存储空间的占用会根据文本大小、唯一词元以及所使用的分析器而有所不同。
 

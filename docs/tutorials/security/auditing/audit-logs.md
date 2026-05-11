@@ -1,11 +1,12 @@
 ---
 title: "VectorDB 审计日志 | Cloud"
 slug: /audit-logs
+sidebar_key: audit-logs
 sidebar_label: "VectorDB 审计日志"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "审计日志允许管理员跟踪和监控 Zilliz Cloud 集群上的用户驱动的操作和 API 调用。此功能提供了数据平面活动的详细记录，包括向量搜索、查询执行、索引管理和其他数据操作。 | Cloud"
 type: origin
@@ -32,11 +33,11 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>审计日志功能仅对 <strong>Dedicated</strong> 集群可见。如有需求，请考虑<a href="./manage-cluster">升级集群</a>。</p></li>
-<li><p>仅 Milvus 2.5.x 版本及以上的集群支持审计日志功能。</p></li>
-<li><p>审计日志支持与<a href="./integrate-with-storage-bucket">阿里云对象存储</a>或 <a href="./integrate-with-amazon-s3">Amazon S3</a> 集成。</p></li>
-</ul>
+- 审计日志功能仅对 **Dedicated** 集群可见。如有需求，请考虑[升级集群](./manage-cluster)。
+
+- 仅 Milvus 2.5.x 版本及以上的集群支持审计日志功能。
+
+- 审计日志支持与[阿里云对象存储](./integrate-with-storage-bucket)或 [Amazon S3](./integrate-with-amazon-s3) 集成。
 
 </Admonition>
 
@@ -52,7 +53,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>迁移、备份等数据任务和恢复等集群操作不会产生集群审计日志。您可前往组织事件页面查看相关操作记录。具体可参考<a href="./view-activities">查看事件</a>。</p>
+迁移、备份等数据任务和恢复等集群操作不会产生集群审计日志。您可前往组织事件页面查看相关操作记录。具体可参考[查看事件](./view-activities)。
 
 </Admonition>
 
@@ -118,7 +119,7 @@ import Procedures from '@site/src/components/Procedures';
 
         <Admonition type="info" icon="📘" title="说明">
 
-        <p>只有与集群处于同一区域的存储桶才会显示在下拉列表中。</p>
+        只有与集群处于同一区域的存储桶才会显示在下拉列表中。
 
         </Admonition>
 
@@ -153,3 +154,4 @@ import Procedures from '@site/src/components/Procedures';
 - **异常集群状态会影响审计日志服务吗？**
 
     集群状态异常意味着集群可能存在网络连接或 Zilliz Cloud 服务中断等问题。然而，这些问题并不会影响审计日志服务，该服务会继续正常运行并将日志转发到您的存储桶。如果您遇到持续性问题，请联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
+

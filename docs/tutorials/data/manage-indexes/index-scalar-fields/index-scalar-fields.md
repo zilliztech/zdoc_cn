@@ -1,11 +1,12 @@
 ---
 title: "创建 Scalar Index | Cloud"
 slug: /index-scalar-fields
+sidebar_key: index-scalar-fields
 sidebar_label: "创建 Scalar Index"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持对标量字段（非向量字段）进行索引，从而显著加速过滤和搜索性能，尤其适用于大型数据集。 | Cloud"
 type: origin
@@ -150,7 +151,7 @@ import { MilvusClient, DataType } from '@zilliz/milvus2-sdk-node';
 
 // initialize client
 const client = new MilvusClient({
-  address: 'localhost:19530', // Replace with your cluster endpoint
+  address: 'YOUR_CLUSTER_ENDPOINT', // Replace with your cluster endpoint
 });
 
 const collectionName = 'product_catalog';
@@ -205,7 +206,7 @@ ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
 })
 if err != nil {
     return err

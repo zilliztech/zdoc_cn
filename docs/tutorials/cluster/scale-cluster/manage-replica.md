@@ -1,11 +1,12 @@
 ---
 title: "Replica 扩缩容 | Cloud"
 slug: /manage-replica
+sidebar_key: manage-replica
 sidebar_label: "Replica 扩缩容"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。 | Cloud"
 type: origin
@@ -35,9 +36,13 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 本文介绍如何为 Zilliz Cloud 集群设置 Replica。
 
+本页内容仅适用于 Serving 集群。
+
+On-demand 集群会自动扩缩容：有请求到达时自动拉起，空闲时自动缩容至 0，无需手动干预。
+
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
+此功能仅限**企业版**项目使用。
 
 </Admonition>
 
@@ -45,13 +50,13 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 在集群创建完成后，满足以下条件时，您可以设置 Replica：
 
-- 集群 Query CU 数量大于等于 8。
+- 集群 Query CU 数量大于等于 12。
 
-- Query CU 数量 x Replica 数量不得超过 256。
+- Query CU 数量 x Replica 数量不得超过 20480。
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>修改 Replica 数量可能会短暂影响数据读取。请谨慎操作。</p>
+修改 Replica 数量可能会短暂影响数据读取。请谨慎操作。
 
 </Admonition>
 
@@ -63,7 +68,7 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 <Supademo id="cmd2ub5ca38cxc4kjl4ua85dm" title=""  />
 
-您还可以使用 RESTful API 设置 Replica。`replica` 参数的取值应为 1 到 8 之间的整数。更多详情，请参考[修改集群副本数量](/reference/restful/modify-cluster-replica-v2)。
+您还可以使用 RESTful API 设置 Replica。`replica` 参数的取值应为 1 到 10 之间的整数。更多详情，请参考[修改集群副本数量](/reference/restful/modify-cluster-replica-v2)。
 
 ```bash
 export TOKEN="YOUR_API_KEY"
@@ -128,10 +133,9 @@ Zilliz Cloud 支持 Replica 动态扩缩容。启用后，系统会基于实时 
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>选择比当前 Replica 数量小的最大值会立刻触发缩容。</p></li>
-<li><p>选择比当前 Replica 数量大的最小值会立刻触发扩容。</p></li>
-</ul>
+- 选择比当前 Replica 数量小的最大值会立刻触发缩容。
+
+- 选择比当前 Replica 数量大的最小值会立刻触发扩容。
 
 </Admonition>
 

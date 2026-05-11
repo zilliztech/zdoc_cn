@@ -1,16 +1,17 @@
 ---
 title: "数据传输费用 | Cloud"
 slug: /data-transfer-cost
+sidebar_key: data-transfer-cost
 sidebar_label: "数据传输"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，数据传输可以指流入 Zilliz Cloud 的流量、从 Zilliz Cloud 输出到公网的流量，或在 Zilliz Cloud 内部两个资源之间的流量。数据传输费用基于传输的数据量计费。 | Cloud"
 type: origin
 token: RZoSwcpJniF0ZxkfhaDcFUHin4A
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -32,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>每个组织每月可享受 ¥100 数据传输费用减免，覆盖前 100 GB 的数据传输。</p>
+每个组织每月可享受 ¥100 数据传输费用减免，覆盖前 100 GB 的数据传输。
 
 </Admonition>
 
@@ -69,15 +70,17 @@ import Admonition from '@theme/Admonition';
 
 - 转发[审计日志](./audit-logs)到云服务对象存储
 
-- [在线迁移](./zero-downtime-migration)数据同步
-
 - [离线迁移](./offline-migration)
 
 - [跨地域备份](/docs/backup-to-other-regions)
 
+- 使用第三方[模型](./function-and-model-inference-overview)进行数据 Ingest、Search、Query、Rerank
+
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果数据传输发生在同一云地域内，费用为 ¥0。</p>
+如果数据传输发生在同一云地域内，费用为 ¥0。
+
+在查询或搜索请求中使用私网连接不会产生数据传输费用。
 
 </Admonition>
 

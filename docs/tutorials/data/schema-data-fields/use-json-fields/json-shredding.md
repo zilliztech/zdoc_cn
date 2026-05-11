@@ -1,11 +1,12 @@
 ---
 title: "JSON Shredding | Cloud"
 slug: /json-shredding
+sidebar_key: json-shredding
 sidebar_label: "JSON Shredding"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "JSON Shredding 通过将传统的行式存储转换为优化后的列式存储来加速 JSON 查询。在保持 JSON 数据建模灵活性的同时，Zilliz Cloud 在后台执行列式优化，大幅提升数据访问与查询效率。 | Cloud"
 type: origin

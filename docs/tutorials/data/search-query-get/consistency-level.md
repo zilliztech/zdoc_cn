@@ -1,16 +1,17 @@
 ---
 title: "一致性水平 | Cloud"
 slug: /consistency-level
+sidebar_key: consistency-level
 sidebar_label: "一致性水平"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "作为一款分布式向量数据库，Zilliz Cloud 提供了多种一致性水平来确保在数据读写期间每个节点或副本都能获取到相同的数据。当前，支持使用的一致性水平包括 Strong、Bounded、Eventually 。其中，Bounded 是默认使用的一致性水平。 | Cloud"
 type: origin
 token: IJhRwKG2Qi8m1skZoD7ckUkxnBe
-sidebar_position: 18
+sidebar_position: 20
 keywords: 
   - 向量数据库
   - zilliz
@@ -43,7 +44,7 @@ Zilliz Cloud 是一个存储计算分离的系统。其中，DataNodes 负责数
 
 为了解决这个问题，Zilliz Cloud 会为数据队列中的每条记录都打上一个时间戳，并不间断地向数据队列中插入同步时间戳。每当收到同步时间戳时， QueryNodes 就将其设置为 Service Time，意味着 QueryNodes 能看到该 Service Time 之前的所有数据。基于 ServiceTime， Zilliz Cloud 就能够根据不同用户对一致性以及可用性的需求向外提供保证时间戳 （GuaranteeTs）。用户可以通过在 Search 请求中指定 GuaranteeTs 的方式告知 QueryNodes 其必须要将指定时间点前的数据纳入搜索范围。 
 
-![F8hbbpcC4o6C2yxElIYc4CG7nVg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/F8hbbpcC4o6C2yxElIYc4CG7nVg.png)
+![F8hbbpcC4o6C2yxElIYc4CG7nVg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/F8hbbpcC4o6C2yxElIYc4CG7nVg.png "F8hbbpcC4o6C2yxElIYc4CG7nVg")
 
 如上图所示，如果 GuaranteeTs 小于 ServiceTime，意味着指定时间点前的数据已经全部落盘，QueryNodes 可以立即执行 Search 操作。当 GuaranteeTs 大于 ServiceTime 时，QueryNodes 必须等待直至 ServiceTime 大于 GuaranteeTs 时才能执行 Search 操作。
 
@@ -51,7 +52,7 @@ Zilliz Cloud 是一个存储计算分离的系统。其中，DataNodes 负责数
 
 在 Zilliz Cloud 中，不同的 GuaranteeTs 分别对应四种不同的一致性水平。
 
-![T7m4bdc9TooFcmxzZM0cOqj0nqh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/T7m4bdc9TooFcmxzZM0cOqj0nqh.png)
+![T7m4bdc9TooFcmxzZM0cOqj0nqh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/T7m4bdc9TooFcmxzZM0cOqj0nqh.png "T7m4bdc9TooFcmxzZM0cOqj0nqh")
 
 - **强一致性（Strong Consistency）**
 

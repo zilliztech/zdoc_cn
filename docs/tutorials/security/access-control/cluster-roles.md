@@ -1,11 +1,12 @@
 ---
 title: "管理集群角色（控制台） | Cloud"
 slug: /cluster-roles
+sidebar_key: cluster-roles
 sidebar_label: "管理集群角色（控制台）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "集群角色定义了用户在集群中的权限。具体而言，集群角色控制集群用户在集群、Database 和 Collection 层级的权限。 | Cloud"
 type: origin
@@ -91,8 +92,9 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限 Dedicated 集群使用。</p>
-<p>目前 Zilliz Cloud 仅支持为自定义角色分配内置权限组。如需创建自定义角色并分配特定权限或自定义权限组，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+此功能仅限 Dedicated 集群使用。
+
+目前 Zilliz Cloud 仅支持为自定义角色分配内置权限组。如需创建自定义角色并分配特定权限或自定义权限组，请[联系我们](http://support.zilliz.com.cn)。
 
 </Admonition>
 
@@ -118,7 +120,7 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>上述三个层级的内置权限组之间没有级联关系。设置实例层级的权限组并不会自动设置该实例下所有 Database 和 Collection 的权限，Database 和 Collection 层级的权限需要单独手动设置。</p>
+    上述三个层级的内置权限组之间没有级联关系。设置实例层级的权限组并不会自动设置该实例下所有 Database 和 Collection 的权限，Database 和 Collection 层级的权限需要单独手动设置。
 
     </Admonition>
 

@@ -1,16 +1,17 @@
 ---
 title: "免费试用 Zilliz Cloud | Cloud"
 slug: /free-trials
+sidebar_key: free-trials
 sidebar_label: "免费试用 Zilliz Cloud"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "为帮助您测试 Zilliz Cloud 向量数据库特性和评估使用成本，Zilliz Cloud 提供 Free 集群和免费试用。您仅需注册账号即可，无需绑定支付方式。 | Cloud"
 type: origin
 token: WWlIwejMNiAEmmkce5fcZu4UnMd
-sidebar_position: 5
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -42,7 +43,7 @@ Zilliz Cloud 提供 Free 集群，允许您免费使用基础的向量数据库�
 
 ## 免费试用\{#use-free-trial}
 
-Zilliz Cloud 提供 Serverless 和按量计费的 Dedicated 集群的免费试用，帮助您探索向量数据库功能。以下内容将介绍优惠券和集群免费试用。如果您想要免费试用 Volume 功能——用于存储结构化表格或非结构化数据文件的对象存储，请参考[了解 Volume](./volume-explained#free-trial)。
+Zilliz Cloud 提供 Serverless 和按量计费的 Dedicated 集群的免费试用，帮助您探索向量数据库功能。以下内容将介绍优惠券和集群免费试用。如果您想要免费试用 Volume 功能——用于存储结构化表格或非结构化数据文件的对象存储，请参考了解 Volume。
 
 ### 免费试用说明\{#use-free-trial}
 
@@ -68,7 +69,7 @@ Zilliz Cloud 提供 Serverless 和按量计费的 Dedicated 集群的免费试�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为节省优惠券，我们建议您手动挂起未使用的集群。</p>
+为节省优惠券，我们建议您手动挂起未使用的集群。
 
 </Admonition>
 

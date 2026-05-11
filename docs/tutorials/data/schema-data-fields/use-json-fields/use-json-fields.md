@@ -1,11 +1,12 @@
 ---
 title: "JSON 类型 | Cloud"
 slug: /use-json-fields
+sidebar_key: use-json-fields
 sidebar_label: "JSON 类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "了解如何使用 JSON 类型。 | Cloud"
 type: origin

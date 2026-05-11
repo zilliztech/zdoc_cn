@@ -1,16 +1,17 @@
 ---
 title: "Dedicated 集群费用 | Cloud"
 slug: /dedicated-cluster-cost
+sidebar_key: dedicated-cluster-cost
 sidebar_label: "Dedicated 集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud Dedicated 集群采用按量计费的模式，主要根据集群实际消耗的计算资源计费。您无需提前过度预留资源，只需为实际使用的部分付费。 | Cloud"
 type: origin
 token: Gc0Cw50sPikX4vkCxU7cw7kunzb
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz

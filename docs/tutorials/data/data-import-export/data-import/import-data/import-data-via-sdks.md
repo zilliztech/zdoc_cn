@@ -1,11 +1,12 @@
 ---
 title: "通过 SDK 导入 | Cloud"
 slug: /import-data-via-sdks
+sidebar_key: import-data-via-sdks
 sidebar_label: "SDK"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。 | Cloud"
 type: origin
@@ -162,7 +163,7 @@ while (results.hasNext()) {
 
 ### 从 Volume 中导入数据\{#import-data-via-Volume}
 
-如需从 Volume 中导入数据，需要先创建 Volume 并将数据上传至该 Volume 中。在完成这些步骤后，记录文件在 Volume 中的位置，以备调用数据导入接口时使用。更多内容，可以参考[管理 Volume (SDK)](./manage-stages)。
+如需从 Volume 中导入数据，需要先创建 Volume 并将数据上传至该 Volume 中。在完成这些步骤后，记录文件在 Volume 中的位置，以备调用数据导入接口时使用。更多内容，可以参考管理 Volume (SDK)。
 
 您可以参考如下代码完成从 Volume 中导入数据的操作。
 
@@ -326,7 +327,7 @@ public static void main(String[] args) throws Exception {
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了保证数据导入成功，请确认当前 Collection 下正在运行或待运行的任务数量不大于 10,000 条。</p>
+为了保证数据导入成功，请确认当前 Collection 下正在运行或待运行的任务数量不大于 10,000 条。
 
 </Admonition>
 
@@ -440,6 +441,16 @@ public static void main(String[] args) throws Exception {
 
 </TabItem>
 </Tabs>
+
+## 常见问题 \{#faq}
+
+**使用 External Volume 与直接从外部存储中导入数据有何不同？**
+
+两种方式都允许您从外部的云服务对象存储中导入数据。不同之处在于：
+
+-  External Volume 通过存储集成来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
+
+- 直接从外部存储导入时，需要在每次导入请求中提供凭证（access key、secret key）。这种方式更适合一次性导入，但不具备凭证隔离和复用能力。
 
 ## 推荐阅读\{#related-topics}
 

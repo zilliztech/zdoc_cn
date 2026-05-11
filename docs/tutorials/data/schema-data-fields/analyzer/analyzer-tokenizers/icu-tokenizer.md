@@ -1,11 +1,12 @@
 ---
 title: "ICU | Cloud"
 slug: /icu-tokenizer
+sidebar_key: icu-tokenizer
 sidebar_label: "ICU"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "ICU 分词器基于 Unicode 国际化组件（ICU）开源项目构建，该项目为软件国际化提供了关键工具。通过使用 ICU 的断词算法，分词器能够在世界上大多数语言中准确地将文本拆分为单词。 | Cloud"
 type: origin
@@ -36,9 +37,9 @@ ICU 分词器基于 [Unicode 国际化组件（ICU）](http://site.icu-project.o
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>ICU 分词器会在输出中将标点符号和空格保留为单独的 token。例如：
-<code>"Привет! Как дела?"</code> 会被分割为 <code>["Привет", "!", " ", "Как", " ", "дела", "?"]</code>。
-如果希望移除这些单独的标点符号 token，可以使用 <a href="./remove-punct-filter">removepunct</a> 过滤器。</p>
+ICU 分词器会在输出中将标点符号和空格保留为单独的 token。例如：
+`"Привет! Как дела?"` 会被分割为 `["Привет", "!", " ", "Как", " ", "дела", "?"]`。
+ 如果希望移除这些单独的标点符号 token，可以使用 [removepunct](./remove-punct-filter) 过滤器。
 
 </Admonition>
 
@@ -264,7 +265,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

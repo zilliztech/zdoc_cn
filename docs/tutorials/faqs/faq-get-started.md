@@ -4,7 +4,7 @@ slug: /faq-get-started
 sidebar_label: "FAQ：快速入门"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: "本文列举了快速上手 Zilliz Cloud 时可能遇到的常见问题及对应解决方法。 | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 1

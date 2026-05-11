@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2025/07/15） | Cloud"
 slug: /release-notes-2180
+sidebar_key: release-notes-2180
 sidebar_label: "2025/07/15"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在本次发布中，Zilliz Cloud 推出了多项强大的新功能，旨在提升运维效率、灵活性和用户体验。这些更新包括对集群级别定时自动扩缩容的支持、通过全新的 Merge Data API 实现 Schema 演进、推出用于简化数据接入流程的云原生数据层 Stage、支持从集群级备份中进行跨数据库的部分数据恢复，以及为 JSON Path 索引提供 UI 支持。这些功能共同帮助用户更高效地管理复杂的工作负载，降低维护开销，并加快在生成式 AI 时代下的开发周期。 | Cloud"
 type: origin
 token: QxMewBHpRisntJkA1NncBNSZnQc
-sidebar_position: 7
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -43,7 +44,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了保证合并前后的数据一致性，在合并过程中需要暂停向源 Collection 写入数据。</p>
+为了保证合并前后的数据一致性，在合并过程中需要暂停向源 Collection 写入数据。
 
 </Admonition>
 
@@ -73,7 +74,7 @@ Stage 提供了一个托管式、云原生的数据暂存区域，专为处理�
 
 Zilliz Cloud 现在支持集群级别的定时扩缩容 ，让您能够根据可预测的工作负载模式主动控制资源分配。
 
-![TW6QbWqhioVCNHxB3Fkc3zavnyf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/TW6QbWqhioVCNHxB3Fkc3zavnyf.png)
+![TW6QbWqhioVCNHxB3Fkc3zavnyf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/TW6QbWqhioVCNHxB3Fkc3zavnyf.png "TW6QbWqhioVCNHxB3Fkc3zavnyf")
 
 - **基于时间计划的 CU 与 Replicas 自动扩缩容** ：现在您可以定义特定的时间计划，以自动调整您的 CU 和 Replica 数量。在工作时段轻松扩展资源以应对流量高峰，在夜间或周末等低峰期自动缩减资源，从而在无需人工干预的情况下优化成本。
 
@@ -87,7 +88,7 @@ Zilliz Cloud 现在支持集群级别的定时扩缩容 ，让您能够根据可
 
 现在，您可以从集群级备份中选择性地恢复特定的数据库和 Collection ，包括来自多个不同数据库中的 Collection。这项增强功能缩短了数据恢复所需的时间，并让您对恢复哪些数据拥有更细粒度的控制，而无需恢复整个集群。
 
-![UCUgbu2QUovXonx0JpncNj9HnLd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UCUgbu2QUovXonx0JpncNj9HnLd.png)
+![UCUgbu2QUovXonx0JpncNj9HnLd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UCUgbu2QUovXonx0JpncNj9HnLd.png "UCUgbu2QUovXonx0JpncNj9HnLd")
 
 更多内容，可以参考[恢复部分集群数据](./restore-from-snapshot#restore-a-partial-cluster)。
 
@@ -95,29 +96,29 @@ Zilliz Cloud 现在支持集群级别的定时扩缩容 ，让您能够根据可
 
 Zilliz Cloud 现在支持通过 Web 控制台直接创建 JSON Path 索引 ，加速对半结构化数据的查询。该功能同时支持 JSON 字段和 Dynamic Field，提供灵活且高性能的过滤能力。
 
-![ViLvb57Oook1fux8BWncEP4an2d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ViLvb57Oook1fux8BWncEP4an2d.png)
+![ViLvb57Oook1fux8BWncEP4an2d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ViLvb57Oook1fux8BWncEP4an2d.png "ViLvb57Oook1fux8BWncEP4an2d")
 
 关于 JSON Path 索引的更多内容，可以查看[为 JSON 字段内的值创建索引](./use-json-fields)和[为 Dynamic Field 中的键创建索引](./enable-dynamic-field#index-keys-in-the-dynamic-field)。
 
 ## 包年集群支持阿里云市场/亚马逊云市场支付\{#anual-payment-clusters-support-aliyun-and-amazon-marketplaces}
 
-![WA0RbnmyloH0BUxacdtc1bvMnTr](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/WA0RbnmyloH0BUxacdtc1bvMnTr.png)
+![WA0RbnmyloH0BUxacdtc1bvMnTr](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/WA0RbnmyloH0BUxacdtc1bvMnTr.png "WA0RbnmyloH0BUxacdtc1bvMnTr")
 
 ## 其它增强\{#other-enhancements}
 
 - 在恢复集群备份时，可以选择是否恢复 RBAC 配置。
 
-    ![SonlbgANBoxxDjxtf39cmCK3nzc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/SonlbgANBoxxDjxtf39cmCK3nzc.png)
+    ![SonlbgANBoxxDjxtf39cmCK3nzc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/SonlbgANBoxxDjxtf39cmCK3nzc.png "SonlbgANBoxxDjxtf39cmCK3nzc")
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>该设置仅对本次发布后创建的集群有效。</p>
+    该设置仅对本次发布后创建的集群有效。
 
     </Admonition>
 
 - 在控制台上提供内测功能的概览及升级按钮，供您在升级前了解相关功能。如需开通，请[联系技术支持](https://support.zilliz.com.cn/hc/zh-cn)。
 
-    ![OzGrbc6Gko9NNfxManxcofc8n6g](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/OzGrbc6Gko9NNfxManxcofc8n6g.png)
+    ![OzGrbc6Gko9NNfxManxcofc8n6g](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/OzGrbc6Gko9NNfxManxcofc8n6g.png "OzGrbc6Gko9NNfxManxcofc8n6g")
 
 - 单个数据导入请求支持上传的文件总大小上限由之前的 100 GB 提升至 1 TB。
 

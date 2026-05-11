@@ -1,11 +1,12 @@
 ---
 title: "创建阿里云私网连接（Private Link） | Cloud"
 slug: /setup-a-private-link-alicloud
+sidebar_key: setup-a-private-link-alicloud
 sidebar_label: "创建阿里云私网连接（Private Link）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。 | Cloud"
 type: origin
@@ -34,7 +35,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="提示">
 
-<p>Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会<a href="https://help.aliyun.com/zh/privatelink/product-overview/billing-description">收取一定费用</a>。</p>
+Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会[收取一定费用](https://help.aliyun.com/zh/privatelink/product-overview/billing-description)。
 
 </Admonition>
 
@@ -134,7 +135,7 @@ import Procedures from '@site/src/components/Procedures';
 
     <Admonition type="info" icon="📘" title="提示">
 
-    <p>为了可用性，我们建议选 2 个以上<strong>可用区与交换机。</strong>但注意，阿里云会针对每个可用区额外收费，因此您需要考虑成本。</p>
+    为了可用性，我们建议选 2 个以上**可用区与交换机。**但注意，阿里云会针对每个可用区额外收费，因此您需要考虑成本。
 
     </Admonition>
 
@@ -156,7 +157,7 @@ import Procedures from '@site/src/components/Procedures';
 
     <Admonition type="info" icon="📘" title="提示">
 
-    <p>终端节点<strong>连接状态</strong>此时是<strong>已断开</strong>。需要等待下一步连接。</p>
+    终端节点**连接状态**此时是**已断开**。需要等待下一步连接。
 
     </Admonition>
 
@@ -170,7 +171,7 @@ import Procedures from '@site/src/components/Procedures';
 
 此时 Zilliz Cloud 界面会出现如下提示：
 
-![Y0e6bGUTEoY8WlxkRcGcbMBVnac](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Y0e6bGUTEoY8WlxkRcGcbMBVnac.png)
+![Y0e6bGUTEoY8WlxkRcGcbMBVnac](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Y0e6bGUTEoY8WlxkRcGcbMBVnac.png "Y0e6bGUTEoY8WlxkRcGcbMBVnac")
 
 ## 获取 Private Endpoint\{#obtain-a-private-link}
 
@@ -182,7 +183,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该 Private Endpoint 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 Private Endpoint 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 Private Endpoint 会自动适用于这些 Dedicated 集群。</p>
+该 Private Endpoint 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 Private Endpoint 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 Private Endpoint 会自动适用于这些 Dedicated 集群。
 
 </Admonition>
 
@@ -264,7 +265,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
        </tr>
        <tr>
          <td><p>记录值</p></td>
-         <td><p>请填写在步骤5.e. 中获取的<strong>默认服务域名</strong>。</p></td>
+         <td><p>请填写在"创建 Private Endpoint" <a href="./setup-a-private-link-alicloud#create-endpoint">步骤 3</a> 中获取的<strong>默认服务域名</strong>。</p></td>
        </tr>
     </table>
 
@@ -306,10 +307,9 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>私网连接仅影响<a href="/reference/restful/data-plane">数据面（Data Plane）</a>的操作。<a href="/reference/restful/control-plane">控制面（Control Plane）</a>的操作仍然可以通过公网进行。</p></li>
-<li><p>重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。</p></li>
-</ul>
+- 私网连接仅影响[数据面（Data Plane）](/reference/restful/data-plane)的操作。[控制面（Control Plane）](/reference/restful/control-plane)的操作仍然可以通过公网进行。
+
+- 重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。
 
 </Admonition>
 

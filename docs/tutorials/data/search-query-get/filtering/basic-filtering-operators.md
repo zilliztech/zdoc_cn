@@ -1,11 +1,12 @@
 ---
 title: "基本操作符 | Cloud"
 slug: /basic-filtering-operators
+sidebar_key: basic-filtering-operators
 sidebar_label: "基本操作符"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供了一套丰富的基本操作符，可帮助您高效地过滤和查询数据。通过这些操作符，您可以根据标量字段、数字计算、逻辑条件等细化搜索条件。了解如何使用这些操作符对于建立精确查询和最大限度地提高搜索效率至关重要。 | Cloud"
 type: origin
@@ -75,7 +76,7 @@ filter = 'status != "inactive"'
 filter = 'age > 30'
 ```
 
-### 示例4：使用小于（`\<`）操作符过滤\{#example-4-filtering-with-less-than}
+### 示例4：使用小于（`\{#4}
 
 如果需要过滤出 `price` 字段小于 `100` 的所有 Entity，可以使用如下过滤表达式：
 
@@ -91,7 +92,7 @@ filter = 'price < 100'
 filter = 'rating >= 4'
 ```
 
-### 示例6：使用小于等于（`\<=`）操作符过滤\{#example-6-filtering-with-less-than-or-equal-to}
+### 示例6：使用小于等于（`\{#6}
 
 如果需要过滤出 `discount` 字段小于等于 `10%` 的所有 Entity，可以使用如下过滤表达式：
 
@@ -235,7 +236,7 @@ filter = 'NOT color == "green"'
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此操作符大小写不敏感。因此，<code>IS NULL</code>、<code>is null</code>、<code>IS NOT NULL</code>、<code>is not null</code> 均合法。</p>
+此操作符大小写不敏感。因此，`IS NULL`、`is null`、`IS NOT NULL`、`is not null` 均合法。
 
 </Admonition>
 
@@ -245,7 +246,7 @@ Zilliz Cloud 支持针对普通标量字段是否为空进行过滤。这些字�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在 <code>VARCHAR</code> 类型的字段中，Zilliz Cloud 不会将 <code>""</code> 识别为 <code>nulll</code> 值。</p>
+在 `VARCHAR` 类型的字段中，Zilliz Cloud 不会将 `""` 识别为 `nulll` 值。
 
 </Admonition>
 
@@ -277,7 +278,7 @@ Zilliz Cloud 支持针对 JSON 字段是否为空进行过滤，并将符合如�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果 JSON 字段值中某些元素（例如，某些键值）为 <code>null</code>，该字段的值仍为非空。例如，某 Entity 的 JSON 字段的取值为 <code>\{"metadata": \{"category": None, "price": 99.99}}</code> 中。虽然 <code>category</code> 的值为 <code>None</code>，但该 JSON 字段的取值不会被当作 <code>null</code>。</p>
+如果 JSON 字段值中某些元素（例如，某些键值）为 `null`，该字段的值仍为非空。例如，某 Entity 的 JSON 字段的取值为 `\{"metadata": \{"category": None, "price": 99.99}}` 中。虽然 `category` 的值为 `None`，但该 JSON 字段的取值不会被当作 `null`。
 
 </Admonition>
 
@@ -295,7 +296,7 @@ data = [
       "pk": 2,
       "embedding": [0.56, 0.78, 0.90]
   },
-  {  # JSON field `metadata` is completely missing
+  {  # JSON field \`metadata\` is completely missing
       "pk": 3,
       "embedding": [0.91, 0.18, 0.23]
   },
@@ -343,7 +344,7 @@ Zilliz Cloud 支持针对 ARRAY 字段是否为空进行过滤，并将符合如
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>由于 ARRAY 字段中各元素的数值类型需要保持一致，因此 ARRAY 字段不支持部分元素值为 <code>null</code>。具体可参考<a href="./use-array-fields">Array 类型</a>。</p>
+由于 ARRAY 字段中各元素的数值类型需要保持一致，因此 ARRAY 字段不支持部分元素值为 `null`。具体可参考[Array 类型](./use-array-fields)。
 
 </Admonition>
 

@@ -1,11 +1,12 @@
 ---
 title: "了解 Collection | Cloud"
 slug: /manage-collections
+sidebar_key: manage-collections
 sidebar_label: "了解 Collection"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 集群中，您可以创建多个 Collection 用于管理数据，并将数据记录作为 Entity 插入 Collection 中。Collection 与 Entity 这对概念与关系型数据库中的数据表和数据记录这对概念类似。本小节主要介绍 Zilliz Cloud 集群中与 Collection 及与之相关的一些概念。 | Cloud"
 type: origin
@@ -36,7 +37,7 @@ Collection 是一张二维数据表，包含固定列数和可变行数。Collec
 
 下图中的示例 Collection 包含 6 个 Entity 和 8 个字段。
 
-![QxpAb654powT9ux6upScpkEFnAd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/QxpAb654powT9ux6upScpkEFnAd.png)
+![QxpAb654powT9ux6upScpkEFnAd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/QxpAb654powT9ux6upScpkEFnAd.png "QxpAb654powT9ux6upScpkEFnAd")
 
 ## Schema 与 Fields\{#schema-and-fields}
 

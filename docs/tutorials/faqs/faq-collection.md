@@ -4,7 +4,7 @@ slug: /faq-collection
 sidebar_label: "FAQ：Collection"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: "本文列举了在使用 Zilliz Cloud Collection 时可能遇到的常见问题及对应解决方法。 | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 3

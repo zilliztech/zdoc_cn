@@ -1,16 +1,17 @@
 ---
 title: "MCP Server | Cloud"
 slug: /zilliz-mcp-server
+sidebar_key: zilliz-mcp-server
 sidebar_label: "MCP Server"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供了 Zilliz MCP Server](https//github.com/zilliztech/zilliz-mcp-server/tree/master)，使 AI 智能体能够通过标准化的[模型上下文协议（Model Context Protocol，MCP）无缝地与 Zilliz Cloud 进行交互。本页面将指导你如何在本地设置 Zilliz MCP 服务器，并将其与你喜爱的 AI 智能体配合使用。 | Cloud"
 type: origin
 token: BUaEwl1UkiSVtLkKMUocinNMntT
-sidebar_position: 10
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -63,7 +64,7 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
 
 在这种模式下，Zilliz MCP Server 与你喜爱的 AI 智能体在同一台机器上本地运行，且 AI 智能体直接管理 Zilliz MCP Server 的生命周期。
 
-在你的 AI 智能体所运行的机器上安装了 Python 和 uv 之后，只需将以下服务器配置中的 `YOUR-API-KEY` 替换为具有足够权限且有效 Zilliz Cloud API 密钥，即可使用该配置。
+在你的 AI 智能体所运行的机器上安装了 Python 和 uv 之后，只需将以下服务器配置中的 `YOUR-CLUSTER_TOKEN` 替换为具有足够权限且有效 Zilliz Cloud API 密钥或者一个由冒号（:）连接的目标集群的用户名和密码，如 `username:password`，即可使用该配置。
 
 ```json
 {
@@ -72,7 +73,7 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
       "command": "uvx",
       "args": ["zilliz-mcp-server"],
       "env": {
-          "ZILLIZ_CLOUD_TOKEN": "YOUR-API-KEY"
+          "ZILLIZ_CLOUD_TOKEN": "YOUR-CLUSTER-TOKEN"
       }
     }
   }
@@ -100,7 +101,7 @@ Zilliz Cloud 提供了 [Zilliz MCP Server](https://github.com/zilliztech/zilliz-
 
 1. 添加 Zilliz Cloud API Key 到 **.env** 文件。
 
-    该文件如下所示。您需要将您的 Zilliz Cloud API key 添加到 `ZILLIZ_CLOUD_TOKEN=` 的后面。
+    该文件如下所示。您需要将您的具有足够权限且有效 Zilliz Cloud API 密钥或者一个由冒号（:）连接的目标集群的用户名和密码，如 `username:password`，添加到 `ZILLIZ_CLOUD_TOKEN=` 的后面。
 
     ```bash
     # Zilliz MCP Server Configuration
@@ -162,7 +163,7 @@ MCP 是一种开放协议，用于标准化应用程序向大语言模型（LLM�
 
 1. 保存文件并返回到 **Tools & Integrations** 页面。你会看到 **Zilliz MCP Server** 已列在 **MCP Tools** 中，并显示了可供 AI 智能体调用的可用工具。
 
-    ![KOzMbMi9PozfpQx4CsOcSgQjnXf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/KOzMbMi9PozfpQx4CsOcSgQjnXf.png)
+    ![KOzMbMi9PozfpQx4CsOcSgQjnXf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/KOzMbMi9PozfpQx4CsOcSgQjnXf.png "KOzMbMi9PozfpQx4CsOcSgQjnXf")
 
 </Procedures>
 

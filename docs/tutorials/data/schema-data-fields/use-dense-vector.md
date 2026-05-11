@@ -1,11 +1,12 @@
 ---
 title: "稠密向量 | Cloud"
 slug: /use-dense-vector
+sidebar_key: use-dense-vector
 sidebar_label: "稠密向量"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "稠密向量是一种数值化的数据表示方法，在机器学习和数据分析领域广泛使用。它是由一系列实数组成的数组，其特点是大多数或所有元素都是非零值。与稀疏向量相比，稠密向量在同等维度下包含更多的信息，因为每个维度都携带有意义的数值。这种表示方法能够有效地捕捉复杂的模式和关系，使得数据在高维空间中更容易被分析和处理。稠密向量通常具有固定的维度，可以是几十到几百，甚至几千维，具体取决于应用场景和需求。 | Cloud"
 type: origin
@@ -73,7 +74,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>除了稠密向量，Zilliz Cloud 还支持稀疏向量和 Binary 向量。稀疏向量适用于基于特定词语的精准匹配，如关键词检索、术语匹配等；而 Binary 向量则常用于高效处理二值化数据，如图像模式匹配和某些哈希编码的应用场合。有关更多信息，请参考 <a href="./use-binary-vector">Binary 向量</a> 和 <a href="./use-sparse-vector">稀疏向量</a>。</p>
+除了稠密向量，Zilliz Cloud 还支持稀疏向量和 Binary 向量。稀疏向量适用于基于特定词语的精准匹配，如关键词检索、术语匹配等；而 Binary 向量则常用于高效处理二值化数据，如图像模式匹配和某些哈希编码的应用场合。有关更多信息，请参考 [Binary 向量](./use-binary-vector) 和 [稀疏向量](./use-sparse-vector)。
 
 </Admonition>
 
@@ -172,7 +173,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -352,12 +353,7 @@ client.create_collection(
 <TabItem value='java'>
 
 ```java
-import io.milvus.v2.client.ConnectConfig;
-import io.milvus.v2.client.MilvusClientV2;
-
-MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
-        .uri("YOUR_CLUSTER_ENDPOINT")
-        .build());
+import io.milvus.v2.service.collection.request.CreateCollectionReq;
 
 CreateCollectionReq requestCreate = CreateCollectionReq.builder()
         .collectionName("my_collection")
@@ -373,10 +369,6 @@ client.createCollection(requestCreate);
 
 ```javascript
 import { MilvusClient } from "@zilliz/milvus2-sdk-node";
-
-const client = new MilvusClient({
-    address: 'YOUR_CLUSTER_ENDPOINT'
-});
 
 await client.createCollection({
     collection_name: 'my_collection',

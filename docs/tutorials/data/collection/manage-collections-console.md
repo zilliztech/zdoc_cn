@@ -1,11 +1,12 @@
 ---
 title: "管理 Collection (控制台) | Cloud"
 slug: /manage-collections-console
+sidebar_key: manage-collections-console
 sidebar_label: "管理 Collection (控制台)"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Collection 是一张二维表格，用于存储 Embedding向量和元数据。一个 Collection 中的所有 Entity 共享相同的 Schema。您可以创建多个 Collection 来进行数据管理，或用于实现多租户（multi-tenancy）。 | Cloud"
 type: origin
@@ -34,8 +35,8 @@ Collection 是一张二维表格，用于存储 Embedding向量和元数据。�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需租户间数据物理隔离，且租户数量较少，可以为每个租户创建一个独立的 Collection。
-但是，根据您的集群版本，您最多可创建 16,384 个 Collection。因此，对于大规模多租户场景，建议根据具体情况，采用基于 Partition 或 Partition key 的多租户策略。详情请见<a href="./multi-tenancy">多租户策略</a>。</p>
+如需租户间数据物理隔离，且租户数量较少，可以为每个租户创建一个独立的 Collection。
+但是，根据您的集群版本，您最多可创建 16,384 个 Collection。因此，对于大规模多租户场景，建议根据具体情况，采用基于 Partition 或 Partition key 的多租户策略。详情请见[多租户策略](./multi-tenancy)。
 
 </Admonition>
 
@@ -83,7 +84,7 @@ Schema 定义了 Collection 的数据结构，必须包含以下字段：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Collection 创建后，大多数 Schema 配置将无法修改。请在创建前仔细设计 Schema，确保其能够满足当前及未来的业务需求。最佳实践参考，请参见<a href="./schema-explained">了解 Schema</a>。</p>
+Collection 创建后，大多数 Schema 配置将无法修改。请在创建前仔细设计 Schema，确保其能够满足当前及未来的业务需求。最佳实践参考，请参见[了解 Schema](./schema-explained)。
 
 </Admonition>
 
@@ -139,12 +140,13 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在决定使用 Partition 还是 Partition Key 时，你可以根据以下因素进行权衡：</p>
-<ul>
-<li><p><strong>多租户策略</strong>：如果需要支持百万级租户，建议使用 Partition Key；如果需要在租户之间实现强物理隔离，建议使用 Partition。详情请见<a href="./multi-tenancy">多租户策略</a>。</p></li>
-<li><p><strong>资源管理方式</strong>：如果希望自行创建和管理 Partition，可选择使用 Partition；如果希望系统自动创建和管理 Partition，建议使用 Partition Key。</p></li>
-<li><p><strong>冷热数据管理</strong>：如果需要高效管理冷热数据，建议使用 Partition key。需要在 Dedicated 集群中使用 Parition key 进行冷热数据管理，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></li>
-</ul>
+在决定使用 Partition 还是 Partition Key 时，你可以根据以下因素进行权衡：
+
+- **多租户策略**：如果需要支持百万级租户，建议使用 Partition Key；如果需要在租户之间实现强物理隔离，建议使用 Partition。详情请见[多租户策略](./multi-tenancy)。
+
+- **资源管理方式**：如果希望自行创建和管理 Partition，可选择使用 Partition；如果希望系统自动创建和管理 Partition，建议使用 Partition Key。
+
+- **冷热数据管理**：如果需要高效管理冷热数据，建议使用 Partition key。需要在 Dedicated 集群中使用 Parition key 进行冷热数据管理，请[联系我们](http://support.zilliz.com.cn)。
 
 </Admonition>
 
@@ -166,7 +168,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>请谨慎调整 mmap 设置。修改默认配置可能导致性能下降，或因内存不足（OOM）而导致加载失败。最佳实践请见<a href="./use-mmap">使用 mmap</a>。</p>
+请谨慎调整 mmap 设置。修改默认配置可能导致性能下降，或因内存不足（OOM）而导致加载失败。最佳实践请见[使用 mmap](./use-mmap)。
 
 </Admonition>
 
@@ -241,4 +243,14 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 - **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-5-enable-allow_insert_auto_id)。
 
 - **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
+
+## 预览 Collection 数据\{#Preview collection data}
+
+使用 **Data** 标签页，可以直接在 Zilliz Cloud 控制台中预览 Collection 内的Entity。
+
+您可以定义过滤表达式，配置 `limit` 参数来控制预览中展示的 Entity 数量（默认值为 100，最大值为 16,384），并查询匹配的 Entity，以表格形式查看字段值。
+
+您还可以使用 **Order By**，按主键字段、数值字段或标量字段对数据预览结果进行升序或降序排序。
+
+![NlAzwplVqhvxVCbh4cdcoSznn7d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/NlAzwplVqhvxVCbh4cdcoSznn7d.png)
 

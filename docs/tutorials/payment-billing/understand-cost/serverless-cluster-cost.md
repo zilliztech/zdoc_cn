@@ -1,16 +1,17 @@
 ---
 title: "Serverless 集群费用 | Cloud"
 slug: /serverless-cluster-cost
+sidebar_key: serverless-cluster-cost
 sidebar_label: "Serverless 集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud Serverless 集群主要根据读写操作所消耗的资源收费。您只需为实际产生的用量付费，无需提前预留固定资源。 | Cloud"
 type: origin
 token: MfZawdBV9iFGi4k7HRbcyyj2nCh
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -84,7 +85,7 @@ Import 和 bulk insert 操作**不产生**写入费用。
    <tr>
      <td><p>100 万 2560 维向量</p></td>
      <td><p>2.5</p></td>
-     <td><p>$52.5</p></td>
+     <td><p>&#36;52.5</p></td>
    </tr>
 </table>
 
@@ -147,7 +148,7 @@ Import 和 bulk insert 操作**不产生**写入费用。
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>每次读取操作最低会消耗 6 vCU。</p>
+    每次读取操作最低会消耗 6 vCU。
 
     </Admonition>
 

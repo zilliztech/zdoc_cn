@@ -1,11 +1,12 @@
 ---
 title: "过滤表达式概览 | Cloud"
 slug: /filtering-overview
+sidebar_key: filtering-overview
 sidebar_label: "过滤表达式概览"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud提供了强大的过滤功能，可实现对数据的精确查询。过滤表达式允许您针对特定的标量字段，并通过不同的条件细化搜索结果。本文将介绍如何在 Zilliz Cloud 集群中使用过滤表达式，并提供了侧重于 Query 操作的示例。您还可以在 Search 和 Delete 请求中应用这些过滤表达式。 | Cloud"
 type: origin

@@ -1,11 +1,12 @@
 ---
 title: "创建集群 | Cloud"
 slug: /create-cluster
+sidebar_key: create-cluster
 sidebar_label: "创建集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供多种部署方式和计费方式的集群，方便您根据需求灵活选择合适的集群。 | Cloud"
 type: origin

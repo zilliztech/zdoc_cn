@@ -1,11 +1,12 @@
 ---
 title: "邮箱账号 | Cloud"
 slug: /email-accounts
+sidebar_key: email-accounts
 sidebar_label: "邮箱账号"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 注册账户后，您可对账户信息进行管理。您可以编辑账号设置以及删除账号。 | Cloud"
 type: origin
@@ -46,7 +47,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>修改账号邮箱地址不会影响账单信息和告警接收人。如有需要请自行进行手动更新。</p>
+修改账号邮箱地址不会影响账单信息和告警接收人。如有需要请自行进行手动更新。
 
 </Admonition>
 
@@ -56,7 +57,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>修改完成后，旧手机号可用于注册新账号。</p>
+修改完成后，旧手机号可用于注册新账号。
 
 </Admonition>
 
@@ -80,7 +81,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>账号关闭后 30 天内，您将无法登录或注册 Zilliz Cloud。如需重开账号，请<a href="https://support.zilliz.com.cn/hc/zh-cn/signin">提交工单</a>。账号关闭账号 30 天后，所有账号数据将被清空。</p>
+账号关闭后 30 天内，您将无法登录或注册 Zilliz Cloud。如需重开账号，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn/signin)。账号关闭账号 30 天后，所有账号数据将被清空。
 
 </Admonition>
 
@@ -104,7 +105,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>删除账号的操作不可逆，请谨慎操作！</p>
+删除账号的操作不可逆，请谨慎操作！
 
 </Admonition>
 

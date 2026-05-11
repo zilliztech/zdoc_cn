@@ -1,16 +1,17 @@
 ---
 title: "功能支持情况 | Cloud"
 slug: /feature-availability
+sidebar_key: feature-availability
 sidebar_label: "功能支持情况"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "最后更新时间：2025 年 10 月 13 日 | Cloud"
 type: origin
 token: EZ2jwCJD7iazqKkmSGRcBfjWnCh
-sidebar_position: 12
+sidebar_position: 14
 keywords: 
   - zilliz
   - 向量数据库
@@ -68,43 +69,53 @@ import Admonition from '@theme/Admonition';
 
     - **功能使用**：不可用。
 
-## 如何识别功能支持情况
+## 如何识别功能支持情况\{#}
 
 Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶段。如无特别说明，默认为正式可用（GA）。
 
-## 当前功能支持情况
+## 当前功能支持情况\{#}
 
-### 内测版
-
-- [提取、转换和加载](./merge-data)（ETL）
-
-- [在线迁移](./zero-downtime-migration)
+### 内测版\{#}
 
 - [导出备份文件](./export-backup-files)
 
+- [托管模型](./hosted-models)
+
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需使用上述功能，请<a href="http://support.zilliz.com.cn">提交工单</a>申请开通功能。</p>
+如需使用上述功能，请[提交工单](http://support.zilliz.com.cn)申请开通功能。
 
 </Admonition>
 
-### 公测版
+### 公测版\{#}
 
 - [Text Embedding](./model-based-functions) 和 [Rerank](./reranking) Function
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需使用上述功能，请升级集群的 Milvus 版本。</p>
+如需使用上述功能，请升级集群的 Milvus 版本。
 
 </Admonition>
 
-### 停用预告
+- [访问日志](./access-logs)
+
+- 按需计算
+
+<Admonition type="info" icon="📘" title="说明">
+
+如果您项目所在的云地域不支持此功能，请[联系我们](http://zilliz.com.cn/contact-sales)。
+
+</Admonition>
+
+### 停用预告\{#}
 
 - [从 NumPy 文件导入数据](./data-import-numpy)
 
 - [RESTful API（V1 版本）](/reference/restful/v1)
 
-### 已停用
+- [合并数据](./merge-data)
+
+### 已停用\{#}
 
 - Pipelines
 

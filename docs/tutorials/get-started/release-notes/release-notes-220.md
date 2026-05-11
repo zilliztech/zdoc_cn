@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2023/09/19） | Cloud"
 slug: /release-notes-220
+sidebar_key: release-notes-220
 sidebar_label: "2023/09/19"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "我们很高兴地宣布Zilliz Cloud 2.2.0的发布。此版本引入了一系列增强和功能，包括集群间数据迁移、从 ElasticSearch 迁移数据，全新的问题单系统和数据导入能力的全面增强。 | Cloud"
 type: origin
 token: P1JAwZEf4i1ALqkidS9cYfLZnef
-sidebar_position: 23
+sidebar_position: 25
 keywords: 
   - 向量数据库
   - zilliz
@@ -31,7 +32,7 @@ import Admonition from '@theme/Admonition';
 
 此次发布引入了新的提单系统，您可以通过该系统方便地提交您的疑问和需要咨询的问题。另外，我们更新了数据导入和迁移工具，实现了 Zilliz Cloud 集群间的无缝转换，并改进了对一次性导入多个文件的支持。我们诚邀您探索这些工具和新特性，亲身体验它们的优势。
 
-## Milvus 兼容性
+## Milvus 兼容性\{#milvus}
 
 此次发布兼容 **Milvus 2.2.x**。
 

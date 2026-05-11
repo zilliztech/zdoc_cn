@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2023/12/20） | Cloud"
 slug: /release-notes-240
+sidebar_key: release-notes-240
 sidebar_label: "2023/12/20"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括 Partition SDK、集群管理接口以及其它方面的功能性增强。 | Cloud"
 type: origin
 token: GKNPwvWhZi7D6mkag72cIDWqnbf
-sidebar_position: 20
+sidebar_position: 22
 keywords: 
   - 向量数据库
   - zilliz
@@ -27,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 我们很高兴地宣布 Zilliz Cloud 2.4.0 的发布。此版本引入了一系列增强和功能更新。主要包括 Partition SDK、集群管理接口以及其它方面的功能性增强。
 
-## Milvus 兼容性
+## Milvus 兼容性\{#milvus}
 
 此次发布兼容 **Milvus 2.2.x** 以及 **Milvus 2.3.x (Beta)**。
 

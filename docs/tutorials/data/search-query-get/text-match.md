@@ -1,16 +1,17 @@
 ---
 title: "Text Match | Cloud"
 slug: /text-match
+sidebar_key: text-match
 sidebar_label: "Text Match"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus 中的 Text Match 功能能够基于特定术语实现精确的文档检索。通过使用关键词预筛选文档，可以缩小向量搜索的范围，从而提升搜索效率。该功能还可以结合标量过滤，以进一步优化查询结果。 | Cloud"
 type: origin
 token: WWSZwJWLYiRBfckbN58cV85BnQb
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz
@@ -38,7 +39,7 @@ Milvus 中的 Text Match 功能能够基于特定术语实现精确的文档检�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Text Match 关注的是查询词的精确匹配，而不对匹配文档的相关性进行评分。如果希望基于查询词的语义和重要性来检索最相关的文档，建议使用 <a href="./full-text-search">全文搜索</a>。</p>
+Text Match 关注的是查询词的精确匹配，而不对匹配文档的相关性进行评分。如果希望基于查询词的语义和重要性来检索最相关的文档，建议使用 [全文搜索](./full-text-search)。
 
 </Admonition>
 
@@ -499,7 +500,7 @@ Text Match 可以与向量相似度搜索结合使用，以缩小搜索范围并
 <TabItem value='python'>
 
 ```python
-# Match entities with `keyword1` or `keyword2`
+# Match entities with \`keyword1\` or \`keyword2\`
 filter = "TEXT_MATCH(text, 'keyword1 keyword2')"
 
 # Assuming 'embeddings' is the vector field and 'text' is the VARCHAR field
@@ -558,7 +559,7 @@ if err != nil {
 <TabItem value='javascript'>
 
 ```javascript
-// Match entities with `keyword1` or `keyword2`
+// Match entities with \`keyword1\` or \`keyword2\`
 const filter = "TEXT_MATCH(text, 'keyword1 keyword2')";
 
 // Assuming 'embeddings' is the vector field and 'text' is the VARCHAR field
@@ -616,7 +617,7 @@ Text Match 还可以用于查询操作中的标量过滤。通过在 `query()` �
 <TabItem value='python'>
 
 ```python
-# Match entities with both `keyword1` and `keyword2`
+# Match entities with both \`keyword1\` and \`keyword2\`
 filter = "TEXT_MATCH(text, 'keyword1') and TEXT_MATCH(text, 'keyword2')"
 
 result = client.query(
@@ -646,7 +647,7 @@ QueryResp queryResp = client.query(QueryReq.builder()
 <TabItem value='javascript'>
 
 ```javascript
-// Match entities with both `keyword1` and `keyword2`
+// Match entities with both \`keyword1\` and \`keyword2\`
 const filter = "TEXT_MATCH(text, 'keyword1') and TEXT_MATCH(text, 'keyword2')";
 
 const result = await client.query(

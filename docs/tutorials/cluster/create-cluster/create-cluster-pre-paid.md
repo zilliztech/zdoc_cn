@@ -1,11 +1,12 @@
 ---
 title: "创建包年包月集群 | Cloud"
 slug: /create-cluster-pre-paid
+sidebar_key: create-cluster-pre-paid
 sidebar_label: "创建包年包月集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "包年包月集群采用预付费的计费方式，即先付费后使用，按照订单的购买时长进行结算。包年包月集群一般适用于资源需求相对稳定的长期业务。购买包年包月集群可享受折扣，且购买时长越长，折扣越大。本文介绍如何在 Zilliz Cloud 创建和管理包年包月的 Dedicated 集群。如需了解包年包月集群使用过程中可能会额外产生的费用以及计费规则，请参考了解账单。 | Cloud"
 type: origin
@@ -96,8 +97,9 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>您可以通过现金余额或者云市场订阅支付包年包月集群订单。但<strong>仅支持单一支付方式</strong>。</p>
-<p>订单生成后 7 天内未完成支付，系统将自动取消订单。如仍需创建包年包月集群，请重新完成步骤 1 的操作并支付新订单。</p>
+您可以通过现金余额或者云市场订阅支付包年包月集群订单。但**仅支持单一支付方式**。
+
+订单生成后 7 天内未完成支付，系统将自动取消订单。如仍需创建包年包月集群，请重新完成步骤 1 的操作并支付新订单。
 
 </Admonition>
 

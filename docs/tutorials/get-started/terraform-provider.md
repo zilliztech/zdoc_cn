@@ -1,16 +1,17 @@
 ---
 title: "Terraform Provider | Cloud"
 slug: /terraform-provider
+sidebar_key: terraform-provider
 sidebar_label: "Terraform Provider"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz 提供完全托管的 Milvus 服务，旨在简化向量搜索应用的部署与扩展，在安全性方面进行了优化设计，无需你自行构建和维护复杂的基础设施——无论是 Zilliz 提供的云环境，还是你自己的本地环境。 | Cloud"
 type: origin
 token: NE1qw4ke2ii1XfkMikrckk5Rnpb
-sidebar_position: 11
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -31,9 +32,9 @@ Zilliz 提供完全托管的 Milvus 服务，旨在简化向量搜索应用的�
 
 Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infrastructure as Code，IaC）解决方案，可让你动态地创建、修改和版本化管理你的 Zilliz Cloud 资源。在使用该工具前，你需要通过正确的凭据（例如具有适当权限的 Zilliz Cloud API 密钥）对 Provider 进行配置。
 
-## 身份验证
+## 身份验证\{#}
 
-在使用 Terraform 进行资源部署之前，你必须将 Terraform 与 Zilliz Cloud 平台进行身份验证。在使用该 Terraform Provider 执行任何操作之前，必须使用具有适当权限的 Zilliz Cloud API 密钥完成身份验证。
+在使用 Terraform 进行资源部署之前，你必须将 Terraform 与 Zilliz Cloud 平台进行身份验证。在使用该 Terraform Provider 执行任何数据面操作之前，必须使用具有适当权限的 Zilliz Cloud API 密钥完成身份验证。
 
 要创建 Zilliz Cloud API 密钥，请按照以下步骤操作：
 
@@ -51,17 +52,23 @@ Zilliz Cloud Terraform Provider 是一个开源的基础设施即代码（Infras
 
 有关管理 API 密钥的更多信息，请参阅[API 密钥](./manage-api-keys)。
 
-## 可管理资源
+## 可管理资源\{#}
 
 目前，你可以使用该 Provider 管理以下类型的资源：
 
-### 集群
+### 集群\{#}
 
 Zilliz Cloud 集群是在 Zilliz Cloud 上运行的 Milvus 实例。Zilliz Cloud 将其集群划分为多种服务类型，包括 Free、Serverless、Dedicated (Standard)、Dedicated (Enterprise) 以及 Bring Your Own Cloud （BYOC)。
 
 有关这些服务类型的详细介绍，请参阅 [Zilliz Cloud 版本对比](/docs/select-zilliz-cloud-service-plans)。
 
 你可以使用 Zilliz Cloud Terraform Provider 创建和管理任意类型的集群实例。具体操作请参考以下教程：
+
+<Admonition type="info" icon="📘" title="说明">
+
+当在 BYOC 项目中使用 Terraform 时，仅支持 Dedicated 或 BYOC 集群的创建。Free 或 Serverless 集群不适用于 BYOC 项目。
+
+</Admonition>
 
 - [Create a Free Cluster](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/guides/create-a-free-cluster)
 
@@ -73,7 +80,7 @@ Zilliz Cloud 集群是在 Zilliz Cloud 上运行的 Milvus 实例。Zilliz Cloud
 
 - [Import Existing Clusters into Terraform Management](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/guides/import-cluster)
 
-### Database
+### Database\{#database}
 
 在 Zilliz Cloud 中，Database 是用于组织和管理数据的逻辑单元，仅在 Dedicated Clusters 中可用 。在创建集群时，系统会自动创建一个默认数据库。
 
@@ -97,7 +104,7 @@ Collection 是一个具有固定列和可变行的二维表。每一列表示一
 
 - [Collections (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/collections)
 
-### Partition
+### Partition\{#partition}
 
 Partition 是集合的一个子集。每个分区与其父集合具有相同的数据结构，但仅包含集合中的一部分数据。
 
@@ -107,7 +114,7 @@ Partition 是集合的一个子集。每个分区与其父集合具有相同的�
 
 - [Partitions (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/partitions)
 
-### Index
+### Index\{#index}
 
 Zilliz Cloud 采用 [AUTOINDEX](./autoindex-explained) 技术以实现高效的相似性搜索。它同时支持以下[相似度类型](./search-metrics-explained)来计算向量嵌入之间的距离：
 
@@ -129,7 +136,7 @@ Zilliz Cloud 采用 [AUTOINDEX](./autoindex-explained) 技术以实现高效的�
 
 - [Indexes (Data Source)](https://registry.terraform.io/providers/zilliztech/zillizcloud/latest/docs/data-sources/indexes)
 
-### 用户和角色
+### 用户和角色\{#}
 
 在 Zilliz Cloud 中，你可以创建**集群用户**并为其分配**集群角色**来定义权限，从而实现数据安全。
 

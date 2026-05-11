@@ -1,13 +1,14 @@
 ---
 title: "变更日志 | Cloud"
 slug: /changelogs
+sidebar_key: changelogs
 sidebar_label: "变更日志"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 1 月 15 日 | Cloud"
+description: "最近更新：2026 年 4 月 11 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 1
@@ -27,7 +28,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 1 月 15 日
+**最近更新**：2026 年 4 月 11 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -45,7 +46,85 @@ import Grid from '@site/src/components/Grid';
 
 </Grid>
 
-## 2026
+## 2026\{#2026}
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 4 月 11 日](./release-notes-2604)**
+
+    </div>
+
+    <div>
+
+        - 🌎 [全球集群](./global-cluster-explained)现已支持云地域间的灾备能力及相关的平台能力提升。
+
+        - 📈 提供 [Collection 级别的指标监控](./metrics-alerts-reference)
+
+        - 📋 [访问日志进入公测](./access-log-overview)。
+
+        - ⚙️[ 运维窗口](./organization-settings#set-up-preferred-maintenance-window)功能经过重新设计，为您提供更多地升级计划及主动通知。
+
+        - 👥 全新的 [Cluster Admin 角色](./project-users#cluster-admin)为您的团队成员提供部分或所有集群的项目管理员权限。
+
+        - 💾 BYOC 现已支持创建分层存储类型的集群。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 2 月 9 日](./release-notes-2602#cluster-level-access-control)**
+
+    </div>
+
+    <div>
+
+        - 🔐 集群级别权限控制，为您在[组织](./organization-users#invite-a-user-to-your-organization)和[项目设置](./project-users#invite-a-user-to-a-project)中提供更细粒度的访问控制通力。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 1 月 29 日](./release-notes-2601#another-milvus-v2.6.x-new-feature)**
+
+    </div>
+
+    <div>
+
+        - 🚀   Milvus v2.6.x 新功能特性在 Zilliz Cloud 上线：
+
+            - [Primary Key Search](./primary-key-search)
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 1 月 23 日](./release-notes-2601#milvus-v2.6.x-new-feature)**
+
+    </div>
+
+    <div>
+
+        - 🚀   Milvus v2.6.x 新功能特性在 Zilliz Cloud 上线：
+
+            - [Semantic Highlighter](./semantic-highlighter)
+
+    </div>
+
+</Grid>
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -61,7 +140,7 @@ import Grid from '@site/src/components/Grid';
 
             - [TIMESTAMPTZ 类型](./use-timestamptz-field)
 
-            - [Text Highlighter](./text-highlighter)
+            - [Lexical Highlighter](./text-highlighter)
 
         - 🤖 基于[模型的 Embedding](./model-based-functions) 和[重排序 Function](./model-ranker) 开始公测。
 
@@ -79,7 +158,7 @@ import Grid from '@site/src/components/Grid';
 
 </Grid>
 
-## 2025
+## 2025\{#2025}
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -109,7 +188,7 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        - 📦  Stage 功能正式更名为 [Volume](./volume-explained)，并全面可用（GA）
+        - 📦  Stage 功能正式更名为 Volume，并全面可用（GA）
 
         - 🔐  [组织级别的 IP 白名单](./setup-console-ip-allowlist)能力，丰富您的访问控制方式
 
@@ -227,7 +306,7 @@ import Grid from '@site/src/components/Grid';
 
         - 🔗  [合并数据](./merge-data) API 实现 Schema 演进
 
-        - 📦  [Stage](./manage-stages) 为数据迁移和导入提供数据层基础能力
+        - 📦  Stage 为数据迁移和导入提供数据层基础能力
 
         - 📅  [集群定时扩缩容](./scale-cluster)
 
@@ -275,7 +354,7 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        - 🔄  [不停机数据迁移](./zero-downtime-migration)
+        - 🔄  不停机数据迁移
 
         - [⚙️  修改集群副本数量](/reference/restful/modify-cluster-replica-v2)
 
@@ -327,7 +406,7 @@ import Grid from '@site/src/components/Grid';
 
 </Grid>
 
-## 2024
+## 2024\{#2024}
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -507,7 +586,7 @@ import Grid from '@site/src/components/Grid';
 
 </Grid>
 
-## 2023
+## 2023\{#2023}
 
 <Grid columnSize="2" widthRatios="24,75">
 

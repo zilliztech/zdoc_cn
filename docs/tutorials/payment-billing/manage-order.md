@@ -1,11 +1,12 @@
 ---
 title: "管理订单 | Cloud"
 slug: /manage-order
+sidebar_key: manage-order
 sidebar_label: "管理订单"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理订单。 | Cloud"
 type: origin
@@ -88,7 +89,7 @@ Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>订单完成支付后，将归入支付月份的当月账单。</p>
+订单完成支付后，将归入支付月份的当月账单。
 
 </Admonition>
 

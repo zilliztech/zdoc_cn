@@ -1,11 +1,12 @@
 ---
 title: "设置定时自动备份 | Cloud"
 slug: /schedule-automatic-backups
+sidebar_key: schedule-automatic-backups
 sidebar_label: "设置定时自动备份"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持为集群设置定时自动备份，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 设置定时自动备份。 | Cloud"
 type: origin

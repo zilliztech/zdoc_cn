@@ -1,11 +1,12 @@
 ---
 title: "Hybrid Search Ranker | Cloud"
 slug: /hybrid-search-rankers
+sidebar_key: hybrid-search-rankers
 sidebar_label: "Hybrid Search Ranker"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "了解如何在 Zilliz Cloud 中使用 Hybrid Search Ranker。 | Cloud"
 type: origin

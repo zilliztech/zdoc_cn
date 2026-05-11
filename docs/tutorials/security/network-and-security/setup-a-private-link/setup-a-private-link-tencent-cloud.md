@@ -1,11 +1,12 @@
 ---
 title: "创建腾讯云私有连接（Private Link） | Cloud"
 slug: /setup-a-private-link-tencent-cloud
+sidebar_key: setup-a-private-link-tencent-cloud
 sidebar_label: "创建腾讯云私有连接（Private Link）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。 | Cloud"
 type: origin
@@ -34,7 +35,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="提示">
 
-<p>Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会<a href="https://buy.cloud.tencent.com/price/vpc/overview">收取一定费用</a>。</p>
+Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会[收取一定费用](https://buy.cloud.tencent.com/price/vpc/overview)。
 
 </Admonition>
 
@@ -76,12 +77,13 @@ import Procedures from '@site/src/components/Procedures';
 
 登录腾讯云控制台，前往[帐号信息](https://console.cloud.tencent.com/developer)页面获取主帐号 ID。
 
-![MKLlbEdCroYr8ixaijxcxXmTnFf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MKLlbEdCroYr8ixaijxcxXmTnFf.png)
+![MKLlbEdCroYr8ixaijxcxXmTnFf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MKLlbEdCroYr8ixaijxcxXmTnFf.png "MKLlbEdCroYr8ixaijxcxXmTnFf")
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在截图中，界面右上角显示了当前登录帐号的帐号邮箱（<code>john.doe@zilliz.com</code>）和帐号类型（<code>主帐号</code>）。此时，您可以复制或记录<strong>基本信息</strong>中的<strong>帐号 ID</strong> 右侧显示的字符串。</p>
-<p>如果界面右上角显示的帐号类型不是<code>主帐号</code>，请向您的组织查询。</p>
+在截图中，界面右上角显示了当前登录帐号的帐号邮箱（`john.doe@zilliz.com`）和帐号类型（`主帐号`）。此时，您可以复制或记录**基本信息**中的**帐号 ID** 右侧显示的字符串。
+
+如果界面右上角显示的帐号类型不是`主帐号`，请向您的组织查询。
 
 </Admonition>
 
@@ -101,7 +103,7 @@ import Procedures from '@site/src/components/Procedures';
 
 1. 单击**新建**，在弹出的**新建终端节点**中填写必要的信息。
 
-    ![CeJ5b0nByojIMXx0r6aclR31ncg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CeJ5b0nByojIMXx0r6aclR31ncg.png)
+    ![CeJ5b0nByojIMXx0r6aclR31ncg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CeJ5b0nByojIMXx0r6aclR31ncg.png "CeJ5b0nByojIMXx0r6aclR31ncg")
 
     <table>
        <tr>
@@ -140,7 +142,7 @@ import Procedures from '@site/src/components/Procedures';
 
 1. 单击**验证**并**确定**后，返回[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面。复制 **ID/名称**列中的终端节点实例 ID。
 
-    ![Gb92bR4HRoMBtOxwnDncFJLrnQg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Gb92bR4HRoMBtOxwnDncFJLrnQg.png)
+    ![Gb92bR4HRoMBtOxwnDncFJLrnQg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Gb92bR4HRoMBtOxwnDncFJLrnQg.png "Gb92bR4HRoMBtOxwnDncFJLrnQg")
 
 </Procedures>
 
@@ -152,11 +154,11 @@ import Procedures from '@site/src/components/Procedures';
 
 此时会出现如下提示：
 
-![JLrmbTY83oEagxxkmTdcgbGtnHW](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JLrmbTY83oEagxxkmTdcgbGtnHW.png)
+![JLrmbTY83oEagxxkmTdcgbGtnHW](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JLrmbTY83oEagxxkmTdcgbGtnHW.png "JLrmbTY83oEagxxkmTdcgbGtnHW")
 
 稍等片刻，腾讯云控制台[终端节点](https://console.cloud.tencent.com/vpc/vpce)终端管理界面中终端节点的状态将由**待接受**变为**可用**。
 
-![Zv2FbvP6PoRsCTxXhWjccyGXnSd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Zv2FbvP6PoRsCTxXhWjccyGXnSd.png)
+![Zv2FbvP6PoRsCTxXhWjccyGXnSd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Zv2FbvP6PoRsCTxXhWjccyGXnSd.png "Zv2FbvP6PoRsCTxXhWjccyGXnSd")
 
 此时，您需要复制或记录
 
@@ -170,7 +172,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该 Private Endpoint 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 Private Endpoint 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 Private Endpoint 会自动适用于这些 Dedicated 集群。</p>
+该 Private Endpoint 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 Private Endpoint 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 Private Endpoint 会自动适用于这些 Dedicated 集群。
 
 </Admonition>
 
@@ -182,15 +184,15 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 1. 开通私有域解析服务。如已开通，可忽略此步骤。
 
-    ![UX11bvnEJo9P6wxFHdicnVCIn6d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UX11bvnEJo9P6wxFHdicnVCIn6d.png)
+    ![UX11bvnEJo9P6wxFHdicnVCIn6d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UX11bvnEJo9P6wxFHdicnVCIn6d.png "UX11bvnEJo9P6wxFHdicnVCIn6d")
 
 1. 进入**私有域列表**，单击**新建私有域**。
 
-    ![O7iPbju0RoHKtnxHHjKcCarLnIh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/O7iPbju0RoHKtnxHHjKcCarLnIh.png)
+    ![O7iPbju0RoHKtnxHHjKcCarLnIh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/O7iPbju0RoHKtnxHHjKcCarLnIh.png "O7iPbju0RoHKtnxHHjKcCarLnIh")
 
 1. 填写私有域解析相关信息。
 
-    ![J25YbPFCYo8j5gxwk98cbjv0nkc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/J25YbPFCYo8j5gxwk98cbjv0nkc.png)
+    ![J25YbPFCYo8j5gxwk98cbjv0nkc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/J25YbPFCYo8j5gxwk98cbjv0nkc.png "J25YbPFCYo8j5gxwk98cbjv0nkc")
 
     <table>
        <tr>
@@ -211,11 +213,11 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 1. 单击**确定**，即可查看已创建的私有域记录。
 
-    ![IQepbWHV6o7BKixCms0cEQQ3n0O](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IQepbWHV6o7BKixCms0cEQQ3n0O.png)
+    ![IQepbWHV6o7BKixCms0cEQQ3n0O](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IQepbWHV6o7BKixCms0cEQQ3n0O.png "IQepbWHV6o7BKixCms0cEQQ3n0O")
 
 1. 单击刚才创建的私有域记录**操作**列中的**解析**，并在解析记录列表中添加解析记录。
 
-    ![B4uJbhlDOogfjrxkNjdcaT1fnZC](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/B4uJbhlDOogfjrxkNjdcaT1fnZC.png)
+    ![B4uJbhlDOogfjrxkNjdcaT1fnZC](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/B4uJbhlDOogfjrxkNjdcaT1fnZC.png "B4uJbhlDOogfjrxkNjdcaT1fnZC")
 
     <table>
        <tr>
@@ -264,10 +266,9 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>私网连接仅影响<a href="/reference/restful/data-plane">数据面（Data Plane）</a>的操作。<a href="/reference/restful/control-plane">控制面（Control Plane）</a>的操作仍然可以通过公网进行。</p></li>
-<li><p>重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。</p></li>
-</ul>
+- 私网连接仅影响[数据面（Data Plane）](/reference/restful/data-plane)的操作。[控制面（Control Plane）](/reference/restful/control-plane)的操作仍然可以通过公网进行。
+
+- 重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。
 
 </Admonition>
 

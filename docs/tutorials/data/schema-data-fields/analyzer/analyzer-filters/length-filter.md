@@ -1,11 +1,12 @@
 ---
 title: "Length | Cloud"
 slug: /length-filter
+sidebar_key: length-filter
 sidebar_label: "Length"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`length` 过滤器删除不符合指定长度要求的词项，使您能够控制在文本处理过程中保留的词项长度。 | Cloud"
 type: origin
@@ -259,7 +260,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

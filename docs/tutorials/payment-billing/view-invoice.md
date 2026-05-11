@@ -1,11 +1,12 @@
 ---
 title: "了解账单 | Cloud"
 slug: /view-invoice
+sidebar_key: view-invoice
 sidebar_label: "了解账单"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud 进行实际结算。 | Cloud"
 type: origin
@@ -39,8 +40,9 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需管理账单，您的角色需要为<strong>组织管理员</strong>或<strong>项目管理员</strong>。</p>
-<p>如果您通过云市场订阅 Zilliz Cloud 服务，请前往对应的云市场查看账单。</p>
+如需管理账单，您的角色需要为**组织管理员**或**项目管理员**。
+
+如果您通过云市场订阅 Zilliz Cloud 服务，请前往对应的云市场查看账单。
 
 </Admonition>
 
@@ -131,7 +133,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>通过界面账单详情页和账单 API 接口<a href="/reference/restful/list-invoices-v2">查看发票列表</a>和<a href="/reference/restful/describe-invoice-v2">查看发票详情</a>获取的账单金额精度均为 2 位小数。</p>
+通过界面账单详情页和账单 API 接口[查看发票列表](/reference/restful/list-invoices-v2)和[查看发票详情](/reference/restful/describe-invoice-v2)获取的账单金额精度均为 2 位小数。
 
 </Admonition>
 
@@ -159,7 +161,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>Dedicated 集群费用中，运行时长特指集群处于“<strong>运行中</strong>”、“<strong>修改中</strong>”、“<strong>已冻结</strong>”等一系列状态下持续的时长。集群处于“<strong>创建中</strong>”、“<strong>挂起中</strong>”、“<strong>恢复运行中</strong>”、“<strong>已挂起</strong>”的状态时不收取 CU 费用。</p>
+    Dedicated 集群费用中，运行时长特指集群处于“**运行中**”、“**修改中**”、“**已冻结**”等一系列状态下持续的时长。集群处于“**创建中**”、“**挂起中**”、“**恢复运行中**”、“**已挂起**”的状态时不收取 CU 费用。
 
     </Admonition>
 
@@ -167,7 +169,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>存储费用中，运行时长特指集群处于“<strong>运行中</strong>”、“<strong>修改中</strong>”、“<strong>已冻结</strong>”等一系列状态下持续的时长。集群处于“<strong>创建中</strong>”的状态时不收取存储费用。</p>
+    存储费用中，运行时长特指集群处于“**运行中**”、“**修改中**”、“**已冻结**”等一系列状态下持续的时长。集群处于“**创建中**”的状态时不收取存储费用。
 
     </Admonition>
 
@@ -207,11 +209,11 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>查看发票列表的 RESTful API 目前还处于公测阶段，如需使用请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+查看发票列表的 RESTful API 目前还处于公测阶段，如需使用请[联系我们](http://support.zilliz.com.cn)。
 
 </Admonition>
 
-以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users#organization-roles)。
+以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users)。
 
 以下 `GET` 请求可用于查看您组织中的所有账单。
 
@@ -253,7 +255,7 @@ curl --request GET \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>API 返回的结果中，所有金额单位为分。</p>
+API 返回的结果中，所有金额单位为分。
 
 </Admonition>
 
@@ -281,11 +283,11 @@ curl --request GET \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>查看发票详情的 RESTful API 目前还处于公测阶段，如需使用请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+查看发票详情的 RESTful API 目前还处于公测阶段，如需使用请[联系我们](http://support.zilliz.com.cn)。
 
 </Admonition>
 
-以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users#organization-roles)。
+以下为示例代码，请将示例中的 `{TOKEN}` 替换为您自己的Zilliz Cloud API 密钥。同时，请确保使用的 API 密钥具备[组织管理员或组织账单管理员的角色](./organization-users)。
 
 以下 `GET` 请求可用于查看某一特定账单的详情。
 
@@ -326,7 +328,7 @@ curl --request GET \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>API 返回的结果中，所有金额单位为分。</p>
+API 返回的结果中，所有金额单位为分。
 
 </Admonition>
 
@@ -358,13 +360,13 @@ curl --request GET \
 
 ## 常见问题\{#troubleshooting-faq}
 
-#### **什么是月度账单？月度账单的起始时间是什么？**
+#### **什么是月度账单？月度账单的起始时间是什么？**\{#}
 
 **说明：**目前 Zilliz Cloud 费用为月结，所以以月为单位出具账单。账单周期一般为一个完整月，起始时间为上一个月的第一天 00:00:00（UTC），结束时间为上一个月最后一天的 23:59:59（UTC）。
 
 **示例**：Zilliz Cloud 会在 2024 年 9 月 1 日出具 8 月的月度账单，账单起始时间为 2024 年 8 月 1 日 00:00:00（UTC）至 2024 年 8 月 31 日 23:59:59（UTC）。
 
-#### **Zilliz Cloud 账单金额的精度为多少？**
+#### **Zilliz Cloud 账单金额的精度为多少？**\{#zilliz-cloud}
 
 Zilliz Cloud 的计费精度为 **10 位小数**，所有账单均按此精度计算。每日费用会先进行汇总，并在计费过程中四舍五入至 10 位小数。
 
@@ -372,53 +374,53 @@ Zilliz Cloud 的计费精度为 **10 位小数**，所有账单均按此精度�
 
 - **Web 控制台**：展示的数值与 API 保持一致，但为了便于阅读，界面会省略末尾的连续零。例如，`0.1234000000` 会在界面上显示为 `0.1234`。
 
-#### 为什么我无法查看账单？
+#### 为什么我无法查看账单？\{#}
 
 **可能原因**：只有组织管理员或账单管理员有权查看账单。
 
 **解决方法**：确保您拥有相应的权限。如果您无法查看账单，请联系您的组织管理员或账单管理员。
 
-#### **如果账单支付失败怎么办？**
+#### **如果账单支付失败怎么办？**\{#}
 
 **可能原因**：您的现金余额或优惠券余额不足。
 
 **解决方法**：如果支付失败，Zilliz Cloud 将通过电子邮件通知组织管理员和账单管理员。组织管理员或账单管理员可以在 14 天催款期内前往 Zilliz Cloud 账单页面重新支付。
 
-#### 如果未及时确认账单会发生什么？
+#### 如果未及时确认账单会发生什么？\{#}
 
 **说明**：账单处长后，Zilliz Cloud 会向您发送确认账单的电子邮件，您需要前往 Zilliz Cloud 界面手动确认账单。如果您在 3 个工作日内未确认账单，系统将自动帮您确认账单并进入开票流程。
 
 **提示**：请在账单出账的 3 日内，尽快确认您的账单。
 
-#### 什么是账期？
+#### 什么是账期？\{#}
 
 **说明**：是指您与 Zilliz 签约的合同信控条款中，约束您在消费后的应付账单，向 Zilliz 付款的账期约定规则。账期开始时间以开票成功时间为准。Zilliz 的账期范围是 0-X 个自然日。根据签署的条款，账期会有所不同。未签署信控条款的用户，账期默认为 0 天。
 
-#### **什么是催款期？**
+#### **什么是催款期？**\{#}
 
 **说明**：催款期是一个为期 14 天窗口期。在此期间，您可以支付你的“**未支付**”账单。
 
 **提示**：在此期间，您将每天收到电子邮件的催款提醒，且您的发票状态将持续显示“**未支付**”直到完成付款。
 
-#### 如果催款期后仍未支付账单会发生什么?
+#### 如果催款期后仍未支付账单会发生什么?\{#}
 
 **说明**：如果您未在催款期结束时成功付款，您的组织将立刻被冻结，账单状态转为“**已逾期”**。在此期间，您仍可支付账单。冻结 1 天后仍未付款，组织集群将被自动移至回收站。
 
 **提示**：为了避免影响您的 Zilliz Cloud 服务，请在催款期结束前尽快完成支付。
 
-#### **为什么 Serverless 集群中没有操作却仍然产生费用？**
+#### **为什么 Serverless 集群中没有操作却仍然产生费用？**\{#serverless}
 
 **说明**：即使 Serverless 集群中无读写操作，您仍需支付集群存储费用。存储费用根据存储的数据大小和在 Zilliz Cloud 中保留的时间计算。
 
 **解决方法**：为了降低成本，您可以删除未使用的数据。
 
-#### **收到组织被冻结的提醒邮件后该怎么办？**
+#### **收到组织被冻结的提醒邮件后该怎么办？**\{#}
 
 **说明**：收到组织冻结的提醒邮件意味着您的账单已逾期，您在 Zilliz Cloud 的操作将受到限制。
 
 **解决方法**：在组织冻结后的一天内完成付款，解冻组织。注意：冻结 1 天后仍未付款，您的组织集群将被自动删除。
 
-#### 账单逾期后，组织集群被自动删除该如何恢复？
+#### 账单逾期后，组织集群被自动删除该如何恢复？\{#}
 
 **说明**：组织冻结 1 天后仍未付款，您的组织集群将被自动删除。
 

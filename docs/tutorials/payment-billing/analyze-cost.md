@@ -1,11 +1,12 @@
 ---
 title: "分析成本 | Cloud"
 slug: /analyze-cost
+sidebar_key: analyze-cost
 sidebar_label: "分析成本"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 的用量页为您提供可视化的成本分析能力，支持从多个维度查看 Zilliz Cloud 按量计费集群的使用和消费情况以及包年包月集群额外产生的存储和备份费用。 | Cloud"
 type: origin
@@ -46,7 +47,7 @@ Zilliz Cloud 提供两种用量分析的方式：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>用量数据每小时更新。</p>
+用量数据每小时更新。
 
 </Admonition>
 
@@ -94,7 +95,7 @@ Zilliz Cloud 提供两种用量分析的方式：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>查询日用量的 RESTful API 目前还处于公测阶段，如需使用请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+查询日用量的 RESTful API 目前还处于公测阶段，如需使用请[联系我们](http://support.zilliz.com.cn)。
 
 </Admonition>
 

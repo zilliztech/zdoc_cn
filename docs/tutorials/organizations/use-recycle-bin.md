@@ -1,11 +1,12 @@
 ---
 title: "使用回收站 | Cloud"
 slug: /use-recycle-bin
+sidebar_key: use-recycle-bin
 sidebar_label: "使用回收站"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 回收站会在您手动删除或因试用结束等原因而自动删除的所有 Serverless 和 Dedicated 集群，并提供 30 天的宽限期，以便您恢复这些集群。 | Cloud"
 type: origin
@@ -57,7 +58,7 @@ Zilliz Cloud 回收站会在您手动删除或因试用结束等原因而自动�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>集群恢复过程中，其状态将从<strong>创建中</strong>变为<strong>恢复中</strong>，最后变为<strong>运行中</strong>。集群状态变为<strong>运行中</strong>即代表所有被删除的数据已恢复。</p>
+集群恢复过程中，其状态将从**创建中**变为**恢复中**，最后变为**运行中**。集群状态变为**运行中**即代表所有被删除的数据已恢复。
 
 </Admonition>
 

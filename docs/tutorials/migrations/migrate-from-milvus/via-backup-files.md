@@ -1,11 +1,12 @@
 ---
 title: "通过备份文件从 Milvus 迁移至 Zilliz Cloud | Cloud"
 slug: /via-backup-files
+sidebar_key: via-backup-files
 sidebar_label: "通过备份文件迁移"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过备份文件从 Milvus 进行数据迁移。 | Cloud"
 type: origin
@@ -92,8 +93,9 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>如果 Milvus 实例是通过 Docker Compose 安装，<code>minio.bucketName</code> 默认为 <code>a-bucket</code>， <code>rootPath</code> 默认为 <code>files</code>。</p>
-    <p>如果 Milvus 实例是通过 Kubernetes 安装，<code>minio.bucketName</code> 默认为 <code>milvus-bucket</code>， <code>rootPath</code> 默认为 <code>file</code>。</p>
+    如果 Milvus 实例是通过 Docker Compose 安装，`minio.bucketName` 默认为 `a-bucket`， `rootPath` 默认为 `files`。
+
+    如果 Milvus 实例是通过 Kubernetes 安装，`minio.bucketName` 默认为 `milvus-bucket`， `rootPath` 默认为 `file`。
 
     </Admonition>
 
@@ -145,7 +147,7 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>如果源 Collection 已启用 Full Text Search 功能，Zilliz Cloud 会在迁移后保留目标 Collection 的 Function 设置。这些继承的设置无法修改。</p>
+如果源 Collection 已启用 Full Text Search 功能，Zilliz Cloud 会在迁移后保留目标 Collection 的 Function 设置。这些继承的设置无法修改。
 
 </Admonition>
 
@@ -155,7 +157,7 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>迁移完成后，请验证目标集群中的 collection 和 entity 数量是否与数据源一致。如果发现不一致，请删除缺失 entity 的 collection 并重新进行迁移。</p>
+迁移完成后，请验证目标集群中的 collection 和 entity 数量是否与数据源一致。如果发现不一致，请删除缺失 entity 的 collection 并重新进行迁移。
 
 </Admonition>
 

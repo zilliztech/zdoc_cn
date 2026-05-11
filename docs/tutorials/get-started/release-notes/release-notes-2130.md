@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2025/02/07） | Cloud"
 slug: /release-notes-2130
+sidebar_key: release-notes-2130
 sidebar_label: "2025/02/07"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus 2.5.x 的相关特性在 Zilliz Cloud 进行公测阶段。本次发布在语义检索的基础上引入了全文搜索能力。通过对 BM25 及稀疏向量的支持，为您提供更好地检索和存储性能。全文搜索功能允许您在搜索请求中直接传入查询文本，而无须提前将其转换成对应的向量表示。另外，本次更新针对上传大量小文件导致的性能问题做了性能优化。 | Cloud"
 type: origin
 token: Jv0uwMRw4iQvOtkCkRNcXeAjnpd
-sidebar_position: 11
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -33,7 +34,7 @@ Milvus 2.5.x 的相关特性在 Zilliz Cloud 进行公测阶段。本次发布�
 
 如果您希望体验 **Milvus v2.5.x** 的各项新功能，可以考虑在集群详情页面单击**试用公测版新功能**将您的集群升级到**公测版**。
 
-![C9L6b0vgpodxLHxVBF7cZgoCn2d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/C9L6b0vgpodxLHxVBF7cZgoCn2d.png)
+![C9L6b0vgpodxLHxVBF7cZgoCn2d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/C9L6b0vgpodxLHxVBF7cZgoCn2d.png "C9L6b0vgpodxLHxVBF7cZgoCn2d")
 
 ## Zilliz Cloud 公测版现已支持 Milvus 2.5，引入全文搜索能力\{#zilliz-cloud-now-supports-milvus-25-in-public-preview-introducing-full-text-search}
 

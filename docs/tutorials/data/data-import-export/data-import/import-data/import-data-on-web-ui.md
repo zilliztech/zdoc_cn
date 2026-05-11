@@ -1,11 +1,12 @@
 ---
 title: "通过 Web 控制台导入 | Cloud"
 slug: /import-data-on-web-ui
+sidebar_key: import-data-on-web-ui
 sidebar_label: "控制台"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍如何通过 Zilliz Cloud Web 控制台将数据导入现有 Collection 中。 | Cloud"
 type: origin
@@ -46,10 +47,9 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>在同一个 Collection 下，导入任务队列中最多可以同时包含 10 条运行中或等待中的任务。</p></li>
-<li><p>Zilliz Cloud 界面支持上传本地 JSON 或 Parquet 文件的最大大小为 1 GB。 如需上传更大的文件，我们推荐通过对象存储桶进行导入。有关情况，可以查看<a href="./data-import-storage-options">支持的对象存储</a>。如果您在导入数据过程中遇到任何问题，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p></li>
-</ul>
+- 在同一个 Collection 下，导入任务队列中最多可以同时包含 10 条运行中或等待中的任务。
+
+- Zilliz Cloud 界面支持上传本地 JSON 或 Parquet 文件的最大大小为 1 GB。 如需上传更大的文件，我们推荐通过对象存储桶进行导入。有关情况，可以查看[支持的对象存储](./data-import-storage-options)。如果您在导入数据过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 </Admonition>
 
@@ -83,7 +83,7 @@ Zilliz Cloud 支持上传本地 JSON 或 Parquet 文件。如果您的数据格�
 
 ### 导入存储在 Volume 中的文件\{#files-uploaded-to-a-volume}
 
-如果您的本地文件大小超过 1 GB，您可以先将其上传到 [Volume](./volume) 中，然后通过 Volume 导入数据。
+如果您的本地文件大小超过 1 GB，您可以先将其上传到 Volume 中，然后通过 Volume 导入数据。
 
 上传准备好的文件到 Volume 后，您只需选择相应的 Volume，并填写文件所在路径。
 
@@ -96,6 +96,16 @@ Zilliz Cloud 支持上传本地 JSON 或 Parquet 文件。如果您的数据格�
 ## 支持的导入路径\{#supported-object-paths}
 
 关于导入路径需遵循的格式要求，可查看[支持的对象存储](./data-import-storage-options)。
+
+## 常见问题 \{#faq}
+
+**使用 External Volume 与直接从外部存储中导入数据有何不同？**
+
+两种方式都允许您从外部的云服务对象存储中导入数据。不同之处在于：
+
+-  External Volume 通过存储集成来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
+
+- 直接从外部存储导入时，需要在每次导入请求中提供凭证（access key、secret key）。这种方式更适合一次性导入，但不具备凭证隔离和复用能力。
 
 ## 推荐阅读\{#related-topics}
 

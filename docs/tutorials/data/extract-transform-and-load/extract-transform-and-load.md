@@ -1,11 +1,12 @@
 ---
 title: "提取、转换和加载 | Cloud"
 slug: /extract-transform-and-load
+sidebar_key: extract-transform-and-load
 sidebar_label: "提取、转换和加载"
-beta: PRIVATE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PRIVATE
 notebook: FALSE
 description: "本章介绍了从外部数据源进行提取、转换和加载数据并将其应用于 Zilliz Cloud 的相关场景和步骤。 | Cloud"
 type: origin

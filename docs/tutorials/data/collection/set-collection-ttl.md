@@ -1,11 +1,12 @@
 ---
 title: "设置 Collection 生存时间 | Cloud"
 slug: /set-collection-ttl
+sidebar_key: set-collection-ttl
 sidebar_label: "设置 Collection 生存时间"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "数据插入 Collection 后，默认情况下仍保留在该 Collection 中。但是，在某些情况下，您可能希望在一定期限后删除或清理数据。在这种情况下，您可以配置 Collection 的生存时间（TTL）属性，以便 Zilliz Cloud 在TTL到期后自动删除数据。 | Cloud"
 type: origin
@@ -44,7 +45,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>过期数据不会出现在搜索和查询结果中，并会在下一次数据压缩时删除。数据压缩间隔通常不会超过 24 小时。</p>
+过期数据不会出现在搜索和查询结果中，并会在下一次数据压缩时删除。数据压缩间隔通常不会超过 24 小时。
 
 </Admonition>
 
@@ -104,16 +105,27 @@ import TabItem from '@theme/TabItem';
 <TabItem value='python'>
 
 ```python
-from pymilvus import MilvusClient
+from pymilvus import MilvusClient, DataType
 
-# With TTL
+client = MilvusClient(uri="YOUR_CLUSTER_ENDPOINT")
+
+schema = client.create_schema(auto_id=False, enable_dynamic_field=False)
+schema.add_field("id", DataType.INT64, is_primary=True, auto_id=False)
+schema.add_field("vector", DataType.FLOAT_VECTOR, dim=128)
+
+index_params = client.prepare_index_params()
+index_params.add_index(
+    field_name="vector", index_type="AUTOINDEX", metric_type="COSINE"
+)
+
 client.create_collection(
     collection_name="my_collection",
     schema=schema,
+    index_params=index_params,
     # highlight-start
     properties={
-        "collection.ttl.seconds": 1209600
-    }
+        "collection.ttl.seconds": 1209600  # 14 days
+    },
     # highlight-end
 )
 ```
@@ -123,20 +135,42 @@ client.create_collection(
 <TabItem value='java'>
 
 ```java
-import io.milvus.v2.service.collection.request.CreateCollectionReq;
-import io.milvus.v2.service.collection.request.AlterCollectionReq;
-import io.milvus.param.Constant;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-// With TTL
-CreateCollectionReq customizedSetupReq = CreateCollectionReq.builder()
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.common.DataType;
+import io.milvus.v2.common.IndexParam;
+import io.milvus.v2.service.collection.request.AddFieldReq;
+import io.milvus.v2.service.collection.request.CreateCollectionReq;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .build());
+
+CreateCollectionReq.CollectionSchema schema = CreateCollectionReq.CollectionSchema.builder().build();
+schema.addField(AddFieldReq.builder().fieldName("id").dataType(DataType.Int64)
+        .isPrimaryKey(true).autoID(false).build());
+schema.addField(AddFieldReq.builder().fieldName("vector").dataType(DataType.FloatVector)
+        .dimension(128).build());
+
+IndexParam indexParam = IndexParam.builder().fieldName("vector")
+        .indexType(IndexParam.IndexType.AUTOINDEX)
+        .metricType(IndexParam.MetricType.COSINE).build();
+
+// highlight-start
+Map<String, String> properties = new HashMap<>();
+properties.put("collection.ttl.seconds", "1209600"); // 14 days
+
+client.createCollection(CreateCollectionReq.builder()
         .collectionName("my_collection")
         .collectionSchema(schema)
-        // highlight-next-line
-        .property(Constant.TTL_SECONDS, "1209600")
-        .build();
-client.createCollection(customizedSetupReq);
+        .indexParams(Collections.singletonList(indexParam))
+        .properties(properties)
+        .build());
+// highlight-end
 ```
 
 </TabItem>
@@ -144,15 +178,25 @@ client.createCollection(customizedSetupReq);
 <TabItem value='javascript'>
 
 ```javascript
-const createCollectionReq = {
-    collection_name: "my_collection",
-    schema: schema,
-    // highlight-start
-    properties: {
-        "collection.ttl.seconds": 1209600
-    }
-    // highlight-end
-}
+const { MilvusClient, DataType } = require("@zilliz/milvus2-sdk-node");
+
+const client = new MilvusClient({ address: "YOUR_CLUSTER_ENDPOINT" });
+
+await client.createCollection({
+  collection_name: "my_collection",
+  fields: [
+    { name: "id", data_type: DataType.Int64, is_primary_key: true, autoID: false },
+    { name: "vector", data_type: DataType.FloatVector, dim: 128 },
+  ],
+  index_params: [
+    { field_name: "vector", index_type: "AUTOINDEX", metric_type: "COSINE" },
+  ],
+  // highlight-start
+  properties: {
+    "collection.ttl.seconds": 1209600, // 14 days
+  },
+  // highlight-end
+});
 ```
 
 </TabItem>
@@ -202,10 +246,33 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
+from pymilvus import MilvusClient, DataType
+
+client = MilvusClient(uri="YOUR_CLUSTER_ENDPOINT")
+
+# Assumes "my_collection" was created earlier without TTL
+schema = client.create_schema(auto_id=False, enable_dynamic_field=False)
+schema.add_field("id", DataType.INT64, is_primary=True, auto_id=False)
+schema.add_field("vector", DataType.FLOAT_VECTOR, dim=128)
+
+index_params = client.prepare_index_params()
+index_params.add_index(
+    field_name="vector", index_type="AUTOINDEX", metric_type="COSINE"
+)
+
+if not client.has_collection("my_collection"):
+    client.create_collection(
+        collection_name="my_collection",
+        schema=schema,
+        index_params=index_params,
+    )
+
+# highlight-start
 client.alter_collection_properties(
     collection_name="my_collection",
-    properties={"collection.ttl.seconds": 1209600}
+    properties={"collection.ttl.seconds": 1209600},
 )
+# highlight-end
 ```
 
 </TabItem>
@@ -213,12 +280,28 @@ client.alter_collection_properties(
 <TabItem value='java'>
 
 ```java
-AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
-        .collectionName("my_collection")
-        .property(Constant.TTL_SECONDS, "1209600")
-        .build();
+import java.util.HashMap;
+import java.util.Map;
 
-client.alterCollectionProperties(alterCollectionReq);
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.AlterCollectionPropertiesReq;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .build());
+
+// Assumes "my_collection" was created earlier without TTL.
+
+// highlight-start
+Map<String, String> properties = new HashMap<>();
+properties.put("collection.ttl.seconds", "1209600");
+
+client.alterCollectionProperties(AlterCollectionPropertiesReq.builder()
+        .collectionName("my_collection")
+        .properties(properties)
+        .build());
+// highlight-end
 ```
 
 </TabItem>
@@ -226,12 +309,17 @@ client.alterCollectionProperties(alterCollectionReq);
 <TabItem value='javascript'>
 
 ```javascript
-res = await client.alterCollection({
-    collection_name: "my_collection",
-    properties: {
-        "collection.ttl.seconds": 1209600
-    }
-})
+const { MilvusClient } = require("@zilliz/milvus2-sdk-node");
+
+const client = new MilvusClient({ address: "YOUR_CLUSTER_ENDPOINT" });
+
+// Assumes "my_collection" was created earlier without TTL.
+// highlight-start
+await client.alterCollectionProperties({
+  collection_name: "my_collection",
+  properties: { "collection.ttl.seconds": 1209600 },
+});
+// highlight-end
 ```
 
 </TabItem>
@@ -275,10 +363,16 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
+from pymilvus import MilvusClient
+
+client = MilvusClient(uri="YOUR_CLUSTER_ENDPOINT")
+
+# highlight-start
 client.drop_collection_properties(
     collection_name="my_collection",
-    property_keys=["collection.ttl.seconds"]
+    property_keys=["collection.ttl.seconds"],
 )
+# highlight-end
 ```
 
 </TabItem>
@@ -286,10 +380,22 @@ client.drop_collection_properties(
 <TabItem value='java'>
 
 ```java
+import java.util.Collections;
+
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.collection.request.DropCollectionPropertiesReq;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .build());
+
+// highlight-start
 client.dropCollectionProperties(DropCollectionPropertiesReq.builder()
         .collectionName("my_collection")
-        .propertyKeys(Collections.singletonList(Constant.TTL_SECONDS))
+        .propertyKeys(Collections.singletonList("collection.ttl.seconds"))
         .build());
+// highlight-end
 ```
 
 </TabItem>
@@ -297,10 +403,16 @@ client.dropCollectionProperties(DropCollectionPropertiesReq.builder()
 <TabItem value='javascript'>
 
 ```javascript
-res = await client.dropCollectionProperties({
-    collection_name: "my_collection",
-    properties: ["collection.ttl.seconds"]
-})
+const { MilvusClient } = require("@zilliz/milvus2-sdk-node");
+
+const client = new MilvusClient({ address: "YOUR_CLUSTER_ENDPOINT" });
+
+// highlight-start
+await client.dropCollectionProperties({
+  collection_name: "my_collection",
+  properties: ["collection.ttl.seconds"],
+});
+// highlight-end
 ```
 
 </TabItem>
@@ -337,17 +449,17 @@ curl --request POST \
 
 ## 常见问题\{#faqs}
 
-### 插入 Collection 中的数据到底何时会根据 TTL 设置失效？
+### 插入 Collection 中的数据到底何时会根据 TTL 设置失效？\{#collection-ttl}
 
 Zilliz Cloud 会根据TTL 设置及数据的插入或更新时间来确定其失效时间。失效的数据将不会出现在任何搜索结果中。具体可参考[相关示例](./set-collection-ttl#examples)。
 
-### 失效数据何时会删除？
+### 失效数据何时会删除？\{#}
 
 当数据失效后，这些数据将不会出现在任何搜索结果中，但是，只有在 Zilliz Cloud 根据集群的数据压缩策略执行下一次压缩时，这些数据才会被删除。
 
 如果您希望在数据失效后的较短时间内删除这些数据，请联系 [Zilliz Cloud 技术支持](https://support.zilliz.com.cn/hc/zh-cn/requests/new)。
 
-### Zilliz Cloud 集群的 CU 容量何时会开始降低？
+### Zilliz Cloud 集群的 CU 容量何时会开始降低？\{#zilliz-cloud-cu}
 
 集群的 CU 容量会取内存使用量和存储使用量中的最大值。如果 CU 容量当前取的是存储使用量，您可以在失效数据被删除后，在 Zilliz Cloud 控制台中观察到 CU 容量的减少。
 

@@ -1,11 +1,12 @@
 ---
 title: "合并数据 | Cloud"
 slug: /merge-data
+sidebar_key: merge-data
 sidebar_label: "合并数据"
-beta: PRIVATE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: NEAR DEPRECATE
 notebook: FALSE
 description: "您可以将现有Zilliz Cloud Collection 中的数据与本地文件或外部对象存储中的数据合并，来创建一个结合了两个数据源数据的 Collection。这被称为数据合并操作，您可以将其作为一种变通方法，向现有集合中添加带有数据的字段。 | Cloud"
 type: origin
@@ -33,9 +34,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li>本特性目前属于<strong>内测特性</strong>。如果您对该特性感兴趣，想尝试使用。请联系 <a href="https://support.zilliz.com.cn/hc/zh-cn">Zilliz Cloud 技术支持</a>。</li>
-</ul>
+- 本特性目前属于**内测特性**。如果您对该特性感兴趣，想尝试使用。请联系 [Zilliz Cloud 技术支持](https://support.zilliz.com.cn/hc/zh-cn)。
 
 </Admonition>
 
@@ -63,7 +62,7 @@ import Admonition from '@theme/Admonition';
 
 如需执行数据合并操作，您需要先创建一个 Volume，并将您的数据文件上传到 Volume 中。当准备就绪，您就可以通过执行数据合并操作来创建一个包括两种数据来源的新的 Collection。
 
-如何代码片段演示了如何通过 Volume 执行数据合并。关于如何创建 Volume 及向 Volume 中上传数据，请参考[管理 Volume (SDK)](./manage-stages)。
+如何代码片段演示了如何通过 Volume 执行数据合并。关于如何创建 Volume 及向 Volume 中上传数据，请参考管理 Volume (SDK)。
 
 ```bash
 export BASE_URL="https://api.cloud.zilliz.com.cn"
@@ -115,13 +114,11 @@ curl --request POST \
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <ul>
-    <li><code>dataPath</code> 参数的值可以是指定 Volume 中某个 Parquet 文件的绝对路径，或者某个包含了多个 Parquet 文件的文件夹的绝对路径。当指定的路径为文件夹时，请确保该文件夹中所有的 Parquet 文件都有相同的数据结构。</li>
-    </ul>
-    <p>例如：<code>path/to/your/file.parquet</code>（文件）或<code>path/to/your/folder/</code>（文件夹）。</p>
-    <ul>
-    <li>如果你只是想要在目标 Collection 中添加字段，但不希望填充数据，可以忽略此参数。</li>
-    </ul>
+    - `dataPath` 参数的值可以是指定 Volume 中某个 Parquet 文件的绝对路径，或者某个包含了多个 Parquet 文件的文件夹的绝对路径。当指定的路径为文件夹时，请确保该文件夹中所有的 Parquet 文件都有相同的数据结构。
+
+        例如：`path/to/your/file.parquet`（文件）或`path/to/your/folder/`（文件夹）。
+
+    - 如果你只是想要在目标 Collection 中添加字段，但不希望填充数据，可以忽略此参数。
 
     </Admonition>
 
@@ -203,13 +200,11 @@ curl --request POST \
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <ul>
-    <li><code>dataPath</code> 参数的值可以是指定对象存储桶中某个 Parquet 文件的绝对路径，或者某个包含了多个 Parquet 文件的文件夹的绝对路径。当指定的路径为文件夹时，请确保该文件夹中所有的 Parquet 文件都有相同的数据结构。</li>
-    </ul>
-    <p>例如： <code>oss:///my-bucket/my_data.parquet</code>（文件）或 <code>oss:///my-bucket/</code> （文件夹）。</p>
-    <ul>
-    <li>如果你只是想要在目标 Collection 中添加字段，但不希望填充数据，可以忽略此参数。</li>
-    </ul>
+    - `dataPath` 参数的值可以是指定对象存储桶中某个 Parquet 文件的绝对路径，或者某个包含了多个 Parquet 文件的文件夹的绝对路径。当指定的路径为文件夹时，请确保该文件夹中所有的 Parquet 文件都有相同的数据结构。
+
+        例如： `oss:///my-bucket/my_data.parquet`（文件）或 `oss:///my-bucket/` （文件夹）。
+
+    - 如果你只是想要在目标 Collection 中添加字段，但不希望填充数据，可以忽略此参数。
 
     </Admonition>
 

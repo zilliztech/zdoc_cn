@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2025/08） | Cloud"
 slug: /release-notes-2508
+sidebar_key: release-notes-2508
 sidebar_label: "2025/08"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "版本说明书（2025/08） | Cloud"
 type: origin
 token: RymVwbgxOiSKsDk60xtc8CXOn3c
-sidebar_position: 6
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz

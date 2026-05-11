@@ -1,11 +1,12 @@
 ---
 title: "跨地域备份 | Cloud"
 slug: /backup-to-other-regions
+sidebar_key: backup-to-other-regions
 sidebar_label: "跨地域备份"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 的跨区域备份通过将备份复制到多个云地域来增强数据保护。它可防范区域性故障，并通过降低本地故障带来的风险，支持灾难恢复、业务连续性和高可用性。 | Cloud"
 type: origin
@@ -35,6 +36,12 @@ Zilliz Cloud 的跨区域备份通过将备份复制到多个云地域来增强�
 
 跨地域备份功能暂不适用于腾讯云。
 
+<Admonition type="info" icon="📘" title="说明">
+
+请[提交工单](http://support.zilliz.com.cn)开通此功能。
+
+</Admonition>
+
 ## 限制说明\{#limits}
 
 - **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。
@@ -61,7 +68,7 @@ Zilliz Cloud 的跨区域备份通过将备份复制到多个云地域来增强�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>您只能选择与集群云地域相同云服务商下的其他区域。</p>
+您只能选择与集群云地域相同云服务商下的其他区域。
 
 </Admonition>
 

@@ -1,11 +1,12 @@
 ---
 title: "集群扩缩容 | Cloud"
 slug: /scale-cluster
+sidebar_key: scale-cluster
 sidebar_label: "集群扩缩容"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，Query CU 是一组用于处理索引和搜索请求的硬件资源。您可以将 Query CU 理解为一个全托管的物理节点，用于运行您的查询服务。Replica 是集群级别的拷贝，包含相同的集群资源与数据。Query CU 主要决定集群容量与计算资源，而 Replica 为查询服务提供额外的并行能力。 | Cloud"
 type: origin
@@ -26,6 +27,14 @@ import Admonition from '@theme/Admonition';
 # 集群扩缩容
 
 在 Zilliz Cloud 中，**Query CU** 是一组用于处理索引和搜索请求的硬件资源。您可以将 Query CU 理解为一个全托管的物理节点，用于运行您的查询服务。**Replica** 是集群级别的拷贝，包含相同的集群资源与数据。Query CU 主要决定集群容量与计算资源，而 Replica 为查询服务提供额外的并行能力。
+
+<Admonition type="info" icon="📘" title="说明">
+
+本文介绍的扩缩容选项仅适用于 Serving 集群。
+
+On-demand 集群会自动扩缩容：有请求到达时自动拉起，空闲时自动缩容至 0，无需手动干预。
+
+</Admonition>
 
 ## Query CU vs Replica\{#query-cu-vs-replica}
 
@@ -93,8 +102,9 @@ Zilliz Cloud 提供多种方式来扩缩容集群资源。根据您的工作负�
 
 <Admonition type="info" icon="📘" title="**说明**">
 
-<p>按量计费集群支持上述三种扩缩容方式。</p>
-<p>包年包月集群仅支持手动扩容，不支持手动缩容、定时扩缩容、动态扩缩容。</p>
+按量计费集群支持上述三种扩缩容方式。
+
+包年包月集群仅支持手动扩容，不支持手动缩容、定时扩缩容、动态扩缩容。
 
 </Admonition>
 
@@ -132,9 +142,11 @@ Zilliz Cloud 提供多种方式来扩缩容集群资源。根据您的工作负�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您的组织现金余额不足，请先进行现金充值（对公转账）。详情请见<a href="./advance-pay">现金充值（对公转账）</a>。</p>
-<p>充值成功后，您可以前往<strong>费用中心>订单</strong>页支付订单。详情请见<a href="./manage-order">管理订单</a>。</p>
-<p>订单生成后 7 天内未完成支付，系统将自动取消订单。如仍需为包年包月集群扩容，请重新完成步骤 1 的操作并支付新订单。</p>
+如果您的组织现金余额不足，请先进行现金充值（对公转账）。详情请见[现金充值（对公转账）](./advance-pay)。
+
+充值成功后，您可以前往**费用中心>订单**页支付订单。详情请见[管理订单](./manage-order)。
+
+订单生成后 7 天内未完成支付，系统将自动取消订单。如仍需为包年包月集群扩容，请重新完成步骤 1 的操作并支付新订单。
 
 </Admonition>
 
@@ -152,7 +164,7 @@ Zilliz Cloud 提供多种方式来扩缩容集群资源。根据您的工作负�
 
     以下是帮助您快速选择合适扩缩容方式的建议：
 
-![DIlKwYWaLhUfKRbeI93coBZTnmb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DIlKwYWaLhUfKRbeI93coBZTnmb.png)
+    ![DIlKwYWaLhUfKRbeI93coBZTnmb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DIlKwYWaLhUfKRbeI93coBZTnmb.png)
 
     - 如果您非常清楚工作负载模式，例如每天的峰值时间固定，**手动**扩缩容和**定时**扩缩容是最适合您的选择。
 

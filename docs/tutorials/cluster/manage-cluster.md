@@ -1,11 +1,12 @@
 ---
 title: "管理集群 | Cloud"
 slug: /manage-cluster
+sidebar_key: manage-cluster
 sidebar_label: "管理集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍如了集群的生命周期，以便您能够充分利用 Zilliz Cloud 控制台来管理集群。 | Cloud"
 type: origin
@@ -42,7 +43,7 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>包年包月的 Dedicated 集群不支持挂起。</p>
+包年包月的 Dedicated 集群不支持挂起。
 
 </Admonition>
 
@@ -106,7 +107,7 @@ Dedicated 集群在手动挂起后也按需手动恢复运行。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>包年包月的 Dedicated 集群不支持挂起或恢复运行。</p>
+包年包月的 Dedicated 集群不支持挂起或恢复运行。
 
 </Admonition>
 
@@ -192,6 +193,12 @@ curl --request POST \
 如需试用公测版新功能，请升级 Dedicated 集群的兼容 Milvus 版本。
 
 ![upgrade-to-preview-version-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/upgrade-to-preview-version-cn.png "upgrade-to-preview-version-cn")
+
+## 转换为全球集群\{#convert-to-a-global-cluster}
+
+如果您需要将现有的 Dedicated 集群转换为[全球集群](./global-cluster-explained)，请参考以下 Demo。
+
+<Supademo id="cmm5p53sh3hogdtfhemesjhv0" title=""  />
 
 ## 删除集群\{#drop-cluster}
 

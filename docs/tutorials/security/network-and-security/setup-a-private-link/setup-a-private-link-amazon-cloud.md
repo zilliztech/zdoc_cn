@@ -1,11 +1,12 @@
 ---
 title: "创建亚马逊云科技 PrivateLink | Cloud"
 slug: /setup-a-private-link-amazon-cloud
+sidebar_key: setup-a-private-link-amazon-cloud
 sidebar_label: "创建亚马逊云科技 PrivateLink"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本小节主要介绍如何在您的亚马逊云科技 VPC 终端节点和您托管在亚马逊云科技云上的 Zilliz Cloud 集群之间建立私网连接（PrivateLink）。 | Cloud"
 type: origin
@@ -34,7 +35,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="提示">
 
-<p>Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会<a href="https://www.amazonaws.cn/privatelink/pricing/">收取一定费用</a>。</p>
+Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会[收取一定费用](https://www.amazonaws.cn/privatelink/pricing/)。
 
 </Admonition>
 
@@ -78,17 +79,17 @@ import Procedures from '@site/src/components/Procedures';
 
 1. 前往亚马逊云科技 [VPC 控制面](https://console.amazonaws.cn/vpc/)板，在左侧菜单中，选择**终端节点**。点击右上角按钮，**创建终端节点**。
 
-    ![S0eDba5rKoyTq7xDzUNc86OonJh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/S0eDba5rKoyTq7xDzUNc86OonJh.png)
+    ![S0eDba5rKoyTq7xDzUNc86OonJh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/S0eDba5rKoyTq7xDzUNc86OonJh.png "S0eDba5rKoyTq7xDzUNc86OonJh")
 
 1. 在**创建终端节点**页面中的**服务类别**区域，选择**其他终端节点服务**。
 
 1. 在**服务名称**输入框中，输入此前在 Zilliz Cloud 界面获取到的**服务名称**信息。点击**验证服务**。
 
-    ![AjYKbFAvNoL7KPxDaDZc2BTmnId](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/AjYKbFAvNoL7KPxDaDZc2BTmnId.png)
+    ![AjYKbFAvNoL7KPxDaDZc2BTmnId](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/AjYKbFAvNoL7KPxDaDZc2BTmnId.png "AjYKbFAvNoL7KPxDaDZc2BTmnId")
 
 1. 服务名称通过验证后，选择**VPC**、**子网**与**安全组**，并点击创建。
 
-    ![CIesb2ANUosJF6xuJRrcg8hUn4y](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CIesb2ANUosJF6xuJRrcg8hUn4y.png)
+    ![CIesb2ANUosJF6xuJRrcg8hUn4y](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CIesb2ANUosJF6xuJRrcg8hUn4y.png "CIesb2ANUosJF6xuJRrcg8hUn4y")
 
 1. 等待终端节点创建完成。复制 VPC 终端节点 ID。
 
@@ -104,7 +105,7 @@ import Procedures from '@site/src/components/Procedures';
 
 此时 Zilliz Cloud 界面会出现如下提示：
 
-![MxnvbNInBoM8a3xwHImcjwUInBj](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MxnvbNInBoM8a3xwHImcjwUInBj.png)
+![MxnvbNInBoM8a3xwHImcjwUInBj](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MxnvbNInBoM8a3xwHImcjwUInBj.png "MxnvbNInBoM8a3xwHImcjwUInBj")
 
 ## 获取 Private Endpoint\{#obtain-a-private-link}
 
@@ -112,7 +113,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该 Private Endpoint 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 Private Endpoint 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 Private Endpoint 会自动适用于这些 Dedicated 集群。</p>
+该 Private Endpoint 适用于该项目下所有部署于该云服务和地域的 Dedicated 集群。如果在创建 Private Endpoint 时，该项目下部分 Dedicated 集群正处于维护中或扩缩容过程中，在维护和扩缩容完成后，该 Private Endpoint 会自动适用于这些 Dedicated 集群。
 
 </Admonition>
 
@@ -126,9 +127,9 @@ import Procedures from '@site/src/components/Procedures';
 
     Amazon Route 53 是一个基于 Web 的 DNS 服务。你需要创建一个 DNS 托管区域，以便向其中添加 DNS 记录。
 
-    ![HiFtbITqAoe1EuxxUMpcA03vnCb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HiFtbITqAoe1EuxxUMpcA03vnCb.png)
+    ![HiFtbITqAoe1EuxxUMpcA03vnCb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HiFtbITqAoe1EuxxUMpcA03vnCb.png "HiFtbITqAoe1EuxxUMpcA03vnCb")
 
-    ![PeJsb8ukDo59iDxRhXpcrEGRnmy](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/PeJsb8ukDo59iDxRhXpcrEGRnmy.png)
+    ![PeJsb8ukDo59iDxRhXpcrEGRnmy](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/PeJsb8ukDo59iDxRhXpcrEGRnmy.png "PeJsb8ukDo59iDxRhXpcrEGRnmy")
 
     1. 登录您的亚马逊云科技账号并前往[托管区域](https://cn-northwest-1.console.aws.amazon.cn/route53/v2/hostedzones#)。
 
@@ -161,7 +162,7 @@ import Procedures from '@site/src/components/Procedures';
 
     Amazon Route 53 别名记录为 DNS 功能提供特定于 Route 53 的扩展。别名记录允许您将流量路由到选定 Amazon 资源。它们还允许您将流量从托管区域中的一个记录路由到另一个记录。创建别名记录后，您就可以将 Zilliz Cloud 私网连接映射到您的 VPC 终端节点 DNS 名称。
 
-    ![G7Thb5aBaoEVQWxadcvcuLkFnwd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/G7Thb5aBaoEVQWxadcvcuLkFnwd.png)
+    ![G7Thb5aBaoEVQWxadcvcuLkFnwd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/G7Thb5aBaoEVQWxadcvcuLkFnwd.png "G7Thb5aBaoEVQWxadcvcuLkFnwd")
 
     1. 在已创建的托管区详情页上，点击创建记录。
 
@@ -201,10 +202,9 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>私网连接仅影响<a href="/reference/restful/data-plane">数据面（Data Plane）</a>的操作。<a href="/reference/restful/control-plane">控制面（Control Plane）</a>的操作仍然可以通过公网进行。</p></li>
-<li><p>重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。</p></li>
-</ul>
+- 私网连接仅影响[数据面（Data Plane）](/reference/restful/data-plane)的操作。[控制面（Control Plane）](/reference/restful/control-plane)的操作仍然可以通过公网进行。
+
+- 重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。
 
 </Admonition>
 

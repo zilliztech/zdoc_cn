@@ -1,11 +1,12 @@
 ---
 title: "Upsert Entity | Cloud"
 slug: /upsert-entities
+sidebar_key: upsert-entities
 sidebar_label: "Upsert Entity"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "使用 `upsert` 操作可以方便地在 Collection 中插入或更新 Entity。 | Cloud"
 type: origin
@@ -30,13 +31,13 @@ import TabItem from '@theme/TabItem';
 
 使用 `upsert` 操作可以方便地在 Collection 中插入或更新 Entity。
 
-## 概述
+## 概述\{#overview}
 
 您可以使用 `upsert` 操作来插入新 Entity 或更新现有 Entity，具体取决于该请求中提供的主键是否存在于 Collection 中。如果未找到主键，则执行插入操作。否则，将执行更新操作。
 
 Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
-### 在覆盖模式下进行 Upsert
+### 在覆盖模式下进行 Upsert\{#update-in-override-mode}
 
 以覆盖模式工作的插入更新请求。当收到针对现有 Entity 的 `upsert` 请求时，Zilliz Cloud 会插入请求负载中携带的数据，同时删除数据中指定的具有原始主键的现有 Entity。
 
@@ -46,7 +47,7 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
 对于启用了允许为空的字段，如果不需要更新，则可以在 `upsert` 请求中省略它们。
 
-### 在合并模式下进行 Upsert | PUBLIC
+### 在合并模式下进行 Upsert\{#update-in-merge-mode}
 
 您还可以使用 `partial_update` 标志，使 `upsert` 请求以合并模式工作。这允许您仅在请求负载中包含需要更新的字段。
 
@@ -56,7 +57,11 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
 收到此类请求后，Zilliz Cloud 会执行强一致性查询以检索 Entity，根据请求中的数据更新字段值，插入修改后的数据，然后删除请求中携带的具有原始主键的现有 Entity。
 
-### Upsert 的行为：特别说明
+### 更新字段值\{#update-field-values}
+
+如需更新已有 Entity 的字段值，请使用[合并模式下的 upsert](./upsert-entities#upsert-entities-in-merge-mode) 操作。在该模式下，仅请求中包含的字段会被更新，其余字段保持原值不变。 
+
+### Upsert 的行为：特别说明\{#upsert-behaviors-special-notes}
 
 在使用合并功能之前，您应该考虑以下几个特别注意事项。以下情况假设您有一个 Collection，其中包含两个标量字段，分别名为`标题`和`问题`，以及一个主键`id`和一个名为`向量`的向量字段。
 
@@ -78,7 +83,7 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
         例如，如果请求中包含的数据是`{"author": "Jane", "genre": "fantasy"}`，则目标 Entity Dynamic Field中的键值对将更新为该数据。
 
-    - 如果在启用`部分更新`的情况下进行插入或更新操作，默认行为是**合并**。这意味着Dynamic Field的值将与请求中包含的所有非模式定义字段及其值进行合并。
+    - 如果在启用`partial_update`的情况下进行插入或更新操作，默认行为是**合并**。这意味着Dynamic Field的值将与请求中包含的所有非模式定义字段及其值进行合并。
 
         例如，如果请求中包含的数据是`{"author": "John", "year": 2020, "tags": ["fiction"]}`，则目标 Entity Dynamic Field 中的键值对在插入更新后将变为`{"author": "Jane", "year": 2020, "tags": ["fiction"], "genre": "fantasy"}`。
 
@@ -96,7 +101,7 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
         例如，如果请求中包含的数据是`{extras: {"author": "Jane", "genre": "fantasy"}}`，则更新后目标 Entity 的`extras`字段中的键值对将变为`{"author": "Jane", "year": 2020, "tags": ["fiction"], "genre": "fantasy"}`。
 
-### 限制与约束
+### 限制与约束\{#limits-and-restrictions}
 
 根据上述内容，有若干限制和约束需要遵循：
 
@@ -110,7 +115,7 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
 - 对于任何使用 Function 从其他字段派生而来的字段，Zilliz Cloud 将在 `upsert` 期间移除派生字段，以便重新计算。
 
-## 在 Collection 中 Upsert Entity
+## 在 Collection 中 Upsert Entity\{#upsert-entities-in-a-collection}
 
 在本节中，我们将向名为`my_collection`的 Collection 中 Upsert Entity 。这个 Collection 只有两个字段，分别名为`id`、`vector`、`title`和`issue`。`id`字段是主键字段，而`title`和`issue`字段是标量字段。
 
@@ -242,7 +247,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -312,7 +317,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 在 Partition 中 Upsert Entity
+## 在 Partition 中 Upsert Entity\{#upsert-entities-in-a-partition}
 
 您还可以将 Entity Upsert 到指定 Partition 中。以下代码片段假定您的 Collection 中有一个名为 **PartitionA** 的 Partition。
 
@@ -478,7 +483,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 在合并模式下 Upsert Entity | PUBLIC
+## 在合并模式下 Upsert Entity\{#upsert-entities-in-merge-mode}
 
 以下代码示例展示了如何通过部分更新来 Upsert Entity。只需提供需要更新的字段及其新值，同时设置显式的部分更新标志。
 

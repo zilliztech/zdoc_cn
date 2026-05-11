@@ -1,16 +1,17 @@
 ---
 title: "存储费用 | Cloud"
 slug: /storage-cost
+sidebar_key: storage-cost
 sidebar_label: "存储"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，无论集群是否运行，只要存储了数据或备份文件，就会产生存储费用。 | Cloud"
 type: origin
 token: Lv3Awu3uHiZ99AkGKXYc7D0JnCd
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -34,11 +35,19 @@ import Admonition from '@theme/Admonition';
 
 在以下场景中，您会被收取存储费用：
 
-- **集群数据存储**：存储在集群中的原始数据和 Index。如果您的集群类型为分层存储型，还会产生额外的冷存储访问费用。
+- **Dedicated 集群**：存储在您的 Dedicated cluster 中的数据。
+
+- **Serverless 集群**：存储在您的 Serverless cluster 中的数据。
+
+- **Database**：存储在用于按需搜索的 Database 中的数据。
+
+    - Managed Collection 中的数据和索引。
+
+    - External Collection 中的索引。
 
 - **备份存储**：为数据容灾创建的[备份](./backup-and-restore)文件。
 
-- **Volume 存储**：在 [Volume](./volume-explained) 中存储的结构化数据表或非结构化数据文件，用于后续导入或迁移操作。
+- **Managed Volume 存储**：在 [Managed Volume](./managed-volume) 中存储的结构化数据表或非结构化数据文件，用于后续导入或迁移操作。
 
 ## 计算公式\{#cost-calculation}
 
@@ -56,7 +65,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>该计费项仅适用于升级至 Milvus 2.6.x 版本的分层存储型集群。</p>
+该计费项仅适用于升级至 Milvus 2.6.x 版本的分层存储型集群。
 
 </Admonition>
 
@@ -74,7 +83,7 @@ import Admonition from '@theme/Admonition';
 
 集群存储与备份存储的计费规则略有不同：
 
-- **集群数据和 Volume 存储**：按小时计费。存储不满 1 小时，按 1 小时计费。
+- **Dedicated & Serverless 集群、Volume 和 Database 存储**：按小时计费。存储不满 1 小时，按 1 小时计费。
 
 - **备份存储**：按天计费。存储不满 1 天，按 1 天计费。
 
@@ -122,21 +131,7 @@ import Admonition from '@theme/Admonition';
 
 假设您向 Volume 上传了 **10 GB** 的数据用于导入，并将数据在 Volume 中保留 **1 个月**，按单价**每月 ¥0.5/GB** 计算，费用为 `¥0.5 × 10 × 1 = ¥5.00`。
 
-### 示例 4：冷存储访问费用\{#example-4-cluster-cold-data-access-cost}
-
-假设您的集群配置如下：
-
-- **云服务提供商和地域**：阿里云华东1（杭州）
-
-- **集群类型**：分层存储型
-
-- **冷数据大小**：20 GB
-
-根据云服务提供商和地域的信息，您可以在官网的[定价](https://zilliz.com.cn/pricing)页面查看冷存储访问单价为 ¥0.001/GB。
-
-那么，`冷存储访问费用 = ¥0.001 × 20 = ¥0.02`。
-
-## 常见问题
+## 常见问题\{#}
 
 1. **集群挂起后是否仍会收取存储费用？**
  是的。只要您的集群数据、备份文件仍然保留，即使集群已暂停，仍会收取存储费用。

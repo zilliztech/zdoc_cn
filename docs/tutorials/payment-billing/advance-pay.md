@@ -1,11 +1,12 @@
 ---
 title: "现金充值（对公转账） | Cloud"
 slug: /advance-pay
+sidebar_key: advance-pay
 sidebar_label: "现金充值（对公转账）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过专属账号进行汇款。 | Cloud"
 type: origin
@@ -33,7 +34,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需进行现金充值，您需要先通过<a href="./enterprise-certification">企业认证</a>。</p>
+如需进行现金充值，您需要先通过[企业认证](./enterprise-certification)。
 
 </Admonition>
 
@@ -53,7 +54,7 @@ import Procedures from '@site/src/components/Procedures';
 
         <Admonition type="info" icon="📘" title="说明">
 
-        <p>每个 Zilliz Cloud 组织都对应一个专属汇款账号，不可用于其他 Zilliz Cloud 组织。请务必检查组织信息，确保获取对应的专属汇款账号。</p>
+        每个 Zilliz Cloud 组织都对应一个专属汇款账号，不可用于其他 Zilliz Cloud 组织。请务必检查组织信息，确保获取对应的专属汇款账号。
 
         </Admonition>
 
@@ -71,7 +72,7 @@ import Procedures from '@site/src/components/Procedures';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>请务必在汇款前核对账号信息，以免发生错误。</p>
+    请务必在汇款前核对账号信息，以免发生错误。
 
     </Admonition>
 
@@ -85,7 +86,7 @@ import Procedures from '@site/src/components/Procedures';
 
 </Procedures>
 
-## 常见问题
+## 常见问题\{#}
 
 - **现金充值（对公转账）可以开发票吗？**
 

@@ -1,11 +1,12 @@
 ---
 title: "English | Cloud"
 slug: /english-analyzer
+sidebar_key: english-analyzer
 sidebar_label: "English"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud中的English Analyzer旨在处理英语文本，应用特定语言的规则进行分词和过滤。 | Cloud"
 type: origin
@@ -415,7 +416,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

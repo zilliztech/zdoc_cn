@@ -1,11 +1,12 @@
 ---
 title: "修改 Collection | Cloud"
 slug: /modify-collections
+sidebar_key: modify-collections
 sidebar_label: "修改 Collection"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Collection 创建完成后，您还可以对 Collection 的名称及相关设置进行修改。本文主要介绍如何修改 Collection 及进行修改操作时的注意事项。 | Cloud"
 type: origin
@@ -115,7 +116,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 token := "YOUR_CLUSTER_TOKEN"
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
@@ -184,6 +185,10 @@ curl --request POST \
    <tr>
      <td><p><code>allow_insert_auto_id</code></p></td>
      <td><p>用于控制在 Collection 已启用 Auto ID 时，是否允许该 Collection 接受用户提供的主键值。</p><ul><li><p>设置为 “<strong>true</strong>”：insert、upsert 和 bulk insert 在用户提供主键值时使用该值；否则自动生成主键值。</p></li><li><p>设置为 “<strong>false</strong>”：拒绝或忽略用户提供的主键值，主键值始终自动生成。默认值为 “<strong>false</strong>”。</p></li></ul></td>
+   </tr>
+   <tr>
+     <td><p><code>timezone</code></p></td>
+     <td><p>为该 Collection 指定默认时区，用于处理时间敏感操作，尤其是 <code>TIMESTAMPTZ</code> 字段。时间戳在内部以 UTC 存储，系统会根据该设置进行展示与比较时的转换。若配置了 Collection 级别的时区，它将覆盖 Database 的默认时区；Query 级别的 timezone 参数可临时覆盖两者。取值必须是有效的 <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">IANA 时区标识符</a>（如 <strong>Asia/Shanghai</strong>、<strong>America/Chicago</strong> 或 <strong>UTC</strong>）。关于 <code>TIMESTAMPTZ</code> 字段的用法，请参阅 <a href="./use-timestamptz-field">TIMESTAMPTZ 类型</a>。</p></td>
    </tr>
 </table>
 
@@ -557,6 +562,82 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
     "collectionName": "my_collection",
     "properties": {
       "allow_insert_auto_id": "true"
+    }
+  }'
+```
+
+</TabItem>
+</Tabs>
+
+### 示例 6：设置 Collection 时区\{#example-6-set-collection-time-zone}
+
+您可以使用 `timezone` 属性为 Collection 设置默认时区。该属性决定了在 Collection 内进行所有操作（包括数据插入、查询和结果展示）时，时间相关数据的解释和显示方式。
+
+<Admonition type="info" icon="📘" title="Notes">
+
+`timezone` 的值必须是有效的 [IANA 时区标识符](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)，例如 **Asia/Shanghai**、**America/Chicago** 或 **UTC**。如果使用了无效或非标准的时区值，在修改 Collection 属性时会报错。
+
+</Admonition>
+
+下面的示例演示如何将 Collection 的时区设置为 **Asia/Shanghai**：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+client.alter_collection_properties(
+    collection_name="my_collection",
+    # highlight-next-line
+    properties={"timezone": "Asia/Shanghai"}
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+AlterCollectionPropertiesReq alterCollectionReq = AlterCollectionPropertiesReq.builder()
+        .collectionName("my_collection")
+        .property("timezone", "Asia/Shanghai")
+        .build();
+
+client.alterCollectionProperties(alterCollectionReq);
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+err = client.AlterCollectionProperties(ctx, milvusclient.NewAlterCollectionPropertiesOption("my_collection").WithProperty(common.CollectionDefaultTimezone, true))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <token>" \
+  -d '{
+    "collectionName": "my_collection",
+    "properties": {
+      "timezone": "Asia/Shanghai"
     }
   }'
 ```

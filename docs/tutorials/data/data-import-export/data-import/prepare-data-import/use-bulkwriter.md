@@ -1,11 +1,12 @@
 ---
 title: "使用 BulkWriter | Cloud"
 slug: /use-bulkwriter
+sidebar_key: use-bulkwriter
 sidebar_label: "使用 BulkWriter"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "如果您的数据格式不满足支持的数据格式中列出的各项要求，您可以使用 PyMivus 和 Milvus Java SDK 自带的 BulkWriter 对您的数据进行转换。 | Cloud"
 type: origin
@@ -236,7 +237,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     ```python
     from pymilvus.bulk_writer import LocalBulkWriter, BulkFileType
     # 如果您的集群和 Milvus 2.4.2 及之后版本兼容
-    # 需使用 `from pymilvus import LocalBulkWriter, BulkFileType` 
+    # 需使用 \`from pymilvus import LocalBulkWriter, BulkFileType\` 
     
     writer = LocalBulkWriter(
         schema=schema,
@@ -260,8 +261,9 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>使用 LocalBulkWriter 生成的 JSON 文件和 Parquet 文件可以直接在 Zilliz Cloud 控制台上导入。</p>
-    <p>如需导入其它格式的文件，需要先将它们上传到和您的对象存储桶中。建议您使用与您的集群同地域的对象存储桶。</p>
+    使用 LocalBulkWriter 生成的 JSON 文件和 Parquet 文件可以直接在 Zilliz Cloud 控制台上导入。
+
+    如需导入其它格式的文件，需要先将它们上传到和您的对象存储桶中。建议您使用与您的集群同地域的对象存储桶。
 
     </Admonition>
 
@@ -296,7 +298,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>Milvus Java SDK 的 BulkWriter 使用 Apache Parquet 作为唯一支持的数据输出格式。</p>
+    Milvus Java SDK 的 BulkWriter 使用 Apache Parquet 作为唯一支持的数据输出格式。
 
     </Admonition>
 
@@ -313,7 +315,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     ```python
     from pymilvus.bulk_writer import RemoteBulkWriter
-    # Use `from pymilvus import RemoteBulkWriter` 
+    # Use \`from pymilvus import RemoteBulkWriter\` 
     # when you use pymilvus earlier than 2.4.2 
     
     # Third-party constants
@@ -333,7 +335,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
     )
     
     from pymilvus.bulk_writer import BulkFileType
-    # Use `from pymilvus import BulkFileType` 
+    # Use \`from pymilvus import BulkFileType\` 
     # when you use pymilvus earlier than 2.4.2 
     
     writer = RemoteBulkWriter(
@@ -385,7 +387,7 @@ PyMilvus 中有两种 BulkWriter。在本小节中，我们将了解如何创建
 
     ```python
     from pymilvus.bulk_writer import RemoteBulkWriter
-    # Use `from pymilvus import RemoteBulkWriter` 
+    # Use \`from pymilvus import RemoteBulkWriter\` 
     # when you use pymilvus earlier than 2.4.2 
     
     writer = RemoteBulkWriter(
@@ -641,7 +643,7 @@ private static List<Long> genIntArray(int length) {
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在上述代码中 <code>vector</code> 和 <code>scalar_1</code> 字段的值由两个名为 <code>generateFloatVectors()</code> 和 <code>generateString()</code> 的私有方法生成。具体请参考<strong>随机数据生成器</strong>页签。</p>
+在上述代码中 `vector` 和 `scalar_1` 字段的值由两个名为 `generateFloatVectors()` 和 `generateString()` 的私有方法生成。具体请参考**随机数据生成器**页签。
 
 </Admonition>
 

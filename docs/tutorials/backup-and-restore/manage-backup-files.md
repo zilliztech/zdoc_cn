@@ -1,11 +1,12 @@
 ---
 title: "管理备份文件 | Cloud"
 slug: /manage-backup-files
+sidebar_key: manage-backup-files
 sidebar_label: "管理备份文件"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文将介绍如何查看、重命名和删除已有的备份文件。 | Cloud"
 type: origin
@@ -43,7 +44,7 @@ import Supademo from '@site/src/components/Supademo';
 
 如需在 Zilliz Cloud 控制台中查看备份文件及其详情，请点击左侧导航栏中的“备份”。
 
-![AoJxbOCy2ofs3KxvDrAcTymMneR](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/AoJxbOCy2ofs3KxvDrAcTymMneR.png)
+![AoJxbOCy2ofs3KxvDrAcTymMneR](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/AoJxbOCy2ofs3KxvDrAcTymMneR.png "AoJxbOCy2ofs3KxvDrAcTymMneR")
 
 ### 通过 RESTful API\{#via-restful-api}
 

@@ -1,11 +1,12 @@
 ---
 title: "管理项目任务 | Cloud"
 slug: /job-center
+sidebar_key: job-center
 sidebar_label: "管理项目任务"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的所有历史和异步数据任务整合在一起。 | Cloud"
 type: origin
@@ -31,7 +32,7 @@ import Admonition from '@theme/Admonition';
 
 Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的所有历史和异步数据任务整合在一起。
 
-## 查看项目任务
+## 查看项目任务\{#}
 
 选择目标项目。在左侧导航栏中，点击**任务中心**。您可以看到正在执行或已完成的所有异步数据任务。
 
@@ -107,13 +108,13 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
 
 - 创建人：发起数据任务的项目用户。
 
-## 查看任务详情
+## 查看任务详情\{#}
 
 点击**操作**栏中的**...**，选择**查看详情**。或者，您也可以通过[查看任务详情](/reference/restful/describe-job-v2)的 RESTful API 接口获取任务详情。
 
 ![view_job_details_cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/view_job_details_cn.png "view_job_details_cn")
 
-## 取消任务
+## 取消任务\{#}
 
 您可以取消如下类型的**进行中**和**等待中**的任务：
 
@@ -125,18 +126,19 @@ Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需取消任务，您需要具备<strong>组织管理员</strong>或<strong>项目管理员</strong>权限。</p>
+如需取消任务，您需要具备**组织管理员**或**项目管理员**权限。
 
 </Admonition>
 
 ![cancel_job_cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/cancel_job_cn.png "cancel_job_cn")
 
-## 重试失败任务
+## 重试失败任务\{#}
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>目前仅支持重试失败的导入任务。</p>
-<p>如需重试失败任务，您需要具备<strong>组织管理员</strong>或<strong>项目管理员</strong>角色。</p>
+目前仅支持重试失败的导入任务。
+
+如需重试失败任务，您需要具备**组织管理员**或**项目管理员**角色。
 
 </Admonition>
 

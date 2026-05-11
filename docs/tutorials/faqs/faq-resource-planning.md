@@ -4,7 +4,7 @@ slug: /faq-resource-planning
 sidebar_label: "FAQ：资源规划"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: "本文列举了在 Zilliz Cloud 规划资源和使用成本时可能遇到的常见问题及对应解决方法。 | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 6
@@ -42,7 +42,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 如需查看版本，请前往项目列表页。您可以看到所有项目的版本。
 
-![D1TPbn5Atoc3EfxDWaNcA7yznFh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/D1TPbn5Atoc3EfxDWaNcA7yznFh.png)
+![D1TPbn5Atoc3EfxDWaNcA7yznFh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/D1TPbn5Atoc3EfxDWaNcA7yznFh.png "D1TPbn5Atoc3EfxDWaNcA7yznFh")
 
 ### 我应该选择哪种集群类型？ \{#which-type-of-cluster-should-i-pick}
 
@@ -50,7 +50,7 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 - 如果您需要存储大量数据，但对吞吐量和延迟的要求较低，建议选择容量型。
 
-- 如果您需要处理超大规模、追求性价比且数据访问具有明显冷热特征的工作负载，建议选择分层存储型。如需选择分层存储型，集群 Query CU 数量需至少为 8。
+- 如果您需要处理超大规模、追求性价比的工作负载，建议选择分层存储型。如需选择分层存储型，集群 Query CU 数量需至少为 8。
 
 ### 我的数据需要使用多少 Query CU？ \{#how-many-query-cus-do-i-need-for-a-given-collection}
 

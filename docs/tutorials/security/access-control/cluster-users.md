@@ -1,11 +1,12 @@
 ---
 title: "管理集群用户（控制台） | Cloud"
 slug: /cluster-users
+sidebar_key: cluster-users
 sidebar_label: "管理集群用户（控制台）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，您可以创建集群用户并为其分配集群角色以定义权限，从而实现数据安全。 | Cloud"
 type: origin
@@ -50,7 +51,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>每个集群中最多可创建 100 名集群用户。</p>
+每个集群中最多可创建 100 名集群用户。
 
 </Admonition>
 
@@ -62,7 +63,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>集群默认用户 <strong>db_admin</strong> 不支持删除。</p>
+集群默认用户 **db_admin** 不支持删除。
 
 </Admonition>
 

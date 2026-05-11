@@ -1,11 +1,12 @@
 ---
 title: "订阅亚马逊云科技 Marketplace | Cloud"
 slug: /subscribe-on-amazon-marketplace
+sidebar_key: subscribe-on-amazon-marketplace
 sidebar_label: "订阅亚马逊云科技 Marketplace"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如何在亚马逊云科技 Marketplace上订阅 Zilliz Cloud。 | Cloud"
 type: origin
@@ -32,7 +33,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>订阅后，您可以通过亚马逊云科技 Marketplace 支付亚马逊云科技集群的用量。如果您在 Zilliz Cloud 使用了多云实例，也可通过亚马逊云科技 Marketplace 统一支付。</p>
+订阅后，您可以通过亚马逊云科技 Marketplace 支付亚马逊云科技集群的用量。如果您在 Zilliz Cloud 使用了多云实例，也可通过亚马逊云科技 Marketplace 统一支付。
 
 </Admonition>
 
@@ -118,7 +119,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>我们建议您在一小时内容完成上述订阅账号切换操作，以免影响您服务。如遇到任何问题，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p>
+我们建议您在一小时内容完成上述订阅账号切换操作，以免影响您服务。如遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 </Admonition>
 

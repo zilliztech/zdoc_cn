@@ -1,16 +1,17 @@
 ---
 title: "ANN 搜索 | Cloud"
 slug: /ann-search-explained
+sidebar_key: ann-search-explained
 sidebar_label: "ANN 搜索"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "通过 k-最近邻（kNN）搜索可以找到一个查询向量的 k 个最近向量。kNN 算法将查询向量与向量空间中的每个向量进行比较，直到出现 k 个完全匹配的结果。尽管 kNN 搜索可以确保准确性，但十分耗时。尤其是数据量大，向量维度高时，耗时更久。 | Cloud"
 type: origin
 token: E4Ggw2FU3iXekOklaytcDy47nRg
-sidebar_position: 2
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -47,13 +48,13 @@ Hierarchical Navigable Small World（HNSW）算法通过创建多层接近图（
 
 1. 重复上述步骤，直到找到底层的最近向量。
 
-    ![Dkj8bpJswoXHzPxBz3hcOHSDnRg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Dkj8bpJswoXHzPxBz3hcOHSDnRg.png)
+    ![Dkj8bpJswoXHzPxBz3hcOHSDnRg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Dkj8bpJswoXHzPxBz3hcOHSDnRg.png "Dkj8bpJswoXHzPxBz3hcOHSDnRg")
 
 ## LSH：哈希索引算法\{#lsh-a-hash-based-ann-indexing-algorithm}
 
 局部敏感哈希（LSH）算法的基本思想为空间域转换。LSH 算法通过使用各种哈希函数将任意长度的数据映射为固定长度的值作为哈希，将这些哈希收集到哈希桶中，并将已经哈希到相同值的向量标记为候选对。
 
-![RRMybZeKQoGgQRx6kSNcvwxsnre](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/RRMybZeKQoGgQRx6kSNcvwxsnre.png)
+![RRMybZeKQoGgQRx6kSNcvwxsnre](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/RRMybZeKQoGgQRx6kSNcvwxsnre.png "RRMybZeKQoGgQRx6kSNcvwxsnre")
 
 ## DiskANN：基于 Vamana 图的磁盘索引算法\{#diskann-ann-search-on-disk-based-on-vamana-graphs}
 

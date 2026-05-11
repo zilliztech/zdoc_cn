@@ -1,11 +1,12 @@
 ---
 title: "Zilliz Cloud 版本对比 | Cloud"
 slug: /select-zilliz-cloud-service-plans
+sidebar_key: select-zilliz-cloud-service-plans
 sidebar_label: "Zilliz Cloud 版本对比"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供多样的项目版本类型以满足不同的用户需求。不论是向量数据库领域的新手，还是追求可靠的企业级解决方案的开发者，需要根据性能、可扩展性及成本，选择合适的版本类型。本文将提供不同版本间的对比，帮助您做出合适的选择。 | Cloud"
 type: origin
@@ -163,7 +164,7 @@ Zilliz Cloud 提供多样的项目版本类型以满足不同的用户需求。�
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p><a href="./manage-stages">Stage</a></p></td>
+     <td><p>Stage</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>

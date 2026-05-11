@@ -1,11 +1,12 @@
 ---
 title: "硅基流动 Ranker | Cloud"
 slug: /siliconflow-model-ranker
+sidebar_key: siliconflow-model-ranker
 sidebar_label: "硅基流动 Ranker"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "硅基流动 Ranker 利用硅基流动的综合重排序模型，通过语义重排序来提高搜索相关性。它提供灵活的文档分块功能，并支持来自不同供应商的各种专业重排序模型。 | Cloud"
 type: origin
@@ -169,7 +170,7 @@ siliconflow_ranker = Function(
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p><code>queries</code> 中字符串的数量必须与搜索请求中发起的查询数量一致。</p>
+`queries` 中字符串的数量必须与搜索请求中发起的查询数量一致。
 
 </Admonition>
 

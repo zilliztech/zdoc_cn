@@ -1,16 +1,17 @@
 ---
 title: "向 Collection 添加字段 | Cloud"
 slug: /add-fields-to-an-existing-collection
+sidebar_key: add-fields-to-an-existing-collection
 sidebar_label: "向 Collection 添加字段"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "Milvus  允许您向现有 Collection 动态地添加新字段，帮助您在业务需求发生变化时轻松地修改 Collection Schema。本教程将通过若干例子为您演示在不同情况下如何为指定 Collection 添加字段。 | Cloud"
 type: origin
 token: JU6ZwfYLpilJ6vkncdzcLtFLnjf
-sidebar_position: 17
+sidebar_position: 18
 keywords: 
   - 向量数据库
   - zilliz
@@ -57,7 +58,7 @@ Milvus  允许您向现有 Collection 动态地添加新字段，帮助您在业
 
 <Admonition type="info" icon="📘" title="针对上述任务，需要帮助吗？">
 
-<p>请参考<a href="./manage-collections-sdks">创建 Collection</a> 了解如何创建 Collection 及相关基本操作。</p>
+请参考[创建 Collection](./manage-collections-sdks) 了解如何创建 Collection 及相关基本操作。
 
 </Admonition>
 
@@ -97,7 +98,7 @@ MilvusClientV2 client = new MilvusClientV2(config);
 import { MilvusClient } from '@zilliz/milvus2-sdk-node';
 
 const milvusClient = new MilvusClient({
-    address: 'localhost:19530'
+    address: 'YOUR_CLUSTER_ENDPOINT'
 });
 ```
 
@@ -115,7 +116,7 @@ const milvusClient = new MilvusClient({
 
 ```bash
 # restful
-export CLUSTER_ENDPOINT="localhost:19530"
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
 ```
 
 </TabItem>
@@ -638,7 +639,7 @@ await client.insert({
 # restful
 #!/bin/bash
 
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export AUTH_TOKEN="your_token_here"
 export COLLECTION_NAME="product_catalog"
 
@@ -790,7 +791,7 @@ results = client.query({
 # restful
 #!/bin/bash
 
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export AUTH_TOKEN="your_token_here"
 export COLLECTION_NAME="product_catalog"
 

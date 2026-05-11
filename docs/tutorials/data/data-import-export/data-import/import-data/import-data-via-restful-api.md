@@ -1,11 +1,12 @@
 ---
 title: "通过 RESTful API 导入 | Cloud"
 slug: /import-data-via-restful-api
+sidebar_key: import-data-via-restful-api
 sidebar_label: "RESTful API"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。 | Cloud"
 type: origin
@@ -38,7 +39,7 @@ import Admonition from '@theme/Admonition';
 
 ## 从 Volume 中导入数据\{#import-data-via-volume}
 
-如需从 Volume 中导入数据，需要先创建 Volume 并将数据上传至该 Volume 中。在完成这些步骤后，记录文件在 Volume 中的位置，以备调用数据导入接口时使用。更多内容，可以参考[管理 Volume (SDK)](./manage-stages)。
+如需从 Volume 中导入数据，需要先创建 Volume 并将数据上传至该 Volume 中。在完成这些步骤后，记录文件在 Volume 中的位置，以备调用数据导入接口时使用。更多内容，可以参考管理 Volume (SDK)。
 
 您可以参考如下代码完成从 Volume 中导入数据的操作。
 
@@ -93,7 +94,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了成功导入数据，请确保目标 Collection 中的正在运行或待运行的导入任务不超过 10 个。</p>
+为了成功导入数据，请确保目标 Collection 中的正在运行或待运行的导入任务不超过 10 个。
 
 </Admonition>
 
@@ -148,4 +149,14 @@ curl --request POST \
 ```
 
 你也可以调用RESTful API获取[当前导入任务的进度](/reference/restful/get-import-job-progress-v2)，并[列出所有导入任务](/reference/restful/list-import-jobs-v2)以获取更多。作为替代方案，你也可以前往Zilliz Cloud控制台上的[任务中心](./job-center)查看结果和作业详情。
+
+## 常见问题 \{#faq}
+
+**使用 External Volume 与直接从外部存储中导入数据有何不同？**
+
+两种方式都允许您从外部的云服务对象存储中导入数据。不同之处在于：
+
+-  External Volume 通过存储集成来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
+
+- 直接从外部存储导入时，需要在每次导入请求中提供凭证（access key、secret key）。这种方式更适合一次性导入，但不具备凭证隔离和复用能力。
 

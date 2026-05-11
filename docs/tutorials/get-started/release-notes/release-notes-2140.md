@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2025/03/27） | Cloud"
 slug: /release-notes-2140
+sidebar_key: release-notes-2140
 sidebar_label: "2025/03/27"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本次发布在 PRIVATE PREVIEW 中引入了数据平面审计日志功能。旨在通过提供在数据平面上执行的操作的详细日志来增强数据安全性。除了该功能外，Zilliz Cloud还修订了其优惠券策略。 | Cloud"
 type: origin
 token: NYaTwrUG1iT6CCkUSnJcCQPqnsb
-sidebar_position: 10
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -33,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 如果您希望体验 **Milvus v2.5.x** 的各项新功能，可以考虑在集群详情页面单击**试用公测版新功能**将您的集群升级到**公测版**。
 
-![CQ2Bb4smUoGEehxHoqZcsdVUnHe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CQ2Bb4smUoGEehxHoqZcsdVUnHe.png)
+![CQ2Bb4smUoGEehxHoqZcsdVUnHe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CQ2Bb4smUoGEehxHoqZcsdVUnHe.png "CQ2Bb4smUoGEehxHoqZcsdVUnHe")
 
 ## 数据平面审计日志：提供全面的操作审计日志，为数据操作安全保驾护航\{#data-plane-audit-logs-protect-your-data-operations-with-comprehensive-action-logs-for-auditing}
 

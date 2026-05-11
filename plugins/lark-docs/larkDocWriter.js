@@ -996,9 +996,11 @@ export const method = "${method}"`
                 line = parts.map((part, i) => {
                     if (i % 2 === 0) {
                         // Escape non-HTML lowercase placeholder tags (e.g. <bucket_name>, <region-code>).
-                        // Tags with attributes won't match because the regex only allows \s*\/?>
-                        part = part.replace(/(?<!\\)<\/?([a-z][a-z0-9]*(?:[_-][a-z0-9]+)*)\s*\/?>/g, (match, tagName) => {
-                            return KNOWN_TAGS.has(tagName) ? match : '\\' + match;
+                        // Backslash-escaped placeholders (\<bucket_name>) are normalized too because
+                        // downstream MDX loaders may still parse them as JSX in HTML contexts.
+                        part = part.replace(/\\?<\/?([a-z][a-z0-9]*(?:[_-][a-z0-9]+)*)\s*\/?>/g, (match, tagName) => {
+                            if (KNOWN_TAGS.has(tagName)) return match;
+                            return match.replace(/^\\/, '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
                         });
                         // Escape uppercase/PascalCase tags not identified as real JSX components.
                         // Uses HTML entities so the angle brackets render correctly in the output.
@@ -1368,14 +1370,15 @@ export const method = "${method}"`
                 break;
             default:
                 type = `<Admonition type="info" icon="📘" title="${children[0].trim()}">`
-                break; 
-        }               
-        
-        const converter = new showdown.Converter()
-        let html = converter.makeHtml(children.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
-        html = this.__showdownToMdxSafe(html);
+                break;
+        }
 
-        const raw = ' '.repeat(indent) + type + '\n\n' + ' '.repeat(indent) + html.split('\n').join('\n' + ' '.repeat(indent)) + '\n\n' + ' '.repeat(indent) + '</Admonition>';
+        let body = children.slice(1)
+        while (body.length && body[0].trim() === '') body.shift()
+        while (body.length && body[body.length - 1].trim() === '') body.pop()
+        body = body.join('\n')
+
+        const raw = ' '.repeat(indent) + type + '\n\n' + body + '\n\n' + ' '.repeat(indent) + '</Admonition>';
         return raw.replace(/(\s*\n){3,}/g, `\n${' '.repeat(indent)}\n`);
     }
 
@@ -1555,22 +1558,21 @@ export const method = "${method}"`
         let possible_titles = ['Notes', 'Note', '说明', 'ノート', 'Warning', 'Warn', '警告']
         let title = possible_titles.find((x, i) => res[0].includes(x));
 
+
         if (title && ['Warning', 'Warn', '警告'].indexOf(title) == -1) {
             type = `info 📘 ${title}`;
-        } else if (title) {
-            type = `caution 🚧 ${title}`;
         } else {
-            type = 'info 📘 Notes';
+            type = `caution 🚧 ${title}`;
         }
 
         type = `<Admonition type="${type.split(' ')[0]}" icon="${type.split(' ')[1]}" title="${type.split(' ')[2]}">`;
-        res.splice(1, 0, "");
 
-        const converter = new showdown.Converter()
-        let html = converter.makeHtml(res.slice(1).map(line => line.replace(/^\s*/g, '')).join('\n'))
-        html = this.__showdownToMdxSafe(html);
+        let body = res.slice(1)
+        while (body.length && body[0].trim() === '') body.shift()
+        while (body.length && body[body.length - 1].trim() === '') body.pop()
+        body = body.join('\n')
 
-        const raw = ' '.repeat(indent) + type + '\n\n' + ' '.repeat(indent) + html.split('\n').join('\n' + ' '.repeat(indent)) + '\n\n' + ' '.repeat(indent) + '</Admonition>';
+        const raw = ' '.repeat(indent) + type + '\n\n' + body + '\n\n' + ' '.repeat(indent) + '</Admonition>';
         return raw.replace(/(\s*\n){3,}/g, '\n\n');
     }
     

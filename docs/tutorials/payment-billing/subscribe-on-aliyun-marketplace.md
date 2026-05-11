@@ -1,11 +1,12 @@
 ---
 title: "订阅阿里云云市场 | Cloud"
 slug: /subscribe-on-aliyun-marketplace
+sidebar_key: subscribe-on-aliyun-marketplace
 sidebar_label: "订阅阿里云云市场"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里云云市场上订阅 Zilliz Cloud。 | Cloud"
 type: origin
@@ -32,7 +33,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>订阅后，您可以通过阿里云云市场支付阿里云集群的用量。如果您在Zilliz Cloud 使用了多云实例，也可通过阿里云市场统一支付。</p>
+订阅后，您可以通过阿里云云市场支付阿里云集群的用量。如果您在Zilliz Cloud 使用了多云实例，也可通过阿里云市场统一支付。
 
 </Admonition>
 
@@ -56,15 +57,15 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     1. 在 Zilliz Cloud 服务主页中单击“立即开通”，并在弹出的“开通按量服务”窗口中勾选“同意商品在线协议及云市场平台服务协议”，然后单击“开通”。
 
-        ![PDHObOMyKonL8MxClWmc9X9hnXb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/PDHObOMyKonL8MxClWmc9X9hnXb.png)
+        ![PDHObOMyKonL8MxClWmc9X9hnXb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/PDHObOMyKonL8MxClWmc9X9hnXb.png "PDHObOMyKonL8MxClWmc9X9hnXb")
 
     1. 在弹出窗口中您将看到“开通申请已提交，约需要1 - 5分钟完成开通”的提示。此时，可以单击“确定”按钮跳转至云市场控制台查看“已购买服务列表”。
 
-        ![Ebrobis5ToxNxExm4l2cc1UMnLh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Ebrobis5ToxNxExm4l2cc1UMnLh.png)
+        ![Ebrobis5ToxNxExm4l2cc1UMnLh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Ebrobis5ToxNxExm4l2cc1UMnLh.png "Ebrobis5ToxNxExm4l2cc1UMnLh")
 
     1. 在“已购买服务列表”中找到 Zilliz Cloud。单击“使用指南”可查看服务指南。单击“免登”并在弹出的“提示”对话框中单击“确定”可前往Zilliz Cloud。
 
-        ![Tu3oblmHPomzGsx7H0scQQwRnah](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Tu3oblmHPomzGsx7H0scQQwRnah.png)
+        ![Tu3oblmHPomzGsx7H0scQQwRnah](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Tu3oblmHPomzGsx7H0scQQwRnah.png "Tu3oblmHPomzGsx7H0scQQwRnah")
 
 1. 为您的 Zilliz Cloud 组织绑定支付方式。
 
@@ -72,11 +73,11 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     1. 如果您尚未注册 Zilliz Cloud。您可以单击“注册”。在完成注册流程后进入绑定流程。
 
-    ![S31ZbM588oZmGWxlPo0cWgQ6nWf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/S31ZbM588oZmGWxlPo0cWgQ6nWf.png)
+    ![S31ZbM588oZmGWxlPo0cWgQ6nWf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/S31ZbM588oZmGWxlPo0cWgQ6nWf.png "S31ZbM588oZmGWxlPo0cWgQ6nWf")
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>如果您已经上述“免登”链接为某个 Zilliz Cloud 组织绑定了支付方式，再次单击该“免登”链接可直接进入 Zilliz Cloud，无须再次登录。</p>
+    如果您已经上述“免登”链接为某个 Zilliz Cloud 组织绑定了支付方式，再次单击该“免登”链接可直接进入 Zilliz Cloud，无须再次登录。
 
     </Admonition>
 
@@ -84,15 +85,15 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     当列表中不存在可以绑定的组织时，“确认绑定”不可用。此时，您需要创建一个以您为管理员的组织后才能继续该操作。
 
-    ![DS2wb3KldoOZcHxX87ycG3HGnAe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DS2wb3KldoOZcHxX87ycG3HGnAe.png)
+    ![DS2wb3KldoOZcHxX87ycG3HGnAe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DS2wb3KldoOZcHxX87ycG3HGnAe.png "DS2wb3KldoOZcHxX87ycG3HGnAe")
 
 1. Zilliz Cloud 开始处理您的授权请求，并在处理完成后展示如下图所示内容。
 
-    ![N4Lkbn8bgoKOVixW0x9c19lIn6e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/N4Lkbn8bgoKOVixW0x9c19lIn6e.png)
+    ![N4Lkbn8bgoKOVixW0x9c19lIn6e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/N4Lkbn8bgoKOVixW0x9c19lIn6e.png "N4Lkbn8bgoKOVixW0x9c19lIn6e")
 
     此时，您可以前往**“帐单概览”**页面。如果“云市场扣费渠道”区域右下角出现“查看阿里云帐单”链接，恭喜您成功开通阿里云云市场扣费渠道。
 
-    ![HsZ9bVAnEo5dOpxVSaBcezaknjd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HsZ9bVAnEo5dOpxVSaBcezaknjd.png)
+    ![HsZ9bVAnEo5dOpxVSaBcezaknjd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HsZ9bVAnEo5dOpxVSaBcezaknjd.png "HsZ9bVAnEo5dOpxVSaBcezaknjd")
 
 </Procedures>
 
@@ -128,7 +129,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>我们建议您在一小时内容完成上述订阅账号切换操作，以免影响您服务。如遇到任何问题，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p>
+我们建议您在一小时内容完成上述订阅账号切换操作，以免影响您服务。如遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 </Admonition>
 

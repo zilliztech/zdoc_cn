@@ -1,11 +1,12 @@
 ---
 title: "设置控制台 IP 白名单 | Cloud"
 slug: /setup-console-ip-allowlist
+sidebar_key: setup-console-ip-allowlist
 sidebar_label: "设置控制台 IP 白名单"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "默认情况下，组织用户可以从任意 IP 地址访问组织 Web 控制台。为限制访问并提升安全性，您可以为 Web 控制台配置 IP 白名单。配置后用户只能从指定的 IP 地址访问控制台，例如公司网络的 IP 地址。 | Cloud"
 type: origin
@@ -32,11 +33,7 @@ import Supademo from '@site/src/components/Supademo';
 
 控制台 IP 白名单仅针对组织 Web 控制台生效，不影响对项目集群的访问。若需限制对集群的访问，请参阅[设置集群 IP 白名单](./setup-whitelist)。
 
-<Admonition type="info" icon="📘" title="说明">
-
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
-
-</Admonition>
+https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
 
 ## 限制\{#limits}
 
@@ -56,7 +53,7 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在白名单中添加 <code>0.0.0.0/0</code> 等同于未设置白名单。</p>
+在白名单中添加 `0.0.0.0/0` 等同于未设置白名单。
 
 </Admonition>
 
@@ -70,7 +67,7 @@ import Supademo from '@site/src/components/Supademo';
 
 以下 Demo 展示如何查看控制台 IP 白名单中的 IP 地址。
 
-![UYusbiBkUolCwoxMgVAcqzpBnHg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UYusbiBkUolCwoxMgVAcqzpBnHg.png)
+![UYusbiBkUolCwoxMgVAcqzpBnHg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UYusbiBkUolCwoxMgVAcqzpBnHg.png "UYusbiBkUolCwoxMgVAcqzpBnHg")
 
 ## 删除 IP 地址\{#delete-ip-address}
 
@@ -88,7 +85,7 @@ import Supademo from '@site/src/components/Supademo';
 
     当您被锁定，无法访问组织界面时，您将看到以下界面：
 
-    ![N5mDbdzstoRd6bxZ7cJcz8Ghnrc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/N5mDbdzstoRd6bxZ7cJcz8Ghnrc.png)
+    ![N5mDbdzstoRd6bxZ7cJcz8Ghnrc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/N5mDbdzstoRd6bxZ7cJcz8Ghnrc.png "N5mDbdzstoRd6bxZ7cJcz8Ghnrc")
 
     请尝试以下解决方法：
 

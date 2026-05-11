@@ -4,7 +4,7 @@ slug: /faq-account
 sidebar_label: "FAQ：账户"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: "本文列举了 Zilliz Cloud 账户相关的常见问题及对应解决方法。 | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 10

@@ -1,11 +1,12 @@
 ---
 title: "Language Identifier | Cloud"
 slug: /language-identifier-tokenizer
+sidebar_key: language-identifier-tokenizer
 sidebar_label: "Language Identifier"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "语言识别器（`languageidentifier`）是一种专用分词器，用于增强 Zilliz Cloud 的文本搜索能力，它通过自动化语言分析流程来实现。其主要功能是检测文本字段的语言，然后动态应用最适合该语言的预配置分析器。这对处理多语言的应用尤为重要，因为它免去了逐条输入手动指定语言的麻烦。 | Cloud"
 type: origin
@@ -129,13 +130,15 @@ Zilliz Cloud 提供两种语言检测引擎可选：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p><strong>匹配是关键</strong>：分析器名称必须与检测引擎返回的语言名完全一致。例如，若使用 whatlang，则中文文本的 key 必须是 <strong>Mandarin</strong>。</p></li>
-<li><p><strong>最佳实践</strong>：上表仅列出部分常见语言的推荐配置，更多情况请参考<a href="./choose-the-right-analyzer-for-your-use-case">最佳实践</a>。</p></li>
-<li><p><strong>检测器输出</strong>：完整语言名称列表请参考：</p></li>
-<li><p><a href="https://github.com/greyblake/whatlang-rs">Whatlang 支持语言表</a></p></li>
-<li><p><a href="https://github.com/pemistahl/lingua-rs">Lingua 支持语言列表</a></p></li>
-</ul>
+- **匹配是关键**：分析器名称必须与检测引擎返回的语言名完全一致。例如，若使用 whatlang，则中文文本的 key 必须是 **Mandarin**。
+
+- **最佳实践**：上表仅列出部分常见语言的推荐配置，更多情况请参考[最佳实践](./choose-the-right-analyzer-for-your-use-case)。
+
+- **检测器输出**：完整语言名称列表请参考：
+
+    - [Whatlang 支持语言表](https://github.com/greyblake/whatlang-rs)
+
+    - [Lingua 支持语言列表](https://github.com/pemistahl/lingua-rs)
 
 </Admonition>
 
@@ -176,8 +179,8 @@ Zilliz Cloud 提供两种语言检测引擎可选：
 ```python
 analyzer_params = {
     "tokenizer": {
-        "type": "language_identifier",  # Must be `language_identifier`
-        "identifier": "whatlang",  # or `lingua`
+        "type": "language_identifier",  # Must be \`language_identifier\`
+        "identifier": "whatlang",  # or \`lingua\`
         "analyzers": {  # A set of analyzer configs
             "default": {
                 "tokenizer": "standard"  # fallback if language detection fails

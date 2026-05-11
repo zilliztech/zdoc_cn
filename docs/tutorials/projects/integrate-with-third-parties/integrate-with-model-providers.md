@@ -1,11 +1,12 @@
 ---
 title: "模型供应商 | Cloud"
 slug: /integrate-with-model-providers
+sidebar_key: integrate-with-model-providers
 sidebar_label: "模型供应商"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "模型供应商集成用于将 Zilliz Cloud 连接到第三方模型服务，并将该模型供应商提供的能力引入到你的项目中。 | Cloud"
 type: origin
@@ -114,7 +115,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果某个集成被移除或变为无效，引用该集成的 Collection 或 Ranker 在执行插入或搜索操作时可能会失败，直到该集成被更新或替换。</p>
+如果某个集成被移除或变为无效，引用该集成的 Collection 或 Ranker 在执行插入或搜索操作时可能会失败，直到该集成被更新或替换。
 
 </Admonition>
 

@@ -1,16 +1,17 @@
 ---
 title: "使用 mmap | Cloud"
 slug: /use-mmap
+sidebar_key: use-mmap
 sidebar_label: "使用 mmap"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Mmap 允许在不将磁盘上的文件加载到内存的情况下通过内存访问这些文件。通过配置 mmap，Zilliz Cloud 可以根据访问频次的不同将索引和数据分别存放到内存或磁盘上，不仅优化了数据加载行为，扩大了 Collection 的容量，也不会给搜索性能带来负面影响。本文将帮助您理解 Zilliz Cloud 如何利用 mmap 实现快速高效的数据存储和检索能力及使用该能力需要注意的相关事项。 | Cloud"
 type: origin
 token: IRH1wYwjXicDLFkRcZwcMJl1n3g
-sidebar_position: 16
+sidebar_position: 18
 keywords: 
   - 向量数据库
   - zilliz
@@ -32,7 +33,7 @@ Mmap 允许在不将磁盘上的文件加载到内存的情况下通过内存访
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在不同订阅计划的源集群和目标集群之间迁移或还原数据时，源 Collection 的 mmap 设置不会迁移到目标集群。请手动重新配置目标集群上的 mmap 设置。</p>
+在不同订阅计划的源集群和目标集群之间迁移或还原数据时，源 Collection 的 mmap 设置不会迁移到目标集群。请手动重新配置目标集群上的 mmap 设置。
 
 </Admonition>
 
@@ -103,11 +104,11 @@ Zilliz Cloud 是一款内存密集型的数据库系统。可用内存的大小�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>请谨慎修改 mmap 设置。不恰当的 mmap 策略可能会导致如下问题： </p>
-<ul>
-<li><p>对于使用性能型 CU 的 Dedicated 集群而言，在加载 Collection 时，所有标量字段的原始数据和向量字段索引默认会被加载到内存以保证在搜索和查询中对标量字段的快速访问。修改默认设置可能会导致性能下降。</p></li>
-<li><p>对于使用容量型 CU 的 Dedicated 集群而言，在加载 Collection时，只有向量字段索引被默认加载到内存以保障 Collection 容量的最大化。修改默认设置可能会因 Collection 缩小而出现内存不足（OOM）问题。</p></li>
-</ul>
+请谨慎修改 mmap 设置。不恰当的 mmap 策略可能会导致如下问题： 
+
+- 对于使用性能型 CU 的 Dedicated 集群而言，在加载 Collection 时，所有标量字段的原始数据和向量字段索引默认会被加载到内存以保证在搜索和查询中对标量字段的快速访问。修改默认设置可能会导致性能下降。
+
+- 对于使用容量型 CU 的 Dedicated 集群而言，在加载 Collection时，只有向量字段索引被默认加载到内存以保障 Collection 容量的最大化。修改默认设置可能会因 Collection 缩小而出现内存不足（OOM）问题。
 
 </Admonition>
 
@@ -147,7 +148,7 @@ schema.add_field(
 client.create_collection(collection_name="my_collection", schema=schema)
 
 # Disable mmap on an existing field
-# The following assumes that you have a collection named `my_collection`
+# The following assumes that you have a collection named \`my_collection\`
 client.alter_collection_field(
     collection_name="my_collection",
     field_name="doc_chunk",
@@ -270,7 +271,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -409,7 +410,7 @@ index_params.add_index(
 )
 
 # Change mmap settings for an index
-# The following assumes that you have a collection named `my_collection`
+# The following assumes that you have a collection named \`my_collection\`
 client.alter_index_properties(
     collection_name="my_collection",
     index_name="title",
@@ -458,7 +459,7 @@ await client.createIndex({
 });
 
 // Change mmap settings for an index
-// The following assumes that you have a collection named `my_collection`
+// The following assumes that you have a collection named \`my_collection\`
 await client.alterIndexProperties({
     collection_name: "my_collection",
     index_name: "title",

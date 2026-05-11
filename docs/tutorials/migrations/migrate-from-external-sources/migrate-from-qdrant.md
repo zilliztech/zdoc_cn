@@ -1,11 +1,12 @@
 ---
 title: "从 Qdrant 迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-qdrant
+sidebar_key: migrate-from-qdrant
 sidebar_label: "从 Qdrant 迁移"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文档介绍从 Qdrant 迁移时，Zilliz Cloud 如何处理数据类型映射、Payload 字段转换及 Collection 命名规则。 | Cloud"
 type: origin
@@ -110,7 +111,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Zilliz Cloud 采样 100 行数据检测 Payload 数据结构，必要时可手动添加字段。</p>
+Zilliz Cloud 采样 100 行数据检测 Payload 数据结构，必要时可手动添加字段。
 
 </Admonition>
 
@@ -174,47 +175,47 @@ Qdrant Payload 默认映射为 Dynamic Field 以实现最大灵活性，转换�
      <th><p>是否支持手动添加</p></th>
    </tr>
    <tr>
-     <td><p>Array\<Integer></p></td>
-     <td><p>ARRAY\<INT64></p></td>
+     <td><p>Array&lt;Integer&gt;</p></td>
+     <td><p>ARRAY&lt;INT64&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Float></p></td>
-     <td><p>ARRAY\<DOUBLE></p></td>
+     <td><p>Array&lt;Float&gt;</p></td>
+     <td><p>ARRAY&lt;DOUBLE&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Bool></p></td>
-     <td><p>ARRAY\<BOOL></p></td>
+     <td><p>Array&lt;Bool&gt;</p></td>
+     <td><p>ARRAY&lt;BOOL&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Keyword></p></td>
-     <td><p>ARRAY\<VARCHAR></p></td>
+     <td><p>Array&lt;Keyword&gt;</p></td>
+     <td><p>ARRAY&lt;VARCHAR&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Geo></p></td>
+     <td><p>Array&lt;Geo&gt;</p></td>
      <td><p>不支持</p></td>
      <td><p>Array 中的元素类型为 Geo 时暂不支持映射。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<Datetime></p></td>
-     <td><p>ARRAY\<VARCHAR></p></td>
+     <td><p>Array&lt;Datetime&gt;</p></td>
+     <td><p>ARRAY&lt;VARCHAR&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
    <tr>
-     <td><p>Array\<UUID></p></td>
-     <td><p>ARRAY\<VARCHAR></p></td>
+     <td><p>Array&lt;UUID&gt;</p></td>
+     <td><p>ARRAY&lt;VARCHAR&gt;</p></td>
      <td><p>支持添加为新的固定字段（不能从动态字段转换）。</p></td>
    </tr>
 </table>
 
 转换为固定字段后，可配置以下属性：
 
-- **Nullable**：决定字段是否接受空值（默认启用），详见 [Nullable 属性](./nullable-and-default#nullable-attribute)。
+- **Nullable**：决定字段是否接受空值（默认启用），详见 [Nullable 属性](./nullable-and-default)。
 
-- **默认值**：设置数据缺失时的回退值，详见[默认值](./nullable-and-default#default-values)。
+- **默认值**：设置数据缺失时的回退值，详见[默认值](./nullable-and-default)。
 
 - **Partition Key**：可将 INT64/VARCHAR 字段指定为 Partition Key（注意：每个 Collection 支持一个 Partition Key，且该字段不可为空），详见 [使用 Partition Key](./use-partition-key)。
 

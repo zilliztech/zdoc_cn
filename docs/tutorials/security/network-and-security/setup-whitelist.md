@@ -1,11 +1,12 @@
 ---
 title: "设置集群 IP 白名单 | Cloud"
 slug: /setup-whitelist
+sidebar_key: setup-whitelist
 sidebar_label: "设置集群 IP 白名单"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，白名单是项目级别的安全设置，适用于项目下的所有集群。设置后，仅白名单中的 IP 地址可以访问您项目下的所有集群。白名单能够有效降低受到恶意攻击的风险 | Cloud"
 type: origin
@@ -76,7 +77,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果未设置集群 IP 白名单，Zilliz Cloud 将允许所有 IP 地址访问项目集群。一旦添加了 CIDR ，仅CIDR 中的 IP 地址可以访问该集群。添加 0.0.0.0/0 的效果等同于未设置白名单。</p>
+如果未设置集群 IP 白名单，Zilliz Cloud 将允许所有 IP 地址访问项目集群。一旦添加了 CIDR ，仅CIDR 中的 IP 地址可以访问该集群。添加 0.0.0.0/0 的效果等同于未设置白名单。
 
 </Admonition>
 

@@ -1,11 +1,12 @@
 ---
 title: "过滤器参考 | Cloud"
 slug: /analyzer-filters
+sidebar_key: analyzer-filters
 sidebar_label: "过滤器参考"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本节介绍各过滤器的具体信息。 | Cloud"
 type: origin

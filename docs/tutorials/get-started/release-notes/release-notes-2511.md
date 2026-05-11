@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2025/11） | Cloud"
 slug: /release-notes-2511
+sidebar_key: release-notes-2511
 sidebar_label: "2025/11"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "版本说明书（2025/11） | Cloud"
 type: origin
 token: OzmBwYXzjiOFXlkqQxYc9Y0knWb
-sidebar_position: 4
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

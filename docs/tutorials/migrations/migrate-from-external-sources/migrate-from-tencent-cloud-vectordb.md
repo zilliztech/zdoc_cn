@@ -1,11 +1,12 @@
 ---
 title: "从腾讯云向量数据库迁移至 Zilliz Cloud | Cloud"
 slug: /migrate-from-tencent-cloud-vectordb
+sidebar_key: migrate-from-tencent-cloud-vectordb
 sidebar_label: "从腾讯云向量数据库迁移"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文档说明腾讯云向量数据库迁移过程中 Zilliz Cloud 的数据类型映射规则、JSON 字段转换机制及 Collection 命名规范。 | Cloud"
 type: origin
@@ -102,11 +103,11 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## JSON 字段转换说明
+## JSON 字段转换说明\{#json}
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Zilliz Cloud 采样 100 行数据检测 JSON 数据结构，必要时可手动添加字段。</p>
+Zilliz Cloud 采样 100 行数据检测 JSON 数据结构，必要时可手动添加字段。
 
 </Admonition>
 
@@ -148,9 +149,9 @@ import Admonition from '@theme/Admonition';
 
 转换为固定字段后，可配置以下属性：
 
-- **Nullable**：决定字段是否接受空值（默认启用），详见 [Nullable 属性](./nullable-and-default#nullable-attribute)。
+- **Nullable**：决定字段是否接受空值（默认启用），详见 [Nullable 属性](./nullable-and-default)。
 
-- **默认值**：设置数据缺失时的回退值，详见[默认值](./nullable-and-default#default-values)。
+- **默认值**：设置数据缺失时的回退值，详见[默认值](./nullable-and-default)。
 
 - **Partition Key**：可将 INT64/VARCHAR 字段指定为 Partition Key（注意：每个 Collection 支持一个 Partition Key，且该字段不可为空），详见 [使用 Partition Key](./use-partition-key)。
 

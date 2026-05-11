@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2025/12） | Cloud"
 slug: /release-notes-2512
+sidebar_key: release-notes-2512
 sidebar_label: "2025/12"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "版本说明书（2025/12） | Cloud"
 type: origin
 token: RkDPw7UlzivLdbkTSXecdUYEnbe
-sidebar_position: 3
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -103,7 +104,7 @@ import Grid from '@site/src/components/Grid';
 
         本次发布后，Volume 将支持如下两种计费方式：免费试用 Volume 以及按量计费 Volume。其中，按量计费版本将基于您的存储用量进行计费。
 
-        更多内容，可参考[了解 Volume](./volume-explained)、[管理 Volume (SDK)](./manage-stages) 以及[管理 Volume (控制台)](./manage-volumes-via-console)。
+        更多内容，可参考了解 Volume、管理 Volume (SDK) 以及管理 Volume (控制台)。
 
         ## 组织级 IP 白名单\{#organization-level-ip-access-allowlist}
 
@@ -147,7 +148,7 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        ## 支持阿里云新加坡区
+        ## 支持阿里云新加坡区\{#}
 
     </div>
 

@@ -1,16 +1,17 @@
 ---
 title: "多租户策略 | Cloud"
 slug: /multi-tenancy
+sidebar_key: multi-tenancy
 sidebar_label: "多租户策略"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，多租户（multi-tenancy）指多个客户或团队（即租户）共享同一个集群，同时保持各自数据环境的隔离。 | Cloud"
 type: origin
 token: H996wdrf3iU9vjkAARzcnA5enId
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz

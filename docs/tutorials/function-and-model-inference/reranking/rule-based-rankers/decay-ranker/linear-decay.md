@@ -1,11 +1,12 @@
 ---
 title: "线性衰减 | Cloud"
 slug: /linear-decay
+sidebar_key: linear-decay
 sidebar_label: "线性衰减"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "线性衰减会产生一条直线式的下降趋势，在搜索结果中终止于绝对零点。就像即将到来的活动倒计时，相关性会逐渐减弱，直到活动结束，线性衰减会随着项目偏离理想点而以可预测的、稳定的方式降低相关性，直到它们完全消失。当你希望有一个一致的衰减率和明确的截止点，确保超出一定边界的项目完全被排除在结果之外时，这种方法是理想的选择。 | Cloud"
 type: origin
@@ -90,11 +91,11 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>所有时间参数（<code>origin</code>、<code>offset</code>、<code>scale</code>）必须使用与 Collection 数据相同的单位。如果您的集合以不同的单位（毫秒、微秒）存储时间戳，请相应地调整所有参数。</p>
+所有时间参数（`origin`、`offset`、`scale`）必须使用与 Collection 数据相同的单位。如果您的集合以不同的单位（毫秒、微秒）存储时间戳，请相应地调整所有参数。
 
 </Admonition>
 
-![Wll6bZ6c9o8W23xoTiIc7EqXnJb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Wll6bZ6c9o8W23xoTiIc7EqXnJb.png)
+![Wll6bZ6c9o8W23xoTiIc7EqXnJb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Wll6bZ6c9o8W23xoTiIc7EqXnJb.png "Wll6bZ6c9o8W23xoTiIc7EqXnJb")
 
 上图展示了线性衰减将如何影响票务平台上的活动列表：
 
@@ -115,7 +116,7 @@ import TabItem from '@theme/TabItem';
 计算线性衰减分数的数学公式为：
 
 $$
-S(doc) = \max\left( \frac\{s - \max(0, |fieldvalue_{doc} - origin| - offset)}{s}, 0 \right)
+S(doc) = \max\left( \frac{s - \max(0, |fieldvalue_{doc} - origin| - offset)}{s}, 0 \right)
 $$
 
 其中：
@@ -144,17 +145,17 @@ $$
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考<a href="./tutorial-implement-time-based-ranking">教程：实现基于时间的搜索结果重排</a>。</p>
+在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考[教程：实现基于时间的搜索结果重排](./tutorial-implement-time-based-ranking)。
 
 </Admonition>
 
-### 创建一个衰减排序器
+### 创建一个衰减排序器\{#}
 
 在您的集合设置了一个数字字段（在本示例中，`event_date` 表示从现在起的秒数）之后，创建一个线性衰减排序器：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p><strong>时间单位一致性</strong>：使用基于时间的衰减时，确保 <code>origin</code>、<code>scale</code> 和 <code>offset</code> 参数使用与您的 Collection 中的数据使用相同的时间单位。如果您的 Collection 中的数据以秒为单位存储时间戳，则所有参数都使用秒。如果使用毫秒，则所有参数都使用毫秒。</p>
+**时间单位一致性**：使用基于时间的衰减时，确保 `origin`、`scale` 和 `offset` 参数使用与您的 Collection 中的数据使用相同的时间单位。如果您的 Collection 中的数据以秒为单位存储时间戳，则所有参数都使用秒。如果使用毫秒，则所有参数都使用毫秒。
 
 </Admonition>
 

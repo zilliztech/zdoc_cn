@@ -4,7 +4,7 @@ slug: /faq-cluster
 sidebar_label: "FAQ：集群"
 beta: FALSE
 notebook: FALSE
-description: " | CLOUD"
+description: "本文列举了在使用 Zilliz Cloud 集群时可能遇到的常见问题及对应解决方法。 | CLOUD"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 2
@@ -17,9 +17,9 @@ sidebar_position: 2
 
 ## 目录
 
-- [集群创建完成后，是否能够修改集群 CU 类型？](#can-i-change-the-cu-type-after-my-dedicated-cluster-is-created)
+- [集群创建完成后，是否能够修改集群类型？](#can-i-change-the-cluster-type-after-my-dedicated-cluster-is-created)
 - [集群创建完成后，是否能够修改集群的云服务地域？](#can-i-change-the-cloud-region-of-my-cluster-after-it-is-created)
-- [如何为集群缩容？](#how-can-i-scale-down-my-cluster-cu-size)
+- [如何为 Dedicated 集群缩容？](#how-can-i-scale-down-my-cluster-cu-size)
 - [为什么会连接超时以及如何处理连接超时报错？](#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud)
 - [为什么无法连接集群?](#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created)
 - [如何解决使用 Node.js SDK 无法连接 Zilliz Cloud 的问题?](#what-can-i-do-if-i-cannot-connect-to-zilliz-cloud-with-nodejs-sdk)
@@ -31,25 +31,25 @@ sidebar_position: 2
 
 
 
-### 集群创建完成后，是否能够修改集群 CU 类型？ \{#can-i-change-the-cu-type-after-my-dedicated-cluster-is-created}
+### 集群创建完成后，是否能够修改集群类型？ \{#can-i-change-the-cluster-type-after-my-dedicated-cluster-is-created}
 
-如需修改集群 CU 类型，请使用以下方案。
+如需修改集群类型，请使用以下方案。
 
-1. 创建 1 个新集群，选择合适的 CU 类型。使用[计算器](https://zilliz.com.cn/pricing#calculator)预估所需的新集群规格。
+1. 创建 1 个新集群，选择合适的集群类型。使用[计算器](https://zilliz.com.cn/pricing#calculator)预估所需的新集群规格。
 
 1. 将数据从原集群[迁移](./offline-migration)至新集群。或者，您也可以[联系我们](https://support.zilliz.com.cn/hc/zh-cn)帮助您在后台完成迁移。如需联系我们，请在工单中注明原集群和目标集群的信息。
 
 ### 集群创建完成后，是否能够修改集群的云服务地域？ \{#can-i-change-the-cloud-region-of-my-cluster-after-it-is-created}
 
-如需修改集群 CU 类型，请使用以下方案。
+如需修改集群地域，请使用以下方案。
 
 1. 创建 1 个新集群，选择合适的云服务地域。
 
 1. 将数据从原集群[迁移](./offline-migration)至新集群。或者，您也可以[联系我们](https://support.zilliz.com.cn/hc/zh-cn)帮助您在后台完成迁移。如需联系我们，请在工单中注明原集群和目标集群的信息。
 
-### 如何为集群缩容？ \{#how-can-i-scale-down-my-cluster-cu-size}
+### 如何为 Dedicated 集群缩容？ \{#how-can-i-scale-down-my-cluster-cu-size}
 
-如果您需要缩小集群 CU 大小，请先创建一个新集群，并在创建时选择您需要的 CU 大小。随后，将原集群中的数据[迁移](./offline-migration)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
+如果您需要缩小 Dedicated 集群的 Query CU 数量，请先创建一个新集群，并在创建时选择您需要的 Query CU 数量。随后，将原集群中的数据[迁移](./offline-migration)至新集群中。如在迁移过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 ### 为什么会连接超时以及如何处理连接超时报错？ \{#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud}
 
@@ -144,3 +144,5 @@ sidebar_position: 2
 ### 如何获取集群 URI？ \{#how-to-obtain-a-cluster-uri}
 
 在 Zilliz Cloud 中，集群 URI 是指集群的 Endpoint，可用于连接集群。您可以通过 Zilliz Cloud Web 控制台获取集群 URI。详情请见[连接集群](./connect-to-cluster#connect-to-a-cluster)。
+
+**能否将 Zilliz Cloud 连接到 Attu？**                                                                      可以。[Attu](https://github.com/zilliztech/attu) 是一款适用于 Milvus 和 Zilliz Cloud 的开源可视化管理工具，支持 Docker 容器或桌面应用等运行方式。连接时，在 Attu 登录页面输入 Zilliz Cloud 的公共 Endpoint 和 API 密钥（或以 username:password 格式输入集群凭证）即可。

@@ -1,11 +1,12 @@
 ---
 title: "Array 类型 | Cloud"
 slug: /use-array-fields
+sidebar_key: use-array-fields
 sidebar_label: "Array 类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Array 类型的字段用于存放相同数据类型的一组元素。如下示例展示了如何使用 Array 类型的字段存放数据。 | Cloud"
 type: origin
@@ -42,7 +43,7 @@ Array 类型的字段用于存放相同数据类型的一组元素。如下示�
 }
 ```
 
-## 相关限制
+## 相关限制\{#}
 
 - **默认值与空值**：Array 字段不支持设置默认值。但是您可以将 `nullable` 设置为 `True` 来允许元素为空值。具体可参考[Nullable 和默认值](./nullable-and-default)。
 
@@ -66,7 +67,7 @@ Array 类型的字段用于存放相同数据类型的一组元素。如下示�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您在定义 Schema 时将 <code>enabled_dynamic_fields</code> 设置为 <code>True</code>，您还可以在该 Collection 中插入 Schema 中未定义的字段。此操作可能会增加查询和管理的复杂性，并影响查询性能。更多详情，请参考 <a href="./enable-dynamic-field">Dynamic Field</a>。</p>
+如果您在定义 Schema 时将 `enabled_dynamic_fields` 设置为 `True`，您还可以在该 Collection 中插入 Schema 中未定义的字段。此操作可能会增加查询和管理的复杂性，并影响查询性能。更多详情，请参考 [Dynamic Field](./enable-dynamic-field)。
 
 </Admonition>
 
@@ -234,14 +235,14 @@ export schema="{
 
 index_params = client.prepare_index_params()
 
-# Index `age` with AUTOINDEX
+# Index \`age\` with AUTOINDEX
 index_params.add_index(
     field_name="tags",
     index_type="AUTOINDEX",
     index_name="tags_index"
 )
 
-# Index `embedding` with AUTOINDEX and specify similarity metric type
+# Index \`embedding\` with AUTOINDEX and specify similarity metric type
 index_params.add_index(
     field_name="embedding",
     index_type="AUTOINDEX",  # Use automatic indexing to simplify complex index settings
@@ -554,7 +555,7 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
-# Query to exclude entities where `tags` is not null
+# Query to exclude entities where \`tags\` is not null
 
 filter = 'tags IS NOT NULL'
 

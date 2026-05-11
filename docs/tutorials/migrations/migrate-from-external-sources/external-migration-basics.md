@@ -1,11 +1,12 @@
 ---
 title: "外部迁移概述 | Cloud"
 slug: /external-migration-basics
+sidebar_key: external-migration-basics
 sidebar_label: "外部迁移概述"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "外部迁移功能简化了将向量数据库和搜索系统迁移至 Zilliz Cloud 的过程。无论您是从 Qdrant 等向量数据库迁移，还是从 Elasticsearch、OpenSearch 等支持向量的搜索引擎迁移，Zilliz Cloud 均提供迁移工具，在确保数据完整性的同时最大限度降低迁移复杂度。 | Cloud"
 type: origin
@@ -233,7 +234,7 @@ Zilliz Cloud 支持从主流向量数据库和搜索平台迁移：
 
 <Supademo id="cmhmtjeff0dexdqxa2qqkdsds" title="Zilliz Cloud - 设置 Full Text Search" />
 
-## 平台专属迁移指南
+## 平台专属迁移指南\{#}
 
 各平台详细操作流程、前置条件及数据映射说明：
 

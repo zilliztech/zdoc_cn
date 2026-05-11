@@ -1,16 +1,17 @@
 ---
 title: "版本说明书（2023/08/21） | Cloud"
 slug: /release-notes-210
+sidebar_key: release-notes-210
 sidebar_label: "2023/08/21"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "我们很高兴地宣布Zilliz Cloud 2.1.0的发布。此版本引入了一系列增强和功能，包括 RESTful API 接口和阿里云云市场。 | Cloud"
 type: origin
 token: DsIxwJXnJiM2k7klUY0cr5dunBh
-sidebar_position: 24
+sidebar_position: 26
 keywords: 
   - 向量数据库
   - zilliz
@@ -27,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 我们很高兴地宣布Zilliz Cloud 2.1.0的发布。此版本引入了一系列增强和功能，包括 RESTful API 接口和阿里云云市场。
 
-## Milvus 兼容性
+## Milvus 兼容性\{#milvus}
 
 此次发布兼容 **Milvus 2.1.x**。
 

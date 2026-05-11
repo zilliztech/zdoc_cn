@@ -1,11 +1,12 @@
 ---
 title: "Struct Array | Cloud"
 slug: /use-array-of-structs
+sidebar_key: use-array-of-structs
 sidebar_label: "Struct Array"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "Struct Array 用于有序存放元素数据类型为 Struct 的 Array。Array 中的每个 Struct 共享同一个 Schema，可包含多个向量和标量字段。 | Cloud"
 type: origin
@@ -198,7 +199,7 @@ struct_schema.add_field("chapter", DataType.VARCHAR, max_length=512)
 struct_schema.add_field("text_vector", DataType.FLOAT_VECTOR, mmap_enabled=True, dim=5)
 
 # reference the struct schema in an Array field with its 
-# element type set to `DataType.STRUCT`
+# element type set to \`DataType.STRUCT\`
 schema.add_field("chunks", datatype=DataType.ARRAY, element_type=DataType.STRUCT, 
                     struct_schema=struct_schema, max_capacity=1000)
 # highlight-end
@@ -539,14 +540,7 @@ client.create_collection(
 <TabItem value='java'>
 
 ```java
-import io.milvus.v2.client.ConnectConfig;
-import io.milvus.v2.client.MilvusClientV2;
 import io.milvus.v2.service.collection.request.CreateCollectionReq;
-
-MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
-        .uri("YOUR_CLUSTER_ENDPOINT")
-        .token("YOUR_CLUSTER_TOKEN")
-        .build());
 
 CreateCollectionReq requestCreate = CreateCollectionReq.builder()
         .collectionName("my_collection")
@@ -840,8 +834,9 @@ client.insert(collection_name="my_collection", data=data)
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Zilliz Cloud 提供了 <code>EmbeddingList</code> 对象，帮助您在针对 Struct Array 字段中的 EmbeddingList 进行相似性搜索时组织查询向量。每个 EmbeddingList 需要包含至少一个向量，并返回一组结果。</p>
-<p><code>EmbeddingList</code> 仅可用于 <code>search()</code> 请求中。但不支持 Range Search 或 Grouping Search。也不支持在 <code>search_iterator()</code> 中使用。</p>
+Zilliz Cloud 提供了 `EmbeddingList` 对象，帮助您在针对 Struct Array 字段中的 EmbeddingList 进行相似性搜索时组织查询向量。每个 EmbeddingList 需要包含至少一个向量，并返回一组结果。
+
+`EmbeddingList` 仅可用于 `search()` 请求中。但不支持 Range Search 或 Grouping Search。也不支持在 `search_iterator()` 中使用。
 
 </Admonition>
 

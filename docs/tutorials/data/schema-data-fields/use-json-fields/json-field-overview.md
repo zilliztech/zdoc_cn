@@ -1,11 +1,12 @@
 ---
 title: "JSON 概述 | Cloud"
 slug: /json-field-overview
+sidebar_key: json-field-overview
 sidebar_label: "JSON 概述"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在构建产品目录、内容管理系统或用户偏好引擎等应用时，你通常需要在向量 Embedding 的同时存储灵活的元数据。产品属性会因品类而异，用户偏好会随时间变化，文档属性可能包含复杂的嵌套结构。 | Cloud"
 type: origin
@@ -25,7 +26,8 @@ keywords:
 ---
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # JSON 概述
 
@@ -64,7 +66,7 @@ JSON 字段是 Zilliz Cloud 中一种通过模式定义的数据类型（`DataTy
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p><strong>命名规范</strong>：JSON 键只能使用字母、数字和下划线。避免使用特殊字符、空格或点号，否则可能导致查询解析错误。</p>
+**命名规范**：JSON 键只能使用字母、数字和下划线。避免使用特殊字符、空格或点号，否则可能导致查询解析错误。
 
 </Admonition>
 
@@ -96,7 +98,7 @@ JSON 字段是 Zilliz Cloud 中一种通过模式定义的数据类型（`DataTy
    <tr>
      <td><p><strong>查询方式</strong></p></td>
      <td><p>使用字段名或 JSON 字段中的目标键进行查询：<code>metadata["key"]</code></p></td>
-     <td><p>可直接使用动态字段键 <code>"dynamic_key"</code>，或通过 <code>&#36;meta</code> 引用：<code>&#36;meta["dynamic_key"]</code></p></td>
+     <td><p>可直接使用动态字段键 <code>"dynamic_key"</code>，或通过 <code>$meta</code> 引用：<code>$meta["dynamic_key"]</code></p></td>
    </tr>
 </table>
 
@@ -113,6 +115,9 @@ JSON 字段是 Zilliz Cloud 中一种通过模式定义的数据类型（`DataTy
 ### 定义 JSON 字段\{#1-define-json-field}
 
 要使用 JSON 字段，你需要在创建集合时显式地在 Collection Schema 中定义它。以下示例展示了如何创建一个包含 `metadata` 字段（类型为 `DataType.JSON`）的 Collection：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -141,15 +146,53 @@ client.create_collection(
 )
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在此示例中，集合模式中定义的 JSON 字段通过设置 <code>nullable=True</code> 允许空值。详情请参见 <a href="./nullable-and-default">Nullable 和默认值</a>。</p>
+在此示例中，集合模式中定义的 JSON 字段通过设置 `nullable=True` 允许空值。详情请参见 [Nullable 和默认值](./nullable-and-default)。
 
 </Admonition>
 
 ### 插入数据\{#2-insert-data}
 
 Collection 创建完成后，在指定的 JSON 字段中插入包含结构化 JSON 对象的实体。你的数据格式应为字典列表。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 entities = [
@@ -180,6 +223,41 @@ entities = [
 client.insert(collection_name="product_catalog", data=entities)
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
 ### 过滤操作\{#3-filtering-operations}
 
 在对 JSON 字段执行过滤操作之前，请确保：
@@ -191,6 +269,9 @@ client.insert(collection_name="product_catalog", data=entities)
 <details>
 
 <summary>显示代码</summary>
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 index_params = client.prepare_index_params()
@@ -206,6 +287,41 @@ client.create_index(collection_name="product_catalog", index_params=index_params
 client.load_collection(collection_name="product_catalog")
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
 </details>
 
 当满足以上条件后，你就可以使用以下表达式，根据 JSON 字段中的值对 Collection 进行过滤。这些过滤表达式利用了特定的JSON 路径语法和专用运算符。
@@ -219,6 +335,9 @@ client.load_collection(collection_name="product_catalog")
 `json_field_name["key1"]["key2"]`
 
 要过滤出 `category` 为 `"electronics"` 的数据：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 # Define filter expression
@@ -234,7 +353,45 @@ client.search(
 )
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
 要过滤出嵌套键 `supplier["country"]` 等于 `"USA"` 的数据：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 # Define filter expression
@@ -252,6 +409,41 @@ res = client.search(
 print(res)
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
 #### 使用 JSON 专用运算符进行过滤\{#filtering-with-json-specific-operators}
 
 Zilliz Cloud 还提供了一些专门用于查询 JSON 字段中数组值的运算符，例如：
@@ -263,6 +455,9 @@ Zilliz Cloud 还提供了一些专门用于查询 JSON 字段中数组值的运�
 - `json_contains_any(identifier, expr)`：筛选出字段中至少包含 JSON 表达式中一个元素的实体
 
 要查找 `tags` 键下包含 `"summer_sale"` 值的产品：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 # Define filter expression
@@ -280,7 +475,45 @@ res = client.search(
 print(res)
 ```
 
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
 要查找在 `tags` 键下至少包含 `"electronics"`、`"new"` 或 `"clearance"` 其中一个值的产品：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 # Define filter expression
@@ -297,6 +530,41 @@ res = client.search(
 
 print(res)
 ```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
 
 有关更多信息，请参考 [JSON 操作符](./json-filtering-operators)。
 

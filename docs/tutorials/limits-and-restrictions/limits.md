@@ -1,11 +1,12 @@
 ---
 title: "使用限制 | Cloud"
 slug: /limits
+sidebar_key: limits
 sidebar_label: "使用限制"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍了 Zilliz Cloud 平台和集群的使用限制信息。如需了解更多限制信息，可向我们提交请求。 | Cloud"
 type: origin
@@ -115,9 +116,14 @@ import Admonition from '@theme/Admonition';
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>Volume</p></td>
+     <td><p>内部 Volume</p></td>
      <td><p>100</p></td>
-     <td><p>每个组织中可创建最多 100 个 Volume。</p></td>
+     <td><p>每个组织中可创建最多 100 个内部 Volume。</p></td>
+   </tr>
+   <tr>
+     <td><p>外部 Volume</p></td>
+     <td><p>100</p></td>
+     <td><p>每个组织中可创建最多 100 个外部 Volume。</p></td>
    </tr>
 </table>
 
@@ -156,19 +162,24 @@ import Admonition from '@theme/Admonition';
          <th><p><strong>描述</strong></p></th>
        </tr>
        <tr>
-         <td><p>Free</p></td>
+         <td><p>Serving - Free</p></td>
          <td><p>1</p></td>
          <td><p>不论是否绑定有效支付方式，每个组织中最多只可创建一个 Free 集群。如需创建新的 Free 集群，请先删除现有的 Free 集群。</p></td>
        </tr>
        <tr>
-         <td><p>Serverless</p></td>
-         <td><p>无</p></td>
-         <td><p>无</p></td>
+         <td><p>Serving - Serverless</p></td>
+         <td><p>100</p></td>
+         <td><p>每个项目中最多创建 100 个 Serving 的 Serverless 集群。</p></td>
        </tr>
        <tr>
-         <td><p>Dedicated</p></td>
-         <td><p>CU 规格总和 &lt; 320</p></td>
-         <td><p>每个组织中的 Dedicated 集群数量上线取决于集群的 CU 规格。组织中所有集群的 CU 规格总和不得超过 320 CU。</p></td>
+         <td><p>Serving - Dedicated</p></td>
+         <td><p>100</p></td>
+         <td><p>每个项目中最多创建 100 个 Serving 的 Dedicated 集群。</p></td>
+       </tr>
+       <tr>
+         <td><p>On-demand</p></td>
+         <td><p>20</p></td>
+         <td><p>每个项目中最多创建 100 个 On-demand 集群。</p></td>
        </tr>
     </table>
 
@@ -183,13 +194,18 @@ import Admonition from '@theme/Admonition';
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>Dedicated</p></td>
-     <td><p>CU 规格 &ast; Replica 数量 &lt;=256</p></td>
-     <td><p>在自助操作时，单个集群最多使用 256 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+     <td><p>Serving-Dedicated</p></td>
+     <td><p>CU 规格 &ast; Replica 数量 &lt;=20480</p></td>
+     <td><p>在自助操作时，单个 Serving-Dedicated 集群最多使用 2048 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 20480。</p></td>
+   </tr>
+   <tr>
+     <td><p>On-demand</p></td>
+     <td><p>8&lt;= CU 规格 &lt;= 256</p></td>
+     <td><p>自助操作时，单个 On-demand 集群的 CU 配置范围为 8–256。</p></td>
    </tr>
 </table>
 
-如需创建超过 256 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
+如需创建超过 2048 个 CU 规格的集群，请[联系我们](https://zilliz.com.cn/contact-sales?firstname=xushuang&lastname=hu&company=Zilliz&name=Zilliz&email=xushuang.hu@zilliz.com&fullname=hu%20xushuang&phone=--&country=)。
 
 ### vCU\{#vcus}
 
@@ -233,21 +249,21 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Dedicated 集群的容量上限会根据您选择的 CU 类型与 CU 大小的不同而发生变化。如果容量不足，可以尝试调整 CU 类型和大小。具体操作步骤，可以参考<a href="./scale-cluster">集群扩缩容</a>。</p>
+Dedicated 集群的容量上限会根据您选择的 CU 类型与 CU 大小的不同而发生变化。如果容量不足，可以尝试调整 CU 类型和大小。具体操作步骤，可以参考[集群扩缩容](./scale-cluster)。
 
 </Admonition>
 
 ## Database\{#databases}
 
-- 仅 Dedicated 集群支持创建 Database。
+- 每个 Serving-Dedicated 集群中最多可创建 1024 个 Database。
 
-- 每个 Dedicated 集群中最多可创建 1024 个 Database。
+- 每个 项目中最多可创建 100 个 按需计算的 Database。
 
 - 默认的 Default Database 不可删除。
 
 ## Replica\{#replicas}
 
-如需添加 Replica，集群规格需要为 **8 CU 或以上**。此外，Replica 功能还具有以下限制
+如需添加 Replica，集群规格需要为 **12 CU 或以上**。此外，Replica 功能还具有以下限制
 
 <table>
    <tr>
@@ -261,9 +277,9 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
      <td><p>每个集群最多可添加 10 个 Replica。</p></td>
    </tr>
    <tr>
-     <td><p>Replica 数量 &ast; CU 规格</p></td>
-     <td><p>&lt;= 256</p></td>
-     <td><p>CU 规格与 Replica 数量的乘积不得超过 256。</p></td>
+     <td><p>Query CU x Replica 数量</p></td>
+     <td><p>20480</p></td>
+     <td><p>每个集群的 Query CU x Replica 数量不得超过 20480</p></td>
    </tr>
 </table>
 
@@ -278,6 +294,16 @@ vCU 是用于衡量读取（如 search、query）和写入操作（如 insert、
 - 集群中所有 Collection 中的 Partition 的总数量应该在 4,096 和集群的 CU 数量之积与 65,536 间取最小值。
 
 - 上述条件需同时满足。
+
+<Admonition type="info" icon="📘" title="说明">
+
+对于 **Free** 和 **Serverless** 集群，执行如下限制：
+
+- 单个 **Free** 集群支持最多 **5** 个 Collection。
+
+- 单个 **Serverless** 集群支持最多 **100** 个 Collection。
+
+</Admonition>
 
 ### 字段\{#fields}
 
@@ -363,16 +389,14 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
 
 下文将介绍 Zilliz Cloud 集群中常见数据操作的速率限制。
 
-### Insert\{#insert}
+### Insert 和 Upsert\{#insert-and-upsert}
 
-每个插入请求/响应的大小不应超过 64 MB。
-
-速率限制根据集群类型和 CU 数量而有所不同。以下表格列出了插入操作的速率限制。
+速率限制根据集群部署方式和 CU 数量而有所不同。以下表格列出了插入操作的速率限制。
 
 <table>
    <tr>
      <th></th>
-     <th><p><strong>Insert 最大速率限制</strong></p></th>
+     <th><p><strong>Insert 和 Upsert 最大速率限制</strong></p></th>
    </tr>
    <tr>
      <td><p>Free 版集群</p></td>
@@ -383,91 +407,32 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
      <td><p>10 MB/s</p></td>
    </tr>
    <tr>
-     <td><p>Dedicated 版集群 1-2 CU</p></td>
-     <td><p>8 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 4-8 CU</p></td>
-     <td><p>12 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 12-20 CU</p></td>
-     <td><p>16 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 [24 CU, 64 CU)</p></td>
-     <td><p>24 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 [64CU, 128 CU)</p></td>
-     <td><p>36 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 [128 CU, 256 CU)</p></td>
-     <td><p>48 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 &gt;= 256 CU</p></td>
-     <td><p>64 MB/s</p></td>
+     <td><p>Dedicated 版集群</p></td>
+     <td><p>16 MB/s + 1 MB/s × CU</p><p>最高不超过 256 MB/s。</p></td>
    </tr>
 </table>
 
-在插入数据时，请确保包含所有在 Schema 中已定义的字段。如果 Collection 启用了 AutoID，则排除主键。
+示例：
 
-为了使插入的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
+- `1 CU`: `17 MB/s`
 
-### Upsert\{#upsert}
+- `8 CUs`: `24 MB/s`
 
-每个 Upsert 请求/响应的大小不应超过 64 MB。
+- `64 CUs`: `80 MB/s`
 
-速率限制根据集群类型和 CU 数量而有所不同。以下表格列出了 Upsert 操作的速率限制。
+- `240 CUs`: `256 MB/s`
 
-<table>
-   <tr>
-     <th></th>
-     <th><p>Upsert 最大速率限制</p></th>
-   </tr>
-   <tr>
-     <td><p>Free 版集群</p></td>
-     <td><p>2 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Serverless 版集群</p></td>
-     <td><p>10 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 1-2 CU</p></td>
-     <td><p>8 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 4-8 CU</p></td>
-     <td><p>12 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 12-20 CU</p></td>
-     <td><p>16 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 [24 CU, 64 CU)</p></td>
-     <td><p>24 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 [64CU, 128 CU)</p></td>
-     <td><p>36 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 [128 CU, 256 CU)</p></td>
-     <td><p>48 MB/s</p></td>
-   </tr>
-   <tr>
-     <td><p>Dedicated 版集群 &gt;= 256 CU</p></td>
-     <td><p>64 MB/s</p></td>
-   </tr>
-</table>
+- `>= 240 CUs`: 最高 `256 MB/s`
 
-在 Upsert 数据时，请确保包含所有在 Schema 中已定义的字段。
+此外，还适用以下额外限制：
 
-为了使 Upsert 的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
+- 单个 shard 的写入速率不得超过 32 MB/s。
+
+- 在 Insert 数据时，请确保包含所有在 Schema 中已定义的字段。如果 Collection 启用了 AutoID，则排除主键。
+
+- 在 Upsert 数据时，请确保包含所有在 Schema 中已定义的字段。
+
+- 为了使 Insert 或 Upsert 的数据能够立即被检索到，建议将搜索或查询请求中的一致性级别更改为 **Strong**。详细信息，请参阅[一致性水平](./consistency-level)。
 
 ### Index\{#index}
 
@@ -511,7 +476,7 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>不建议您手动执行 Flush 操作。Zilliz Cloud 会自动优雅地处理数据 Flush 操作。</p>
+不建议您手动执行 Flush 操作。Zilliz Cloud 会自动优雅地处理数据 Flush 操作。
 
 </Admonition>
 
@@ -521,7 +486,7 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>对于已加载的 Collection，即使有新数据插入，您无需重复执行加载操作。</p>
+对于已加载的 Collection，即使有新数据插入，您无需重复执行加载操作。
 
 </Admonition>
 
@@ -630,9 +595,14 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
      <th><p><strong>描述</strong></p></th>
    </tr>
    <tr>
-     <td><p>IP 地址 (CIDR)</p></td>
+     <td><p>控制台 IP 白名单</p></td>
      <td><p>100</p></td>
-     <td><p>IP 白名单中最多可添加 100 个 IP 地址。</p></td>
+     <td><p>控制台 IP 白名单中最多可添加 100 个 IP 地址。</p></td>
+   </tr>
+   <tr>
+     <td><p>集群 IP 白名单</p></td>
+     <td><p>100</p></td>
+     <td><p>集群 IP 白名单中最多可添加 100 个 IP 地址。</p></td>
    </tr>
 </table>
 

@@ -1,11 +1,12 @@
 ---
 title: "删除 Collection | Cloud"
 slug: /drop-collection
+sidebar_key: drop-collection
 sidebar_label: "删除 Collection"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "当 Collection 不再使用时，可以考虑删除 Collection。 | Cloud"
 type: origin

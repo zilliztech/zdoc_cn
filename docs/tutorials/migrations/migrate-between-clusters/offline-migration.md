@@ -1,11 +1,12 @@
 ---
 title: "离线迁移 | Cloud"
 slug: /offline-migration
+sidebar_key: offline-migration
 sidebar_label: "离线迁移"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "离线迁移允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。 | Cloud"
 type: origin
@@ -31,8 +32,6 @@ import Supademo from '@site/src/components/Supademo';
 
 **离线迁移**允许您在计划的停机时间内，将现有集群数据从源集群迁移到目标集群。此方法支持在同一组织内或不同组织之间进行迁移，适用于可以接受短暂停机的场景，例如计划维护或小规模数据库迁移。
 
-如果您的迁移需要保持读写不中断，请参考[零停机迁移](./zero-downtime-migration)。
-
 ## 迁移能力\{#migration-capabilities}
 
 ### 集群兼容性\{#cluster-compatibility}
@@ -52,13 +51,13 @@ import Supademo from '@site/src/components/Supademo';
    <tr>
      <td><p>Free</p></td>
      <td><p>不支持</p></td>
-     <td><p>请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a></p></td>
-     <td><p>请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a></p></td>
+     <td><p>不支持</p><p>（仅支持从 Free 集群升级至 Serverless 集群。具体操作请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a>）</p></td>
+     <td><p>支持</p><p>（支持从 Free Cluster 升级至 Dedicated 集群。具体操作请参考<a href="./manage-cluster#upgrade-deployment-option">管理集群</a>）</p></td>
    </tr>
    <tr>
      <td><p>Serverless</p></td>
      <td><p>不支持</p></td>
-     <td><p>不支持</p></td>
+     <td><p>支持</p></td>
      <td><p>支持</p></td>
    </tr>
    <tr>
@@ -149,7 +148,7 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>迁移后的 Collection 无法立即执行 Search/Query，您必须在 Zilliz Cloud 中手动 Load Collection 以启用相关功能。操作详情见 <a href="./load-release-collections">Load 和 Release</a>。</p>
+迁移后的 Collection 无法立即执行 Search/Query，您必须在 Zilliz Cloud 中手动 Load Collection 以启用相关功能。操作详情见 [Load 和 Release](./load-release-collections)。
 
 </Admonition>
 

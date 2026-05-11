@@ -1,11 +1,12 @@
 ---
 title: "Cron 表达式 | Cloud"
 slug: /cron-expression
+sidebar_key: cron-expression
 sidebar_label: "Cron 表达式"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Cron 表达式用于定义系统执行自动扩缩容任务的调度计划。 | Cloud"
 type: origin

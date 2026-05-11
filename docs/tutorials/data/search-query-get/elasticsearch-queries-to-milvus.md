@@ -1,16 +1,17 @@
 ---
 title: "Elasticsearch 查询语句转换 | Cloud"
 slug: /elasticsearch-queries-to-milvus
+sidebar_key: elasticsearch-queries-to-milvus
 sidebar_label: "Elasticsearch 查询语句转换"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "基于 Apache Lucene 构建的 Elasticsearch 是领先的开源搜索引擎。然而，它在现代 AI 应用程序中面临挑战，包括高更新成本、较差的实时性能、低效的分片管理、非云原生设计以及过度的资源需求。作为云原生向量数据库，Zilliz Cloud 通过解耦的存储和计算、高维数据的高效索引以及与现代基础设施的无缝集成克服了这些问题，并为 AI 工作负载提供了卓越的性能和可扩展性。 | Cloud"
 type: origin
 token: QOwXwYCBMiR8pQkHDcKcL3z3nDh
-sidebar_position: 13
+sidebar_position: 15
 keywords: 
   - 向量数据库
   - zilliz
@@ -154,14 +155,14 @@ res = client.search(
 Elasticsearch 不支持非评分的 Match 查询，所有的 Match 查询都会生成相关性得分。然而，在 Zilliz Cloud 中，您可以通过结合使用 `TEXT_MATCH` 操作符，来实现精确的关键词匹配过滤，从而增强向量检索的效果。这种方法可以确保检索结果包含特定词项，从而提高召回率。
 
 ```python
-# Filter entities whose message value contains the exact terms `Jamaica`
+# Filter entities whose message value contains the exact terms \`Jamaica\`
 filter = "TEXT_MATCH(message, 'Jamaica')"
 
 # Assuming 'message_vector' is the vector field and 'message' is the VARCHAR field
 result = Zilliz CloudClient.search(
     collection_name="my_collection", 
     anns_field="message_vector", 
-    data=[[1, -2.5, 3]], # vector embeddings of the phrase `How is the weather in Jamaica?` 
+    data=[[1, -2.5, 3]], # vector embeddings of the phrase \`How is the weather in Jamaica?\` 
     filter=filter,
     
     limit=10, 

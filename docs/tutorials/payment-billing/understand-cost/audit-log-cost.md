@@ -1,16 +1,17 @@
 ---
 title: "审计日志费用 | Cloud"
 slug: /audit-log-cost
+sidebar_key: audit-log-cost
 sidebar_label: "审计日志"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，当您启用审计日志功能时，系统会部署日志服务。日志的采集、处理与转发过程会消耗额外的系统资源，因此会产生相应的费用。 | Cloud"
 type: origin
 token: HrONwUQ4riQnbgkZGY0ceLp9nUg
-sidebar_position: 5
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -55,7 +56,7 @@ import Admonition from '@theme/Admonition';
 - **审计日志运行时长**：审计日志功能启用的总时长。计算方式为：`运行时长 = 停用时间点 − 启用时间点`。
  如果集群处于 “已挂起” 状态，则这段时间不计入运行时长，因为此时审计日志功能不消耗计算资源。点击[此处](./audit-log-cost#example)查看运行时长计算示例。
 
-## 数据传输费用
+## 数据传输费用\{#}
 
 您可以将审计日志转发到指定的云服务对象存储桶。目前，Zilliz Cloud 仅支持将日志转发到与集群位于同一云地域的对象存储桶。
 

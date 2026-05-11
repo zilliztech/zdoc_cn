@@ -1,11 +1,12 @@
 ---
 title: "插入 Entity | Cloud"
 slug: /insert-entities
+sidebar_key: insert-entities
 sidebar_label: "插入 Entity"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Collection 中的 Entity 是指共享相同字段集的数据记录。存储在每个字段中的一条数据组成一个 Entity。本节介绍如何向 Collection 中插入一条数据以及在插入 Entity 时的相关注意事项。 | Cloud"
 type: origin
@@ -32,9 +33,7 @@ Collection 中的 Entity 是指共享相同字段集的数据记录。存储在�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><strong>重复数据处理</strong>：标准的 <code>insert</code> 操作并不会检查主键重复的记录。如果您在插入数据时指定了一个重复的主键，仍然会创建一个新的 Entity，从而导致重复数据和潜在的应用问题。您可以通过使用 <code>upsert</code> 操作来更新相关 Entity 或修复重复主键的问题。更多内容，可以参阅 <a href="./upsert-entities">Upsert Entity</a>。</li>
-</ul>
+- **重复数据处理**：标准的 `insert` 操作并不会检查主键重复的记录。如果您在插入数据时指定了一个重复的主键，仍然会创建一个新的 Entity，从而导致重复数据和潜在的应用问题。您可以通过使用 `upsert` 操作来更新相关 Entity 或修复重复主键的问题。更多内容，可以参阅 [Upsert Entity](./upsert-entities)。
 
 </Admonition>
 
@@ -188,7 +187,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })

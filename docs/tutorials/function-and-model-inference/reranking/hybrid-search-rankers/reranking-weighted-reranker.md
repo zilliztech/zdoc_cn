@@ -1,11 +1,12 @@
 ---
 title: "Weighted Ranker | Cloud"
 slug: /reranking-weighted-reranker
+sidebar_key: reranking-weighted-reranker
 sidebar_label: "Weighted Ranker"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Weighted Ranker 通过为每个搜索路径分配不同的重要性权重，智能地组合来自多个搜索路径的结果并进行优先级排序。就像一位技艺娴熟的厨师平衡多种食材以烹制出完美菜肴一样，Weighted Ranker 平衡不同的搜索结果，以提供最相关的结果组合。这种方法适用于当多个向量字段或模态中进行搜索的情形。因为在这些情况下，某些字段对最终排名的贡献可能会比其他字段更大。 | Cloud"
 type: origin
@@ -228,7 +229,7 @@ WeightedRanker 策略的主要工作流程如下：
 
 使用 WeightedRanker 策略时，需要输入权重值。输入的权重值数量应与混合搜索中基本 ANN 搜索请求的数量相对应。输入的权重值应在 [0,1] 范围内，值越接近 1 表示重要性越高。
 
-### 创建 Weighted Ranker{}
+### 创建 Weighted Ranker{}\{#weighted-ranker}
 
 例如，假设混合搜索中有两个基本的 ANN 搜索请求：文本搜索和图像搜索。如果认为文本搜索更重要，则应赋予其更大的权重。
 
@@ -361,7 +362,10 @@ Weighted Ranker 专为结合多个向量字段的混合搜索操作而设计。�
 from pymilvus import MilvusClient, AnnSearchRequest
 
 # Connect to Milvus server
-milvus_client = MilvusClient(uri="YOUR_CLUSTER_ENDPOINT")
+milvus_client = MilvusClient(
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
+)
 
 # Assume you have a collection setup
 
@@ -408,6 +412,7 @@ import io.milvus.v2.service.vector.request.data.FloatVec;
 
 MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
         .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
         .build());
         
 List<AnnSearchReq> searchRequests = new ArrayList<>();
@@ -439,7 +444,10 @@ SearchResp searchResp = client.hybridSearch(hybridSearchReq);
 ```javascript
 import { MilvusClient, FunctionType } from "@zilliz/milvus2-sdk-node";
 
-const milvusClient = new MilvusClient({ address: "YOUR_CLUSTER_ENDPOINT" });
+const milvusClient = new MilvusClient({ 
+    address: "YOUR_CLUSTER_ENDPOINT",
+    token: "YOUR_CLUSTER_TOKEN"
+});
 
 const text_search = {
   data: ["modern dining table"],

@@ -1,16 +1,17 @@
 ---
 title: "Query | Cloud"
 slug: /get-and-scalar-query
+sidebar_key: get-and-scalar-query
 sidebar_label: "Query"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 除了支持 ANN Search 外，还提供基于标量的过滤查询功能。本节将介绍如何使用 Query、Get 和 QueryIterator 进行标量查询以及进行标量查询时的注意事项。 | Cloud"
 type: origin
 token: GMOpwnUH0iYRN1kbRidcET0cnKg
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -169,7 +170,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -236,6 +237,8 @@ curl --request POST \
 </Tabs>
 
 ## 使用 Query\{#use-query}
+
+### 基础 Query\{#basic-query}
 
 当您需要根据自定义条件查询，且返回所有或指定数量的符合条件的 Entity 时，可以使用 Query 方法。如下代码示例中假设 Collection 有 `id`、`vector` 和 `color` 三个字段。要求返回三个 `color` 以 `red` 开头的 Entity。
 
@@ -348,9 +351,19 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 使用 QueryIterator\{#use-query-iterator}
+### 对查询结果排序\{#sort-query-results} | 公测
 
-当您需要根据自定义条件查询，且分页返回所有符合条件的 Entity，可以使用 QueryIterator 创建一个迭代器。然后使用迭代器的 `next()` 方法循环遍历所有符合条件的 Entity。如下代码示例中假设 Collection 有 `id`、`vector` 和 `color` 三个字段。要求返回所有 `color` 以 `red` 开头的 Entity。
+默认情况下，Query 返回结果的顺序不固定。使用 `order_by` 参数可以按一个或多个标量字段对结果排序。
+
+- `order_by` 必须与 `limit` 一起使用。
+
+- 支持的字段类型包括：INT8、INT16、INT32、INT64、FLOAT、DOUBLE 和 VARCHAR。不支持按向量、JSON 或 ARRAY 字段排序。
+
+- 按可为 `NULL` 的字段排序时，升序排序会将 `NULL` 值放在末尾（NULLS LAST），降序排序会将 `NULL` 值放在开头（NULLS FIRST）。
+
+#### 基础排序\{#basic-sort}
+
+向 `order_by` 参数传入一个 `"field_name:direction"` 字符串列表，其中 `direction` 为 `asc`（升序）或 `desc`（降序）。注意，`asc` 和 `desc` 区分大小写。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -363,6 +376,180 @@ client = MilvusClient(
     token="YOUR_CLUSTER_TOKEN"
 )
 
+# Sort results by id in ascending order
+res = client.query(
+    collection_name="my_collection",
+    filter="color like \"red%\"",
+    output_fields=["vector", "color"],
+    limit=3,
+    # highlight-next-line
+    order_by=["id:asc"],
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+#### 多字段排序\{#multi-field-sort}
+
+您可以同时按多个字段排序。结果会先按列表中的第一个字段排序。当两条结果在该字段上的值相同时，再由第二个字段决定它们的顺序，依此类推。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+# Sort by rating descending, then by price ascending for ties
+res = client.query(
+    collection_name="my_collection",
+    filter="",
+    output_fields=["color", "rating", "price"],
+    limit=10,
+    # highlight-next-line
+    order_by=["rating:desc", "price:asc"],
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+#### 结合分页排序\{#pagination-with-sort}
+
+将 `order_by` 与 `limit` 和 `offset` 一起使用，可以对排序后的结果进行分页。例如，如果要按价格排序展示商品列表，每个页面都会按正确的价格顺序显示下一批商品，且不会出现重复或遗漏。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+# Page 1
+page1 = client.query(
+    collection_name="my_collection",
+    filter="color like \"red%\"",
+    output_fields=["color", "price"],
+    limit=5,
+    offset=0,
+    # highlight-next-line
+    order_by=["price:asc"],
+)
+
+# Page 2
+page2 = client.query(
+    collection_name="my_collection",
+    filter="color like \"red%\"",
+    output_fields=["color", "price"],
+    limit=5,
+    offset=5,
+    # highlight-next-line
+    order_by=["price:asc"],
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+## 使用 QueryIterator\{#use-query-iterator}
+
+当您需要根据自定义条件查询，且分页返回所有符合条件的 Entity，可以使用 QueryIterator 创建一个迭代器。然后使用迭代器的 `next()` 方法循环遍历所有符合条件的 Entity。如下代码示例中假设 Collection 有 `id`、`vector` 和 `color` 三个字段。要求返回所有 `color` 以 `red` 开头的 Entity。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
 iterator = client.query_iterator(
     "my_collection",
     batch_size=10,
@@ -466,12 +653,6 @@ for await (const value of iterator) {
 <TabItem value='python'>
 
 ```python
-from pymilvus import MilvusClient
-client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-
 res = client.get(
     collection_name="my_collection",
     # highlight-next-line
@@ -490,13 +671,6 @@ res = client.query(
 )
 
 # Use QueryIterator
-from pymilvus import connections, Collection
-
-connections.connect(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-
 iterator = client.query_iterator(
     "my_collection",
     partition_names=["partitionA"],
@@ -589,12 +763,6 @@ fmt.Println("color: ", resultSet.GetColumn("color").FieldData().GetScalars())
 <TabItem value='javascript'>
 
 ```javascript
-import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
-
-const address = "YOUR_CLUSTER_ENDPOINT";
-const token = "YOUR_CLUSTER_TOKEN";
-const client = new MilvusClient({address, token});
-
 // Use get
 var res = client.get({
     collection_name="my_collection",
@@ -668,3 +836,180 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
+## 使用 Query 进行随机取样\{#random-sampling-with-query}
+
+若要从数据集中提取具有代表性的数据子集用于数据探索或开发测试，请使用  `RANDOM_SAMPLE(sampling_factor)`  表达式，其中 `sampling_factor` 是一个介于 `0` 和 `1` 之间的浮点数，表示要采样的数据百分比。
+
+<Admonition type="info" icon="📘" title="说明">
+
+关于随机采样的详细使用方法、高级示例和最佳实践，可参考[随机采样](./ramdom-sampling)。
+
+</Admonition>
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+# Sample 1% of the entire collection
+res = client.query(
+    collection_name="my_collection",
+    # highlight-next-line
+    filter="RANDOM_SAMPLE(0.01)",
+    output_fields=["vector", "color"]
+)
+
+print(f"Sampled {len(res)} entities from collection")
+
+# Combine with other filters - first filter, then sample
+res = client.query(
+    collection_name="my_collection", 
+    # highlight-next-line
+    filter="color like \"red%\" AND RANDOM_SAMPLE(0.005)",
+    output_fields=["vector", "color"],
+    limit=10
+)
+
+print(f"Found {len(res)} red items in sample")
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.service.vector.request.GetReq
+import io.milvus.v2.service.vector.request.GetResp
+import io.milvus.v2.service.vector.request.QueryReq
+import io.milvus.v2.service.vector.request.QueryResp
+import java.util.*;
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("RANDOM_SAMPLE(0.01)")
+        .outputFields(Arrays.asList("vector", "color"))
+        .build();
+
+QueryResp getResp = client.query(queryReq);
+for (QueryResp.QueryResult result : getResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\" AND RANDOM_SAMPLE(0.005)")
+        .outputFields(Arrays.asList("vector", "color"))
+        .limit(10)
+        .build();
+
+getResp = client.query(queryReq);
+for (QueryResp.QueryResult result : getResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/column"
+    "github.com/milvus-io/milvus/client/v2/entity"
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+resultSet, err := client.Query(ctx, milvusclient.NewQueryOption("my_collection").
+    WithFilter("RANDOM_SAMPLE(0.01)").
+    WithOutputFields("vector", "color"))
+if err != nil {
+    return err
+}
+
+resultSet, err = client.Query(ctx, milvusclient.NewQueryOption("my_collection").
+    WithFilter("color like \"red%\" AND RANDOM_SAMPLE(0.005)").
+    WithLimit(10).
+    WithOutputFields("vector", "color"))
+if err != nil {
+    return err
+}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// node
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+## 为 Query 临时设置一个时区\{#temporarily-set-a-timezone-for-a-query}
+
+如果你的 Collection 包含 `TIMESTAMPTZ` 字段，你可以在一次操作中通过在 `query` 调用中设置 `timezone` 参数，临时覆盖 Database 或 Collection 的默认时区。这会控制在该次操作中 `TIMESTAMPTZ` 值的显示和比较方式。
+
+以下示例展示了如何为 query 操作设置临时时区：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+# Query data and display the tsz field converted to "America/Havana"
+results = client.query(
+    "my_collection",
+    filter="id <= 10",
+    output_fields=["id", "tsz", "vec"],
+    limit=2,
+    # highlight-next-line
+    timezone="America/Havana",
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+参数 `timezone` 的值必须是有效的 [IANA 时区标识符](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)，例如 **Asia/Shanghai**、**America/Chicago** 或 **UTC**。关于如何使用 `TIMESTAMPTZ` 字段的详细信息，请参见[TIMESTAMPTZ 类型](./use-timestamptz-field)。

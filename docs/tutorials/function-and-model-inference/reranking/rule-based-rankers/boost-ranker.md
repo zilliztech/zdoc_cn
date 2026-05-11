@@ -1,11 +1,12 @@
 ---
 title: "Boost Ranker | Cloud"
 slug: /boost-ranker
+sidebar_key: boost-ranker
 sidebar_label: "Boost Ranker"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Boost Ranker 不单纯依赖基于向量距离计算的语义相似度，而是让你能够以有意义的方式影响搜索结果。它非常适合使用元数据过滤快速调整搜索结果的场景。 | Cloud"
 type: origin
@@ -72,7 +73,7 @@ Boost Ranker 不单纯依赖基于向量距离计算的语义相似度，而是�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>暂时不支持将 Boost Ranker 用于多向量混合搜索（Hybrid Search）中多路结果的重排。</p>
+暂时不支持将 Boost Ranker 用于多向量混合搜索（Hybrid Search）中多路结果的重排。
 
 </Admonition>
 
@@ -345,7 +346,7 @@ Boost Ranker 不单纯依赖基于向量距离计算的语义相似度，而是�
 
     <Admonition type="info" icon="📘" title="注释">
 
-    <p>权重必须是你选择的一个浮点数。在像上述示例这样的情况下，分数越小表示相关性越高，使用小于<strong>1</strong>的权重。否则，使用大于<strong>1</strong>的权重。</p>
+    权重必须是你选择的一个浮点数。在像上述示例这样的情况下，分数越小表示相关性越高，使用小于**1**的权重。否则，使用大于**1**的权重。
 
     </Admonition>
 
@@ -538,7 +539,7 @@ const rerank = {
      <td><p><code>params.random_score</code></p></td>
      <td><p>否</p></td>
      <td><p>指定一个随机函数，该函数会随机生成一个介于<code>0</code>和<code>1</code>之间的值。它有以下两个可选参数：</p><ul><li><p><code>种子</code>（数字）指定用于启动伪随机数生成器（PRNG）的初始值。</p></li><li><p><code>字段</code> （字符串）指定一个字段的名称，该字段的值将用作生成随机数的随机因子。具有唯一值的字段就足够了。</p><p>建议您同时设置<code>种子</code>和<code>字段</code>，以通过使用相同的种子和字段值来确保各代之间的一致性。</p></li></ul></td>
-     <td><p><code>\{"seed": 126, "field": "id"}</code></p></td>
+     <td><p><code>\{"seed": 126, "field": "id"\}</code></p></td>
    </tr>
 </table>
 
@@ -616,7 +617,7 @@ import { MilvusClient } from '@zilliz/milvus2-sdk-node';
 
 // Connect to the Milvus server
 const client = new MilvusClient({
-  address: 'localhost:19530',
+  address: 'YOUR_CLUSTER_ENDPOINT',
   token: 'YOUR_CLUSTER_TOKEN'
 });
 

@@ -1,11 +1,12 @@
 ---
 title: "选择合适的集群类型 | Cloud"
 slug: /cu-types-explained
+sidebar_key: cu-types-explained
 sidebar_label: "选择合适的集群类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，为集群选择合适的类型是一个关键步骤。Query CU 提供了并行数据处理的基础计算资源，不同类型的集群结合了各异的 CPU、内存和存储配置。 | Cloud"
 type: origin
@@ -43,22 +44,22 @@ Zilliz Cloud 提供以下集群类型：性能型、容量型、分层存储型�
    </tr>
    <tr>
      <td><p>性能型</p></td>
-     <td><p>500~1500</p></td>
-     <td><p>毫秒级</p></td>
+     <td><p>500-1500</p></td>
+     <td><p>10 毫秒</p></td>
      <td><p>150 万 768 维向量</p></td>
      <td><p>每月￥504 起</p></td>
    </tr>
    <tr>
      <td><p>容量型</p></td>
-     <td><p>100~300</p></td>
-     <td><p>十毫秒级</p></td>
+     <td><p>100-300</p></td>
+     <td><p>50-100 毫秒</p></td>
      <td><p>500 万 768 维向量</p></td>
      <td><p>每月￥151 起</p></td>
    </tr>
    <tr>
      <td><p>分层存储型</p></td>
-     <td><p>5~20</p></td>
-     <td><p>百毫秒级</p></td>
+     <td><p>10-50</p></td>
+     <td><p>100-1000 毫秒</p></td>
      <td><p>2000 万 768 维向量</p></td>
      <td><p>每月 ￥55 起</p></td>
    </tr>
@@ -78,7 +79,7 @@ Zilliz Cloud 提供以下集群类型：性能型、容量型、分层存储型�
 
 ### 分层存储型集群\{#tiered-storage-cluster}
 
-- 适用于超大规模、追求性价比且数据访问具有明显冷热特征的工作负载。
+- 适用于超大规模、追求性价比的工作负载。
 
 - 对于需要以极低的价格存储海量数据的应用而言是最佳选择。1个分层存储型集群的数据容量是容量型集群的 4 倍。
 
@@ -131,7 +132,7 @@ Zilliz Cloud 提供以下集群类型：性能型、容量型、分层存储型�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>上面的数据基于仅考虑主键和向量的测试。如果您的数据集包含其他标量字段（如 id、标签、关键词），实际的容量可能会有所不同。因此，建议进行个性化测试以获得更精确的评估。</p>
+上面的数据基于仅考虑主键和向量的测试。如果您的数据集包含其他标量字段（如 id、标签、关键词），实际的容量可能会有所不同。因此，建议进行个性化测试以获得更精确的评估。
 
 </Admonition>
 

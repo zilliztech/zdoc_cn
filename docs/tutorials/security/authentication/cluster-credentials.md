@@ -1,11 +1,12 @@
 ---
 title: "集群身份凭证 | Cloud"
 slug: /cluster-credentials
+sidebar_key: cluster-credentials
 sidebar_label: "集群身份凭证"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 通过集群身份凭证或 API 密钥认证您的身份。本文将介绍如何使用集群身份凭证完成身份认证。 | Cloud"
 type: origin

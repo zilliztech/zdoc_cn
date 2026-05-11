@@ -1,11 +1,12 @@
 ---
 title: "Load 和 Release | Cloud"
 slug: /load-release-collections
+sidebar_key: load-release-collections
 sidebar_label: "Load 和 Release"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "对 Collection 执行 Load 操作是在 Collection 中进行 Search 和 Query 的前提条件。本节主要介绍如何 Load 和 Release Collection。 | Cloud"
 type: origin
@@ -156,7 +157,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
