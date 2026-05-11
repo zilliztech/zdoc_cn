@@ -355,33 +355,13 @@ const gov1: Manual = {
     }
 }
 
-const gov2: Manual = {
-    root: 'IE6JwWJPgiHaZKkHCLccwq4vngh',
-    base: 'RWi9b79oeaDNkBsCkAGcoc90nif',
-    sourceType: 'wiki',
-    version: 'v2.5.x',
-    displayedSidebar: 'goSidebar',
-    docSourceDir: './plugins/lark-docs/meta/sources/go/v2.5.x',
-    targets: {
-        milvus: {
-            outputDir: 'milvus/reference/go/docs/v2',
-            imageDir: 'milvus/reference/go/images'
-        },
-        zilliz: {
-            outputDir: 'reference/api/go/go/v2',
-            imageDir: 'static/img',
-        }
-    }
-}
-
 const gov226 : Manual = {
-    root: 'Ai49wNllSihwEzkNZN8cd02Jn8c',
-    base: 'FruQbiGEoa7iARshjY3crsjnnxh',
-    sourceType: 'wiki',
+    root: 'Pzejf3x4WlXq1HdtTndcfMjVnxh',
+    base: 'Yc7gbtmgSal2ewsdqlhcLWVanbh',
+    sourceType: 'drive',
     version: 'v2.6.x',
     displayedSidebar: 'goSidebar',
-    docSourceDir: './plugins/lark-docs/meta/sources/go/v2.6.x',
-    fallbackSourceDir: './plugins/lark-docs/meta/sources/go/v2.5.x',
+    docSourceDir: './plugins/lark-docs/meta/sources/go/v2/v2.6.x',
     targets: {
         milvus: {
             outputDir: 'milvus/reference/go/docs/v2',
