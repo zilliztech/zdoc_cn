@@ -156,5 +156,13 @@
     {
         "name": "project-operations-v2",
         "description": "本系列 API 提供了管理 Zilliz Cloud 项目的相关接口。"
+    },
+    {
+        "name": "privilege-group-operations-v2",
+        "description": "本系列 API 提供了管理权限组的相关接口。"
+    },
+    {
+        "name": "on-demand-compute-v2",
+        "description": "本系列 API 提供了管理按需计算的相关接口。"
     }
 ]
