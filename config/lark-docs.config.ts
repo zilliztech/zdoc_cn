@@ -381,7 +381,7 @@ const gov230 : Manual = {
     version: 'v3.0.x',
     displayedSidebar: 'goSidebar',
     docSourceDir: './plugins/lark-docs/meta/sources/go/v2/v3.0.x',
-    fallbackSourceDir: './plugins/lark-docs/meta/sources/go/v2.6.x',
+    fallbackSourceDir: './plugins/lark-docs/meta/sources/go/v2/v2.6.x',
     targets: {
         milvus: {
             outputDir: 'milvus/reference/go/docs/v2',
