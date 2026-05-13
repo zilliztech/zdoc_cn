@@ -5,7 +5,7 @@ import Showdown from 'showdown';
 export const getBaseUrl = (endpoint, lang, pubTarget) => {
     const condition = isControlPlane(endpoint)
 
-    var server = "https://api.cloud.zilliz.com";
+    var server = "https://api.cloud.zilliz.com.cn";
     var children = `export BASE_URL="${server}"`
     var prompt = isBeta(endpoint) ? i18n[lang]["admonition.control.plane.v2"] + i18n[lang]["admonition.beta.warning"] : i18n[lang]["admonition.control.plane.v2"]
 

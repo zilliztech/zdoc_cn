@@ -12,6 +12,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
+    "test:cn-publish-normalizer": "node plugins/cn-publish-normalizer/normalizeCnContent.test.js && node plugins/cn-publish-normalizer/remarkCnPublishNormalizer.test.js && node scripts/verify-cn-publish-artifacts.test.js",
+    "verify:cn-publish": "npm run test:cn-publish-normalizer && npm run build:cn-publish",
+    "build:cn-publish": "npm run build && node scripts/verify-cn-publish-artifacts.js",
     "prepare": "husky"
   },
   "dependencies": {
