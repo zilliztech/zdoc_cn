@@ -138,7 +138,7 @@ export const inkeepSettings ={
                 icon: { builtIn: "LuCalendar"},
                 action: {
                   type: "open_link",
-                  url: "https://zilliz.com/contact-sales?contact_sales_traffic_source=websiteBot"
+                  url: "https://zilliz.com.cn/contact-sales?contact_sales_traffic_source=websiteBot"
                 }
               }
             ];
