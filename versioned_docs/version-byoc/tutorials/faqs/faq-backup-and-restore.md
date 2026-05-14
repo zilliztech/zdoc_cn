@@ -4,7 +4,7 @@ slug: /faq-backup-and-restore
 sidebar_label: "FAQ：备份与恢复"
 beta: FALSE
 notebook: FALSE
-description: " | BYOC"
+description: "本文列举了在 Zilliz Cloud 使用备份与恢复功能时可能遇到的常见问题及对应解决方法。 | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 7

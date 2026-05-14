@@ -159,6 +159,7 @@ export TOKEN="YOUR_CLUSTER_TOKEN"
 curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
+--header "Request-Timeout: 5" \
 --header "Content-Type: application/json" \
 -d '{
     "collectionName": "my_collection",
