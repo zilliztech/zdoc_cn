@@ -39,6 +39,16 @@ const FORBIDDEN_RULES = [
     pattern: /https?:\/\/(?:api\.cloud\.zilliz\.com(?!\.cn)|\{(?:cluster-id|project-id)\}\.\{region\}\.api\.zillizcloud\.com(?!\.cn))(?:\/[\w\-.~%!$&'()*+,;=:@/?#]*)?/gi,
     description: 'Global endpoint form found where CN endpoint is required',
   },
+  {
+    rule: 'duplicate-cn-suffix',
+    pattern: /https?:\/\/[\w.-]*\.cn\.cn(?=$|[/:?#\s])/gi,
+    description: 'Duplicate CN domain suffix found',
+  },
+  {
+    rule: 'decorated-http-scheme',
+    pattern: /<(?:i|em|strong|b)>\s*http\s*<\/(?:i|em|strong|b)>s?:\/\//gi,
+    description: 'Decorated HTTP scheme artifact found',
+  },
 ];
 
 function shouldScanFile(filePath) {

@@ -46,6 +46,8 @@ function testFindsAllForbiddenResidualClasses() {
         'https://support.zilliz.com/hc/en-us',
         'https://zilliz.com/pricing',
         'https://api.cloud.zilliz.com',
+        'https://api.cloud.zilliz.com.cn.cn',
+        '<i>http</i>s://support.zilliz.com/hc/en-us',
       ].join('\n'),
       'utf8',
     );
@@ -57,6 +59,8 @@ function testFindsAllForbiddenResidualClasses() {
     assert.equal(classes.has('support-url-non-cn'), true);
     assert.equal(classes.has('sales-or-pricing-non-cn'), true);
     assert.equal(classes.has('global-endpoint-non-cn'), true);
+    assert.equal(classes.has('duplicate-cn-suffix'), true);
+    assert.equal(classes.has('decorated-http-scheme'), true);
   });
 }
 
@@ -70,6 +74,8 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
         'https://api.cloud.zilliz.com',
         'https://{project-id}.{region}.api.zillizcloud.com',
         'https://YOUR_GLOBAL_ENDPOINT',
+        '<i>http</i>s://support.zilliz.com/hc/en-us',
+        'https://api.cloud.zilliz.com.cn.cn',
       ].join('\n'),
       'utf8',
     );
@@ -84,6 +90,8 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
     assert.doesNotMatch(normalized, /https:\/\/api\.cloud\.zilliz\.com(?!\.cn)/);
     assert.doesNotMatch(normalized, /\.api\.zillizcloud\.com(?!\.cn)/);
     assert.doesNotMatch(normalized, /YOUR_GLOBAL_ENDPOINT/);
+    assert.doesNotMatch(normalized, /\.cn\.cn\b/);
+    assert.doesNotMatch(normalized, /<i>http<\/i>s?:\/\//);
   });
 }
 

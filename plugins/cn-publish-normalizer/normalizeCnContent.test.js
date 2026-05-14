@@ -46,6 +46,8 @@ function testNormalizesEndpointPlaceholders() {
     'uri="https://YOUR_PROJECT_ENDPOINT"',
     'uri="YOUR_PROJECT_ENDPOINT"',
     'base="https://api.cloud.zilliz.com"',
+    'baseCn="https://api.cloud.zilliz.com.cn"',
+    'baseHttp="http://api.cloud.zilliz.com"',
   ].join('\n');
 
   const out = normalizeCnContent(input);
@@ -56,6 +58,7 @@ function testNormalizesEndpointPlaceholders() {
   assert.match(out, /https:\/\/glo-xxxx\.global-cluster\.vectordb\.zilliz\.com\.cn/);
   assert.match(out, /https:\/\/\{cluster-id\}-privatelink\.\{region\}\.vectordb\.zilliz\.com\.cn/);
   assert.match(out, /https:\/\/api\.cloud\.zilliz\.com\.cn/);
+  assert.doesNotMatch(out, /api\.cloud\.zilliz\.com\.cn\.cn/);
 
   assert.doesNotMatch(out, /YOUR_CLUSTER_ENDPOINT/);
   assert.doesNotMatch(out, /YOUR_CLUSTER_PUBLIC_ENDPOINT/);
@@ -85,6 +88,21 @@ function testDoesNotAppendCnTwiceForZillizCloudSubdomain() {
 
   assert.equal(out, input);
   assert.doesNotMatch(out, /\.cn\.cn\b/);
+}
+
+function testNormalizesDecoratedHttpSchemes() {
+  const input = [
+    'inline: <i>http</i>s://support.zilliz.com/hc/en-us',
+    'endpoint: <em>http</em>s://api.cloud.zilliz.com',
+    'placeholder: <strong>http</strong>s://YOUR_GLOBAL_ENDPOINT',
+  ].join('\n');
+
+  const out = normalizeCnContent(input);
+
+  assert.match(out, /https:\/\/support\.zilliz\.com\.cn\/hc\/zh-cn/);
+  assert.match(out, /https:\/\/api\.cloud\.zilliz\.com\.cn/);
+  assert.match(out, /https:\/\/glo-xxxx\.global-cluster\.vectordb\.zilliz\.com\.cn/);
+  assert.doesNotMatch(out, /<i>http<\/i>|<em>http<\/em>|<strong>http<\/strong>/);
 }
 
 function testNormalizesProviderAndRegionExamples() {
@@ -119,6 +137,7 @@ function run() {
   testNormalizesEndpointPlaceholders();
   testNormalizesZillizCloudPlaceholderSubdomain();
   testDoesNotAppendCnTwiceForZillizCloudSubdomain();
+  testNormalizesDecoratedHttpSchemes();
   testNormalizesProviderAndRegionExamples();
   testIsIdempotent();
   console.log('normalizeCnContent tests passed');
