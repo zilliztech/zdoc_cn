@@ -5,6 +5,7 @@ import larkDocsConfig from './config/lark-docs.config';
 import { tutorialsItemsGenerator, ReferenceItemsGenerator, AgentsItemsGenerator } from './config/sidebar-generators';
 import 'dotenv/config';
 const planeConfig = require('./plugins/apifox-docs/meta/plane-config.json');
+const { remarkCnPublishNormalizer } = require('./plugins/cn-publish-normalizer/remarkCnPublishNormalizer');
 
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
@@ -72,7 +73,7 @@ const config = {
           breadcrumbs: true,
           sidebarPath: require.resolve('./sidebarsTutorial.js'),
           routeBasePath: 'docs',
-          remarkPlugins: [remarkMath],
+          remarkPlugins: [remarkMath, remarkCnPublishNormalizer],
           rehypePlugins: [rehypeKatex],
           lastVersion: 'current',
           versions: {
@@ -102,6 +103,7 @@ const config = {
         path: 'reference',
         breadcrumbs: false,
         routeBasePath: 'reference',
+        remarkPlugins: [remarkCnPublishNormalizer],
         sidebarPath: require.resolve('./sidebarsReference.js'),
         sidebarItemsGenerator: tutorialsItemsGenerator,
       },
@@ -131,7 +133,7 @@ const config = {
         routeBasePath: 'docs/agents',
         sidebarPath: require.resolve('./sidebarsAgents.js'),
         breadcrumbs: false,
-        remarkPlugins: [remarkMath],
+        remarkPlugins: [remarkMath, remarkCnPublishNormalizer],
         rehypePlugins: [rehypeKatex],
         sidebarItemsGenerator: AgentsItemsGenerator,
       }
@@ -196,7 +198,7 @@ const config = {
             docsPluginId: 'onpremise',
           },
           {
-            href: 'https://support.zilliz.com/hc/zh-cn/',
+            href: 'https://support.zilliz.com.cn/hc/zh-cn/',
             icon: '/img/icons/support.svg',
             label: '技术支持',
             position: 'right',

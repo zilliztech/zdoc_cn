@@ -1,0 +1,112 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+
+const {
+  scanArtifacts,
+  formatViolations,
+  normalizeArtifacts,
+} = require('./verify-cn-publish-artifacts');
+
+function withTempDir(run) {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cn-publish-verify-'));
+  try {
+    run(tempDir);
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+}
+
+function testPassesWhenArtifactsAreCnSafe() {
+  withTempDir((tempDir) => {
+    fs.writeFileSync(
+      path.join(tempDir, 'index.html'),
+      [
+        'https://support.zilliz.com.cn/hc/zh-cn',
+        'https://zilliz.com.cn/contact-sales',
+        'https://zilliz.com.cn/pricing',
+        'https://api.cloud.zilliz.com.cn',
+        'https://{project-id}.{region}.api.zillizcloud.com.cn',
+      ].join('\n'),
+      'utf8',
+    );
+
+    const violations = scanArtifacts(tempDir);
+    assert.equal(violations.length, 0);
+  });
+}
+
+function testFindsAllForbiddenResidualClasses() {
+  withTempDir((tempDir) => {
+    fs.writeFileSync(
+      path.join(tempDir, 'bad.html'),
+      [
+        'https://YOUR_CLUSTER_ENDPOINT',
+        'https://support.zilliz.com/hc/en-us',
+        'https://zilliz.com/pricing',
+        'https://api.cloud.zilliz.com',
+      ].join('\n'),
+      'utf8',
+    );
+
+    const violations = scanArtifacts(tempDir);
+    const classes = new Set(violations.map((v) => v.rule));
+
+    assert.equal(classes.has('placeholder-endpoint'), true);
+    assert.equal(classes.has('support-url-non-cn'), true);
+    assert.equal(classes.has('sales-or-pricing-non-cn'), true);
+    assert.equal(classes.has('global-endpoint-non-cn'), true);
+  });
+}
+
+function testNormalizeArtifactsRewritesResidualsBeforeScan() {
+  withTempDir((tempDir) => {
+    fs.writeFileSync(
+      path.join(tempDir, 'chunk.js'),
+      [
+        'https://support.zilliz.com/hc/en-us',
+        'https://zilliz.com/contact-sales',
+        'https://api.cloud.zilliz.com',
+        'https://{project-id}.{region}.api.zillizcloud.com',
+        'https://YOUR_GLOBAL_ENDPOINT',
+      ].join('\n'),
+      'utf8',
+    );
+
+    const changedFiles = normalizeArtifacts(tempDir);
+    const violations = scanArtifacts(tempDir);
+    const normalized = fs.readFileSync(path.join(tempDir, 'chunk.js'), 'utf8');
+
+    assert.equal(changedFiles.length, 1);
+    assert.equal(violations.length, 0);
+    assert.doesNotMatch(normalized, /support\.zilliz\.com\/hc\/en-us/);
+    assert.doesNotMatch(normalized, /https:\/\/api\.cloud\.zilliz\.com(?!\.cn)/);
+    assert.doesNotMatch(normalized, /\.api\.zillizcloud\.com(?!\.cn)/);
+    assert.doesNotMatch(normalized, /YOUR_GLOBAL_ENDPOINT/);
+  });
+}
+
+function testFormatsReadableReport() {
+  const output = formatViolations([
+    {
+      rule: 'placeholder-endpoint',
+      file: '/tmp/build/index.html',
+      line: 3,
+      match: 'https://YOUR_CLUSTER_ENDPOINT',
+    },
+  ]);
+
+  assert.match(output, /placeholder-endpoint/);
+  assert.match(output, /index.html:3/);
+}
+
+function run() {
+  testPassesWhenArtifactsAreCnSafe();
+  testFindsAllForbiddenResidualClasses();
+  testNormalizeArtifactsRewritesResidualsBeforeScan();
+  testFormatsReadableReport();
+  console.log('verify-cn-publish-artifacts tests passed');
+}
+
+run();
