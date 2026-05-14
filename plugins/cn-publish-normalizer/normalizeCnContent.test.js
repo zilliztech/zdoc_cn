@@ -78,6 +78,15 @@ function testNormalizesZillizCloudPlaceholderSubdomain() {
   assert.doesNotMatch(out, /\.api\.zillizcloud\.com(?!\.cn)\b/);
 }
 
+function testDoesNotAppendCnTwiceForZillizCloudSubdomain() {
+  const input = 'endpoint="https://{project-id}.{region}.api.zillizcloud.com.cn"';
+
+  const out = normalizeCnContent(input);
+
+  assert.equal(out, input);
+  assert.doesNotMatch(out, /\.cn\.cn\b/);
+}
+
 function testNormalizesProviderAndRegionExamples() {
   const input = [
     'cloudId: aws',
@@ -109,7 +118,9 @@ function run() {
   testNormalizesSupportSalesPricingUrls();
   testNormalizesEndpointPlaceholders();
   testNormalizesZillizCloudPlaceholderSubdomain();
-  testNormalizesProviderAndRegionExamples();  testIsIdempotent();
+  testDoesNotAppendCnTwiceForZillizCloudSubdomain();
+  testNormalizesProviderAndRegionExamples();
+  testIsIdempotent();
   console.log('normalizeCnContent tests passed');
 }
 

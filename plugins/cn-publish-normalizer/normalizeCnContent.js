@@ -31,7 +31,7 @@ function normalizeEndpoints(content) {
   out = out.replace(/https:\/\/api\.cloud\.zilliz\.com\b/g, canonical.controlPlaneEndpoint);
 
   out = out.replace(
-    /https:\/\/(\{[a-z0-9-]+\}|[a-z0-9-]+)\.(\{[a-z0-9-]+\}|[a-z0-9-]+)\.api\.zillizcloud\.com\b/gi,
+    /https:\/\/(\{[a-z0-9-]+\}|[a-z0-9-]+)\.(\{[a-z0-9-]+\}|[a-z0-9-]+)\.api\.zillizcloud\.com(?!\.cn)\b/gi,
     'https://$1.$2.api.zillizcloud.com.cn',
   );
 
