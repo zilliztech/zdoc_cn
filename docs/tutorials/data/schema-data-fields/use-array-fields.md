@@ -234,14 +234,14 @@ export schema="{
 
 index_params = client.prepare_index_params()
 
-# Index `age` with AUTOINDEX
+# Index \`age\` with AUTOINDEX
 index_params.add_index(
     field_name="tags",
     index_type="AUTOINDEX",
     index_name="tags_index"
 )
 
-# Index `embedding` with AUTOINDEX and specify similarity metric type
+# Index \`embedding\` with AUTOINDEX and specify similarity metric type
 index_params.add_index(
     field_name="embedding",
     index_type="AUTOINDEX",  # Use automatic indexing to simplify complex index settings
@@ -544,6 +544,12 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
+<Admonition type="info" icon="📘" title="说明">
+
+<p>除了插入或替换完整数组之外，<code>ARRAY</code> 字段还支持在 Upsert 请求中使用 <code>ARRAY_APPEND</code> 和 <code>ARRAY_REMOVE</code> 部分更新操作符。这些操作符允许您向现有数组追加元素，或从现有数组中移除匹配的元素，而无需先获取当前数组值，从而避免客户端读取-修改-写入流程。有关详细信息，请参阅<a href="./upsert-entities#upsert-array-fields-with-partial-update-operators">使用部分更新操作符对 ARRAY 字段执行 Upsert</a>。</p>
+
+</Admonition>
+
 ## 使用过滤表达式查询\{#query-with-filter-expressions}
 
 在插入数据后，您可以使用 `query` 方法获取符合指定条件的所有 Entity。
@@ -554,7 +560,7 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
-# Query to exclude entities where `tags` is not null
+# Query to exclude entities where \`tags\` is not null
 
 filter = 'tags IS NOT NULL'
 
