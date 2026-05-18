@@ -54,7 +54,7 @@ function testNormalizesEndpointPlaceholders() {
 
   assert.match(out, /https:\/\/\{cluster-id\}\.\{region\}\.vectordb\.zilliz\.com\.cn:19530/);
   assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn/);
-  assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.zilliz\.com\.cn/);
+  assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn/);
   assert.match(out, /https:\/\/glo-xxxx\.global-cluster\.vectordb\.zilliz\.com\.cn/);
   assert.match(out, /https:\/\/\{cluster-id\}-privatelink\.\{region\}\.vectordb\.zilliz\.com\.cn/);
   assert.match(out, /https:\/\/api\.cloud\.zilliz\.com\.cn/);
@@ -68,21 +68,28 @@ function testNormalizesEndpointPlaceholders() {
   assert.doesNotMatch(out, /YOUR_PROJECT_ENDPOINT/);
 }
 
-function testNormalizesZillizCloudPlaceholderSubdomain() {
+function testNormalizesLegacyProjectEndpointFamilies() {
   const input = [
-    'endpoint="https://{cluster-id}.{region}.api.zillizcloud.com"',
-    'endpoint="https://{project-id}.{region}.api.zillizcloud.com"',
+    'legacyGlobal="https://{cluster-id}.{region}.api.zillizcloud.com"',
+    'legacyCn="https://{project-id}.{region}.api.zillizcloud.com.cn"',
+    'legacyZillizCn="https://{project-id}.{region}.api.zilliz.com.cn/v2/clusters"',
+    'globalCloud="https://{project-id}.{region}.api.cloud.zilliz.com/v2/jobs"',
+    'concreteLegacy="https://proj-123.ali-cn-hangzhou.api.zillizcloud.com"',
   ].join('\n');
 
   const out = normalizeCnContent(input);
 
-  assert.match(out, /https:\/\/\{cluster-id\}\.\{region\}\.api\.zillizcloud\.com\.cn/);
-  assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.zillizcloud\.com\.cn/);
-  assert.doesNotMatch(out, /\.api\.zillizcloud\.com(?!\.cn)\b/);
+  assert.match(out, /https:\/\/\{cluster-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn/);
+  assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn/);
+  assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn\/v2\/clusters/);
+  assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn\/v2\/jobs/);
+  assert.match(out, /https:\/\/proj-123\.ali-cn-hangzhou\.api\.cloud\.zilliz\.com\.cn/);
+  assert.doesNotMatch(out, /\.api\.zillizcloud\.com(?:\.cn)?\b/);
+  assert.doesNotMatch(out, /\.api\.zilliz\.com\.cn\b/);
 }
 
-function testDoesNotAppendCnTwiceForZillizCloudSubdomain() {
-  const input = 'endpoint="https://{project-id}.{region}.api.zillizcloud.com.cn"';
+function testKeepsCanonicalProjectEndpointWithoutDuplicateCn() {
+  const input = 'endpoint="https://{project-id}.{region}.api.cloud.zilliz.com.cn"';
 
   const out = normalizeCnContent(input);
 
@@ -109,8 +116,11 @@ function testNormalizesProviderAndRegionExamples() {
   const input = [
     'cloudId: aws',
     'regionId: aws-us-west-2',
+    'cloud_id = azure',
+    'regionId=aws-us-east-1',
     '"cloud_id": "gcp",',
     '"region_id": "gcp-us-west1",',
+    '"region_id": "az-eastus",',
     'provider notes: aws gcp azure should stay in prose',
     'unrelated sentence about aws, gcp, and azure services',
   ].join('\n');
@@ -119,14 +129,36 @@ function testNormalizesProviderAndRegionExamples() {
 
   assert.match(out, /cloudId: ali/);
   assert.match(out, /regionId: ali-cn-hangzhou/);
+  assert.match(out, /cloud_id = ali/);
+  assert.match(out, /regionId=ali-cn-hangzhou/);
   assert.match(out, /"cloud_id": "ali",/);
   assert.match(out, /"region_id": "ali-cn-hangzhou",/);
   assert.match(out, /provider notes: aws gcp azure should stay in prose/);
   assert.match(out, /unrelated sentence about aws, gcp, and azure services/);
 }
 
+function testKeepsStorageUrisAndHostsUnchanged() {
+  const input = [
+    'oss://my-bucket/my-folder/',
+    'https://my-bucket.oss-cn-hangzhou.aliyuncs.com/my-file.parquet',
+    'https://my-bucket.cos.ap-beijing.myqcloud.com/object.json',
+    'https://my-bucket.s3.northwest-1.amazonaws.com.cn/path/data.parquet',
+    'https://s3.northwest-1.amazonaws.com.cn/my-bucket/path/data.parquet',
+    's3://my-bucket/path/data.parquet',
+  ].join('\n');
+
+  const out = normalizeCnContent(input);
+
+  assert.equal(out, input);
+}
+
 function testIsIdempotent() {
-  const input = 'https://support.zilliz.com/hc/en-us\nuri="https://YOUR_CLUSTER_ENDPOINT"';
+  const input = [
+    'https://support.zilliz.com/hc/en-us',
+    'uri="https://YOUR_CLUSTER_ENDPOINT"',
+    'endpoint="https://{project-id}.{region}.api.zillizcloud.com.cn"',
+  ].join('\n');
+
   const once = normalizeCnContent(input);
   const twice = normalizeCnContent(once);
   assert.equal(twice, once);
@@ -135,10 +167,11 @@ function testIsIdempotent() {
 function run() {
   testNormalizesSupportSalesPricingUrls();
   testNormalizesEndpointPlaceholders();
-  testNormalizesZillizCloudPlaceholderSubdomain();
-  testDoesNotAppendCnTwiceForZillizCloudSubdomain();
+  testNormalizesLegacyProjectEndpointFamilies();
+  testKeepsCanonicalProjectEndpointWithoutDuplicateCn();
   testNormalizesDecoratedHttpSchemes();
   testNormalizesProviderAndRegionExamples();
+  testKeepsStorageUrisAndHostsUnchanged();
   testIsIdempotent();
   console.log('normalizeCnContent tests passed');
 }

@@ -27,7 +27,7 @@ function testPassesWhenArtifactsAreCnSafe() {
         'https://zilliz.com.cn/contact-sales',
         'https://zilliz.com.cn/pricing',
         'https://api.cloud.zilliz.com.cn',
-        'https://{project-id}.{region}.api.zillizcloud.com.cn',
+        'https://{project-id}.{region}.api.cloud.zilliz.com.cn',
       ].join('\n'),
       'utf8',
     );
@@ -46,6 +46,8 @@ function testFindsAllForbiddenResidualClasses() {
         'https://support.zilliz.com/hc/en-us',
         'https://zilliz.com/pricing',
         'https://api.cloud.zilliz.com',
+        'https://proj-123.ali-cn-hangzhou.api.zillizcloud.com.cn/v2/jobs',
+        'https://proj-123.ali-cn-hangzhou.api.zilliz.com.cn/v2/jobs',
         'https://api.cloud.zilliz.com.cn.cn',
         '<i>http</i>s://support.zilliz.com/hc/en-us',
       ].join('\n'),
@@ -58,7 +60,7 @@ function testFindsAllForbiddenResidualClasses() {
     assert.equal(classes.has('placeholder-endpoint'), true);
     assert.equal(classes.has('support-url-non-cn'), true);
     assert.equal(classes.has('sales-or-pricing-non-cn'), true);
-    assert.equal(classes.has('global-endpoint-non-cn'), true);
+    assert.equal(classes.has('endpoint-family-non-canonical'), true);
     assert.equal(classes.has('duplicate-cn-suffix'), true);
     assert.equal(classes.has('decorated-http-scheme'), true);
   });
@@ -73,6 +75,7 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
         'https://zilliz.com/contact-sales',
         'https://api.cloud.zilliz.com',
         'https://{project-id}.{region}.api.zillizcloud.com',
+        'https://{project-id}.{region}.api.zilliz.com.cn/v2/jobs',
         'https://YOUR_GLOBAL_ENDPOINT',
         '<i>http</i>s://support.zilliz.com/hc/en-us',
         'https://api.cloud.zilliz.com.cn.cn',
@@ -88,7 +91,9 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
     assert.equal(violations.length, 0);
     assert.doesNotMatch(normalized, /support\.zilliz\.com\/hc\/en-us/);
     assert.doesNotMatch(normalized, /https:\/\/api\.cloud\.zilliz\.com(?!\.cn)/);
-    assert.doesNotMatch(normalized, /\.api\.zillizcloud\.com(?!\.cn)/);
+    assert.doesNotMatch(normalized, /\.api\.zillizcloud\.com(?:\.cn)?/);
+    assert.doesNotMatch(normalized, /\.api\.zilliz\.com\.cn/);
+    assert.match(normalized, /\.api\.cloud\.zilliz\.com\.cn/);
     assert.doesNotMatch(normalized, /YOUR_GLOBAL_ENDPOINT/);
     assert.doesNotMatch(normalized, /\.cn\.cn\b/);
     assert.doesNotMatch(normalized, /<i>http<\/i>s?:\/\//);

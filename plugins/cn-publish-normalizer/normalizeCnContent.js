@@ -39,8 +39,8 @@ function normalizeEndpoints(content) {
   out = out.replace(/https?:\/\/api\.cloud\.zilliz\.com(?!\.cn)\b/gi, canonical.controlPlaneEndpoint);
 
   out = out.replace(
-    /https:\/\/(\{[a-z0-9-]+\}|[a-z0-9-]+)\.(\{[a-z0-9-]+\}|[a-z0-9-]+)\.api\.zillizcloud\.com(?!\.cn)\b/gi,
-    'https://$1.$2.api.zillizcloud.com.cn',
+    /https?:\/\/(\{[a-z0-9-]+\}|[a-z0-9-]+)\.(\{[a-z0-9-]+\}|[a-z0-9-]+)\.api\.(?:cloud\.zilliz\.com(?!\.cn)|zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)\b/gi,
+    'https://$1.$2.api.cloud.zilliz.com.cn',
   );
 
   return out;
@@ -62,8 +62,9 @@ function normalizeProviderAndRegionExamples(content) {
   }
 
   for (const [from, to] of Object.entries(providerMap)) {
+    const escaped = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     out = out.replace(
-      new RegExp(`((?:\\bcloudId\\b|\\bcloud_id\\b|["']cloudId["']|["']cloud_id["'])\\s*[:=]\\s*["']?)${from}(?=["']?)`, 'g'),
+      new RegExp(`((?:\\bcloudId\\b|\\bcloud_id\\b|["']cloudId["']|["']cloud_id["'])\\s*[:=]\\s*["']?)${escaped}(?=["']?)`, 'g'),
       `$1${to}`,
     );
   }
