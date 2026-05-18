@@ -97,6 +97,26 @@ function testKeepsCanonicalProjectEndpointWithoutDuplicateCn() {
   assert.doesNotMatch(out, /\.cn\.cn\b/);
 }
 
+function testNormalizesClusterEndpointFamilies() {
+  const input = [
+    'serverless="https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com"',
+    'public="https://in01-xxxx.gcp-us-west1.vectordb.zillizcloud.com:19530"',
+    'legacyCn="https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com.cn/v1/vector/search"',
+    'alreadyCn="https://in01-xxxx.serverless.ali-cn-hangzhou.vectordb.zilliz.com.cn"',
+    'doubleCn="https://in01-xxxx.serverless.ali-cn-hangzhou.vectordb.zilliz.com.cn.cn"',
+  ].join('\n');
+
+  const out = normalizeCnContent(input);
+
+  assert.match(out, /https:\/\/in01-xxxx\.serverless\.gcp-us-west1\.cloud\.zilliz\.com\.cn/);
+  assert.match(out, /https:\/\/in01-xxxx\.gcp-us-west1\.vectordb\.zilliz\.com\.cn:19530/);
+  assert.match(out, /https:\/\/in01-xxxx\.serverless\.gcp-us-west1\.cloud\.zilliz\.com\.cn\/v1\/vector\/search/);
+  assert.match(out, /https:\/\/in01-xxxx\.serverless\.ali-cn-hangzhou\.cloud\.zilliz\.com\.cn/);
+  assert.doesNotMatch(out, /vectordb\.zillizcloud\.com(?:\.cn)?/);
+  assert.doesNotMatch(out, /serverless\.[\w-]+\.vectordb\.zilliz\.com\.cn/);
+  assert.doesNotMatch(out, /vectordb\.zilliz\.com\.cn\.cn/);
+}
+
 function testNormalizesDecoratedHttpSchemes() {
   const input = [
     'inline: <i>http</i>s://support.zilliz.com/hc/en-us',
@@ -137,6 +157,21 @@ function testNormalizesProviderAndRegionExamples() {
   assert.match(out, /unrelated sentence about aws, gcp, and azure services/);
 }
 
+function testNormalizesFieldScopedStorageExamples() {
+  const input = [
+    'STORAGE_PATH = "s3://your/data/path/in/external/storage"',
+    'object_url="://your/data/path/in/external/storage.json"',
+    '"objectUrl": "://your/data/path/in/external/storage.json"',
+  ].join('\n');
+
+  const out = normalizeCnContent(input);
+
+  assert.match(out, /STORAGE_PATH\s*=\s*"oss:\/\/\{bucket_name\}\/your\/data\/in\/storage\/"/);
+  assert.match(out, /object_url\s*=\s*"oss:\/\/\{bucket_name\}\/you\/data\/in\/storage\.json"/);
+  assert.match(out, /objectUrl"\s*:\s*"oss:\/\/\{bucket_name\}\/you\/data\/in\/storage\.json"/);
+  assert.doesNotMatch(out, /object_url\s*=\s*":\/\//);
+}
+
 function testKeepsStorageUrisAndHostsUnchanged() {
   const input = [
     'oss://my-bucket/my-folder/',
@@ -145,6 +180,7 @@ function testKeepsStorageUrisAndHostsUnchanged() {
     'https://my-bucket.s3.northwest-1.amazonaws.com.cn/path/data.parquet',
     'https://s3.northwest-1.amazonaws.com.cn/my-bucket/path/data.parquet',
     's3://my-bucket/path/data.parquet',
+    'some prose mentioning object_url should not change: s3://my-bucket/path/data.parquet',
   ].join('\n');
 
   const out = normalizeCnContent(input);
@@ -169,8 +205,10 @@ function run() {
   testNormalizesEndpointPlaceholders();
   testNormalizesLegacyProjectEndpointFamilies();
   testKeepsCanonicalProjectEndpointWithoutDuplicateCn();
+  testNormalizesClusterEndpointFamilies();
   testNormalizesDecoratedHttpSchemes();
   testNormalizesProviderAndRegionExamples();
+  testNormalizesFieldScopedStorageExamples();
   testKeepsStorageUrisAndHostsUnchanged();
   testIsIdempotent();
   console.log('normalizeCnContent tests passed');

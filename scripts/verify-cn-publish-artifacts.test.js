@@ -28,6 +28,8 @@ function testPassesWhenArtifactsAreCnSafe() {
         'https://zilliz.com.cn/pricing',
         'https://api.cloud.zilliz.com.cn',
         'https://{project-id}.{region}.api.cloud.zilliz.com.cn',
+        'https://in03-613b5625e3f1d30.serverless.ali-cn-hangzhou.cloud.zilliz.com.cn',
+        'https://in03-613b5625e3f1d30.ali-cn-hangzhou.vectordb.zilliz.com.cn:19530',
       ].join('\n'),
       'utf8',
     );
@@ -49,6 +51,8 @@ function testFindsAllForbiddenResidualClasses() {
         'https://proj-123.ali-cn-hangzhou.api.zillizcloud.com.cn/v2/jobs',
         'https://proj-123.ali-cn-hangzhou.api.zilliz.com.cn/v2/jobs',
         'https://api.cloud.zilliz.com.cn.cn',
+        'https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com',
+        'object_url="://your/data/path/in/external/storage.json"',
         '<i>http</i>s://support.zilliz.com/hc/en-us',
       ].join('\n'),
       'utf8',
@@ -61,6 +65,8 @@ function testFindsAllForbiddenResidualClasses() {
     assert.equal(classes.has('support-url-non-cn'), true);
     assert.equal(classes.has('sales-or-pricing-non-cn'), true);
     assert.equal(classes.has('endpoint-family-non-canonical'), true);
+    assert.equal(classes.has('cluster-endpoint-family-non-canonical'), true);
+    assert.equal(classes.has('malformed-object-url-scheme'), true);
     assert.equal(classes.has('duplicate-cn-suffix'), true);
     assert.equal(classes.has('decorated-http-scheme'), true);
   });
@@ -76,6 +82,8 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
         'https://api.cloud.zilliz.com',
         'https://{project-id}.{region}.api.zillizcloud.com',
         'https://{project-id}.{region}.api.zilliz.com.cn/v2/jobs',
+        'https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com',
+        'object_url="://your/data/path/in/external/storage.json"',
         'https://YOUR_GLOBAL_ENDPOINT',
         '<i>http</i>s://support.zilliz.com/hc/en-us',
         'https://api.cloud.zilliz.com.cn.cn',
@@ -94,6 +102,11 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
     assert.doesNotMatch(normalized, /\.api\.zillizcloud\.com(?:\.cn)?/);
     assert.doesNotMatch(normalized, /\.api\.zilliz\.com\.cn/);
     assert.match(normalized, /\.api\.cloud\.zilliz\.com\.cn/);
+    assert.doesNotMatch(normalized, /vectordb\.zillizcloud\.com(?:\.cn)?/);
+    assert.match(normalized, /serverless\.[\w-]+\.cloud\.zilliz\.com\.cn/);
+    assert.match(normalized, /vectordb\.zilliz\.com\.cn/);
+    assert.match(normalized, /object_url\s*=\s*"oss:\/\/\{bucket_name\}\/you\/data\/in\/storage\.json"/);
+    assert.doesNotMatch(normalized, /object_url\s*=\s*":\/\//);
     assert.doesNotMatch(normalized, /YOUR_GLOBAL_ENDPOINT/);
     assert.doesNotMatch(normalized, /\.cn\.cn\b/);
     assert.doesNotMatch(normalized, /<i>http<\/i>s?:\/\//);
