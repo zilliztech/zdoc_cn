@@ -43,6 +43,16 @@ function normalizeEndpoints(content) {
     'https://$1.$2.api.cloud.zilliz.com.cn',
   );
 
+  out = out.replace(
+    /https?:\/\/((?:\{[a-z0-9-]+\}|[a-z0-9-]+))\.serverless\.(\{[a-z0-9-]+\}|[a-z0-9-]+)\.vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)\b/gi,
+    'https://$1.serverless.$2.cloud.zilliz.com.cn',
+  );
+
+  out = out.replace(
+    /https?:\/\/((?:\{[a-z0-9-]+\}|[a-z0-9-]+)(?:\.(?:\{[a-z0-9-]+\}|[a-z0-9-]+))*)\.vectordb\.zillizcloud\.com(?:\.cn)?\b/gi,
+    'https://$1.vectordb.zilliz.com.cn',
+  );
+
   return out;
 }
 
@@ -72,6 +82,22 @@ function normalizeProviderAndRegionExamples(content) {
   return out;
 }
 
+function normalizeStorageExamples(content) {
+  let out = content;
+
+  out = out.replace(
+    /((?:\bSTORAGE_PATH\b|["']STORAGE_PATH["'])\s*[:=]\s*["'])[^"'\n]*(["'])/g,
+    `$1${canonical.storagePathFolder}$2`,
+  );
+
+  out = out.replace(
+    /((?:\bobject_url\b|\bOBJECT_URL\b|\bobjectUrl\b|["']object_url["']|["']OBJECT_URL["']|["']objectUrl["'])\s*[:=]\s*["'])[^"'\n]*(["'])/g,
+    `$1${canonical.storageObjectFile}$2`,
+  );
+
+  return out;
+}
+
 function normalizeCnContent(content) {
   if (typeof content !== 'string' || content.length === 0) {
     return content;
@@ -83,6 +109,7 @@ function normalizeCnContent(content) {
     normalizeEndpoints,
     normalizeDuplicateCnSuffixes,
     normalizeProviderAndRegionExamples,
+    normalizeStorageExamples,
   ].reduce(
     (acc, pass) => pass(acc),
     content,

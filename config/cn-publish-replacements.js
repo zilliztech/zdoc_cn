@@ -9,6 +9,8 @@ module.exports = {
     clusterEndpoint: 'https://{cluster-id}.{region}.vectordb.zilliz.com.cn:19530',
     zillizCloudEndpoint: 'https://{project-id}.{region}.api.cloud.zilliz.com.cn',
     projectEndpoint: 'https://{project-id}.{region}.api.cloud.zilliz.com.cn',
+    storagePathFolder: 'oss://{bucket_name}/your/data/in/storage/',
+    storageObjectFile: 'oss://{bucket_name}/you/data/in/storage.json',
   },
   providerMap: {
     aws: 'ali',

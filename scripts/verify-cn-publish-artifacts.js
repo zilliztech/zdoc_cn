@@ -40,6 +40,16 @@ const FORBIDDEN_RULES = [
     description: 'Legacy or non-CN endpoint family found where canonical CN endpoint is required',
   },
   {
+    rule: 'cluster-endpoint-family-non-canonical',
+    pattern: /https?:\/\/(?:(?:[\w{}-]+\.serverless\.[\w{}-]+\.(?:vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)|cloud\.zilliz\.com(?!\.cn)))|(?:[\w{}-]+\.)+vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com(?!\.cn)))(?:\:[0-9]+)?(?:\/[\w\-.~%!$&'()*+,;=:@/?#]*)?/gi,
+    description: 'Legacy or non-CN cluster endpoint family found where canonical CN endpoint is required',
+  },
+  {
+    rule: 'malformed-object-url-scheme',
+    pattern: /(?:\bobject_url\b|\bOBJECT_URL\b|\bobjectUrl\b|["']object_url["']|["']OBJECT_URL["']|["']objectUrl["'])\s*[:=]\s*["']:\/\//g,
+    description: 'Malformed object_url scheme found',
+  },
+  {
     rule: 'duplicate-cn-suffix',
     pattern: /https?:\/\/[\w.-]*\.cn\.cn(?=$|[/:?#\s])/gi,
     description: 'Duplicate CN domain suffix found',

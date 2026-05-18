@@ -16,11 +16,11 @@ function testTransformsOnlyTextInlineCodeAndCode() {
       {
         type: 'code',
         lang: 'json',
-        value: '{"region_id":"gcp-us-west1","base":"https://api.cloud.zilliz.com"}',
+        value: '{"region_id":"gcp-us-west1","base":"https://api.cloud.zilliz.com","cluster":"https://in01-xxxx.gcp-us-west1.vectordb.zillizcloud.com:19530"}',
       },
       {
         type: 'mdxjsEsm',
-        value: 'export const support = "https://support.zilliz.com/hc/en-us"\nexport const endpoint = "https://{project-id}.{region}.api.zillizcloud.com"\nexport const legacyCn = "https://{project-id}.{region}.api.zilliz.com.cn/v2"',
+        value: 'export const support = "https://support.zilliz.com/hc/en-us"\nexport const endpoint = "https://{project-id}.{region}.api.zillizcloud.com"\nexport const legacyCn = "https://{project-id}.{region}.api.zilliz.com.cn/v2"\nexport const cluster = "https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com"',
       },
       {
         type: 'html',
@@ -45,12 +45,12 @@ function testTransformsOnlyTextInlineCodeAndCode() {
   assert.equal(emphasizedTextNode.value, 'cloudId: ali');
   assert.equal(
     codeNode.value,
-    '{"region_id":"ali-cn-hangzhou","base":"https://api.cloud.zilliz.com.cn"}',
+    '{"region_id":"ali-cn-hangzhou","base":"https://api.cloud.zilliz.com.cn","cluster":"https://in01-xxxx.gcp-us-west1.vectordb.zilliz.com.cn:19530"}',
   );
 
   assert.equal(
     mdxjsEsmNode.value,
-    'export const support = "https://support.zilliz.com.cn/hc/zh-cn"\nexport const endpoint = "https://{project-id}.{region}.api.cloud.zilliz.com.cn"\nexport const legacyCn = "https://{project-id}.{region}.api.cloud.zilliz.com.cn/v2"',
+    'export const support = "https://support.zilliz.com.cn/hc/zh-cn"\nexport const endpoint = "https://{project-id}.{region}.api.cloud.zilliz.com.cn"\nexport const legacyCn = "https://{project-id}.{region}.api.cloud.zilliz.com.cn/v2"\nexport const cluster = "https://in01-xxxx.serverless.gcp-us-west1.cloud.zilliz.com.cn"',
   );
   assert.equal(htmlNode.value, '<a href="https://zilliz.com.cn/contact-sales">sales</a>');
 }
@@ -77,6 +77,11 @@ function testNormalizesLinkAndDefinitionUrls() {
             url: 'https://{project-id}.{region}.api.zilliz.com.cn/v2/clusters',
             children: [{ type: 'text', value: 'legacy-cn-endpoint' }],
           },
+          {
+            type: 'link',
+            url: 'https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com',
+            children: [{ type: 'text', value: 'legacy-cluster-endpoint' }],
+          },
         ],
       },
       {
@@ -93,11 +98,13 @@ function testNormalizesLinkAndDefinitionUrls() {
   const supportLink = tree.children[0].children[0];
   const endpointLink = tree.children[0].children[1];
   const legacyEndpointLink = tree.children[0].children[2];
+  const legacyClusterLink = tree.children[0].children[3];
   const pricingDefinition = tree.children[1];
 
   assert.equal(supportLink.url, 'https://support.zilliz.com.cn/hc/zh-cn');
   assert.equal(endpointLink.url, 'https://{project-id}.{region}.api.cloud.zilliz.com.cn');
   assert.equal(legacyEndpointLink.url, 'https://{project-id}.{region}.api.cloud.zilliz.com.cn/v2/clusters');
+  assert.equal(legacyClusterLink.url, 'https://in01-xxxx.serverless.gcp-us-west1.cloud.zilliz.com.cn');
   assert.equal(pricingDefinition.url, 'https://zilliz.com.cn/pricing#calculator');
 }
 
