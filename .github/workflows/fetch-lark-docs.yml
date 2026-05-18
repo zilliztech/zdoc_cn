@@ -52,7 +52,7 @@ jobs:
         IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
     - name: build docsite
       run: |
-        npm run build
+        npm run build:cn-publish
         npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}
@@ -110,7 +110,7 @@ jobs:
         IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
     - name: build docsite
       run: |
-        npm run build
+        npm run build:cn-publish
         npx docusaurus report-to-lark --card-advance
       env:
         APP_ID: ${{ secrets.APP_ID }}

@@ -35,9 +35,9 @@ const FORBIDDEN_RULES = [
     isForbiddenMatch: (match) => !/^https?:\/\/(?:www\.)?zilliz\.com\.cn\/(?:contact-sales|pricing)(?:$|[/?#])/i.test(match),
   },
   {
-    rule: 'global-endpoint-non-cn',
-    pattern: /https?:\/\/(?:api\.cloud\.zilliz\.com(?!\.cn)|\{(?:cluster-id|project-id)\}\.\{region\}\.api\.zillizcloud\.com(?!\.cn))(?:\/[\w\-.~%!$&'()*+,;=:@/?#]*)?/gi,
-    description: 'Global endpoint form found where CN endpoint is required',
+    rule: 'endpoint-family-non-canonical',
+    pattern: /https?:\/\/(?:(?:api\.cloud\.zilliz\.com(?!\.cn))|(?:[\w{}-]+\.[\w{}-]+\.api\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn|cloud\.zilliz\.com(?!\.cn))))(?:\/[\w\-.~%!$&'()*+,;=:@/?#]*)?/gi,
+    description: 'Legacy or non-CN endpoint family found where canonical CN endpoint is required',
   },
   {
     rule: 'duplicate-cn-suffix',
