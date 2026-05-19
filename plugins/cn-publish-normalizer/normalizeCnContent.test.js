@@ -75,6 +75,7 @@ function testNormalizesLegacyProjectEndpointFamilies() {
     'legacyZillizCn="https://{project-id}.{region}.api.zilliz.com.cn/v2/clusters"',
     'globalCloud="https://{project-id}.{region}.api.cloud.zilliz.com/v2/jobs"',
     'concreteLegacy="https://proj-123.ali-cn-hangzhou.api.zillizcloud.com"',
+    'legacyUpper="https://YOUR_PROJECT_ID.YOUR_REGION.api.zillizcloud.com"',
   ].join('\n');
 
   const out = normalizeCnContent(input);
@@ -84,6 +85,7 @@ function testNormalizesLegacyProjectEndpointFamilies() {
   assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn\/v2\/clusters/);
   assert.match(out, /https:\/\/\{project-id\}\.\{region\}\.api\.cloud\.zilliz\.com\.cn\/v2\/jobs/);
   assert.match(out, /https:\/\/proj-123\.ali-cn-hangzhou\.api\.cloud\.zilliz\.com\.cn/);
+  assert.match(out, /https:\/\/YOUR_PROJECT_ID\.YOUR_REGION\.api\.cloud\.zilliz\.com\.cn/);
   assert.doesNotMatch(out, /\.api\.zillizcloud\.com(?:\.cn)?\b/);
   assert.doesNotMatch(out, /\.api\.zilliz\.com\.cn\b/);
 }
@@ -104,6 +106,7 @@ function testNormalizesClusterEndpointFamilies() {
     'legacyCn="https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com.cn/v1/vector/search"',
     'alreadyCn="https://in01-xxxx.serverless.ali-cn-hangzhou.vectordb.zilliz.com.cn"',
     'doubleCn="https://in01-xxxx.serverless.ali-cn-hangzhou.vectordb.zilliz.com.cn.cn"',
+    'legacyUpperServerless="https://YOUR_CLUSTER_ID.serverless.YOUR_REGION.vectordb.zillizcloud.com"',
   ].join('\n');
 
   const out = normalizeCnContent(input);
@@ -112,6 +115,7 @@ function testNormalizesClusterEndpointFamilies() {
   assert.match(out, /https:\/\/in01-xxxx\.gcp-us-west1\.vectordb\.zilliz\.com\.cn:19530/);
   assert.match(out, /https:\/\/in01-xxxx\.serverless\.gcp-us-west1\.cloud\.zilliz\.com\.cn\/v1\/vector\/search/);
   assert.match(out, /https:\/\/in01-xxxx\.serverless\.ali-cn-hangzhou\.cloud\.zilliz\.com\.cn/);
+  assert.match(out, /https:\/\/YOUR_CLUSTER_ID\.serverless\.YOUR_REGION\.cloud\.zilliz\.com\.cn/);
   assert.doesNotMatch(out, /vectordb\.zillizcloud\.com(?:\.cn)?/);
   assert.doesNotMatch(out, /serverless\.[\w-]+\.vectordb\.zilliz\.com\.cn/);
   assert.doesNotMatch(out, /vectordb\.zilliz\.com\.cn\.cn/);
