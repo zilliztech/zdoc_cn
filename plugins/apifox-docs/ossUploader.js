@@ -1,13 +1,24 @@
-const { S3Client, HeadObjectCommand, PutObjectCommand } = require('@aws-sdk/client-s3')
+const OSS = require('ali-oss')
 const fs = require('node:fs')
 const crypto = require('node:crypto')
+const { XMLParser } = require('fast-xml-parser')
 
-class S3Uploader {
+class OSSUploader {
   constructor(options) {
     this.options = options
-    this.client = new S3Client({ region: process.env.AWS_REGION })
-    this.bucket = process.env.AWS_BUCKET
-    this.prefix = process.env.S3_PREFIX || ''
+    this.bucket = process.env.OSS_BUCKET
+    this.prefix = process.env.OSS_PREFIX || ''
+    this.publicBaseUrl = process.env.OSS_PUBLIC_BASE_URL || ''
+    this.parser = new XMLParser()
+
+    this.client = new OSS({
+      accessKeyId: process.env.OSS_ACCESS_KEY_ID,
+      accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET,
+      region: process.env.OSS_REGION,
+      bucket: this.bucket,
+      authorizationV4: true,
+      endpoint: process.env.OSS_ENDPOINT,
+    })
   }
 
   mergeSpecsByTargetAndVersion(specifications) {
@@ -17,7 +28,6 @@ class S3Uploader {
     for (const target of targets) {
       results[target] = {}
 
-      // Filter tags
       const filteredTags = (specifications.tags || []).filter(tag => {
         if (tag['x-include-target']) {
           return tag['x-include-target'].includes(target)
@@ -25,7 +35,6 @@ class S3Uploader {
         return true
       })
 
-      // Filter paths
       const filteredPaths = {}
       for (const [pathUrl, methods] of Object.entries(specifications.paths || {})) {
         const filteredMethods = {}
@@ -46,7 +55,6 @@ class S3Uploader {
         }
       }
 
-      // Split by version
       const versions = { v1: { tags: [], paths: {} }, v2: { tags: [], paths: {} } }
       for (const tag of filteredTags) {
         const version = tag.name.includes('(V2)') || tag.name.includes('v2') ? 'v2' : 'v1'
@@ -92,9 +100,7 @@ class S3Uploader {
 
       const result = {}
       for (const [key, value] of Object.entries(obj)) {
-        // Strip all x-* keys
         if (key.startsWith('x-')) {
-          // For zh-CN, use x-i18n to replace localizable fields before stripping
           if (lang === 'zh-CN' && key === 'x-i18n' && value && typeof value === 'object') {
             const zhContent = value['zh-CN']
             if (zhContent && typeof zhContent === 'object') {
@@ -116,36 +122,50 @@ class S3Uploader {
     return localizeObj(clean)
   }
 
+  objectUrl(key) {
+    if (this.publicBaseUrl) {
+      return `${this.publicBaseUrl.replace(/\/$/, '')}/${key}`
+    }
+
+    const endpoint = (process.env.OSS_ENDPOINT || '').replace(/^https?:\/\//, '')
+    if (endpoint) {
+      return `https://${this.bucket}.${endpoint}/${key}`
+    }
+
+    return key
+  }
+
   async uploadIfChanged(key, content) {
-    const s3Key = this.prefix ? `${this.prefix}/${key}` : key
+    const ossKey = this.prefix ? `${this.prefix}/${key}` : key
     const md5 = crypto.createHash('md5').update(content).digest('hex')
 
     try {
-      const head = await this.client.send(new HeadObjectCommand({
-        Bucket: this.bucket,
-        Key: s3Key,
-      }))
-      const etag = head.ETag?.replace(/"/g, '')
-      if (etag === md5) {
+      const response = await this.client.getObjectTagging(ossKey)
+      const xml = this.parser.parse(response.res.data.toString('utf8'))
+      const tagNode = xml?.Tagging?.TagSet?.Tag
+      const tags = Array.isArray(tagNode) ? tagNode : (tagNode ? [tagNode] : [])
+      const hashTag = tags.find(t => t.Key === 'hash')
+      if (hashTag?.Value === md5) {
         console.log(`Skipping ${key} - unchanged`)
-        return `https://${this.bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${s3Key}`
+        return this.objectUrl(ossKey)
       }
     } catch (err) {
-      if (err.name !== 'NotFound') {
+      if (err.code !== 'NoSuchKey') {
         throw err
       }
     }
 
     console.log(`Uploading ${key}...`)
-    await this.client.send(new PutObjectCommand({
-      Bucket: this.bucket,
-      Key: s3Key,
-      Body: content,
-      ContentType: 'application/json',
-      ACL: 'public-read',
-    }))
+    await this.client.put(ossKey, Buffer.from(content), {
+      headers: {
+        'Content-Type': 'application/json',
+        'x-oss-object-acl': 'public-read',
+        'x-oss-tagging': `hash=${md5}`,
+        'x-oss-forbid-overwrite': 'false',
+      },
+    })
 
-    return `https://${this.bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${s3Key}`
+    return this.objectUrl(ossKey)
   }
 
   updateAboutPage(urls) {
@@ -182,11 +202,17 @@ ${Object.entries(urls).map(([key, url]) => {
   }
 
   async upload(specifications, lang) {
-    if (!this.bucket) {
-      throw new Error('AWS_BUCKET environment variable is required')
+    if (!process.env.OSS_ACCESS_KEY_ID) {
+      throw new Error('OSS_ACCESS_KEY_ID environment variable is required')
     }
-    if (!process.env.AWS_REGION) {
-      throw new Error('AWS_REGION environment variable is required')
+    if (!process.env.OSS_ACCESS_KEY_SECRET) {
+      throw new Error('OSS_ACCESS_KEY_SECRET environment variable is required')
+    }
+    if (!process.env.OSS_REGION) {
+      throw new Error('OSS_REGION environment variable is required')
+    }
+    if (!this.bucket) {
+      throw new Error('OSS_BUCKET environment variable is required')
     }
 
     const merged = this.mergeSpecsByTargetAndVersion(specifications)
@@ -206,4 +232,4 @@ ${Object.entries(urls).map(([key, url]) => {
   }
 }
 
-module.exports = S3Uploader
+module.exports = OSSUploader

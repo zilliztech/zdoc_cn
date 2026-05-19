@@ -6,7 +6,7 @@ This document catalogs every custom attribute, frontmatter field, meta configura
 
 ## 1. OpenAPI `x-` Extensions
 
-These attributes live inside the OpenAPI JSON files (`meta/openapi/*.json`) and are consumed at **build time** (by `refGen.js` and `s3Uploader.js`) and/or **runtime** (by the `RestSpecs` React component).
+These attributes live inside the OpenAPI JSON files (`meta/openapi/*.json`) and are consumed at **build time** (by `refGen.js` and `ossUploader.js`) and/or **runtime** (by the `RestSpecs` React component).
 
 | Attribute | Scope | Build | Runtime | Description |
 |-----------|-------|-------|---------|-------------|
@@ -22,7 +22,7 @@ These attributes live inside the OpenAPI JSON files (`meta/openapi/*.json`) and 
 | `x-base-url-target` | parameters, schema properties, examples | — | Yes | Filters content by selected base URL `key`. Companion to `x-base-urls`. |
 | `x-i18n-langs` | examples | No | No | Lists available i18n languages for an example block (data-only, not processed). |
 
-*Build-time stripping in `s3Uploader.js` preserves `x-i18n` only when generating the `zh-CN` S3 artifact.
+*Build-time stripping in `ossUploader.js` preserves `x-i18n` only when generating the `zh-CN` OSS artifact.
 
 ### 1.1 `x-i18n`
 
@@ -250,7 +250,7 @@ Reference in any operation:
 - **I18n per entry:** Each `x-base-urls` entry supports `x-i18n` translations for `label`, `prompt`, and `url`. The `BaseURL` component resolves these at runtime using the active language (`lang`), e.g. `current["x-i18n"]["zh-CN"]["label"]` takes precedence over the default `label`.
 - **No fallback:** If `x-base-urls` is missing or empty, the component falls through to `getBaseUrl()` exactly as if the attribute were absent.
 
-**S3 stripping:** Like all `x-*` keys, `x-base-urls` is removed by `s3Uploader.js` before upload, so it never appears in the public S3 specs.
+**OSS stripping:** Like all `x-*` keys, `x-base-urls` is removed by `ossUploader.js` before upload, so it never appears in the public OSS specs.
 
 ### 1.9 `x-base-url-target`
 
@@ -461,7 +461,7 @@ The plugin exposes a CLI command with the following options:
 | `--output_path` | `-o` | `reference/api/restful/restful` | Target directory for generated `.mdx` files. |
 | `--strings` | `-i` | — | Localization strings file for Chinese docs (required when `lang === 'zh-CN'`). |
 | `--target` | `-t` | `zilliz` | Publication target (`zilliz` or `milvus`). |
-| `--upload-s3` | — | `false` | Upload merged OpenAPI specs to S3 and update the about page. |
+| `--upload-oss` | — | `false` | Upload merged OpenAPI specs to OSS and update the about page. |
 
 ---
 
@@ -495,4 +495,4 @@ The plugin exposes a CLI command with the following options:
 
 - **`x-18n` (typo)**: A handful of places in `25-metrics-and-alerts-v2.json` use `x-18n` instead of `x-i18n`. This is **not** processed by the plugin and should be corrected to `x-i18n`.
 - **V1 Auto-Deprecation**: All `v1` endpoints are automatically marked as `deprecated: true` in `refGen.js` regardless of the `x-beta` value.
-- **S3 Stripping**: `s3Uploader.js` strips **all** `x-*` keys before upload, except that `x-i18n` is used to inline Chinese translations when `lang === 'zh-CN'`.
+- **OSS Stripping**: `ossUploader.js` strips **all** `x-*` keys before upload, except that `x-i18n` is used to inline Chinese translations when `lang === 'zh-CN'`.

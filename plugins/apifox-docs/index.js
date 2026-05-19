@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const { program } = require('commander')
 const RefGen = require('./refGen')
-const S3Uploader = require('./s3Uploader')
 const fs = require('node:fs')
 const { loadSpecifications } = require('./specLoader')
 
@@ -13,7 +12,7 @@ function registerCommand(command) {
         .option('-o, --output_path <target_path>', 'Target path of the API Reference', 'reference/api/restful/restful')
         .option('-i, --strings <strings>', 'Localization strings for Chinese docs')
         .option('-t, --target <string>', 'Publication target of the API Reference', 'zilliz')
-        .option('--upload-s3', 'Upload merged OpenAPI specs to S3 and update about page', false)
+        .option('--upload-oss', 'Upload merged OpenAPI specs to OSS and update about page', false)
         .action(async (opts) => {
             let lang = opts.lang
             let target = opts.target
@@ -65,12 +64,13 @@ function registerCommand(command) {
             refGen.make_groups()
             refGen.write_refs()
 
-            if (opts.upload_s3) {
+            if (opts.upload_oss) {
                 try {
-                    const uploader = new S3Uploader({ target, lang })
+                    const OSSUploader = require('./ossUploader')
+                    const uploader = new OSSUploader({ target, lang })
                     await uploader.upload(specifications, lang)
                 } catch (err) {
-                    console.error(`S3 upload failed: ${err.message}`)
+                    console.error(`OSS upload failed: ${err.message}`)
                     process.exitCode = 1
                 }
             }
