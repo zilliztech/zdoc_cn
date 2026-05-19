@@ -1,11 +1,12 @@
 import { capitalize } from 'lodash';
 import { i18n } from './i18n'
 import Showdown from 'showdown';
+// planeConfig is passed from callers that read it via useDocusaurusContext
 
-export const getBaseUrl = (endpoint, lang, pubTarget) => {
-    const condition = isControlPlane(endpoint)
+export const getBaseUrl = (endpoint, lang, pubTarget, planeConfig) => {
+    const condition = isControlPlane(endpoint, pubTarget, planeConfig)
 
-    var server = "https://api.cloud.zilliz.com.cn";
+    var server = "https://api.cloud.zilliz.com";
     var children = `export BASE_URL="${server}"`
     var prompt = isBeta(endpoint) ? i18n[lang]["admonition.control.plane.v2"] + i18n[lang]["admonition.beta.warning"] : i18n[lang]["admonition.control.plane.v2"]
 
@@ -13,11 +14,6 @@ export const getBaseUrl = (endpoint, lang, pubTarget) => {
         server = lang === "zh-CN" ? "https://controller.api.${CLOUD_REGION}.zilliz.com.cn" : "https://controller.api.${CLOUD_REGION}.zillizcloud.com"
         children = lang === "zh-CN" ? `export CLOUD_REGION="ali-cn-hangzhou"\nexport BASE_URL="${server}"` : `export CLOUD_REGION="gcp-us-west1"\nexport BASE_URL="${server}"`
         prompt = i18n[lang]["admonition.cloud.region"]
-    }
-
-    if (condition && endpoint.includes('v2')) {
-        server = "https://api.cloud.zilliz.com.cn";
-        children = `export BASE_URL="${server}"`
     }
 
     if (!condition) {
@@ -63,93 +59,79 @@ export const textFilter =  (text, targets) => {
     const converter = new Showdown.Converter();
     text = converter.makeHtml(text);
 
-    return text
+    return text;
 }
 
 const matchFilterTags = (text) => {
+    const startTagRegex = /<(include|exclude) target="(.+?)"/gm
+    const endTagRegex = /<\/(include|exclude)>/gm
+    const matches = [... text.matchAll(startTagRegex)]
     var returns = []
-    if (text) {
-        const startTagRegex = /<(include|exclude) target="(.+?)"/gm
-        const endTagRegex = /<\/(include|exclude)>/gm
-        var matches = []
-        if (text.matchAll(startTagRegex)) matches = [... text.matchAll(startTagRegex)]
-    
-    
-        matches.forEach(match => {
-            var tag = match[1]
-            var rest = text.slice(match.index)
-            
-            var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
-            var closeTagMatch = [... rest.matchAll(closeTagRegex)]
-            
-            var startIndex = match.index
-            var endIndex = 0
-            
-            for (let i = 0; i < closeTagMatch.length; i++) {
-                var t = text.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
-            
-                var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
-                var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
+
+    matches.forEach(match => {
+        var tag = match[1]
+        var rest = text.slice(match.index)
         
-                if (startCount === endCount) {
-                    endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
-                    break
-                }
+        var closeTagRegex = new RegExp(`</${tag}>`, 'gm')
+        var closeTagMatch = [... rest.matchAll(closeTagRegex)]
+        
+        var startIndex = match.index
+        var endIndex = 0
+        
+        for (let i = 0; i < closeTagMatch.length; i++) {
+            var t = text.slice(startIndex, startIndex+closeTagMatch[i].index+closeTagMatch[i][0].length)
+        
+            var startCount = t.match(startTagRegex) ? t.match(startTagRegex).length : 0
+            var endCount = t.match(endTagRegex) ? t.match(endTagRegex).length : 0
+    
+            if (startCount === endCount) {
+                endIndex = startIndex + closeTagMatch[i].index + closeTagMatch[i][0].length
+                break
             }
-            
-            returns.push({
-                tag: tag,
-                target: match[2],
-                startIndex: startIndex,
-                endIndex: endIndex
-            })           
-        })
-    }
+        }
+        
+        returns.push({
+            tag: tag,
+            target: match[2],
+            startIndex: startIndex,
+            endIndex: endIndex
+        })           
+    })
 
     return returns
 }
 
-export const getRandomString = (length) => {
-    var result = '';
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-       result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
+let _tabIdCounter = 0;
+export const getRandomString = () => {
+    return `tid${++_tabIdCounter}`;
 }
 
 export const chooseParamExample = (param, lang, target) => {
+    // Check x-i18n first (consistent with Primitive component)
+    if (param["x-i18n"]?.[lang]?.example !== undefined) {
+        param.example = param["x-i18n"][lang].example
+        return param
+    }
+
     if (param.examples) {
         const validkey = Object.keys(param.examples).filter(key => {
-            return param.examples[key]?.["x-target-lang"] === lang || param.examples[key]?.["x-include-target"]?.includes(target)
+            const ex = param.examples[key]
+            const langMatch = !ex?.["x-target-lang"] || ex["x-target-lang"] === lang
+            const targetMatch = !ex?.["x-include-target"] || ex["x-include-target"].includes(target)
+            return langMatch && targetMatch
         })[0]
 
-        param.example = param.examples[validkey].value
+        if (validkey) {
+            param.example = param.examples[validkey].value
+        }
     }
 
     return param
 }
 
-export const isControlPlane = (endpoint) => {
-    
-    return endpoint.includes('cloud') || 
-        endpoint.includes('region') || 
-        endpoint.includes('cluster') || 
-        endpoint.includes('import') || 
-        endpoint.includes('pipeline') || 
-        endpoint.includes('project') || 
-        endpoint.includes('metrics') ||
-        endpoint.includes('migration') ||
-        endpoint.includes('backup') ||
-        endpoint.includes('restore') ||
-        endpoint.includes('usage') ||
-        endpoint.includes('invoice') ||
-        endpoint.includes('job') ||
-        endpoint.includes('alert') ||
-        endpoint.includes('etl') ||
-        endpoint.includes('stage') ||
-        endpoint.includes('project')
+export const isControlPlane = (endpoint, target = 'zilliz', planeConfig) => {
+    const keywords = planeConfig?.controlPlaneKeywords?.[target] || planeConfig?.controlPlaneKeywords?.zilliz || []
+    return keywords.some(k => endpoint.includes(k))
 }
 
 export const isBeta = (endpoint) => {
@@ -157,4 +139,5 @@ export const isBeta = (endpoint) => {
         endpoint.includes('stage') ||
         endpoint.includes('usage') ||
         endpoint.includes('invoice')
-}    
+        
+}      
