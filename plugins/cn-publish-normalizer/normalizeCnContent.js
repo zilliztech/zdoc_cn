@@ -39,17 +39,17 @@ function normalizeEndpoints(content) {
   out = out.replace(/https?:\/\/api\.cloud\.zilliz\.com(?!\.cn)\b/gi, canonical.controlPlaneEndpoint);
 
   out = out.replace(
-    /https?:\/\/(\{[a-z0-9-]+\}|[a-z0-9-]+)\.(\{[a-z0-9-]+\}|[a-z0-9-]+)\.api\.(?:cloud\.zilliz\.com(?!\.cn)|zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)\b/gi,
+    /https?:\/\/(\{[a-z0-9_-]+\}|[a-z0-9_-]+)\.(\{[a-z0-9_-]+\}|[a-z0-9_-]+)\.api\.(?:cloud\.zilliz\.com(?!\.cn)|zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)\b/gi,
     'https://$1.$2.api.cloud.zilliz.com.cn',
   );
 
   out = out.replace(
-    /https?:\/\/((?:\{[a-z0-9-]+\}|[a-z0-9-]+))\.serverless\.(\{[a-z0-9-]+\}|[a-z0-9-]+)\.vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)\b/gi,
+    /https?:\/\/((?:\{[a-z0-9_-]+\}|[a-z0-9_-]+))\.serverless\.(\{[a-z0-9_-]+\}|[a-z0-9_-]+)\.vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)\b/gi,
     'https://$1.serverless.$2.cloud.zilliz.com.cn',
   );
 
   out = out.replace(
-    /https?:\/\/((?:\{[a-z0-9-]+\}|[a-z0-9-]+)(?:\.(?:\{[a-z0-9-]+\}|[a-z0-9-]+))*)\.vectordb\.zillizcloud\.com(?:\.cn)?\b/gi,
+    /https?:\/\/((?:\{[a-z0-9_-]+\}|[a-z0-9_-]+)(?:\.(?:\{[a-z0-9_-]+\}|[a-z0-9_-]+))*)\.vectordb\.zillizcloud\.com(?:\.cn)?\b/gi,
     'https://$1.vectordb.zilliz.com.cn',
   );
 
