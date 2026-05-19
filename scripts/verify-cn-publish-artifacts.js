@@ -41,7 +41,7 @@ const FORBIDDEN_RULES = [
   },
   {
     rule: 'cluster-endpoint-family-non-canonical',
-    pattern: /https?:\/\/(?:(?:[\w{}-]+\.serverless\.[\w{}-]+\.(?:vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)|cloud\.zilliz\.com(?!\.cn)))|(?:[\w{}-]+\.)+vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com(?!\.cn)))(?:\:[0-9]+)?(?:\/[\w\-.~%!$&'()*+,;=:@/?#]*)?/gi,
+    pattern: /https?:\/\/(?:(?:[\w{}-]+\.serverless\.[\w{}-]+\.(?:vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com\.cn)|cloud\.zilliz\.com(?!\.cn)))|(?:[\w{}-]+\.api\.[\w{}-]+\.zillizcloud\.com(?:\.cn)?)|(?:[\w{}-]+\.)+vectordb\.(?:zillizcloud\.com(?:\.cn)?|zilliz\.com(?!\.cn)))(?:\:[0-9]+)?(?:\/[\w\-.~%!$&'()*+,;=:@/?#]*)?/gi,
     description: 'Legacy or non-CN cluster endpoint family found where canonical CN endpoint is required',
   },
   {
