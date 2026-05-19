@@ -52,6 +52,7 @@ function testFindsAllForbiddenResidualClasses() {
         'https://proj-123.ali-cn-hangzhou.api.zilliz.com.cn/v2/jobs',
         'https://api.cloud.zilliz.com.cn.cn',
         'https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com',
+        'https://in01-xxxx.api.gcp-us-west1.zillizcloud.com:19530',
         'https://YOUR_PROJECT_ID.YOUR_REGION.api.zillizcloud.com',
         'https://YOUR_CLUSTER_ID.serverless.YOUR_REGION.vectordb.zillizcloud.com',
         'object_url="://your/data/path/in/external/storage.json"',
@@ -74,6 +75,22 @@ function testFindsAllForbiddenResidualClasses() {
   });
 }
 
+function testDetectsLegacyApiRegionClusterEndpointFamily() {
+  withTempDir((tempDir) => {
+    fs.writeFileSync(
+      path.join(tempDir, 'legacy-cluster.html'),
+      'https://in01-xxxx.api.gcp-us-west1.zillizcloud.com:19530',
+      'utf8',
+    );
+
+    const violations = scanArtifacts(tempDir);
+
+    assert.equal(violations.length, 1);
+    assert.equal(violations[0].rule, 'cluster-endpoint-family-non-canonical');
+    assert.match(violations[0].match, /\.api\.[\w-]+\.zillizcloud\.com/i);
+  });
+}
+
 function testNormalizeArtifactsRewritesResidualsBeforeScan() {
   withTempDir((tempDir) => {
     fs.writeFileSync(
@@ -85,6 +102,7 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
         'https://{project-id}.{region}.api.zillizcloud.com',
         'https://{project-id}.{region}.api.zilliz.com.cn/v2/jobs',
         'https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com',
+        'https://in01-xxxx.api.gcp-us-west1.zillizcloud.com:19530',
         'https://YOUR_PROJECT_ID.YOUR_REGION.api.zillizcloud.com',
         'https://YOUR_CLUSTER_ID.serverless.YOUR_REGION.vectordb.zillizcloud.com',
         'object_url="://your/data/path/in/external/storage.json"',
@@ -107,6 +125,7 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
     assert.doesNotMatch(normalized, /\.api\.zilliz\.com\.cn/);
     assert.match(normalized, /\.api\.cloud\.zilliz\.com\.cn/);
     assert.doesNotMatch(normalized, /vectordb\.zillizcloud\.com(?:\.cn)?/);
+    assert.doesNotMatch(normalized, /\.api\.[\w-]+\.zillizcloud\.com(?:\.cn)?/i);
     assert.match(normalized, /serverless\.[\w-]+\.cloud\.zilliz\.com\.cn/);
     assert.match(normalized, /vectordb\.zilliz\.com\.cn/);
     assert.match(normalized, /object_url\s*=\s*"oss:\/\/\{bucket_name\}\/you\/data\/in\/storage\.json"/);
@@ -134,6 +153,7 @@ function testFormatsReadableReport() {
 function run() {
   testPassesWhenArtifactsAreCnSafe();
   testFindsAllForbiddenResidualClasses();
+  testDetectsLegacyApiRegionClusterEndpointFamily();
   testNormalizeArtifactsRewritesResidualsBeforeScan();
   testFormatsReadableReport();
   console.log('verify-cn-publish-artifacts tests passed');
