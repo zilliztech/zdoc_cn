@@ -37,7 +37,7 @@
           {
             "name": "Authorization",
             "in": "header",
-            "description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+            "description": "The authentication token should be an API key with appropriate privileges.",
             "required": true,
             "example": "Bearer {{TOKEN}}",
             "schema": {
@@ -45,7 +45,7 @@
             },
             "x-i18n": {
               "zh-CN": {
-                "description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+                "description": "认证令牌，应为具备适当权限的 API 密钥。"
               }
             }
           },
@@ -300,7 +300,7 @@
           {
             "name": "Authorization",
             "in": "header",
-            "description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+            "description": "The authentication token should be an API key with appropriate privileges.",
             "required": true,
             "example": "Bearer {{TOKEN}}",
             "schema": {
@@ -308,7 +308,7 @@
             },
             "x-i18n": {
               "zh-CN": {
-                "description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+                "description": "认证令牌，应为具备适当权限的 API 密钥。"
               }
             }
           }
@@ -411,7 +411,20 @@
                     "regionId": "aws-us-west-2",
                     "volumeName": "my_external_volume",
                     "type": "EXTERNAL",
-                    "storageIntegrationId": "si-123456",
+                    "storageIntegrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+                    "path": "data/"
+                  }
+                },
+                "4": {
+                  "summary": "External Volume",
+                  "x-target-response": "OPTION 1",
+                  "x-target-lang": "zh-CN",
+                  "value": {
+                    "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
+                    "regionId": "ali-cn-hangzhou",
+                    "volumeName": "my_external_volume",
+                    "type": "EXTERNAL",
+                    "storageIntegrationId": "integ-xxxxxxxxxxxxxxxxxxx",
                     "path": "data/"
                   }
                 }
@@ -560,7 +573,7 @@
           {
             "name": "Authorization",
             "in": "header",
-            "description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+            "description": "The authentication token should be an API key with appropriate privileges.",
             "required": true,
             "example": "Bearer {{TOKEN}}",
             "schema": {
@@ -568,7 +581,7 @@
             },
             "x-i18n": {
               "zh-CN": {
-                "description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+                "description": "认证令牌，应为具备适当权限的 API 密钥。"
               }
             }
           }
@@ -713,6 +726,7 @@
                   "1": {
                     "summary": "Managed",
                     "x-target-response": "OPTION 1",
+                    "x-target-lang": "en-US",
                     "value": {
                       "code": 0,
                       "data": {
@@ -727,13 +741,14 @@
                   "2": {
                     "summary": "External",
                     "x-target-response": "OPTION 1",
+                    "x-target-lang": "en-US",
                     "value": {
                       "code": 0,
                       "data": {
                         "volumeName": "my_external_volume",
                         "type": "EXTERNAL",
                         "regionId": "aws-us-west-2",
-                        "storageIntegrationId": "si-123456",
+                        "storageIntegrationId": "integ-xxxxxxxxxxxxxxxxxxx",
                         "path": "data/",
                         "status": "RUNNING",
                         "createTime": "2026-05-06T03:50:35Z"
@@ -746,6 +761,38 @@
                     "value": {
                       "code": 63240,
                       "message": "The specified volume not exists, please check your request."
+                    }
+                  },
+                  "4": {
+                    "summary": "Managed",
+                    "x-target-response": "OPTION 1",
+                    "x-target-lang": "zh-CN",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "volumeName": "my_volume",
+                        "type": "MANAGED",
+                        "regionId": "ali-cn-hangzhou",
+                        "status": "RUNNING",
+                        "createTime": "2026-05-06T03:50:35Z"
+                      }
+                    }
+                  },
+                  "5": {
+                    "summary": "External",
+                    "x-target-response": "OPTION 1",
+                    "x-target-lang": "zh-CN",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "volumeName": "my_external_volume",
+                        "type": "EXTERNAL",
+                        "regionId": "ali-cn-hangzhou",
+                        "storageIntegrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+                        "path": "data/",
+                        "status": "RUNNING",
+                        "createTime": "2026-05-06T03:50:35Z"
+                      }
                     }
                   }
                 }
@@ -786,7 +833,7 @@
           {
             "name": "Authorization",
             "in": "header",
-            "description": "The authentication token should be <include target=\"zilliz\">an API key with appropriate privileges or </include>a pair of colon-joined username and password, like `username:password`.",
+            "description": "The authentication token should be an API key with appropriate privileges.",
             "required": true,
             "example": "Bearer {{TOKEN}}",
             "schema": {
@@ -794,7 +841,7 @@
             },
             "x-i18n": {
               "zh-CN": {
-                "description": "认证令牌，应为<include target=\"zilliz\">具备适当权限的 API 密钥或</include>用冒号分隔的用户名和密码，如 `username:password`。"
+                "description": "认证令牌，应为具备适当权限的 API 密钥。"
               }
             }
           }

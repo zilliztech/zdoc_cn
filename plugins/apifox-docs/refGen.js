@@ -4,8 +4,6 @@ const path = require('node:path')
 const { resolveRefs } = require('./specLoader')
 
 const META_DIR = path.join(__dirname, 'meta')
-const TEMPLATES_DIR = path.join(__dirname, 'templates')
-
 const planeConfig = JSON.parse(fs.readFileSync(path.join(META_DIR, 'plane-config.json'), 'utf-8'))
 
 const CONFIG = {
@@ -62,7 +60,7 @@ class refGen {
       }
       for (const method of httpMethods) {
         if (!methods[method].summary) {
-          console.warn(`Warning: ${method.toUpperCase()} ${path} is missing a "summary"`)
+          throw new Error(`${method.toUpperCase()} ${path} is missing required "summary"`)
         }
       }
     }
@@ -78,6 +76,16 @@ class refGen {
       if (slug.includes(keyword)) return tag
     }
     return CONFIG.betaDefaults[version] || 'FALSE'
+  }
+
+  shouldIncludeByLang(entity) {
+    const includeLangs = entity?.['x-include-langs']
+    if (!includeLangs) {
+      return true
+    }
+
+    const langs = Array.isArray(includeLangs) ? includeLangs : [includeLangs]
+    return langs.includes(this.options.lang)
   }
 
   lookupDescription(slug, specDescription) {
@@ -102,7 +110,7 @@ class refGen {
     const { lang, target, parents, specifications } = this.options
 
     const env = new nunjucks.Environment(
-      new nunjucks.FileSystemLoader(TEMPLATES_DIR),
+      new nunjucks.FileSystemLoader(`plugins/apifox-docs/templates`),
       {
         autoescape: false,
       }
@@ -117,14 +125,22 @@ class refGen {
         if (specification?.["x-include-target"] && !specification["x-include-target"].includes(target)) {
           continue
         }
+        if (!this.shouldIncludeByLang(specification)) {
+          continue
+        }
 
         const tagObj = specifications.tags.find(t => t.name === specification.tags?.[0])
         if (tagObj?.["x-include-target"] && !tagObj["x-include-target"].includes(target)) {
           continue
         }
+        if (!this.shouldIncludeByLang(tagObj)) {
+          continue
+        }
 
-        const page_title = lang === "zh-CN" ? specification["x-i18n"][lang].summary : specification.summary
-        const page_excerpt = this.__filter_content(lang === "zh-CN" ? specification["x-i18n"][lang].description : specification.description, target).split('<')[0]
+        const i18n = specification?.["x-i18n"]?.[lang]
+        const page_title = lang === "zh-CN" ? (i18n?.summary || specification.summary) : specification.summary
+        const rawDescription = lang === "zh-CN" ? (i18n?.description || specification.description) : specification.description
+        const page_excerpt = this.__filter_content(rawDescription ?? '', target).split('<')[0]
         var page_parent = parents.filter(x => x === specification.tags[0])[0]
         if (!page_parent) {
           console.warn(`Warning: No matching parent tag for "${specification.tags?.[0]}" in ${method.toUpperCase()} ${page_url}, skipping`)
@@ -260,7 +276,7 @@ class refGen {
   make_groups() {
     const { specifications, target, target_path } = this.options
     const env = new nunjucks.Environment(
-      new nunjucks.FileSystemLoader(TEMPLATES_DIR),
+      new nunjucks.FileSystemLoader(`plugins/apifox-docs/templates`),
       { autoescape: false }
     )
 
@@ -268,12 +284,12 @@ class refGen {
 
     for (const group of Object.keys(specifications.tags)) {
       if (specifications.tags[group]['x-include-target'] && !(specifications.tags[group]['x-include-target']?.includes(target))) continue;
+      if (!this.shouldIncludeByLang(specifications.tags[group])) continue;
 
       const slug = this.toSlug(specifications.tags[group].name)
       const version = slug.includes('v2') ? 'v2' : 'v1'
       var upper_folder = this.getPlane(slug, target)
 
-      console.log(slug)
       const group_name = version === 'v2' ? specifications.tags[group].name.slice(0, -5) : specifications.tags[group].name
       const description = this.lookupDescription(slug, specifications.tags[group].description)
 
@@ -344,14 +360,14 @@ class refGen {
   }
 
   get_slug(page_title, target) {
-    console.log(page_title)
     var page_slug = 0
     const { lang } = this.options
     if (lang == 'zh-CN') {
       const titles = JSON.parse(fs.readFileSync(path.join(META_DIR, 'titles.json'), 'utf-8'))
       page_slug = titles[page_title]
       if (!page_slug) {
-        throw new Error(`Missing Chinese title mapping for: "${page_title}" in titles.json`)
+        console.warn(`Warning: Missing Chinese title mapping for "${page_title}", using fallback slug`)
+        page_slug = page_title.replace(/\s+/g, '-').replace(/\(|\)|,/g, '').toLowerCase()
       }
     } else {
       page_slug = page_title.replace("&", "and").split(' ').join('-').replace(/\(|\)/g, '').toLowerCase()
@@ -390,6 +406,10 @@ class refGen {
   }
 
   __filter_content (markdown, targets) {
+    if (typeof markdown !== 'string') {
+      return ''
+    }
+
     const matches = this.__match_filter_tags(markdown)
 
     if (matches.length > 0) {
