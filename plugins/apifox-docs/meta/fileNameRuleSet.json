@@ -55,6 +55,11 @@
         "match": "removeAndCapitalize"
     },
     {
+        "path": "-indexes",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
         "path": "-index",
         "name": "-",
         "match": "removeAndCapitalize"
@@ -106,6 +111,66 @@
     },
     {
         "path": "-import-job",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
+        "path": "alter-field-properties",
+        "name": "Alter Field Properties",
+        "match": "contains"
+    },
+    {
+        "path": "refresh-load",
+        "name": "Refresh Load",
+        "match": "contains"
+    },
+    {
+        "path": "get-compaction-state",
+        "name": "Get Compaction State",
+        "match": "contains"
+    },
+    {
+        "path": "run-analyzer",
+        "name": "Run Analyzer",
+        "match": "contains"
+    },
+    {
+        "path": "-database",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
+        "path": "-databases",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },    
+    {
+        "path": "-resource-group",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
+        "path": "-resource-groups",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
+        "path": "-privilege-groups",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
+        "path": "-privilege-group",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
+        "path": "-to-group",
+        "name": "-",
+        "match": "removeAndCapitalize"
+    },
+    {
+        "path": "-from-group",
         "name": "-",
         "match": "removeAndCapitalize"
     }
