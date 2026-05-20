@@ -98,7 +98,7 @@ client.grant_role(user_name="user_1", role_name="db_ro")
 
 <Admonition type="info" icon="📘" title="Notes">
 
-Each Zilliz Cloud cluster has three built-in roles, namely, **db\_ro**, **db\_rw**, and **db\_admin**. For details, refer to [Cluster Built-in Roles](/docs/user-roles#cluster-built-in-roles).
+Each Zilliz Cloud cluster has three built-in roles, namely, **db\_ro**, **db\_rw**, and **db\_admin**. For details, refer to [Cluster Built-in Roles](/docs/cluster-roles#built-in-cluster-roles).
 
 </Admonition>
 

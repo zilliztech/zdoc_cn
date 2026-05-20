@@ -34,7 +34,7 @@ import Supademo from '@site/src/components/Supademo';
 
 ## 创建 External Collection\{#create-an-external-collection}
 
-开始之前，请确保您已创建 [External Volume](./external-volume)。
+开始之前，请确保您已创建 [External Volume](/docs/external-volume)。
 
 <Supademo id="cmokttyiy05dxpimdm3d8vnxv" title=""  />
 

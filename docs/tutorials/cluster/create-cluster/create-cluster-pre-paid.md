@@ -63,7 +63,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>云服务提供商和地域</strong></p></td>
-         <td><p>请选择集群部署的云服务提供商和地域。所有可选择云服务提供商和地域请参考 <a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></td>
+         <td><p>请选择集群部署的云服务提供商和地域。所有可选择云服务提供商和地域请参考 <a href="/docs/cloud-providers-and-regions">云服务提供商和地域</a>。</p></td>
        </tr>
        <tr>
          <td><p><strong>计费方式</strong></p></td>

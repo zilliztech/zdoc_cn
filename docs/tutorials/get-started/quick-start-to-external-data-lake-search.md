@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 
 - **创建 External Volume**
 
-    External volume 是存储集成下的一个路径。请确保您的原始数据位于该路径中。您可以基于同一个存储集成创建多个 External Volume。详情请参见 [External Volume](./external-volume)。
+    External volume 是存储集成下的一个路径。请确保您的原始数据位于该路径中。您可以基于同一个存储集成创建多个 External Volume。详情请参见 [External Volume](/docs/external-volume)。
 
 ## 步骤 1：连接项目 Endpoint \{#step-1-connect-to-a-project-endpoint}
 

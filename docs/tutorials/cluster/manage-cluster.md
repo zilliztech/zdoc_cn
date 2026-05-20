@@ -196,7 +196,7 @@ curl --request POST \
 
 ## 转换为全球集群\{#convert-to-a-global-cluster}
 
-如果您需要将现有的 Dedicated 集群转换为[全球集群](./global-cluster-explained)，请参考以下 Demo。
+如果您需要将现有的 Dedicated 集群转换为[全球集群](/docs/global-cluster-explained)，请参考以下 Demo。
 
 <Supademo id="cmm5p53sh3hogdtfhemesjhv0" title=""  />
 

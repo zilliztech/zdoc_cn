@@ -81,7 +81,7 @@ A list of dictionaries containing the permissions assigned to the role. The stru
 
     The type of the resource object granted to the role. 
 
-    Possible values are **[Collection](./ORM-Collection)**, **Global**, and **User**.
+    Possible values are **Collection**, **Global**, and **User**.
 
 - **object_name** (*str*) -
 
@@ -210,7 +210,7 @@ client.describe_role(role_name="db_ro")
 
 <Admonition type="info" icon="📘" title="Notes">
 
-Each Zilliz Cloud cluster has three built-in roles, namely, **db\_ro**, **db\_rw**, and **db\_admin**. For details, refer to [Cluster Built-in Roles](/docs/user-roles#cluster-built-in-roles).
+Each Zilliz Cloud cluster has three built-in roles, namely, **db\_ro**, **db\_rw**, and **db\_admin**. For details, refer to [Cluster Built-in Roles](/docs/cluster-roles#built-in-cluster-roles).
 
 </Admonition>
 

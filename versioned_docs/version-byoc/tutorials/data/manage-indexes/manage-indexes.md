@@ -38,7 +38,7 @@ import Admonition from '@theme/Admonition';
 
 - [通过 Web 控制台创建 Collection](./manage-collections-console)
 
-- [通过 RESTful API 创建 Collection](/reference/create-collection)
+- [通过 RESTful API 创建 Collection](/reference/restful/create-collection-v2)
 
 - [通过 SDK 定制化创建 Collection 并设置索引参数](./manage-collections-sdks)
 

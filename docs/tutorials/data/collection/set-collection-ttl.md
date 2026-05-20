@@ -45,7 +45,7 @@ TTL 有两种模式：
 
 ## 限制\{#limits}
 
-- 两种 TTL 模式互斥。一个 Collection 不能同时设置 `collection.ttl.seconds` 和 `ttl_field`。如需切换，请参见[在两种模式之间迁移](./set-collection-ttl#migrate-between-the-two-modes)。
+- 两种 TTL 模式互斥。一个 Collection 不能同时设置 `collection.ttl.seconds` 和 `ttl_field`。如需切换，请参见[在两种模式之间迁移](/docs/set-collection-ttl#migrate-between-the-two-modes)。
 
 - Collection 级 TTL 为整个 Collection 应用同一个保留窗口。如果某一行需要不同的生命周期，请使用 Entity 级 TTL。
 
@@ -1416,7 +1416,7 @@ client.alterCollectionProperties(AlterCollectionPropertiesReq.builder()
 
 ### 插入 Collection 中的数据到底何时会根据 TTL 设置失效？\{#collection-ttl}
 
-Zilliz Cloud 会根据TTL 设置及数据的插入或更新时间来确定其失效时间。失效的数据将不会出现在任何搜索结果中。具体可参考[相关示例](./set-collection-ttl)。
+Zilliz Cloud 会根据TTL 设置及数据的插入或更新时间来确定其失效时间。失效的数据将不会出现在任何搜索结果中。具体可参考[相关示例](/docs/set-collection-ttl)。
 
 ### 失效数据何时会删除？\{#}
 

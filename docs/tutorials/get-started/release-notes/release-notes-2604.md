@@ -50,7 +50,7 @@ import Grid from '@site/src/components/Grid';
 
         - **审计日志**：全球集群拓扑的所有变化均会记录审计日志，包括创建、优雅切换、强切及备用集群管理等。
 
-        更多详情，请参考 [全球集群概览](./global-cluster-explained) 及 [优雅切换和强切](./switchover-and-failover)。
+        更多详情，请参考 [全球集群概览](/docs/global-cluster-explained) 及 [优雅切换和强切](./switchover-and-failover)。
 
         ## Collection 级别指标监控\{#collection-level-metrics}
 

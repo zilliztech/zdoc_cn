@@ -36,7 +36,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成。
 
 该存储集成可用于：
 
-- [External volumes](./external-volume)
+- [External volumes](/docs/external-volume)
 
 - [导出备份文件](./export-backup-files)
 
@@ -79,7 +79,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成。
            </tr>
            <tr>
              <td><p>只读</p></td>
-             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External Collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External Collections 提供支持的 <a href="/docs/external-volume">External volumes</a>。</p></td>
            </tr>
            <tr>
              <td><p>读写</p></td>

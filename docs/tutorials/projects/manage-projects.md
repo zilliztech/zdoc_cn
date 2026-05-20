@@ -132,7 +132,7 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 添加项目地域\{#add-project-regions}
 
-如果您需要使用[全球集群](./global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
+如果您需要使用[全球集群](/docs/global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
 
 - **通过 RESTful API**
 

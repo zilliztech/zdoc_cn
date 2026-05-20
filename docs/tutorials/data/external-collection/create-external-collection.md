@@ -65,7 +65,7 @@ External Collection 可用于按需计算 Database 中。
 
 - 您已基于存储集成创建 External Volume，并确保该 Volume 中包含目标数据文件。
 
-    有关详细信息，请参见 [External Volume](./external-volume)。
+    有关详细信息，请参见 [External Volume](/docs/external-volume)。
 
 ### 支持的数据源\{#support-data-sources}
 

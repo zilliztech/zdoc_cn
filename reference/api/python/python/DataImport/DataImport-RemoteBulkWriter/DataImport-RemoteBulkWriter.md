@@ -62,7 +62,7 @@ writer = RemoteBulkWriter(
 
 **PARAMETERS:**
 
-- **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
+- **schema** (*[CollectionSchema](/reference/python/python/MilvusClient-CollectionSchema)*) -
 
     **[REQUIRED]**
 

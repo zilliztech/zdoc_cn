@@ -43,7 +43,7 @@ import Procedures from '@site/src/components/Procedures';
 
 仅当你希望在 Zilliz Cloud 中使用**基于模型的能力**时，才需要创建模型供应商集成，包括：
 
-- **Text Embedding Function**：使用外部模型将原始文本转换为稠密向量。详情请参阅 [Text Embedding Function](./model-based-functions)。
+- **Text Embedding Function**：使用外部模型将原始文本转换为稠密向量。详情请参阅 [Text Embedding Function](/docs/function-and-model-inference-overview)。
 
 - **Model Ranker**：使用外部重排序模型对搜索结果进行重新排序。详情请参阅 [Model Ranker](./model-ranker)。
 
@@ -131,7 +131,7 @@ import Procedures from '@site/src/components/Procedures';
 
 详细操作请参阅：
 
-- [Text Embedding Function](./model-based-functions)
+- [Text Embedding Function](/docs/function-and-model-inference-overview)
 
 - [Model Ranker](./model-ranker)
 

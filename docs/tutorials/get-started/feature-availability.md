@@ -89,7 +89,7 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 ### 公测版\{#public-preview}
 
-- [Text Embedding](./model-based-functions) 和 [Rerank](./reranking) Function
+- [Text Embedding](/docs/function-and-model-inference-overview) 和 [Rerank](./reranking) Function
 
 <Admonition type="info" icon="📘" title="说明">
 

@@ -169,11 +169,11 @@ curl --request POST \
    </tr>
    <tr>
      <td><p><code>collection.ttl.seconds</code></p></td>
-     <td><p>如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动删除该 Collection 中的所有数据。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始删除 Collection 中的数据。</p><p>由于删除操作是异步的，在数据完全删除前，您仍旧可以搜索到部分数据。</p><p>更多内容，可以参考<a href="./set-collection-ttl">设置 Collection 生存时间</a>。</p></td>
+     <td><p>如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动删除该 Collection 中的所有数据。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始删除 Collection 中的数据。</p><p>由于删除操作是异步的，在数据完全删除前，您仍旧可以搜索到部分数据。</p><p>更多内容，可以参考<a href="/docs/set-collection-ttl">设置 Collection 生存时间</a>。</p></td>
    </tr>
    <tr>
      <td><p><code>ttl_field</code></p></td>
-     <td><p>指定一个 TIMESTAMPTZ 类型字段，存储每个 Entity 的<strong>绝对过期时间戳</strong>。当系统当前的墙上时钟时间到达该字段中的时间点时，对应的 Entity 会立即过期；如果该字段值为 NULL，则表示该 Entity 永不过期。该字段与 <code>collection.ttl.seconds</code> 互斥。</p><p>更多内容，可以参考<a href="./set-collection-ttl">设置 Collection 生存时间</a>。</p></td>
+     <td><p>指定一个 TIMESTAMPTZ 类型字段，存储每个 Entity 的<strong>绝对过期时间戳</strong>。当系统当前的墙上时钟时间到达该字段中的时间点时，对应的 Entity 会立即过期；如果该字段值为 NULL，则表示该 Entity 永不过期。该字段与 <code>collection.ttl.seconds</code> 互斥。</p><p>更多内容，可以参考<a href="/docs/set-collection-ttl">设置 Collection 生存时间</a>。</p></td>
    </tr>
    <tr>
      <td><p><code>mmap.enabled</code></p></td>
@@ -282,7 +282,7 @@ curl --request POST \
 
 下面的代码片段将一个已有的 `TIMESTAMPTZ` 字段（`expire_at`）指定为 Entity 级别 TTL 的 TTL 字段。Collection 中必须已经包含 `TIMESTAMPTZ` 字段，并且不能同时设置 `collection.ttl.seconds`，这两种 TTL 模式互斥。
 
-如需了解完整的 Entity 级别 TTL 工作流（包括 schema 配置、插入、查询、刷新与删除），请参见[设置 Collection 生存时间](./set-collection-ttl)。
+如需了解完整的 Entity 级别 TTL 工作流（包括 schema 配置、插入、查询、刷新与删除），请参见[设置 Collection 生存时间](/docs/set-collection-ttl)。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>

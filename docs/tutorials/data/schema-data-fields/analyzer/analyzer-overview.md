@@ -1122,7 +1122,7 @@ if err != nil {
 
 <Admonition type="info" icon="📘" title="**说明**">
 
-Analyzer 配置在 Collection 创建后不可修改。如需更改 Analyzer 配置，请创建新的 Collection 并[迁移](./migrate-between-clusters)数据。
+Analyzer 配置在 Collection 创建后不可修改。如需更改 Analyzer 配置，请创建新的 Collection 并[迁移](/docs/migrate-between-clusters)数据。
 
 </Admonition>
 

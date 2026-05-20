@@ -93,7 +93,7 @@ Semantic Highlighter 在语义搜索之后运行，仅对 top-K 结果进行处�
 
 - **执行搜索时**：同一个 Embedding Function 将您的查询文本转换为向量，并在向量索引中搜索，基于向量相似度返回 top-K 文档
 
-本文档中的所有示例都使用此方法。有关更多信息，请参阅 [Model-based Embedding Function](./model-based-functions)。
+本文档中的所有示例都使用此方法。有关更多信息，请参阅 [Model-based Embedding Function](/docs/function-and-model-inference-overview)。
 
 **选项 2：外部 Embedding 模型**
 

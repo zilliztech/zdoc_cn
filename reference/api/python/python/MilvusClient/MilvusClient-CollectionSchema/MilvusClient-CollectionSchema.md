@@ -54,7 +54,7 @@ CollectionSchema(
 
     **[REQUIRED]**
 
-    A list of **[FieldSchema](./ORM-FieldSchema)** objects that define the fields in the collection schema.
+    A list of **FieldSchema** objects that define the fields in the collection schema.
 
     <Admonition type="info" icon="📘" title="What is a field schema?">
 
@@ -116,7 +116,7 @@ CollectionSchema(
 
         The value should be the name of a field listed in **fields**.
 
-        As an alternative, you can set **is_primary** when creating a **[FieldSchema](./ORM-FieldSchema)** object.
+        As an alternative, you can set **is_primary** when creating a **FieldSchema** object.
 
         This parameter does not apply to external collections.
 
@@ -128,7 +128,7 @@ CollectionSchema(
 
         Setting this makes Zilliz Cloud manage all partitions in the current collection.
 
-        As an alternative, you can set **is_partition_key** when creating a **[FieldSchema](./ORM-FieldSchema)** object.
+        As an alternative, you can set **is_partition_key** when creating a **FieldSchema** object.
 
         This parameter does not apply to external collections.
 
@@ -164,7 +164,7 @@ A **CollectionSchema** object.
 
 - **FieldTypeException**: 
 
-    This exception will be raised when a field in the **fields** list is not a **[FieldSchema](./ORM-FieldSchema)** object.
+    This exception will be raised when a field in the **fields** list is not a **FieldSchema** object.
 
 - **PrimaryKeyException:**
 

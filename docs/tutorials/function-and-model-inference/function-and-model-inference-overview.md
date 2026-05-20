@@ -87,13 +87,13 @@ Pre-search Function 在候选结果检索之前运行。它们的作用是将原
    <tr>
      <td><p><strong>BM25 Function</strong></p></td>
      <td><p>稀疏向量</p></td>
-     <td><p>基于词项匹配、词频以及文档长度归一化计算词法相关性。</p><p>作为本地机制完全在数据库引擎内执行；不需要<a href="./function-and-model-inference-overview#understand-model-inference">模型推理</a>。</p></td>
+     <td><p>基于词项匹配、词频以及文档长度归一化计算词法相关性。</p><p>作为本地机制完全在数据库引擎内执行；不需要<a href="/docs/function-and-model-inference-overview#understand-model-inference">模型推理</a>。</p></td>
      <td><p>以关键词为中心的全文检索、文档搜索、代码搜索，或对精确词项匹配和本地高性能有要求的场景。</p></td>
    </tr>
    <tr>
      <td><p><strong>Model-based Embedding Functions</strong></p></td>
      <td><p>稠密向量</p></td>
-     <td><p>使用机器学习模型对文本的语义含义进行编码，实现超越精确关键词匹配的相似性检索。</p><p>需要通过托管模型或第三方模型服务进行<a href="./function-and-model-inference-overview#understand-model-inference">模型推理</a>。</p></td>
+     <td><p>使用机器学习模型对文本的语义含义进行编码，实现超越精确关键词匹配的相似性检索。</p><p>需要通过托管模型或第三方模型服务进行<a href="/docs/function-and-model-inference-overview#understand-model-inference">模型推理</a>。</p></td>
      <td><p>语义搜索、自然语言查询、问答式检索，以及更关注概念相似性而非精确匹配的场景。</p></td>
    </tr>
 </table>
@@ -149,9 +149,9 @@ Post-search Function 作用于搜索阶段返回的候选结果，通过额外�
 
 在 Zilliz Cloud 中，模型推理**仅由 Model-based Functions 使用**，主要包括：
 
-- [Model-based Pre-search Function](./function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)：从文本生成稠密向量
+- [Model-based Pre-search Function](/docs/function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)：从文本生成稠密向量
 
-- [Model-based Ranker](./function-and-model-inference-overview#post-search-functions-rerank-candidate-results)：评估相关性并对已检索到的候选结果进行重排
+- [Model-based Ranker](/docs/function-and-model-inference-overview#post-search-functions-rerank-candidate-results)：评估相关性并对已检索到的候选结果进行重排
 
 其他 Function（例如 **BM25 Function** 以及基于规则的 Ranker）完全在数据库引擎内执行，**不依赖模型推理**。
 

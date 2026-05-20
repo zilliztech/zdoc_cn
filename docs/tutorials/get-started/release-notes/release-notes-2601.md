@@ -96,7 +96,7 @@ import Grid from '@site/src/components/Grid';
 
         - **基于模型的向量生成（Model-Based Embedding）**
 在创建集合时即可定义文本向量生成函数。配置完成后，只需通过 `Insert`、`Upsert` 或 `Import` 写入原始文本，Zilliz Cloud 会自动完成向量生成与存储；在查询阶段，系统会将输入文本实时转换为稠密向量并执行高效的 ANN 搜索。
-更多内容，可参考[Model-based Function](./model-based-functions)。
+更多内容，可参考[Model-based Function](/docs/function-and-model-inference-overview)。
 
         - **基于模型的结果重排（Model-Based Reranking）**
 可根据具体业务场景选择最合适的重排模型，对搜索结果进行二次排序，确保最相关内容优先返回。
@@ -151,7 +151,7 @@ import Grid from '@site/src/components/Grid';
 
         ## 更多增强\{#enhancements}
 
-        - **Collection TTL 和 Auto ID 设置**：支持在 Collection 概述 GUI 监控和修改 Collection TTL 以及设置是否允许插入 Auto ID 。详细信息，请参阅[设置 Collection 生存时间](./set-collection-ttl)和[修改 Collection](./modify-collections)。
+        - **Collection TTL 和 Auto ID 设置**：支持在 Collection 概述 GUI 监控和修改 Collection TTL 以及设置是否允许插入 Auto ID 。详细信息，请参阅[设置 Collection 生存时间](/docs/set-collection-ttl)和[修改 Collection](./modify-collections)。
 
         - **数据导入**：现在支持 JSON Lines 格式（.JSONL和.NDJSON 扩展名）。详细信息，请参阅[从 JSON/JSON Lines 文件中导入](./data-import-json)。
 

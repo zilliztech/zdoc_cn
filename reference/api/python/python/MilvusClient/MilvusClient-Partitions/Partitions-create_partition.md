@@ -71,7 +71,7 @@ create_partition(
 
 **RETURN TYPE:**
 
-*[Partition](./ORM-Partition)*
+*Partition*
 
 **RETURNS:**
 
