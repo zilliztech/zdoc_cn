@@ -11,7 +11,7 @@ notebook: FALSE
 description: "版本说明书（2025/11） | Cloud"
 type: origin
 token: OzmBwYXzjiOFXlkqQxYc9Y0knWb
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -44,7 +44,7 @@ import Grid from '@site/src/components/Grid';
 
         - **Struct Array 支持**：更自然地为多层嵌套和属性繁多的数据建模，简化 Schema 设计，提升元数据丰富的 AI 工作负载的查询能力。更多内容，可参考 [Struct Array](./use-array-of-structs)。
 
-        - **在现有 Collection 上开启 Dynamic Field**：自本次发布起，您无需重新创建 Collection，即可为现有 Collection 启用 Dynamic Field，灵活应对业务属性的动态扩展。更多内容，可以阅读[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。
+        - **在现有 Collection 上开启 Dynamic Field**：自本次发布起，您无需重新创建 Collection，即可为现有 Collection 启用 Dynamic Field，灵活应对业务属性的动态扩展。更多内容，可以阅读[修改 Collection](./modify-collections#example-5-enable-dynamic-field)。
 
         - **支持在加载状态下删除标量索引** — 允许在 Collection 处于加载状态时删除和重建标量索引。
 

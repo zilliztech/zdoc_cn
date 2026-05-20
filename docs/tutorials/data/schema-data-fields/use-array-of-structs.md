@@ -1,14 +1,14 @@
 ---
-title: "Struct Array | Cloud"
+title: "StructArray | Cloud"
 slug: /use-array-of-structs
 sidebar_key: use-array-of-structs
-sidebar_label: "Struct Array"
+sidebar_label: "StructArray"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 beta: PUBLIC
 notebook: FALSE
-description: "Struct Array 用于有序存放元素数据类型为 Struct 的 Array。Array 中的每个 Struct 共享同一个 Schema，可包含多个向量和标量字段。 | Cloud"
+description: "StructArray 用于有序存放元素数据类型为 Struct 的 Array。Array 中的每个 Struct 共享同一个 Schema，可包含多个向量和标量字段。 | Cloud"
 type: origin
 token: Vb46wRNLEipPhYkbMqBc7K9qnFg
 sidebar_position: 10
@@ -33,9 +33,9 @@ import Admonition from '@theme/Admonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Struct Array
+# StructArray
 
-Struct Array 用于有序存放元素数据类型为 Struct 的 Array。Array 中的每个 Struct 共享同一个 Schema，可包含多个向量和标量字段。
+StructArray 用于有序存放元素数据类型为 Struct 的 Array。Array 中的每个 Struct 共享同一个 Schema，可包含多个向量和标量字段。
 
 下面是某个包含 Struct Array 字段的 Collection 中提取的一条 Entity 记录。
 
@@ -64,6 +64,20 @@ Struct Array 用于有序存放元素数据类型为 Struct 的 Array。Array �
 ```
 
 在该示例中，`chunks` 是一个 Struct Array 字段。其中的每个 Struct 元素都有由相同的字段组成，包括 `text`、`text_vector` 和 `chapter`。
+
+## 适用场景\{#when-to-use}
+
+从自动驾驶到多模态检索，现代 AI 应用越来越依赖嵌套且异构的数据。传统扁平数据模型很难表示复杂关系，例如「**一个文档包含多个带注释的 Chunk**」或「**一个驾驶场景包含多个观测到的操作**」。这正是 Milvus 中 StructArray 数据类型的适用场景。
+
+要快速判断 StructArray 字段是否适合您的应用场景，请考虑以下问题：
+
+- 您的数据是否具有层级结构，例如一个文档包含多个带注释的 Chunk。
+
+- 搜索结果是否应该是文档本身，而不是 Chunk，就像上面的示例一样。
+
+- 搜索结果是否包含大量重复 Entity，并且很难通过分组、去重和重排等技术获得最终结果。
+
+如果您对上述问题的回答为“是”，则应使用 StructArray。
 
 ## 使用限制\{#limits}
 
@@ -578,6 +592,7 @@ await milvusClient.createCollection({
 # restful
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/create" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"my_collection\",
     \"description\": \"A collection for storing book information with struct array chunks\",
@@ -711,6 +726,7 @@ await milvusClient.insert({
 # restful
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "my_collection",
     "data": [
@@ -931,6 +947,7 @@ embeddingList1='[[0.2,0.9,0.4,-0.3,0.2]]'
 embeddingList2='[[-0.2,-0.2,0.5,0.6,0.9],[-0.4,0.3,0.5,0.8,0.2]]'
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"my_collection\",
     \"data\": [$embeddingList1],
@@ -1073,6 +1090,7 @@ const results2 = await milvusClient.search({
 # restful
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"my_collection\",
     \"data\": [$embeddingList1, $embeddingList2],
@@ -1171,6 +1189,54 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
 </details>
 
 在上述示例中，`embeddingList1` 包含了一个向量，而 `embeddingList2` 包含了两个向量。每个 EmbeddingList 都会触发一次独立的相似性搜索并返回 topK 个与之最相似的 Entity。
+
+## 针对 Struct Array 字段进行标量过滤\{#scalaring-filtering-in-a-structarray-field}
+
+您可以使用 **Element Filter** 和 **Match 系列运算符**，对 StructArray 中的标量子字段进行标量过滤。有关上述两类运算符的更多详细信息和示例，请参阅 [StructArray 操作符](./struct-array-operators)。
+
+### Element Filter\{#element-filter}
+
+这是 Entity 级别的过滤条件，用于检查某个 Entity 的 StructArray 字段中是否至少有一个元素满足谓词。例如，以下 Element Filter 会返回 `text` 子字段中至少有一个 Chunk 以 `"Red"` 开头的 Entity。
+
+```python
+element_filter(chunks, $[text] LIKE "Red%")
+```
+
+您几乎可以在谓词中使用所有比较、范围和算术运算符。该谓词会逐元素求值，并且可以使用逻辑运算符组合针对同一元素的多个条件。有关详细信息，请参阅 [基本操作符](./basic-filtering-operators)。
+
+如果 Filtered Search 或 Query 请求中存在多个标量过滤表达式，请将 Element Filter 表达式放在所有 Entity 级别过滤表达式之后，如下所示。
+
+```python
+# correct
+id > 0 && element_filter(chunks, $[x] > 1)
+
+# incorrect, resulting errors
+element_filter(chunks, $[x] > 1) && id > 0
+```
+
+### Match 系列运算符\{#match-family-operators}
+
+Match 系列运算符也适用于 StructArray 字段。它们不只是检查是否存在满足条件的元素，还可以指定必须有多少个元素（或多大比例的元素）满足元素谓词。
+
+- `MATCH_ANY(chunks, $[text] LIKE "Red%")`
+
+    返回 `text` 子字段中至少有一个 Chunk 以 `"Red"` 开头的 Entity；从语义上看，这等价于 `element_filter`。
+
+- `MATCH_ALL(chunks, $[text] LIKE "Red%")`
+
+    返回所有 Chunk 的 `text` 子字段都以 `"Red"` 开头的 Entity。
+
+- `MATCH_LEAST(chunks, $[text] LIKE "Red%", k)`
+
+    返回 `text` 子字段中至少有 `k` 个 Chunk 以 `"Red"` 开头的 Entity。
+
+- `MATCH_MOST(chunks, $[text] LIKE "Red%", k)`
+
+    返回 `text` 子字段中至多有 `k` 个 Chunk 以 `"Red"` 开头的 Entity。
+
+- `MATCH_EXACT(chunks, $[text] LIKE "Red%", k)`
+
+    返回 `text` 子字段中恰好有 `k` 个 Chunk 以 `"Red"` 开头的 Entity。
 
 ## 后续步骤\{#next-steps}
 

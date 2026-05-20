@@ -79,7 +79,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-Zilliz Cloud 允许布尔类型或数值类型的字段为空。您也可以为它们设置默认值。简单来说，您可以将字段的 `nullable` 设置为 `True` 来允许字段为空，并通过 `default_value` 为字段设置默认值，具体可以参考 [Nullable 和默认值](./nullable-and-default)。
+Zilliz Cloud 允许布尔类型或数值类型的字段为空。您也可以为它们设置默认值。简单来说，您可以将字段的 `nullable` 设置为 `True` 来允许字段为空，并通过 `default_value` 为字段设置默认值，具体可以参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 

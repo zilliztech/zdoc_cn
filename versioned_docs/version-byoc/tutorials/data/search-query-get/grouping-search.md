@@ -1,11 +1,12 @@
 ---
 title: "Grouping Search | BYOC"
 slug: /grouping-search
+sidebar_key: grouping-search
 sidebar_label: "Grouping Search"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "如果搜索结果中所有 Entity 在某个标量字段上的取值都相同时，搜索结果可能并不能真实反映与查询向量相似的所有向量在向量空间中的分布情况。为了提升召回结果的多样性，可以考虑使用 Grouping Search。本节将介绍如何使用 Grouping Search 以及与之相关的注意事项。 | BYOC"
 type: origin
@@ -57,7 +58,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在默认情况下，Grouping Search 仅为每个分组返回一条 Entity。如果希望增加每个分组返回的结果数量，可以使用 <code>group_size</code> 和 <code>strict_group_size</code> 参数进行控制。</p>
+在默认情况下，Grouping Search 仅为每个分组返回一条 Entity。如果希望增加每个分组返回的结果数量，可以使用 `group_size` 和 `strict_group_size` 参数进行控制。
 
 </Admonition>
 
@@ -106,7 +107,7 @@ res = client.search(
     output_fields=["docId"]
 )
 
-# Retrieve the values in the `docId` column
+# Retrieve the values in the \`docId\` column
 doc_ids = [result['entity']['docId'] for result in res[0]]
 ```
 
@@ -168,7 +169,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -221,7 +222,7 @@ res = await client.search({
     // highlight-end
 })
 
-// Retrieve the values in the `docId` column
+// Retrieve the values in the \`docId\` column
 var docIds = res.results.map(result => result.entity.docId)
 ```
 
@@ -237,6 +238,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": [
@@ -327,7 +329,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -384,7 +386,7 @@ res = await client.search({
     // highlight-end
 })
 
-// Retrieve the values in the `docId` column
+// Retrieve the values in the \`docId\` column
 var docIds = res.results.map(result => result.entity.docId)
 ```
 
@@ -397,6 +399,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": [
@@ -422,6 +425,72 @@ curl --request POST \
 
 有关更多参数信息，请参考 [search()](/reference/python/python/Vector-search)。
 
+## 通过标量字段对分组结果进行排序 | PRIVATE \{#order-groups-by-a-scalar-field}
+
+在使用 Grouping Search 时，你可以配合使用 `order_by_fields`，按照某个标量字段对各个分组进行排序。这样既能保证不同分组之间结果的多样性，又能让分组整体遵循价格、评分等与业务相关的排序规则。
+
+下面的示例按 `category` 字段对搜索结果进行分组，每个分组最多返回 3 条 Entity，并按照 `price` 字段从低到高对返回的分组进行排序。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.search(
+    collection_name="product_catalog",
+    data=query_vectors,
+    anns_field="embedding",
+    limit=20,
+    group_by_field="category",
+    group_size=3,
+    strict_group_size=True,
+    output_fields=["category", "price", "rating"],
+    # highlight-start
+    order_by_fields=[
+        {"field": "price", "order": "asc"}
+    ],
+    # highlight-end
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+在上述请求中，`limit=20` 表示 Zilliz Cloud 最多会选出 20 个分组，而不是 20 个 Entity。由于 `group_size=3`，最终展开后的结果列表中最多可以包含 60 个 Entity。
+
+当你同时使用 `order_by_fields` 和 `group_by_field` 时，Zilliz Cloud 会根据每个分组中「最高排名 Entity」在指定标量字段上的取值，对各个分组进行排序。而在每个具体分组内部，Entity 仍然按照它们与查询向量的相似度得分从高到低排序。
+
 ## 注意事项\{#considerations}
 
 - **分组数量**：`limit` 参数决定了返回的分组数量，而不是每组中的具体 Entity 数量。设置合理的 `limit` 值可以帮助控制搜索结果的多样性和查询效率。如果数据分布集中或查询性能要求较高，可适当减少 `limit` 值，以减少计算开销。
@@ -429,4 +498,6 @@ curl --request POST \
 - **分组内 Entity 数量**：`group_size` 决定了每个分组内返回的 Entity 数量。根据使用场景，适当调整 `group_size` 可以有效提升搜索结果的丰富性。但在数据分布不均的情况下，部分分组可能会返回少于 `group_size` 个 Entity，特别是在数量有限的场景下。
 
 - **严格分组大小**：`strict_group_size=True` 时，系统会尽量保证每个分组中返回 `group_size` 个 Entity，除非分组内数据本身不足。此设置可以确保每个分组的 Entity 数量一致，但在数据分布不均或资源受限时可能会导致性能下降。若不需要严格的 Entity 数量，可以将 `strict_group_size` 设置为 `False`，提高查询速度。
+
+- 如果查询向量已经在目标 Collection 中存在，可以考虑使用 `ids` 参数，从而让 Milvus 在搜索前从 Collection 中自动获取查询向量。更多内容，可以阅读 [Primary Key Search](./primary-key-search)。
 

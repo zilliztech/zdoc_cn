@@ -44,7 +44,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p>公共访问 URL</p></td>
-         <td><ul><li><p><strong>文件</strong>：<i>http</i>s://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;folder_name&gt;/</p></li></ul></td>
+         <td><ul><li><p><strong>文件</strong>：https://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;folder_name&gt;/</p></li></ul></td>
        </tr>
        <tr>
          <td><p>OSS URI</p></td>
@@ -79,7 +79,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>对象访问 URL</p></td>
-     <td><ul><li><p><strong>文件</strong>：<i>http</i>s://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;folder_name&gt;/</p></li></ul></td>
+     <td><ul><li><p><strong>文件</strong>：https://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;folder_name&gt;/</p></li></ul></td>
    </tr>
 </table>
 
@@ -114,11 +114,11 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>virtual-hosted–style</p></td>
-     <td><ul><li><p><strong>文件</strong>：<i>http</i>s://&lt;bucket_name&gt;.s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://&lt;bucket_name&gt;.s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;folder_name&gt;/</p></li></ul></td>
+     <td><ul><li><p><strong>文件</strong>：https://&lt;bucket_name&gt;.s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://&lt;bucket_name&gt;.s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;folder_name&gt;/</p></li></ul></td>
    </tr>
    <tr>
      <td><p>path-style</p></td>
-     <td><ul><li><p><strong>文件</strong>：<i>http</i>s://s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;bucket_name&gt;/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></li></ul></td>
+     <td><ul><li><p><strong>文件</strong>：https://s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;bucket_name&gt;/&lt;object_name&gt;</p></li><li><p><strong>文件夹</strong>：https://s3.&lt;region_code&gt;.amazonaws.com.cn/&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></li></ul></td>
    </tr>
    <tr>
      <td><p>S3 URI</p></td>

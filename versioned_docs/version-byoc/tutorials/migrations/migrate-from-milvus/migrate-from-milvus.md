@@ -1,11 +1,12 @@
 ---
 title: "从 Milvus 迁移至 Zilliz Cloud | BYOC"
 slug: /migrate-from-milvus
+sidebar_key: migrate-from-milvus
 sidebar_label: "从 Milvus 迁移"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus 是一个开源向量数据库，以高性能和易用性著称，广泛应用于管理大规模的向量数据。 | BYOC"
 type: origin

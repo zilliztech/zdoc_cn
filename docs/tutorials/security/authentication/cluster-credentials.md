@@ -42,7 +42,7 @@ Zilliz Cloud 通过集群身份凭证或 API 密钥认证您的身份。本文�
 
 - **通过控制台重置密码**
 
-![reset-cluster-user-password-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/reset-cluster-user-password-zh.png "reset-cluster-user-password-zh")
+undefined
 
 - **通过编程重置密码**
 

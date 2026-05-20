@@ -1,11 +1,12 @@
 ---
 title: "安装 Milvus Operator | On-Premise"
 slug: /install-milvus-operator
+sidebar_key: install-milvus-operator
 sidebar_label: "安装 Milvus Operator"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何安装 Milvus Operator。 | On-Premise"
 type: origin
@@ -56,7 +57,7 @@ kubectl apply -f https://github.com/zilliztech/milvus-operator/releases/download
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>如果执行上述命令后提示没有权限，您可以参考如下声明文件向 Kubernetes 管理员申请更高权限，或由管理员代为安装。</p>
+如果执行上述命令后提示没有权限，您可以参考如下声明文件向 Kubernetes 管理员申请更高权限，或由管理员代为安装。
 
 </Admonition>
 

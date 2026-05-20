@@ -1,11 +1,12 @@
 ---
 title: "Zilliz Cloud IP | BYOC"
 slug: /zilliz-cloud-ips
+sidebar_key: zilliz-cloud-ips
 sidebar_label: "Zilliz Cloud IP 地址"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，并将其发送到目标集群。为了确保 Zilliz Cloud 能够执行此操作，您需要在防火墙中将这些 IP 地址添加到安全列表中： | BYOC"
 type: origin
@@ -32,7 +33,7 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
 
 - 目标集群所在云地域的 IP 地址
 
-## Zilliz Cloud 服务 IP 地址
+## Zilliz Cloud 服务 IP 地址\{#zilliz-cloud-ip}
 
 这些 IP 地址由 Zilliz Cloud 用于提供服务，请确保将它们添加到防火墙的安全列表中。
 
@@ -49,11 +50,11 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
    </tr>
 </table>
 
-## 目标集群所在云地域 IP 地址
+## 目标集群所在云地域 IP 地址\{#ip}
 
 将目标 Zilliz Cloud 集群所在云服务提供商和地域对应的 IP 地址加入安全列表。
 
-### 阿里云
+### 阿里云\{#}
 
 <table>
    <tr>
@@ -93,7 +94,7 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
    </tr>
 </table>
 
-### 腾讯云
+### 腾讯云\{#}
 
 <table>
    <tr>
@@ -118,7 +119,7 @@ Zilliz Cloud 使用一组固定的 IP 地址从您的数据源中拉取数据，
    </tr>
 </table>
 
-### 亚马逊云科技
+### 亚马逊云科技\{#}
 
 <table>
    <tr>

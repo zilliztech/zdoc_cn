@@ -1,16 +1,17 @@
 ---
 title: "API & SDKs | BYOC"
 slug: /api-sdks
+sidebar_key: api-sdks
 sidebar_label: "API & SDKs"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本章提供使用或安装 RESTful API 和 SDK 的操作流程及其相关参考文档。 | BYOC"
 type: origin
 token: DmybwAAUXizRiPkCyUDcS9TlnYc
-sidebar_position: 9
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz

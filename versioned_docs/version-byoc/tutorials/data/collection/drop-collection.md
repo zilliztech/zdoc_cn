@@ -1,16 +1,17 @@
 ---
 title: "删除 Collection | BYOC"
 slug: /drop-collection
+sidebar_key: drop-collection
 sidebar_label: "删除 Collection"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "当 Collection 不再使用时，可以考虑删除 Collection。 | BYOC"
 type: origin
 token: OrvrwaSgFiNT5EkYZUvc8yWVnHQ
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz
@@ -147,6 +148,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/drop" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'

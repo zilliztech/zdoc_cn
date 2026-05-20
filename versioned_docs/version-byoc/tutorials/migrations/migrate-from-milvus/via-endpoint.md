@@ -1,11 +1,12 @@
 ---
 title: "通过 Endpoint 从 Milvus 迁移至 Zilliz Cloud | BYOC"
 slug: /via-endpoint
+sidebar_key: via-endpoint
 sidebar_label: "通过 Endpoint 迁移"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案，适合希望使用 Milvus 向量数据库但不想自己管理基础设施的用户。本文介绍如何通过服务器地址从 Milvus 进行数据迁移。 | BYOC"
 type: origin
@@ -86,10 +87,9 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>如果源 Collection 已启用 Full Text Search 功能，Zilliz Cloud 会在迁移后保留目标 Collection 的 Function 设置。这些继承的设置无法修改。</p></li>
-<li><p>你也可以在迁移过程中为其他 VARCHAR 字段启用 Full Text Search。详情请参阅 <a href="./full-text-search">Full Text Search</a>。</p></li>
-</ul>
+- 如果源 Collection 已启用 Full Text Search 功能，Zilliz Cloud 会在迁移后保留目标 Collection 的 Function 设置。这些继承的设置无法修改。
+
+- 你也可以在迁移过程中为其他 VARCHAR 字段启用 Full Text Search。详情请参阅 [Full Text Search](./full-text-search)。
 
 </Admonition>
 
@@ -97,7 +97,7 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
 生成迁移任务后，您可前往[任务中心](./view-activities)查看任务状态和进度。如果迁移任务的状态从**进行中**变更为**成功**，则代表迁移成功。
 
-![FJJubvyTcohYZXx6K0JcDs6Vnad](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/FJJubvyTcohYZXx6K0JcDs6Vnad.png)
+![FJJubvyTcohYZXx6K0JcDs6Vnad](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/FJJubvyTcohYZXx6K0JcDs6Vnad.png "FJJubvyTcohYZXx6K0JcDs6Vnad")
 
 ## 迁移后\{#post-migration}
 
@@ -109,7 +109,7 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>完成 Load 后，请检查目标集群中的 Collection 数量及 Entity 数是否与数据源保持一致。如果发现不符，请删除 Collection 并重新进行迁移任务。</p>
+完成 Load 后，请检查目标集群中的 Collection 数量及 Entity 数是否与数据源保持一致。如果发现不符，请删除 Collection 并重新进行迁移任务。
 
 </Admonition>
 

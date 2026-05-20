@@ -1,11 +1,12 @@
 ---
 title: "通过 Web 控制台导入 | BYOC"
 slug: /import-data-on-web-ui
+sidebar_key: import-data-on-web-ui
 sidebar_label: "控制台"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍如何通过 Zilliz Cloud Web 控制台将数据导入现有 Collection 中。 | BYOC"
 type: origin
@@ -46,10 +47,9 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>在同一个 Collection 下，导入任务队列中最多可以同时包含 10 条运行中或等待中的任务。</p></li>
-<li><p>Zilliz Cloud 界面支持上传本地 JSON 或 Parquet 文件的最大大小为 1 GB。 如需上传更大的文件，我们推荐通过对象存储桶进行导入。有关情况，可以查看<a href="./data-import-storage-options">支持的对象存储</a>。如果您在导入数据过程中遇到任何问题，请<a href="https://support.zilliz.com.cn/hc/zh-cn">提交工单</a>。</p></li>
-</ul>
+- 在同一个 Collection 下，导入任务队列中最多可以同时包含 10 条运行中或等待中的任务。
+
+- Zilliz Cloud 界面支持上传本地 JSON 或 Parquet 文件的最大大小为 1 GB。 如需上传更大的文件，我们推荐通过对象存储桶进行导入。有关情况，可以查看[支持的对象存储](./data-import-storage-options)。如果您在导入数据过程中遇到任何问题，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
 </Admonition>
 

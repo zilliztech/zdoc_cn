@@ -1,11 +1,12 @@
 ---
 title: "数据安全 | BYOC"
 slug: /data-security
+sidebar_key: data-security
 sidebar_label: "数据安全"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "数据安全是 Zilliz Cloud 不可或缺的一部分。本文档总结了 Zilliz Cloud 为全面保护您的数据而实施的关键措施和政策。 | BYOC"
 type: origin
@@ -79,7 +80,7 @@ Zilliz Cloud 使用 OAuth0 进行安全的用户身份验证：
 
 Zilliz Cloud 通过以下方式保障您的网络交互安全：
 
-- **IP 白名单**：定义允许的 IP 地址范围（CIDR块）以限制访问。
+- **控制台 IP 白名单**：定义允许访问控制台的 IP 地址范围（CIDR块）以限制访问。
 
 - **私有链接**：在您的 VPC 和 Zilliz Cloud 控制面之间建立安全、私有的连接。
 
@@ -129,7 +130,7 @@ Zilliz Cloud 确保安全连接：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>目前尚不支持双向TLS（mTLS）。</p>
+目前尚不支持双向TLS（mTLS）。
 
 </Admonition>
 

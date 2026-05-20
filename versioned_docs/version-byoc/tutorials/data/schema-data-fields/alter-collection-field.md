@@ -1,16 +1,17 @@
 ---
 title: "修改字段设置 | BYOC"
 slug: /alter-collection-field
+sidebar_key: alter-collection-field
 sidebar_label: "修改字段设置"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "您可以更改 Collection 字段的属性以更改列约束或强制执行更严格的数据完整性规则。 | BYOC"
 type: origin
 token: ZcogwnZR6iN4fikl98QcjQgQnQe
-sidebar_position: 16
+sidebar_position: 17
 keywords: 
   - 向量数据库
   - zilliz
@@ -31,10 +32,9 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>每个 Collection 仅包含一个主键。一旦在 Collection 创建期间完成设置，您就无法更换主键或更改其属性。</p></li>
-<li><p>每个 Collection 仅包含一个 Partition Key。一旦在 Collection 创建其它完成设置，您就无法更换 Partition Key。</p></li>
-</ul>
+- 每个 Collection 仅包含一个主键。一旦在 Collection 创建期间完成设置，您就无法更换主键或更改其属性。
+
+- 每个 Collection 仅包含一个 Partition Key。一旦在 Collection 创建其它完成设置，您就无法更换 Partition Key。
 
 </Admonition>
 
@@ -115,7 +115,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
@@ -144,13 +144,14 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
---data "{
+--header "Request-Timeout: 10" \
+--data '{
     "collectionName": "my_collection",
     "field_name": "varchar",
     "properties": {
         "max_length": "1024"
     }
-}"
+}'
 ```
 
 </TabItem>
@@ -224,13 +225,14 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
---data "{
+--header "Request-Timeout: 10" \
+--data '{
     "collectionName": "my_collection",
     "field_name": "array",
     "properties": {
         "max_capacity": "64"
     }
-}"
+}'
 ```
 
 </TabItem>
@@ -302,13 +304,14 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/collections/fields/alter_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
---data "{
+--header "Request-Timeout: 10" \
+--data '{
     "collectionName": "my_collection",
     "field_name": "doc_chunk",
     "properties": {
         "mmap.enabled": True
     }
-}"
+}'
 ```
 
 </TabItem>

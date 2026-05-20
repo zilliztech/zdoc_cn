@@ -75,7 +75,7 @@ Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能�
 
 1. 复制 Zilliz Cloud 界面上展示的**服务名称**。
 
-    ![zh-amazon-create-private-link-copy-service-name](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-amazon-create-private-link-copy-service-name.png "zh-amazon-create-private-link-copy-service-name")
+    undefined
 
 1. 前往亚马逊云科技 [VPC 控制面](https://console.amazonaws.cn/vpc/)板，在左侧菜单中，选择**终端节点**。点击右上角按钮，**创建终端节点**。
 

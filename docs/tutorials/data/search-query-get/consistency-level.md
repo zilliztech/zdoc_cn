@@ -179,8 +179,7 @@ curl --request POST \
 res = client.search(
     collection_name="my_collection",
     data=[query_vector],
-    limit=3,
-    search_params={"metric_type": "IP"}，
+    limit=3
     # highlight-start
     consistency_level="Bounded",
     # highlight-next

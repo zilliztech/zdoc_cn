@@ -1,11 +1,12 @@
 ---
 title: "创建集群 | BYOC"
 slug: /create-cluster-byoc
+sidebar_key: create-cluster-byoc
 sidebar_label: "创建集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本节介绍如何创建集群。 | BYOC"
 type: origin
@@ -82,7 +83,7 @@ import Procedures from '@site/src/components/Procedures';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>操作期间会消耗少量额外资源，并在操作完成后释放。</p>
+    操作期间会消耗少量额外资源，并在操作完成后释放。
 
     </Admonition>
 

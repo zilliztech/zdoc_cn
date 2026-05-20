@@ -1,11 +1,12 @@
 ---
 title: "数据弹性 | BYOC"
 slug: /data-resilience
+sidebar_key: data-resilience
 sidebar_label: "数据弹性"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 作为全托管的向量数据库服务，提供企业级的高可用性（High Availability, HA）和灾难恢复（Disaster Recovery, DR）能力，确保您的关键业务数据和服务在各种故障场景下的持续可用性。 | BYOC"
 type: origin
@@ -155,20 +156,11 @@ Zilliz Cloud 作为全托管的向量数据库服务，提供企业级的**高�
      <td><p>地域级灾难合规性要求</p></td>
      <td><p>中</p></td>
    </tr>
-   <tr>
-     <td><p><strong>增量备份</strong></p></td>
-     <td><p>实时增量备份细粒度恢复点</p></td>
-     <td><p>≤ 1 分钟</p></td>
-     <td><p>数分钟至数小时</p></td>
-     <td><p>持续增量捕获事务日志备份</p></td>
-     <td><p>关键业务精确时间点恢复</p></td>
-     <td><p>中-高</p></td>
-   </tr>
 </table>
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>跨地域高可用功能将在 2025 年 11 月上线，增量备份功能将在 2025 年 12 月上线。</p>
+跨地域高可用功能将在 2025 年 11 月上线。
 
 </Admonition>
 

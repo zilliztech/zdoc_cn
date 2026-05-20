@@ -1,11 +1,12 @@
 ---
 title: "字符串类型 | BYOC"
 slug: /use-string-field
+sidebar_key: use-string-field
 sidebar_label: "字符串类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，`VARCHAR` 是用于存储字符串类型的数据类型，适用于可变长度字符串的存储。 | BYOC"
 type: origin
@@ -41,7 +42,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Zilliz Cloud 支持为 <code>VARCHAR</code> 字段设置 Null 值和默认值。如需开启这些设置，需要在创建字段时，将 <code>nullable</code> 设置为 <code>True</code> 以及将 <code>default_value</code> 设置为一个字符串。关于 Null 值和默认值的详细情况，可以参考 <a href="./nullable-and-default">Nullable 和默认值</a>。</p>
+Zilliz Cloud 支持为 `VARCHAR` 字段设置 Null 值和默认值。如需开启这些设置，需要在创建字段时，将 `nullable` 设置为 `True` 以及将 `default_value` 设置为一个字符串。关于 Null 值和默认值的详细情况，可以参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -55,7 +56,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果在创建 Schema 时设置了 <code>enable_dynamic_fields=True</code>，Zilliz Cloud 允许您插入的数据中包含 Schema 中未定义的字段。但是这可能会使查询复杂度和管理难度增加，进而影响查询性能。关于动态字段的相关内容，可以参考<a href="./enable-dynamic-field">Dynamic Field</a>。</p>
+如果在创建 Schema 时设置了 `enable_dynamic_fields=True`，Zilliz Cloud 允许您插入的数据中包含 Schema 中未定义的字段。但是这可能会使查询复杂度和管理难度增加，进而影响查询性能。关于动态字段的相关内容，可以参考[Dynamic Field](./enable-dynamic-field)。
 
 </Admonition>
 
@@ -78,9 +79,9 @@ schema = client.create_schema(
     enable_dynamic_fields=True,
 )
 
-# Add `varchar_field1` that supports null values with default value "Unknown"
+# Add \`varchar_field1\` that supports null values with default value "Unknown"
 schema.add_field(field_name="varchar_field1", datatype=DataType.VARCHAR, max_length=100, nullable=True, default_value="Unknown")
-# Add `varchar_field2` that supports null values without default value
+# Add \`varchar_field2\` that supports null values without default value
 schema.add_field(field_name="varchar_field2", datatype=DataType.VARCHAR, max_length=200, nullable=True)
 schema.add_field(field_name="pk", datatype=DataType.INT64, is_primary=True)
 schema.add_field(field_name="embedding", datatype=DataType.FLOAT_VECTOR, dim=3)
@@ -141,7 +142,7 @@ schema.addField(AddFieldReq.builder()
 import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
 
 const client = new MilvusClient({
-  address: `YOUR_CLUSTER_ENDPOINT`
+  address: \`YOUR_CLUSTER_ENDPOINT\`
 });
 
 const schema = [
@@ -185,7 +186,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
@@ -284,14 +285,14 @@ export schema="{
 
 index_params = client.prepare_index_params()
 
-# Index `varchar_field1` with AUTOINDEX
+# Index \`varchar_field1\` with AUTOINDEX
 index_params.add_index(
     field_name="varchar_field1",
     index_type="AUTOINDEX",
     index_name="varchar_index"
 )
 
-# Index `embedding` with AUTOINDEX and specify metric_type
+# Index \`embedding\` with AUTOINDEX and specify metric_type
 index_params.add_index(
     field_name="embedding",
     index_type="AUTOINDEX",  # Use automatic indexing to simplify complex index settings
@@ -445,6 +446,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
@@ -468,10 +470,10 @@ Collection 创建完成后，可以插入包含字符串字段的数据。
 data = [
     {"varchar_field1": "Product A", "varchar_field2": "High quality product", "pk": 1, "embedding": [0.1, 0.2, 0.3]},
     {"varchar_field1": "Product B", "pk": 2, "embedding": [0.4, 0.5, 0.6]}, # varchar_field2 field is missing, which should be NULL
-    {"varchar_field1": None, "varchar_field2": None, "pk": 3, "embedding": [0.2, 0.3, 0.1]},  # `varchar_field1` should default to `Unknown`, `varchar_field2` is NULL
-    {"varchar_field1": "Product C", "varchar_field2": None, "pk": 4, "embedding": [0.5, 0.7, 0.2]},  # `varchar_field2` is NULL
-    {"varchar_field1": None, "varchar_field2": "Exclusive deal", "pk": 5, "embedding": [0.6, 0.4, 0.8]},  # `varchar_field1` should default to `Unknown`
-    {"varchar_field1": "Unknown", "varchar_field2": None, "pk": 6, "embedding": [0.8, 0.5, 0.3]},  # `varchar_field2` is NULL
+    {"varchar_field1": None, "varchar_field2": None, "pk": 3, "embedding": [0.2, 0.3, 0.1]},  # \`varchar_field1\` should default to \`Unknown\`, \`varchar_field2\` is NULL
+    {"varchar_field1": "Product C", "varchar_field2": None, "pk": 4, "embedding": [0.5, 0.7, 0.2]},  # \`varchar_field2\` is NULL
+    {"varchar_field1": None, "varchar_field2": "Exclusive deal", "pk": 5, "embedding": [0.6, 0.4, 0.8]},  # \`varchar_field1\` should default to \`Unknown\`
+    {"varchar_field1": "Unknown", "varchar_field2": None, "pk": 6, "embedding": [0.8, 0.5, 0.3]},  # \`varchar_field2\` is NULL
     {"varchar_field1": "", "varchar_field2": "Best seller", "pk": 7, "embedding": [0.8, 0.5, 0.3]}, # Empty string is not treated as NULL
 ]
 
@@ -581,6 +583,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data '{
     "data": [
         {"varchar_field1": "Product A", "varchar_field2": "High quality product", "pk": 1, "embedding": [0.1, 0.2, 0.3]},
@@ -608,7 +611,7 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
-# Filter `varchar_field1` with value "Product A"
+# Filter \`varchar_field1\` with value "Product A"
 filter = 'varchar_field1 == "Product A"'
 
 res = client.query(
@@ -690,6 +693,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "filter": "varchar_field1 == \"Product A\"",
@@ -707,7 +711,7 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
-# Filter entities where `varchar_field2` is null
+# Filter entities where \`varchar_field2\` is null
 filter = 'varchar_field2 is null'
 
 res = client.query(
@@ -790,6 +794,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "filter": "varchar_field2 is null",
@@ -806,7 +811,7 @@ curl --request POST \
 <TabItem value='python'>
 
 ```python
-# Filter entities with `varchar_field1` with value `Unknown`
+# Filter entities with \`varchar_field1\` with value \`Unknown\`
 filter = 'varchar_field1 == "Unknown"'
 
 res = client.query(
@@ -888,6 +893,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "filter": "varchar_field1 == \"Unknown\"",
@@ -908,7 +914,7 @@ curl --request POST \
 ```python
 # Search with string filtering
 
-# Filter `varchar_field2` with value "Best seller"
+# Filter \`varchar_field2\` with value "Best seller"
 filter = 'varchar_field2 == "Best seller"'
 
 res = client.search(
@@ -1010,6 +1016,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": [

@@ -1,11 +1,12 @@
 ---
 title: "API 密钥 | BYOC"
 slug: /manage-api-keys
+sidebar_key: manage-api-keys
 sidebar_label: "API 密钥"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在用户或应用程序调用 API 或 SDK 访问 Zilliz Cloud 控制面和数据面资源时，需要使用API 密钥进行身份认证。API 密钥是一个由字母和数字组成的字符串。每个密钥有自己的属性，如名称和 ID。 | BYOC"
 type: origin
@@ -31,7 +32,7 @@ import Admonition from '@theme/Admonition';
 
 为应对不同需求场景，Zilliz Cloud 提供了两种主要的 API 密钥类型：
 
-- **个人 API 密钥**：每个用户注册 Zilliz Cloud 账号时会自动生成一个相关联的个人密钥。该密钥继承对应用户在所属组织和项目中的角色权限。如果账号用户离开组织，其关联的个人密钥将被自动删除。作为[组织管理员](./organization-users#organization-roles)或[项目管理员](./project-users#project-roles)，您可以在 Zilliz Cloud 控制台上看到两种类型的个人 API 密钥：
+- **个人 API 密钥**：每个用户注册 Zilliz Cloud 账号时会自动生成一个相关联的个人密钥。该密钥继承对应用户在所属组织和项目中的角色权限。如果账号用户离开组织，其关联的个人密钥将被自动删除。作为[组织管理员](./organization-users)或[项目管理员](./project-users)，您可以在 Zilliz Cloud 控制台上看到两种类型的个人 API 密钥：
 
     - **您的个人 API 密钥**：专属于您的个人密钥。您可以查看并复制此 API 密钥。
 
@@ -41,7 +42,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>请避免将个人 API 密钥用于生产环境。生产环境中推荐使用自定义密钥。个人 API 密钥将随着用户账号删除同步失效。</p>
+请避免将个人 API 密钥用于生产环境。生产环境中推荐使用自定义密钥。个人 API 密钥将随着用户账号删除同步失效。
 
 </Admonition>
 
@@ -80,6 +81,8 @@ import Admonition from '@theme/Admonition';
 </table>
 
 ## 使用限制\{#limits-and-restrictions}
+
+- 在执行数据操作时，请使用对应集群的访问令牌。一个合法的集群访问令牌应该为一个由冒号（:）连接的目标集群的用户名和密码，如 `username:password`。
 
 - 每个组织中可创建最多 100 个自定义 API 密钥。
 
@@ -246,7 +249,7 @@ import Admonition from '@theme/Admonition';
 
 1. 输入 **API 密钥名称**并设置 **API 密钥权限**。
 
-    ![EqLZbydEpoa9U1xoS8Wc3YZrncg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/EqLZbydEpoa9U1xoS8Wc3YZrncg.png)
+    ![EqLZbydEpoa9U1xoS8Wc3YZrncg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/EqLZbydEpoa9U1xoS8Wc3YZrncg.png "EqLZbydEpoa9U1xoS8Wc3YZrncg")
 
     - **API 密钥名称**： 名称长度不可超过 64 个字符。
 
@@ -254,7 +257,7 @@ import Admonition from '@theme/Admonition';
 
         <Admonition type="info" icon="📘" title="说明">
 
-        <p><a href="./project-users#project-roles">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
+        [项目管理员](./project-users)授予自定义 API 密钥的权限受到其自身权限范围的限制。
 
         </Admonition>
 
@@ -270,7 +273,7 @@ import Admonition from '@theme/Admonition';
 
 下图展示了组织管理员所能看到的界面内容。
 
-![ZU7ibC75zoqlp3xBXXrckXbvnyK](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ZU7ibC75zoqlp3xBXXrckXbvnyK.png)
+![ZU7ibC75zoqlp3xBXXrckXbvnyK](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ZU7ibC75zoqlp3xBXXrckXbvnyK.png "ZU7ibC75zoqlp3xBXXrckXbvnyK")
 
 ## 编辑 API 密钥\{#edit-an-api-key}
 
@@ -284,7 +287,7 @@ import Admonition from '@theme/Admonition';
 
 1. 编辑 **API 密钥名称**和 **API 密钥权限**。
 
-    ![UWJXbPKX3o8GRwxNQarcONMLnVc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UWJXbPKX3o8GRwxNQarcONMLnVc.png)
+    ![UWJXbPKX3o8GRwxNQarcONMLnVc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UWJXbPKX3o8GRwxNQarcONMLnVc.png "UWJXbPKX3o8GRwxNQarcONMLnVc")
 
     - **API 密钥名称**： 名称长度不可超过 64 个字符。
 
@@ -292,7 +295,7 @@ import Admonition from '@theme/Admonition';
 
         <Admonition type="info" icon="📘" title="说明">
 
-        <p><a href="./project-users#project-roles">项目管理员</a>授予自定义 API 密钥的权限受到其自身权限范围的限制。</p>
+        [项目管理员](./project-users)授予自定义 API 密钥的权限受到其自身权限范围的限制。
 
         </Admonition>
 
@@ -302,7 +305,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>重置后，当前的 API 密钥将会失效。任何使用当前密钥的应用程序代码将停止运行，请务必及时更新代码中的 API 密钥信息。</p>
+重置后，当前的 API 密钥将会失效。任何使用当前密钥的应用程序代码将停止运行，请务必及时更新代码中的 API 密钥信息。
 
 </Admonition>
 
@@ -326,7 +329,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>该操作不可撤销。删除后， 任何使用该 API 密钥的应用将无法再访问 Zilliz Cloud 资源。</p>
+该操作不可撤销。删除后， 任何使用该 API 密钥的应用将无法再访问 Zilliz Cloud 资源。
 
 </Admonition>
 

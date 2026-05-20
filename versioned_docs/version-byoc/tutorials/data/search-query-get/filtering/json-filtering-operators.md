@@ -1,11 +1,12 @@
 ---
 title: "JSON 操作符 | BYOC"
 slug: /json-filtering-operators
+sidebar_key: json-filtering-operators
 sidebar_label: "JSON 操作符"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其成为管理复杂结构化数据的完美工具。这些操作符可实现对 JSON 文档的高效查询，允许您根据 JSON 字段中的特定元素、值或条件检索实体。本节将指导您在 Zilliz Cloud 中使用特定于 JSON 的操作符，并提供实际示例来说明其功能。 | BYOC"
 type: origin
@@ -37,7 +38,7 @@ Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>JSON 字段无法处理复杂的嵌套结构，而是将所有嵌套结构视为纯字符串。因此，在使用 JSON 字段时，建议避免过深的嵌套，并确保数据结构尽可能扁平，以获得最佳性能。</p>
+JSON 字段无法处理复杂的嵌套结构，而是将所有嵌套结构视为纯字符串。因此，在使用 JSON 字段时，建议避免过深的嵌套，并确保数据结构尽可能扁平，以获得最佳性能。
 
 </Admonition>
 

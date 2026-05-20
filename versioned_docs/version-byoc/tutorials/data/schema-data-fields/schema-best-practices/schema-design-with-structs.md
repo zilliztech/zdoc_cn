@@ -1,11 +1,12 @@
 ---
 title: "使用 Struct Array 进行 Schema 设计 | BYOC"
 slug: /schema-design-with-structs
+sidebar_key: schema-design-with-structs
 sidebar_label: "Struct Array 设计指南"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "现代 AI 应用，尤其是在物联网（IoT）和自动驾驶领域，通常会对丰富的结构化事件进行推理：带有时间戳和向量嵌入的传感器读数、带有错误代码和音频片段的诊断日志，或带有位置、速度和场景上下文的行程片段。这些应用要求数据库原生支持嵌套数据的存储和搜索。 | BYOC"
 type: origin
@@ -306,7 +307,7 @@ CoVLA 数据集是一个大规模、多模态的驾驶数据集，包含 10000 �
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>虽然 front_car 对象并不包含向量，但是因为数据体积超过 JSON 字段的上限，你仍然需要将其作为 Struct Array 引入。</p>
+    虽然 front_car 对象并不包含向量，但是因为数据体积超过 JSON 字段的上限，你仍然需要将其作为 Struct Array 引入。
 
     </Admonition>
 

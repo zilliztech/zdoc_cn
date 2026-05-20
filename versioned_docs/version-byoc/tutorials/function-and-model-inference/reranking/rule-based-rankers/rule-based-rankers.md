@@ -1,11 +1,12 @@
 ---
 title: "Rule-based Ranker | BYOC"
 slug: /rule-based-rankers
+sidebar_key: rule-based-rankers
 sidebar_label: "Rule-based Ranker"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "了解如何在 Zilliz Cloud 中使用 Rule-based Ranker。 | BYOC"
 type: origin

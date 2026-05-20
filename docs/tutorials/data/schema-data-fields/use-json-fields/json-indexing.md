@@ -368,4 +368,4 @@ MilvusClient.create_index(
 
 ### JSON 字段是否支持设置默认值？\{#does-a-JSON-field-support-setting-a-default-value}
 
-不支持。但你可以在定义字段时设置 `nullable=True`，以允许空值。详情请参考 [Nullable 和默认值](./nullable-and-default)。
+不支持。但你可以在定义字段时设置 `nullable=True`，以允许空值。详情请参考 [Nullable 和默认值](./nullable-fields)。

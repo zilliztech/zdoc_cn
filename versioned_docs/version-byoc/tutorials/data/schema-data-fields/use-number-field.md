@@ -1,11 +1,12 @@
 ---
 title: "布尔与数值类型 | BYOC"
 slug: /use-number-field
+sidebar_key: use-number-field
 sidebar_label: "布尔与数值类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "布尔与数值类型的标量字段用于存放布尔值或标量数值。布尔值是指在两个可能的值中取一个，而标量数值则既可能是整数，也可能是小数。它们通常用来表示数量、度量值或其它需要进行逻辑或数学运算的数据。 | BYOC"
 type: origin
@@ -78,7 +79,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Zilliz Cloud 允许布尔类型或数值类型的字段为空。您也可以为它们设置默认值。简单来说，您可以将字段的 <code>nullable</code> 设置为 <code>True</code> 来允许字段为空，并通过 <code>default_value</code> 为字段设置默认值，具体可以参考 <a href="./nullable-and-default">Nullable 和默认值</a>。</p>
+Zilliz Cloud 允许布尔类型或数值类型的字段为空。您也可以为它们设置默认值。简单来说，您可以将字段的 `nullable` 设置为 `True` 来允许字段为空，并通过 `default_value` 为字段设置默认值，具体可以参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -94,7 +95,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您在定义 Schema 时将 <code>enabled_dynamic_fields</code> 设置为 <code>True</code>，您还可以在该 Collection 中插入 Schema 中未定义的字段。此操作可能会增加查询和管理的复杂性，并影响查询性能。更多详情，请参考 <a href="./enable-dynamic-field">Dynamic Field</a>。</p>
+如果您在定义 Schema 时将 `enabled_dynamic_fields` 设置为 `True`，您还可以在该 Collection 中插入 Schema 中未定义的字段。此操作可能会增加查询和管理的复杂性，并影响查询性能。更多详情，请参考 [Dynamic Field](./enable-dynamic-field)。
 
 </Admonition>
 
@@ -117,10 +118,10 @@ schema = client.create_schema(
     enable_dynamic_fields=True,
 )
 
-# Add an INT64 field `age` that supports null values with default value 18
+# Add an INT64 field \`age\` that supports null values with default value 18
 schema.add_field(field_name="age", datatype=DataType.INT64, nullable=True, default_value=18)
 schema.add_field(field_name="broken", datatype=DataType.BOOL, nullable=True)
-# Add a FLOAT field `price` that supports null values without default value
+# Add a FLOAT field \`price\` that supports null values without default value
 schema.add_field(field_name="price", datatype=DataType.FLOAT, nullable=True)
 schema.add_field(field_name="pk", datatype=DataType.INT64, is_primary=True)
 schema.add_field(field_name="embedding", datatype=DataType.FLOAT_VECTOR, dim=3)
@@ -228,7 +229,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
@@ -326,14 +327,14 @@ export schema="{
 
 index_params = client.prepare_index_params()
 
-# Index `age` with AUTOINDEX
+# Index \`age\` with AUTOINDEX
 index_params.add_index(
     field_name="age",
     index_type="AUTOINDEX",
     index_name="age_index"
 )
 
-# Index `embedding` with AUTOINDEX and specify similarity metric type
+# Index \`embedding\` with AUTOINDEX and specify similarity metric type
 index_params.add_index(
     field_name="embedding",
     index_type="AUTOINDEX",  # Use automatic indexing to simplify complex index settings
@@ -500,11 +501,11 @@ Collection 创建完成后，可以插入包含标量字段的数据。
 # Sample data
 data = [
     {"age": 25, "price": 99.99, "pk": 1, "embedding": [0.1, 0.2, 0.3]},
-    {"age": 30, "pk": 2, "embedding": [0.4, 0.5, 0.6]}, # `price` field is missing, which should be null
-    {"age": None, "price": None, "pk": 3, "embedding": [0.2, 0.3, 0.1]},  # `age` should default to 18, `price` is null
-    {"age": 45, "price": None, "pk": 4, "embedding": [0.9, 0.1, 0.4]},  # `price` is null
-    {"age": None, "price": 59.99, "pk": 5, "embedding": [0.8, 0.5, 0.3]},  # `age` should default to 18
-    {"age": 60, "price": None, "pk": 6, "embedding": [0.1, 0.6, 0.9]}  # `price` is null
+    {"age": 30, "pk": 2, "embedding": [0.4, 0.5, 0.6]}, # \`price\` field is missing, which should be null
+    {"age": None, "price": None, "pk": 3, "embedding": [0.2, 0.3, 0.1]},  # \`age\` should default to 18, \`price\` is null
+    {"age": 45, "price": None, "pk": 4, "embedding": [0.9, 0.1, 0.4]},  # \`price\` is null
+    {"age": None, "price": 59.99, "pk": 5, "embedding": [0.8, 0.5, 0.3]},  # \`age\` should default to 18
+    {"age": 60, "price": None, "pk": 6, "embedding": [0.1, 0.6, 0.9]}  # \`price\` is null
 ]
 
 client.insert(

@@ -222,7 +222,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
        </tr>
     </table>
 
-    ![zh-ali-add-zone-form](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-ali-add-zone-form.png "zh-ali-add-zone-form")
+    undefined
 
 1. 设置私域解析的生效范围。
 

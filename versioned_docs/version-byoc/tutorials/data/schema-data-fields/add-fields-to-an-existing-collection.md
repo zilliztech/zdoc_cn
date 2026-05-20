@@ -1,16 +1,17 @@
 ---
 title: "向 Collection 添加字段 | BYOC"
 slug: /add-fields-to-an-existing-collection
+sidebar_key: add-fields-to-an-existing-collection
 sidebar_label: "向 Collection 添加字段"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "Milvus  允许您向现有 Collection 动态地添加新字段，帮助您在业务需求发生变化时轻松地修改 Collection Schema。本教程将通过若干例子为您演示在不同情况下如何为指定 Collection 添加字段。 | BYOC"
 type: origin
 token: JU6ZwfYLpilJ6vkncdzcLtFLnjf
-sidebar_position: 17
+sidebar_position: 18
 keywords: 
   - 向量数据库
   - zilliz
@@ -57,7 +58,7 @@ Milvus  允许您向现有 Collection 动态地添加新字段，帮助您在业
 
 <Admonition type="info" icon="📘" title="针对上述任务，需要帮助吗？">
 
-<p>请参考<a href="./manage-collections-sdks">创建 Collection</a> 了解如何创建 Collection 及相关基本操作。</p>
+请参考[创建 Collection](./manage-collections-sdks) 了解如何创建 Collection 及相关基本操作。
 
 </Admonition>
 
@@ -97,7 +98,7 @@ MilvusClientV2 client = new MilvusClientV2(config);
 import { MilvusClient } from '@zilliz/milvus2-sdk-node';
 
 const milvusClient = new MilvusClient({
-    address: 'localhost:19530'
+    address: 'YOUR_CLUSTER_ENDPOINT'
 });
 ```
 
@@ -115,7 +116,7 @@ const milvusClient = new MilvusClient({
 
 ```bash
 # restful
-export CLUSTER_ENDPOINT="localhost:19530"
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
 ```
 
 </TabItem>
@@ -190,6 +191,7 @@ await client.addCollectionField({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "product_catalog",
     "schema": {
@@ -339,6 +341,7 @@ await client.addCollectionField({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "product_catalog",
     "schema": {
@@ -483,6 +486,7 @@ await client.addCollectionField({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "existing_collection",
     "schema": {
@@ -500,7 +504,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
 
 - **新建 Collection**：在创建 Collection 时，将 `enable_dynamic_field` 设置为 True。详情参见 [创建 Collection](./manage-collections-sdks#create-schema)。
 
-- **已有 Collection**：将 Collection 级属性 `dynamicfield.enabled` 设置为 True。详情参见[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。
+- **已有 Collection**：将 Collection 级属性 `dynamicfield.enabled` 设置为 True。详情参见[修改 Collection](./modify-collections#example-5-enable-dynamic-field)。
 
 ### 如果我添加的新字段名称与 Dynamic Field 中某个键的名称相同，会发生什么？\{#what-happends-when-i-add-a-field-with-the-same-name-as-a-dynamic-field-key}
 
@@ -638,7 +642,7 @@ await client.insert({
 # restful
 #!/bin/bash
 
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export AUTH_TOKEN="your_token_here"
 export COLLECTION_NAME="product_catalog"
 
@@ -646,6 +650,7 @@ echo "Step 1: Insert initial data with dynamic fields..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/insert" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"data\": [{
@@ -660,6 +665,7 @@ echo -e "\n\nStep 2: Add static field with same name as dynamic field..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"schema\": {
@@ -673,6 +679,7 @@ echo -e "\n\nStep 3: Insert new data after adding static field..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/insert" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"data\": [{
@@ -790,7 +797,7 @@ results = client.query({
 # restful
 #!/bin/bash
 
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export AUTH_TOKEN="your_token_here"
 export COLLECTION_NAME="product_catalog"
 
@@ -798,6 +805,7 @@ echo "Query 1: Static field only (dynamic field masked)..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"id == 1\",
@@ -808,6 +816,7 @@ echo -e "\n\nQuery 2: Both static and original dynamic values..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"id == 1\",
@@ -818,6 +827,7 @@ echo -e "\n\nQuery 3: New entity with static field value..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"id == 2\",

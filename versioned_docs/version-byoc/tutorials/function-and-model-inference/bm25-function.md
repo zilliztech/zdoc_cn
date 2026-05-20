@@ -1,11 +1,12 @@
 ---
 title: "BM25 Function | BYOC"
 slug: /bm25-function
+sidebar_key: bm25-function
 sidebar_label: "BM25 Function"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "BM25 Function 通过将原始文本转换为稀疏向量，并基于词法相关性对文档进行评分，从而实现全文检索。它采用基于词项的匹配机制和考虑词频的加权方式，高效检索与查询词高度匹配的文本内容。 | BYOC"
 type: origin
@@ -35,7 +36,7 @@ BM25 Function 通过将原始文本转换为稀疏向量，并基于词法相关
 
 ## BM25 的工作原理\{#how-bm25-works}
 
-BM25 是一种广泛应用于全文检索的基于词项的相关性评分算法。在 Zilliz CloudMilvus 中，BM25 以稀疏检索流水线的形式实现：系统将文本转换为词项加权表示，并通过分布式稀疏索引检索 Top-K 文档。
+BM25 是一种广泛应用于全文检索的基于词项的相关性评分算法。在 Zilliz Cloud 中，BM25 以稀疏检索流水线的形式实现：系统将文本转换为词项加权表示，并通过分布式稀疏索引检索 Top-K 文档。
 
 整体流程由两条对称的路径组成：文档写入和查询文本处理，二者共享相同的文本分析逻辑。
 
@@ -240,9 +241,12 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+token := "YOUR_CLUSTER_TOKEN"
+
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
+    APIKey: token
 })
 if err != nil {
     fmt.Println(err.Error())
@@ -347,7 +351,7 @@ bm25_function = Function(
     input_field_names=["text"], # Name of the VARCHAR field containing raw text data
     output_field_names=["sparse"], # Name of the SPARSE_FLOAT_VECTOR field reserved to store generated embeddings
     # highlight-next-line
-    function_type=FunctionType.BM25, # Set to `BM25`
+    function_type=FunctionType.BM25, # Set to \`BM25\`
 )
 
 schema.add_function(bm25_function)
@@ -607,6 +611,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
@@ -692,6 +697,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "data": [
         {"text": "information retrieval is a field of study."},
@@ -805,6 +811,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data-raw '{
     "collectionName": "my_collection",
     "data": [

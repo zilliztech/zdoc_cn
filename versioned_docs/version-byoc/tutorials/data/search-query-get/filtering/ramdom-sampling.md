@@ -1,16 +1,17 @@
 ---
 title: "随机采样 | BYOC"
 slug: /ramdom-sampling
+sidebar_key: ramdom-sampling
 sidebar_label: "随机采样"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "处理大规模数据集时，你通常无需处理所有数据就能获得见解或测试过滤逻辑。随机抽样提供了一种解决方案，它允许你处理具有统计代表性的数据子集，从而显著减少查询时间和资源消耗。 | BYOC"
 type: origin
 token: Ox1iwZzfWi3Rxrkz2BQc8z3Uncb
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz
@@ -44,7 +45,7 @@ import TabItem from '@theme/TabItem';
 
 - **资源优化**：降低探索性查询和统计分析的计算成本
 
-## 语法
+## 语法\{#}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -99,7 +100,7 @@ export filterRandomSample='RANDOM_SAMPLE(0.5)'
 
 - 采样因子必须在 (0, 1) 范围内，不包括边界
 
-## 与其他过滤器结合
+## 与其他过滤器结合\{#}
 
 随机采样运算符必须使用逻辑 `AND` 与其他过滤表达式结合使用。在组合过滤器时，Milvus 首先应用其他条件，然后对结果集执行随机采样。
 
@@ -169,9 +170,9 @@ export filterSampleIncorrect='color == "red" OR RANDOM_SAMPLE(0.001)'  # ❌ Inv
 </TabItem>
 </Tabs>
 
-## 示例
+## 示例\{#}
 
-### 示例1：数据探索
+### 示例1：数据探索\{#1}
 
 快速预览您的 Collection 结构：
 
@@ -240,7 +241,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -277,7 +278,7 @@ fmt.Println("product_name: ", resultSet.GetColumn("product_name").FieldData().Ge
 ```bash
 # restful
 export TOKEN="YOUR_CLUSTER_TOKEN"
-export CLUSTER_ENDPOINT="localhost:19530"
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
 export filterSample='RANDOM_SAMPLE(0.01)'
 
 curl --request POST \
@@ -295,7 +296,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 示例2：结合过滤与随机抽样
+### 示例2：结合过滤与随机抽样\{#2}
 
 在可管理的子集上测试过滤逻辑：
 
@@ -381,7 +382,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 示例3：快速分析
+### 示例3：快速分析\{#3}
 
 对过滤后的数据进行快速统计分析：
 
@@ -458,7 +459,7 @@ if err != nil {
 ```bash
 # restful
 export TOKEN="YOUR_CLUSTER_TOKEN"
-export CLUSTER_ENDPOINT="localhost:19530"
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
 export filterCustomer="customer_tier == \\\"premium\\\" AND region == \\\"North America\\\" AND RANDOM_SAMPLE(0.001)"
 
 curl --request POST \
@@ -476,7 +477,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 示例4：结合向量搜索
+### 示例4：结合向量搜索\{#4}
 
 在过滤搜索场景中使用随机抽样：
 
@@ -569,14 +570,14 @@ for _, resultSet := range resultSets {
 ```bash
 # restful
 export TOKEN="YOUR_CLUSTER_TOKEN"
-export CLUSTER_ENDPOINT="localhost:19530"
+export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
 
 ```
 
 </TabItem>
 </Tabs>
 
-## 最佳实践
+## 最佳实践\{#}
 
 - **从小处着手**：初始探索时，从较小的采样因子 (0.001 - 0.01) 开始
 

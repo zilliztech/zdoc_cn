@@ -191,6 +191,7 @@ await client.addCollectionField({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "product_catalog",
     "schema": {
@@ -340,6 +341,7 @@ await client.addCollectionField({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "product_catalog",
     "schema": {
@@ -484,6 +486,7 @@ await client.addCollectionField({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "existing_collection",
     "schema": {
@@ -501,7 +504,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/fields/add" \
 
 - **新建 Collection**：在创建 Collection 时，将 `enable_dynamic_field` 设置为 True。详情参见 [创建 Collection](./manage-collections-sdks#create-schema)。
 
-- **已有 Collection**：将 Collection 级属性 `dynamicfield.enabled` 设置为 True。详情参见[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。
+- **已有 Collection**：将 Collection 级属性 `dynamicfield.enabled` 设置为 True。详情参见[修改 Collection](./modify-collections#example-5-enable-dynamic-field)。
 
 ### 如果我添加的新字段名称与 Dynamic Field 中某个键的名称相同，会发生什么？\{#what-happends-when-i-add-a-field-with-the-same-name-as-a-dynamic-field-key}
 
@@ -647,6 +650,7 @@ echo "Step 1: Insert initial data with dynamic fields..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/insert" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"data\": [{
@@ -661,6 +665,7 @@ echo -e "\n\nStep 2: Add static field with same name as dynamic field..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/collections/fields/add" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"schema\": {
@@ -674,6 +679,7 @@ echo -e "\n\nStep 3: Insert new data after adding static field..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/insert" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"data\": [{
@@ -799,6 +805,7 @@ echo "Query 1: Static field only (dynamic field masked)..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"id == 1\",
@@ -809,6 +816,7 @@ echo -e "\n\nQuery 2: Both static and original dynamic values..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"id == 1\",
@@ -819,6 +827,7 @@ echo -e "\n\nQuery 3: New entity with static field value..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"id == 2\",

@@ -156,7 +156,7 @@ curl --request POST \
 
 两种方式都允许您从外部的云服务对象存储中导入数据。不同之处在于：
 
--  External Volume 通过存储集成来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
+-  External Volume 通过[存储集成](./integrate-with-storage-bucket)来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
 
 - 直接从外部存储导入时，需要在每次导入请求中提供凭证（access key、secret key）。这种方式更适合一次性导入，但不具备凭证隔离和复用能力。
 

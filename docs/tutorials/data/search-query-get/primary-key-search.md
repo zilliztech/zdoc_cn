@@ -91,8 +91,7 @@ res = client.search(
     # highlight-start
     ids=[551, 296, 43], # a list of primary keys
     # highlight-end
-    limit=3,
-    search_params={"metric_type": "IP"}
+    limit=3
 )
 
 for hits in res:
@@ -121,7 +120,6 @@ SearchResp searchResp = client.search(SearchReq.builder()
         .annsField("vector")
         .ids(ids)
         .limit(3)
-        .metricType(IndexParam.MetricType.IP)
         .build());
 List<List<SearchResp.SearchResult>> searchResults = searchResp.getSearchResults();
 for (List<SearchResp.SearchResult> results : searchResults) {
@@ -157,14 +155,12 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "my_collection",
     "annsField": "vector",
     "ids": [551, 296, 43],
-    "limit": 3,
-    "searchParams": {
-      "metric_type": "IP"
-    }
+    "limit": 3
   }'
 ```
 
@@ -237,6 +233,7 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "my_collection",
     "annsField": "vector",
@@ -323,6 +320,7 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "my_collection",
     "annsField": "vector",
@@ -406,6 +404,7 @@ for (List<SearchResp.SearchResult> results : searchResults) {
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "my_collection",
     "annsField": "vector",

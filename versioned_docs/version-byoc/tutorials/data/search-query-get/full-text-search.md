@@ -1,16 +1,17 @@
 ---
 title: "Full Text Search | BYOC"
 slug: /full-text-search
+sidebar_key: full-text-search
 sidebar_label: "Full Text Search"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在  Zilliz Cloud 中，Full Text Search 是对基于稠密向量](./use-dense-vector)的语义搜索的补充。它能够在大规模文本集合中查找包含特定术语或短语的文本，弥补语义搜索的遗漏，从而提升整体搜索效果。它支持直接插入和使用原始文本数据进行相似性搜索，Milvus 会自动将文本转换为[稀疏向量](./use-sparse-vector)表示。Full Text Search 使用 [BM25 算法进行相关性评分，根据查询文本返回最相关的文档，从而提高文本搜索的整体精度。 | BYOC"
 type: origin
 token: TO6fwkZ2jiT6FSkkgbCcyHTvn0d
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
@@ -38,7 +39,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>将 Full Text Search 与基于语义的稠密向量搜索结合使用，可以提升搜索结果的准确性和相关性。更多信息请参考 <a href="./hybrid-search">Hybrid Search</a>。</p>
+将 Full Text Search 与基于语义的稠密向量搜索结合使用，可以提升搜索结果的准确性和相关性。更多信息请参考 [Hybrid Search](./hybrid-search)。
 
 </Admonition>
 
@@ -149,9 +150,12 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+token := "YOUR_CLUSTER_TOKEN"
+
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
+    APIKey: token
 })
 if err != nil {
     fmt.Println(err.Error())
@@ -412,7 +416,7 @@ bm25_function = Function(
     input_field_names=["text"], # Name of the VARCHAR field containing raw text data
     output_field_names=["sparse"], # Name of the SPARSE_FLOAT_VECTOR field reserved to store generated embeddings
     # highlight-next-line
-    function_type=FunctionType.BM25, # Set to `BM25`
+    function_type=FunctionType.BM25, # Set to \`BM25\`
 )
 
 schema.add_function(bm25_function)
@@ -533,7 +537,7 @@ export schema='{
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>对于包含多个需要进行文本到稀疏向量转换的 <code>VARCHAR</code> 字段的 Collection，请为 Schema 添加单独的 Function，并确保每个 Function 具有唯一的名称和 <code>output_field_names</code> 值。</p>
+对于包含多个需要进行文本到稀疏向量转换的 `VARCHAR` 字段的 Collection，请为 Schema 添加单独的 Function，并确保每个 Function 具有唯一的名称和 `output_field_names` 值。
 
 </Admonition>
 
@@ -734,6 +738,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
@@ -813,6 +818,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "data": [
         {"text": "information retrieval is a field of study."},
@@ -924,6 +930,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data-raw '{
     "collectionName": "my_collection",
     "data": [
@@ -976,7 +983,7 @@ curl --request POST \
 
 ## 常见问题\{#faqs}
 
-### 在全文搜索中，我能否输出或访问由 BM25 函数生成的稀疏向量？
+### 在全文搜索中，我能否输出或访问由 BM25 函数生成的稀疏向量？\{#bm25}
 
 不行。BM25 函数生成的稀疏向量在全文搜索中无法直接访问或输出。详情如下：
 
@@ -1012,7 +1019,7 @@ client.search(
 )
 ```
 
-### 如果无法访问，为何还要定义稀疏向量字段呢？
+### 如果无法访问，为何还要定义稀疏向量字段呢？\{#}
 
 稀疏向量字段作为内部搜索索引，类似于用户不会直接与之交互的数据库索引。
 

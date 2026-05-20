@@ -148,6 +148,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/rename" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "newCollectionName": "my_new_collection"
@@ -171,6 +172,10 @@ curl --request POST \
      <td><p>如果您需要 Zilliz Cloud 在 Collection 创建完成后的一段时间内自动删除该 Collection 中的所有数据。可以考虑为 Collection 设置 TTL。这样当 Collection 的生存时间超过指定时间（单位为秒）后，Zilliz Cloud 就会开始删除 Collection 中的数据。</p><p>由于删除操作是异步的，在数据完全删除前，您仍旧可以搜索到部分数据。</p><p>更多内容，可以参考<a href="./set-collection-ttl">设置 Collection 生存时间</a>。</p></td>
    </tr>
    <tr>
+     <td><p><code>ttl_field</code></p></td>
+     <td><p>指定一个 TIMESTAMPTZ 类型字段，存储每个 Entity 的<strong>绝对过期时间戳</strong>。当系统当前的墙上时钟时间到达该字段中的时间点时，对应的 Entity 会立即过期；如果该字段值为 NULL，则表示该 Entity 永不过期。该字段与 <code>collection.ttl.seconds</code> 互斥。</p><p>更多内容，可以参考<a href="./set-collection-ttl">设置 Collection 生存时间</a>。</p></td>
+   </tr>
+   <tr>
      <td><p><code>mmap.enabled</code></p></td>
      <td><p>Memory mapping 支持通过内存来访问存放在磁盘上的数据和文件，从而使得 Zilliz Cloud 即可以将索引和原始数据存放在内存中，也可以将它们存放在磁盘上。您可以根据访问频率优化数据存放策略，在扩大 Collection 容量的同时保证搜索性能。</p><p>Zilliz Cloud 为您的集群提供了<a href="./use-mmap#global-mmap-strategy">全局 mmap 策略</a>。您可以为某个具体字段或该字段上的索引设置不同的 mmap 策略。</p><p>更多内容，可以参考<a href="./use-mmap">使用 mmap</a>。</p></td>
    </tr>
@@ -192,7 +197,7 @@ curl --request POST \
    </tr>
 </table>
 
-### 示例 1：设置 Collection TTL\{#example-1-set-collection-ttl}
+### 示例 1：设置 Collection 级别 TTL\{#example-1-set-collection-ttl}
 
 如下代码演示了如何设置 Collection 的生存时间（TTL）。
 
@@ -261,6 +266,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/alter_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "properties": {
@@ -272,7 +278,61 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 示例 2：开启 mmap\{#example-2-enable-mmap}
+### 示例 2：设置 Entity 级别 TTL \{#example-2-set-entity-ttl}
+
+下面的代码片段将一个已有的 `TIMESTAMPTZ` 字段（`expire_at`）指定为 Entity 级别 TTL 的 TTL 字段。Collection 中必须已经包含 `TIMESTAMPTZ` 字段，并且不能同时设置 `collection.ttl.seconds`，这两种 TTL 模式互斥。
+
+如需了解完整的 Entity 级别 TTL 工作流（包括 schema 配置、插入、查询、刷新与删除），请参见[设置 Collection 生存时间](./set-collection-ttl)。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+from pymilvus import MilvusClient
+
+client.alter_collection_properties(
+    collection_name="my_collection",
+    # highlight-next-line
+    properties={"ttl_field": "expire_at"}
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+### 示例 3：开启 mmap\{#example-3-enable-mmap}
 
 如下代码演示了如何开启 mmap。
 
@@ -345,7 +405,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
 </TabItem>
 </Tabs>
 
-### 示例 3：开启 Partition Key\{#example-3-enable-partition-key}
+### 示例 4：开启 Partition Key\{#example-4-enable-partition-key}
 
 如下代码演示了如何开启 Partition Key。
 
@@ -419,7 +479,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
 </TabItem>
 </Tabs>
 
-### 示例 4：开启 Dynamic Field\{#example-4-enable-dynamic-field}
+### 示例 5：开启 Dynamic Field\{#example-5-enable-dynamic-field}
 
 如下代码演示了如何开启 Dynamic Field。
 
@@ -493,7 +553,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
 </TabItem>
 </Tabs>
 
-### 示例 5：开启 allow_insert_auto_id\{#example-5-enable-allow_insert_auto_id}
+### 示例 6：开启 allow_insert_auto_id\{#example-6-enable-allow_insert_auto_id}
 
 `allow_insert_auto_id` 属性允许在启用 AutoID 的 Collection 中，在执行 insert、upsert 和 bulk import 操作时接收用户提供的主键值。当该属性设置为 **"true"** 时，Zilliz Cloud 会在检测到用户提供主键值时使用该值；若未提供，则自动生成主键值。默认值为 **"false"**。
 
@@ -569,7 +629,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/alter_properties" \
 </TabItem>
 </Tabs>
 
-### 示例 6：设置 Collection 时区\{#example-6-set-collection-time-zone}
+### 示例 7：设置 Collection 时区\{#example-7-set-collection-time-zone}
 
 您可以使用 `timezone` 属性为 Collection 设置默认时区。该属性决定了在 Collection 内进行所有操作（包括数据插入、查询和结果展示）时，时间相关数据的解释和显示方式。
 
@@ -704,6 +764,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/drop_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "propertyKeys": [

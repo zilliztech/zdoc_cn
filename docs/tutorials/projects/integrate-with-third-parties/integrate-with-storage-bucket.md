@@ -81,7 +81,7 @@ https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
            </tr>
            <tr>
              <td><p>只读</p></td>
-             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External Collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
            </tr>
            <tr>
              <td><p>读写</p></td>

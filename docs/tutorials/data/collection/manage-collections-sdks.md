@@ -61,7 +61,7 @@ Schema 定义了 Collection 的数据结构。在创建 Collection 时，您需�
 
 <Admonition type="info" icon="📘" title="说明">
 
-Zilliz Cloud 支持为标量字段设置 nullable 属性和默认值。有关更多信息，请参考 [Nullable 和默认值](./nullable-and-default)。
+Zilliz Cloud 支持为标量字段设置 nullable 属性和默认值。有关更多信息，请参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -473,6 +473,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_1\",
     \"schema\": $schema,
@@ -596,6 +597,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_2\",
     \"schema\": $schema
@@ -605,6 +607,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/get_load_state" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_2\"
 }"
@@ -697,6 +700,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_3\",
     \"schema\": $schema,
@@ -784,6 +788,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_5\",
     \"schema\": $schema,
@@ -876,6 +881,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_5\",
     \"schema\": $schema,
@@ -966,6 +972,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_6\",
     \"schema\": $schema,

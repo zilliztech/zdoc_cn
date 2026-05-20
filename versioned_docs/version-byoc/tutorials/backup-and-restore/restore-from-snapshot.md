@@ -1,11 +1,12 @@
 ---
 title: "恢复备份 | BYOC"
 slug: /restore-from-snapshot
+sidebar_key: restore-from-snapshot
 sidebar_label: "恢复备份"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏或系统故障时，从备份文件中恢复数据，保障业务连续性。这是一种可靠的手段，可用于灾难恢复、撤销错误更改，或创建用于测试的集群副本，将业务中断最小化。 | BYOC"
 type: origin
@@ -46,7 +47,7 @@ Zilliz Cloud 提供的恢复功能可用于在发生意外删除、数据损坏�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>目前仅支持通过 Web 控制台选择恢复 RBAC 权限设置，RESTful API 暂不支持。</p>
+ 目前仅支持通过 Web 控制台选择恢复 RBAC 权限设置，RESTful API 暂不支持。
 
 </Admonition>
 
@@ -136,3 +137,8 @@ curl --request POST \
 }
 ```
 
+## 常见问题\{#faq}
+
+**恢复备份后的集群是哪个 Milvus 版本？**
+
+恢复后的集群将使用 Zilliz Cloud 支持的最新 Milvus 版本，与创建备份时的 Milvus 版本无关。例如，您为一个 Milvus 2.5.x 集群创建备份，在平台升级至 2.6.x 后恢复该备份，恢复出来的集群为容 Milvus  2.6.x 版本。备份文件仅包含数据，集群 Milvus 版本由平台决定。

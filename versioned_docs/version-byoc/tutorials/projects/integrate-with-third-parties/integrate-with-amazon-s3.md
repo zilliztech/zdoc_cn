@@ -1,13 +1,14 @@
 ---
 title: "Amazon S3 | BYOC"
 slug: /integrate-with-amazon-s3
+sidebar_key: integrate-with-amazon-s3
 sidebar_label: "Amazon S3"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持与 Amazon Simple Storage Service（Amazon S3） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。 | BYOC"
+description: "Zilliz Cloud 支持与 Amazon Simple Storage Service（Amazon S3） 集成。 | BYOC"
 type: origin
 token: Bt3swdJKaigDQgkrzSwcoEEgnV4
 sidebar_position: 2
@@ -31,7 +32,17 @@ import Procedures from '@site/src/components/Procedures';
 
 # Amazon S3
 
-Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。
+Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成。
+
+该存储集成可用于：
+
+- [External volumes](./external-volume)
+
+- [导出备份文件](./export-backup-files)
+
+- [转发审计日志](./audit-logs)
+
+- [转发访问日志](./access-log-overview)
 
 ![MWh0wX3wehaH1dbkEXpc5GbFnoc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MWh0wX3wehaH1dbkEXpc5GbFnoc.png)
 
@@ -43,7 +54,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 ## 步骤 1：集成基础设置\{#step-1-start-integration-on-zilliz-cloud}
 
-<Supademo id="cmeksbxva065wv9kqaibjgsu1" title="步骤 1：集成基础设置" />
+<Supademo id="cmeksbxva065wv9kqaibjgsu1" title=""  />
 
 <Procedures>
 
@@ -59,9 +70,26 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     - **配置描述**（可选）：为此集成添加描述（如：`for export backup file`）。
 
+    - **Bucket 权限**：选择 Zilliz Cloud 对您的对象存储桶具有的访问级别。下表说明了这些选项。
+
+        <table>
+           <tr>
+             <th><p><strong>权限</strong></p></th>
+             <th><p><strong>说明</strong></p></th>
+           </tr>
+           <tr>
+             <td><p>只读</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
+           </tr>
+           <tr>
+             <td><p>读写</p></td>
+             <td><p>Zilliz Cloud 既可以从 bucket 中读取数据，也可以向 bucket 中写入数据。用于<a href="./export-backup-files">导出备份文件</a>、<a href="./audit-logs">转发审计日志</a>或<a href="./access-log-overview">转发访问日志</a>。</p></td>
+           </tr>
+        </table>
+
 1. 点击**下一步**。在**创建 Amazon S3 存储桶**步骤中，完成以下操作：
 
-    1. 在 **Zilliz Cloud 集群地域**选项中，选择 Zilliz Cloud 集群所在的云地域。之后创建的存储桶所在的云地域需与 Zilliz Cloud 集群所在的云地域相同。
+    1. 在 **Zilliz Cloud 集群地域**选项中，选择 Zilliz Cloud 集群或 Volum 所在的云地域。之后创建的存储桶所在的云地域需与 Zilliz Cloud 集群或 Volume所在的云地域相同。
 
     1. 打开 [Amazon S3 控制台](http://console.amazonaws.cn/s3)，继续执行[步骤 2](./integrate-with-amazon-s3#create-s3-bucket)。
 
@@ -79,10 +107,9 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <ul>
-    <li><p>创建存储桶的云地域必须与 Zilliz Cloud 集群所在地域一致。Zilliz Cloud 支持的区域可参考<a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></li>
-    <li><p>如果集群运行在不同区域，需要分别为每个区域创建集成。</p></li>
-    </ul>
+    - 创建存储桶的云地域必须与 Zilliz Cloud 集群所在地域一致。Zilliz Cloud 支持的区域可参考[云服务提供商和地域](./cloud-providers-and-regions)。
+
+    - 如果集群运行在不同区域，需要分别为每个区域创建集成。
 
     </Admonition>
 
@@ -184,10 +211,9 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <ul>
-    <li><p><code>&lt;bucket&gt;</code> 需要替换为你的存储桶实际名称。</p></li>
-    <li><p><code>&lt;region&gt;</code>, <code>&lt;account_id&gt;</code>, and <code>&lt;key_id&gt;</code> 需要替换为对应的值。详情请参考 AWS 文档中的<a href="https://docs.amazonaws.cn/kms/latest/developerguide/concepts.html">密钥标识符</a>一节的相关内容。</p></li>
-    </ul>
+    - `<bucket>` 需要替换为你的存储桶实际名称。
+
+    - `<region>`, `<account_id>`, and `<key_id>` 需要替换为对应的值。详情请参考 AWS 文档中的[密钥标识符](https://docs.amazonaws.cn/kms/latest/developerguide/concepts.html)一节的相关内容。
 
     </Admonition>
 
@@ -247,7 +273,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p><code>306787409409</code> 和 <code>my-external-id</code> 需要替换为控制台实际显示的亚马逊云科技账号 ID 和 External ID。</p>
+    `306787409409` 和 `my-external-id` 需要替换为控制台实际显示的亚马逊云科技账号 ID 和 External ID。
 
     </Admonition>
 
@@ -281,7 +307,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 集成添加完成后，您可以查看其详细信息或根据需要删除该集成。
 
-![IohLb8sC2oQHLUxn4GzcDLF4nth](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IohLb8sC2oQHLUxn4GzcDLF4nth.png)
+![IohLb8sC2oQHLUxn4GzcDLF4nth](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IohLb8sC2oQHLUxn4GzcDLF4nth.png "IohLb8sC2oQHLUxn4GzcDLF4nth")
 
 ### 获取集成 ID\{#obtain-the-integration-id}
 

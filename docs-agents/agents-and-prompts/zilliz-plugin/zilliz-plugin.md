@@ -1,11 +1,12 @@
 ---
 title: "Zilliz Claude Code Plugin | Cloud"
 slug: /zilliz-plugin
+sidebar_key: zilliz-plugin
 sidebar_label: "Claude Code Plugin"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "The Zilliz Cloud plugin for Claude Code is a natural language interface that brings Zilliz Cloud operations directly into your IDE. Instead of memorizing CLI commands or switching to the web console, describe what you want in plain language and the plugin handles it. | Cloud"
 type: origin
@@ -30,13 +31,13 @@ import Admonition from '@theme/Admonition';
 
 The Zilliz Cloud plugin for Claude Code is a natural language interface that brings Zilliz Cloud operations directly into your IDE. Instead of memorizing CLI commands or switching to the web console, describe what you want in plain language and the plugin handles it.
 
-## What is the Zilliz Plugin?
+## What is the Zilliz Plugin?\{#what-is-the-zilliz-plugin}
 
 A Claude Code plugin that wraps the Zilliz CLI with natural language capabilities, enabling you to manage Zilliz Cloud resources through conversational commands.
 
-## Key Features
+## Key Features\{#key-features}
 
-### 14 Capability Areas
+### 14 Capability Areas\{#14-capability-areas}
 
 - **Clusters**: Create, delete, suspend, resume, modify clusters
 
@@ -66,7 +67,7 @@ A Claude Code plugin that wraps the Zilliz CLI with natural language capabilitie
 
 - **Setup**: Initial configuration and quickstart
 
-### Natural Language Interface
+### Natural Language Interface\{#natural-language-interface}
 
 ```plaintext
 You: "Create a serverless cluster in us-east-1 called my-vectors"
@@ -76,7 +77,7 @@ You: "Search for similar items in my product collection with filter age > 20"
 Plugin: Executes vector search with filters
 ```
 
-## Prerequisites
+## Prerequisites\{#prerequisites}
 
 - Python 3.10 or later
 
@@ -84,7 +85,7 @@ Plugin: Executes vector search with filters
 
 - Claude Code IDE
 
-## Quick Example
+## Quick Example\{#quick-example}
 
 After installation, run the quickstart:
 
@@ -102,7 +103,7 @@ This guides you through:
 
 1. First operations
 
-## Next Steps
+## Next Steps\{#next-steps}
 
 
 

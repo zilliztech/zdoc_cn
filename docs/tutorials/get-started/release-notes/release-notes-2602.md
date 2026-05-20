@@ -11,7 +11,7 @@ notebook: FALSE
 description: "版本说明书（2026/02） | Cloud"
 type: origin
 token: Kw4GwXRaVir8Q5kxl3LcwvXVngf
-sidebar_position: 3
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz

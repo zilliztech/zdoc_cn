@@ -11,7 +11,7 @@ notebook: FALSE
 description: "了解 Zilliz Cloud 组织层级操作及设置。 | Cloud"
 type: origin
 token: B1rYwr4rJi0UM7kpppxcQvwin7l
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz

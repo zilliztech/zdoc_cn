@@ -1,11 +1,12 @@
 ---
 title: "配置监控告警 | On-Premise"
 slug: /enable-pod-monitor
+sidebar_key: enable-pod-monitor
 sidebar_label: "配置监控告警"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在部署 Milvus 集群时，可以对 Milvus 集群、Pulsar 和 etcd 等组件开启指标采集能力。本章介绍了如何为 Milvus 集群和 Pulsar、etcd 等三方组件配置指标采集能力，介绍各组件相关核心指标，并提供适用于各组件的 Grafana 模板，以便更好的了解 Milvus 集群的运行情况。 | On-Premise"
 type: origin
@@ -349,7 +350,7 @@ milvus_querynode_stopping_balance_channel_num // 下线qn 上要迁移channel ta
 
 ### etcd 核心指标\{#core-etcd-metrics}
 
-#### Leader 检查
+#### Leader 检查\{#leader}
 
 ```json
 etcd_server_has_leader
@@ -368,7 +369,7 @@ etcd_server_has_leader
    </tr>
 </table>
 
-#### 磁盘 Sync 延迟
+#### 磁盘 Sync 延迟\{#sync}
 
 ```json
 etcd_disk_wal_fsync_duration_seconds_bucket // wal fsync latency
@@ -388,7 +389,7 @@ etcd_disk_backend_commit_duration_seconds_bucket // db fsync latency
    </tr>
 </table>
 
-#### Failed RPC
+#### Failed RPC\{#failed-rpc}
 
 ```json
 grpc_server_handled_total\{grpc_type="unary",grpc_code!="OK"}
@@ -409,7 +410,7 @@ grpc_server_handled_total\{grpc_type="unary",grpc_code!="OK"}
 
 ### Pulsar 核心指标\{#core-pulsar-metrics}
 
-#### 基础计数
+#### 基础计数\{#}
 
 ```json
 pulsar_topics_count
@@ -431,7 +432,7 @@ pulsar_consumers_count
    </tr>
 </table>
 
-#### Backlog Size
+#### Backlog Size\{#backlog-size}
 
 ```json
 pulsar_msg_backlog
@@ -450,7 +451,7 @@ pulsar_msg_backlog
    </tr>
 </table>
 
-#### 生产和消费延迟 Bookie
+#### 生产和消费延迟 Bookie\{#bookie}
 
 ```json
 bookkeeper_server_ADD_ENTRY_REQUEST\{quantile="0.99"}

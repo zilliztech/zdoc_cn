@@ -1,16 +1,17 @@
 ---
 title: "Search Iterator | BYOC"
 slug: /with-iterators
+sidebar_key: with-iterators
 sidebar_label: "Search Iterator"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "ANN Search 单次召回的 Entity 有最大数量限制，单纯使用基本 ANN Search 可能无法应对大规模召回的需求。对于 topK 大于 16,384 的 ANN Search 请求，可以考虑使用 Search Iterator。本节将介绍如何使用 Search Iterator 以及与相关的注意事项。 | BYOC"
 type: origin
 token: GsLqwoJK6iZgfZkyNMscbpzmn5l
-sidebar_position: 14
+sidebar_position: 16
 keywords: 
   - 向量数据库
   - zilliz
@@ -66,7 +67,6 @@ iterator = client.search_iterator(
     collection_name="iterator_collection"
     data=query_vectors,
     anns_field="vector",
-    search_param={"metric_type": "L2", "params": {"nprobe": 16}},
     # highlight-next-line
     batch_size=50,
     output_fields=["color"],
@@ -101,7 +101,6 @@ SearchIterator searchIterator = client.searchIterator(SearchIteratorReq.builder(
         .batchSize(500L)
         .outputFields(Lists.newArrayList("color"))
         .topK(20000)
-        .metricType(IndexParam.MetricType.L2)
         .build());
 ```
 
@@ -165,7 +164,6 @@ const iterator = milvusClient.searchIterator({
     collection_name: collectionName,
     vectors: queryVectors,
     anns_field: 'vector',
-    params: { metric_type: 'L2', params: { nprobe: 16 } },
     batch_size: 50,
     output_fields: ['color'],
     limit: 20000,

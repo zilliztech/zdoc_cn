@@ -1,11 +1,12 @@
 ---
 title: "数据导入指南 | BYOC"
 slug: /data-import-zero-to-hero
+sidebar_key: data-import-zero-to-hero
 sidebar_label: "用户指南"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本小节为一个快速引导教程，旨在帮助您在 Zilliz Cloud 上快速开始包含数据准备、建立 Collection 到开始导入数据等子任务在内的全流程数据导入任务。通过本节，你将掌握： | BYOC"
 type: origin
@@ -452,7 +453,7 @@ milvusClient.createCollection(request);
 
 ```python
 from pymilvus.bulk_writer import RemoteBulkWriter, BulkFileType
-# Use `from pymilvus import RemoteBulkWriter, BulkFileType`
+# Use \`from pymilvus import RemoteBulkWriter, BulkFileType\`
 # if your pymilvus version is earlier than 2.4.2 
 
 # Connections parameters to access the remote bucket
@@ -489,9 +490,11 @@ StorageConnectParam storageConnectParam = S3ConnectParam.newBuilder()
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>参数 <strong>endpoint</strong> 决定了生成文件的输出路径。请务必确保您的目标 Collection 所在地域与您的远程对象存储桶所在地域一致。</p>
-<p>关于阿里云下 OSS Region 和 Endpoint 对照关系，可<a href="https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints">参考此文</a>。</p>
-<p>关于腾讯云下 OSS Region 和 Endpoint 对照关系，可<a href="https://cloud.tencent.com/document/product/436/6224">参考此文</a>。</p>
+参数 **endpoint** 决定了生成文件的输出路径。请务必确保您的目标 Collection 所在地域与您的远程对象存储桶所在地域一致。
+
+关于阿里云下 OSS Region 和 Endpoint 对照关系，可[参考此文](https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints)。
+
+关于腾讯云下 OSS Region 和 Endpoint 对照关系，可[参考此文](https://cloud.tencent.com/document/product/436/6224)。
 
 </Admonition>
 
@@ -511,7 +514,7 @@ writer = RemoteBulkWriter(
 )
 
 # 支持的输出文件类型:
-# - BulkFileType.JSON_RB, 
+# - BulkFileType.JSON, 
 # - BulkFileType.NPY, and 
 # - BulkFileType.PARQUET
 ```
@@ -528,7 +531,7 @@ writer = RemoteBulkWriter(
 
     此参数决定了生成文件的文件类型。可选值如下：
 
-    - **BulkFileType.JSON_RB**
+    - **BulkFileType.JSON**
 
     - **BulkFileType.PARQUET**
 
@@ -869,7 +872,7 @@ System.out.println(batchFiles);
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p><strong>BulkWriter</strong> 生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。</p>
+**BulkWriter** 生成一个 UUID，并使用该 UUID 在指定的输入路径下创建一个子路径，然后将生成的文件放在创建的子路径下。
 
 </Admonition>
 
@@ -891,7 +894,7 @@ from pymilvus.bulk_writer import bulk_import
 
 # Publicly accessible URL for the prepared data in the remote bucket
 object_url = "s3://{0}/{1}/".format(BUCKET_NAME, str(writer.data_path)[1:])
-# Change `s3` to `gs` for Google Cloud Storage
+# Change \`s3\` to \`gs\` for Google Cloud Storage
 
 resp = bulk_import(
     api_key=API_KEY,
@@ -942,8 +945,9 @@ System.out.println(jobId);
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>参数 <strong>object_url</strong> 需为远程对象存储桶中一个合法的文件或目录。在上述代码中，我们使用了 <strong>format()</strong> 方法将桶名称和 Writer 返回的路径拼接成一个合法的目录路径。</p>
-<p>如需了解更多信息，可参考 <a href="https://help.aliyun.com/zh/oss/user-guide/oss-domain-names">OSS 访问域名使用规则</a> （阿里云）或<a href="https://cloud.tencent.com/document/product/436/6224">地域和访问域名</a>（腾讯云）。</p>
+参数 **object_url** 需为远程对象存储桶中一个合法的文件或目录。在上述代码中，我们使用了 **format()** 方法将桶名称和 Writer 返回的路径拼接成一个合法的目录路径。
+
+如需了解更多信息，可参考 [OSS 访问域名使用规则](https://help.aliyun.com/zh/oss/user-guide/oss-domain-names) （阿里云）或[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)（腾讯云）。
 
 </Admonition>
 
@@ -1029,7 +1033,7 @@ while (true) {
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>上述代码中，参数 <strong>url</strong> 为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。</p>
+上述代码中，参数 **url** 为 Zilliz Cloud RESTful API 的服务器路径，其取值须与目标 Collection 所在云地域保持一致。
 
 </Admonition>
 

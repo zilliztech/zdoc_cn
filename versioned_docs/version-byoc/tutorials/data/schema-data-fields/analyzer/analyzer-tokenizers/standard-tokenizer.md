@@ -1,11 +1,12 @@
 ---
 title: "Standard 分词器 | BYOC"
 slug: /standard-tokenizer
+sidebar_key: standard-tokenizer
 sidebar_label: "Standard 分词器"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 中的标准分词器根据空格和标点符号对文本进行分割，因此适用于大多数语言。 | BYOC"
 type: origin
@@ -147,7 +148,7 @@ analyzerParams='{
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>更简单的设置，可以直接使用 <a href="./standard-analyzer">Standard Analyzer</a>。该 Analayzer 使用了 Standard 分词器和 <a href="./lowercase-filter">Lowercase 过滤器</a>。</p>
+更简单的设置，可以直接使用 [Standard Analyzer](./standard-analyzer)。该 Analayzer 使用了 Standard 分词器和 [Lowercase 过滤器](./lowercase-filter)。
 
 </Admonition>
 
@@ -277,7 +278,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

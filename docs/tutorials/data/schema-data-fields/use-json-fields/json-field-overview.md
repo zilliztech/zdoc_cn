@@ -183,7 +183,7 @@ client.create_collection(
 
 <Admonition type="info" icon="📘" title="说明">
 
-在此示例中，集合模式中定义的 JSON 字段通过设置 `nullable=True` 允许空值。详情请参见 [Nullable 和默认值](./nullable-and-default)。
+在此示例中，集合模式中定义的 JSON 字段通过设置 `nullable=True` 允许空值。详情请参见 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -629,7 +629,7 @@ print(res)
 
 不支持，JSON 字段不支持默认值。但是，您可以在定义字段时设置 `nullable=True` 来允许空条目。
 
-详情请参考 [Nullable 和默认值](./nullable-and-default)。
+详情请参考 [Nullable 和默认值](./nullable-fields)。
 
 ### JSON 字段键有命名规范吗？\{#are-there-any-naming-conventions-for-json-field-keys}
 

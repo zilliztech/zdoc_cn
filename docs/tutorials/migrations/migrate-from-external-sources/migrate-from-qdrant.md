@@ -213,9 +213,9 @@ Qdrant Payload 默认映射为 Dynamic Field 以实现最大灵活性，转换�
 
 转换为固定字段后，可配置以下属性：
 
-- **Nullable**：决定字段是否接受空值（默认启用），详见 [Nullable 属性](./nullable-and-default)。
+- **Nullable**：决定字段是否接受空值（默认启用），详见 [Nullable 属性](./nullable-fields)。
 
-- **默认值**：设置数据缺失时的回退值，详见[默认值](./nullable-and-default)。
+- **默认值**：设置数据缺失时的回退值，详见[默认值](./nullable-fields)。
 
 - **Partition Key**：可将 INT64/VARCHAR 字段指定为 Partition Key（注意：每个 Collection 支持一个 Partition Key，且该字段不可为空），详见 [使用 Partition Key](./use-partition-key)。
 

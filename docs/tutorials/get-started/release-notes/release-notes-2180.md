@@ -11,7 +11,7 @@ notebook: FALSE
 description: "在本次发布中，Zilliz Cloud 推出了多项强大的新功能，旨在提升运维效率、灵活性和用户体验。这些更新包括对集群级别定时自动扩缩容的支持、通过全新的 Merge Data API 实现 Schema 演进、推出用于简化数据接入流程的云原生数据层 Stage、支持从集群级备份中进行跨数据库的部分数据恢复，以及为 JSON Path 索引提供 UI 支持。这些功能共同帮助用户更高效地管理复杂的工作负载，降低维护开销，并加快在生成式 AI 时代下的开发周期。 | Cloud"
 type: origin
 token: QxMewBHpRisntJkA1NncBNSZnQc
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
@@ -32,7 +32,7 @@ import Admonition from '@theme/Admonition';
 
 本次发布后创建的所有集群均兼容 **Milvus v2.5.x**。同时，所有 Milvus v2.5.x 相关特性在 Zilliz Cloud 上均已全面可用。
 
-关于各项功能的可用性，可以参考[当前功能支持情况](./feature-availability#)。
+关于各项功能的可用性，可以参考[当前功能支持情况](./feature-availability#current-feature-availability)。
 
 ## 通过 Merge Data API 实现 Schema 演进 | PRIVATE\{#schema-evolution-via-merge-data-api}
 

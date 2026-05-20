@@ -11,7 +11,7 @@ notebook: FALSE
 description: "本次发布在 PRIVATE PREVIEW 中引入了数据平面审计日志功能。旨在通过提供在数据平面上执行的操作的详细日志来增强数据安全性。除了该功能外，Zilliz Cloud还修订了其优惠券策略。 | Cloud"
 type: origin
 token: NYaTwrUG1iT6CCkUSnJcCQPqnsb
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz

@@ -45,7 +45,7 @@ import Procedures from '@site/src/components/Procedures';
 
 - 在每个项目中，最多可以在按需计算中创建 100 个 Database。
 
-- 按需计算下的 Database 中所有 Collection（managed 或 [external](./external-collection)） 均不支持删除 Index。
+- 按需计算下的 Database 中所有 Collection（[Managed](./collection) 或 [External](./external-collection)） 均不支持删除 Index。
 
 ## 创建 Database\{#create-database}
 

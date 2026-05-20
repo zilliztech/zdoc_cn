@@ -1,13 +1,14 @@
 ---
-title: "管理项目 | BYOC"
+title: "项目管理 | BYOC"
 slug: /manage-projects
-sidebar_label: "管理项目"
-beta: FALSE
+sidebar_key: manage-projects
+sidebar_label: "项目管理"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
-description: "在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群和相关资源。您可以根据业务需求创建多个项目。例如，如果您的公司提供多媒体推荐服务，您可以为视频推荐服务创建一个项目，为音乐推荐服务创建另一个项目。本指南将介绍如何管理项目。 | BYOC"
+description: "在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群、Volume 和相关资源。同一项目下所有资源都部署在同一云地域中。 | BYOC"
 type: origin
 token: KHwEwoWy3iSRO1kTpIjc21jNnsb
 sidebar_position: 1
@@ -29,9 +30,47 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 管理项目
+# 项目管理
 
-在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群和相关资源。您可以根据业务需求创建多个项目。例如，如果您的公司提供多媒体推荐服务，您可以为视频推荐服务创建一个项目，为音乐推荐服务创建另一个项目。本指南将介绍如何管理项目。
+在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群、Volume 和相关资源。同一项目下所有资源都部署在同一云地域中。
+
+您可以根据业务需求创建多个项目。例如，如果您的公司提供多媒体推荐服务，您可以为视频推荐服务创建一个项目，为音乐推荐服务创建另一个项目。本指南将介绍如何管理项目。
+
+每个 BYOC 项目对应一个云地域中的一个 Kubernetes 集群。跨区域操作不受支持。如需在多个地域进行运维，可以考虑在这些区域都部署 BYOC 项目。
+
+## 添加项目地域\{#add-project-regions}
+
+如果您需要使用[全球集群](./global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
+
+- **通过 RESTful API**
+
+    ```bash
+    export BASE_URL="https://api.cloud.zilliz.com.cn"
+    export TOKEN="YOUR_API_KEY"
+    
+    curl --request POST \
+         --url "https://${BASE_URL}/v2/projects/proj-a0195d6acacaf2bb985173/regions" \
+         --header "Authorization: Bearer ${TOKEN}" \
+         --header "Accept: application/json" \
+         --header "Content-Type: application/json" \
+         --data-raw '{
+            "regions": ["ali-cn-hangzhou"]
+          }'
+    
+    ```
+
+    以下为返回结果示例。
+
+    ```json
+    {
+      "code": 0,
+      "data": {
+        "projectId": "proj-a0195d6acacaf2bb985173",
+        "regions": ["ali-cn-hangzhou", "ali-cn-beijing"]
+      }
+    }
+    
+    ```
 
 ## 查看全部项目\{#view-all-projects}
 
@@ -79,7 +118,7 @@ import Admonition from '@theme/Admonition';
 
     您可以在项目列表页查看项目名称、版本、集群数量、创建时间。您还可以点击某个项目，查看项目下的集群信息。
 
-    ![C2ItbMdsMoH2FWxmmHncejKVn0e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/C2ItbMdsMoH2FWxmmHncejKVn0e.png)
+    ![C2ItbMdsMoH2FWxmmHncejKVn0e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/C2ItbMdsMoH2FWxmmHncejKVn0e.png "C2ItbMdsMoH2FWxmmHncejKVn0e")
 
 - **通过 RESTful API**
 
@@ -114,11 +153,11 @@ import Admonition from '@theme/Admonition';
 
 ## 重命名项目\{#rename-a-project}
 
-要重命名项目，您必须是[组织管理员](./organization-users#organization-roles)。您可以通过 Web 控制台对项目进行重命名。
+要重命名项目，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台对项目进行重命名。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>每个组织中都有一个默认项目。</p>
+每个组织中都有一个默认项目。
 
 </Admonition>
 
@@ -126,13 +165,13 @@ import Admonition from '@theme/Admonition';
 
 ## 删除项目\{#delete-a-project}
 
-要删除项目，您必须是[组织管理员](./organization-users#organization-roles)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)。
+要删除项目，您必须是[组织管理员](./organization-users)。删除项目前，您需要先删除该项目下的所有[集群](./manage-cluster#drop-cluster)。
 
 项目一旦删除，该项目下的所有数据和资源将被清理。该操作不可撤销。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>组织中的默认项目不可删除。</p>
+组织中的默认项目不可删除。
 
 </Admonition>
 

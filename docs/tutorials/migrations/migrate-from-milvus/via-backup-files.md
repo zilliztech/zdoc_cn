@@ -193,28 +193,28 @@ Zilliz Cloud 支持从 Milvus 2.x 和更高版本迁移数据。要从 Milvus 2.
        <tr>
          <td rowspan="2"><p><strong>阿里云 OSS</strong></p></td>
          <td><p>公共访问 URL</p></td>
-         <td><p><i>http</i>s://\<bucket_name>.oss-\<region_code>.aliyuncs.com/\<folder_name>/</p></td>
+         <td><p>https://&lt;bucket_name&gt;.oss-&lt;region_code&gt;.aliyuncs.com/&lt;folder_name&gt;/</p></td>
        </tr>
        <tr>
          <td><p>OSS URI</p></td>
-         <td><p>oss://\<bucket_name>/\<folder_name>/</p></td>
+         <td><p>oss://&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
        </tr>
        <tr>
          <td colspan="2"><p><strong>腾讯云 COS</strong></p></td>
-         <td><p><i>http</i>s://\<bucket_name>.cos.\<region_code>.myqcloud.com/\<folder_name>/</p></td>
+         <td><p>https://&lt;bucket_name&gt;.cos.&lt;region_code&gt;.myqcloud.com/&lt;folder_name&gt;/</p></td>
        </tr>
        <tr>
          <td rowspan="3"><p><strong>亚马逊云科技 Amazon S3</strong></p></td>
          <td><p>virtual-hosted–style</p></td>
-         <td><p><i>http</i>s://\<bucket_name>.s3.\<region-code>.amazonaws.com/\<folder_name>/</p></td>
+         <td><p>https://&lt;bucket_name&gt;.s3.&lt;region-code&gt;.amazonaws.com/&lt;folder_name&gt;/</p></td>
        </tr>
        <tr>
          <td><p>path-style</p></td>
-         <td><p><i>http</i>s://s3.\<region-code>.amazonaws.com/\<bucket_name>/\<folder_name>/</p></td>
+         <td><p>https://s3.&lt;region-code&gt;.amazonaws.com/&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
        </tr>
        <tr>
          <td><p>S3 URI</p></td>
-         <td><p>s3://\<bucket_name>/\<folder_name>/</p></td>
+         <td><p>s3://&lt;bucket_name&gt;/&lt;folder_name&gt;/</p></td>
        </tr>
     </table>
 

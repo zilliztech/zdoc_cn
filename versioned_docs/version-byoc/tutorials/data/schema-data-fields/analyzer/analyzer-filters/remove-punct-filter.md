@@ -1,11 +1,12 @@
 ---
 title: "Remove Punct | BYOC"
 slug: /remove-punct-filter
+sidebar_key: remove-punct-filter
 sidebar_label: "Remove Punct"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "`removepunct` 过滤器会从 token 流中移除单独存在的标点符号。 | BYOC"
 type: origin
@@ -37,10 +38,9 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>该过滤器在 <code>jieba</code>、<code>lindera</code> 和 <code>icu</code> tokenizer 中最有效，因为这些 tokenizer 会将标点保留为独立的 token（例如 <code>"Hello!"</code> → <code>["Hello", "!"]</code>）。</p></li>
-<li><p>对于 <code>standard</code> 和 <code>whitespace</code> 等 tokenizer，它们在分词阶段就会丢弃标点，因此 <code>removepunct</code> 在这些情况下不会产生作用。</p></li>
-</ul>
+- 该过滤器在 `jieba`、`lindera` 和 `icu` tokenizer 中最有效，因为这些 tokenizer 会将标点保留为独立的 token（例如 `"Hello!"` → `["Hello", "!"]`）。
+
+- 对于 `standard` 和 `whitespace` 等 tokenizer，它们在分词阶段就会丢弃标点，因此 `removepunct` 在这些情况下不会产生作用。
 
 </Admonition>
 
@@ -219,7 +219,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

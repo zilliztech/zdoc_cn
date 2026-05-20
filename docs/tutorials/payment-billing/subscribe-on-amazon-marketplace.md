@@ -71,7 +71,7 @@ Zilliz Cloud 现已登录亚马逊云科技 Marketplace。本章主要介绍如�
 
 1. Zilliz Cloud 开始处理您的授权请求，并在处理完成后展示如下图所示内容。
 
-    ![subscribe-on-amazon-marketplace-cn-link-success](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/subscribe-on-amazon-marketplace-cn-link-success.png "subscribe-on-amazon-marketplace-cn-link-success")
+    undefined
 
     此时，您可以前往 Zilliz Cloud **帐单概览**页面。如果右下角支付方式区域**已绑定**标签，并展示**亚马逊云科技 Marketplace 订阅**，恭喜您成功开通亚马逊云科技 Marketplace 扣费渠道。
 

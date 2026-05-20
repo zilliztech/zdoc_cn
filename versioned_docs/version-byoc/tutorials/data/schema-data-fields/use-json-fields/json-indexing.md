@@ -1,11 +1,12 @@
 ---
 title: "JSON 索引 | BYOC"
 slug: /json-indexing
+sidebar_key: json-indexing
 sidebar_label: "JSON 索引"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "JSON 字段为在 Zilliz Cloud 中存储结构化元数据提供了一种灵活方式。如果没有索引，对 JSON 字段的查询需要执行全表扫描，随着数据集规模增长，查询速度会变慢。JSON 索引 通过在 JSON 数据中创建索引，实现快速查找。 | BYOC"
 type: origin
@@ -43,7 +44,7 @@ JSON 索引的最佳使用场景:
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>对于复杂的 JSON 文档，如果查询模式多样，可以考虑使用 <a href="./json-shredding">JSON Shredding</a> 作为替代方案。</p>
+对于复杂的 JSON 文档，如果查询模式多样，可以考虑使用 [JSON Shredding](./json-shredding) 作为替代方案。
 
 </Admonition>
 
@@ -162,7 +163,7 @@ Zilliz Cloud 在建立索引时支持以下数据类型转换。这些类型确�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>数组应包含相同类型的元素，以实现最佳索引性能。更多信息请参考 <a href="./use-array-fields">Array 类型</a>。</p>
+数组应包含相同类型的元素，以实现最佳索引性能。更多信息请参考 [Array 类型](./use-array-fields)。
 
 </Admonition>
 
@@ -187,7 +188,7 @@ Cast 函数大小写不敏感。当前支持以下函数：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果转换失败（例如非数字字符串），该值会被跳过，不会被索引。</p>
+如果转换失败（例如非数字字符串），该值会被跳过，不会被索引。
 
 </Admonition>
 
@@ -367,4 +368,4 @@ MilvusClient.create_index(
 
 ### JSON 字段是否支持设置默认值？\{#does-a-JSON-field-support-setting-a-default-value}
 
-不支持。但你可以在定义字段时设置 `nullable=True`，以允许空值。详情请参考 [Nullable 和默认值](./nullable-and-default)。
+不支持。但你可以在定义字段时设置 `nullable=True`，以允许空值。详情请参考 [Nullable 和默认值](./nullable-fields)。

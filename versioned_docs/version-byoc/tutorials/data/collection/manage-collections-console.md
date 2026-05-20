@@ -1,16 +1,17 @@
 ---
 title: "管理 Collection (控制台) | BYOC"
 slug: /manage-collections-console
+sidebar_key: manage-collections-console
 sidebar_label: "管理 Collection (控制台)"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Collection 是一张二维表格，用于存储 Embedding向量和元数据。一个 Collection 中的所有 Entity 共享相同的 Schema。您可以创建多个 Collection 来进行数据管理，或用于实现多租户（multi-tenancy）。 | BYOC"
 type: origin
 token: Cy4swPPaeiZgbmkN4wUc9wAdnwd
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -34,8 +35,8 @@ Collection 是一张二维表格，用于存储 Embedding向量和元数据。�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需租户间数据物理隔离，且租户数量较少，可以为每个租户创建一个独立的 Collection。
-但是，根据您的集群版本，您最多可创建 16,384 个 Collection。因此，对于大规模多租户场景，建议根据具体情况，采用基于 Partition 或 Partition key 的多租户策略。详情请见<a href="./multi-tenancy">多租户策略</a>。</p>
+如需租户间数据物理隔离，且租户数量较少，可以为每个租户创建一个独立的 Collection。
+但是，根据您的集群版本，您最多可创建 16,384 个 Collection。因此，对于大规模多租户场景，建议根据具体情况，采用基于 Partition 或 Partition key 的多租户策略。详情请见[多租户策略](./multi-tenancy)。
 
 </Admonition>
 
@@ -83,7 +84,7 @@ Schema 定义了 Collection 的数据结构，必须包含以下字段：
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Collection 创建后，大多数 Schema 配置将无法修改。请在创建前仔细设计 Schema，确保其能够满足当前及未来的业务需求。最佳实践参考，请参见<a href="./schema-explained">了解 Schema</a>。</p>
+Collection 创建后，大多数 Schema 配置将无法修改。请在创建前仔细设计 Schema，确保其能够满足当前及未来的业务需求。最佳实践参考，请参见[了解 Schema](./schema-explained)。
 
 </Admonition>
 
@@ -105,23 +106,23 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 根据 生效阶段，Function 可分为两大类：
 
-- **Text Function**
+- **Pre-search Function**
 
-    Text Function 用于定义如何将原始文本转换为可用于检索的向量表示。这类 Function 在创建 Collection 时配置，并作为 Collection Schema 的一部分存在。
+    Pre-search Function 用于定义如何将原始文本转换为可用于检索的向量表示。这类 Function 在创建 Collection 时配置，并作为 Collection Schema 的一部分存在。
 
-    常见的 Text Functions 包括：BM25 Function、Text Embedding Function。
+    常见的 Pre-search Function 包括：BM25 Function、Model-based Function。
 
-    有关 Text Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#text-functions-convert-text-to-vectors)。
+    有关 Pre-search Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)。
 
     在 Zilliz Cloud 控制台中创建 Collection 时，你可以在 Collection 创建流程中添加 Function。
 
     <Supademo id="cmkceofmn0371z80h1pd26a8t" title="" isShowcase />
 
-- **Rerank Function**
+- **Post-search Function**
 
-    Rerank Function 用于在查询阶段对搜索结果进行进一步排序优化。与 Text Function 不同，Rerank Function **不绑定到 Collection Schema**，而是作为 search request 中的参数动态指定，对 search 返回的 candidate results 生效。
+    Post-search Function 用于在查询阶段对搜索结果进行进一步排序优化。与 Pre-search Function 不同，Post-search Function **不绑定到 Collection Schema**，而是作为 search request 中的参数动态指定，对 search 返回的 candidate results 生效。
 
-    Rerank Functions 具有以下特点：
+    Post-search Function 具有以下特点：
 
     - 仅在 query time 生效
 
@@ -129,7 +130,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
     - 不影响 candidate retrieval
 
-    有关 Rerank Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#rerank-functions-refine-result-order)。
+    有关 Post-search Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#post-search-functions-rerank-candidate-results)。
 
 ### Partition 和 Partition key\{#partition-partition-key}
 
@@ -139,12 +140,13 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在决定使用 Partition 还是 Partition Key 时，你可以根据以下因素进行权衡：</p>
-<ul>
-<li><p><strong>多租户策略</strong>：如果需要支持百万级租户，建议使用 Partition Key；如果需要在租户之间实现强物理隔离，建议使用 Partition。详情请见<a href="./multi-tenancy">多租户策略</a>。</p></li>
-<li><p><strong>资源管理方式</strong>：如果希望自行创建和管理 Partition，可选择使用 Partition；如果希望系统自动创建和管理 Partition，建议使用 Partition Key。</p></li>
-<li><p><strong>冷热数据管理</strong>：如果需要高效管理冷热数据，建议使用 Partition key。需要在 Dedicated 集群中使用 Parition key 进行冷热数据管理，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></li>
-</ul>
+在决定使用 Partition 还是 Partition Key 时，你可以根据以下因素进行权衡：
+
+- **多租户策略**：如果需要支持百万级租户，建议使用 Partition Key；如果需要在租户之间实现强物理隔离，建议使用 Partition。详情请见[多租户策略](./multi-tenancy)。
+
+- **资源管理方式**：如果希望自行创建和管理 Partition，可选择使用 Partition；如果希望系统自动创建和管理 Partition，建议使用 Partition Key。
+
+- **冷热数据管理**：如果需要高效管理冷热数据，建议使用 Partition key。需要在 Dedicated 集群中使用 Parition key 进行冷热数据管理，请[联系我们](http://support.zilliz.com.cn)。
 
 </Admonition>
 
@@ -160,7 +162,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>请谨慎调整 mmap 设置。修改默认配置可能导致性能下降，或因内存不足（OOM）而导致加载失败。最佳实践请见<a href="./use-mmap">使用 mmap</a>。</p>
+请谨慎调整 mmap 设置。修改默认配置可能导致性能下降，或因内存不足（OOM）而导致加载失败。最佳实践请见[使用 mmap](./use-mmap)。
 
 </Admonition>
 
@@ -212,7 +214,7 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
     - 若需修改 mmap 或 partition Key 设置，请使用 SDK，详情请见[修改 Collection](./modify-collections)。
 
-    - 如果 Collection 创建时未开启动态列功能，您可以在 Collection 创建完成后使用 SDK 或 Web 控制台开启动态列。更多 SDK 详情，请见[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。如需了解如何通过 Web 控制台操作，请参见上方 Demo。
+    - 如果 Collection 创建时未开启动态列功能，您可以在 Collection 创建完成后使用 SDK 或 Web 控制台开启动态列。更多 SDK 详情，请见[修改 Collection](./modify-collections#example-5-enable-dynamic-field)。如需了解如何通过 Web 控制台操作，请参见上方 Demo。
 
     其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新[导入数据](./import-data)。
 
@@ -232,7 +234,17 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 - **修改 Collection TT**L：TTL (Time-to-live) 是一种 Collection 属性，决定了 Collection 中数据的到期时间。 数据到期后将被自动删除。详情请参考[设置 Collection 生存时间](./set-collection-ttl)。
 
-- **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-5-enable-allow_insert_auto_id)。
+- **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-6-enable-allow_insert_auto_id)。
 
 - **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
+
+## 预览 Collection 数据\{#Preview collection data}
+
+使用 **Data** 标签页，可以直接在 Zilliz Cloud 控制台中预览 Collection 内的Entity。
+
+您可以定义过滤表达式，配置 `limit` 参数来控制预览中展示的 Entity 数量（默认值为 100，最大值为 16,384），并查询匹配的 Entity，以表格形式查看字段值。
+
+您还可以使用 **Order By**，按主键字段、数值字段或标量字段对数据预览结果进行升序或降序排序。
+
+![NlAzwplVqhvxVCbh4cdcoSznn7d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/NlAzwplVqhvxVCbh4cdcoSznn7d.png)
 

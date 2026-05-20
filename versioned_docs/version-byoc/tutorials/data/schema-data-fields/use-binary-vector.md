@@ -1,11 +1,12 @@
 ---
 title: "Binary 向量 | BYOC"
 slug: /use-binary-vector
+sidebar_key: use-binary-vector
 sidebar_label: "Binary 向量"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Binary 向量是一种特殊的数据表示形式，通过将传统的高维浮点向量转换为仅包含 0 和 1 的二进制向量。这种转换不仅压缩了向量的大小，还能够在保留语义信息的同时，减少存储和计算成本。在非关键特征的精度要求较低的情况下，Binary 向量能够有效保留大部分原始浮点向量的完整性和实用性。 | BYOC"
 type: origin
@@ -60,7 +61,7 @@ Binary 向量可以通过多种方法生成。在文本处理中，可以使用�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>尽管 Binary 向量在某些场景下表现出色，但它也存在表达能力有限的局限性，难以捕捉复杂的语义关系。因此，在实际应用中，Binary 向量常与其他向量类型结合使用，以平衡效率和表达能力。有关更多信息，请参考 <a href="./use-dense-vector">稠密向量</a> 和 <a href="./use-sparse-vector">稀疏向量</a>。</p>
+尽管 Binary 向量在某些场景下表现出色，但它也存在表达能力有限的局限性，难以捕捉复杂的语义关系。因此，在实际应用中，Binary 向量常与其他向量类型结合使用，以平衡效率和表达能力。有关更多信息，请参考 [稠密向量](./use-dense-vector) 和 [稀疏向量](./use-sparse-vector)。
 
 </Admonition>
 
@@ -156,7 +157,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -320,12 +321,7 @@ client.create_collection(
 <TabItem value='java'>
 
 ```java
-import io.milvus.v2.client.ConnectConfig;
-import io.milvus.v2.client.MilvusClientV2;
-
-MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
-        .uri("YOUR_CLUSTER_ENDPOINT")
-        .build());
+import io.milvus.v2.service.collection.request.CreateCollectionReq;
 
 CreateCollectionReq requestCreate = CreateCollectionReq.builder()
         .collectionName("my_collection")
@@ -341,10 +337,6 @@ client.createCollection(requestCreate);
 
 ```javascript
 import { MilvusClient } from "@zilliz/milvus2-sdk-node";
-
-const client = new MilvusClient({
-    address: 'YOUR_CLUSTER_ENDPOINT'
-});
 
 await client.createCollection({
     collection_name: 'my_collection',
@@ -376,6 +368,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
@@ -506,6 +499,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"data\": $data,
     \"collectionName\": \"my_collection\"
@@ -637,6 +631,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"data\": $data,

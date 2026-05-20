@@ -1,11 +1,12 @@
 ---
 title: "Alphanumonly | BYOC"
 slug: /alphanumonly-filter
+sidebar_key: alphanumonly-filter
 sidebar_label: "Alphanumonly"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`alphanumonly` 过滤器删除包含非ASCII字符的词项，仅保留字母数字词项。该过滤器在处理仅与基本字母和数字相关的文本时非常有用，排除任何特殊字符或符号。 | BYOC"
 type: origin
@@ -222,7 +223,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

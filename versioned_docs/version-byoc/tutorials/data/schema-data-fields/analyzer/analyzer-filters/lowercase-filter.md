@@ -1,11 +1,12 @@
 ---
 title: "Lowercase | BYOC"
 slug: /lowercase-filter
+sidebar_key: lowercase-filter
 sidebar_label: "Lowercase"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Lowercase 过滤器将分词器生成的词项转换为小写，使搜索不区分大小写。例如，它可以将 `[\"High\", \"Performance\", \"Vector\", \"Database\"]` 转换为 `[\"high\", \"performance\", \"vector\", \"database\"]`。 | BYOC"
 type: origin
@@ -221,7 +222,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

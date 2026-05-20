@@ -1,11 +1,12 @@
 ---
 title: "注册账号 | BYOC"
 slug: /register-with-zilliz-cloud
+sidebar_key: register-with-zilliz-cloud
 sidebar_label: "注册账号"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本教程将介绍如何创建 Zilliz Cloud 账号以便使用 Zilliz Cloud 云服务。 | BYOC"
 type: origin
@@ -74,11 +75,11 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您的数据规模及用例，从而更有效地为您提供服务。</p>
+在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您的数据规模及用例，从而更有效地为您提供服务。
 
 </Admonition>
 
-## 常见问题
+## 常见问题\{#}
 
 **为什么提示账号注册失败？**
 

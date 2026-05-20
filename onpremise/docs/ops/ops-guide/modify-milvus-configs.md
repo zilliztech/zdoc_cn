@@ -1,11 +1,12 @@
 ---
 title: "变更 Milvus 集群配置 | On-Premise"
 slug: /modify-milvus-configs
+sidebar_key: modify-milvus-configs
 sidebar_label: "变更 Milvus 集群配置"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus 集群支持在运行过程中对其配置及集群依赖的三方件配置进行变更。本章主要介绍如何变更 Milvus 集群配置和 Milvus 集群依赖的三方件配置。 | On-Premise"
 type: origin
@@ -40,7 +41,7 @@ Milvus 集群的所有配置都在 `spec.config` 字段中。完整配置可参�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如无特殊要求，在变更集群配置时，请务必保持 Milvus 集群与其依赖的诸如 MinIO、Pulsar 和 etcd 等三方件之间的连接配置。</p>
+如无特殊要求，在变更集群配置时，请务必保持 Milvus 集群与其依赖的诸如 MinIO、Pulsar 和 etcd 等三方件之间的连接配置。
 
 </Admonition>
 

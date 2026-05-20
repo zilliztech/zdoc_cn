@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Zilliz Cloud 为 Collection 提供了 Alias 管理能力。本节介绍如何创建、查看、删除 Alias。 | Cloud"
 type: origin
 token: Cwr5wh4WPix6M6kH1BycMgS2nEh
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
@@ -206,6 +206,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "bob",
     "collectionName": "my_collection_1"
@@ -220,6 +221,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "alice",
     "collectionName": "my_collection_1"
@@ -325,6 +327,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/list" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{}'
 
 # {
@@ -440,6 +443,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/describe" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "bob"
 }'
@@ -619,6 +623,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/alter" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "alice",
     "collectionName": "my_collection_2"
@@ -633,6 +638,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/describe" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "alice"
 }'
@@ -650,6 +656,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/describe" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "bob"
 }'
@@ -765,6 +772,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/drop" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "bob"
 }'
@@ -778,6 +786,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/aliases/drop" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "aliasName": "alice"
 }'

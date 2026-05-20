@@ -1,11 +1,12 @@
 ---
 title: "访问控制概览 | BYOC"
 slug: /access-control-overview
+sidebar_key: access-control-overview
 sidebar_label: "访问控制概览"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 采用基于角色的访问控制（RBAC）来实现精细化的资源访问控制。RBAC 是一种安全措施，它将权限授予角色而不是直接授予用户。这些角色包含对资源的特定权限，然后将这些角色授予用户，从而实现用户访问控制的高效管理。 | BYOC"
 type: origin
@@ -34,7 +35,7 @@ Zilliz Cloud 采用基于角色的访问控制（RBAC）来实现精细化的资
 
 ![BULSwuXe8haUhsbns9OcCi3pnig](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/BULSwuXe8haUhsbns9OcCi3pnig.png)
 
-## Zilliz Cloud RBAC 架构
+## Zilliz Cloud RBAC 架构\{#zilliz-cloud-rbac}
 
 ![JxEJw4kZvhzYiobUlAzcRxb0n9c](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JxEJw4kZvhzYiobUlAzcRxb0n9c.png)
 
@@ -56,7 +57,7 @@ Zilliz Cloud 将资源分布在控制面（Control Plane）和数据面（Data P
 
     - 组织管理员角色包含所有项目和集群权限。
 
-    有关组织角色的详情，请参考[管理组织用户](./organization-users#organization-roles)。
+    有关组织角色的详情，请参考[管理组织用户](./organization-users)。
 
 - **项目层级**
 
@@ -66,7 +67,7 @@ Zilliz Cloud 将资源分布在控制面（Control Plane）和数据面（Data P
 
     - 项目查看者角色包含查看某个项目及项目下所有集群的只读权限。
 
-    有关项目角色的详情，请参考[管理项目用户](./project-users#project-roles)。
+    有关项目角色的详情，请参考[管理项目用户](./project-users)。
 
 - **集群层级**
 

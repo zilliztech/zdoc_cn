@@ -47,7 +47,7 @@ Collection 是一张二维数据表，包含固定列数和可变行数。Collec
 
 - 允许其为空或为其设置默认值。
 
-    关于如何允许字段值为空以及为字段设置默认值，可参考[Nullable 和默认值](./nullable-and-default)。
+    关于如何允许字段值为空以及为字段设置默认值，可参考[Nullable 和默认值](./nullable-fields)。
 
 - 启用 Dynamic Field。
 

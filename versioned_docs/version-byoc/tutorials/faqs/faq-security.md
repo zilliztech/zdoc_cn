@@ -4,7 +4,7 @@ slug: /faq-security
 sidebar_label: "FAQ：安全"
 beta: FALSE
 notebook: FALSE
-description: " | BYOC"
+description: "本文涵盖了在使用 Zilliz Cloud 平台期间与您的数据安全相关的问题，包括证书授权机构、证书有效期、检查证书是否过期的相关步骤、支持的传输层协议（TLS）版本及相应的鉴权方法。 | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 12

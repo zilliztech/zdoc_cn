@@ -1,11 +1,12 @@
 ---
 title: "稀疏向量 | BYOC"
 slug: /use-sparse-vector
+sidebar_key: use-sparse-vector
 sidebar_label: "稀疏向量"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "稀疏向量（Sparse Vector）是信息检索和自然语言处理中的一种重要数据表示方法。虽然稠密向量（Dense Vector）因其出色的语义理解能力而广受欢迎，但在需要精确匹配关键词或短语的应用中，稀疏向量往往能够提供更为准确的结果。 | BYOC"
 type: origin
@@ -50,7 +51,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>除了稀疏向量，Zilliz Cloud 还支持稠密向量和 Binary 向量。稠密向量适用于捕捉深层次的语义关联，而 Binary 向量则在快速相似性比较和内容去重等场景中表现出色。有关更多信息，请参考<a href="./use-dense-vector">稠密向量</a>和 <a href="./use-binary-vector">Binary 向量</a>。</p>
+除了稀疏向量，Zilliz Cloud 还支持稠密向量和 Binary 向量。稠密向量适用于捕捉深层次的语义关联，而 Binary 向量则在快速相似性比较和内容去重等场景中表现出色。有关更多信息，请参考[稠密向量](./use-dense-vector)和 [Binary 向量](./use-binary-vector)。
 
 </Admonition>
 
@@ -204,7 +205,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -283,7 +284,7 @@ export schema="{
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果希望  or Zilliz Cloud 在插入数据时将指定的文本转换成稀疏向量。您还需要创建 Function。关于 Function 的更多内容，可以参考 <a href="./full-text-search">Full Text Search</a>。</p>
+如果希望  or Zilliz Cloud 在插入数据时将指定的文本转换成稀疏向量。您还需要创建 Function。关于 Function 的更多内容，可以参考 [Full Text Search](./full-text-search)。
 
 </Admonition>
 
@@ -410,10 +411,6 @@ client.createCollection(requestCreate);
 ```javascript
 import { MilvusClient } from "@zilliz/milvus2-sdk-node";
 
-const client = new MilvusClient({
-    address: 'YOUR_CLUSTER_ENDPOINT'
-});
-
 await client.createCollection({
     collection_name: 'my_collection',
     schema: schema,
@@ -444,6 +441,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
@@ -587,6 +585,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "data": [
         {
@@ -788,6 +787,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": $queryData,

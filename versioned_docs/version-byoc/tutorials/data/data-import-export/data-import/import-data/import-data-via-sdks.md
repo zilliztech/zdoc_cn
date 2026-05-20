@@ -1,11 +1,12 @@
 ---
 title: "通过 SDK 导入 | BYOC"
 slug: /import-data-via-sdks
+sidebar_key: import-data-via-sdks
 sidebar_label: "SDK"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。 | BYOC"
 type: origin
@@ -247,7 +248,7 @@ public static void main(String[] args) throws Exception {
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了保证数据导入成功，请确认当前 Collection 下正在运行或待运行的任务数量不大于 10,000 条。</p>
+为了保证数据导入成功，请确认当前 Collection 下正在运行或待运行的任务数量不大于 10,000 条。
 
 </Admonition>
 

@@ -1,16 +1,17 @@
 ---
 title: "约束与限制 | BYOC"
 slug: /limits-and-restrictions
+sidebar_key: limits-and-restrictions
 sidebar_label: "约束与限制"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "了解 Zilliz Cloud 使用上的相关约束与限制。 | BYOC"
 type: origin
 token: Y3PXwA1Y0i5pZokIw8NcWCzPnxh
-sidebar_position: 15
+sidebar_position: 17
 keywords: 
   - 向量数据库
   - zilliz

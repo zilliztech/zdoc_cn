@@ -1,16 +1,17 @@
 ---
 title: "管理 Index | BYOC"
 slug: /manage-indexes
+sidebar_key: manage-indexes
 sidebar_label: "管理 Index"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本教程将介绍如何通过 SDK 管理向量和标量索引。 | BYOC"
 type: origin
 token: VSiYw5CHMixHpIklpvgcTWMhngd
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -33,13 +34,15 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>索引是否自动加载取决于你选择的 Collection 创建方式。Collection 和索引在以下情况中会自动加载：</p>
-<ul>
-<li><p><a href="./manage-collections-console">通过 Web 控制台创建 Collection</a></p></li>
-<li><p><a href="/reference/create-collection">通过 RESTful API 创建 Collection</a></p></li>
-<li><p><a href="./manage-collections-sdks">通过 SDK 定制化创建 Collection 并设置索引参数</a></p></li>
-</ul>
-<p>您也可以创建非自动加载的 Collection，并自行管理索引。</p>
+索引是否自动加载取决于你选择的 Collection 创建方式。Collection 和索引在以下情况中会自动加载：
+
+- [通过 Web 控制台创建 Collection](./manage-collections-console)
+
+- [通过 RESTful API 创建 Collection](/reference/create-collection)
+
+- [通过 SDK 定制化创建 Collection 并设置索引参数](./manage-collections-sdks)
+
+您也可以创建非自动加载的 Collection，并自行管理索引。
 
 </Admonition>
 

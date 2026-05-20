@@ -1,13 +1,14 @@
 ---
 title: "阿里云对象存储 | BYOC"
 slug: /integrate-with-storage-bucket
+sidebar_key: integrate-with-storage-bucket
 sidebar_label: "阿里云 OSS"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出到指定的 OSS 存储桶。 | BYOC"
+description: "Zilliz Cloud 支持与阿里云对象存储 OSS 集成。 | BYOC"
 type: origin
 token: IwAbwxWzQiGVc0khATdcOoCbnCg
 sidebar_position: 1
@@ -31,7 +32,17 @@ import Procedures from '@site/src/components/Procedures';
 
 # 阿里云对象存储
 
-Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出到指定的 OSS 存储桶。
+Zilliz Cloud 支持与阿里云对象存储 OSS 集成。
+
+该存储集成可用于：
+
+- [External volumes](./external-volume)
+
+- [导出备份文件](./export-backup-files)
+
+- [转发审计日志](./audit-logs)
+
+- [转发访问日志](./access-log-overview)
 
 ![GPQdwo63IhxSjqbk9vkcdZQXngM](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/GPQdwo63IhxSjqbk9vkcdZQXngM.png)
 
@@ -59,6 +70,23 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
     - **配置描述**（可选）：为此集成添加描述（如：`for export backup file`）。
 
+    - **Bucket 权限**：选择 Zilliz Cloud 对您的对象存储桶具有的访问级别。下表说明了这些选项。
+
+        <table>
+           <tr>
+             <th><p><strong>权限</strong></p></th>
+             <th><p><strong>说明</strong></p></th>
+           </tr>
+           <tr>
+             <td><p>只读</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External Collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
+           </tr>
+           <tr>
+             <td><p>读写</p></td>
+             <td><p>Zilliz Cloud 既可以从 bucket 中读取数据，也可以向 bucket 中写入数据。用于<a href="./export-backup-files">导出备份文件</a>、<a href="./audit-logs">转发审计日志</a>或<a href="./access-log-overview">转发访问日志</a>。</p></td>
+           </tr>
+        </table>
+
 1. 继续执行[步骤 2](./integrate-with-storage-bucket)。
 
 </Procedures>
@@ -77,7 +105,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
     1. **Bucket 名称**：为您的 OSS 存储空间设置一个唯一名称。
 
-    1. **地域**：指定存储空间所在的云地域。注意，存储空间所在地域必须和目标 Zilliz Cloud 集群所在的地域相同。
+    1. **地域**：指定存储空间所在的云地域。注意，存储空间所在地域必须和目标 Zilliz Cloud 集群或 Volume所在的地域相同。
 
     1. 其他设置可以保持默认。配置完成后，点击**完成创建**。
 
@@ -130,7 +158,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p><code>$bucket</code> 应替换为您实际的 OSS 存储空间名称。</p>
+    `$bucket` 应替换为您实际的 OSS 存储空间名称。
 
     </Admonition>
 

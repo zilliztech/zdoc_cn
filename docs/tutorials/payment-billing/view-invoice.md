@@ -50,7 +50,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 每张账单都包含几个关键组成部分。本节将通过一张示例账单，帮助您理解账单页面中每个部分。
 
-![example-invoice-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/example-invoice-cn.png "example-invoice-cn")
+undefined
 
 ### 账单计费周期\{#billing-cycle}
 
@@ -201,7 +201,7 @@ Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud �
 
 1. 切换至**历史账单**页面。您可以查看当月账单和所有历史账单。
 
-![view-invoices-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/view-invoices-cn.png "view-invoices-cn")
+undefined
 
 </TabItem>
 

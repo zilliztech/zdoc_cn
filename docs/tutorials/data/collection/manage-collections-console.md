@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Collection 是一张二维表格，用于存储 Embedding向量和元数据。一个 Collection 中的所有 Entity 共享相同的 Schema。您可以创建多个 Collection 来进行数据管理，或用于实现多租户（multi-tenancy）。 | Cloud"
 type: origin
 token: Cy4swPPaeiZgbmkN4wUc9wAdnwd
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -220,7 +220,7 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
     - 若需修改 mmap 或 partition Key 设置，请使用 SDK，详情请见[修改 Collection](./modify-collections)。
 
-    - 如果 Collection 创建时未开启动态列功能，您可以在 Collection 创建完成后使用 SDK 或 Web 控制台开启动态列。更多 SDK 详情，请见[修改 Collection](./modify-collections#example-4-enable-dynamic-field)。如需了解如何通过 Web 控制台操作，请参见上方 Demo。
+    - 如果 Collection 创建时未开启动态列功能，您可以在 Collection 创建完成后使用 SDK 或 Web 控制台开启动态列。更多 SDK 详情，请见[修改 Collection](./modify-collections#example-5-enable-dynamic-field)。如需了解如何通过 Web 控制台操作，请参见上方 Demo。
 
     其他 Schema 设置暂不支持编辑。如仍需修改，建议创建一个新的 Collection，并重新[导入数据](./import-data)。
 
@@ -240,7 +240,7 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 - **修改 Collection TT**L：TTL (Time-to-live) 是一种 Collection 属性，决定了 Collection 中数据的到期时间。 数据到期后将被自动删除。详情请参考[设置 Collection 生存时间](./set-collection-ttl)。
 
-- **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-5-enable-allow_insert_auto_id)。
+- **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-6-enable-allow_insert_auto_id)。
 
 - **删除 Collection**：若某个 Collection 已不再使用，您可以将其删除以释放资源。删除 Collection 的操作会永久清除其中的所有数据，操作不可撤销。
 

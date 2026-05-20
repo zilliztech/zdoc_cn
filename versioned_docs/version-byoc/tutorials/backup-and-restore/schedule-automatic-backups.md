@@ -1,11 +1,12 @@
 ---
 title: "设置定时自动备份 | BYOC"
 slug: /schedule-automatic-backups
+sidebar_key: schedule-automatic-backups
 sidebar_label: "设置定时自动备份"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持为集群设置定时自动备份，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 设置定时自动备份。 | BYOC"
 type: origin
@@ -89,33 +90,6 @@ curl --request POST \
     "startTime": "02:00-04:00",
     "retentionDays": 7,
     "enabled": true
-}'
-```
-
-您也可以选择在使用上述备份策略创建备份的同时，将其拷贝到指定的其它地域。
-
-```bash
-curl --request POST \
---url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
---header "Authorization: Bearer ${TOKEN}" \
---header "Content-Type: application/json" \
--d '{
-    "frequency": "1,2,3,5",
-    "startTime": "02:00-04:00",
-    "retentionDays": 7,
-    "enabled": true,
-    "crossRegionPolicies": [
-        {
-            "regionId": "ali-cn-hangzhou",
-            "retentionDays": 7,
-            "region": "cn-hangzhou"
-        },
-        {
-            "regionId": "ali-cn-shanghai",
-            "retentionDays": 7,
-            "region": "cn-shanghai"
-        }
-    ]
 }'
 ```
 

@@ -1,11 +1,12 @@
 ---
 title: "管理集群 | BYOC"
 slug: /manage-cluster
+sidebar_key: manage-cluster
 sidebar_label: "管理集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍如了集群的生命周期，以便您能够充分利用 Zilliz Cloud 控制台来管理集群。 | BYOC"
 type: origin
@@ -74,7 +75,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。
+- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。值得注意的是，API 密钥仅能用于调用平台 API（控制面）请求。对于数据面连接，请使用集群鉴权凭据（`username:password`）。
 
 - `{CLUSTER_ID}`: 需要挂起的 Dedicated 集群的 ID。
 
@@ -102,12 +103,13 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在单击<strong>恢复运行</strong>后，您将看到自动弹出的<strong>检查项目资源配额</strong>窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：</p>
-<ul>
-<li><p>单击<strong>前往项目资源设置</strong>按钮，以便编辑当前项目的资源设置，或者</p></li>
-<li><p>单击<strong>返回上一步</strong>按钮，以便编辑当前集群的相关设置。</p></li>
-</ul>
-<p>操作期间会消耗少量额外资源，并在操作完成后释放。</p>
+在单击**恢复运行**后，您将看到自动弹出的**检查项目资源配额**窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：
+
+- 单击**前往项目资源设置**按钮，以便编辑当前项目的资源设置，或者
+
+- 单击**返回上一步**按钮，以便编辑当前集群的相关设置。
+
+操作期间会消耗少量额外资源，并在操作完成后释放。
 
 </Admonition>
 
@@ -137,7 +139,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。
+- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。值得注意的是，API 密钥仅能用于调用平台 API（控制面）请求。对于数据面连接，请使用集群鉴权凭据（`username:password`）。
 
 - `{CLUSTER_ID}`: 需要恢复运行的集群的 ID。
 
@@ -187,7 +189,7 @@ curl --request POST \
 
 以下为参数说明：
 
-- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。
+- `{API_KEY}`：用于验证 API 请求的鉴权信息。请使用您自己的 Zilliz Cloud API 密钥。值得注意的是，API 密钥仅能用于调用平台 API（控制面）请求。对于数据面连接，请使用集群鉴权凭据（`username:password`）。
 
 - `{CLUSTER_ID}`: 需要恢复运行的集群的 ID。
 

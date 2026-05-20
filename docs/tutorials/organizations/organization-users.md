@@ -1,8 +1,8 @@
 ---
-title: "管理组织用户 | Cloud"
+title: "组织用户 | Cloud"
 slug: /organization-users
 sidebar_key: organization-users
-sidebar_label: "管理组织用户"
+sidebar_label: "组织用户"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -30,7 +30,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 管理组织用户
+# 组织用户
 
 在 Zilliz Cloud 中，一个组织通常代表一家公司。您可以邀请员工加入您的组织，并根据他们的工作职能分配角色。这些角色决定了用户对特定资源的访问权限以及他们能执行的操作。例如，开发者通常需要访问数据的权限，但不需要管理账单的权限。
 

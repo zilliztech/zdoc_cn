@@ -1,11 +1,12 @@
 ---
 title: "调整索引构建级别 | BYOC"
 slug: /tune-index-build-level
+sidebar_key: tune-index-build-level
 sidebar_label: "调整索引构建级别"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 引入了一个名为 `buildlevel` 的参数，该参数允许用户为目标 Collection 平衡存储容量和搜索召回率。对于不常使用或需要更多存储空间的 Collection，您可以牺牲 2% 的召回率，以换取 30% 至 40% 的存储容量增加，反之亦然。本指南介绍了可用选项以及如何使用它们为 Collection 构建索引。 | BYOC"
 type: origin
@@ -36,12 +37,13 @@ Zilliz Cloud 引入了一个名为 `build_level` 的参数，该参数允许用�
 
 <Admonition type="info" icon="📘" title="注释">
 
-<p>此功能为<strong>公测版</strong>特性，仅在满足以下情况下适用于 Dedicated 集群：</p>
-<ul>
-<li><p>集群类型为 <strong>性能型</strong> 或 <strong>容量型</strong>，并且</p></li>
-<li><p>集群与 <strong>Milvus v2.6.x</strong> 兼容。</p></li>
-</ul>
-<p>您可以升级集群来测试此功能。如果您遇到任何需要进一步说明的问题，<a href="https://support.zilliz.com/hc/en-us/requests/new">请联系我们</a>。</p>
+此功能为**公测版**特性，仅在满足以下情况下适用于 Dedicated 集群：
+
+- 集群类型为 **性能型** 或 **容量型**，并且
+
+- 集群与 **Milvus v2.6.x** 兼容。
+
+您可以升级集群来测试此功能。如果您遇到任何需要进一步说明的问题，[请联系我们](https://support.zilliz.com/hc/en-us/requests/new)。
 
 </Admonition>
 
@@ -79,25 +81,25 @@ Zilliz Cloud 引入了一个名为 `build_level` 的参数，该参数允许用�
    <tr>
      <td><p>引入 Build Level 之前（基线）</p></td>
      <td><p>150万个768维向量</p></td>
-     <td><p>~ 3,000</p></td>
+     <td><p>&#126; 3,000</p></td>
      <td><p>91% - 97%</p></td>
    </tr>
    <tr>
      <td><p>容量优先(0)</p></td>
      <td><p><strong>210万个768维向量（↑250%）</strong></p></td>
-     <td><p>~ 3,000</p></td>
+     <td><p>&#126; 3,000</p></td>
      <td><p>90% - 95%</p></td>
    </tr>
    <tr>
      <td><p><strong>平衡型(1)</strong></p></td>
      <td><p><strong>150万个768维向量（↑ 60%）</strong></p></td>
-     <td><p><strong>~ 3,500 (↑ 17%)</strong></p></td>
+     <td><p><strong>&#126; 3,500 (↑ 17%)</strong></p></td>
      <td><p>91% - 97%</p></td>
    </tr>
    <tr>
      <td><p>精度优先 (2)</p></td>
      <td><p>100万个768维向量</p></td>
-     <td><p>~ 2,850 (↓ ~5%)</p></td>
+     <td><p>&#126; 2,850 (↓ &#126;5%)</p></td>
      <td><p><strong>92% - 98% (↑)</strong></p></td>
    </tr>
 </table>
@@ -116,25 +118,25 @@ Zilliz Cloud 引入了一个名为 `build_level` 的参数，该参数允许用�
    <tr>
      <td><p>引入 Build Level 之前（基线）</p></td>
      <td><p>500万个768维向量</p></td>
-     <td><p>~ 340</p></td>
+     <td><p>&#126; 340</p></td>
      <td><p>93% - 98%</p></td>
    </tr>
    <tr>
      <td><p>容量优先(0)</p></td>
      <td><p><strong>700万个768维向量（↑ 100%）</strong></p></td>
-     <td><p>~ 300</p></td>
+     <td><p>&#126; 300</p></td>
      <td><p>89% - 97%</p></td>
    </tr>
    <tr>
      <td><p><strong>平衡型(1)</strong></p></td>
      <td><p><strong>500万个768维向量（↑ 50%）</strong></p></td>
-     <td><p><strong>~ 350 (↑ 3%)</strong></p></td>
+     <td><p><strong>&#126; 350 (↑ 3%)</strong></p></td>
      <td><p>92% - 97%</p></td>
    </tr>
    <tr>
      <td><p>精度优先 (2)</p></td>
      <td><p>300万个768维向量</p></td>
-     <td><p>~ 345</p></td>
+     <td><p>&#126; 345</p></td>
      <td><p><strong>94% - 98% (↑)</strong></p></td>
    </tr>
 </table>

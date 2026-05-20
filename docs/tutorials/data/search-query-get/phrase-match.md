@@ -351,6 +351,7 @@ export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export COLLECTION_NAME="tech_articles"
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/has" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"$COLLECTION_NAME\"
   }"
@@ -358,6 +359,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/has" \
 # drop existing collection
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/collections/drop" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\"
   }"
@@ -366,6 +368,7 @@ curl -X POST "http://${MILVUS_HOST}/v2/vectordb/collections/drop" \
 curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data "{
     \"collectionName\": \"$COLLECTION_NAME\",
     \"schema\": $schema
@@ -538,6 +541,7 @@ await client.loadCollection({
 # Insert the data into the collection
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -H "Authorization: Bearer <token>" \
   -d '{
     "collectionName": "tech_articles",
@@ -568,6 +572,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert" \
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/indexes/create" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "tech_articles",
     "indexParams": [
@@ -583,6 +588,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/indexes/create" \
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/load" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "tech_articles"
   }'
@@ -737,6 +743,7 @@ const result = await client.query({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "tech_articles",
     "filter": "PHRASE_MATCH(text, '\''machine learning'\'')",
@@ -840,11 +847,12 @@ export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export COLLECTION_NAME="tech_articles"
 export AUTH_TOKEN="your_token_here"
 
-# Search数据
+# Search data
 echo "Searching with PHRASE_MATCH filter (slop=1)..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"annsField\": \"embeddings\",
@@ -946,6 +954,7 @@ const result_slop2 = await client.search({
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"annsField\": \"embeddings\",
@@ -1045,6 +1054,7 @@ const result_slop3 = await client.search({
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"annsField\": \"embeddings\",

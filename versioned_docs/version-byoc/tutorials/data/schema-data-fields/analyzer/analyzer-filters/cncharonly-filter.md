@@ -1,11 +1,12 @@
 ---
 title: "Cncharonly | BYOC"
 slug: /cncharonly-filter
+sidebar_key: cncharonly-filter
 sidebar_label: "Cncharonly"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`cncharonly` 过滤器删除包含任何非汉字的词项。当您希望专注于中文文本时，该过滤器非常有用，可以过滤掉包含其他文字、数字或符号的词项。 | BYOC"
 type: origin
@@ -218,7 +219,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

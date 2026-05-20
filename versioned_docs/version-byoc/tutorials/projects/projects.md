@@ -1,16 +1,17 @@
 ---
 title: "项目 | BYOC"
 slug: /projects
+sidebar_key: projects
 sidebar_label: "项目"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本章介绍项目层级的操作和设置。 | BYOC"
 type: origin
 token: FqTCwzQ7pifaAKkajQdchERrnEd
-sidebar_position: 11
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz

@@ -11,7 +11,7 @@ notebook: FALSE
 description: "您可以在这里找到与使用 Zilliz Cloud 有关的最佳实践的文章。 | Cloud"
 type: origin
 token: Q08CwxBoMiLJLnkbMWUcFMdsnvb
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz

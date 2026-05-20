@@ -1,8 +1,8 @@
 ---
-title: "管理项目用户 | Cloud"
+title: "项目用户 | Cloud"
 slug: /project-users
 sidebar_key: project-users
-sidebar_label: "管理项目用户"
+sidebar_label: "项目用户"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -28,7 +28,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 管理项目用户
+# 项目用户
 
 在 Zilliz Cloud 中，您可以邀请用户加入项目并根据他们的工作职能分配角色。这些角色决定了用户对项目的访问权限以及他们可以执行的操作。
 

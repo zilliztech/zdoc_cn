@@ -39,7 +39,7 @@ import Procedures from '@site/src/components/Procedures';
 
 此功能仅适用于**企业版**项目。
 
-目前，您只能在阿里云华东1（杭州）创建 On-demand 集群。如需其他地域，请[联系我们](http://zilliz.com.cn/contact-sales)。
+目前，您只能在阿里云华北2（北京）创建 On-demand 集群。如需其他地域，请[联系我们](http://zilliz.com.cn/contact-sales)。
 
 </Admonition>
 
@@ -66,7 +66,7 @@ import Procedures from '@site/src/components/Procedures';
          --header "Content-Type: application/json" \
          --data-raw '{
             "projectId": "proj-09ee1f4b1151d5dd1edbc5",
-            "regionId": "ali-cn-hangzhou",
+            "regionId": "ali-cn-beijing",
             "clusterName": "my-on-demand",
             "cuSize": 8,
             "autoSuspend": 120
@@ -76,7 +76,7 @@ import Procedures from '@site/src/components/Procedures';
     #   "code": 0,
     #   "data": {
     #     "clusterId": "in07-7d6ac8697204a6a",
-    #     "regionId": "ali-cn-hangzhou",
+    #     "regionId": "ali-cn-beijing",
     #     "projectId": "proj-09ee1f4b1151d5dd1edbc5"
     #   }
     # }
@@ -177,7 +177,7 @@ import Procedures from '@site/src/components/Procedures';
           {
             "clusterId": "in07-7d6ac8697204a6a",
             "clusterName": "xxx",
-            "regionId": "ali-cn-hangzhou",
+            "regionId": "ali-cn-beijing",
             "cuSize": 8,
             "status": "SUSPENDED",
             "endpoint": "https://proj-09ee1f4b1151d5dd1edbc5.ali-cn-hangzhou.zillizcloud.com",
@@ -218,7 +218,7 @@ import Procedures from '@site/src/components/Procedures';
       "data": {
         "clusterId": "in07-7d6ac8697204a6a",
         "clusterName": "xxx",
-        "regionId": "ali-cn-hangzhou",
+        "regionId": "ali-cn-beijing",
         "cuSize": 8,
         "status": "RUNNING",
         "endpoint": "https://proj-09ee1f4b1151d5dd1edbc5.ali-cn-hangzhou.zillizcloud.com",

@@ -1,11 +1,12 @@
 ---
 title: "高斯衰减 | BYOC"
 slug: /gaussian-decay
+sidebar_key: gaussian-decay
 sidebar_label: "高斯衰减"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "高斯衰减，也称为正态衰减，能对搜索结果进行最自然的调整。就像人类的视觉会随着距离逐渐模糊一样，高斯衰减会创建一条平滑的钟形曲线，随着项目远离理想点，逐渐降低其相关性。当你希望实现一种平衡的衰减，既不会对刚好超出首选范围的项目进行大举罚分，又能显著降低远距离项目的相关性时，这种方法是理想之选。 | BYOC"
 type: origin
@@ -80,7 +81,7 @@ import TabItem from '@theme/TabItem';
 
 高斯衰减会产生一条平滑的钟形曲线，随着与理想点的距离增加，相关性逐渐降低。这种分布以数学家卡尔·弗里德里希·高斯的名字命名，在自然界和统计学中经常出现。这也说明了为什么它在人类的感知中如此直观。
 
-![ZcNhbVbEMokVA0xRjX7cmKVInYc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ZcNhbVbEMokVA0xRjX7cmKVInYc.png)
+![ZcNhbVbEMokVA0xRjX7cmKVInYc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/ZcNhbVbEMokVA0xRjX7cmKVInYc.png "ZcNhbVbEMokVA0xRjX7cmKVInYc")
 
 上图展示了高斯衰减如何影响移动搜索应用中的餐厅排名：
 
@@ -101,13 +102,13 @@ import TabItem from '@theme/TabItem';
 计算高斯衰减得分的数学公式为：
 
 $$
-S(doc) = \exp\left( -\frac\{\left( \max\left(0, \left|fieldvalue_{doc} - origin\right| - offset \right) \right)^2}\{2\sigma^2} \right)
+S(doc) = \exp\left( -\frac{\left( \max\left(0, \left|fieldvalue_{doc} - origin\right| - offset \right) \right)^2}{2\sigma^2} \right)
 $$
 
 其中：
 
 $$
-\sigma^2 = -\frac{scale^2}\{2 \cdot \ln(decay)}
+\sigma^2 = -\frac{scale^2}{2 \cdot \ln(decay)}
 $$
 
 用通俗易懂的语言来解释就是：
@@ -118,7 +119,7 @@ $$
 
 1. 将这个调整后的距离平方：$(adjusted\_distance)^2$
 
-1. 除以$2\sigma^2$，它是根据您的缩放和衰减参数计算得出的
+1. 除以&#36;2\sigma^2$，它是根据您的缩放和衰减参数计算得出的
 
 1. 取负指数，它会给出一个介于 0 和 1 之间的值：$\exp(-value)$
 
@@ -130,7 +131,7 @@ $$
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考<a href="./tutorial-implement-time-based-ranking">教程：实现基于时间的搜索结果重排</a>。</p>
+在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考[教程：实现基于时间的搜索结果重排](./tutorial-implement-time-based-ranking)。
 
 </Admonition>
 

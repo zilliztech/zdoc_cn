@@ -1,11 +1,12 @@
 ---
 title: "Zilliz Claude Code Plugin Capabilities | Cloud"
 slug: /zilliz-plugin-capabilities
+sidebar_key: zilliz-plugin-capabilities
 sidebar_label: "Core Capabilities"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "The Zilliz Plugin offers capabilities across various areas for managing Zilliz Cloud resources using natural language. In this guide, you will find the main features related to managing clusters and collections, as well as vector operations. | Cloud"
 type: origin
@@ -34,7 +35,7 @@ import Admonition from '@theme/Admonition';
 
 The Zilliz Plugin offers capabilities across various areas for managing Zilliz Cloud resources using natural language. In this guide, you will find the main features related to managing clusters and collections, as well as vector operations.
 
-## Cluster Management
+## Cluster Management\{#cluster-management}
 
 **What you can do:**
 
@@ -67,7 +68,7 @@ zilliz cluster list
 zilliz cluster resume --cluster-id <id>
 ```
 
-## Collection Management
+## Collection Management\{#collection-management}
 
 **What you can do:**
 
@@ -95,7 +96,7 @@ zilliz collection load --name user_embeddings
 zilliz collection getstats --name products
 ```
 
-## Vector Operations
+## Vector Operations\{#vector-operations}
 
 **What you can do:**
 

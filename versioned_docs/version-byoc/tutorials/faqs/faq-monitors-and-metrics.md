@@ -4,7 +4,7 @@ slug: /faq-monitors-and-metrics
 sidebar_label: "FAQ：监控与指标"
 beta: FALSE
 notebook: FALSE
-description: " | BYOC"
+description: "本文列举了在 Zilliz Cloud 使用监控与指标时可能遇到的常见问题及对应解决方法。 | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 9

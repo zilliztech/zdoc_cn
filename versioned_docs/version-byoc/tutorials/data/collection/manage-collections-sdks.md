@@ -1,11 +1,12 @@
 ---
 title: "创建 Collection | BYOC"
 slug: /manage-collections-sdks
+sidebar_key: manage-collections-sdks
 sidebar_label: "创建 Collection"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "您可以根据业务开发需要，确定 Collection Schema、索引参数、相似度类型、是否自动加载等设置。本节将介绍创建 Collection 的具体步骤及相关注意事项。 | BYOC"
 type: origin
@@ -32,8 +33,9 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您管理的租户数量较少且希望能够对各租户间的数据进行物理隔离，可以考虑为每个租户创建一个 Collection。</p>
-<p>但是，根据您的集群版本不同，可以创建最多 16,384 个 Collection。因此，对于有租户数量较多的场景，可以根据您的实际需求，考虑使用基于 Partition 或基于 Partition Key 的多租户方案。关于多租户方案的更多内容，可以参考<a href="./multi-tenancy">多租户策略</a>。</p>
+如果您管理的租户数量较少且希望能够对各租户间的数据进行物理隔离，可以考虑为每个租户创建一个 Collection。
+
+但是，根据您的集群版本不同，可以创建最多 16,384 个 Collection。因此，对于有租户数量较多的场景，可以根据您的实际需求，考虑使用基于 Partition 或基于 Partition Key 的多租户方案。关于多租户方案的更多内容，可以参考[多租户策略](./multi-tenancy)。
 
 </Admonition>
 
@@ -59,7 +61,7 @@ Schema 定义了 Collection 的数据结构。在创建 Collection 时，您需�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Zilliz Cloud 支持为标量字段设置 nullable 属性和默认值。有关更多信息，请参考 <a href="./nullable-and-default">Nullable 和默认值</a>。</p>
+Zilliz Cloud 支持为标量字段设置 nullable 属性和默认值。有关更多信息，请参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -185,9 +187,12 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+token := "YOUR_CLUSTER_TOKEN"
+
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
+    APIKey: token
 })
 if err != nil {
     fmt.Println(err.Error())
@@ -468,6 +473,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_1\",
     \"schema\": $schema,
@@ -591,6 +597,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_2\",
     \"schema\": $schema
@@ -600,6 +607,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/get_load_state" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_2\"
 }"
@@ -692,6 +700,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_3\",
     \"schema\": $schema,
@@ -779,6 +788,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_5\",
     \"schema\": $schema,
@@ -871,6 +881,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_5\",
     \"schema\": $schema,
@@ -961,6 +972,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"customized_setup_6\",
     \"schema\": $schema,

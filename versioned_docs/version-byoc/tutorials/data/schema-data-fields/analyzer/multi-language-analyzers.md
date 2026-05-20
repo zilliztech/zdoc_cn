@@ -1,11 +1,12 @@
 ---
 title: "多语言 Analyzer | BYOC"
 slug: /multi-language-analyzers
+sidebar_key: multi-language-analyzers
 sidebar_label: "多语言 Analyzer"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "当 Zilliz Cloud 执行文本分析时，通常会在一个 Collection 的整个文本字段上应用单一 Analyzer。如果该 Analyzer 针对英语进行了优化，它在处理其他语言（如中文、西班牙语或法语）所需的分词和词干规则时就会遇到困难，从而导致召回率降低。例如，搜索西班牙语单词 “teléfono”（意为“电话”）时，英文 Analyzer 可能会忽略重音符号，也不会应用西班牙语特有的词干提取，导致相关结果被遗漏。 | BYOC"
 type: origin
@@ -402,7 +403,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {
@@ -850,7 +851,7 @@ const result = await client.insert({
 
 // Print results
 const inserted = result.insert_count;
-console.log(`Successfully inserted ${inserted} documents`);
+console.log(\`Successfully inserted ${inserted} documents\`);
 console.log("Documents by language: 2 English, 2 Chinese");
 
 // Expected output:
@@ -931,7 +932,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>你无需直接提供稀疏向量；BM25 函数会基于你的文本和指定的 Analyzer 自动生成。</p>
+你无需直接提供稀疏向量；BM25 函数会基于你的文本和指定的 Analyzer 自动生成。
 
 </Admonition>
 
@@ -1029,8 +1030,8 @@ const english_results = await client.search({
 console.log("\n=== English Search Results ===");
 english_results.results.forEach((hit, i) => {
   console.log(
-    `${i + 1}. [${hit.score.toFixed(4)}] ${hit.entity.text} ` +
-      `(Language: ${hit.entity.language})`
+    \`${i + 1}. [${hit.score.toFixed(4)}] ${hit.entity.text} \` +
+      \`(Language: ${hit.entity.language})\`
   );
 });
 
@@ -1173,8 +1174,8 @@ const cn_results = await client.search({
 console.log("\n=== Chinese Search Results ===");
 cn_results.results.forEach((hit, i) => {
   console.log(
-    `${i + 1}. [${hit.score.toFixed(4)}] ${hit.entity.text} ` +
-      `(Language: ${hit.entity.language})`
+    \`${i + 1}. [${hit.score.toFixed(4)}] ${hit.entity.text} \` +
+      \`(Language: ${hit.entity.language})\`
   );
 });
 

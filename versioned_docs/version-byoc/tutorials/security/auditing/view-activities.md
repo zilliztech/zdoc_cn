@@ -1,11 +1,12 @@
 ---
 title: "查看平台审计日志 | BYOC"
 slug: /view-activities
+sidebar_key: view-activities
 sidebar_label: "查看平台审计日志"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 平台审计日志页面记录了组织中的所有事件，包括账单和资源访问情况等。 | BYOC"
 type: origin
@@ -46,7 +47,7 @@ Zilliz Cloud **平台审计日志**页面记录了[组织](./organizations)中�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>起始日期和终止日期之间应小于 30 天。</p>
+    起始日期和终止日期之间应小于 30 天。
 
     </Admonition>
 

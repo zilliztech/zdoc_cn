@@ -1,8 +1,8 @@
 ---
-title: "使用回收站 | Cloud"
+title: "回收站 | Cloud"
 slug: /use-recycle-bin
 sidebar_key: use-recycle-bin
-sidebar_label: "使用回收站"
+sidebar_label: "回收站"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -28,7 +28,7 @@ import Admonition from '@theme/Admonition';
 
 import Procedures from '@site/src/components/Procedures';
 
-# 使用回收站
+# 回收站
 
 Zilliz Cloud 回收站会在您手动删除或因试用结束等原因而自动删除的所有 Serverless 和 Dedicated 集群，并提供 30 天的宽限期，以便您恢复这些集群。
 

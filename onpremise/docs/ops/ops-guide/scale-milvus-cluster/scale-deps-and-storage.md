@@ -1,11 +1,12 @@
 ---
 title: "Milvus 集群依赖和磁盘扩缩容 | On-Premise"
 slug: /scale-deps-and-storage
+sidebar_key: scale-deps-and-storage
 sidebar_label: "依赖和磁盘扩缩容"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus 集群的正常运行依赖多个三方组件，包括 Pulsar、etcd 等。本节主要介绍如何对这些 Milvus 集群依赖的三方组件和 Milvus 集群的磁盘进行扩缩容。 | On-Premise"
 type: origin
@@ -38,7 +39,7 @@ Milvus 集群的正常运行依赖多个三方组件，包括 Pulsar、etcd 等�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Pulsar 组件不支持自动缩容。请提前做好容量规划。</p>
+Pulsar 组件不支持自动缩容。请提前做好容量规划。
 
 </Admonition>
 
@@ -143,7 +144,7 @@ Milvus 集群的正常运行依赖多个三方组件，包括 Pulsar、etcd 等�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在部署 Milvus 集群前，请确保集群使用的 StorageClass 满足<a href="./deploy-milvus-cluster#prerequisites">此处</a>指定的条件。如果使用的 StorageClass 不允许卷扩容功能，请修改 StorageClass 配置，将 <code>allowVolumeExpansion</code> 参数设置为 <code>true</code>，使其允许对已有存储卷进行扩容操作。</p>
+在部署 Milvus 集群前，请确保集群使用的 StorageClass 满足[此处](./deploy-milvus-cluster#prerequisites)指定的条件。如果使用的 StorageClass 不允许卷扩容功能，请修改 StorageClass 配置，将 `allowVolumeExpansion` 参数设置为 `true`，使其允许对已有存储卷进行扩容操作。
 
 </Admonition>
 

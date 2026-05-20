@@ -1,16 +1,17 @@
 ---
 title: "组织 | BYOC"
 slug: /organizations
+sidebar_key: organizations
 sidebar_label: "组织"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "了解 Zilliz Cloud 组织层级操作及设置。 | BYOC"
 type: origin
 token: B1rYwr4rJi0UM7kpppxcQvwin7l
-sidebar_position: 10
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz

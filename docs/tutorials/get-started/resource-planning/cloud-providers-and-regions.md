@@ -48,46 +48,42 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
      <td><p>华东1（杭州）</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
-     <td></td>
+     <td rowspan="2"><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
    </tr>
    <tr>
      <td><p>华东2（上海）</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p></td>
-     <td></td>
    </tr>
    <tr>
      <td><p>华北2（北京）</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p></td>
-     <td></td>
+     <td><p>✔</p></td>
    </tr>
    <tr>
      <td><p>华南1（深圳）</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p></td>
-     <td></td>
+     <td rowspan="4"><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
    </tr>
    <tr>
      <td><p>北美</p></td>
      <td><p>美国（弗吉尼亚）</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p></td>
-     <td></td>
    </tr>
    <tr>
      <td><p>亚太</p></td>
      <td><p>新加坡</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p></td>
-     <td></td>
    </tr>
    <tr>
      <td><p>中东</p></td>
      <td><p>沙特（利雅得-合作伙伴运营）</p></td>
      <td><p>✖️</p></td>
      <td><p>✔</p><p>如需创建阿里云沙特（利雅得-合作伙伴运营）的集群，请<a href="http://zilliz.com.cn/contact-sales">联系销售</a>获取报价。</p></td>
-     <td></td>
    </tr>
 </table>
 

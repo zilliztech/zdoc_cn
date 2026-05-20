@@ -11,7 +11,7 @@ notebook: FALSE
 description: "了解订阅 Zilliz Cloud 服务的多种方式及发票开具的相关说明。 | Cloud"
 type: origin
 token: Uj7IwJpneijPROkAZN7cJRLInrc
-sidebar_position: 15
+sidebar_position: 16
 keywords: 
   - 向量数据库
   - zilliz

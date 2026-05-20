@@ -1,11 +1,12 @@
 ---
 title: "通过 RESTful API 导入 | BYOC"
 slug: /import-data-via-restful-api
+sidebar_key: import-data-via-restful-api
 sidebar_label: "RESTful API"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。 | BYOC"
 type: origin
@@ -52,7 +53,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了成功导入数据，请确保目标 Collection 中的正在运行或待运行的导入任务不超过 10 个。</p>
+为了成功导入数据，请确保目标 Collection 中的正在运行或待运行的导入任务不超过 10 个。
 
 </Admonition>
 

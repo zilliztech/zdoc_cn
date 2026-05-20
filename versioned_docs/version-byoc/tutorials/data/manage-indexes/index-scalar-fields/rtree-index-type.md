@@ -1,16 +1,17 @@
 ---
 title: "RTREE | BYOC"
 slug: /rtree-index-type
+sidebar_key: rtree-index-type
 sidebar_label: "RTREE"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "RTREE 索引是一种基于树形结构的数据索引方式，用于加速 Zilliz Cloud 中 GEOMETRY（几何类型）字段 的查询。 | BYOC"
 type: origin
 token: Od2IwGgxIi3UK8k7qIDcQBBVnDe
-sidebar_position: 2
+sidebar_position: 4
 keywords: 
   - 向量数据库
   - zilliz
@@ -135,7 +136,13 @@ print(hits)  # Expected: top-k by vector similarity among rows whose geo interse
 
 ## 删除索引\{#drop-an-index}
 
-使用 `drop_index()` 删除索引。
+您也可以使用 `drop_index()` 从 Collection 中删除指定字段上的索引。
+
+<Admonition type="info" icon="📘" title="说明">
+
+如果您的集群与 Milvus v2.6.x 兼容，您可以删除标量字段上的索引，无须对 Collection 执行 Release 操作。
+
+</Admonition>
 
 ```python
 client.drop_index(
