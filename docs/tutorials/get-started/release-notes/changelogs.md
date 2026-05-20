@@ -11,7 +11,7 @@ notebook: FALSE
 description: "最近更新：2026 年 4 月 11 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
-sidebar_position: 1
+sidebar_position: 0
 keywords: 
   - zilliz
   - 向量数据库
