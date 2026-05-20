@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "alter | Cloud"
 slug: /cli/cli/Alias-alter
+sidebar_key: cli/Alias-alter
 sidebar_label: "alter"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation reassigns an alias to another collection. | Cloud"
 type: docx
-token: UTutdcqPLo4B2vxlHk1cAKunnOK
+token: PLvbdUqI6onWmWxFPYKcgcFpnwb
 sidebar_position: 1
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
   - alter
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation reassigns an alias to another collection.
 
-## Description
+## Description\{#description}
 
 You can assign an alias to a collection and conduct searches/queries against the alias so that the associated collection responds. Use this command to change the collection associated with the specified alias.
 
 Running this command without any prompts triggers a set of interactive prompts to help set it up.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alias alter
@@ -51,7 +51,7 @@ zilliz alias alter
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -93,7 +93,7 @@ zilliz alias alter
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alias alter --collection new_collection --alias my_alias

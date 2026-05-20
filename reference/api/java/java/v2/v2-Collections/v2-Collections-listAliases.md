@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listAliases() | Java | v2"
 slug: /java/java/v2-Collections-listAliases
+sidebar_key: java/v2-Collections-listAliases
 sidebar_label: "listAliases()"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: X6JXdPN7IoRffJxnaZccBvRanIM
 sidebar_position: 19
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
   - listAliases()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists all existing aliases for a specific collection.
 public ListAliasResp listAliases()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 MilvusClientV2.listAliases(ListAliasesReq.builder()
@@ -81,7 +81,7 @@ A **ListAliasResp** object containing a list of aliases for the specified collec
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

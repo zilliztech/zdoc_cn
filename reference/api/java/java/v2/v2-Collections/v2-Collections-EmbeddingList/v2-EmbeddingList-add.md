@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "add() | Java | v2"
 slug: /java/java/v2-EmbeddingList-add
+sidebar_key: java/v2-EmbeddingList-add
 sidebar_label: "add()"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PUOBd229uoQGUIxnHLWcMSidnQh
 sidebar_position: 1
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - add()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # add()
 
-This operation adds vector embeddings to an **EmbeddingList** instance.
+This operation adds vector embeddings to an **[EmbeddingList](./v2-Collections-EmbeddingList)** instance.
 
 ```java
 public void add(BaseVector vector)
@@ -45,7 +45,7 @@ public void add(BaseVector vector)
 
 **RETURN TYPE:**
 
-*EmbeddingList*
+*[EmbeddingList](./v2-Collections-EmbeddingList)*
 
 **RETURNS:**
 
@@ -57,7 +57,7 @@ An EmbeddingList instance that can be used again to chain up other `add()` metho
 
     This exception arises if different types of vector embeddings are provided.
 
-## Examples:
+## Examples:\{#examples}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Project-create
+sidebar_key: cli/Project-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new project. | Cloud"
 type: docx
-token: H6MXdWNhlo3b9lx70Z3ca3VXn2e
+token: L9ZddLvZLojYiTxECVgcBEXqnUd
 sidebar_position: 1
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new project.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz project create
@@ -44,7 +44,7 @@ zilliz project create
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -96,7 +96,7 @@ zilliz project create
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz project create --name my-project --plan Standard

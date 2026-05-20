@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "Classes and methods related to BulkWriter and BulkImport, facilitating importing data to your collections. | Java | v2"
 type: folder
-token: AtkCfVN4Ll6GqMdVJfxcybHanDf
+token: JNwTf1Enil3jErdNcSQc04LKnRd
 sidebar_position: 9
 sidebar_label: "Data Import"
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
   - Data Import
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 ---
 

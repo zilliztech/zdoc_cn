@@ -8,19 +8,19 @@ last_modified: v2.5.x
 deprecate_since: false
 description: "Classes and methods for you to manage the MilvusClient instances. | Node.js"
 type: folder
-token: ABk9fhVMTlQb0MdGuOrck8a8n7f
+token: DNpsf7mK9l2ruTdk4fCcwoudnFe
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
+  - vector database tutorial
+  - how do vector databases work
   - vector db comparison
   - openai vector db
-  - natural language processing database
-  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Client
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 ---
 

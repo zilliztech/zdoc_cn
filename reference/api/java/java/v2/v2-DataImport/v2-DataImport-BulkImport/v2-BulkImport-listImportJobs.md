@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listImportJobs() | Java | v2"
 slug: /java/java/v2-BulkImport-listImportJobs
+sidebar_key: java/v2-BulkImport-listImportJobs
 sidebar_label: "listImportJobs()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CN9sdiCicoERZpx9GhmcLa4Wn7g
 sidebar_position: 4
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - listImportJobs()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists all existing import jobs regarding the specified collection
 public static String listImportJobs(String url, BaseListImportJobsRequest request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 bulkImport.listImportJobs(
@@ -54,7 +54,6 @@ bulkImport.listImportJobs(
 
     ```python
     https://api.cloud.zilliz.com
-    # https://api.cloud.zilliz.com.cn 
     ```
 
 - **request** (*[BaseListImportRequest](./v2-BulkImport-listImportJobs#baselistimportrequest)*) -  
@@ -69,11 +68,11 @@ bulkImport.listImportJobs(
 
 A list of import job IDs of the specified collection.
 
-## BaseListImportRequest
+## BaseListImportRequest\{#baselistimportrequest}
 
 A **BaseListImportRequest** instance is implemented in **CloudListImportRequest**.
 
-### CloudListImportRequest
+### CloudListImportRequest\{#cloudlistimportrequest}
 
 ```java
 CloudListImportRequest.builder()
@@ -92,7 +91,7 @@ CloudListImportRequest.builder()
 
     The name of the target collection of this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 

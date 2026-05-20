@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "ListCollectionsV2() | Java | v2"
 slug: /java/java/v2-Collections-ListCollectionsV2
+sidebar_key: java/v2-Collections-ListCollectionsV2
 sidebar_label: "ListCollectionsV2()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WY4idJdzCozGGnxmLoFcIjC2ndw
 sidebar_position: 29
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
   - ListCollectionsV2()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists all existing collections in a specified database.
 public ListCollectionsResp listCollectionsV2(ListCollectionsReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 listCollectionsV2(ListCollectionsReq.builder()
@@ -62,11 +62,11 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
 **PARAMETERS:**
 
-- **collectionNames** (*List\<String>*)
+- **collectionNames** (*List&lt;String&gt;*)
 
     A list of strings containing the names of all existing collections.
 
-- **collectionInfos** (*List\<CollectionInfo>*)
+- **collectionInfos** (*List&lt;CollectionInfo&gt;*)
 
     A list of **CollectionInfo** objects. A **CollectionInfo** object has the following fields:
 
@@ -84,7 +84,7 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

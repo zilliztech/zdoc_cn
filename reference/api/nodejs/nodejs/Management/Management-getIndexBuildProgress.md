@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "getIndexBuildProgress() | Node.js"
 slug: /node/node/Management-getIndexBuildProgress
+sidebar_key: node/Management-getIndexBuildProgress
 sidebar_label: "getIndexBuildProgress()"
 added_since: v2.4.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: G6CGdbM4QoNgr5xS1ZAc94lhnFd
 sidebar_position: 11
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
   - getIndexBuildProgress()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation gets the build progress of the specified index.
 
 ```javascript
-getIndexBuildProgress(data): Promise<GetIndexBuildProgressResponse>
+await milvusClient.getIndexBuildProgress(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.getIndexBuildProgress({
+await milvusClient.getIndexBuildProgress({
       db_name?: string,
       collection_name: string,
       field_name: string,
@@ -77,35 +77,28 @@ milvusClient.getIndexBuildProgress({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<GetIndexBuildProgressResponse>*
+**RETURNS** *Promise&lt;GetIndexBuildProgressResponse&gt;*
 
 This method returns a promise that resolves to a **GetIndexBuildProgressResponse** object.
 
-```javascript
+```typescript
 {
     indexed_rows: number,
     total_rows: number,
-    status: {
-        code: number,
-        error_code: string | number,
-        reason: string
-    }
+    status:  ResStatus
 }
 ```
 
 **PARAMETERS:**
 
 - **indexed_rows** (*number*) -
-
-    The number of entities that have already been indexed.
+The number of rows that have been indexed so far.
 
 - **total_rows** (*number*) -
+The total number of rows the index covers. The build is complete when **indexed_rows** equals **total_rows**.
 
-    The number of entities that already persisted in the specified collection.
-
-- **status** (*ResStatus*) -  
-
-    The status of the response.
+- **ResStatus**
+A **ResStatus** object.
 
     - **code** (*number*) -
 
@@ -113,13 +106,13 @@ This method returns a promise that resolves to a **GetIndexBuildProgressResponse
 
     - **error_code** (*string* | *number*) -
 
-        An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+        An error code that indicates an occurred error. It remains **Success** if this operation succeeds.
 
-    - **reason** (*string*) - 
+    - **reason** (*string*) -
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 const milvusClient = new MilvusClient(MILUVS_ADDRESS);

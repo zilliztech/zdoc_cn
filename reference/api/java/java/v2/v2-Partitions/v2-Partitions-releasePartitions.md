@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: javaSidebar
 title: "releasePartitions() | Java | v2"
 slug: /java/java/v2-Partitions-releasePartitions
+sidebar_key: java/v2-Partitions-releasePartitions
 sidebar_label: "releasePartitions()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: false
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: VsyQdDkXnoloWYxfjXNchc0dnng
 sidebar_position: 7
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
   - releasePartitions()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation releases the partitions in a specified collection from memory.
 public void releasePartitions(ReleasePartitionsReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 releasePartitions(ReleasePartitionsReq.builder()
@@ -72,7 +72,7 @@ releasePartitions(ReleasePartitionsReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

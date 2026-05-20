@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "update-password | Cloud"
 slug: /cli/cli/User-updatepassword
+sidebar_key: cli/User-updatepassword
 sidebar_label: "update-password"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation updates the user password. | Cloud"
 type: docx
-token: CLzGdXUNzo2XaHxRvBYcaYSZnud
+token: AB6Hd6NHUoNLXIxgXywc3hmtnjc
 sidebar_position: 7
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
   - update-password
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation updates the user password.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz user update-password
@@ -51,7 +51,7 @@ zilliz user update-password
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--user** (*string*) -
 
@@ -103,7 +103,7 @@ zilliz user update-password
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz user update-password --user my_user --password old_pass --new-password new_pass

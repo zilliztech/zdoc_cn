@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/Alias-describe
+sidebar_key: cli/Alias-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets details of an alias. | Cloud"
 type: docx
-token: Qnx9d72SIo9CzrxvmcFcMRconNu
+token: QsPodYWJfoSCmAxbWatc6dw0nCp
 sidebar_position: 3
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets details of an alias.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alias describe
@@ -44,7 +44,7 @@ zilliz alias describe
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--alias** (*string*) -
 
@@ -80,7 +80,7 @@ zilliz alias describe
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alias describe --alias my_alias

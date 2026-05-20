@@ -4,23 +4,23 @@ slug: /java/v2-Client
 beta: false
 notebook: false
 added_since: v2.3.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 description: "Classes and methods for you to manage the MilvusClient instances. | Java | v2"
 type: folder
-token: QW8NfURhvl0NtOdmS3DcvQYCnFh
+token: YyNNfpZsKlOCstdX7xRcXT4an6e
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - Client
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 ---
 

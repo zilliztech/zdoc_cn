@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "commit() | Java | v2"
 slug: /java/java/v2-LocalBulkWriter-commit
+sidebar_key: java/v2-LocalBulkWriter-commit
 sidebar_label: "commit()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OUhTdWnXBoHqKdxTA0HcdMY5n4b
 sidebar_position: 3
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
   - zilliz
   - zilliz cloud
   - cloud
   - commit()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation commits the appended data.
  public void commit(boolean async)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 localBulkWriter.commit(
@@ -55,7 +55,7 @@ localBulkWriter.commit(
 
 *void*
 
-## Examples
+## Examples\{#examples}
 
 ```java
 localBulkWriter.commit(false);

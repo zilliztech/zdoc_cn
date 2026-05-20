@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_role() | Python | MilvusClient"
 slug: /python/python/Authentication-create_role
+sidebar_key: python/Authentication-create_role
 sidebar_label: "create_role()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OUz3drncZo1Er8xyITZcYz66nWE
 sidebar_position: 3
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
   - create_role()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a custom role.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 create_role(
@@ -74,7 +74,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

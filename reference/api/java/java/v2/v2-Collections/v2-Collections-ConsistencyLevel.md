@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "ConsistencyLevel | Java | v2"
 slug: /java/java/v2-Collections-ConsistencyLevel
+sidebar_key: java/v2-Collections-ConsistencyLevel
 sidebar_label: "ConsistencyLevel"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Q8IidbqKMopplgxSxaicS2o9nwc
 sidebar_position: 5
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - ConsistencyLevel
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - **STRONG**
 

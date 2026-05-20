@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "clear() | Python | MilvusClient"
 slug: /python/python/EmbeddingList-clear
+sidebar_key: python/EmbeddingList-clear
 sidebar_label: "clear()"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: M6mrdinAjo8CwrxirOQcR6E1nUc
 sidebar_position: 3
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - clear()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,9 @@ import Admonition from '@theme/Admonition';
 
 # clear()
 
-This operation clears the vector embeddings from the current **EmbeddingList** instance.
+This operation clears the vector embeddings from the current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 clear()
@@ -41,13 +41,13 @@ clear()
 
 **RETURN TYPE:**
 
-*EmbeddingList*
+*[EmbeddingList](./MilvusClient-EmbeddingList)*
 
 **RETURNS:**
 
-An empty **EmbeddingList** instance.
+An empty **[EmbeddingList](./MilvusClient-EmbeddingList)** instance.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import EmbeddingList

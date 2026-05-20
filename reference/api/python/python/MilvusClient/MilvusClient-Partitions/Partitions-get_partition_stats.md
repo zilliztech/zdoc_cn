@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_partition_stats() | Python | MilvusClient"
 slug: /python/python/Partitions-get_partition_stats
+sidebar_key: python/Partitions-get_partition_stats
 sidebar_label: "get_partition_stats()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Jjbsd2I8doQ9pBxBp57ckRdZnZd
 sidebar_position: 3
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
   - get_partition_stats()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation displays the statistics collected on a specific partition.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 get_partition_stats(
@@ -79,8 +85,9 @@ A dictionary that contains the row count in the specified partition.
 
 <Admonition type="info" icon="📘" title="**Why doesn't the row count match the number of entities inserted?**">
 
-<p>The data that you insert will go through a process before it is finally saved. Initially, it will flow in as data streams. Then, it will be stored in segments as entities. Milvus will select an appropriate growing segment to store the data in streams until the segment reaches its upper limit and becomes sealed.</p>
-<p>However, it's important to note that the row count displayed may not match the number of records that were inserted because data in streams is not taken into account.</p>
+The data that you insert will go through a process before it is finally saved. Initially, it will flow in as data streams. Then, it will be stored in segments as entities. Milvus will select an appropriate growing segment to store the data in streams until the segment reaches its upper limit and becomes sealed.
+
+However, it's important to note that the row count displayed may not match the number of records that were inserted because data in streams is not taken into account.
 
 </Admonition>
 
@@ -90,7 +97,7 @@ A dictionary that contains the row count in the specified partition.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -139,7 +146,7 @@ client.get_partition_stats(
 
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_partition()](./Partitions-create_partition)
 

@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to backup and restore. | Cloud"
 type: folder
-token: Q8jzfSMtAlSUEYd8Ilfc2NP2nQd
+token: QTM7fqREelEFXhdTaMqc18IxnVb
 sidebar_position: 1
 sidebar_label: "Backup"
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
   - Backup
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

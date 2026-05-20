@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropIndexProperties() | Node.js"
 slug: /node/node/Management-dropIndexProperties
+sidebar_key: node/Management-dropIndexProperties
 sidebar_label: "dropIndexProperties()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Acvxd7t9poXj6nxb0vMco0wsngh
 sidebar_position: 6
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
   - dropIndexProperties()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation resets the index properties to their default values.
 
 ```javascript
-dropIndexProperties(data): Promise<ResStatus>
+await milvusClient.dropIndexProperties(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropIndexProperties({
+await milvusClient.dropIndexProperties({
      db_name?: string,
      collection_name: string,
      index_name: string,
@@ -107,7 +107,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 const milvusClient = new MilvusClient(MILUVS_ADDRESS);

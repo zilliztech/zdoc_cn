@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Role-create
+sidebar_key: cli/Role-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new role. | Cloud"
 type: docx
-token: X0Vedq4MmoiEKKxmaVFca6J3nRe
+token: V9xIdjMEMowIh2xVJUUcvir6nUf
 sidebar_position: 1
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,17 +33,17 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new role.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud offers cluster roles for you to implement access control at the cluster level. For details, read [Access Control Explained](/docs/access-control-overview).
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz role create
@@ -54,7 +54,7 @@ zilliz role create
 [--database <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--role** (*string*) -
 
@@ -90,7 +90,7 @@ zilliz role create
 
     Indicates a database name. The value defaults to `default`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz role create --role my_role

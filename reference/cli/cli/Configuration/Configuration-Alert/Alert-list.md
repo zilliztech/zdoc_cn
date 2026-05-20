@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Alert-list
+sidebar_key: cli/Alert-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists alert rules for a project. | Cloud"
 type: docx
-token: SflPdLKXsoY2iFxIiljcBiIfnKc
+token: DTiIdd5NBocV9JxsNHZcoUownwh
 sidebar_position: 5
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists alert rules for a project.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alert list
@@ -43,7 +43,7 @@ zilliz alert list
 [--output <json | table | text>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--project-id** (*string*) -
 
@@ -69,7 +69,7 @@ zilliz alert list
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alert list

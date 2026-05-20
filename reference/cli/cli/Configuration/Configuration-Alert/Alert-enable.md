@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "enable | Cloud"
 slug: /cli/cli/Alert-enable
+sidebar_key: cli/Alert-enable
 sidebar_label: "enable"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation enables an alert rule. | Cloud"
 type: docx
-token: G8Xtd9rypofGjax3HUbcWUNPn3g
+token: MLrJdT9TdojvcJxhauic8s9anBf
 sidebar_position: 4
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - enable
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation enables an alert rule.
 
-## Description
+## Description\{#description}
 
 Only enabled alert rules apply. You can run this command to enable the specified alert rules as needed.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alert enable
@@ -46,7 +46,7 @@ zilliz alert enable
 [--output <json | table | text>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--id** (*string*) -
 
@@ -70,7 +70,7 @@ zilliz alert enable
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alert enable --id xxxx

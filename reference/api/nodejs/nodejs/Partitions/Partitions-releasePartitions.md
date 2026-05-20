@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "releasePartitions() | Node.js"
 slug: /node/node/Partitions-releasePartitions
+sidebar_key: node/Partitions-releasePartitions
 sidebar_label: "releasePartitions()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Sqoed1lkwo8umixJJO1cvKIxnZc
 sidebar_position: 8
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - releasePartitions()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation releases the partitions in a specified collection from memory.
 
 ```javascript
-releasePartitions(data): Promise<ResStatus>
+await milvusClient.releasePartitions(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.releasePartitions({
+await milvusClient.releasePartitions({
     db_name: string,
     collection_name: string,
     partition_names: string[],
@@ -98,10 +98,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-new milvusClient(MILUVS_ADDRESS).releasePartitions({
+new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).releasePartitions({
     collection_name: 'my_collection',
     partition_names: ['my_partition'],
  });

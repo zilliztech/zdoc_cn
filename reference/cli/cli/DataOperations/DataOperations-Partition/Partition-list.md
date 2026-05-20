@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Partition-list
+sidebar_key: cli/Partition-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists partitions in a collection. | Cloud"
 type: docx
-token: LJpJd8D0Qo1kGjxBCzfcSsDInEb
+token: QVxadXWKIo8YcHxZgD1c0F0VnXf
 sidebar_position: 5
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists partitions in a collection.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz partition list
@@ -44,7 +44,7 @@ zilliz partition list
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -68,7 +68,7 @@ zilliz partition list
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz partition list --collection my_collection

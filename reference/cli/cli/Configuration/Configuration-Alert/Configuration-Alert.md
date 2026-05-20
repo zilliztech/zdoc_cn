@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to metrics and alerts. | Cloud"
 type: folder
-token: KckdfroNnlfPlZd6GLuc2Zsrnqh
+token: DC00fqL8UlOSaJdNqeJcCEHYnFW
 sidebar_position: 1
 sidebar_label: "Alert"
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - Alert
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

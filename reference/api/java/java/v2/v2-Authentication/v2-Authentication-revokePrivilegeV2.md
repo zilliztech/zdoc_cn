@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "revokePrivilegeV2() | Java | v2"
 slug: /java/java/v2-Authentication-revokePrivilegeV2
+sidebar_key: java/v2-Authentication-revokePrivilegeV2
 sidebar_label: "revokePrivilegeV2()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FZN8dtlIRoMSGBxF7b1cWX48n0b
 sidebar_position: 18
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - revokePrivilegeV2()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation revokes privileges or privilege groups from a specific role.
 public Void revokePrivilegeV2(RevokePrivilegeReqV2 request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 revokePrivilegeV2(RevokePrivilegeReqV2.builder()
@@ -77,7 +77,7 @@ revokePrivilegeV2(RevokePrivilegeReqV2.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

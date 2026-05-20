@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/User-create
+sidebar_key: cli/User-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new database user. | Cloud"
 type: docx
-token: USPedjTNOo7vNTxeNiwctLAcnMb
+token: UJuOdGGu3okE0Sx1jARc45lMnGb
 sidebar_position: 1
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new database user.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, you can create cluster users and assign them cluster roles to define the privileges, achieving data security.
 
@@ -43,11 +43,11 @@ To manage cluster users, you must be an **Organization Owner** or a **Project Ad
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz user create
@@ -58,7 +58,7 @@ zilliz user create
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--user** (*string*) -
 
@@ -106,7 +106,7 @@ zilliz user create
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz user create --user my_user --password my_password

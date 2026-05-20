@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "DataType | Node.js"
 slug: /node/node/Collections-DataType
+sidebar_key: node/Collections-DataType
 sidebar_label: "DataType"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: AtLEdt0ZWoUbHoxkfvHcq1ZunUg
 sidebar_position: 6
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - DataType
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - NONE = 0
 

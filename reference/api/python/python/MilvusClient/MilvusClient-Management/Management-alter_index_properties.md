@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "alter_index_properties() | Python | MilvusClient"
 slug: /python/python/Management-alter_index_properties
+sidebar_key: python/Management-alter_index_properties
 sidebar_label: "alter_index_properties()"
 added_since: v2.5.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation changes the specified index properties. | Python | MilvusClient"
 type: docx
-token: TRFadKWOAofCVoxH3qYcdTvynHf
+token: QvyHdbEHholEqXxypKNcHHD5n0c
 sidebar_position: 14
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - alter_index_properties()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation changes the specified index properties.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 alter_index_properties(
@@ -84,7 +84,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "describe_index() | Python | MilvusClient"
 slug: /python/python/Management-describe_index
+sidebar_key: python/Management-describe_index
 sidebar_label: "describe_index()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WhsHdyIgyoFlsQxNJt9cFCTxnDe
 sidebar_position: 4
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
   - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - describe_index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation describes a specific index.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For this operation in a collection of a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For this operation in a collection for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints, and then create a session to attach to an on-demand cluster for searches.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 describe_index(
@@ -82,7 +102,7 @@ A dictionary that contains the details of the specified index.
     'total_rows': 0,
     'indexed_rows': 0,
     'pending_index_rows': 0,
-    'state': 3,
+    'state': 'Finished',
     'field_name': 'my_vector',
     'index_name': 'my_vector'
 }
@@ -114,9 +134,9 @@ A dictionary that contains the details of the specified index.
 
     The number of rows to be indexed in the specified field.
 
-- **state** (*int*) -
+- **state** (*str*) -
 
-    The state of the index-building process. Possible values are as follows:
+    The state of the index-building process.
 
 - **field_name** (*str*) -
 
@@ -132,7 +152,7 @@ A dictionary that contains the details of the specified index.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -212,7 +232,7 @@ client.describe_index(
 # }
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [add_index()](./Management-add_index)
 

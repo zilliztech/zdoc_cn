@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Partition-create
+sidebar_key: cli/Partition-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a partition in a collection. | Cloud"
 type: docx
-token: UxAvdPDetoIl4mx5QB8cpeLynbh
+token: JBRhd3cb5owndqxODOxcd08InRe
 sidebar_position: 1
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a partition in a collection.
 
-## Description
+## Description\{#description}
 
 A partition is a subset of a collection. Each partition shares the same data structure with its parent collection but contains only a subset of the data in the collection.
 
@@ -43,7 +43,7 @@ You can add more partitions and insert entities into them based on certain crite
 
 A collection can have up to 1,024 partitions.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz partition create
@@ -55,7 +55,7 @@ zilliz partition create
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -97,7 +97,7 @@ zilliz partition create
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz partition create --collection my_collection --partition my_partition

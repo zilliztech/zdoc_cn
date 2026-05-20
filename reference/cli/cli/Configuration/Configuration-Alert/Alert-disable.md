@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "disable | Cloud"
 slug: /cli/cli/Alert-disable
+sidebar_key: cli/Alert-disable
 sidebar_label: "disable"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation disables an alert rule. | Cloud"
 type: docx
-token: Dx3jdB9XjoyDwXxuX2GcTgBanDc
+token: AVX3dxX68oYAc1x06uVc7bgcnx1
 sidebar_position: 3
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - disable
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation disables an alert rule.
 
-## Description
+## Description\{#description}
 
 You can run this command to disable the specified alert rules when they are temporarily not needed. The disabled alert rules still exist, and you can enable any of them as needed.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alert disable
@@ -46,7 +46,7 @@ zilliz alert disable
 [--output <json | table | text>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--id** (*string*) -
 
@@ -70,7 +70,7 @@ zilliz alert disable
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alert disable --id xxx

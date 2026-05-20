@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropCollectionFieldProperties() | Java | v2"
 slug: /java/java/v2-Collections-dropCollectionFieldProperties
+sidebar_key: java/v2-Collections-dropCollectionFieldProperties
 sidebar_label: "dropCollectionFieldProperties()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: O3E9duLvfoMC26x8AmDcomlWneh
 sidebar_position: 26
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollectionFieldProperties()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation drops the specified properties of a field.
 public void dropCollectionFieldProperties(DropCollectionFieldPropertiesReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropCollectionFieldProperties(DropCollectionFieldPropertiesReq.builder()
@@ -75,7 +75,7 @@ dropCollectionFieldProperties(DropCollectionFieldPropertiesReq.builder()
 
 None
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

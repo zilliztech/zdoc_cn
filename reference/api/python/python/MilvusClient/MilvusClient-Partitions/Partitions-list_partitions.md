@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-list_partitions
+sidebar_key: python/Partitions-list_partitions
 sidebar_label: "list_partitions()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Dxgqdvlk5o2VScxqmL1ctc1Inqb
 sidebar_position: 5
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - list_partitions()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation lists the partitions in a specified collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 list_partitions(
@@ -68,7 +74,7 @@ A list of partition names.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -96,7 +102,7 @@ client.list_partitions(
 # ['_default', 'partition_A']
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_partition()](./Partitions-create_partition)
 

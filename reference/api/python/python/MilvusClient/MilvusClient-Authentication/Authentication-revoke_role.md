@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "revoke_role() | Python | MilvusClient"
 slug: /python/python/Authentication-revoke_role
+sidebar_key: python/Authentication-revoke_role
 sidebar_label: "revoke_role()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JJOId59ePoMLefxz1ChcBZ6inOh
 sidebar_position: 19
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
   - revoke_role()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation revokes the role assigned to a user.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 revoke_role(
@@ -81,7 +81,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -101,12 +101,4 @@ client.grant_role(user_name="user_1", role_name="db_ro")
 # 4. Revoke the role from the user
 client.revoke_role(user_name="user_1", role_name="db_ro")
 ```
-
-## Related methods
-
-- [describe_role()](./Authentication-describe_role)
-
-- [grant_role()](./Authentication-grant_role)
-
-- [list_roles()](./Authentication-list_roles)
 

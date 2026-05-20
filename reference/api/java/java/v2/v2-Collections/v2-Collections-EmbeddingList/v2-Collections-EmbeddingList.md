@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "EmbeddingList | Java | v2"
 slug: /java/java/v2-Collections-EmbeddingList
+sidebar_key: java/v2-Collections-EmbeddingList
 sidebar_label: "EmbeddingList"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EXcNdtZrro7Ufkxp3G6cUArOn7b
 sidebar_position: 2
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud
   - EmbeddingList
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ An **EmbeddingList** instance represents a list of vector embeddings. You can us
 io.milvus.v2.service.vector.request.data.EmbeddingList
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an empty embedding list or a list of given vector embeddings.
 
@@ -53,7 +53,7 @@ EmbeddingList
 
 An EmbeddingList instance comprises one or multiple vector embeddings. You can use it to search against the vector fields in the Struct elements of an Array of Structs field.
 
-## Examples:
+## Examples:\{#examples}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "CollectionSchema | Python | MilvusClient"
 slug: /python/python/MilvusClient-CollectionSchema
+sidebar_key: python/MilvusClient-CollectionSchema
 sidebar_label: "CollectionSchema"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Python | MilvusClient"
 type: docx
-token: U4Q8deNe2offXCx3OgIc9QJPnnh
+token: SSiodq10FoH26hx2HlccfcAgnje
 sidebar_position: 2
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - CollectionSchema
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ A **CollectionSchema** instance represents the schema of a collection. A schema 
 class pymilvus.CollectionSchema
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs the schema of a collection by defining fields, data types, and other parameters.
 
@@ -54,11 +54,11 @@ CollectionSchema(
 
     **[REQUIRED]**
 
-    A list of **FieldSchema** objects that define the fields in the collection schema.
+    A list of **[FieldSchema](./ORM-FieldSchema)** objects that define the fields in the collection schema.
 
     <Admonition type="info" icon="📘" title="What is a field schema?">
 
-    <p>A field schema represents and contains metadata for a single field, while <strong>CollectionSchema</strong> ties together a list of FieldSchema objects to define the full schema.</p>
+    A field schema represents and contains metadata for a single field, while **CollectionSchema** ties together a list of FieldSchema objects to define the full schema.
 
     </Admonition>
 
@@ -68,6 +68,24 @@ CollectionSchema(
 
     If a description is not provided, it will be set to an empty string.
 
+- **external_source** (*str*) -
+
+    The external source URI, which should be a `volume://` URI that points to an accessible external volume. For example, `volume://<volume-name>/path/to/folder/`..
+
+- **external_spec** (*str*) -
+
+    The external source specifications, which are a set of secondary parameters:
+
+    - **format** (*str*) - 
+
+        The format of the target source data files.
+
+        Possible values are `parquet`, `vortex`, `lance-table`, and `iceberg-table`.
+
+    - **snapshot_id** (*str*) -
+
+        The ID of an Iceberg table. This applies only when `format` is `iceberg-table`.
+
 - **kwargs** -
 
     - **auto_id** (*bool*) -
@@ -76,15 +94,19 @@ CollectionSchema(
 
         Setting this to **True** makes the primary field automatically increment. In this case, the primary field should not be included in the data to insert to avoid errors.
 
+        This parameter does not apply to external collections.
+
     - **enable_dynamic_field** (*bool*) -
 
         Whether allows Zilliz Cloud saves the values of undefined fields in a dynamic field if the data being inserted into the target collection includes fields that are not defined in the collection's schema.
 
         When you set this to **True**,  and Zilliz Cloud will create a field called **&#36;meta** to store any undefined fields and their values from the data that is inserted.
 
+        This parameter does not apply to external collections.
+
         <Admonition type="info" icon="📘" title="What is a dynamic field?">
 
-        <p>If the data being inserted into the target collection includes fields that are not defined in the collection's schema, those fields will be saved in a dynamic field as key-value pairs.</p>
+        If the data being inserted into the target collection includes fields that are not defined in the collection's schema, those fields will be saved in a dynamic field as key-value pairs.
 
         </Admonition>
 
@@ -94,7 +116,9 @@ CollectionSchema(
 
         The value should be the name of a field listed in **fields**.
 
-        As an alternative, you can set **is_primary** when creating a **FieldSchema** object.
+        As an alternative, you can set **is_primary** when creating a **[FieldSchema](./ORM-FieldSchema)** object.
+
+        This parameter does not apply to external collections.
 
     - **partition_key_field** (*str*) -
 
@@ -104,19 +128,25 @@ CollectionSchema(
 
         Setting this makes Zilliz Cloud manage all partitions in the current collection.
 
-        As an alternative, you can set **is_partition_key** when creating a **FieldSchema** object.
+        As an alternative, you can set **is_partition_key** when creating a **[FieldSchema](./ORM-FieldSchema)** object.
+
+        This parameter does not apply to external collections.
 
         <Admonition type="info" icon="📘" title="What is a partition key?">
 
-        <p>Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.</p>
-        <p>This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.</p>
-        <p>As an alternative, you can set <strong>partition<em>key</em>field</strong> when creating a <strong>CollectionSchema</strong> object.</p>
+        Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.
+
+        This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.
+
+        As an alternative, you can set **partition_key_field** when creating a **CollectionSchema** object.
 
         </Admonition>
 
     - **partition_key_isolation** (*bool*) -
 
         Whether to enable partition key isolation to improve further search performance in scalar filtering on the partition key. For details, refer to [Use Partition Key Isolation](/docs/use-partition-key#use-partition-key-isolation).
+
+        This parameter does not apply to external collections.
 
 **RETURN TYPE:**
 
@@ -134,7 +164,7 @@ A **CollectionSchema** object.
 
 - **FieldTypeException**: 
 
-    This exception will be raised when a field in the **fields** list is not a **FieldSchema** object.
+    This exception will be raised when a field in the **fields** list is not a **[FieldSchema](./ORM-FieldSchema)** object.
 
 - **PrimaryKeyException:**
 
@@ -156,7 +186,7 @@ A **CollectionSchema** object.
 
     - This exception will be raised if the **auto_id** parameter has been set but the value is not a boolean.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType
@@ -181,7 +211,7 @@ schema = CollectionSchema(
 )
 ```
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the `CollectionSchema` class:
 

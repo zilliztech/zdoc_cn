@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getDataType() | Java | v2"
 slug: /java/java/v2-StructFieldSchema-getDataType
+sidebar_key: java/v2-StructFieldSchema-getDataType
 sidebar_label: "getDataType()"
 added_since: v2.6.x
 last_modified: false
@@ -11,17 +11,17 @@ notebook: false
 description: "This operation returns the data type of an Array of Structs field. | Java | v2"
 type: docx
 token: MPJ0dxzDIoNKYPxGA5PcD2F8nRb
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - getDataType()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation returns the data type of an Array of Structs field.
 public DataType getDataType()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 getDataType()
@@ -45,13 +45,13 @@ getDataType()
 
 **RETURN TYPE:**
 
-*DataType*
+*[DataType](./v2-Collections-DataType)*
 
 **RETURNS:**
 
 The return value will always be `DataType.Array`.
 
-## Examples
+## Examples\{#examples}
 
 ```java
 // You can get an instance of StructFieldSchema by describing

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "refreshLoad() | Node.js"
 slug: /node/node/Management-refreshLoad
+sidebar_key: node/Management-refreshLoad
 sidebar_label: "refreshLoad()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Jc43d397doxCRkxal2XcQ1Wyn2g
 sidebar_position: 19
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - refreshLoad()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation refreshes the loading status of a specific collection.
 
 ```javascript
-refreshLoad(data): Promise<ResStatus>
+await milvusClient.refreshLoad(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.refreshLoad({
+await milvusClient.refreshLoad({
    db_name?: string,
    collection_name: string,
    timeout?: number
@@ -89,10 +89,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.refreshLoad({ collection_name: 'my_collection' });
 ```
 

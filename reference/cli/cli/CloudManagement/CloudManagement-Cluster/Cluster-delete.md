@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "delete | Cloud"
 slug: /cli/cli/Cluster-delete
+sidebar_key: cli/Cluster-delete
 sidebar_label: "delete"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation deletes a cluster. This action is irreversible. | Cloud"
 type: docx
-token: VmQ7dKl8FoFf9sxbmG3c3udOnVe
+token: S4Omd93kpoyuqtx4E7scLCoXnyB
 sidebar_position: 2
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - delete
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes a cluster. This action is irreversible.
 
-## Description
+## Description\{#description}
 
 Removing a cluster also wipes out the data that it stores. Please exercise with caution. Running this command without any options triggers a set of interactive prompts.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster delete
@@ -47,7 +47,7 @@ zilliz cluster delete
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -83,7 +83,7 @@ zilliz cluster delete
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz cluster delete --cluster-id in01-xxxxxxxxxxxx

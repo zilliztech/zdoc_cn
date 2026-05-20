@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "clear | Cloud"
 slug: /cli/cli/Configure-clear
+sidebar_key: cli/Configure-clear
 sidebar_label: "clear"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation clears all stored credentials. | Cloud"
 type: docx
-token: Tw8udtdLXoGFYpxXGcZcIGXennh
+token: KYQYdyaoToUGCjxVUVTc16fqn1e
 sidebar_position: 1
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud
   - clear
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation clears all stored credentials.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz configure clear
 ```
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz configure clear

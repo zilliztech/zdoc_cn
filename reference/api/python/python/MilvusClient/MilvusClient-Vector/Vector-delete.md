@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "delete() | Python | MilvusClient"
 slug: /python/python/Vector-delete
+sidebar_key: python/Vector-delete
 sidebar_label: "delete()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DWLXdSCYnoPT4ExktRKceEqLnAd
 sidebar_position: 1
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - delete()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes entities by their IDs or with a boolean expression.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+External collections do not support this operation.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 delete(
@@ -78,7 +84,7 @@ delete(
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>When using filter expressions to delete entities, ensure the collection has been loaded. Otherwise, Zilliz Cloud will return an error.</p>
+    When using filter expressions to delete entities, ensure the collection has been loaded. Otherwise, Zilliz Cloud will return an error.
 
     </Admonition>
 
@@ -116,7 +122,7 @@ A dictionary contains the number of deleted entities.
 
     This exception will be raised when a parameter value doesn't match the required data type.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
@@ -167,16 +173,4 @@ client.delete(
 
 # {'delete_count': 2}
 ```
-
-## Related methods
-
-- [get()](./Vector-get)
-
-- [insert()](./Vector-insert)
-
-- [query()](./Vector-query)
-
-- [search()](./Vector-search)
-
-- [upsert()](./Vector-upsert)
 

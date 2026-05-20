@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "update | Cloud"
 slug: /cli/cli/Alert-update
+sidebar_key: cli/Alert-update
 sidebar_label: "update"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation updates an existing alert rule. | Cloud"
 type: docx
-token: O4mCdJC4IoG8Z8xBbpOcC26wnoe
+token: FxUedhePWogwX4xRxFucLvaqnGg
 sidebar_position: 6
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - update
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation updates an existing alert rule.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alert update
@@ -53,7 +53,7 @@ zilliz alert update
 [--output <json | table | text>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--id** (*string*) -
 
@@ -149,7 +149,7 @@ zilliz alert update
 
     Indicates the output format. Choices: `json`, `table`, `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alert update --project-id porj-xxxx \

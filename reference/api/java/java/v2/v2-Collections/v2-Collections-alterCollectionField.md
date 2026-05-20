@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "alterCollectionField() | Java | v2"
 slug: /java/java/v2-Collections-alterCollectionField
+sidebar_key: java/v2-Collections-alterCollectionField
 sidebar_label: "alterCollectionField()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OtrZdy7OtoC9N9xb8TjcCtM7nfc
 sidebar_position: 2
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - alterCollectionField()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation modifies the properties of a specified collection field.
 public Void alterCollectionField(AlterCollectionFieldReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 alterCollectionField(AlterCollectionFieldReq.builder()
@@ -99,7 +99,7 @@ alterCollectionField(AlterCollectionFieldReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -114,7 +114,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// 2. Alter the `max_length` property of a VarChar field named `varchar`
+// 2. Alter the \`max_length\` property of a VarChar field named \`varchar\`
 Map<String, String> properties = new HashMap<>()
 properties.put("max_length", "512")
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropDatabase() | Node.js"
 slug: /node/node/Database-dropDatabase
+sidebar_key: node/Database-dropDatabase
 sidebar_label: "dropDatabase()"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: Ja99dnnaOoncwbx2zIPc4PjunXx
 sidebar_position: 3
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
   - dropDatabase()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,19 +34,19 @@ import Admonition from '@theme/Admonition';
 This operation drops a database.
 
 ```javascript
-dropDatabase(data?): Promise<ResStatus>
+await milvusClient.dropDatabase(data?)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated clusters.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropDatabase({
+await milvusClient.dropDatabase({
     db_name: string,
     timeout?: number
 })
@@ -66,7 +66,7 @@ milvusClient.dropDatabase({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -92,10 +92,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.dropDatabase({ db_name: 'db_to_drop' });
 ```
 

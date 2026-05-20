@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "FunctionType | Node.js"
 slug: /node/node/Collections-FunctionType
+sidebar_key: node/Collections-FunctionType
 sidebar_label: "FunctionType"
 added_since: v2.5.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: Vq2VdsWJaoufsGx5stJcTuyPnDb
 sidebar_position: 17
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud
   - FunctionType
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - **BM25** = 1
 

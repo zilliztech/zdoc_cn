@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add_collection_field() | Python | MilvusClient"
 slug: /python/python/Collections-add_collection_field
+sidebar_key: python/Collections-add_collection_field
 sidebar_label: "add_collection_field()"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: IquldHhyGo9s4IxF3cicOXGnnNf
 sidebar_position: 20
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
   - add_collection_field()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,18 +35,21 @@ This operation adds a new scalar field to an existing collection without recreat
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>If the collection has dynamic field enabled and you add a static field with the same name as an existing dynamic field key, the static field will mask the dynamic field key. The original dynamic values remain accessible via <code>$meta['field_name']</code> syntax.</p>
+If the collection has dynamic field enabled and you add a static field with the same name as an existing dynamic field key, the static field will mask the dynamic field key. The original dynamic values remain accessible via `$meta['field_name']` syntax.
 
 </Admonition>
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This does not apply to external collections.
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 add_collection_field(
     collection_name: str,
-    field_name: str,
-    data_type: DataType,
-    desc: str = "",
     timeout: Optional[float] = None,
     **kwargs
 )
@@ -114,7 +117,7 @@ add_collection_field(
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 **Example 1:** Add a basic nullable field
 

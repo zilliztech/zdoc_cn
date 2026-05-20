@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "resume | Cloud"
 slug: /cli/cli/Cluster-resume
+sidebar_key: cli/Cluster-resume
 sidebar_label: "resume"
 added_since: v0.1.x
 last_modified: false
@@ -10,7 +10,7 @@ beta: false
 notebook: false
 description: "This operation resumes a suspended cluster. | Cloud"
 type: docx
-token: EbredHGusoLbZbxRLiWcjeManIf
+token: EfaUd8o9LoguWnx6jndcyTJfnzd
 sidebar_position: 9
 keywords: 
   - RAG
@@ -21,7 +21,7 @@ keywords:
   - zilliz cloud
   - cloud
   - resume
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation resumes a suspended cluster.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster resume
@@ -43,7 +43,7 @@ zilliz cluster resume
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -75,7 +75,7 @@ zilliz cluster resume
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz cluster resume --cluster-id in01-xxxxxxxxxxxx

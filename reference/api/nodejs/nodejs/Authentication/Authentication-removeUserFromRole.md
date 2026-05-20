@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "removeUserFromRole() | Node.js"
 slug: /node/node/Authentication-removeUserFromRole
+sidebar_key: node/Authentication-removeUserFromRole
 sidebar_label: "removeUserFromRole()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XmyMdqvDLosr6oxzvhWcw8H2ntg
 sidebar_position: 23
 keywords: 
+  - Dense embedding
   - Faiss vector database
   - Chroma vector database
   - nlp search
-  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
   - removeUserFromRole()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation removes a user from a specific role.
 
 ```javascript
-removeUserFromRole(data): Promise<ResStatus>
+await milvusClient.removeUserFromRole(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.removeUserFromRole({
+await milvusClient.removeUserFromRole({
    username: string,
    rolename: string,
    timeout?: number
@@ -93,10 +93,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-milvusClient.removeUserFromRole({
+await milvusClient.removeUserFromRole({
    username: 'my',
    roleName: 'myrole'
  });

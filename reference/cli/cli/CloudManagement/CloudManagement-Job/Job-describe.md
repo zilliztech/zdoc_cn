@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/Job-describe
+sidebar_key: cli/Job-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets the status of an async job (backup, restore, migration, import, etc.). | Cloud"
 type: docx
-token: DKW5dWKqcoDIaHxD5dycfhzTnbd
+token: HrwTdhnBeoZwoBxokBJcQZWznKh
 sidebar_position: 1
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets the status of an async job (backup, restore, migration, import, etc.).
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz job describe
@@ -44,7 +44,7 @@ zilliz job describe
 [--output <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--job-id** (*string*) -
 
@@ -68,7 +68,7 @@ zilliz job describe
 
     Indicates the output format. Choices: `json`, `table`, `text`, `yaml`, `csv`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz job describe --job-id job-xxxxxx

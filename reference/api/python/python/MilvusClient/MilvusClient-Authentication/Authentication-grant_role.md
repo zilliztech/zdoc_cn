@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "grant_role() | Python | MilvusClient"
 slug: /python/python/Authentication-grant_role
+sidebar_key: python/Authentication-grant_role
 sidebar_label: "grant_role()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DsnpdZuDGo77TYxFuYvcDpOgnIf
 sidebar_position: 12
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - grant_role()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation grants a role to a user.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 grant_role(
@@ -81,7 +81,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -98,15 +98,7 @@ client.grant_role(user_name="user_1", role_name="db_ro")
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Each Zilliz Cloud cluster has three built-in roles, namely, <strong>db_ro</strong>, <strong>db_rw</strong>, and <strong>db_admin</strong>. For details, refer to <a href="/docs/user-roles#cluster-built-in-roles">Cluster Built-in Roles</a>.</p>
+Each Zilliz Cloud cluster has three built-in roles, namely, **db\_ro**, **db\_rw**, and **db\_admin**. For details, refer to [Cluster Built-in Roles](/docs/user-roles#cluster-built-in-roles).
 
 </Admonition>
-
-## Related methods
-
-- [describe_role()](./Authentication-describe_role)
-
-- [list_roles()](./Authentication-list_roles)
-
-- [revoke_role()](./Authentication-revoke_role)
 

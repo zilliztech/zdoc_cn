@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropRole() | Node.js"
 slug: /node/node/Authentication-dropRole
+sidebar_key: node/Authentication-dropRole
 sidebar_label: "dropRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: AnkUdEHXmob3Vwx9GIWcDOQanng
 sidebar_position: 13
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - dropRole()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops a custom role.
 
 ```javascript
-dropRole(data): Promise<ResStatus>
+await milvusClient.dropRole(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropRole({
+await milvusClient.dropRole({
    roleName: string,
    timeout?: number
  })
@@ -86,10 +86,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-milvusClient.dropRole({
+await milvusClient.dropRole({
    roleName: 'exampleRole',
  })
 ```

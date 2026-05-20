@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Collection-create
+sidebar_key: cli/Collection-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new collection. | Cloud"
 type: docx
-token: P5jpdMWcMoW2MMxMBtcczRjInYc
+token: YBKydPY0ao8gkkx8kj4c6c7TnBh
 sidebar_position: 2
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new collection.
 
-## Description
+## Description\{#description}
 
 A collection is a two-dimensional table with fixed columns and variable rows. Each column represents a field, and each row represents an entity.
 
@@ -45,7 +45,7 @@ To save you the effort of tuning index settings, Zilliz Cloud handles index tuni
 
 Running this command without any options triggers a set of interactive prompts to help you set it up. You can also attach a payload to specify the schema and index parameters manually.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection create
@@ -63,7 +63,7 @@ zilliz collection create
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -384,7 +384,7 @@ zilliz collection create
 
     Indicates the description of the collection.
 
-## Example
+## Example\{#example}
 
 ```bash
 # Quick create with defaults (COSINE metric, auto schema)

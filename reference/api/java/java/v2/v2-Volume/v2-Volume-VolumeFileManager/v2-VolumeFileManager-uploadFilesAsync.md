@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "uploadFilesAsync | Java | v2"
 slug: /java/java/v2-VolumeFileManager-uploadFilesAsync
+sidebar_key: java/v2-VolumeFileManager-uploadFilesAsync
 sidebar_label: "uploadFilesAsync"
 added_since: false
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: GE25dbBmMoU8glxCWbJckYObnN1
 sidebar_position: 1
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
   - uploadFilesAsync
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation uploads the local file at the specified source path to the target
 public CompletableFuture<UploadFilesResult> uploadFilesAsync(UploadFilesRequest request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 uploadFileAsync(UploadFilesRequest.builder()
@@ -63,11 +63,11 @@ uploadFileAsync(UploadFilesRequest.builder()
 
 **RETURN TYPE**
 
-*CompletableFuture\<UploadFilesResult>*
+*CompletableFuture&lt;UploadFilesResult&gt;*
 
 **RETURNS**
 
-A **CompletableFuture\<UploadFilesResult>** instance that resolves to an **UploadFilesResult** instance that has the following attributes.
+A **CompletableFuture&lt;UploadFilesResult&gt;** instance that resolves to an **UploadFilesResult** instance that has the following attributes.
 
 - **volumeName** (*str*) -
 
@@ -81,7 +81,7 @@ A **CompletableFuture\<UploadFilesResult>** instance that resolves to an **Uploa
 
     The path to the data file within the specified volume after this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import com.google.gson.Gson;

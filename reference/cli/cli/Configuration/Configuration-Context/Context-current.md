@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "current | Cloud"
 slug: /cli/cli/Context-current
+sidebar_key: cli/Context-current
 sidebar_label: "current"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation shows the current context. | Cloud"
 type: docx
-token: TwNSdFMsaoQPVYxBYx8cnGpinng
-sidebar_position: 1
+token: E1lydJB5BorHaExspUKcwQ2ande
+sidebar_position: 2
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud
   - current
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,20 +33,20 @@ import Admonition from '@theme/Admonition';
 
 This operation shows the current context.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz context current
 [--output <json | table | text>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--output, -o** (*string*) -
 
     Indicates the output format. Choices: `json`, `table`, `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz context current

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "createUser() | Java | v2"
 slug: /java/java/v2-Authentication-createUser
+sidebar_key: java/v2-Authentication-createUser
 sidebar_label: "createUser()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OTMXd9uNWoMwe4xvg70cg49Pnmh
 sidebar_position: 4
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - createUser()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation creates a user.
 public void createUser(CreateUserReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 createUser(CreateUserReq.builder()
@@ -67,7 +67,7 @@ createUser(CreateUserReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig

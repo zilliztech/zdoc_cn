@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getPartitionStats() | Java | v2"
 slug: /java/java/v2-Partitions-getPartitionStats
+sidebar_key: java/v2-Partitions-getPartitionStats
 sidebar_label: "getPartitionStats()"
 added_since: v2.4.x
 last_modified: v2.6.x
@@ -21,7 +21,7 @@ keywords:
   - zilliz cloud
   - cloud
   - getPartitionStats()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists the statistics collected on a specific partition.
 public GetPartitionStatsResp getPartitionStats(GetPartitionStatsReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 getPartitionStats(GetPartitionStatsReq.builder()
@@ -82,7 +82,7 @@ A **GetPartitionStatsResp** object containing collected statistics on the specif
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

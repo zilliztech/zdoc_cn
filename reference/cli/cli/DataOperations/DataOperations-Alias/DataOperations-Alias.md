@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to alias management. | Cloud"
 type: folder
-token: PNMKfl6RdlfEzzdg6zycDTQHnGw
+token: MwIofv5z3ljhiBdoZA4cEPdZnGg
 sidebar_position: 1
 sidebar_label: "Alias"
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
   - Alias
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

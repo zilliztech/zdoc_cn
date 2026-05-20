@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "hasCollection() | Java | v2"
 slug: /java/java/v2-Collections-hasCollection
+sidebar_key: java/v2-Collections-hasCollection
 sidebar_label: "hasCollection()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: RaBJd4clVo6KX4xjGJoc3Mz7nhg
 sidebar_position: 18
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
   - hasCollection()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation checks whether a specific collection exists.
 public Boolean hasCollection(HasCollectionReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 hasCollection(HasCollectionReq.builder()
@@ -71,7 +71,7 @@ A boolean value indicating whether the specified collection exists.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

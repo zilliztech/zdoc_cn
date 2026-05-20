@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "MilvusClient | Node.js"
 slug: /node/node/Client-MilvusClient
+sidebar_key: node/Client-MilvusClient
 sidebar_label: "MilvusClient"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClient instance represents a Node.js client that connects to a specific Zilliz Cloud cluster. | Node.js"
 type: docx
-token: ZxPXdeBXGopnvMxl7v6c9DSanFL
+token: DsyLdmJr0o7FAfxwPcNct1Bqnth
 sidebar_position: 5
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
   - MilvusClient
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -37,7 +37,7 @@ A **MilvusClient** instance represents a Node.js client that connects to a speci
 new MilvusClient(options:ClientConfig)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
 new MilvusClient(config: ClientConfig)
@@ -114,6 +114,10 @@ new MilvusClient(config: ClientConfig)
     - **maxRetries** (*number*) -
 
         The number of attempts to retry the connection if the connection is not successful.
+
+    - **option** (*Record\<string, string>*) -
+
+        Reserved connection options sent in the `ConnectRequest` client info. Use this to pass arbitrary key-value pairs to the server during the initial handshake.
 
     - **password** (*string*) -
 
@@ -217,7 +221,7 @@ new MilvusClient(config: ClientConfig)
 
 This method returns a Milvus Client instance that extends GRPC Client and handles communication with Zilliz Cloud clusters.
 
-## Example
+## Example\{#example}
 
 ```java
 new MilvusClient(config: ClientConfig)
@@ -225,9 +229,7 @@ new MilvusClient(config: ClientConfig)
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<ul>
-<li>Set <strong>configOrAddress</strong> to your cluster endpoint. You can find the relevant information in Cluster details on the Zilliz Cloud console.</li>
-</ul>
+- Set **configOrAddress** to your cluster endpoint. You can find the relevant information in Cluster details on the Zilliz Cloud console.
 
 </Admonition>
 

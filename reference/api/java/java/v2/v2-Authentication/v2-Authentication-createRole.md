@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "createRole() | Java | v2"
 slug: /java/java/v2-Authentication-createRole
+sidebar_key: java/v2-Authentication-createRole
 sidebar_label: "createRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: V0xwdLOrhog7OBxTX76cQGQknSb
 sidebar_position: 3
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
   - createRole()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation creates a custom role.
 public void createRole(CreateRoleReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 createRole(CreateRoleReq.builder()
@@ -62,7 +62,7 @@ createRole(CreateRoleReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "VolumeManager | Java | v2"
 slug: /java/java/v2-Volume-VolumeManager
+sidebar_key: java/v2-Volume-VolumeManager
 sidebar_label: "VolumeManager"
 added_since: false
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QHyGdm4FyoFwCzxDgUUc9yQrnPf
 sidebar_position: 4
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
   - VolumeManager
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -39,11 +39,11 @@ io.milvus.bulkwriter.VolumeManager
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A volume is an intermediate storage spot where you can hold your data for further processing, such as data merging, migration, or importing. For details, refer to <a href="/docs/volume">Volume</a>.</p>
+A volume is an intermediate storage spot where you can hold your data for further processing, such as data merging, migration, or importing. For details, refer to [Volume](/docs/volume).
 
 </Admonition>
 
-## Constructor
+## Constructor\{#constructor}
 
 This constructor initializes a new `VolumeManager` instance designed to maintain a connection to Zilliz Cloud's Volume service.
 
@@ -62,7 +62,7 @@ VolumeManager(
 
     **[REQUIRED]**
 
-    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com` (Global) or `https://api.cloud.zilliz.com.cn` (China), depending on the platform you have registered with.
+    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com`.
 
 - **apiKey** (*str*) -
 
@@ -78,7 +78,7 @@ VolumeManager(
 
 A `VolumeManager` instance.
 
-## Examples
+## Examples\{#examples}
 
 ```java
 import io.milvus.bulkwriter.VolumeManager;

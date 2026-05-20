@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "commit() | Python"
 slug: /python/python/LocalBulkWriter-commit
+sidebar_key: python/LocalBulkWriter-commit
 sidebar_label: "commit()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EtBDdoGaFo3bOExKxCHcKgpenib
 sidebar_position: 2
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - commit()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation commits the appended data.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 pymilvus.LocalBulkWriter.commit(
@@ -51,7 +51,7 @@ pymilvus.LocalBulkWriter.commit(
 
         The value defaults to **None**, indicating no callback is there to call. Use this to add post-commit actions.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType
@@ -82,7 +82,7 @@ def callback():
 writer.commit(call_back=callback)
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [append_row()](./LocalBulkWriter-append_row)
 

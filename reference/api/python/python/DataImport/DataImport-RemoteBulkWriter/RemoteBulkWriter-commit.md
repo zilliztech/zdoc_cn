@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "commit() | Python"
 slug: /python/python/RemoteBulkWriter-commit
+sidebar_key: python/RemoteBulkWriter-commit
 sidebar_label: "commit()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: VccVd4MTgoPzCixDVtgcEoKWnPf
 sidebar_position: 3
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
   - commit()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation commits the appended data.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 commit(
@@ -51,7 +51,7 @@ commit(
 
         The value defaults to **None**, indicating no callback is there to call. Use this to add post-commit actions.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType
@@ -92,7 +92,7 @@ def callback():
 writer.commit(call_back=callback)
 ```
 
-## Related classes and methods
+## Related classes and methods\{#related-classes-and-methods}
 
 - [append_row()](./RemoteBulkWriter-append_row)
 

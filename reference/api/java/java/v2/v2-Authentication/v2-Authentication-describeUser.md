@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "describeUser() | Java | v2"
 slug: /java/java/v2-Authentication-describeUser
+sidebar_key: java/v2-Authentication-describeUser
 sidebar_label: "describeUser()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: YLQJdvVA8odibAx7mQscYwMVn8g
 sidebar_position: 6
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - describeUser()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation describes a specific user.
 public DescribeUserResp describeUser(DescribeUserReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 describeUser(DescribeUserReq.builder()
@@ -72,7 +72,7 @@ A **DescribeUserResp** object containing the details of the user.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "FunctionType | Java | v2"
 slug: /java/java/v2-Function-FunctionType
+sidebar_key: java/v2-Function-FunctionType
 sidebar_label: "FunctionType"
 added_since: v2.5.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: Va2Fd7J6EoKmKCxaww0caOdInpF
 sidebar_position: 4
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - FunctionType
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - **BM25** (1)
 

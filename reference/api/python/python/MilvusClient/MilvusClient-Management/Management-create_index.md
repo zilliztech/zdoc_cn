@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_index() | Python | MilvusClient"
 slug: /python/python/Management-create_index
+sidebar_key: python/Management-create_index
 sidebar_label: "create_index()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
 sidebar_position: 3
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - create_index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation creates an index for a specific collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For this operation in a collection of a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For this operation in a collection for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints, and then create a session to attach to an on-demand cluster for searches.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 create_index(
@@ -86,7 +106,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -142,7 +162,7 @@ client.list_indexes(collection_name="customized_setup")
 # ['my_id', 'my_vector']
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [add_index()](./Management-add_index)
 

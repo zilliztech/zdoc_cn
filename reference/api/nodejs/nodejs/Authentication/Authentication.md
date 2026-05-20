@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "Methods related to implement role-based access control to your resources. | Node.js"
 type: folder
-token: H1JWfZh74lkVhgdfGiKcQfsinPg
+token: KWn3ff3dRlg3zndqerbcW0QXn1c
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud
   - Authentication
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 ---
 

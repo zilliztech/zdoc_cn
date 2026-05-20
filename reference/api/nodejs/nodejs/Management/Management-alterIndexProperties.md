@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "alterIndexProperties() | Node.js"
 slug: /node/node/Management-alterIndexProperties
+sidebar_key: node/Management-alterIndexProperties
 sidebar_label: "alterIndexProperties()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PcQcdDwthoSEZaxI6GncpUpGnBh
 sidebar_position: 1
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
   - alterIndexProperties()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation modifies the settings of specific index properties.
 
 ```javascript
-alterIndexProperties(data): Promise<ResStatus>
+await milvusClient.alterIndexProperties(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.alterIndexProperties({
+await milvusClient.alterIndexProperties({
      db_name?: string,
      collection_name: string,
      index_name: string,
@@ -107,7 +107,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 const milvusClient = new MilvusClient(MILUVS_ADDRESS);

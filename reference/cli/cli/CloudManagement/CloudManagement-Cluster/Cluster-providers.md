@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "providers | Cloud"
 slug: /cli/cli/Cluster-providers
+sidebar_key: cli/Cluster-providers
 sidebar_label: "providers"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all applicable cloud providers. | Cloud"
 type: docx
-token: Dd7HdLhKaoNhFSxVzGZcfit9nzf
+token: Rhked7rPvopHixxQZe6czSUwnvf
 sidebar_position: 7
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud
   - providers
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all applicable cloud providers.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster providers
@@ -42,7 +42,7 @@ zilliz cluster providers
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--output, -o** (*string*) -
 
@@ -66,7 +66,7 @@ zilliz cluster providers
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz cluster providers

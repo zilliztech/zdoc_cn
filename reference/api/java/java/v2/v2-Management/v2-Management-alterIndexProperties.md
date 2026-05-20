@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "alterIndexProperties() | Java | v2"
 slug: /java/java/v2-Management-alterIndexProperties
+sidebar_key: java/v2-Management-alterIndexProperties
 sidebar_label: "alterIndexProperties()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ITkydrfmroQyLLxusZtc6t1nnjf
 sidebar_position: 1
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
   - alterIndexProperties()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation modifies the properties of a specified index.
 public Void alterIndexProperties(AlterIndexPropertiesReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 alterIndexProperties(AlterIndexPropertiesReq.builder()
@@ -81,7 +81,7 @@ alterIndexProperties(AlterIndexPropertiesReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -96,7 +96,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// 2. Alter the `mmap.enabled` property
+// 2. Alter the \`mmap.enabled\` property
 Map<String, String> properties = new HashMap<>()
 properties.put("mmap.enabled", "true")
 

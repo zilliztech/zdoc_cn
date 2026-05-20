@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add_index() | Python | MilvusClient"
 slug: /python/python/Management-add_index
+sidebar_key: python/Management-add_index
 sidebar_label: "add_index()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: false
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: SM7ld0ZsEoYLqaxVMZxcSH82n9f
 sidebar_position: 1
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - add_index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation adds index parameters for a specific field in a collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For this operation in a collection of a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For this operation in a collection for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints, and then create a session to attach to an on-demand cluster for searches.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 IndexParams.add_index(
@@ -83,7 +103,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -154,7 +174,7 @@ index_params.add_index(
 )
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_index()](./Management-create_index)
 

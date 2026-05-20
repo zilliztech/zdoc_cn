@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/User-list
+sidebar_key: cli/User-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all database users. | Cloud"
 type: docx
-token: HfpOdcNw3ovpRgxrIQAcFW0Jnlp
+token: RhYcd912ioVJNOxjy9kc3rnbnzK
 sidebar_position: 5
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation lists all database users.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz user list
@@ -48,7 +48,7 @@ zilliz user list
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--output, -o** (*string*) -
 
@@ -72,7 +72,7 @@ zilliz user list
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz user list

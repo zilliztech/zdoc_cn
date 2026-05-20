@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "get-load-state | Cloud"
 slug: /cli/cli/Collection-getloadstate
+sidebar_key: cli/Collection-getloadstate
 sidebar_label: "get-load-state"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets collection load state. | Cloud"
 type: docx
-token: RnRTdshwloBzIFx5rLHcFTm2nVh
+token: ROPbdTU6doxFGRxxcfYcgyBPnqg
 sidebar_position: 6
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - get-load-state
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets collection load state.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection get-load-state
@@ -45,7 +45,7 @@ zilliz collection get-load-state
 [--partition-names <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -85,7 +85,7 @@ zilliz collection get-load-state
 
     Indicates the partition names to check their load state. You can chain up this option with different partition names.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection get-load-state --name my_collection

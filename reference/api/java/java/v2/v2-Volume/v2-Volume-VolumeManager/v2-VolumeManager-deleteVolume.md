@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "deleteVolume() | Java | v2"
 slug: /java/java/v2-VolumeManager-deleteVolume
+sidebar_key: java/v2-VolumeManager-deleteVolume
 sidebar_label: "deleteVolume()"
 added_since: false
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OalndLUMRoUqpMxr2QscYTCenre
 sidebar_position: 2
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud
   - deleteVolume()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation deletes a volume.
 public void deleteVolume(DeleteVolumeRequest request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 deleteVolume(DeleteVolumeRequest.builder()
@@ -62,7 +62,7 @@ deleteVolume(DeleteVolumeRequest.builder()
 
 None
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.bulkwriter.VolumeManager;

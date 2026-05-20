@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "revoke-privilege | Cloud"
 slug: /cli/cli/Role-revokeprivilege
+sidebar_key: cli/Role-revokeprivilege
 sidebar_label: "revoke-privilege"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation revokes a privilege from a role. | Cloud"
 type: docx
-token: PT02de9SeooyPYxZW2ucueP1nAd
+token: YXtHdG865oGg7IxwoZRcIJkQn8e
 sidebar_position: 6
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - revoke-privilege
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation revokes a privilege from a role.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only.</p>
+This command is available for Dedicated clusters only.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz role revoke-privilege
@@ -53,7 +53,7 @@ zilliz role revoke-privilege
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--role** (*string*) -
 
@@ -111,7 +111,7 @@ zilliz role revoke-privilege
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz role revoke-privilege --role my_role --object-type Collection --object-name my_col --privilege Search

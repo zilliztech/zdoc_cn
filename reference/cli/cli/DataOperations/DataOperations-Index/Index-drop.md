@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "drop | Cloud"
 slug: /cli/cli/Index-drop
+sidebar_key: cli/Index-drop
 sidebar_label: "drop"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation drops an index. | Cloud"
 type: docx
-token: OUnsdvdjxoz76OxI9hLcFWQrnug
+token: EJO8dhKSYoWk3AxksTrcGCzdnxf
 sidebar_position: 3
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops an index.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz index drop
@@ -46,7 +46,7 @@ zilliz index drop
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -90,7 +90,7 @@ zilliz index drop
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz index drop --collection my_collection --index-name my_index

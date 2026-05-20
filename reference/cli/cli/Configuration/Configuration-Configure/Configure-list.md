@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Configure-list
+sidebar_key: cli/Configure-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all configuration values. | Cloud"
 type: docx
-token: XuEOdjJbVo2k7mxPTGbclGipnug
+token: S7Hkd5HAfob60uxILjIcdng7nXe
 sidebar_position: 3
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all configuration values.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz configure list
 ```
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz configure list

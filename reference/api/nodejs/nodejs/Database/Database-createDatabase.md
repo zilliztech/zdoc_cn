@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "createDatabase() | Node.js"
 slug: /node/node/Database-createDatabase
+sidebar_key: node/Database-createDatabase
 sidebar_label: "createDatabase()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation creates a database. | Node.js"
 type: docx
-token: JmlKdBz7Io91Ffx9rpKce3vUnMc
+token: UouKd4h01oL9Rqx73jjcHM3enSh
 sidebar_position: 2
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
   - createDatabase()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,19 +34,19 @@ import Admonition from '@theme/Admonition';
 This operation creates a database.
 
 ```javascript
-createDatabase(data): Promise<ResStatus>
+await milvusClient.createDatabase(data)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated clusters.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.createDatabase({
+await milvusClient.createDatabase({
     db_name: string,
     properties?: Object
     timeout?: number
@@ -95,7 +95,7 @@ milvusClient.createDatabase({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -121,9 +121,15 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
-const resStatus = await milvusClient.createDatabase({ db_name: 'new_db' });
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
+const resStatus = await milvusClient.createDatabase({
+    db_name: 'new_db',
+    properties: { 'database.resource_groups': 'rg1' },
+});
 ```

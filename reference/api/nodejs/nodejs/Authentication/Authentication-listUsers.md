@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "listUsers() | Node.js"
 slug: /node/node/Authentication-listUsers
+sidebar_key: node/Authentication-listUsers
 sidebar_label: "listUsers()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: Z0EOd1PXooNeowx4SQgcq3synBc
 sidebar_position: 21
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
   - listUsers()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,10 +34,10 @@ import Admonition from '@theme/Admonition';
 This operation lists currently available users.
 
 ```javascript
-listUsers(data): Promise<ListCredUsersResponse>
+await milvusClient.listUsers(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
 milvusClient.listUsers()
@@ -51,26 +51,24 @@ milvusClient.listUsers()
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-*Returns Promise\<ListCredUsersResponse>*
+**RETURNS** *Promise&lt;ListCredUsersResponse&gt;*
 
 This method returns a promise that resolves to a **ListCredUsersResponse** object.
 
-```javascript
+```typescript
 {
-    usernames: string
-    status: ResStatus
+    usernames: string[],
+    status:  ResStatus
 }
 ```
 
 **PARAMETERS:**
 
 - **usernames** (*string[]*) -
-
-    A list of user names.
+A list of usernames that exist in the current Milvus instance.
 
 - **ResStatus**
-
-    A **ResStatus object.
+A **ResStatus** object.
 
     - **code** (*number*) -
 
@@ -78,13 +76,13 @@ This method returns a promise that resolves to a **ListCredUsersResponse** objec
 
     - **error_code** (*string* | *number*) -
 
-        An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+        An error code that indicates an occurred error. It remains **Success** if this operation succeeds.
 
-    - **reason** (*string*) - 
+    - **reason** (*string*) -
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 milvusClient.listUsers()

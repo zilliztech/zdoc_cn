@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to the management of Zilliz CLI context. | Cloud"
 type: folder
-token: XwnjfvziYljpWjdb1IacbEnVnhb
+token: FewAfDseeli62CdqFcBc7Lh2ncD
 sidebar_position: 5
 sidebar_label: "Context"
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - Context
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

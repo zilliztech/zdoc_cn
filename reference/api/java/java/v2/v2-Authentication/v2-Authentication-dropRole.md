@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropRole() | Java | v2"
 slug: /java/java/v2-Authentication-dropRole
+sidebar_key: java/v2-Authentication-dropRole
 sidebar_label: "dropRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OLVbdsTOAoQwybx7oLPcZE3wnCf
 sidebar_position: 8
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
   - dropRole()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation drops a custom role.
 public void dropRole(DropRoleReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropRole(DropRoleReq.builder()
@@ -62,7 +62,7 @@ dropRole(DropRoleReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "updatePassword() | Java | v2"
 slug: /java/java/v2-Authentication-updatePassword
+sidebar_key: java/v2-Authentication-updatePassword
 sidebar_label: "updatePassword()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: GQH8dgqlPoRY1sxFhCRcLlgInNc
 sidebar_position: 20
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
   - updatePassword()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation updates the password of a specific user.
 public void updatePassword(UpdatePasswordReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 updatePassword(UpdatePasswordReq.builder()
@@ -72,7 +72,7 @@ updatePassword(UpdatePasswordReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

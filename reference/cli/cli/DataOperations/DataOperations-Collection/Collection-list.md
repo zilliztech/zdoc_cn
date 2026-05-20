@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Collection-list
+sidebar_key: cli/Collection-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all collections. | Cloud"
 type: docx
-token: Tb1ydrMzloe1iwxtfobcY4Thn1e
+token: N10RdNXeNoseZNxkxBtcLGa1nKf
 sidebar_position: 9
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all collections.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection list
@@ -43,7 +43,7 @@ zilliz collection list
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--database** (*string*) -
 
@@ -73,7 +73,7 @@ zilliz collection list
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection list

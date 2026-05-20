@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to Zilliz CLI configurations | Cloud"
 type: folder
-token: FsZhfuntQlHRRQdBeXEcosCEnzf
+token: EGSzfJvZplcqb5dWwzkcksiQn5d
 sidebar_position: 2
 sidebar_label: "Configuration"
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
   - zilliz
   - zilliz cloud
   - cloud
   - Configuration
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

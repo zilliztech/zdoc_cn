@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "has | Cloud"
 slug: /cli/cli/Collection-has
+sidebar_key: cli/Collection-has
 sidebar_label: "has"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation checks if a collection exists. | Cloud"
 type: docx
-token: B0Wld8SqbonTPHxqGTac4Sngnob
+token: CidCduwW8oIywtxiHMQc8v2XnBe
 sidebar_position: 8
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
   - has
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks if a collection exists.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection has
@@ -80,7 +80,7 @@ zilliz collection has
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection has --name my_collection

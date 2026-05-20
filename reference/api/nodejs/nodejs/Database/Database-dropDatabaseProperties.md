@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropDatabaseProperties() | Node.js"
 slug: /node/node/Database-dropDatabaseProperties
+sidebar_key: node/Database-dropDatabaseProperties
 sidebar_label: "dropDatabaseProperties()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: GulFdOWMboEK9bxnzMSc8Uf8n8b
 sidebar_position: 4
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - dropDatabaseProperties()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,19 +34,19 @@ import Admonition from '@theme/Admonition';
 This operation drops the setting of the specified properties.
 
 ```javascript
-dropDatabaseProperties(data): Promise<ResStatus>
+await milvusClient.dropDatabaseProperties(data)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated clusters.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropDatabaseProperties({
+await milvusClient.dropDatabaseProperties({
     db_name: string,
     delete_properties: string[],
     timeout?: number
@@ -95,7 +95,7 @@ milvusClient.dropDatabaseProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -121,10 +121,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.dropDatabaseProperties({ 
     db_name: 'new_db',
     delete_properties: ["database.replica.number"] 

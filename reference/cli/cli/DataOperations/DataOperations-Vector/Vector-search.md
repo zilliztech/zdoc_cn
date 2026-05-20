@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "search | Cloud"
 slug: /cli/cli/Vector-search
+sidebar_key: cli/Vector-search
 sidebar_label: "search"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation searches for similar vectors. | Cloud"
 type: docx
-token: X82qdozLzoGYUaxyRE2cBIBRnff
+token: QcWcdXbgxooJO4xuwADc9YqAn8c
 sidebar_position: 6
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - search
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation searches for similar vectors.
 
-## Description
+## Description\{#description}
 
 The ANN and k-Nearest Neighbors (kNN) search are the most common methods for vector similarity search. In a kNN search, you must compare all vectors in a vector space with the query vector carried in the search request before figuring out the most similar ones, which is time-consuming and resource-intensive.
 
@@ -43,7 +43,7 @@ To reduce the learning curve, Zilliz Cloud provides **AUTOINDEX**. With **AUTOIN
 
 For details on AUTOINDEX and applicable metric types, refer to [AUTOINDEX Explained](/docs/autoindex-explained) and [Metric Types](/docs/search-metrics-explained).
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz vector search
@@ -61,7 +61,7 @@ zilliz vector search
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -151,7 +151,7 @@ zilliz vector search
 
     Indicates a JSON string of search parameters. For example, `{"metricType":"COSINE","params":{"level": 5}}`).
 
-## Example
+## Example\{#example}
 
 ```bash
 # Basic vector search

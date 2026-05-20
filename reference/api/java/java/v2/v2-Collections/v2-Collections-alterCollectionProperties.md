@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "alterCollectionProperties() | Java | v2"
 slug: /java/java/v2-Collections-alterCollectionProperties
+sidebar_key: java/v2-Collections-alterCollectionProperties
 sidebar_label: "alterCollectionProperties()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JQ4QdTaadoIDSPxDJRZcSDu3n5g
 sidebar_position: 3
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud
   - alterCollectionProperties()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation modifies the properties of a specified collection.
 public Void alterCollectionProperties(AlterCollectionPropertiesReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 alterCollectionProperties(AlterCollectionPropertiesReq.builder()
@@ -80,7 +80,7 @@ alterCollectionProperties(AlterCollectionPropertiesReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -95,7 +95,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// 2. Alter the `collection.ttl.seconds` property
+// 2. Alter the \`collection.ttl.seconds\` property
 Map<String, String> properties = new HashMap<>()
 properties.put("collection.ttl.seconds", "86400")
 

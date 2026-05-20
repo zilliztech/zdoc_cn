@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listPartitions() | Java | v2"
 slug: /java/java/v2-Partitions-listPartitions
+sidebar_key: java/v2-Partitions-listPartitions
 sidebar_label: "listPartitions()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: Bjs5dej7ZoBKhXxZzMjclPCynmd
 sidebar_position: 5
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - listPartitions()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists the partitions in a specified collection.
 public List<String> listPartitions(ListPartitionsReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 listPartitions(ListPartitionsReq.builder()
@@ -71,7 +71,7 @@ A list of partition names.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "describeRole() | Java | v2"
 slug: /java/java/v2-Authentication-describeRole
+sidebar_key: java/v2-Authentication-describeRole
 sidebar_label: "describeRole()"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: VDKPdBJzdoAu7exEOE2czN2gnTd
 sidebar_position: 5
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
   - describeRole()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation describes a specific role.
 public DescribeRoleResp describeRole(DescribeRoleReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 describeRole(DescribeRoleReq.builder()
@@ -88,7 +88,7 @@ The name of the entity (user or role) that granted the privilege.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

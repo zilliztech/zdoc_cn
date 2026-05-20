@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropCollection() | Node.js"
 slug: /node/node/Collections-dropCollection
+sidebar_key: node/Collections-dropCollection
 sidebar_label: "dropCollection()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: KLknda2VtocQSBx7PKVc6F9Nnug
 sidebar_position: 10
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollection()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops a collection.
 
 ```javascript
-dropCollection(data): Promise<ResStatus>
+await milvusClient.dropCollection(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropCollection({ 
+await milvusClient.dropCollection({ 
     db_name: string,
     collection_name: string,
     timeout?: number
@@ -91,10 +91,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.dropCollection({ collection_name: 'my_collection' });
 ```
 

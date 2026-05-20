@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "removePrivilegesFromGroup() | Node.js"
 slug: /node/node/Authentication-removePrivilegesFromGroup
+sidebar_key: node/Authentication-removePrivilegesFromGroup
 sidebar_label: "removePrivilegesFromGroup()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EeAfdukBNoIIgCxX248c6VULnOb
 sidebar_position: 22
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
   - removePrivilegesFromGroup()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation removes privileges from a specific privilege group in Milvus.
 
 ```javascript
-removePrivilegesFromGroup(data): Promise<ResStatus>
+await milvusClient.removePrivilegesFromGroup(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.removePrivilegesFromGroup({
+await milvusClient.removePrivilegesFromGroup({
    group_name: string,
    privileges: string[],
    timeout?: number
@@ -93,7 +93,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 await milvusClient.removePrivilegesFromGroup({

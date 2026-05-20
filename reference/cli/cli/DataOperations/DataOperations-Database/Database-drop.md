@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "drop | Cloud"
 slug: /cli/cli/Database-drop
+sidebar_key: cli/Database-drop
 sidebar_label: "drop"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation drops a database. (Dedicated only) | Cloud"
 type: docx
-token: TB3Odp61soJUTnxuGb7cjA00nXf
+token: WjbrdMFuXoR2etxfpMdcmIebnCh
 sidebar_position: 3
 keywords: 
+  - Anomaly Detection
+  - sentence transformers
   - Recommender systems
   - information retrieval
-  - dimension reduction
-  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation drops a database. (Dedicated only)
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command applies to Dedicated clusters.</p>
+This command applies to Dedicated clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz database drop
@@ -49,7 +49,7 @@ zilliz database drop
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -83,7 +83,7 @@ zilliz database drop
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz database drop --name my_database

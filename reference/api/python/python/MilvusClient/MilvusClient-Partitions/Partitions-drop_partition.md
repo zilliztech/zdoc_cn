@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_partition() | Python | MilvusClient"
 slug: /python/python/Partitions-drop_partition
+sidebar_key: python/Partitions-drop_partition
 sidebar_label: "drop_partition()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Python | MilvusClient"
 type: docx
-token: EMI8dM8uooIAFPxVfffcoqRwnZf
+token: HkOFdhgbOoz1wlxJIgWcU7EonWc
 sidebar_position: 2
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - drop_partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,17 +35,24 @@ This operation drops a specified partition from the current collection.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Before dropping a partition, you must first release it.</p>
+Before dropping a partition, you must first release it.
 
 </Admonition>
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
-create_partition(
+drop_partition(
     collection_name: str,
     partition_name: str,
-    timeout: Optional[float] = None
+    timeout: Optional[float] = None,
+    **kwargs,
 ) -> None
 ```
 
@@ -57,17 +64,15 @@ create_partition(
 
     The name of an existing collection.
 
-- **partition_names** (*str*)
+- **partition_name** (*str*) -
 
     **[REQUIRED]**
 
     The name of the partition to drop.
 
-- **timeout** (*float* | *None*)  
+- **timeout** (*float* | *None*) -
 
-    The timeout duration for this operation. 
-
-    Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+    The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
 **RETURN TYPE:**
 
@@ -83,50 +88,34 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
 
-# 1. Create a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
-    token="user:password"
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
-# 2. Create a collection
+# Create a collection
 client.create_collection(collection_name="test_collection", dimension=5)
 
-# 3. Create a partition
+# Create a partition
 client.create_partition(
-    collection_name="test_collection", 
+    collection_name="test_collection",
     partition_name="partition_A"
 )
 
-# 4. Release partition
+# Release partition before dropping
 client.release_partitions(
     collection_name="test_collection",
     partition_names=["partition_A"]
 )
 
-# 4. Drop the partition
+# Drop the partition
 client.drop_partition(
-    collection_name="test_collection", 
+    collection_name="test_collection",
     partition_name="partition_A"
 )
 ```
-
-## Related methods
-
-- [create_partition()](./Partitions-create_partition)
-
-- [get_partition_stats()](./Partitions-get_partition_stats)
-
-- [has_partition()](./Partitions-has_partition)
-
-- [list_partitions()](./Partitions-list_partitions)
-
-- [load_partitions()](./Partitions-load_partitions)
-
-- [release_partitions()](./Partitions-release_partitions)
-

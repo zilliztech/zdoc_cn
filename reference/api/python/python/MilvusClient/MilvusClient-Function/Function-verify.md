@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "verify() | Python | MilvusClient"
 slug: /python/python/Function-verify
+sidebar_key: python/Function-verify
 sidebar_label: "verify()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: YXogdv0Dpovi2Pxbyh2cdA4nnbe
 sidebar_position: 5
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - verify()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation validates the input and output fields of a function defined in the CollectionSchema.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 verify(
@@ -59,7 +59,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, Function, FunctionType

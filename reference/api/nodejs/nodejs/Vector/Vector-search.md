@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "search() | Node.js"
 slug: /node/node/Vector-search
+sidebar_key: node/Vector-search
 sidebar_label: "search()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Node.js"
 type: docx
-token: C8kgdOn3pozkrtxCBMLcqcSTnTb
-sidebar_position: 8
+token: HYv3d0NiRoc09Bx4rz0cIhqknb5
+sidebar_position: 7
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
   - search()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation conducts a vector similarity search with an optional scalar filtering expression.
 
 ```javascript
-search(data): Promise<ResStatus>
+await milvusClient.search(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.search({
+await milvusClient.search({
   db_name?: string,
   collection_name: string,
   partition_names?: string[];
@@ -52,7 +52,6 @@ milvusClient.search({
   filter?: string;
   exprValues?: keyValueObj;
   params?: keyValueObj;
-  metric_type?: string;
   consistency_level?: ConsistencyLevelEnum;
   ignore_growing?: boolean;
   group_by_field?: string;
@@ -151,55 +150,6 @@ milvusClient.search({
 
         This parameter applies only when you also set `radius`.
 
-- **metric_type** (*string*) -
-
-    The metric type used to measure similarity between vectors. The value varies with the vector field type. The following table lists the mapping between vector field types and their supported metric types.
-
-    <table>
-       <tr>
-         <th><p>Field Type</p></th>
-         <th><p>Dimension Range</p></th>
-         <th><p>Supported Metric Types</p></th>
-         <th><p>Default Metric Type</p></th>
-       </tr>
-       <tr>
-         <td><p><code>FLOAT_VECTOR</code></p></td>
-         <td><p>2-32,768</p></td>
-         <td><p><code>COSINE</code>, <code>L2</code>, <code>IP</code></p></td>
-         <td><p><code>COSINE</code></p></td>
-       </tr>
-       <tr>
-         <td><p><code>FLOAT16_VECTOR</code></p></td>
-         <td><p>2-32,768</p></td>
-         <td><p><code>COSINE</code>, <code>L2</code>, <code>IP</code></p></td>
-         <td><p><code>COSINE</code></p></td>
-       </tr>
-       <tr>
-         <td><p><code>BFLOAT16_VECTOR</code></p></td>
-         <td><p>2-32,768</p></td>
-         <td><p><code>COSINE</code>, <code>L2</code>, <code>IP</code></p></td>
-         <td><p><code>COSINE</code></p></td>
-       </tr>
-       <tr>
-         <td><p><code>INT8_VECTOR</code></p></td>
-         <td><p>2-32,768</p></td>
-         <td><p><code>COSINE</code>, <code>L2</code>, <code>IP</code></p></td>
-         <td><p><code>COSINE</code></p></td>
-       </tr>
-       <tr>
-         <td><p><code>SPARSE_FLOAT_VECTOR</code></p></td>
-         <td><p>No need to specify the dimension.</p></td>
-         <td><p><code>IP</code>, <code>BM25</code> (used only for full text search)</p></td>
-         <td><p><code>IP</code></p></td>
-       </tr>
-       <tr>
-         <td><p><code>BINARY_VECTOR</code></p></td>
-         <td><p>8-32,768&ast;8</p></td>
-         <td><p><code>HAMMING</code>, <code>JACCARD</code>, <code>MHJACCARD</code></p></td>
-         <td><p><code>HAMMING</code></p></td>
-       </tr>
-    </table>
-
 - **consistency_level** (*ConsistencyLevelEnum*) -
 
     The consistency level of the target collection. The value defaults to **Bounded** (**1**) with options of **Strong** (**0**), **Bounded** (**1**), **Session** (**2**), and **Eventually** (**3**).
@@ -222,7 +172,7 @@ milvusClient.search({
 
 - **hints** (*string*) -
 
-     A hints string to improve search performance.
+    A hints string to improve search performance.
 
 - **round_decimal** (*number*) -
 
@@ -320,21 +270,68 @@ milvusClient.search({
 
                 Indicates that the final score of a matching entity is equal to the sum of the weighted values from all Boost Rankers.
 
-**RETURNS** *Promise\<SearchResults>*
+- **order_by_fields** (*OrderByFields*) -
 
-This method returns a promise that resolves to a **SearchResults** object.
+    The fields to order the search results by. Optional.
 
-```javascript
+**RETURNS** *Promise&lt;SearchResults&lt;T&gt;>*
+
+This method returns a promise that resolves to a **SearchResults&lt;T&gt;** object.
+
+```typescript
 {
-    status: object,
-    results: list[string],
-    recalls: list[number]
+    results: SearchResultData[] | SearchResultData[][],
+    recalls: number[],
+    session_ts: number,
+    collection_name: string,
+    all_search_count?: number,
+    status:  ResStatus
 }
 ```
 
 **PARAMETERS:**
 
-- **status** (*object*) -
+- **results** (*SearchResultData[]* | *SearchResultData[][]*) -
+The hits returned for each query vector. When a single query vector is supplied, this is a flat **SearchResultData[]**. When a batch of query vectors is supplied, this is a nested **SearchResultData[][]** with one inner list per query.
+
+    - **id** (*string*) -
+
+        The primary key of the matched row.
+
+    - **score** (*number*) -
+
+        The similarity score, scaled by the configured metric type.
+
+    - **offset** (*number* | *string*) -
+
+        The zero-based offset of this hit within its query group.
+
+    - **group_by_field_values** (*Record\<string, FieldData>*) -
+
+        Set when **group_by_field** was supplied; carries the values of the grouping field for the hit.
+
+    - **highlight** (*HighlightResult*) -
+
+        Set when a **highlighter** was supplied on the request; carries the highlighted fragments for matching fields.
+
+    - **&lt;output_field&gt;** (*FieldData*) -
+
+        Each requested **output_fields** entry is added as a key on the hit, carrying the value from the matched row.
+
+- **recalls** (*number[]*) -
+The estimated recall score for each query, when the search engine produced one.
+
+- **session_ts** (*number*) -
+The session timestamp Milvus used to evaluate the search.
+
+- **collection_name** (*string*) -
+The collection that was searched.
+
+- **all_search_count** (*number*) -
+Optional. Set when the search reports the total candidate count examined.
+
+- **ResStatus**
+A **ResStatus** object.
 
     - **code** (*number*) -
 
@@ -342,34 +339,19 @@ This method returns a promise that resolves to a **SearchResults** object.
 
     - **error_code** (*string* | *number*) -
 
-        An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+        An error code that indicates an occurred error. It remains **Success** if this operation succeeds.
 
-    - **reason** (*string*) - 
+    - **reason** (*string*) -
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-- **results** (*list[object]*) -
-
-    Each result object has the following keys:
-
-    - **id** (*string*) -
-
-        The ID of the search result
-
-    - **score**(*number*) -
-
-        The similarity score of the search result.
-
-    - Plus output fields and their values.
-
-- **recalls** (*list[number]*) -
-
-    Each number indicates the recall rate of a search against a query vector.
-
-## Example
+## Example\{#example}
 
 ```plaintext
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const searchResults = await milvusClient.search({
    collection_name: 'my_collection',
    vector: [1, 2, 3, 4],

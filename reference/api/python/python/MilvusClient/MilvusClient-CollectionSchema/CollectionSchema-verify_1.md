@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "verify() | Python | MilvusClient"
 slug: /python/python/CollectionSchema-verify_1
+sidebar_key: python/CollectionSchema-verify_1
 sidebar_label: "verify()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: TfV3dOYPyoKVSMxShrTc9SZ2nqh
 sidebar_position: 5
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - verify()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation performs final validation checks on the CollectionSchema to detect any obvious problems.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 verify()
@@ -57,7 +57,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType  

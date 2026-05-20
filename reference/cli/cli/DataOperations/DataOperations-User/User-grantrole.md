@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "grant-role | Cloud"
 slug: /cli/cli/User-grantrole
+sidebar_key: cli/User-grantrole
 sidebar_label: "grant-role"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation grants a role to a user. | Cloud"
 type: docx
-token: Fz3JdZ0rSoNxuDxvR0TcIXl5nhh
+token: SvpmdXjkYo3LYTxt2ipcKhLFnZg
 sidebar_position: 4
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - grant-role
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation grants a role to a user.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz user grant-role
@@ -50,7 +50,7 @@ zilliz user grant-role
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--user** (*string*) -
 
@@ -86,7 +86,7 @@ zilliz user grant-role
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz user grant-role --user my_user --role admin

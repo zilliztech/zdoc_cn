@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_alias() | Python | MilvusClient"
 slug: /python/python/Collections-drop_alias
+sidebar_key: python/Collections-drop_alias
 sidebar_label: "drop_alias()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FpWXdmIuforYz9xUCsqclyCXnLe
 sidebar_position: 10
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
   - drop_alias()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,29 @@ import Admonition from '@theme/Admonition';
 
 # drop_alias()
 
-This operation drops a specified collection alias. 
+This operation drops a specified collection alias.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies to dedicated serving clusters and on-demand compute. 
+
+- For a collection in a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a collection in on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 drop_alias(
@@ -76,7 +96,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -97,7 +117,7 @@ client.create_alias(collection_name="test_collection", alias="test")
 client.drop_alias(alias="test")
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [alter_alias()](./Collections-alter_alias)
 

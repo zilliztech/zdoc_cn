@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "search_iterator() | Python | MilvusClient"
 slug: /python/python/Vector-search_iterator
+sidebar_key: python/Vector-search_iterator
 sidebar_label: "search_iterator()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: T9KhdDJQColJEuxZ7YOcV2zdnlb
 sidebar_position: 7
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
   - search_iterator()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation conducts a vector similarity search with an optional scalar filtering expression in an iterative manner.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+External collections do not support this operation.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 search_iterator(
@@ -103,23 +109,17 @@ search_iterator(
 
     The parameter settings specific to this operation.
 
-    - **metric_type** (*str*) -
-
-        The metric type applied to this operation. This should be the same as the one used when you index the vector field specified above. 
-
-        Possible values are **L2**, **IP**, and **COSINE**.
-
     - **params** (dict) -
 
         Additional parameters
 
         - **radius** (float) -
 
-            Determines the threshold of least similarity. When setting `metric_type` to `L2`, ensure that this value is greater than that of **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
+            Determines the threshold of least similarity. When the collection's metric type is set to `L2`, ensure that this value is greater than that of **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
 
         - **range_filter**  (float) -  
 
-            Refines the search to vectors within a specific similarity range. When setting `metric_type` to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
+            Refines the search to vectors within a specific similarity range. When the collection's metric type to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
 
         - **level** (*int*)
 
@@ -194,7 +194,7 @@ A **SearchIterator** instance that provides the following methods:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

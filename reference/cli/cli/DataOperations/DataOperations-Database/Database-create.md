@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Database-create
+sidebar_key: cli/Database-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new database. (Dedicated only) | Cloud"
 type: docx
-token: IKTjdZU2ioqYvbxGD08cp58In7c
+token: DaK3dvUJpoKOLTxy1iRc4YZAnjf
 sidebar_position: 1
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,17 +33,17 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new database. (Dedicated only)
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a database serves as a logical unit for organizing and managing data. To enhance data security and support multi-tenancy, you can create multiple databases to isolate data for different applications or tenants logically. For example, you create a database to store user A's data and another database for user B.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command applies to Dedicated clusters.</p>
+This command applies to Dedicated clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz database create
@@ -54,7 +54,7 @@ zilliz database create
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -133,7 +133,7 @@ zilliz database create
     }
     ```
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz database create --name my_database

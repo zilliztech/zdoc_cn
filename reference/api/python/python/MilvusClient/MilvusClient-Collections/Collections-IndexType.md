@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "IndexType | Python | MilvusClient"
 slug: /python/python/Collections-IndexType
+sidebar_key: python/Collections-IndexType
 sidebar_label: "IndexType"
 added_since: Inherit
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: SlrCd1GEbooMh2xLylZc6Oirnrc
 sidebar_position: 15
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - IndexType
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - GPU_BRUTE_FORCE
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "append_row() | Python"
 slug: /python/python/RemoteBulkWriter-append_row
+sidebar_key: python/RemoteBulkWriter-append_row
 sidebar_label: "append_row()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: F1MFdP8VvoMu17x4Vg9cH6ztnqb
 sidebar_position: 1
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
   - append_row()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation appends records to the writer.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 append_row(
@@ -47,9 +47,9 @@ append_row(
 
     A dictionary representing an entity to be appended.
 
-    The keys and their values in the dictionary should match the schema referenced in the current **LocalBulkWriter**.
+    The keys and their values in the dictionary should match the schema referenced in the current **[LocalBulkWriter](./DataImport-LocalBulkWriter)**.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType
@@ -84,7 +84,7 @@ writer.append_row(
 )
 ```
 
-## Related classes and methods
+## Related classes and methods\{#related-classes-and-methods}
 
 - [commit()](./RemoteBulkWriter-commit)
 

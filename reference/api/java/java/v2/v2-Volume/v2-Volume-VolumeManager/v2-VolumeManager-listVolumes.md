@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listVolumes() | Java | v2"
 slug: /java/java/v2-VolumeManager-listVolumes
+sidebar_key: java/v2-VolumeManager-listVolumes
 sidebar_label: "listVolumes()"
 added_since: false
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Cde1dlUbDosa86xjuShcoKgQnvg
 sidebar_position: 3
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - listVolumes()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists all volumes within a specific project in a paginated manner
 public ListVolumesResponse listVolumes(ListVolumesRequest request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 listVolumes(ListVolumesRequest.builder()
@@ -88,7 +88,7 @@ A **ListVolumesResponse** object that contains a list of volumes in a paginated 
 
     The maximum number of volumes per page.
 
-- **volumes** (*List\<VolumeInfo>*) -
+- **volumes** (*List&lt;VolumeInfo&gt;*) -
 
     A list of `VolumeInfo` instances.
 
@@ -96,7 +96,7 @@ A **ListVolumesResponse** object that contains a list of volumes in a paginated 
 
         The name of a volume.
 
-## Example
+## Example\{#example}
 
 ```java
 import com.google.gson.Gson;

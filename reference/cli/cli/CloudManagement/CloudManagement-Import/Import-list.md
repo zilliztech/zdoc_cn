@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Import-list
+sidebar_key: cli/Import-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists import jobs for a cluster. | Cloud"
 type: docx
-token: PbE8dm28yo4rNzxrbIecQtMqnVq
+token: ObdhdVWTpogXQhx3A0YcdU2yntd
 sidebar_position: 1
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists import jobs for a cluster.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz import list
@@ -46,7 +46,7 @@ zilliz import list
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -92,7 +92,7 @@ zilliz import list
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz import list --cluster-id in01-xxxxxxxxxxxx

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "describe_collection() | Python | MilvusClient"
 slug: /python/python/Collections-describe_collection
+sidebar_key: python/Collections-describe_collection
 sidebar_label: "describe_collection()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: LXASdPs6KoRfCJx11A1cl2Ssngg
 sidebar_position: 9
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - describe_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation lists detailed information about a specific collection.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies to dedicated serving clusters and on-demand compute. 
+
+- For a collection in a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a collection in on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 describe_collection(
@@ -95,6 +115,8 @@ A dictionary that contains detailed information about the specified collection.
               'element_type': 0
           }
      ],
+     'externalSource': '',
+     'externalSpecs': '',
      'functions': [],
      'aliases': [],
      'collection_id': 446738261026541332,
@@ -124,6 +146,14 @@ A dictionary that contains detailed information about the specified collection.
 - **description** (*str*) -
 
     The description of the current collection.
+
+- **external_source** (*str*) -
+
+    The external source of the collection. This applies only to external collections. 
+
+- **external_specs** (*str*) -
+
+    The external specifications of the collection. This applies only to external collections.
 
 - **fields** (*list*) -
 
@@ -223,7 +253,7 @@ A dictionary that contains detailed information about the specified collection.
 
     This arises when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

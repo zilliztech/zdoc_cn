@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_privilege_groups() | Python | MilvusClient"
 slug: /python/python/Authentication-list_privilege_groups
+sidebar_key: python/Authentication-list_privilege_groups
 sidebar_label: "list_privilege_groups()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: N6kjdex5Ao0lRqxPXBhcxq4AnNh
 sidebar_position: 13
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud
   - list_privilege_groups()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all existing privilege groups.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_privilege_groups(
@@ -65,7 +65,7 @@ A list of privilege group names.
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_indexes() | Python | MilvusClient"
 slug: /python/python/Management-list_indexes
+sidebar_key: python/Management-list_indexes
 sidebar_label: "list_indexes()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ZqmudJWyFonUKGxAxXncYrLZn2e
 sidebar_position: 9
 keywords: 
-  - what is semantic search
   - Embedding model
   - image similarity search
   - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
   - list_indexes()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all indexes of a specific collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For this operation in a collection of a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For this operation in a collection for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints, and then create a session to attach to an on-demand cluster for searches.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 list_indexes(
@@ -69,7 +89,7 @@ A list of index names.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -162,7 +182,7 @@ client.list_indexes(collection_name="customized_setup")
 # # ['my_id', 'my_vector']
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [add_index()](./Management-add_index)
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropIndexProperties() | Java | v2"
 slug: /java/java/v2-Management-dropIndexProperties
+sidebar_key: java/v2-Management-dropIndexProperties
 sidebar_label: "dropIndexProperties()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: IdNAdlMhjoM40pxjpKecpc7inbd
 sidebar_position: 6
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - dropIndexProperties()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation resets the specified index properties to their default values.
 public Void dropIndexProperties(DropIndexPropertiesReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropIndexProperties(DropIndexPropertiesReq.builder()
@@ -81,7 +81,7 @@ dropIndexProperties(DropIndexPropertiesReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -96,7 +96,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// 2. Drop the `mmap.enabled` property
+// 2. Drop the \`mmap.enabled\` property
 List<String> propertyKeys = new ArrayList<>()
 propertyKeys.add("mmap.enabled")
 

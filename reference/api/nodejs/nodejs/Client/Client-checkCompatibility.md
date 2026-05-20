@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "checkCompatibility() | Node.js"
 slug: /node/node/Client-checkCompatibility
+sidebar_key: node/Client-checkCompatibility
 sidebar_label: "checkCompatibility()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Tq1Md4GuIoNbfuxK03ncIa7onMc
 sidebar_position: 1
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - checkCompatibility()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation checks the compatibility of the SDK with the Milvus server.
 
 ```javascript
-checkCompatibility(data?): Promise<any>
+await milvusClient.checkCompatibility(data?)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.checkCompatibility({
+await milvusClient.checkCompatibility({
     checker?: Function,
     message?: string
 })
@@ -64,10 +64,10 @@ milvusClient.checkCompatibility({
 
 A promise that resolves to the result of the specified checker function.
 
-## Examples
+## Examples\{#examples}
 
 ```javascript
-milvusClient.checkCompatibility({
+await milvusClient.checkCompatibility({
    checker: () => { console.log("compatible") },
    message: "incompatible"
 });

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "alterDatabaseProperties() | Java | v2"
 slug: /java/java/v2-Database-alterDatabaseProperties
+sidebar_key: java/v2-Database-alterDatabaseProperties
 sidebar_label: "alterDatabaseProperties()"
 added_since: v2.4.x
 last_modified: v2.4.x
@@ -13,15 +13,15 @@ type: docx
 token: PBYIdLALvoHd0pxwI8Ec4JsTnBX
 sidebar_position: 1
 keywords: 
-  - hybrid vector search
-  - Video deduplication
   - Video similarity search
   - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - alterDatabaseProperties()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation alters a database's properties.
 public Void alterDatabaseProperties(AlterDatabasePropertiesReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 alterDatabaseProperties(AlterDatabasePropertiesReq.builder()
@@ -91,7 +91,7 @@ alterDatabaseProperties(AlterDatabasePropertiesReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

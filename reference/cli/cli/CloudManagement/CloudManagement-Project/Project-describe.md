@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/Project-describe
+sidebar_key: cli/Project-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets the details of a project. | Cloud"
 type: docx
-token: JHi7ddXcaoozIyxLplicI61mn1e
+token: OBDNd4bW2oCJqhxEPDSccggSnif
 sidebar_position: 2
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets the details of a project.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz project describe
@@ -43,7 +43,7 @@ zilliz project describe
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--project-id** (*string*) -
 
@@ -73,7 +73,7 @@ zilliz project describe
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz project describe --project-id proj-xxxxxxxxxxxx

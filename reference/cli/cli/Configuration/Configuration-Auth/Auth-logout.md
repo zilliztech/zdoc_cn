@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "logout | Go"
 slug: /cli/cli/Auth-logout
+sidebar_key: cli/Auth-logout
 sidebar_label: "logout"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation logs you out of Zilliz Cloud and clears stored credentials. | Go"
 type: docx
-token: JVIKdV11AoXBlCxHuTVcKrQmnud
+token: QeHdd8MunoG5Krxwpr1cx0Ninwd
 sidebar_position: 2
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud
   - logout
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation logs you out of Zilliz Cloud and clears stored credentials.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz logout
 ```
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz logout

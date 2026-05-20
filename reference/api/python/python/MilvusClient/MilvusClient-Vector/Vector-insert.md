@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "insert() | Python | MilvusClient"
 slug: /python/python/Vector-insert
+sidebar_key: python/Vector-insert
 sidebar_label: "insert()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QI87dhVnioL9JLxnNKxcM8jWnkh
 sidebar_position: 3
 keywords: 
-  - Faiss
-  - Video search
   - AI Hallucination
   - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - insert()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation inserts data into a specific collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+External collections do not support this operation.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 insert(
@@ -130,7 +136,7 @@ A dictionary contains information about the number of inserted entities.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
@@ -190,16 +196,4 @@ res = client.insert(
 
 # {'insert_count': 2}
 ```
-
-## Related methods
-
-- [delete()](./Vector-delete)
-
-- [get()](./Vector-get)
-
-- [query()](./Vector-query)
-
-- [search()](./Vector-search)
-
-- [upsert()](./Vector-upsert)
 

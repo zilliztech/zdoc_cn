@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "describe_role() | Python | MilvusClient"
 slug: /python/python/Authentication-describe_role
+sidebar_key: python/Authentication-describe_role
 sidebar_label: "describe_role()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JJz3dFrE2oJP3AxySWYcJlf4nMh
 sidebar_position: 5
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud
   - describe_role()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation describes a specific role.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 describe_role(
@@ -81,7 +81,7 @@ A list of dictionaries containing the permissions assigned to the role. The stru
 
     The type of the resource object granted to the role. 
 
-    Possible values are **Collection**, **Global**, and **User**.
+    Possible values are **[Collection](./ORM-Collection)**, **Global**, and **User**.
 
 - **object_name** (*str*) -
 
@@ -113,7 +113,7 @@ A list of dictionaries containing the permissions assigned to the role. The stru
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -210,15 +210,7 @@ client.describe_role(role_name="db_ro")
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Each Zilliz Cloud cluster has three built-in roles, namely, <strong>db_ro</strong>, <strong>db_rw</strong>, and <strong>db_admin</strong>. For details, refer to <a href="/docs/user-roles#cluster-built-in-roles">Cluster Built-in Roles</a>.</p>
+Each Zilliz Cloud cluster has three built-in roles, namely, **db\_ro**, **db\_rw**, and **db\_admin**. For details, refer to [Cluster Built-in Roles](/docs/user-roles#cluster-built-in-roles).
 
 </Admonition>
-
-## Related methods
-
-- [grant_role()](./Authentication-grant_role)
-
-- [list_roles()](./Authentication-list_roles)
-
-- [revoke_role()](./Authentication-revoke_role)
 

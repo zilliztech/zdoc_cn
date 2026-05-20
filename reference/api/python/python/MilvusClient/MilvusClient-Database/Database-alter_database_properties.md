@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "alter_database_properties() | Python | MilvusClient"
 slug: /python/python/Database-alter_database_properties
+sidebar_key: python/Database-alter_database_properties
 sidebar_label: "alter_database_properties()"
 added_since: v2.5.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: HCWBdorQdoONw2xaawacJWQkn1e
 sidebar_position: 1
 keywords: 
-  - vector database open source
-  - open source vector db
-  - vector database example
-  - rag vector database
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - alter_database_properties()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation modifies the properties of the specified database.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated clusters.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 alter_database_properties(
@@ -102,7 +102,7 @@ alter_database_properties(
 
 - `MilvusException` - Raised if any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

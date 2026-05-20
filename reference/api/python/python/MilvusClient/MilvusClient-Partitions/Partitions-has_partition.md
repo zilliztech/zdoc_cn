@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "has_partition() | Python | MilvusClient"
 slug: /python/python/Partitions-has_partition
+sidebar_key: python/Partitions-has_partition
 sidebar_label: "has_partition()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: MxTAd0haboKnRrxQvoOckGghn1T
 sidebar_position: 4
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - has_partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation checks whether the specified partition exists in the specified collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 has_partition(
@@ -77,7 +83,7 @@ A boolean value indicating whether the specified partition exists.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -106,7 +112,7 @@ client.has_partition(
 # True
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_partition()](./Partitions-create_partition)
 

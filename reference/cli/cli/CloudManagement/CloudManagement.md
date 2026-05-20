@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to cloud management. | Cloud"
 type: folder
-token: XxzIf86n5lHZJPdaeTqcRm6Gnhe
+token: CRpLfHplvlPKBDdxyCqcPFqWncd
 sidebar_position: 1
 sidebar_label: "Cloud Management"
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - Cloud Management
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

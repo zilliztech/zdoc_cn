@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "alter_alias() | Python | MilvusClient"
 slug: /python/python/Collections-alter_alias
+sidebar_key: python/Collections-alter_alias
 sidebar_label: "alter_alias()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CBc3d1mrdoYqmDxe4Kcc9zxAnzh
 sidebar_position: 1
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud
   - alter_alias()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation reassigns the alias of one collection to another.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies to dedicated serving clusters and on-demand compute. 
+
+- For a collection in a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a collection in on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 alter_alias(
@@ -59,19 +79,23 @@ alter_alias(
 
     <Admonition type="info" icon="📘" title="What is a collection alias?">
 
-    <p>A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. </p>
-    <p>On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.</p>
-    <p>Below is an example of reassigning the alias of one collection to another:</p>
-    <p>Suppose there are two collections: <code>collection_1</code> and <code>collection_2</code>. There is also a collection alias named <code>bob</code>, which was originally assigned to <code>collection_1</code>:</p>
-    <ul>
-    <li><p><code>collection_1</code>'s alias = ["bob"]</p></li>
-    <li><p><code>collection_2</code>'s alias = []</p></li>
-    </ul>
-    <p>After calling <code>alter_alias("collection_2", "bob")</code>:</p>
-    <ul>
-    <li><p><code>collection_1</code>'s alias = []</p></li>
-    <li><p><code>collection_2</code>'s alias = ["bob"]</p></li>
-    </ul>
+    A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
+
+    On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
+
+    Below is an example of reassigning the alias of one collection to another:
+
+    Suppose there are two collections: `collection_1` and `collection_2`. There is also a collection alias named `bob`, which was originally assigned to `collection_1`:
+
+    - `collection_1`'s alias = ["bob"]
+
+    - `collection_2`'s alias = []
+
+    After calling `alter_alias("collection_2", "bob")`:
+
+    - `collection_1`'s alias = []
+
+    - `collection_2`'s alias = ["bob"]
 
     </Admonition>
 
@@ -87,7 +111,7 @@ alter_alias(
 
 **RETURNS:**
 
- None
+None
 
 **EXCEPTIONS:**
 
@@ -95,7 +119,7 @@ alter_alias(
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -117,7 +141,7 @@ client.create_alias(collection_name="test_collection_1", alias="test")
 client.alter_alias(collection_name="test_collection_2", alias="test")
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_alias()](./Collections-create_alias)
 

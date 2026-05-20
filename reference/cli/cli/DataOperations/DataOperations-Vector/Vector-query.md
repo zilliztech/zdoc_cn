@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "query | Cloud"
 slug: /cli/cli/Vector-query
+sidebar_key: cli/Vector-query
 sidebar_label: "query"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation queries entities by scalar filter expression. | Cloud"
 type: docx
-token: BFfGdYH1aocKSjx2CLQce7C9nWo
+token: VSRhdmsCvodJ7pxwGgqcuvZ3n7g
 sidebar_position: 5
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
   - query
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation queries entities by scalar filter expression.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud provides a set of useful filtering operators to help you build filter expressions that meet your needs. For details, refer to [Filtering Overview](/docs/filtering-overview) and related pages.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz vector query
@@ -52,7 +52,7 @@ zilliz vector query
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -112,7 +112,7 @@ zilliz vector query
 
     Indicates a list of partition names to query from. Queries all partitions if not specified.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz vector query --collection my_col --filter 'id > 100' --limit 10

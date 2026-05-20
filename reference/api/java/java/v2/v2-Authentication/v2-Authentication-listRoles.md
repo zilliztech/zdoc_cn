@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listRoles() | Java | v2"
 slug: /java/java/v2-Authentication-listRoles
+sidebar_key: java/v2-Authentication-listRoles
 sidebar_label: "listRoles()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XIIyd3bMzoAVx3xVsoLcnQ2pnKh
 sidebar_position: 14
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - listRoles()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists all custom roles.
 public List<String> listRoles()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
@@ -59,7 +59,7 @@ A list of strings containing the role names.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "drop | Cloud"
 slug: /cli/cli/Partition-drop
+sidebar_key: cli/Partition-drop
 sidebar_label: "drop"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation drops a partition. | Cloud"
 type: docx
-token: NCJFd4Iz6oJM7uxVYzGcywmWnSe
+token: DT7Jduvj2osqF0xVhwMcU2t7nmd
 sidebar_position: 2
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops a partition.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz partition drop
@@ -46,7 +46,7 @@ zilliz partition drop
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -90,7 +90,7 @@ zilliz partition drop
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz partition drop --collection my_collection --partition my_partition

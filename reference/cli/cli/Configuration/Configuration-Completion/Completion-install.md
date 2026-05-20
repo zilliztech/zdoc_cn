@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "install | Cloud"
 slug: /cli/cli/Completion-install
+sidebar_key: cli/Completion-install
 sidebar_label: "install"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation installs shell completion. | Cloud"
 type: docx
-token: N0WHdp8BVoNlmmxa7wvclA8Knfg
+token: BGo4dB2TuoMHeBxD8XrcuKHYnEb
 sidebar_position: 1
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
   - install
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,19 +35,20 @@ This operation installs shell completion.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>You need to manually run the <code>source</code> command after the install completes. </p>
-<p>For example, if you install the complete command in zsh, you should run <code>source ~/.zshrc</code> to activate command completion.</p>
+You need to manually run the `source` command after the install completes. 
+
+For example, if you install the complete command in zsh, you should run `source ~/.zshrc` to activate command completion.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz completion install <SHELL>
 [--apply]
 ```
 
-## Options
+## Options\{#options}
 
 - **SHELL** (*string*) -
 
@@ -63,7 +64,7 @@ zilliz completion install <SHELL>
 
     Indicates whether to write to the rc file of the specified shell automatically.
 
-## Example
+## Example\{#example}
 
 ```bash
 # Manual copy the comand and paste it into your rc file

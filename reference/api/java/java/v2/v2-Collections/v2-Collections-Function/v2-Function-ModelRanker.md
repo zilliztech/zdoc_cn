@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "ModelRanker | Java | v2"
 slug: /java/java/v2-Function-ModelRanker
+sidebar_key: java/v2-Function-ModelRanker
 sidebar_label: "ModelRanker"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: IW5SdBOhUop0P8xBslCc6OHLnse
 sidebar_position: 5
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - ModelRanker
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ The **ModelRanker** class extends from the **Function** class and provides extra
 public class ModelRanker extends CreateCollectionReq.Function
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 ModelRanker.builder()
@@ -91,9 +91,9 @@ ModelRanker.builder()
 
 **RETURNS:**
 
- A model ranker instance.
+A model ranker instance.
 
-## Examples:
+## Examples:\{#examples}
 
 ```java
 import io.milvus.v2.service.collection.request.CreateCollectionReq.Function;

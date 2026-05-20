@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "prepare_index_params() | Python | MilvusClient"
 slug: /python/python/Management-prepare_index_params
+sidebar_key: python/Management-prepare_index_params
 sidebar_label: "prepare_index_params()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CAzpdAw3wo4ZqrxhjTLcEGBBn1S
 sidebar_position: 11
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - prepare_index_params()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,25 @@ This operation prepares index parameters to build indexes for a specific collect
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This is a class method. You should call this method like this: <code>MilvusClient.prepare_index_params()</code>.</p>
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For this operation in a collection of a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For this operation in a collection for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints, and then create a session to attach to an on-demand cluster for searches.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
 
 </Admonition>
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 pymilvus.MilvusClient.prepare_index_params() -> IndexParams
@@ -72,7 +86,7 @@ An **IndexParams** contains a list of **IndexParam** objects.
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

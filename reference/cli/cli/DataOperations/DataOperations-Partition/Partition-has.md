@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "has | Cloud"
 slug: /cli/cli/Partition-has
+sidebar_key: cli/Partition-has
 sidebar_label: "has"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation checks if a partition exists. | Cloud"
 type: docx
-token: KtkldxyCGoCmF8xsxYHcfRQZnCf
+token: IQy0d491iojaTEx3teycfP3snCe
 sidebar_position: 4
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
   - has
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks if a partition exists.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz partition has
@@ -45,7 +45,7 @@ zilliz partition has
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -75,7 +75,7 @@ zilliz partition has
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz partition has --collection my_collection --partition my_partition

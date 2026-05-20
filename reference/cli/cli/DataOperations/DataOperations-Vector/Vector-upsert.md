@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "upsert | Cloud"
 slug: /cli/cli/Vector-upsert
+sidebar_key: cli/Vector-upsert
 sidebar_label: "upsert"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation upserts entities. | Cloud"
 type: docx
-token: PLojdlFoioPDSEx6vKpcsmevnTf
+token: PdMmdJQS6o1rVbxtD49cO62Onad
 sidebar_position: 7
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud
   - upsert
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation upserts entities.
 
-## Description
+## Description\{#description}
 
 You can run this command to either insert a new entity or update an existing one, depending on whether the primary key provided in the upsert request exists in the collection. If the primary key is not found, an insert operation occurs. Otherwise, an update operation will be performed.
 
@@ -41,7 +41,7 @@ An upsert request combines an insert and a delete. When an `upsert` request for 
 
 You can also include the `--partial_update` option in the command to make an upsert request work in merge mode. This allows you to include only the fields that need updating in the request payload.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz vector upsert
@@ -56,7 +56,7 @@ zilliz vector upsert
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -157,7 +157,7 @@ zilliz vector upsert
 
     Indicates whether to enable partial updates. When enabled, only the provided fields are updated.
 
-## Example
+## Example\{#example}
 
 ```bash
 # Upsert with inline JSON

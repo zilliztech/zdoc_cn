@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/Cluster-describe
+sidebar_key: cli/Cluster-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets details of a cluster. | Cloud"
 type: docx
-token: WsJBdDbB2ouQC0xk8c1cwDFanGf
+token: OgJTdgaTIoMPGGx0EmachVPKnHc
 sidebar_position: 3
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets details of a cluster.
 
-## Description
+## Description\{#description}
 
 This command returns the details of a cluster, including 
 
@@ -61,7 +61,7 @@ This command returns the details of a cluster, including
 
 - The autoscaling policies (`autoscaling`) that are configured for it.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster describe
@@ -71,7 +71,7 @@ zilliz cluster describe
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -103,7 +103,7 @@ zilliz cluster describe
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz cluster describe --cluster-id in01-xxxxxxxxxxxx

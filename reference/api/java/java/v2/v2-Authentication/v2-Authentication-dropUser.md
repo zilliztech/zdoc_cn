@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropUser() | Java | v2"
 slug: /java/java/v2-Authentication-dropUser
+sidebar_key: java/v2-Authentication-dropUser
 sidebar_label: "dropUser()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: RFv2dtZ1qoP9XQxJEGqcgLGUnhc
 sidebar_position: 9
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
   - dropUser()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation drops a user.
 public void dropUser(DropUserReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropUser(DropUserReq.builder()
@@ -62,7 +62,7 @@ dropUser(DropUserReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

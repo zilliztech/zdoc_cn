@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "release_collection() | Python | MilvusClient"
 slug: /python/python/Management-release_collection
+sidebar_key: python/Management-release_collection
 sidebar_label: "release_collection()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PRR7dRfi8o1s61xFRovccAdRnHe
 sidebar_position: 13
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
   - release_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation releases the data of a specific collection from memory.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 release_collection(
@@ -70,7 +76,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -180,7 +186,7 @@ client.get_load_state(
 # {'state': <LoadState: NotLoad>}
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [get_load_state()](./Management-get_load_state)
 

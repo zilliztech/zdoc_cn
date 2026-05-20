@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "describe_database() | Python | MilvusClient"
 slug: /python/python/Database-describe_database
+sidebar_key: python/Database-describe_database
 sidebar_label: "describe_database()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LEaYdk179oZn0vxqa0lcn4mnnrg
 sidebar_position: 3
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud
   - describe_database()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,25 @@ This operation lists detailed information about the specified database.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For a database in a dedicated serving clusters, create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a database for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 describe_database(
@@ -73,7 +87,7 @@ A dictionary that contains detailed information about the specified database.
 
 - `MilvusException` - Raised if any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

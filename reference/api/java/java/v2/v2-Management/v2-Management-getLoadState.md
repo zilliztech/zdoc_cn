@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getLoadState() | Java | v2"
 slug: /java/java/v2-Management-getLoadState
+sidebar_key: java/v2-Management-getLoadState
 sidebar_label: "getLoadState()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: PAs7dwIIrop4OixCUr8ctHVLnXc
 sidebar_position: 9
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - getLoadState()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation displays whether a specified collection or partition is loaded or
 public Boolean getLoadState(GetLoadStateReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 getLoadState(GetLoadStateReq.builder()
@@ -72,7 +72,7 @@ A Boolean value that indicates the status of the specified collection or partiti
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A collection is in the loaded state if any or all of its partitions are loaded.</p>
+A collection is in the loaded state if any or all of its partitions are loaded.
 
 </Admonition>
 
@@ -82,7 +82,7 @@ A Boolean value that indicates the status of the specified collection or partiti
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

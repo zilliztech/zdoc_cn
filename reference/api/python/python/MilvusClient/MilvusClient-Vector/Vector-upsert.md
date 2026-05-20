@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "upsert() | Python | MilvusClient"
 slug: /python/python/Vector-upsert
+sidebar_key: python/Vector-upsert
 sidebar_label: "upsert()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: UjjpdBwaooRDdlxFHScc6dKwnTg
 sidebar_position: 8
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - upsert()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation inserts or updates data in a specific collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+External collections do not support this operation.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 upsert(
@@ -137,7 +143,7 @@ A dictionary contains information about the number of inserted or updated entiti
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

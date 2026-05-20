@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropAlias() | Java | v2"
 slug: /java/java/v2-Collections-dropAlias
+sidebar_key: java/v2-Collections-dropAlias
 sidebar_label: "dropAlias()"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: ARw0dIb0hojCNbxKkOacs1K7nQf
 sidebar_position: 13
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
   - dropAlias()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation drops a specified collection alias.
 public void dropAlias(DropAliasReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropAlias(DropAliasReq.builder()
@@ -69,7 +69,7 @@ dropAlias(DropAliasReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

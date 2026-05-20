@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to authentication. | Cloud"
 type: folder
-token: PXh2fHhrulidp6dvqn2cORWSnwe
+token: CcG3fA4kslvDAzdAfK6cYC3unvb
 sidebar_position: 2
 sidebar_label: "Auth"
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - Auth
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

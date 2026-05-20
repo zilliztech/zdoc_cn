@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getCollectionStats() | Java | v2"
 slug: /java/java/v2-Collections-getCollectionStats
+sidebar_key: java/v2-Collections-getCollectionStats
 sidebar_label: "getCollectionStats()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: E27SdesNPoKA8zx6jHkcejt0nWg
 sidebar_position: 17
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - getCollectionStats()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists the statistics collected on a specific collection.
 public GetCollectionStatsResp getCollectionStats(GetCollectionStatsReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 getCollectionStats(GetCollectionStatsReq.builder()
@@ -77,7 +77,7 @@ A **GetCollectionStatsResp** object containing collected statistics on the speci
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

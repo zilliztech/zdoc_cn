@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "revoke_privilege_v2() | Python | MilvusClient"
 slug: /python/python/Authentication-revoke_privilege_v2
+sidebar_key: python/Authentication-revoke_privilege_v2
 sidebar_label: "revoke_privilege_v2()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WazKdTlcOoYoBWxIJEEc7gFMnfC
 sidebar_position: 18
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud
   - revoke_privilege_v2()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation revokes the specified privilege or privilege group from the specified role.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 revoke_privilege_v2(
@@ -99,44 +99,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
-
-```python
-from pymilvus import MilvusClient
-
-# 1. Create a milvus client
-client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-
-# 1. Prepare a privilege group
-client.create_privilege_group(
-    group_name="my_privilege_group"
-)
-
-client.add_privileges_to_group(
-    group_name="my_privilege_group",
-    privileges=["ListDatabases", "DescribeDatabase"]
-) 
-
-# 2. Create a role
-client.create_role(role_name="read_only")
-
-# 3. Grant privileges
-client.grant_privilege_v2(
-    role_name="db_read_only",
-    privilege="my_privilege_group",
-    collection_name="*"
-)
-
-# 4. Revoke privileges
-client.rovke_privilege_v2(
-    role_name="db_read_only",
-    privilege="my_privilege_group",
-    collection_name="*"
-)
-```
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

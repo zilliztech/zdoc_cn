@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/Database-describe
+sidebar_key: cli/Database-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets details of a database. (Dedicated only) | Cloud"
 type: docx
-token: Pp2GdJt2YoEKjdxZYgqcXMu8nYg
+token: A8XSdcz0UoXHnyxHPcOcaLExn3o
 sidebar_position: 2
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation gets details of a database. (Dedicated only)
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command applies to Dedicated clusters.</p>
+This command applies to Dedicated clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz database describe
@@ -49,7 +49,7 @@ zilliz database describe
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -79,7 +79,7 @@ zilliz database describe
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz database describe --name my_database

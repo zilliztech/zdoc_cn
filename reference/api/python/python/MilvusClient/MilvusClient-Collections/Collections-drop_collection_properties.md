@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_collection_properties() | Python | MilvusClient"
 slug: /python/python/Collections-drop_collection_properties
+sidebar_key: python/Collections-drop_collection_properties
 sidebar_label: "drop_collection_properties()"
 added_since: v2.4.x
-last_modified: v2.5.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the specified collection properties. | Python | MilvusClient"
 type: docx
-token: WjNRdifU9o3xl5xG0W7ch4Fjnme
+token: HTnvdQ8SbodURtxPEv5cURL0n5b
 sidebar_position: 12
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - drop_collection_properties()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation drops the specified collection properties.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This does not apply to external collections.
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 drop_collection_properties(
@@ -56,6 +62,8 @@ drop_collection_properties(
     The names of the properties to drop in a list. Possible values are as follows:
 
     - `collection.ttl.seconds`
+
+    - `ttl_field`
 
     - `mmap.enabled`
 
@@ -81,7 +89,7 @@ drop_collection_properties(
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

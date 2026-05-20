@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "status | Cloud"
 slug: /cli/cli/Completion-status
+sidebar_key: cli/Completion-status
 sidebar_label: "status"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation checks if shell completion is installed. | Cloud"
 type: docx
-token: MJsndwyMdo5CGLxqAXwc9MuKn7e
+token: LbIpdBlKsotqHFxgRxmcGsk0n5g
 sidebar_position: 3
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - status
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation checks if shell completion is installed.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz completion status <SHELL>
 ```
 
-## Options
+## Options\{#options}
 
 - **SHELL** (*string*) -
 
@@ -51,7 +51,7 @@ zilliz completion status <SHELL>
 
     - `fish`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz completion status

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/User-describe
+sidebar_key: cli/User-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets details of a user. | Cloud"
 type: docx
-token: IgAUdLDvcoWDR6xOu2XcmRoznIh
+token: ES6CdyFsgoXMEtxpLRAcrnZ3n9f
 sidebar_position: 2
 keywords: 
+  - knn algorithm
+  - HNSW
   - What is unstructured data
   - Vector embeddings
-  - Vector store
-  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation gets details of a user.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz user describe
@@ -49,7 +49,7 @@ zilliz user describe
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--user** (*string*) -
 
@@ -79,7 +79,7 @@ zilliz user describe
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz user describe --user my_user

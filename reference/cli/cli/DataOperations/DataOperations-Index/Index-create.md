@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Index-create
+sidebar_key: cli/Index-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates an index on a collection field. | Cloud"
 type: docx
-token: Jx8CdhWZ7ooK8PxwYAHc4yodnDe
+token: BUnSd1445oFLBxxHWfYc8UpmnXe
 sidebar_position: 1
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation creates an index on a collection field.
 
-## Description
+## Description\{#description}
 
 To save you the effort of tuning index settings, Zilliz Cloud handles index tuning with an auto-adaptive index type called AUTOINDEX. By tuning the [index build levels](/docs/tune-index-build-level) and [recall rate](/docs/tune-recall-rate), you can easily optimize search performance and precision.
 
 For scalar fields, you can set index types according to the field types. For the mapping of field types to applicable index types, refer to [Index Scalar Fields](/docs/index-scalar-fields#overview).
 
-## Synposis
+## Synposis\{#synposis}
 
 ```bash
 zilliz index create
@@ -51,7 +51,7 @@ zilliz index create
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -120,7 +120,7 @@ zilliz index create
                             "description": "The name of the index to create. The value defaults to the target field name. The value should be a string of no more than 255 characters, starting with an underscore (_) or a letter."
                         },
                         "params": {
-                            "description": "The index type and related settings. In Zilliz Cloud, the value should always be `AUTOINDEX`.",
+                            "description": "The index type and related settings. In Zilliz Cloud, the value should always be \`AUTOINDEX\`.",
                             "type": "object",
                             "properties": {
                                 "index_type": {
@@ -149,7 +149,7 @@ zilliz index create
     }
     ```
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz index create --collection my_col --body '{"indexParams": [{"fieldName": "vector", "indexType": "AUTOINDEX"}]}'

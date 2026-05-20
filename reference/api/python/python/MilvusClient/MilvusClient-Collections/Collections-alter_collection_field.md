@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "alter_collection_field() | Python | MilvusClient"
 slug: /python/python/Collections-alter_collection_field
+sidebar_key: python/Collections-alter_collection_field
 sidebar_label: "alter_collection_field()"
 added_since: v2.4.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation changes the specified collection field parameters. | Python | MilvusClient"
 type: docx
-token: G2jjdHvbBoko6BxBZj7csemWnFc
+token: JdR3dVpCaoq6s2xSFmsc0e13nnh
 sidebar_position: 2
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - alter_collection_field()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation changes the specified collection field parameters.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 alter_collection_field(
@@ -70,6 +70,12 @@ alter_collection_field(
 
     Setting this to None indicates that this operation timeouts when any response arrives or any error occurs.
 
+<Admonition type="info" icon="📘" title="Notes">
+
+You must alter field settings before loading the collection. Altering a field on a loaded collection returns an error. To change settings on a loaded collection, release the collection first, alter the field, then reload.
+
+</Admonition>
+
 **RETURN TYPE:**
 
 *NoneType*
@@ -84,7 +90,7 @@ alter_collection_field(
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

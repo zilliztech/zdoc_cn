@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "batchDescribeCollection() | Java | v2"
 slug: /java/java/v2-Collections-batchDescribeCollection
+sidebar_key: java/v2-Collections-batchDescribeCollection
 sidebar_label: "batchDescribeCollection()"
 added_since: v2.6.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets the descriptions of multiple collections in a batch. | Java | v2"
 type: docx
-token: SRI6dEn82oNe4Uxro8hcyFV3n1d
-sidebar_position: 30
+token: B4CpdqvN7oZy3zxB9fscTAG8n7E
+sidebar_position: 32
 keywords: 
+  - milvus lite
+  - milvus benchmark
   - managed milvus
   - Serverless vector database
-  - milvus open source
-  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
   - batchDescribeCollection()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,109 +37,40 @@ This operation gets the descriptions of multiple collections in a batch.
 public List<DescribeCollectionResp> batchDescribeCollection(BatchDescribeCollectionReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 batchDescribeCollection(BatchDescribeCollectionReq.builder()
     .databaseName(String databaseName)
     .collectionNames(List<String> collectionNames)
-    .build();
-)
+    .collectionIds(List<Long> collectionIds)
+    .build()
+);
 ```
 
 **BUILDER METHODS:**
 
-- `databaseName(String databaseName)`
+- `databaseName(String databaseName)` -
+The name of the database. Defaults to the current database if not specified.
 
-    The name of the database to which the target collections belong.
+- `collectionNames(List<String> collectionNames)` -
 
-- `collectionNames(List<String> collectionNames)`
-
-    The names of the target collections.
-
-**RETURN TYPE:**
-
-*List\<DescribeCollectionResp>*
+- `collectionIds(List<Long> collectionIds)` -
+A list of collection IDs to describe in batch.
 
 **RETURNS:**
 
+*List&lt;DescribeCollectionResp&gt;*
+
 A list of **DescribeCollectionResp** objects.
-
-A **DescribeCollectionResp** object that contains detailed information about the specified collection.
-
-**PARAMETERS:**
-
-- **collectionName** (*String*)
-
-    The name of the current collection.
-
-- **collectionID** (*Long*)
-
-    The ID of the collection.
-
-- **databaseName** (*String*)
-
-    The name of the database to which the current collection belongs.
-
-- **description** (*String*)
-
-    The description of the current collection.
-
-- **numOfPartitions** (*long*)
-
-    The number of partitions in the current collection.
-
-- **fieldNames** (*List\<String\>*)
-
-    A list of fields in the current collection.
-
-- **vectorFieldName** (*List\<String\>*)
-
-    The name of the vector field.
-
-- **primaryFieldName** (*String*)
-
-    The name of the primary field.
-
-- **enableDynamicField** (*Boolean*)
-
-    Whether to use the reserved JSON field **&#36;meta** to save non-schema-defined fields and their values as key-value pairs.
-
-- **autoID** (*Boolean*)
-
-    Whether Zilliz Cloud automatically generates the primary key for the collection.
-
-- **collectionSchema** (*CreateCollectionReq.CollectionSchema*)
-
-    The scheme of the collection.
-
-- **createTime** (*Long*)
-
-    The time when the collection was created.
-
-- **createUtcTime** (*Long*) -
-
-    The time when the collection was created in UTC.
-
-- **consistencyLevel** (*ConsistencyLevel*) -
-
-    The consistency level of the collection.
-
-- **shardsNum** (*Integer*) -
-
-    The number of shards in the collection.
-
-- **properties** (*Map\<String, String>*) -
-
-    The properties of the current collection. 
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+- **MilvusClientException**
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -162,4 +93,3 @@ BatchDescribeCollectionReq describeCollectionReq = BatchDescribeCollectionReq.bu
 List<DescribeCollectionResp> batchResp = client.batchDescribeCollection(describeCollectionReq);
 
 ```
-

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "restore-collection | Cloud"
 slug: /cli/cli/Backup-restorecollection
+sidebar_key: cli/Backup-restorecollection
 sidebar_label: "restore-collection"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation restores specific collections from a backup. | Cloud"
 type: docx
-token: AloudGinroMIAHxCT0GcJt5An4g
+token: XvDzdZsb3ojqgXxhEjfcZBxbnNb
 sidebar_position: 8
 keywords: 
-  - Video search
-  - AI Hallucination
-  - AI Agent
-  - semantic search
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - restore-collection
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation restores specific collections from a backup.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a backup is a copy of your data that enables you to restore the entire cluster or specific collections in the event of data loss or system failure.
 
@@ -41,11 +41,11 @@ Restoring a cluster creates a new cluster and copies all backed-up collections t
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopisis
+## Synopisis\{#synopisis}
 
 ```bash
 zilliz backup restore-collection
@@ -157,7 +157,7 @@ zilliz backup restore-collection
     }
     ```
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz backup restore-collection /

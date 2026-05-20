@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "metrics | Cloud"
 slug: /cli/cli/Cluster-metrics
+sidebar_key: cli/Cluster-metrics
 sidebar_label: "metrics"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation queries cluster performance metrics (QPS, latency, storage, etc.). | Cloud"
 type: docx
-token: SoWFdvNGKoOEMpxODQScdKEmnze
+token: BVHRdq4miotjdVxI72fcI7XznKc
 sidebar_position: 5
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud
   - metrics
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation queries cluster performance metrics (QPS, latency, storage, etc.).
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud organizes metrics into the following levels:
 
@@ -45,7 +45,7 @@ Zilliz Cloud organizes metrics into the following levels:
 
 Running this command without any options triggers a set of interactive prompts for you to set up the command.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster metrics
@@ -58,7 +58,7 @@ zilliz cluster metrics
 [--output <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -186,7 +186,7 @@ zilliz cluster metrics
 
 - **--output, -o** (*string*) -
 
-    Indicates the output format. Possible values:
+    Indicates the output format. When this option is omitted, results are rendered as an in-terminal Braille chart visualization (since v1.3.1). Explicit values:
 
     - `json`,
 
@@ -194,7 +194,7 @@ zilliz cluster metrics
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz cluster metrics -m READ_VCU -m WRITE_VCU

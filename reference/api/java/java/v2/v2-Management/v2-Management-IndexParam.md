@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "IndexParam | Java | v2"
 slug: /java/java/v2-Management-IndexParam
+sidebar_key: java/v2-Management-IndexParam
 sidebar_label: "IndexParam"
 added_since: v2.3.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "This operation prepares index parameters to build indexes for a specific collection. | Java | v2"
+description: "IndexParam defines the parameters for configuring an index on a collection field. | Java | v2"
 type: docx
-token: FUNwdQQqAon41YxMWiIcHIBmned
+token: SXgodgq99ozZoHxfnakc0fpCnJh
 sidebar_position: 10
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
   - IndexParam
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -31,71 +31,54 @@ import Admonition from '@theme/Admonition';
 
 # IndexParam
 
-This operation prepares index parameters to build indexes for a specific collection.
-
-```java
-io.milvus.v2.common.IndexParam
-```
-
-## Request Syntax
+IndexParam defines the parameters for configuring an index on a collection field.
 
 ```java
 IndexParam.builder()
     .fieldName(String fieldName)
-    .indexName(String indexName)
-    .indexType(IndexParam.IndexType indexType)
-    .metricType(IndexParam.MetricType metricType)
+    .indexType(IndexType indexType)
+    .metricType(MetricType metricType)
     .extraParams(Map<String, Object> extraParams)
-    .build();
+    .build()
 ```
 
 **BUILDER METHODS:**
 
-- `fieldName(String fieldName)`
+- `fieldName(String fieldName)` -
 
-    The name of the target field to apply this **IndexParam** object applies.
+    The name of the field to index.
 
-- `indexName(String indexName)`
+- `indexType(IndexType indexType)` -
 
-    The name of the index field generated after this **IndexParam** object has been applied.
+    The type of index to build on the field. For available index types, refer to IndexType.
 
-- `indexType(IndexParam.[IndexType](./v2-Management-IndexType) indexType)`
+- `metricType(MetricType metricType)` -
 
-    The name of the algorithm used to arrange data in the specific field. On Zilliz Cloud, the index type is always **AUTOINDEX**. For details, refer to [AUTOINDEX Explained](/docs/autoindex-explained).
+    The metric type for vector similarity measurement. For available metric types, refer to MetricType.
 
-- `metricType(IndexParam.[MetricType](./v2-Management-MetricType) metricType)`
+- `extraParams(Map<String, Object> extraParams)` -
 
-    The algorithm that is used to measure similarity between vectors. Possible values: `IP`, `L2`, `COSINE`, `HAMMING`, `JACCARD`, `BM25` (used only for full text search). For more information, refer to [Metric Types](https://milvus.io/docs/metric.md).
-
-    This is available only when the specified field is a vector field.
-
-- `extraParams(Map<String, Object> extraParams)`
-
-    Extra index parameters. For details, refer to [In-memory Index](https://milvus.io/docs/index.md), [On-disk Index](https://milvus.io/docs/disk_index.md), and [GPU index](https://milvus.io/docs/gpu_index.md).
-
-**RETURN TYPE:**
-
-*IndexParam*
+    Additional index-specific parameters as key-value pairs. For example, `{"M": 16, "efConstruction": 256}` for HNSW indexes.
 
 **RETURNS:**
 
-An **IndexParam** object.
+*IndexParam*
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+*MilvusClientException*
 
-    This exception will be raised when any error occurs during this operation.
+This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
-// define index param for field "vector"
-IndexParam indexParam = IndexParam.builder()
-        .metricType(IndexParam.MetricType.L2)
-        .indexType(IndexParam.IndexType.AUTOINDEX)
-        .fieldName("vector")
-        .indexName("idx")
-        .build();
-```
+import io.milvus.v2.common.IndexParam;
 
+IndexParam indexParam = IndexParam.builder()
+    .fieldName("vector")
+    .indexType(IndexParam.IndexType.HNSW)
+    .metricType(IndexParam.MetricType.COSINE)
+    .extraParams(Map.of("M", 16, "efConstruction", 256))
+    .build();
+```

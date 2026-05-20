@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropPrivilegeGroup() | Node.js"
 slug: /node/node/Authentication-dropPrivilegeGroup
+sidebar_key: node/Authentication-dropPrivilegeGroup
 sidebar_label: "dropPrivilegeGroup()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: I63tdWAY2ok8V1xrK4tcrkwjncd
 sidebar_position: 12
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
   - dropPrivilegeGroup()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation adds a user to a specific role.
 
 ```javascript
-dropPrivilegeGroup(data): Promise<ResStatus>
+await milvusClient.dropPrivilegeGroup(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropPrivilegeGroup({
+await milvusClient.dropPrivilegeGroup({
    timeout?: number
 })
 ```
@@ -79,7 +79,7 @@ This method returns a list of promises, each of which resolves to a **ResStatus*
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 milvusClient.dropPrivilegeGroup()

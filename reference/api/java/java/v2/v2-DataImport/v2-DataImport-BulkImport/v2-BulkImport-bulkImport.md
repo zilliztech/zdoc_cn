@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "bulkImport() | Java | v2"
 slug: /java/java/v2-BulkImport-bulkImport
+sidebar_key: java/v2-BulkImport-bulkImport
 sidebar_label: "bulkImport()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: S0ITdsnpYoDpH9xKv9fcBhe5nWA
 sidebar_position: 2
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
   - bulkImport()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation imports the prepared data files to Zilliz Cloud. To learn how to 
 public static String bulkImport(String url, BaseImportRequest request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 bulkImport.bulkImport(
@@ -54,7 +54,6 @@ bulkImport.bulkImport(
 
     ```python
     https://api.cloud.zilliz.com
-    # https://api.cloud.zilliz.com.cn 
     ```
 
 - **request** (*[BaseImportRequest](./v2-BulkImport-bulkImport#baseimportrequest)*) -  
@@ -69,11 +68,11 @@ bulkImport.bulkImport(
 
 The ID of the created import job.
 
-## BaseImportRequest
+## BaseImportRequest\{#baseimportrequest}
 
 A **BaseImportRequest** instance is implemented in **CloudImportRequest**.
 
-### CloudImportRequest
+### CloudImportRequest\{#cloudimportrequest}
 
 ```java
 CloudImportRequest.builder()
@@ -132,7 +131,7 @@ CloudImportRequest.builder()
 
     The name of the partition in the target cluster of this operation. The value defaults to `default`.
 
-## Example
+## Example\{#example}
 
 ```java
 import com.google.gson.Gson;

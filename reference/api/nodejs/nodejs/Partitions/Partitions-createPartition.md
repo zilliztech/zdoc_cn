@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "createPartition() | Node.js"
 slug: /node/node/Partitions-createPartition
+sidebar_key: node/Partitions-createPartition
 sidebar_label: "createPartition()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PPLtdSbtfomgF1x5MHncKPgPnSf
 sidebar_position: 1
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
   - createPartition()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation creates a partition in the target collection.
 
 ```javascript
-createPartition(data): Promise<ResStatus>
+await milvusClient.createPartition(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.createPartition({
+await milvusClient.createPartition({
     db_name: string,
     collection_name: string,
     partition_name: string,
@@ -98,10 +98,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-new milvusClient(MILUVS_ADDRESS).createPartition({
+new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).createPartition({
     collection_name: 'my_collection',
     partition_name: 'my_partition',
  });

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "createPartition() | Java | v2"
 slug: /java/java/v2-Partitions-createPartition
+sidebar_key: java/v2-Partitions-createPartition
 sidebar_label: "createPartition()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: WE4gduIjooCgQUxcKyLcwQe1n3g
 sidebar_position: 1
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - createPartition()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation creates a partition in the target collection.
 public void createPartition(CreatePartitionReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 createPartition(CreatePartitionReq.builder()
@@ -72,7 +72,7 @@ createPartition(CreatePartitionReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

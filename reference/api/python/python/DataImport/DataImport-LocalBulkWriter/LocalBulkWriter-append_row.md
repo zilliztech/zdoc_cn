@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "append_row() | Python"
 slug: /python/python/LocalBulkWriter-append_row
+sidebar_key: python/LocalBulkWriter-append_row
 sidebar_label: "append_row()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WCxIdVwCpoIaMUxbabWcSRCkn2g
 sidebar_position: 1
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - append_row()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation appends records to the writer.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 append_row(
@@ -47,9 +47,9 @@ append_row(
 
     A dictionary representing an entity to be appended.
 
-    The keys and their values in the dictionary should match the schema referenced in the current **LocalBulkWriter**.
+    The keys and their values in the dictionary should match the schema referenced in the current **[LocalBulkWriter](./DataImport-LocalBulkWriter)**.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType
@@ -74,7 +74,7 @@ writer.append_row(
 )
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [commit()](./LocalBulkWriter-commit)
 

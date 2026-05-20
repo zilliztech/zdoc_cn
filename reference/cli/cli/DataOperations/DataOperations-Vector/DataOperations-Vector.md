@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to data manipulations. | Cloud"
 type: folder
-token: EE5tfLfAnlOByHdia0zc1hyEnyl
+token: QJJjfOjoGlLqVmdEtiJcriX2nWh
 sidebar_position: 8
 sidebar_label: "Vector"
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Vector
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

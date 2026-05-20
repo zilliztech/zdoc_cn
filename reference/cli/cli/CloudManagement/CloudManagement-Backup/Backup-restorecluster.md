@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "restore-cluster | Cloud"
 slug: /cli/cli/Backup-restorecluster
+sidebar_key: cli/Backup-restorecluster
 sidebar_label: "restore-cluster"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation restores a backup to a new cluster. | Cloud"
 type: docx
-token: TUQ6df38Do0bKbxu9ODcbZMtnAb
+token: XAhudiqXqoHS1zxSDqgcNY9anxb
 sidebar_position: 7
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
   - restore-cluster
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation restores a backup to a new cluster.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a backup is a copy of your data that enables you to restore the entire cluster or specific collections in the event of data loss or system failure.
 
@@ -41,11 +41,11 @@ Restoring a cluster creates a new cluster and copies all backed-up collections t
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz backup restore-cluster
@@ -60,7 +60,7 @@ zilliz backup restore-cluster
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -130,7 +130,7 @@ zilliz backup restore-cluster
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 # Restore with collections loaded

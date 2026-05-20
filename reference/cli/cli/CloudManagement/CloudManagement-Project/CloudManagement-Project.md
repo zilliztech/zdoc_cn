@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to project management. | Cloud"
 type: folder
-token: RWFvfrzqEl1BB3d3rkgctazrnqb
-sidebar_position: 6
+token: RMdtf53TElufWpdluDgc5veVnqc
+sidebar_position: 7
 sidebar_label: "Project"
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
   - Project
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 ---
 

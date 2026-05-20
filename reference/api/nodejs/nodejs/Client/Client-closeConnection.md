@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "closeConnection() | Node.js"
 slug: /node/node/Client-closeConnection
+sidebar_key: node/Client-closeConnection
 sidebar_label: "closeConnection()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HtOGdjTpOoG0RcxpGv1cCBcEnAh
 sidebar_position: 3
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
   - closeConnection()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,10 +34,10 @@ import Admonition from '@theme/Admonition';
 This operation closes the current connection to the Milvus server.
 
 ```javascript
-closeConnection(): Promise<CONNECT_STATUS>
+await milvusClient.closeConnection()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
 milvusClient.closeConnection()
@@ -51,7 +51,7 @@ milvusClient.closeConnection()
 
 A promise that resolves to the final status of the current connection to the Milvus server, which should be `SHUTDOWN`.
 
-## Example
+## Example\{#example}
 
 ```javascript
 milvusClient.closeConnection()

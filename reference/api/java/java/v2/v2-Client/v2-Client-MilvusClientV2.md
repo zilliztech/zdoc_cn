@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "MilvusClientV2 | Java | v2"
 slug: /java/java/v2-Client-MilvusClientV2
+sidebar_key: java/v2-Client-MilvusClientV2
 sidebar_label: "MilvusClientV2"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: IeOWd0yR2onm5Ex6XyqcrGjKnpS
 sidebar_position: 1
 keywords: 
-  - Retrieval Augmented Generation
   - Large language model
   - Vectorization
   - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud
   - MilvusClientV2
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,13 +37,13 @@ A **MilvusClientV2** instance represents a Java client that connects to a specif
 io.milvus.v2.client.MilvusClientV2
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a client for common use cases.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This client serves as an easy-to-use alternative for the current set of APIs that handles Create, Read, Update, and Delete (CRUD) operations on Zilliz Cloud.</p>
+This client serves as an easy-to-use alternative for the current set of APIs that handles Create, Read, Update, and Delete (CRUD) operations on Zilliz Cloud.
 
 </Admonition>
 
@@ -51,9 +51,9 @@ Constructs a client for common use cases.
 MilvusClientV2(ConnectConfig connectConfig);
 ```
 
-## ConnectConfig
+## [ConnectConfig](./v2-Client-ConnectConfig)\{#connectconfigv2-client-connectconfig}
 
-**ConnectConfig** allows you to configure the connection properties in one place so that **MilvusClientV2** can reference it to create and manage the connection pool.
+**[ConnectConfig](./v2-Client-ConnectConfig)** allows you to configure the connection properties in one place so that **MilvusClientV2** can reference it to create and manage the connection pool.
 
 ```java
 // use either token or username/password
@@ -211,9 +211,9 @@ ConnectConfig.builder()
 
 - `getProxyAddress()`
 
-    Returns the proxy server's address specified in **ConnectConfig**.
+    Returns the proxy server's address specified in **[ConnectConfig](./v2-Client-ConnectConfig)**.
 
-## Examples
+## Examples\{#examples}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -229,7 +229,7 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Set <strong>uri</strong> to your cluster endpoint. The <strong>token</strong> parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of <code>username:p@ssw0rd</code>.</p>
+Set **uri** to your cluster endpoint. The **token** parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of `username:p@ssw0rd`.
 
 </Admonition>
 

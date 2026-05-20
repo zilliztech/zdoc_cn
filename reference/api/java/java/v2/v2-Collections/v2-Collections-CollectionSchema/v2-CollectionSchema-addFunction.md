@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "addFunction() | Java | v2"
 slug: /java/java/v2-CollectionSchema-addFunction
+sidebar_key: java/v2-CollectionSchema-addFunction
 sidebar_label: "addFunction()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WI76dwejQosQWcxuhkccHOl7nXf
 sidebar_position: 4
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
   - addFunction()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation adds a function to convert raw data into vector representations.
 public CollectionSchema addFunction(Function function)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 addFunction(Function.builder()
@@ -87,7 +87,7 @@ A `Function` object
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.common.clientenum.FunctionType;

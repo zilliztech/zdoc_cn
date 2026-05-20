@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "describeDatabase() | Java | v2"
 slug: /java/java/v2-Database-describeDatabase
+sidebar_key: java/v2-Database-describeDatabase
 sidebar_label: "describeDatabase()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: MJjHd3uGcoxEYBx0laKcAIKNnhg
 sidebar_position: 3
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - describeDatabase()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation gets detailed information about a specific database.
 public DescribeDatabaseResp describeDatabase(DescribeDatabaseReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 describeDatabase(DescribeDatabaseReq.builder()
@@ -66,7 +66,7 @@ A **DescribeDatabaseResp** object that contains detailed information about the s
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.param.Constant;

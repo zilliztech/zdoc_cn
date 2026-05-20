@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "usage | Cloud"
 slug: /cli/cli/Billing-usage
+sidebar_key: cli/Billing-usage
 sidebar_label: "usage"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation queries usage costs within a time range. | Cloud"
 type: docx
-token: CRvbdGmR0oylPKxTLsncACd6ntC
-sidebar_position: 3
+token: FpDzdA1nSo6sOHxYxAhcTPCLn5d
+sidebar_position: 4
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - usage
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation queries usage costs within a time range.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud provides detailed usage information for your organization, enabling you to conduct cost analysis across various dimensions. To access invoices, you must have either **Organization Owner** or **Billing Admin** permissions.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz billing usage
@@ -48,7 +48,7 @@ zilliz billing usage
 [--output <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--last** (*string*) -
 
@@ -78,7 +78,7 @@ zilliz billing usage
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz billing usage --last 7d

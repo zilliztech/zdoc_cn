@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropPartition() | Java | v2"
 slug: /java/java/v2-Partitions-dropPartition
+sidebar_key: java/v2-Partitions-dropPartition
 sidebar_label: "dropPartition()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: CSaVdr3zao9zFpxaJBgcCTCYnPd
 sidebar_position: 2
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
   - dropPartition()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -39,7 +39,7 @@ Before dropping a partition, you must first release it.
 public void dropPartition(DropPartitionReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropPartition(DropPartitionReq.builder()
@@ -74,7 +74,7 @@ dropPartition(DropPartitionReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "drop | Cloud"
 slug: /cli/cli/Role-drop
+sidebar_key: cli/Role-drop
 sidebar_label: "drop"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation drops a role. | Cloud"
 type: docx
-token: NLHNdWRtSobTj6xGRqTcUgqznQe
+token: YzVadE24uorV0gx5Se3ceumqnDh
 sidebar_position: 3
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation drops a role.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz role drop
@@ -51,7 +51,7 @@ zilliz role drop
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--role** (*string*) -
 
@@ -89,7 +89,7 @@ zilliz role drop
 
     Indicates a database name. The value defaults to `default`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz role drop --role my_role

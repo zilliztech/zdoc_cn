@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listUsers() | Java | v2"
 slug: /java/java/v2-Authentication-listUsers
+sidebar_key: java/v2-Authentication-listUsers
 sidebar_label: "listUsers()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EfM3drSXlo4Yzyxq2GpcmvoHnTm
 sidebar_position: 15
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - listUsers()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists the names of all existing users.
 public List<String> listUsers()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 listUsers();
@@ -57,7 +57,7 @@ A list of strings containing the user names.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

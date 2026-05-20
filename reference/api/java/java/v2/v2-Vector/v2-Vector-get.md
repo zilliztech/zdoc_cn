@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "get() | Java | v2"
 slug: /java/java/v2-Vector-get
+sidebar_key: java/v2-Vector-get
 sidebar_label: "get()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: DDshdoIEoo7X1BxpciBc66Rlndd
 sidebar_position: 2
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - get()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation gets specific entities by their IDs.
 public GetResp get(GetReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 get(GetReq.builder()
@@ -96,7 +96,7 @@ A **GetResp** object representing one or more queried entities.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

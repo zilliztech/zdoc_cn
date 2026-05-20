@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "drop | Cloud"
 slug: /cli/cli/User-drop
+sidebar_key: cli/User-drop
 sidebar_label: "drop"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation drops a database user. | Cloud"
 type: docx
-token: EXwwdyHGZopIv9xJ48dckYjanVc
+token: Isx7dzFS9obGxyxEwgncxs67nXe
 sidebar_position: 3
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation drops a database user.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz user drop
@@ -50,7 +50,7 @@ zilliz user drop
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--user** (*string*) -
 
@@ -84,7 +84,7 @@ zilliz user drop
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz user drop --user my_user

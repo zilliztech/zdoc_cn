@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropCollectionProperties() | Java | v2"
 slug: /java/java/v2-Collections-dropCollectionProperties
+sidebar_key: java/v2-Collections-dropCollectionProperties
 sidebar_label: "dropCollectionProperties()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OPPHd2AabonMIzxzfupcyNS9n1a
 sidebar_position: 15
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollectionProperties()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation resets the properties of a specified collection to their default 
 public Void dropCollectionProperties(DropCollectionPropertiesReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropCollectionProperties(DropCollectionPropertiesReq.builder()
@@ -80,7 +80,7 @@ dropCollectionProperties(DropCollectionPropertiesReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -95,7 +95,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// 2. Drop the `collection.ttl.seconds` property
+// 2. Drop the \`collection.ttl.seconds\` property
 List<String> propertyKeys = new ArrayList<>()
 propertyKeys.add("collection.ttl.seconds")
 

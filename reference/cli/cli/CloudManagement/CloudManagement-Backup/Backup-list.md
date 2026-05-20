@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Backup-list
+sidebar_key: cli/Backup-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all backups. | Cloud"
 type: docx
-token: IO8UdHyHmotVsLx6D18cRBpYn8y
+token: VHhWdygYaoyAmQxRpP6cvmIYndc
 sidebar_position: 6
 keywords: 
-  - rag vector database
-  - what is vector db
   - what are vector databases
   - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all backups.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a backup is a copy of your data that enables you to restore the entire cluster or specific collections in the event of data loss or system failure.
 
@@ -41,11 +41,11 @@ When you run this command without any options, you will be asked whether to set 
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz backup list
@@ -61,7 +61,7 @@ zilliz backup list
 [--all]
 ```
 
-## Options
+## Options\{#options}
 
 - **--project-id** (*string*) -
 
@@ -119,7 +119,7 @@ zilliz backup list
 
     Indicates whether to fetch all pages.
 
-## Example
+## Example\{#example}
 
 ```bash
 # List all backups

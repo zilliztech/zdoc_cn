@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "release | Cloud"
 slug: /cli/cli/Partition-release
+sidebar_key: cli/Partition-release
 sidebar_label: "release"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation releases partitions from memory. | Cloud"
 type: docx
-token: Oy2NdZ5FroKJOPxzFyNcL3SDnyf
+token: XpaudNsR2o3MRoxTbAMcj4tEn1w
 sidebar_position: 7
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - release
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation releases partitions from memory.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz partition release [OPTIONS]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -69,7 +69,7 @@ zilliz partition release [OPTIONS]
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz partition release --collection my_collection --names '["p1", "p2"]'

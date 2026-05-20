@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "CreateSchema() | Java | v2"
 slug: /java/java/v2-Collections-CreateSchema
+sidebar_key: java/v2-Collections-CreateSchema
 sidebar_label: "CreateSchema()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DAIfdXKk5oCHeNxOUvCc1KcpnNh
 sidebar_position: 24
 keywords: 
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
   - CreateSchema()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation creates a collection schema.
 public static CreateCollectionReq.CollectionSchema CreateSchema()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 MilvusClientV2.createSchema()
@@ -55,7 +55,7 @@ None
 
 A **CreateCollectionReq.CollectionSchema** object.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

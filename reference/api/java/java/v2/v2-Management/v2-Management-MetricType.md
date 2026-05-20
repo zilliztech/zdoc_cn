@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "MetricType | Java | v2"
 slug: /java/java/v2-Management-MetricType
+sidebar_key: java/v2-Management-MetricType
 sidebar_label: "MetricType"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: GEcrdVWnboOetOx08RrcRHVhn3g
 sidebar_position: 14
 keywords: 
+  - Dense embedding
+  - Faiss vector database
   - Chroma vector database
   - nlp search
-  - hallucinations llm
-  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
   - MetricType
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - INVALID
 

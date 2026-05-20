@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "refresh_load() | Python | MilvusClient"
 slug: /python/python/Management-refresh_load
+sidebar_key: python/Management-refresh_load
 sidebar_label: "refresh_load()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: X3NXdtC2koiAxyxhcUBcv38Wnsh
 sidebar_position: 12
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud
   - refresh_load()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation loads the unloaded data of a loaded collection into memory.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 refresh_load(
@@ -62,7 +68,7 @@ refresh_load(
 
 **RETURNS:**
 
- None
+None
 
 **EXCEPTIONS:**
 
@@ -70,7 +76,7 @@ refresh_load(
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -93,7 +99,7 @@ client.refresh_load(
 )
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [get_load_state()](./Management-get_load_state)
 

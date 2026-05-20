@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "flush() | Python | MilvusClient"
 slug: /python/python/Management-flush
+sidebar_key: python/Management-flush
 sidebar_label: "flush()"
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
 beta: false
 notebook: false
-description: "This operation flushes the streaming data and seals segments. It is recommended to call this operation after all the data has been inserted into a collection. | Python | MilvusClient"
+description: "This operation flushes the streaming data and seals segments. It is not advised to call this operation after all the data has been inserted into a collection to avoid small segments, which may degrade search performance. | Python | MilvusClient"
 type: docx
 token: JnPrdOiPyo2e5gxzzFycbnvwnSd
 sidebar_position: 6
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - flush()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,15 @@ import Admonition from '@theme/Admonition';
 
 # flush()
 
-This operation flushes the streaming data and seals segments. It is recommended to call this operation after all the data has been inserted into a collection.
+This operation flushes the streaming data and seals segments. It is not advised to call this operation after all the data has been inserted into a collection to avoid small segments, which may degrade search performance.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 flush(
@@ -70,7 +76,7 @@ flush(
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

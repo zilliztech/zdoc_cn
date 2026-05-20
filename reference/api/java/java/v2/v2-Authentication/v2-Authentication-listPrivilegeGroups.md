@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listPrivilegeGroups() | Java | v2"
 slug: /java/java/v2-Authentication-listPrivilegeGroups
+sidebar_key: java/v2-Authentication-listPrivilegeGroups
 sidebar_label: "listPrivilegeGroups()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: TGsXduN5OoAjVyxZTvRc8HR2nse
 sidebar_position: 13
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - listPrivilegeGroups()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists all privilege groups.
 public ListPrivilegeGroupsResp listPrivilegeGroups(ListPrivilegeGroupsReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 listPrivilegeGroups(ListPrivilegeGroupsReq.builder()
@@ -53,7 +53,7 @@ listPrivilegeGroups(ListPrivilegeGroupsReq.builder()
 
 A **ListPrivilegeGroupsResp** object contains the following fields:
 
-- **privilegeGroups** (*List\<PrivilegeGroup>*) -
+- **privilegeGroups** (*List&lt;PrivilegeGroup&gt;*) -
 
     A list of privilege groups, each of which is a **PrivilegeGroup** object.
 
@@ -61,7 +61,7 @@ A **ListPrivilegeGroupsResp** object contains the following fields:
 
         The name of the current privilege group.
 
-    - **privileges** (List\<String>) - 
+    - **privileges** (List&lt;String&gt;) - 
 
         The privileges added into the current privilege group.
 
@@ -71,7 +71,7 @@ A **ListPrivilegeGroupsResp** object contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

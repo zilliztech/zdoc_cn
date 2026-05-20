@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "grantPrivilegeV2() | Node.js"
 slug: /node/node/Authentication-grantPrivilegeV2
+sidebar_key: node/Authentication-grantPrivilegeV2
 sidebar_label: "grantPrivilegeV2()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: R618dfeMYo9GdmxMwe9cQLclncs
 sidebar_position: 15
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
   - grantPrivilegeV2()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,10 +34,10 @@ import Admonition from '@theme/Admonition';
 This operation assigns a privilege or a privilege group to a role.
 
 ```javascript
-grantPrivilegeV2(data): Promise<ResStatus>
+await milvusClient.grantPrivilegeV2(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
  milvusClient.grantPrivilegeV2({
@@ -109,7 +109,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 await milvusClient.grantPrivilegeV2({

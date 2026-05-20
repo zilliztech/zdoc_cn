@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getName() | Java | v2"
 slug: /java/java/v2-StructFieldSchema-getName
+sidebar_key: java/v2-StructFieldSchema-getName
 sidebar_label: "getName()"
 added_since: v2.6.x
 last_modified: false
@@ -11,17 +11,17 @@ notebook: false
 description: "This operation returns the name of an Array of Structs field. | Java | v2"
 type: docx
 token: DZcddGCD3oh29txhnB5cuxzzn4d
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - getName()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation returns the name of an Array of Structs field.
 public String getName()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 getName()
@@ -51,7 +51,7 @@ getName()
 
 The return value will be the name of the specified Array of Struct field.
 
-## Examples
+## Examples\{#examples}
 
 ```java
 // You can get an instance of StructFieldSchema by describing

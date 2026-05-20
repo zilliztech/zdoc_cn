@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "createRole() | Node.js"
 slug: /node/node/Authentication-createRole
+sidebar_key: node/Authentication-createRole
 sidebar_label: "createRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: SDoYdccLWo1W3PxkNFncibwDnch
 sidebar_position: 6
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - createRole()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation creates a custom role.
 
 ```javascript
-createRole(data): Promise<ResStatus>
+await milvusClient.createRole(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.createRole({
+await milvusClient.createRole({
    roleName: string,
    timeout?: number
  })
@@ -86,10 +86,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-milvusClient.createRole({
+await milvusClient.createRole({
    roleName: 'exampleRole',
  })
 ```

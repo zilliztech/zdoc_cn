@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "set | Cloud"
 slug: /cli/cli/Context-set
+sidebar_key: cli/Context-set
 sidebar_label: "set"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation sets the current cluster context. | Cloud"
 type: docx
-token: F17Edjn73ooEBwxN1hWc7iCFngg
-sidebar_position: 2
+token: Mbj7dQ8OmojO2fxa3PPcr8V8n4c
+sidebar_position: 3
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - vector databases comparison
+  - Faiss
+  - Video search
+  - AI Hallucination
   - zilliz
   - zilliz cloud
   - cloud
   - set
-  - cliv01
+  - cliv13
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation sets the current cluster context.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz context set
@@ -42,7 +42,7 @@ zilliz context set
 [--database <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -56,7 +56,7 @@ zilliz context set
 
     Indicates a database name in the specified cluster.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz context set --cluster-id inxx-xxxxx

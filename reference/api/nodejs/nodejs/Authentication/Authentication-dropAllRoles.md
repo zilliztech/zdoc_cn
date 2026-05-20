@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropAllRoles() | Node.js"
 slug: /node/node/Authentication-dropAllRoles
+sidebar_key: node/Authentication-dropAllRoles
 sidebar_label: "dropAllRoles()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: E5rYdw3EWo2WKZxEyGac049an3e
 sidebar_position: 11
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - dropAllRoles()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation drops all roles in Milvus.
 
 ```javascript
-dropAllRoles(data?): Promise<ResStatus[]>
+await milvusClient.dropAllRoles(data?)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropAllRoles({
+await milvusClient.dropAllRoles({
    timeout?: number
 })
 ```
@@ -79,7 +79,7 @@ This method returns a list of promises, each of which resolves to a **ResStatus*
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 milvusClient.dropAllRoles()

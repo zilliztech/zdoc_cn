@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "search() | Python | MilvusClient"
 slug: /python/python/Vector-search
+sidebar_key: python/Vector-search
 sidebar_label: "search()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | MilvusClient"
 type: docx
-token: N6afdOON2o3U0YxMAt7cMiBqnXg
+token: DvaZdhYnyoo7lOxNIBwc5eKEn7d
 sidebar_position: 6
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud
   - search()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,14 +33,34 @@ import Admonition from '@theme/Admonition';
 
 This operation conducts a vector similarity search with an optional scalar filtering expression.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For this operation in a collection of a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For this operation in a collection for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints, and then create a session to attach to an on-demand cluster for searches.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```plaintext
 search(
     self,
     collection_name: str,
     data: Union[List[list], list],
-    
+    ids: Union[List[str], List[int]],
     filter: str = "",
     limit: int = 10,
     output_fields: Optional[List[str]] = None,
@@ -50,6 +70,9 @@ search(
     anns_field: Optional[str] = None,
     ranker: Optional[Union[Function, FunctionScore]] = None,
     highlighter: Optional[Highlighter] = None,
+    group_by: Optional[GroupBy] = None,
+    order_by_fields: Optional[List[dict]] = None,
+    search_aggregation: Optional[SearchAggregation] = None,
     **kwargs,
 ) -> List[List[dict]]
 ```
@@ -69,6 +92,16 @@ search(
     A list of vector embeddings.
 
     Zilliz Cloud searches for the most similar vector embeddings to the specified ones.
+
+    This parameter is mutually exclusive with **ids**.
+
+- **ids** (*Union[List[str], List[int]]*) -
+
+    A list of primary keys.
+
+    Zilliz Cloud searches for the most similar vector embeddings to those in the specified entities.
+
+    This parameter is mutually exclusive with **data**.
 
 - **anns_field** (*str*) -
 
@@ -96,6 +129,12 @@ search(
 
     In a grouping search, however, `limit` specifies the maximum number of groups to return, rather than individual entities. Each group is formed based on the specified `group_by_field`.
 
+    <Admonition type="info" icon="📘" title="Notes">
+
+    When `group_by` is specified for search aggregation, do not explicitly set `limit`. Use the root `GroupBy.size` value to control the number of top-level buckets to return.
+
+    </Admonition>
+
 - **output_fields** (l*ist[str]*) -
 
     A list of field names to include in each entity in return.
@@ -106,19 +145,13 @@ search(
 
     The parameter settings specific to this operation.
 
-    - **metric_type** (*str*) -
-
-        The metric type applied to this operation. This should be the same as the one used when you index the vector field specified above. 
-
-        Possible values are **L2**, **IP**, and **COSINE**.
-
     - **radius** (float) -
 
-        Determines the threshold of least similarity. When setting `metric_type` to `L2`, ensure that this value is greater than that of **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
+        Determines the threshold of least similarity. When the collection's metric type is set to L2, ensure this value is greater than **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
 
     - **range_filter**  (float) -  
 
-        Refines the search to vectors within a specific similarity range. When setting `metric_type` to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
+        Refines the search to vectors within a specific similarity range. When the collection's metric type is set to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
 
     - **level** (*int*)
 
@@ -138,17 +171,17 @@ search(
 
         <Admonition type="info" icon="📘" title="Notes">
 
-        <p>All additional parameters are moved to the upper <code>search_params</code>, and the <code>params</code> argument will be deprecated soon.</p>
+        All additional parameters are moved to the upper `search_params`, and the `params` argument will be deprecated soon.
 
         </Admonition>
 
         - **radius** (float) -
 
-            Determines the threshold of least similarity. When setting `metric_type` to `L2`, ensure that this value is greater than that of **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
+            Determines the threshold of least similarity. When the collection's metric type is set to `L2`, ensure that this value is greater than that of **range_filter**. Otherwise, this value should be lower than that of **range_filter**. 
 
         - **range_filter**  (float) -  
 
-            Refines the search to vectors within a specific similarity range. When setting `metric_type` to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
+            Refines the search to vectors within a specific similarity range. When the collection's metric type is set to `IP` or `COSINE`, ensure that this value is greater than that of **radius**. Otherwise, this value should be lower than that of **radius**.
 
         - **level** (*int*)
 
@@ -174,6 +207,8 @@ search(
 
     Groups search results by a specified field to ensure diversity and avoid returning multiple results from the same group.
 
+    This parameter is used by Grouping Search. It is mutually exclusive with `group_by`.
+
 - **group_size** (*int*)
 
     The target number of entities to return within each group in a grouping search. For example, setting `group_size=2` instructs the system to return up to 2 of the most similar entities (e.g., document passages or vector representations) within each group. Without setting `group_size`, the system defaults to returning only 1 entity per group.
@@ -181,6 +216,34 @@ search(
 - **strict_group_size** (*bool*)
 
     This Boolean parameter dictates whether `group_size` should be strictly enforced. When `strict_group_size=True`, the system will attempt to fill each group with exactly `group_size` results, as long as sufficient data exists within each group. If there is an insufficient number of entities in a group, it will return only the available entities, ensuring that groups with adequate data meet the specified `group_size`.
+
+- **group_by** (*[GroupBy](./Vector-GroupBy) | None*) -
+
+    A `GroupBy` object that defines a search aggregation.  When this parameter is specified, Zilliz Cloud groups ANN search results into buckets based on the fields in the root `GroupBy` object. Each bucket can include per-bucket metrics, representative hits, and nested sub-groups.  `group_by` is mutually exclusive with `group_by_field`. Use `group_by_field` for existing single-field Grouping Search workflows. Use `group_by` when you need per-bucket metrics, multi-field grouping, bucket ordering, hit sorting, or nested grouping.
+
+    <Admonition type="info" icon="📘" title="Notes">
+
+    Search aggregation metrics are computed over ANN-retrieved entities, not over the full collection. Bucket counts, metrics, and metric-based ordering are approximate.
+
+    </Admonition>
+
+- **order_by_fields** (*list[dict] | None*) -
+
+    A list of order-by specifications for sorting search results by supported scalar fields.
+
+    Each dictionary in the list has the following keys:
+
+    - **field** (*str*) -
+
+        The name of the scalar field to sort by.
+
+    - **order** (*str*) -
+
+        The sort direction. Possible values are `"asc"` and `"desc"`. If you omit this key, Milvus sorts the field in ascending order.
+
+    Zilliz Cloud applies multiple order-by fields in the order that you specify. For entities with the same values in all specified order-by fields, Zilliz Cloud keeps the original similarity-score order.
+
+    In a grouping search, Zilliz Cloud orders groups by the specified scalar field value of each group's top entity. The `limit` parameter still controls the number of groups, and `group_size` controls the number of entities per group.
 
 - **timeout** (*float* | *None*) -
 
@@ -192,7 +255,7 @@ search(
 
     The value defaults to **None**. If specified, only the specified partitions are involved in queries.
 
-- **ranker** (*Function* | *FunctionScore*) -
+- **ranker** (*[Function](./MilvusClient-Function)* | *[FunctionScore](./MilvusClient-FunctionScore)*) -
 
     The ranker to use for the search.
 
@@ -200,7 +263,11 @@ search(
 
 - **highlighter** (*Highlighter*) -
 
-    The highlighter to highlight matched terms in search operations. For details, refer to [Text Highlighter](https://milvus.io/docs/text-highlighter.md).
+    The highlighter to highlight matched terms in search operations. For details, refer to [Lexical Highlighter](/docs/text-highlighter) and [Semantic Highlighter](/docs/semantic-highlighter).
+
+- **search_aggregation** (*Optional[SearchAggregation]*) -
+
+    Hierarchical bucket aggregation spec. Mutually exclusive with **group_by_field**. When set, **limit** is ignored and the root `SearchAggregation.size` controls the top-level bucket count.
 
 - **kwargs** -
 
@@ -222,7 +289,7 @@ search(
 
         Temporarily override the collection or database default time zone for a single query by setting an [IANA identifier](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (for example, **Asia/Shanghai**, **America/Chicago**, or **UTC**). This controls how `TIMESTAMPTZ` values are interpreted, displayed, and compared during that operation only; it does not modify stored data or collection settings.
 
-        For more information, refer to [TIMESTAMPZ Field](/docs/timestamptz-field).
+        For more information, refer to [TIMESTAMPZ Field](/docs/use-timestamptz-field).
 
     - **time_fields** (*str*)
 
@@ -243,7 +310,7 @@ A list of dictionaries that contains the searched entities with specified output
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
@@ -281,7 +348,6 @@ client.insert(
 
 # 4. Conduct a search
 search_params = {
-    "metric_type": "IP",
     "params": {}
 }
 

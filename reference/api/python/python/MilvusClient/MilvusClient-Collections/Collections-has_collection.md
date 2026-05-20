@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "has_collection() | Python | MilvusClient"
 slug: /python/python/Collections-has_collection
+sidebar_key: python/Collections-has_collection
 sidebar_label: "has_collection()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: SSQ6dFGdxouy7hxRwCOcatnEn0e
 sidebar_position: 14
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - has_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation checks whether a specific collection exists.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies to dedicated serving clusters and on-demand compute. 
+
+- For a collection in a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a collection in on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 has_collection(
@@ -70,7 +90,7 @@ A boolean value indicating whether the specified collection exists.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
@@ -84,32 +104,14 @@ client = MilvusClient(
 # 2. Create a collection
 client.create_collection(collection_name="test_collection", dimension=5)
 
-# 3. Check whether a collection named `test_collection` exists
+# 3. Check whether a collection named \`test_collection\` exists
 client.has_collection(collection_name="test_collection") 
 
 # True
 
-# 4. Check whether a collection named `test_collection_2` exists
+# 4. Check whether a collection named \`test_collection_2\` exists
 client.has_collection(collection_name="test_collection_2") 
 
 # False
 ```
-
-## Related methods
-
-- [create_collection()](./Collections-create_collection)
-
-- [create_schema()](./Collections-create_schema)
-
-- [describe_collection()](./Collections-describe_collection)
-
-- [drop_collection()](./Collections-drop_collection)
-
-- [get_collection_stats()](./Collections-get_collection_stats)
-
-- [list_collections()](./Collections-list_collections)
-
-- [rename_collection()](./Collections-rename_collection)
-
-- [DataType](./Collections-DataType)
 
