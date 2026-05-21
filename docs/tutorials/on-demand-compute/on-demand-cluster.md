@@ -39,7 +39,7 @@ import Procedures from '@site/src/components/Procedures';
 
 此功能仅适用于**企业版**项目。
 
-目前，您只能在阿里云华北2（北京）创建 On-demand 集群。如需其他地域，请[联系我们](http://zilliz.com.cn/contact-sales)。
+目前，您只能在阿里云华北2（北京）和阿里云华东2（上海）创建 On-demand 集群。如需其他地域，请[联系我们](http://zilliz.com.cn/contact-sales)。
 
 </Admonition>
 
@@ -115,7 +115,7 @@ import Procedures from '@site/src/components/Procedures';
 
     以下 Demo 展示了如何在 Web 控制台中创建 On-demand 集群。
 
-    <Supademo id="cmo9gv84436szl2dy975hyhsh" title=""  />
+    <Supademo id="cmpdtkz4y0o8mqm8qd5ytywb4" title=""  />
 
     <Procedures>
 
@@ -194,6 +194,14 @@ import Procedures from '@site/src/components/Procedures';
 
     ![J5GCwPH9Bh6FI8bcvEwcsSqenAx](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/J5GCwPH9Bh6FI8bcvEwcsSqenAx.png)
 
+    <Procedures>
+
+    1. 前往目标项目，点击**按需计算 > 集群**。
+
+    1. 您可以查看全部现有 On-demand 集群。
+
+    </Procedures>
+
 ## 查看 On-demand 集群详情\{#check-the-details-of-an-on-demand-cluster}
 
 - **通过 RESTful API**
@@ -233,6 +241,16 @@ import Procedures from '@site/src/components/Procedures';
 
     ![FvjhwLa0rh32Jfbhusocb2Ien3e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/FvjhwLa0rh32Jfbhusocb2Ien3e.png)
 
+    <Procedures>
+
+    1. 前往目标项目，点击**按需计算 > 集群**。
+
+    1. 点击目标 On-demand 集群
+
+    1. 查看详情。
+
+    </Procedures>
+
 ## 删除 On-demand 集群\{#drop-an-on-demand-cluster}
 
 <Admonition type="danger" icon="🚧" title="警告">
@@ -255,7 +273,7 @@ import Procedures from '@site/src/components/Procedures';
          --header "Accept: application/json"
     ```
 
-    The following is an example output.
+    以下是输出示例。
 
     ```bash
     {
@@ -271,4 +289,17 @@ import Procedures from '@site/src/components/Procedures';
 
     ![TFljws1JshqWmIbrKGXcFxTenxc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/TFljws1JshqWmIbrKGXcFxTenxc.png)
 
-    
+    <Procedures>
+
+    1. 前往目标项目，点击**按需计算 > 集群**。
+
+    1. 点击目标 On-demand 集群。
+
+    1. 点击**操作 > 删除**。
+
+    1. 输入集群名称。
+
+    1. 点击**删除**。
+
+    </Procedures>
+

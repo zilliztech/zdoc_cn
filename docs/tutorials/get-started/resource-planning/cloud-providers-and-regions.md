@@ -48,11 +48,12 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
      <td><p>华东1（杭州）</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
-     <td rowspan="2"><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
+     <td><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
    </tr>
    <tr>
      <td><p>华东2（上海）</p></td>
      <td><p>✖️</p></td>
+     <td><p>✔</p></td>
      <td><p>✔</p></td>
    </tr>
    <tr>
