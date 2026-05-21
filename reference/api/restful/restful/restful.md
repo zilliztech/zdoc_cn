@@ -1,11 +1,11 @@
 ---
 displayed_sidebar: restfulSidebar
 slug: /restful
-title: RESTful API 概览
+title: RESTful API 参考
 description: Zilliz Cloud 提供 RESTful API，供您管理集群、集合以及其中存储的数据。
 beta: FALSE
 notebook: FALSE
-sidebar_label: RESTful API Reference
+sidebar_label: RESTful API 参考
 sidebar_position: 0
 keywords:
   - zilliz cloud
@@ -16,7 +16,7 @@ keywords:
   - overview
 ---
 
-# RESTful API 概览
+# RESTful API 参考
 
 Zilliz Cloud 提供 RESTful API，供您操作集群、Collection 以及其中存储的数据。
 
