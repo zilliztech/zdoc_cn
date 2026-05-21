@@ -98,7 +98,7 @@ JSON 字段是 Zilliz Cloud 中一种通过模式定义的数据类型（`DataTy
    <tr>
      <td><p><strong>查询方式</strong></p></td>
      <td><p>使用字段名或 JSON 字段中的目标键进行查询：<code>metadata["key"]</code></p></td>
-     <td><p>可直接使用动态字段键 <code>"dynamic_key"</code>，或通过 <code>$meta</code> 引用：<code>$meta["dynamic_key"]</code></p></td>
+     <td><p>可直接使用动态字段键 <code>"dynamic_key"</code>，或通过 <code>&#36;meta</code> 引用：<code>$#36;meta["dynamic_key"]</code></p></td>
    </tr>
 </table>
 

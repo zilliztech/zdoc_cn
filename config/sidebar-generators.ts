@@ -18,13 +18,13 @@ export async function tutorialsItemsGenerator ({
         item.collapsed = false;
 
         item.items = item.items.map(subItem => {
-        if (subItem.label === 'V2') {
-            subItem.collapsed = false;
+            if (subItem.label === 'V2') {
+                subItem.collapsed = false;
 
-            subItem.items = iterate(subItem.items)
-        }
+                subItem.items = iterate(subItem.items)
+            }
 
-        return subItem
+            return subItem
         })
     }
 
