@@ -29,8 +29,6 @@ import TabItem from '@theme/TabItem';
 
 import Supademo from '@site/src/components/Supademo';
 
-import Procedures from '@site/src/components/Procedures';
-
 # 创建按量计费集群
 
 集群对应一组用于运行向量数据库工作负载的计算资源。Zilliz Cloud 提供两种集群：Serving Clusters（持续运行，适用于需要持续在线、低延迟访问的生产负载）和 On-demand 集群（仅在请求到达时自动拉起，空闲时自动缩容至 0）。
@@ -45,8 +43,6 @@ import Procedures from '@site/src/components/Procedures';
 
 - 每个项目中最多可创建 100 个 Serverless 集群、100 个 Dedicated 集群、20 个 On-demand 集群。
 
-## 创建 Serving 集群\{#create-a-serving-cluster}
-
 Zilliz Cloud 提供多种集群部署方式以满足不同的业务需求。
 
 - **Free**：适用于探索学习向量数据库的场景或个人项目。
@@ -57,7 +53,7 @@ Zilliz Cloud 提供多种集群部署方式以满足不同的业务需求。
 
 如需了解不同部署方式的详细信息，请参考 [Zilliz Cloud 定价](https://zilliz.com.cn/pricing)。
 
-### 创建 Free 集群\{#set-up-a-free-cluster}
+## 创建 Free 集群\{#set-up-a-free-cluster}
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -122,7 +118,7 @@ curl --request POST \
 
 </Tabs>
 
-### 创建 Serverless 集群\{#create-a-serverless-cluster}
+## 创建 Serverless 集群\{#create-a-serverless-cluster}
 
 <Tabs groupId="cluster" defaultValue="console" values={[{"label":"Cloud 控制台","value":"console"},{"label":"cURL","value":"bash"}]}>
 
@@ -181,7 +177,7 @@ curl --request POST \
 
 </Tabs>
 
-### 创建 Dedicated 集群\{#create-a-dedicated-cluster}
+## 创建 Dedicated 集群\{#create-a-dedicated-cluster}
 
 <Tabs groupId="cluster" defaultValue="console" values={[{"label":"Cloud 控制台","value":"console"},{"label":"cURL","value":"bash"}]}>
 
@@ -258,106 +254,6 @@ curl --request POST \
 </TabItem>
 
 </Tabs>
-
-## 创建 On-demand 集群\{#create-an-on-demand-cluster}
-
-<Admonition type="info" icon="📘" title="说明">
-
-此功能仅适用于**企业版**项目。
-
-</Admonition>
-
-- **通过 RESTful API**
-
-    ```bash
-    curl --request POST \
-         --url "https://${BASE_URL}/v2/clusters/createQueryCluster" \
-         --header "Authorization: Bearer ${API_KEY}" \
-         --header "Accept: application/json" \
-         --header "Content-Type: application/json" \
-         --data-raw '{
-            "projectId": "proj-09ee1f4b1151d5dd1edbc5",
-            "regionId": "ali-cn-hangzhou",
-            "clusterName": "my-on-demand",
-            "cu": 8,
-            "sessionTTL": "5m"
-          }'
-         
-    # {
-    #   "code": 0,
-    #   "data": {
-    #     "clusterId": "in07-7d6ac8697204a6a",
-    #     "regionId": "ali-cn-hangzhou",
-    #     "projectId": "proj-09ee1f4b1151d5dd1edbc5"
-    #   }
-    # }
-    ```
-
-    下表为参数说明。
-
-    <table>
-       <tr>
-         <th><p><strong>参数</strong></p></th>
-         <th><p><strong>说明</strong></p></th>
-       </tr>
-       <tr>
-         <td><p><code>projectId</code></p></td>
-         <td><p>创建 On-demand 集群的项目 ID。</p></td>
-       </tr>
-       <tr>
-         <td><p><code>regionId</code></p></td>
-         <td><p>部署集群的地域。必须与项目地域一致。</p></td>
-       </tr>
-       <tr>
-         <td><p><code>cu</code></p></td>
-         <td><p>要分配给该集群的 Query CU 数量。集群会根据负载在 0 和该值之间自动扩缩容——有请求到达时拉起至指定 Query CU，空闲时自动缩容至 0。</p><p>最小值为 8 CU，最大值为 256 CU，并且仅支持按 8 CU 递增（例如 8、16、24）。超过 8 CU 的集群需要绑定支付方式。</p><p>该值在创建后固定，无法修改。</p></td>
-       </tr>
-       <tr>
-         <td><p><code>clusterName</code></p></td>
-         <td><p>要创建的集群的名称。</p></td>
-       </tr>
-       <tr>
-         <td><p><code>sessionTTL</code></p></td>
-         <td><p>集群自动挂起前的空闲时间。在该时间内若未收到请求，集群将自动挂起以停止产生计算费用。</p><ul><li><p>示例: <code>"120s"</code>, <code>"5m"</code>, <code>"1h"</code></p></li><li><p>最小值: <code>"120s"</code></p></li></ul></td>
-       </tr>
-    </table>
-
-- **通过 Web 控制台**
-
-    [Supademo]
-
-    <Procedures>
-
-    1. 点击**按需计算**。
-
-    1. 点击 **+ 集群**。
-
-    1. 配置集群。
-
-        下表为参数说明 。
-
-        <table>
-           <tr>
-             <th><p><strong>参数</strong></p></th>
-             <th><p><strong>说明</strong></p></th>
-           </tr>
-           <tr>
-             <td><p>集群名称</p></td>
-             <td><p>要创建的集群的名称。</p></td>
-           </tr>
-           <tr>
-             <td><p>Query CU</p></td>
-             <td><p>要分配给该集群的 Query CU 数量。集群会根据负载在 0 和该值之间自动扩缩容——有请求到达时拉起至指定 Query CU，空闲时自动缩容至 0。</p><p>最小值为 8 CU，最大值为 256 CU，并且仅支持按 8 CU 递增（例如 8、16、24）。超过 8 CU 的集群需要绑定支付方式。</p><p>该值在创建后固定，无法修改。</p></td>
-           </tr>
-           <tr>
-             <td><p>自动挂起</p></td>
-             <td><p>集群自动挂起前的空闲时间。默认值为 120 秒。在该时间内若未收到请求，集群将自动挂起以停止产生计算费用。</p></td>
-           </tr>
-        </table>
-
-    1. 点击**创建**。
-
-    </Procedures>
 
 ## 常见问题\{#faq}
 
