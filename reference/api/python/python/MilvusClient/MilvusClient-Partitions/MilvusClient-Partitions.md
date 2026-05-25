@@ -12,10 +12,10 @@ token: Snf8fZZTklTziidxXP2cL4cRnOf
 sidebar_position: 6
 sidebar_label: "Partitions"
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud

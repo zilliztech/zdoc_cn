@@ -13,10 +13,10 @@ type: docx
 token: TWzjdJ61ho613AxKSd7clQt9nrg
 sidebar_position: 6
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud

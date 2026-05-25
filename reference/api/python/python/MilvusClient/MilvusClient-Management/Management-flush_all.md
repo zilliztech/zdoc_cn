@@ -13,10 +13,10 @@ type: docx
 token: QejKdv2qKo97mQxEV0CcaSM5nLh
 sidebar_position: 16
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

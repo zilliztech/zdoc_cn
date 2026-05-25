@@ -13,10 +13,10 @@ type: docx
 token: ZqmudJWyFonUKGxAxXncYrLZn2e
 sidebar_position: 9
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud

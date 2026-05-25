@@ -13,10 +13,10 @@ type: docx
 token: HCWBdorQdoONw2xaawacJWQkn1e
 sidebar_position: 1
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

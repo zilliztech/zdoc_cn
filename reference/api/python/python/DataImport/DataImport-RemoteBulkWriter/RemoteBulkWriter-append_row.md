@@ -13,10 +13,10 @@ type: docx
 token: F1MFdP8VvoMu17x4Vg9cH6ztnqb
 sidebar_position: 1
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

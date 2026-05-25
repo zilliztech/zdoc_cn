@@ -13,10 +13,10 @@ type: docx
 token: M2kXd5zWSoMIOnxXWamcgCkznih
 sidebar_position: 15
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud

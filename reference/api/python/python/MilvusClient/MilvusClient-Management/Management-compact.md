@@ -13,10 +13,10 @@ type: docx
 token: ZANCdUPeBoCis1xylRUcR90Pndb
 sidebar_position: 2
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

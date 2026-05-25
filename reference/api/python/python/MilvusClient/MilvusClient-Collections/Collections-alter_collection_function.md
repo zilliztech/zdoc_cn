@@ -13,10 +13,10 @@ type: docx
 token: N9d9df9IIojLZDxft1HcU0mkn0b
 sidebar_position: 22
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud

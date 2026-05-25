@@ -13,10 +13,10 @@ type: docx
 token: CFS4dOq2LowXPSxB124cBwQsn0c
 sidebar_position: 10
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

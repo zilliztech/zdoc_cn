@@ -12,10 +12,10 @@ token: KSDYfo9pCl89wKdRNGccbzT2nid
 sidebar_position: 7
 sidebar_label: "Vector"
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud

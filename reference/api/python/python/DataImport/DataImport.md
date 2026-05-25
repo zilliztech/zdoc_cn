@@ -12,10 +12,10 @@ token: SIN6f7FuAlseoDdllIXck663nBg
 sidebar_position: 1
 sidebar_label: "DataImport"
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud

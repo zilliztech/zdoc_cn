@@ -12,10 +12,10 @@ token: WidffJPNIlfIlZdHlU8cMiGOnpg
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud

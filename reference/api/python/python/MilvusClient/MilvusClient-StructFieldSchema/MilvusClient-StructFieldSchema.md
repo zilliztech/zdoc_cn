@@ -13,10 +13,10 @@ type: docx
 token: ZnKKd2PsyoRc1MxtC1BcJQjgnBh
 sidebar_position: 3
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
@@ -60,11 +60,11 @@ CollectionSchema(
 
     **[REQUIRED]**
 
-    A list of **FieldSchema** objects that define the fields in the schema of a struct in an array of structs field.
+    A list of **[FieldSchema](./ORM-FieldSchema)** objects that define the fields in the schema of a struct in an array of structs field.
 
     <Admonition type="info" icon="📘" title="What is a field schema?">
 
-    A field schema represents and contains metadata for a single field, while **StructFieldSchema** ties together a list of **FieldSchema** objects to define the schema of a struct in an array of structs field.
+    A field schema represents and contains metadata for a single field, while **StructFieldSchema** ties together a list of **[FieldSchema](./ORM-FieldSchema)** objects to define the schema of a struct in an array of structs field.
 
     </Admonition>
 
@@ -90,7 +90,7 @@ A **StructFieldSchema** object.
 
 - **FieldTypeException**: 
 
-    This exception will be raised when a field in the **fields** list is not a **FieldSchema** object.
+    This exception will be raised when a field in the **fields** list is not a **[FieldSchema](./ORM-FieldSchema)** object.
 
 ```python
 from pymilvus import StructFieldSchema, FieldSchema, DataType
@@ -119,7 +119,7 @@ schema = StructFieldSchema(
 
 - **fields** (*list*) -
 
-    A list of **FieldSchema** objects that define the fields in the schema of a struct in an array of structs field.
+    A list of **[FieldSchema](./ORM-FieldSchema)** objects that define the fields in the schema of a struct in an array of structs field.
 
 - **description** (*string*) -
 

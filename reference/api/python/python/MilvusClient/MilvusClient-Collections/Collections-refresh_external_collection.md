@@ -13,10 +13,10 @@ type: docx
 token: ZVs4dDpvmoXI0OxOnKhc9numnJd
 sidebar_position: 29
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud

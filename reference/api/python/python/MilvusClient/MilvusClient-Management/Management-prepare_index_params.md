@@ -13,10 +13,10 @@ type: docx
 token: CAzpdAw3wo4ZqrxhjTLcEGBBn1S
 sidebar_position: 11
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud

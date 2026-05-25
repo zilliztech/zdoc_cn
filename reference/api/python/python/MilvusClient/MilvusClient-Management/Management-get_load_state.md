@@ -13,10 +13,10 @@ type: docx
 token: KEPYdKup1o3nHdxKbjvcQUzwnnd
 sidebar_position: 8
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

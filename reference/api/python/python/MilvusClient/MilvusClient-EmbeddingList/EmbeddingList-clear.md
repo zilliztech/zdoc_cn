@@ -13,10 +13,10 @@ type: docx
 token: M6mrdinAjo8CwrxirOQcR6E1nUc
 sidebar_position: 3
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

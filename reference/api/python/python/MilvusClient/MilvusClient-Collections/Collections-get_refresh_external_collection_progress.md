@@ -13,10 +13,10 @@ type: docx
 token: HITBdKb0HotcK0xCKsycEeuqnXe
 sidebar_position: 27
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud

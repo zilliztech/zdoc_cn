@@ -13,10 +13,10 @@ type: docx
 token: VblKdUEU4o4t31xcFiicIGtjn9g
 sidebar_position: 7
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: RwmUdNd0WoQ75zxrCndcal6HnXT
 sidebar_position: 2
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud

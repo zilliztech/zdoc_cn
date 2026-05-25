@@ -13,10 +13,10 @@ type: docx
 token: QWlfd7SO1ojpdHxM968coTYQnYg
 sidebar_position: 22
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

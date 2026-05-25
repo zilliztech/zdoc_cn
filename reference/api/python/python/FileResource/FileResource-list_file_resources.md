@@ -13,10 +13,10 @@ type: docx
 token: VWCwdHpnbofX9pxw4D1chAghnJg
 sidebar_position: 2
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud

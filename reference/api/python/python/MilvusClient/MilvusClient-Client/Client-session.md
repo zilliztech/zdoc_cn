@@ -13,10 +13,10 @@ type: docx
 token: UASmdlcqvojCe4xNY94cz9Wznyh
 sidebar_position: 4
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

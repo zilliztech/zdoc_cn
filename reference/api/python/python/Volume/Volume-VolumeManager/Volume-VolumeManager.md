@@ -1,0 +1,89 @@
+---
+title: "VolumeManager | Python"
+slug: /python/python/Volume-VolumeManager
+sidebar_key: python/Volume-VolumeManager
+sidebar_label: "VolumeManager"
+added_since: false
+last_modified: false
+deprecate_since: false
+beta: false
+notebook: false
+description: "A `VolumeManager` instance maintains a connection to Zilliz Cloud's Volume service. Before creating, listing, or deleting volumes, you need to initiate a `VolumeManager` instance. | Python"
+type: docx
+token: G5c6dxWkno5FRAxeDMycR6AVntf
+sidebar_position: 5
+keywords: 
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - VolumeManager
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# VolumeManager
+
+A `VolumeManager` instance maintains a connection to Zilliz Cloud's Volume service. Before creating, listing, or deleting volumes, you need to initiate a `VolumeManager` instance.
+
+```python
+class pymilvus.bulk_writer.volume_manager import VolumeManager
+```
+
+<Admonition type="info" icon="📘" title="Notes">
+
+A volume is an intermediate storage spot where you can hold your data for further processing, such as data merging, migration, or importing. For details, refer to [Volume](/docs/volume).
+
+</Admonition>
+
+## Constructor\{#constructor}
+
+This constructor initializes a new `VolumeManager` instance designed to maintain a connection to Zilliz Cloud's Volume service.
+
+```python
+VolumeManager(
+    cloud_endpoint: str,
+    api_key: str
+)
+```
+
+**PARAMETERS:**
+
+- **cloud_endpoint** (*str*) -
+
+    **[REQUIRED]**
+
+    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com`.
+
+- **api_key** (*str*) -
+
+    **[REQUIRED]**
+
+    Your Zilliz Cloud API key with sufficient permissions to manage volumes on Zilliz Cloud's Volume service. To obtain a Zilliz Cloud API key, follow the steps on [API Keys](/docs/manage-api-keys).
+
+**RETURN TYPE:**
+
+`VolumeManager`
+
+**RETURNS:**
+
+A `VolumeManager` instance.
+
+## Examples\{#examples}
+
+```python
+from pymilvus.bulk_writer.volume_manager import VolumeManager
+
+volume_manager = VolumeManager(
+    cloud_endpoint="https://api.cloud.zilliz.com.cn",
+    api_key="YOUR_API_KEY"
+)
+```
+

@@ -13,10 +13,10 @@ type: docx
 token: XhcVd1JXvoAgUfxSEpQcL2H6nVg
 sidebar_position: 1
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud

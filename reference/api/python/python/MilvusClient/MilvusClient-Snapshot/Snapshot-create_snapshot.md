@@ -13,10 +13,10 @@ type: docx
 token: C8vld732kopQNMxbHyLcrORNnze
 sidebar_position: 1
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

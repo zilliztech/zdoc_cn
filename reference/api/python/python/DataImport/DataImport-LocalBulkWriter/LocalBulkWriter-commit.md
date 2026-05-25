@@ -13,10 +13,10 @@ type: docx
 token: EtBDdoGaFo3bOExKxCHcKgpenib
 sidebar_position: 2
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

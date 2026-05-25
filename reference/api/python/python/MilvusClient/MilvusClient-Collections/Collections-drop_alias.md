@@ -13,10 +13,10 @@ type: docx
 token: FpWXdmIuforYz9xUCsqclyCXnLe
 sidebar_position: 10
 keywords: 
-  - vector database open source
-  - open source vector db
-  - vector database example
-  - rag vector database
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud

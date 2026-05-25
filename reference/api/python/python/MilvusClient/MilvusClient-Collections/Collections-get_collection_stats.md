@@ -13,10 +13,10 @@ type: docx
 token: VfaldXzLUocBrJxffw6cJHPinlh
 sidebar_position: 13
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: SpmqdHRBjoRKQuxTibQcx0zMnnb
 sidebar_position: 26
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

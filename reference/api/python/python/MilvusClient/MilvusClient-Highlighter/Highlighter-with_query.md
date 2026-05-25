@@ -13,10 +13,10 @@ type: docx
 token: KdiQdpHp3oEQwNx2hd5chqQKn2D
 sidebar_position: 3
 keywords: 
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
   - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

@@ -12,10 +12,10 @@ token: KrK5fBnFDlG6CedvqyHcfZLynre
 sidebar_position: 5
 sidebar_label: "Management"
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: SSQ6dFGdxouy7hxRwCOcatnEn0e
 sidebar_position: 14
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: NV3Ud1M9iojhaSxZY4ec8RjgnlP
 sidebar_position: 1
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

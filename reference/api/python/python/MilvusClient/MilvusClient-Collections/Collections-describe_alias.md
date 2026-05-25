@@ -13,10 +13,10 @@ type: docx
 token: HN7nddgueo3scIxmPXAcpjkFnDf
 sidebar_position: 8
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud

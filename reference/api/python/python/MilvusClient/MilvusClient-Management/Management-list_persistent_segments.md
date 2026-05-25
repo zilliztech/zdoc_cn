@@ -13,10 +13,10 @@ type: docx
 token: QsGNdp1t3oHaunxgIZGc3PdSnof
 sidebar_position: 23
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud

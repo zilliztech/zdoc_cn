@@ -13,10 +13,10 @@ type: docx
 token: EiTMdIbTgoc9vVxDHUQc1zPpnch
 sidebar_position: 11
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

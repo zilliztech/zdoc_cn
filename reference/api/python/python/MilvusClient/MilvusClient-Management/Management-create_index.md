@@ -13,10 +13,10 @@ type: docx
 token: B3n3db0idoia02xXxJfcONK8nRh
 sidebar_position: 3
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

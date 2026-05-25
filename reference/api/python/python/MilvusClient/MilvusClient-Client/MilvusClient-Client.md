@@ -12,10 +12,10 @@ token: M9bMfXz3llm0ebdks4Hc3KdMnCd
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

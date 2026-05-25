@@ -13,10 +13,10 @@ type: docx
 token: AmwJdW0z6opMPcxhMlBcYPIWn2M
 sidebar_position: 4
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud

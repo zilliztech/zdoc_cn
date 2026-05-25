@@ -13,10 +13,10 @@ type: docx
 token: HkOFdhgbOoz1wlxJIgWcU7EonWc
 sidebar_position: 2
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud

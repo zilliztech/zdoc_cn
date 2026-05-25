@@ -13,10 +13,10 @@ type: docx
 token: Z76PdoAJkoGaMPxG4CFcCmShnwh
 sidebar_position: 5
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

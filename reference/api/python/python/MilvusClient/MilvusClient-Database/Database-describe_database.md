@@ -13,10 +13,10 @@ type: docx
 token: LEaYdk179oZn0vxqa0lcn4mnnrg
 sidebar_position: 3
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: JnPrdOiPyo2e5gxzzFycbnvwnSd
 sidebar_position: 6
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud

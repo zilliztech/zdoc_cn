@@ -13,10 +13,10 @@ type: docx
 token: VccVd4MTgoPzCixDVtgcEoKWnPf
 sidebar_position: 3
 keywords: 
-  - nlp search
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud

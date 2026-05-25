@@ -13,10 +13,10 @@ type: docx
 token: DvaZdhYnyoo7lOxNIBwc5eKEn7d
 sidebar_position: 6
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud

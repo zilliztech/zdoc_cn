@@ -13,10 +13,10 @@ type: docx
 token: EgeGdZL4LoCuv2xVUfFc9eDAnkd
 sidebar_position: 11
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

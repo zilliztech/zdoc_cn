@@ -1,0 +1,95 @@
+---
+title: "create_volume() | Python"
+slug: /python/python/VolumeManager-create_volume
+sidebar_key: python/VolumeManager-create_volume
+sidebar_label: "create_volume()"
+added_since: false
+last_modified: false
+deprecate_since: false
+beta: false
+notebook: false
+description: "This operation creates a volume in the specified project and region. | Python"
+type: docx
+token: GtNKdyeDCoPxQXxvohIcYQ47nee
+sidebar_position: 1
+keywords: 
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - create_volume()
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# create_volume()
+
+This operation creates a volume in the specified project and region.
+
+## Request Syntax\{#request-syntax}
+
+```python
+create_volume(
+    project_id: str,
+    region_id: str,
+    volume_name: str,
+)
+```
+
+**PARAMETERS:**
+
+- **project_id** (*str*) -
+
+    **[REQUIRED]**
+
+    Project ID that owns the volume.
+
+- **region_id** (*str*) -
+
+    **[REQUIRED]**
+
+    Region ID where the volume is created.
+
+- **volume_name** (*str*) -
+
+    **[REQUIRED]**
+
+    Name of the volume.
+
+**RETURN TYPE:**
+
+*requests.Response*
+
+HTTP response from the create volume API.
+
+**EXCEPTIONS:**
+
+- **MilvusException**
+
+    Raised when volume creation fails.
+
+## Examples\{#examples}
+
+```python
+from pymilvus.bulk_writer import VolumeManager
+
+vm = VolumeManager(
+    cloud_endpoint="https://api.cloud.zilliz.com.cn",
+    api_key="YOUR_API_KEY",
+)
+
+resp = vm.create_volume(
+    project_id="proj-xxx",
+    region_id="ali-cn-hangzhou",
+    volume_name="books-volume",
+)
+
+print(resp.json())
+```

@@ -13,10 +13,10 @@ type: docx
 token: NbYidGUPcokra9xJ6IAcUNLEn9f
 sidebar_position: 5
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

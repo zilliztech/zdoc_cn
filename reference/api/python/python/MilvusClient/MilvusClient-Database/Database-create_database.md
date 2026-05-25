@@ -13,10 +13,10 @@ type: docx
 token: S278drWUVoRZ5fx8XkfcWaZfnwh
 sidebar_position: 2
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud

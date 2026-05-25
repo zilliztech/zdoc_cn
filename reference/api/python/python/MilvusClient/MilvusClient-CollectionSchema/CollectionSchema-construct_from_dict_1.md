@@ -13,10 +13,10 @@ type: docx
 token: Ld10d5YWJofvgGxtwYscGlWunDg
 sidebar_position: 3
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud

@@ -12,10 +12,10 @@ token: KpOtfu1TplkyiadlfQxcTa5vnFe
 sidebar_position: 2
 sidebar_label: "BulkImport"
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud

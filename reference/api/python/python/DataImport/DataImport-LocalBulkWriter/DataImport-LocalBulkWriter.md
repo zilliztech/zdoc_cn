@@ -13,10 +13,10 @@ type: docx
 token: RcvXdmCVBog9M8xNyUFcwefnneh
 sidebar_position: 3
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
@@ -61,7 +61,7 @@ writer = LocalBulkWriter(
 
 **PARAMETERS:**
 
-- **schema** (*[CollectionSchema](/reference/python/python/MilvusClient-CollectionSchema)*) -
+- **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
 
     **[REQUIRED]**
 

@@ -13,10 +13,10 @@ type: docx
 token: TfV3dOYPyoKVSMxShrTc9SZ2nqh
 sidebar_position: 5
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud

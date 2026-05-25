@@ -13,10 +13,10 @@ type: docx
 token: DLsXdlRA3odugzx4sIccnBVKn0d
 sidebar_position: 3
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud

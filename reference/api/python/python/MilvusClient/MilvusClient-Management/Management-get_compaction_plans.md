@@ -13,10 +13,10 @@ type: docx
 token: Qa8ZdRkOKocH60xujcLcOxuBnkh
 sidebar_position: 17
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud

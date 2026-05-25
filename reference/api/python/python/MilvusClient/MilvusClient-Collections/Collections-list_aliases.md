@@ -13,10 +13,10 @@ type: docx
 token: Cpynd2OFJoIXhLx3dQNct7Wgn6f
 sidebar_position: 16
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud

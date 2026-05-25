@@ -13,10 +13,10 @@ type: docx
 token: Ulypd24byoDBOpxGnnJcbF3Nnkb
 sidebar_position: 2
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

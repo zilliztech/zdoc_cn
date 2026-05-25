@@ -12,10 +12,10 @@ token: Tjnufe7LvlX9wtddOfEctVJ6nKB
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud

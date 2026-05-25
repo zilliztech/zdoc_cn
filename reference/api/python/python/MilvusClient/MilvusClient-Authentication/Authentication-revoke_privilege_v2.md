@@ -13,10 +13,10 @@ type: docx
 token: WazKdTlcOoYoBWxIJEEc7gFMnfC
 sidebar_position: 18
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud

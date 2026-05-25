@@ -13,10 +13,10 @@ type: docx
 token: N13hd7jVjoA6B1xlgwic2GKRn5f
 sidebar_position: 3
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud

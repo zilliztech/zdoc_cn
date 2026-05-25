@@ -13,10 +13,10 @@ type: docx
 token: VkBFdLHwao9hVMxzRurcBYIynFh
 sidebar_position: 28
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: Kqlodu0AWoefKvxczcxc1c36nlf
 sidebar_position: 4
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: I6hvdlYUuoUaw3xWqSnce4Fin9g
 sidebar_position: 1
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
@@ -71,7 +71,7 @@ create_partition(
 
 **RETURN TYPE:**
 
-*Partition*
+*[Partition](./ORM-Partition)*
 
 **RETURNS:**
 

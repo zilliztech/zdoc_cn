@@ -13,10 +13,10 @@ type: docx
 token: RSOkdriHRoRd8ixyVZOch1l9nDd
 sidebar_position: 9
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: GF0yd9S4RoImivxbIlPcicEynQb
 sidebar_position: 2
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud

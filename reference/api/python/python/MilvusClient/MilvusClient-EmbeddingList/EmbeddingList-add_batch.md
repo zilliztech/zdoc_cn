@@ -13,10 +13,10 @@ type: docx
 token: TJundbM8FoU8UKxczaMcix3QnHb
 sidebar_position: 2
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud

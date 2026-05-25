@@ -13,10 +13,10 @@ type: docx
 token: BDP4dew9to9tQoxNEMPcBR5xnZb
 sidebar_position: 4
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
@@ -62,7 +62,7 @@ writer = RemoteBulkWriter(
 
 **PARAMETERS:**
 
-- **schema** (*[CollectionSchema](/reference/python/python/MilvusClient-CollectionSchema)*) -
+- **schema** (*[CollectionSchema](./ORM-CollectionSchema)*) -
 
     **[REQUIRED]**
 

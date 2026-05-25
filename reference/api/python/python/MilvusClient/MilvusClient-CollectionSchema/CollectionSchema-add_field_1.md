@@ -13,10 +13,10 @@ type: docx
 token: N3Fbd0ZZVoFo8DxJ9r8cNgcCnOd
 sidebar_position: 1
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud

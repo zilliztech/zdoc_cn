@@ -13,10 +13,10 @@ type: docx
 token: N6kjdex5Ao0lRqxPXBhcxq4AnNh
 sidebar_position: 13
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud

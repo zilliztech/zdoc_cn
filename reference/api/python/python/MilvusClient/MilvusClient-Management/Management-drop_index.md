@@ -13,10 +13,10 @@ type: docx
 token: NPnQdZCJ7oF002xTntecdI2ini8
 sidebar_position: 5
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud

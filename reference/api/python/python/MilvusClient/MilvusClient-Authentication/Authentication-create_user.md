@@ -13,10 +13,10 @@ type: docx
 token: BDupd28JqoNY9HxVOTfcv86enRe
 sidebar_position: 4
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud

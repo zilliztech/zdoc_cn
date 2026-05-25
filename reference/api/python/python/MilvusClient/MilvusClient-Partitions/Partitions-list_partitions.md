@@ -13,10 +13,10 @@ type: docx
 token: Dxgqdvlk5o2VScxqmL1ctc1Inqb
 sidebar_position: 5
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud

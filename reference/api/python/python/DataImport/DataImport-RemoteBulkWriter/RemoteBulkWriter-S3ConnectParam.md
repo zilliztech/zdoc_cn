@@ -13,10 +13,10 @@ type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud

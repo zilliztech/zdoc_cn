@@ -13,10 +13,10 @@ type: docx
 token: NqWDdRxKYoi6uTxHaYEcafx9nGc
 sidebar_position: 7
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
