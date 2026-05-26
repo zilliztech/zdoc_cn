@@ -1,16 +1,39 @@
-export async function tutorialsItemsGenerator ({
+const CHANGELOGS_DOC_ID = 'tutorials/get-started/release-notes/changelogs';
+
+function isReleaseNotesCategory(item) {
+    return item.type === 'category' && (
+        item.key === 'release-notes' ||
+        item.label === 'release-notes' ||
+        item.label === '版本说明书'
+    );
+}
+
+function useChangelogsAsReleaseNotesIndex(item, label, changelogsLabel, description) {
+    item.label = label;
+    item.description = description;
+    item.link = {
+        type: 'doc',
+        id: CHANGELOGS_DOC_ID,
+    };
+    item.items = item.items.filter(
+        (child) => child.key !== 'changelogs' && child.label !== changelogsLabel,
+    );
+}
+
+
+export async function referenceItemsGenerator ({
           defaultSidebarItemsGenerator, ...args
         }) {
     var sidebarItems = defaultSidebarItemsGenerator(args)
     var iterate = (items) => {
-    return items.map(item => {
-        if (item.type === 'category') {
-        item.collapsed = false;
-        item.items = iterate(item.items)
-        }
+        return items.map(item => {
+            if (item.type === 'category') {
+                item.collapsed = false;
+                item.items = iterate(item.items)
+            }
 
-        return item
-    })
+            return item
+        })
     }
     sidebarItems = sidebarItems.map(item => {
     // restful
@@ -145,7 +168,7 @@ export async function tutorialsItemsGenerator ({
     return sidebarItems;
 }
 
-export async function ReferenceItemsGenerator ({
+export async function tutorialsItemsGenerator ({
             defaultSidebarItemsGenerator, ...args
           }) {
             var sidebarItems = defaultSidebarItemsGenerator(args)
@@ -159,33 +182,42 @@ export async function ReferenceItemsGenerator ({
                 item.items = item.items.map(subItem => {
                   if (subItem.label === 'API & SDKs') {
                     subItem.items.push(...[
-                      {
-                        type: 'link',
-                        label: 'Python SDK',
-                        href: '/reference/python'
-                      },
-                      {
-                        type: 'link',
-                        label: 'Java SDK',
-                        href: '/reference/java'
-                      },
-                      {
-                        type: 'link',
-                        label: 'Go SDK',
-                        href: '/reference/go'
-                      },
-                      {
-                        type: 'link',
-                        label: 'Node.js SDK',
-                        href: '/reference/nodejs'
-                      },
-                      {
-                        type: 'link',
-                        label: 'RESTful API',
-                        href: '/reference/restful'
-                      }
-                    ])
-                  }
+                            {
+                                type: 'link',
+                                label: 'Python SDK',
+                                href: '/reference/python'
+                            },
+                            {
+                                type: 'link',
+                                label: 'Java SDK',
+                                href: '/reference/java'
+                            },
+                            {
+                                type: 'link',
+                                label: 'Go SDK',
+                                href: '/reference/go'
+                            },
+                            {
+                                type: 'link',
+                                label: 'Node.js SDK',
+                                href: '/reference/nodejs'
+                            },
+                            {
+                                type: 'link',
+                                label: 'RESTful API',
+                                href: '/reference/restful'
+                            }
+                        ])
+                    }
+                    
+                    if (isReleaseNotesCategory(subItem)) {
+                        useChangelogsAsReleaseNotesIndex(
+                            subItem,
+                            '版本说明书',
+                            '变更日志',
+                            '此处文档记录了 Zilliz Cloud 的版本历史。 | Cloud',
+                        )
+                    }
 
                   return subItem;
                 })
@@ -219,7 +251,7 @@ export async function ReferenceItemsGenerator ({
             return sidebarItems;
           }
 
-export async function AgentsItemsGenerator ({
+export async function agentsItemsGenerator ({
     defaultSidebarItemsGenerator, ...args
 }) {
     var sidebarItems = defaultSidebarItemsGenerator(args)

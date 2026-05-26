@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add_connection() | Python | ORM"
 slug: /python/python/Connections-add_connection
+sidebar_key: python/Connections-add_connection
 sidebar_label: "add_connection()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: C37ldNLbFog6ThxA23ScMldnnmb
 sidebar_position: 1
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud
   - add_connection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,9 @@ import Admonition from '@theme/Admonition';
 
 # add_connection()
 
-This operation adds connections to multiple Zilliz Cloud clusters for different purposes in a batch. 
+This operation adds [connections](./ORM-Connections) to multiple Zilliz Cloud clusters for different purposes in a batch. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 add_connection(
@@ -53,7 +53,7 @@ add_connection(
 
     - **address** (*string*) -
 
-        The actual address to connect. Example address: **localhost:19530**.
+        The actual address to connect. Example address: **YOUR_CLUSTER_ENDPOINT**.
 
     - **uri** (*string*) -
 
@@ -93,23 +93,21 @@ add_connection(
 
 <Admonition type="info" icon="📘" title="How can I get the cluster endpoint and token?">
 
-<ul>
-<li><strong>Cluster endpoint</strong></li>
-</ul>
-<p>You can log into the <a href="https://cloud.zilliz.com">Zilliz Cloud</a> console and click <strong>Clusters</strong> in the left navigation pane. In the cluster list, click the name of the target cluster, copy its endpoint in the <strong>Connect</strong> area, and use it as the URI above.</p>
-<ul>
-<li><strong>Access token</strong></li>
-</ul>
-<p>To connect to a Zilliz Cloud cluster, you can use either of the following</p>
-<ul>
-<li>An API key</li>
-</ul>
-<p>You can log into the <a href="https://cloud.zilliz.com">Zilliz Cloud</a> console and click <strong>API Keys</strong> in the left navigation pane.</p>
-<ul>
-<li>A pair of username and password to access the cluster, joined by a colon (<strong>:</strong>).</li>
-</ul>
-<p>You can use the cluster credentials specified when the cluster has been created on the Zilliz Cloud console, or those of any existing cluster users.</p>
-<p>For details, refer to <a href="/docs/on-zilliz-cloud-console">On Zilliz Cloud Console</a> for more information.</p>
+- **Cluster endpoint**
+
+    You can log into the [Zilliz Cloud](https://cloud.zilliz.com) console and click **Clusters** in the left navigation pane. In the cluster list, click the name of the target cluster, copy its endpoint in the **Connect** area, and use it as the URI above.
+
+- **Access token**
+
+    To connect to a Zilliz Cloud cluster, you can use either of the following
+
+    - An API key
+
+        You can log into the [Zilliz Cloud](https://cloud.zilliz.com) console and click **API Keys** in the left navigation pane.
+
+    - A pair of username and password to access the cluster, joined by a colon (**:**).
+
+        You can use the cluster credentials specified when the cluster has been created on the Zilliz Cloud console, or those of any existing cluster users.
 
 </Admonition>
 
@@ -127,7 +125,7 @@ None
 
     This exception will be raised when the connection configuration is invalid.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections
@@ -144,7 +142,7 @@ connections.add_connection(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `add_connection()`:
 
