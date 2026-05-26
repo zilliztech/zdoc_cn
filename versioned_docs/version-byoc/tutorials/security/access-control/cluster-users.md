@@ -51,7 +51,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-每个集群中最多可创建 100 名集群用户。
+每个集群中最多可创建 500 名集群用户。
 
 </Admonition>
 

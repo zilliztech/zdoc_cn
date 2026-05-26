@@ -47,11 +47,11 @@ import Admonition from '@theme/Admonition';
 
 - 为该用户设置[鉴权](./cluster-credentials)时使用的密码。
 
-![add-cluster-user-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-user-cn.png "add-cluster-user-cn")
+undefined
 
 <Admonition type="info" icon="📘" title="说明">
 
-每个集群中最多可创建 100 名集群用户。
+每个集群中最多可创建 500 名集群用户。
 
 </Admonition>
 

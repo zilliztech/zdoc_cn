@@ -128,7 +128,7 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
     ![add-cluster-role-form-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-role-form-cn.png "add-cluster-role-form-cn")
 
-1. 点击**创建**。 每个集群中最多可创建 20 个自定义集群角色。
+1. 点击**创建**。 每个集群中最多可创建 500 个自定义集群角色。
 
 ## 将角色授予用户\{#grant-a-role-to-a-user}
 

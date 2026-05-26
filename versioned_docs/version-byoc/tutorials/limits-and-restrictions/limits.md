@@ -57,13 +57,13 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>集群用户</p></td>
-     <td><p>100</p></td>
-     <td><p>每个集群中最多可容纳 100 名集群用户。</p></td>
+     <td><p>500</p></td>
+     <td><p>每个集群中最多可容纳 500 名集群用户。</p></td>
    </tr>
    <tr>
      <td><p>集群自定义角色</p></td>
-     <td><p>20</p></td>
-     <td><p>每个集群中最多可创建 20 个自定义角色。如需取消此限制，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
+     <td><p>500</p></td>
+     <td><p>每个集群中最多可创建 500 个自定义角色。如需取消此限制，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
    </tr>
 </table>
 
