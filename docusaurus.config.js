@@ -2,7 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import larkDocsConfig from './config/lark-docs.config';
-import { tutorialsItemsGenerator, ReferenceItemsGenerator, AgentsItemsGenerator } from './config/sidebar-generators';
+import { tutorialsItemsGenerator, referenceItemsGenerator, agentsItemsGenerator } from './config/sidebar-generators';
 import 'dotenv/config';
 const planeConfig = require('./plugins/apifox-docs/meta/plane-config.json');
 const { remarkCnPublishNormalizer } = require('./plugins/cn-publish-normalizer/remarkCnPublishNormalizer');
@@ -70,6 +70,7 @@ const config = {
       ({
         docs: {
           path: 'docs',
+          exclude: ['**/get-started/release-notes/release-notes.md'],
           breadcrumbs: true,
           sidebarPath: require.resolve('./sidebarsTutorial.js'),
           routeBasePath: 'docs',
@@ -86,7 +87,7 @@ const config = {
               banner: 'none'
             },
           },
-          sidebarItemsGenerator: ReferenceItemsGenerator,
+          sidebarItemsGenerator: tutorialsItemsGenerator,
         },
         blog: false,
         theme: {
@@ -105,7 +106,7 @@ const config = {
         routeBasePath: 'reference',
         remarkPlugins: [remarkCnPublishNormalizer],
         sidebarPath: require.resolve('./sidebarsReference.js'),
-        sidebarItemsGenerator: tutorialsItemsGenerator,
+        sidebarItemsGenerator: referenceItemsGenerator,
       },
     ],
     [
@@ -135,7 +136,7 @@ const config = {
         breadcrumbs: false,
         remarkPlugins: [remarkMath, remarkCnPublishNormalizer],
         rehypePlugins: [rehypeKatex],
-        sidebarItemsGenerator: AgentsItemsGenerator,
+        sidebarItemsGenerator: agentsItemsGenerator,
       }
     ],
     [
@@ -282,7 +283,7 @@ const config = {
               },
               {
                 label: '版本说明书',
-                href: '/docs/release-notes',
+                href: '/docs/changelogs',
               }
             ],
           }
