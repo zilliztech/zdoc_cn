@@ -109,8 +109,6 @@ add_connection(
 
         You can use the cluster credentials specified when the cluster has been created on the Zilliz Cloud console, or those of any existing cluster users.
 
-    For details, refer to [On Zilliz Cloud Console](/docs/on-zilliz-cloud-console) for more information.
-
 </Admonition>
 
 **RETURN TYPE:**
