@@ -58,7 +58,7 @@ export default function NotFoundContent({className}) {
                 </a>
               </li>
               <li>
-                <a href="/docs/release-notes" style={{color: '#175fff', fontSize: '14px', textDecoration: 'none'}}>
+                <a href="/docs/changelogs" style={{color: '#175fff', fontSize: '14px', textDecoration: 'none'}}>
                   版本说明
                 </a>
               </li>

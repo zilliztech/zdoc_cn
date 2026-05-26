@@ -11,7 +11,7 @@ notebook: FALSE
 description: "版本说明书（2026/05） | Cloud"
 type: origin
 token: A2JWwWmori22ZMkvZfEch3wZn5e
-sidebar_position: 1
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz
@@ -88,7 +88,7 @@ import Grid from '@site/src/components/Grid';
 
         对于这类非持续在线负载，On-Demand Search 与 Serverless 都采用按量付费模型。但实验显示：在 10 亿向量规模、每月累计 10 小时活跃计算的场景下，On-Demand Search 总成本仅约为 Serverless 的 1/15（318 美元 vs. 4,937 美元）。
 
-        详情请参考 [快速开始：按需搜索](./quick-start) 与 [按需计算费用](./on-demand-compute-cost)。
+        详情请参考 [快速开始：按需搜索](./quick-start-to-on-demand-search) 与 [按需计算费用](./on-demand-compute-cost)。
 
         **外部数据湖搜索（External Data Lake Search）**
 
@@ -98,7 +98,7 @@ import Grid from '@site/src/components/Grid';
 
         为此，Zilliz 提供了 External Collection 模式——对客户自有湖表进行零拷贝逻辑映射，并在其上构建高性能索引与全谱搜索能力。
 
-        了解如何为现有数据湖建立索引与加速，请参见 [快速开始：External Data Lake Search](./quick-start-to-on-demand-search)。
+        了解如何为现有数据湖建立索引与加速，请参见 [快速开始：External Data Lake Search](./quick-start-to-external-data-lake-search)。
 
         Vector Lakebase 可通过 Zilliz Cloud 控制台、REST API、PyMilvus 与 Zilliz CLI 访问。其引入了基于使用量的计费模型，覆盖计算、存储与存储请求，包括 Query CU、Indexing CU、Project Database Storage 与 Storage Requests。
 
@@ -116,7 +116,7 @@ import Grid from '@site/src/components/Grid';
 
         - **External Collection** —— 可直接引用对象存储中的数据（Parquet、Lance、Vortex、Iceberg），无需先拷贝到 Milvus。Milvus 仅管理 schema、索引与查询执行。通过增量 Refresh 可保持与源文件变更同步，同一数据集也可被多个实例同时服务。        详情请参见 [External Collection](./external-collection)。
 
-        - **External Backfill***（内测版）* —— 可在不停机的情况下为在线集合升级 embedding 模型。先通过 `AddCollectionField` 添加新向量字段，用 Snapshot 冻结一致性起点，离线运行 embedding 任务，再通过常规写入路径回填数据。新列完成索引后，应用即可切换。
+        - **External Backfill** *（内测版）* —— 可在不停机的情况下为在线集合升级 embedding 模型。先通过 `AddCollectionField` 添加新向量字段，用 Snapshot 冻结一致性起点，离线运行 embedding 任务，再通过常规写入路径回填数据。新列完成索引后，应用即可切换。
 
             *如需加入 External Backfill 内测，[请联系我们](https://zilliz.com.cn/contact-sales)。*
 
@@ -124,41 +124,41 @@ import Grid from '@site/src/components/Grid';
 
         - **Null Vector** —— 允许所有六类向量字段支持可空。搜索时会自动跳过 NULL 行，不影响召回质量，且 NULL 向量几乎不占存储。现有集合也可通过 `AddCollectionField` 在线新增可空向量列，无需重建。
 
-            详情请参见 [Nullable 属性](./nullable-and-default)与[默认值](./undefined)。
+            详情请参见 [Nullable 属性](./nullable-fields)与[默认值](./default-fields)。
 
         - **EmbList + DiskANN** —— 每个实体可存储变长向量列表，并通过 DiskANN 在磁盘侧建立索引。适用于长文档、ColBERT 等晚交互模型和多模态实体，在大规模语料下有助于控制内存占用。
 
-            详情请参见 [StructArray](./use-array-of-structs)与 StructArray 操作符。
+            详情请参见 [StructArray](./use-array-of-structs)与 [StructArray 操作符](./struct-array-operators)。
 
         - **MinHash DIDO（Doc-in, Doc-out）** —— 为 MINHASH_LSH 增加服务端 MinHash 函数。Milvus 在插入、批量插入和搜索时可自动计算签名，无需应用侧预处理，适用于去重、指纹比对和抄袭检测等流程。
 
-            详情请参见 [MinHash Function](./undefined)。
+            详情请参见 [MinHash Function](./minhash-function)。
 
         **搜索与排序控制**
 
         - **Query / Search Order By** —— 支持多字段排序及每字段 ASC / DESC，并下推到内核执行。无需再为复合排序进行 over-fetch 与客户端二次重排。
 
-            详情请参见 [基本 Vector Search](./single-vector-search#sort-search-results-by-scalar-fields} | 公测)、[Grouping Search](./grouping-search#order-groups-by-a-scalar-field} | 公测) 和 [Query](./get-and-scalar-query)。
+            详情请参见 [基本 Vector Search](./single-vector-search)、[Grouping Search](./grouping-search) 和 [Query](./get-and-scalar-query#aggregate-query-results)。
 
         **数据生命周期与运维**
 
         - **Snapshot** —— 集合的时间点只读视图，引用现有 segment 而不复制数据。批任务可在类 MVCC 隔离下运行，在线集合仍可持续写入；适用于 A/B 评估、去重和回填验证。
 
-            详情请参见快照与管理快照。
+            详情请参见[快照](./snapshots)与[管理快照](./manage-snapshots)。
 
         - **Entity TTL（行级 TTL）** —— 通过 `Timestamptz` TTL 字段按行过期。过期行自动回收，覆盖保留期合规、会话数据、对话历史等场景，无需应用侧清理。
 
-            详情请参见 [设置 Collection 生存时间](./set-collection-ttl)。
+            详情请参见 [设置 Collection 生存时间](./set-collection-ttl#enable-entity-ttl-on-a-new-collection)。
 
         - **Force Merge** —— 可在低峰窗口显式触发 segment compaction（同步或异步），降低分片碎片化带来的查询时延抖动和存储开销。
 
         **文本与 Spark 驱动的数据处理**
 
-        - **自定义词典与分词器***（内测）* —— 可通过 FileResource 机制注册自定义分词词典、同义词表、停用词表与拆词规则，并统一作用于 BM25、分析器与 Text Match，实现集中版本管理而非散落在应用代码中。
+        - **自定义词典与分词器** *（内测版）* —— 可通过 FileResource 机制注册自定义分词词典、同义词表、停用词表与拆词规则，并统一作用于 BM25、分析器与 Text Match，实现集中版本管理而非散落在应用代码中。
 
-        - **Spark Semantic Dedup***（内测）* —— 支持大规模 Spark 数据处理中的语义去重。
+        - **Spark Semantic Dedup** *（内测版）* —— 支持大规模 Spark 数据处理中的语义去重。
 
-        - **Spark Abnormal Detection***（内测）* —— 在基于 Spark 的数据处理中识别异常记录或模式。
+        - **Spark Abnormal Detection** *（内测版）* —— 在基于 Spark 的数据处理中识别异常记录或模式。
 
             *如需加入上述任一能力的私测，[请联系我们](https://zilliz.com.cn/contact-sales)。*
 
@@ -176,7 +176,7 @@ import Grid from '@site/src/components/Grid';
 
         现已在集合级支持 Large TopK，将启用集合的最大返回实体数从 16,384 扩展到 1,000,000。该能力同时适用于 Serving Cluster 与 On-demand Compute，尤其适合数据挖掘和批量分析场景，可为候选生成、模型评估与大规模相似性搜索提供更广的候选召回范围。
 
-        详情请参见使用大 TopK。
+        详情请参见[使用大 TopK](./use-large-topk)。
 
         ## 功能增强（Enhancements）\{#enhancements}
 
