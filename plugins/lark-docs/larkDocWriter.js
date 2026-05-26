@@ -1379,7 +1379,7 @@ export const method = "${method}"`
     }
 
     async __code(code, indent, prev, next, blocks) {
-        const valid_langs = ['Python', 'JavaScript', 'Java', 'Go', 'Bash']
+        const valid_langs = ['Python', 'JavaScript', 'Java', 'Go', 'C++', 'Bash', 'Shell']
         let lang = code.style.language ? this.code_langs[code['style']['language']] : 'plaintext'
         let elements = (await Promise.all(code['elements'].map( async x => {
             let content = await this.__text_run(x, code['elements'], true)
@@ -1387,13 +1387,13 @@ export const method = "${method}"`
             return content
         }))).join('')
 
-        elements = elements.replace(/zilliz.com(["|'])/g, 'zilliz.com.cn$1')
-            .replace(/gcp-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
-            .replace(/aws-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
-            .replace(/azure-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
-            .replace(/gcp-us-.*(["|'])/g, 'ali-cn-hangzhou$1')
-            .replace(/aws-us-.*(["|'])/g, 'ali-cn-hangzhou$1')
-            .replace(/azure-.*(["|'])/g, 'ali-cn-hangzhou$1')
+        // elements = elements.replace(/zilliz.com(["|'])/g, 'zilliz.com.cn$1')
+        //     .replace(/gcp-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
+        //     .replace(/aws-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
+        //     .replace(/azure-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
+        //     .replace(/gcp-us-.*(["|'])/g, 'ali-cn-hangzhou$1')
+        //     .replace(/aws-us-.*(["|'])/g, 'ali-cn-hangzhou$1')
+        //     .replace(/azure-.*(["|'])/g, 'ali-cn-hangzhou$1')
 
         if (lang === 'C++') return; // to be removed once c++ is supported
 
@@ -1531,6 +1531,9 @@ export const method = "${method}"`
                         break;
                     case 'Bash':
                         label = 'cURL'
+                        break;
+                    case 'Shell':
+                        label = 'Zilliz CLI'
                         break;
                     default:
                         label = lang
