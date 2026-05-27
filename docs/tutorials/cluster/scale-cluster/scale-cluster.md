@@ -160,37 +160,39 @@ Zilliz Cloud 提供多种方式来扩缩容集群资源。根据您的工作负�
 
 ## 常见问题\{#faq}
 
-1. **我应该选择哪种扩缩容方式？**
+**我应该选择哪种扩缩容方式？**
 
-    以下是帮助您快速选择合适扩缩容方式的建议：
+以下是帮助您快速选择合适扩缩容方式的建议：
 
-    ![DIlKwYWaLhUfKRbeI93coBZTnmb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DIlKwYWaLhUfKRbeI93coBZTnmb.png)
+![DIlKwYWaLhUfKRbeI93coBZTnmb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DIlKwYWaLhUfKRbeI93coBZTnmb.png)
 
-    - 如果您非常清楚工作负载模式，例如每天的峰值时间固定，**手动**扩缩容和**定时**扩缩容是最适合您的选择。
+- 如果您非常清楚工作负载模式，例如每天的峰值时间固定，**手动**扩缩容和**定时**扩缩容是最适合您的选择。
 
-    - 如果您的工作负载不可预测，并且波动较大，推荐使用**动态**扩缩容。它会在您设定的范围内自动调整集群 Query CU，帮助在保持性能的同时优化成本。
+- 如果您的工作负载不可预测，并且波动较大，推荐使用**动态**扩缩容。它会在您设定的范围内自动调整集群 Query CU，帮助在保持性能的同时优化成本。
 
-1. **什么情况下应该调整 Replica 数量，什么时候应该进行集群 Query CU 扩缩容？**
+**什么情况下应该调整 Replica 数量，什么时候应该进行集群 Query CU 扩缩容？**
 
-    - 增加 Replica 数量适用于以下场景：
+- 增加 Replica 数量适用于以下场景：
 
-        - 需要处理高 QPS（每秒查询数）并保证高可用性。
+    - 需要处理高 QPS（每秒查询数）并保证高可用性。
 
-        - 工作负载包含大量并发搜索或查询请求，希望提升吞吐量
+    - 工作负载包含大量并发搜索或查询请求，希望提升吞吐量
 
-        **提示**：每个 Replica 都是 Query CU 资源的独立拷贝，负责处理部分查询请求。
+    **提示**：每个 Replica 都是 Query CU 资源的独立拷贝，负责处理部分查询请求。
 
-    - 增加 Query CU 适用于以下场景：
+- 增加 Query CU 适用于以下场景：
 
-        - 需要处理大型数据集或支持更多 Collection。
+    - 需要处理大型数据集或支持更多 Collection。
 
-        - CPU 或内存使用率较高。
+    - CPU 或内存使用率较高。
 
-        **提示**：增加 Query CU 可为每个 query node 提供更多计算资源和容量。
+    **提示**：增加 Query CU 可为每个 query node 提供更多计算资源和容量。
 
-    - **建议**：对于 1-8 CU 的集群，请直接进行集群扩缩容。对于超过 8 CU 的集群，请增加 Replica 数量。
+- **建议**：对于 1-8 CU 的集群，请直接进行集群扩缩容。对于超过 8 CU 的集群，请增加 Replica 数量。
 
+**当我对 Dedicated 集群进行扩缩容时，扩缩容期间会按照旧配置还是新配置计费？**
 
+扩缩容期间，将按照集群的原有配置计费。只有当扩缩容任务成功完成后，才会按照新的配置计费。
 
 import DocCardList from '@theme/DocCardList';
 

@@ -40,19 +40,17 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 On-demand 集群会自动扩缩容：有请求到达时自动拉起，空闲时自动缩容至 0，无需手动干预。
 
-## 使用限制\{#limits}
+## 注意事项\{#considerations}
 
-在集群创建完成后，满足以下条件时，您可以设置 Replica：
+- **资源限制：**在集群创建完成后，满足以下条件时，您可以设置 Replica：
 
-- 集群 Query CU 数量大于等于 12。
+    - 集群 Query CU 数量大于等于 12。
 
-- Query CU 数量 x Replica 数量不得超过 20480。
+    - Query CU 数量 x Replica 数量不得超过 20480。
 
-<Admonition type="caution" icon="🚧" title="警告">
+- **扩缩容过程中的计费**：在 Replica 扩缩容任务执行期间，Zilliz Cloud 会继续按照原有的 Replica 配置对集群计费。只有当扩缩容任务成功完成后，才会按照新的 Replica 数量计费。如果扩缩容任务仍在进行中或未成功完成，则仍按照原有的 Replica 配置计费。
 
-修改 Replica 数量可能会短暂影响数据读取。请谨慎操作。
-
-</Admonition>
+- **性能影响**：扩缩容过程中可能会出现轻微的服务抖动，短暂影响数据读取。
 
 ## 手动扩缩容\{#manual-scaling}
 
