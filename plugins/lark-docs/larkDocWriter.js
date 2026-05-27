@@ -1395,7 +1395,7 @@ export const method = "${method}"`
         //     .replace(/aws-us-.*(["|'])/g, 'ali-cn-hangzhou$1')
         //     .replace(/azure-.*(["|'])/g, 'ali-cn-hangzhou$1')
 
-        if (lang === 'C++') return; // to be removed once c++ is supported
+        // if (lang === 'C++') return; // to be removed once c++ is supported
 
         if (valid_langs.includes(lang)) {
             const prev_type = prev ? this.block_types[prev['block_type']-1] : null;
