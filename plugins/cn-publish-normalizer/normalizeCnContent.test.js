@@ -104,6 +104,7 @@ function testNormalizesClusterEndpointFamilies() {
     'serverless="https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com"',
     'public="https://in01-xxxx.gcp-us-west1.vectordb.zillizcloud.com:19530"',
     'legacyCn="https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com.cn/v1/vector/search"',
+    'newServerlessGlobal="https://in01-xxxx.serverless.gcp-us-west1.cloud.zilliz.com/v1/vector/search"',
     'alreadyCn="https://in01-xxxx.serverless.ali-cn-hangzhou.vectordb.zilliz.com.cn"',
     'doubleCn="https://in01-xxxx.serverless.ali-cn-hangzhou.vectordb.zilliz.com.cn.cn"',
     'legacyApiRegion="https://in01-xxxx.api.gcp-us-west1.zillizcloud.com:19530"',
@@ -117,12 +118,14 @@ function testNormalizesClusterEndpointFamilies() {
   assert.match(out, /https:\/\/in01-xxxx\.serverless\.gcp-us-west1\.cloud\.zilliz\.com\.cn/);
   assert.match(out, /https:\/\/in01-xxxx\.gcp-us-west1\.vectordb\.zilliz\.com\.cn:19530/);
   assert.match(out, /https:\/\/in01-xxxx\.serverless\.gcp-us-west1\.cloud\.zilliz\.com\.cn\/v1\/vector\/search/);
+  assert.match(out, /newServerlessGlobal="https:\/\/in01-xxxx\.serverless\.gcp-us-west1\.cloud\.zilliz\.com\.cn\/v1\/vector\/search"/);
   assert.match(out, /https:\/\/in01-xxxx\.serverless\.ali-cn-hangzhou\.cloud\.zilliz\.com\.cn/);
   assert.match(out, /https:\/\/in01-xxxx\.gcp-us-west1\.vectordb\.zilliz\.com\.cn\/v1\/vector\/search/);
   assert.match(out, /https:\/\/YOUR_CLUSTER_ID\.YOUR_REGION\.vectordb\.zilliz\.com\.cn:19530/);
   assert.match(out, /https:\/\/YOUR_CLUSTER_ID\.serverless\.YOUR_REGION\.cloud\.zilliz\.com\.cn/);
   assert.doesNotMatch(out, /vectordb\.zillizcloud\.com(?:\.cn)?/);
   assert.doesNotMatch(out, /serverless\.[\w-]+\.vectordb\.zilliz\.com\.cn/);
+  assert.doesNotMatch(out, /serverless\.[\w{}-]+\.cloud\.zilliz\.com(?!\.cn)/i);
   assert.doesNotMatch(out, /\.api\.[\w{}-]+\.zillizcloud\.com(?:\.cn)?/i);
   assert.doesNotMatch(out, /vectordb\.zilliz\.com\.cn\.cn/);
 }

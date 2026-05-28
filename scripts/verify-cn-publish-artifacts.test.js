@@ -52,6 +52,7 @@ function testFindsAllForbiddenResidualClasses() {
         'https://proj-123.ali-cn-hangzhou.api.zilliz.com.cn/v2/jobs',
         'https://api.cloud.zilliz.com.cn.cn',
         'https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com',
+        'https://{cluster-id}.serverless.{region}.cloud.zilliz.com',
         'https://in01-xxxx.api.gcp-us-west1.zillizcloud.com:19530',
         'https://YOUR_PROJECT_ID.YOUR_REGION.api.zillizcloud.com',
         'https://YOUR_CLUSTER_ID.serverless.YOUR_REGION.vectordb.zillizcloud.com',
@@ -102,6 +103,7 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
         'https://{project-id}.{region}.api.zillizcloud.com',
         'https://{project-id}.{region}.api.zilliz.com.cn/v2/jobs',
         'https://in01-xxxx.serverless.gcp-us-west1.vectordb.zillizcloud.com',
+        'https://{cluster-id}.serverless.{region}.cloud.zilliz.com/v1/vector/search',
         'https://in01-xxxx.api.gcp-us-west1.zillizcloud.com:19530',
         'https://YOUR_PROJECT_ID.YOUR_REGION.api.zillizcloud.com',
         'https://YOUR_CLUSTER_ID.serverless.YOUR_REGION.vectordb.zillizcloud.com',
@@ -125,6 +127,7 @@ function testNormalizeArtifactsRewritesResidualsBeforeScan() {
     assert.doesNotMatch(normalized, /\.api\.zilliz\.com\.cn/);
     assert.match(normalized, /\.api\.cloud\.zilliz\.com\.cn/);
     assert.doesNotMatch(normalized, /vectordb\.zillizcloud\.com(?:\.cn)?/);
+    assert.doesNotMatch(normalized, /serverless\.[\w{}-]+\.cloud\.zilliz\.com(?!\.cn)/i);
     assert.doesNotMatch(normalized, /\.api\.[\w-]+\.zillizcloud\.com(?:\.cn)?/i);
     assert.match(normalized, /serverless\.[\w-]+\.cloud\.zilliz\.com\.cn/);
     assert.match(normalized, /vectordb\.zilliz\.com\.cn/);

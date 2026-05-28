@@ -49,6 +49,11 @@ function normalizeEndpoints(content) {
   );
 
   out = out.replace(
+    /https?:\/\/((?:\{[a-z0-9_-]+\}|[a-z0-9_-]+))\.serverless\.(\{[a-z0-9_-]+\}|[a-z0-9_-]+)\.cloud\.zilliz\.com(?!\.cn)\b/gi,
+    'https://$1.serverless.$2.cloud.zilliz.com.cn',
+  );
+
+  out = out.replace(
     /https?:\/\/((?:\{[a-z0-9_-]+\}|[a-z0-9_-]+))\.api\.(\{[a-z0-9_-]+\}|[a-z0-9_-]+)\.zillizcloud\.com(?:\.cn)?((?::[0-9]+)?(?:\/[\w\-.~%!$&'()*+,;=:@/?]*)?(?:#[\w\-.~%!$&'()*+,;=:@/?]*)?)/gi,
     'https://$1.$2.vectordb.zilliz.com.cn$3',
   );
