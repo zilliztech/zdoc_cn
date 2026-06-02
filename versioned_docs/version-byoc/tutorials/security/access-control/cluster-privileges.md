@@ -450,13 +450,13 @@ import TabItem from '@theme/TabItem';
    </tr>
 </table>
 
-### 自定义权限组\{#custom-privilege-group}
+### 自定义权限组 | PRIVATE\{#custom-privilege-group}
 
 如果内置权限组无法满足您的需求，您可以使用 SDK 创建自定义权限组，并将所需权限添加到这些权限组中。
 
 <Admonition type="info" icon="📘" title="说明">
 
-如需创建和管理自定义权限组，请[提交工单](http://support.zilliz.com.cn)，我们将为您启用此功能。
+该特性为**内测版**特性。如需创建和管理自定义权限组，请[提交工单](http://support.zilliz.com.cn)，我们将为您启用此功能。
 
 </Admonition>
 
