@@ -31,6 +31,12 @@ import Procedures from '@site/src/components/Procedures';
 
 本小节主要介绍如何在您的阿里云 VPC 和您托管在阿里云上的 Zilliz Cloud 集群之间建立私网连接。
 
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限 **Dedicated** **Serving** **集群**或 **On-demand 集群**使用。
+
+</Admonition>
+
 您需要在 Zilliz Cloud 项目中创建 Private Endpoint。创建完成后，Private Endpoint 将适用于项目下所有与 Private Endpoint 云服务提供商和地域相同的集群。
 
 <Admonition type="info" icon="📘" title="提示">
@@ -214,7 +220,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
        </tr>
        <tr>
          <td><p>内置权威域名（Zone）</p></td>
-         <td><p>请根据您的集群地域修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：</p><ul><li><p>杭州：<code>ali-cn-hangzhou.vectordb.zilliz.com.cn</code></p></li><li><p>北京：<code>ali-cn-beijing.vectordb.zilliz.com.cn</code></p></li><li><p>深圳：<code>ali-cn-shenzhen.vectordb.zilliz.com.cn</code></p></li><li><p>上海：<code>ali-cn-shanghai.vectordb.zilliz.com.cn</code></p></li></ul></td>
+         <td><p>请根据您的集群地域修改内置权威域名。以下为终端节点所在区域对应的 Zone 名称：</p><p>Dedicated 集群：</p><ul><li><p>杭州：<code>ali-cn-hangzhou.vectordb.zilliz.com.cn</code></p></li><li><p>北京：<code>ali-cn-beijing.vectordb.zilliz.com.cn</code></p></li><li><p>深圳：<code>ali-cn-shenzhen.vectordb.zilliz.com.cn</code></p></li><li><p>上海：<code>ali-cn-shanghai.vectordb.zilliz.com.cn</code></p><p>项目访问端点：</p></li><li><p>北京：<code>ali-cn-beijing.api.zilliz.com.cn</code></p></li><li><p>上海：<code>ali-cn-shanghai.api.zilliz.com.cn</code></p></li></ul></td>
        </tr>
        <tr>
          <td><p>子域名递归解析代理</p></td>
@@ -261,7 +267,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
        </tr>
        <tr>
          <td><p>主机记录</p></td>
-         <td><p>请替换为你的集群 ID-privatelink。 你可在集群详情页获取集群 ID。</p></td>
+         <td><ul><li><p>Serving 集群: Zilliz Cloud 为目标 Serving 集群分配的 Private Link。</p></li><li><p>On-demand 计算: 服务的 Project Endpoint。</p></li></ul></td>
        </tr>
        <tr>
          <td><p>记录值</p></td>
