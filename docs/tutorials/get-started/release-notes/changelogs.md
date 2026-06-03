@@ -52,7 +52,7 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        **2026 年 6 月 3 日**
+        **[2026 年 6 月 3 日](./release-notes-2606#nullable-vector)**
 
     </div>
 
