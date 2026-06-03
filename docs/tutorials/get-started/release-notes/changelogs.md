@@ -8,7 +8,7 @@ last_modified: FALSE
 deprecate_since: FALSE
 beta: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 4 月 11 日 | Cloud"
+description: "最近更新：2026 年 6 月 3 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 0
@@ -28,7 +28,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 4 月 11 日
+**最近更新**：2026 年 6 月 3 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -52,7 +52,23 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        **2026 年 5 月 20 日**
+        **2026 年 6 月 3 日**
+
+    </div>
+
+    <div>
+
+        - 🔐 向量字段现已支持 `nullable` 属性，这意味着您可以为已有 Collection 新增向量字段。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 5 月 20 日](./release-notes-2605#vector-lakebase-public-preview)**
 
     </div>
 
@@ -78,7 +94,7 @@ import Grid from '@site/src/components/Grid';
 
             - [快照](./snapshots)（Snapshots），
 
-            - [Entity](/docs/set-collection-ttl#set-entity-ttl)[ TTL](/docs/set-collection-ttl#set-entity-ttl)，
+            - [Entity](./set-collection-ttl#set-entity-ttl)[ TTL](./set-collection-ttl#set-entity-ttl)，
 
             - Force merge，
 
@@ -86,7 +102,7 @@ import Grid from '@site/src/components/Grid';
 
             - Spark 语义去重与异常检测
 
-        - 💾 用于导入、迁移和外部集合流程的只读 [External Volumes](/docs/external-volume) 已上线。
+        - 💾 用于导入、迁移和外部集合流程的只读 [External Volumes](./external-volume) 已上线。
 
         - 🔍︎ Collection 级[大 Top-K](./use-large-topk) 功能可用，已将启用集合的最大返回实体数从 16,384 扩展到 1,000,000。
 
@@ -106,7 +122,7 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        - 🌎 [全球集群](/docs/global-cluster-explained)现已支持云地域间的灾备能力及相关的平台能力提升。
+        - 🌎 [全球集群](./global-cluster-explained)现已支持云地域间的灾备能力及相关的平台能力提升。
 
         - 📈 提供 [Collection 级别的指标监控](./metrics-alerts-reference)
 
@@ -190,7 +206,7 @@ import Grid from '@site/src/components/Grid';
 
             - [Lexical Highlighter](./text-highlighter)
 
-        - 🤖 基于[模型的 Embedding](/docs/function-and-model-inference-overview) 和[重排序 Function](./model-ranker) 开始公测。
+        - 🤖 基于[模型的 Embedding](./model-based-functions) 和[重排序 Function](./model-ranker) 开始公测。
 
         - 🛠️ [智能动态扩缩容](./scale-query-cu#dynamic-scaling)上线。
 
@@ -220,7 +236,7 @@ import Grid from '@site/src/components/Grid';
 
         - 🚀   Milvus v2.6.x 功能特性全面可用（GA）
 
-        - 💾  分层存储能力正式发布（GA）并[开始计费](./storage-cost#cold-data-access)
+        - 💾  分层存储能力正式发布（GA）并[开始计费](./storage-cost)
 
     </div>
 

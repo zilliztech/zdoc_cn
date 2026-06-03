@@ -34,8 +34,6 @@ Milvus  允许您向现有 Collection 动态地添加新字段，帮助您在业
 
 在向指定 Collection 添加字段前，请了解如下注意事项：
 
-- 您可以添加标量字段，包括 `INT64`、`VARCHAR`、`FLOAT`、`DOUBLE` 等，但不能新增向量字段。
-
 - 新增字段的 `nullable` 属性必须开启，以便处理 Collection 中已有 Entity 在该字段没有值的情况。
 
 - 向已经加载的 Collection 添加字段，会增加内存占用。
