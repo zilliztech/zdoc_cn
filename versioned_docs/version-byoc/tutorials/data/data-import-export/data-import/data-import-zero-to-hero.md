@@ -36,6 +36,14 @@ import TabItem from '@theme/TabItem';
 
 - 如果调用批量导入 API 将准备好的源数据导入目标 Collection
 
+<Admonition type="info" icon="📘" title="说明">
+
+Zilliz Cloud 允许您将数据从任意对象存储导入到任意 Zilliz Cloud 集群，不用考虑托管集群的云服务商。例如，您可以将存储在阿里云上的数据导入到部署在腾讯云上的集群。
+
+但是，Zilliz Cloud 仍旧建议您从与目标集群位于相同云服务商相同云地域的对象存储桶中导入数据，以获得低时延、高稳定的数据操作体验。
+
+</Admonition>
+
 ## 开始之前\{#before-you-start}
 
 为了保证整个数据导入流程的连续性，请在开始本教程前完成如下准备工作：

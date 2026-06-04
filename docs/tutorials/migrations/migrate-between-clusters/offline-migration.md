@@ -168,7 +168,7 @@ import Supademo from '@site/src/components/Supademo';
 
 以下演示完整离线迁移流程：
 
-<Supademo id="cmb91ow5v0me4sn1rzlbzqi8x" title="Zilliz Cloud - 离线迁移 Demo" />
+<Supademo id="cmpz7gcz8akutqmy76zc00wpe" title=""  />
 
 <Admonition type="info" icon="📘" title="说明">
 

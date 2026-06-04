@@ -79,6 +79,14 @@ Zilliz Cloud 支持上传本地 JSON 或 Parquet 文件。如果您的数据格�
 
 根据您的数据安全需求，您也可以使用 [临时 Token](/docs/faq-data-import#can-i-use-session-tokens-when-importing-data-from-an-object-storage-service)。
 
+<Admonition type="info" icon="📘" title="说明">
+
+Zilliz Cloud 允许您将数据从任意对象存储导入到任意 Zilliz Cloud 集群，不用考虑托管集群的云服务商。例如，您可以将存储在阿里云上的数据导入到部署在腾讯云上的集群。
+
+但是，Zilliz Cloud 仍旧建议您从与目标集群位于相同云服务商相同云地域的对象存储桶中导入数据，以获得低时延、高稳定的数据操作体验。
+
+</Admonition>
+
 <Supademo id="cme9ujdvy023mz40hswufsrd8?utm_source=link" title=""  />
 
 ## 结果验证\{#verify-the-result}

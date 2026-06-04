@@ -41,6 +41,12 @@ Zilliz Cloud 提供基于 Milvus 的完全托管的向量数据库解决方案�
 
     - **从对象存储**：Milvus 对象存储的公共 URL 和访问凭据。您可以选择长期或临时凭据。您可以查看[常见问题](./via-backup-files#faq)，了解对象存储公共 URL 的格式示例。
 
+        <Admonition type="info" icon="📘" title="说明">
+
+        建议您将备份文件放置在与目标集群同云服务商同地域的对象存储桶中，以便获得低时延、高稳定的迁移体验。
+
+        </Admonition>
+
     - **从 Volume**：对于非常大的本地备份文件，可以先将其上传到 Zilliz Cloud 的 Volume，然后填写该 Volume 内的文件路径。
 
 - 您需要拥有组织管理员或项目管理员的角色。如果您没有相应的权限，请联系您的 Zilliz Cloud 管理员。
