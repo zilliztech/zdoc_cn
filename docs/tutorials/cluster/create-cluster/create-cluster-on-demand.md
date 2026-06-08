@@ -41,7 +41,7 @@ import Supademo from '@site/src/components/Supademo';
 
 - 在目标组织或项目中，您具有集群创建权限。有关角色和权限的信息，请参见[管理组织用户](./organization-users) 和 [管理项目用户](./project-users)。
 
-- 每个项目中最多可创建 100 个 Serverless 集群、100 个 Dedicated 集群、20 个 On-demand 集群。
+- 每个项目中最多可创建 100 个 Serverless 集群、100 个 Dedicated 集群。
 
 Zilliz Cloud 提供多种集群部署方式以满足不同的业务需求。
 
@@ -193,7 +193,7 @@ curl --request POST \
 
     - **集群类型**：想了解更多关于集群类型的相关内容，可参见[选择合适的 CU 类型](/docs/cu-types-explained)。如需选择分层存储型 CU，集群规格需至少为 8 Query CU。
 
-    - **Query CU 数量**：您可以使用[计算器](https://zilliz.com.cn/pricing#calculator)估算所需 Query CU 数量。
+    - **Query CU 数量**：您可以使用[计算器](https://zilliz.com.cn/pricing#calculator)估算所需 Query CU 数量。对于使用个人邮箱创建的组织，即使已配置支付方式，Dedicated 集群的 Query CU 最大也只能设置为 32。
 
 - （可选）**备份策略**：设置定时创建备份的频率。开启后，系统将立即创建一个备份文件以保护数据。后续备份将按照您指定的策略定时创建。
 
@@ -247,7 +247,7 @@ curl --request POST \
 
 - `clusterType`：集群的类型。可选的参数值包含：**Performance-optimized**（性能型）和 **Capacity-optimized**（容量型）。
 
-- `cuSize`：集群的 Query CU 数量。参数值为 1-256 之间的整数。
+- `cuSize`：集群的 Query CU 数量。参数值为 1-256 之间的整数。对于使用个人邮箱创建的组织，即使已配置支付方式，Dedicated 集群的 Query CU 最大也只能设置为 32。
 
 更多详情，请参考[创建 Dedicated 集群](/reference/restful/create-dedicated-cluster-v2)。
 
