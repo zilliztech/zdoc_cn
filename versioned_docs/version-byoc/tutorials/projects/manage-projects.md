@@ -30,6 +30,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Procedures from '@site/src/components/Procedures';
+
 # 项目管理
 
 在 Zilliz Cloud 中，项目位于组织和集群层级之间，用于分组集群、Volume 和相关资源。同一项目下所有资源都部署在同一云地域中。
@@ -40,7 +42,7 @@ import Admonition from '@theme/Admonition';
 
 ## 添加项目地域\{#add-project-regions}
 
-如果您需要使用[全球集群](/docs/global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
+如果您需要使用[全球集群](./global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
 
 - **通过 RESTful API**
 
@@ -71,6 +73,20 @@ import Admonition from '@theme/Admonition';
     }
     
     ```
+
+- **通过 Web console**
+
+    ![MHR4wgt3BhdGGjbvgp3crJmqnVf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MHR4wgt3BhdGGjbvgp3crJmqnVf.png)
+
+    <Procedures>
+
+    1. 选择目标项目，并点击**...**
+
+    1. 点击**添加区域**。
+
+    1. 选择地域并点击**添加**。
+
+    </Procedures>
 
 ## 查看全部项目\{#view-all-projects}
 

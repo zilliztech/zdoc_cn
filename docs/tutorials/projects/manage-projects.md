@@ -58,7 +58,7 @@ import Procedures from '@site/src/components/Procedures';
 
 - **通过 web 控制台**
 
-    <Supademo id="cmhiwl9xe5zyafati36cxl9ck?utm_source=link" title=""  />
+    <Supademo id="cmhiwl9xe5zyafati36cxl9ck" title=""  />
 
     <Procedures>
 
@@ -132,7 +132,7 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 添加项目地域\{#add-project-regions}
 
-如果您需要使用[全球集群](/docs/global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
+如果您需要使用[全球集群](./global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
 
 - **通过 RESTful API**
 
@@ -163,6 +163,20 @@ import Procedures from '@site/src/components/Procedures';
     }
     
     ```
+
+- **通过 Web console**
+
+    ![MHR4wgt3BhdGGjbvgp3crJmqnVf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MHR4wgt3BhdGGjbvgp3crJmqnVf.png)
+
+    <Procedures>
+
+    1. 选择目标项目，并点击**...**
+
+    1. 点击**添加区域**。
+
+    1. 选择地域并点击**添加**。
+
+    </Procedures>
 
 ## 查看全部项目\{#view-all-projects}
 

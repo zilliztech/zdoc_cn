@@ -139,7 +139,7 @@ import Procedures from '@site/src/components/Procedures';
 
 全球 Endpoint 是一个统一的 URL，会将请求路由到全球集群中的相应集群。在 SDK 客户端中将其作为 `uri` 使用。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -198,25 +198,13 @@ client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
 ```
 
 </TabItem>
-
-<TabItem value='bash'>
-
-```bash
-curl --request POST \
-  --url "YOUR_GLOBAL_ENDPOINT" \
-  --header "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
-  --header "Content-Type: application/json" \
-  --data '{"dbName": "default"}'
-```
-
-</TabItem>
 </Tabs>
 
 ## 通过公共 Endpoint 连接\{#connect-using-a-public-endpoint}
 
 全球集群中的每个集群都有自己的公共 Endpoint。当您需要直接访问特定集群时，可以使用此方式。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"}]}>
 <TabItem value='python'>
 
 ```python
@@ -272,18 +260,6 @@ client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: "YOUR_CLUSTER_PUBLIC_ENDPOINT",  // Public endpoint of a specific cluster
     APIKey:  "YOUR_CLUSTER_TOKEN",  // API key or username:password
 })
-```
-
-</TabItem>
-
-<TabItem value='bash'>
-
-```bash
-curl --request POST \
-  --url "YOUR_CLUSTER_PUBLIC_ENDPOINT" \
-  --header "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
-  --header "Content-Type: application/json" \
-  --data '{"dbName": "default"}'
 ```
 
 </TabItem>
