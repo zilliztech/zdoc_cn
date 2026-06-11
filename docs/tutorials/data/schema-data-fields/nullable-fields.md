@@ -38,7 +38,7 @@ Zilliz Cloud 支持 `nullable` 属性。启用 `nullable` 属性后，字段值�
 
 - 向量嵌入异步生成，并在之后再写入。
 
-## **限制\{#limits}**
+## 限制\{#limits}
 
 - 允许 `NULL` 值的向量字段不支持 `IS NULL` 或 `IS NOT NULL` 过滤表达式。您不能根据向量字段值是否为 `NULL` 来显式过滤 Entity。
 
@@ -48,7 +48,7 @@ Zilliz Cloud 支持 `nullable` 属性。启用 `nullable` 属性后，字段值�
 
 - 启用 `nullable` 属性的字段不能用作 Partition Key。Partition Key 字段必须始终包含有效的非空值。
 
-## **什么是Nullable 属性\{#nullable-attribute}**
+## 什么是Nullable 属性\{#nullable-attribute}
 
 在 Zilliz Cloud 中，字段是否允许存储 `NULL` 值由名为 `nullable` 的 Schema 级字段属性控制。
 
@@ -72,7 +72,7 @@ Collection Schema 中的 **标量字段和向量字段** 都支持 `nullable` �
 
 </Admonition>
 
-## **设置 nullable 属性\{#set-the-nullable-attribute}**
+## 设置 nullable 属性\{#set-the-nullable-attribute}
 
 要使用 `nullable` 属性，您必须在定义 Collection Schema 时启用该属性。
 
@@ -349,7 +349,7 @@ schema.WithField(entity.NewField().
 
 </details>
 
-## **缺失值或 NULL 值的插入行为\{#insert-behavior-with-missing-or-null-values}**
+## 缺失值或 NULL 值的插入行为\{#insert-behavior-with-missing-or-null-values}
 
 字段在 Collection Schema 中启用 `nullable` 属性后，Zilliz Cloud 允许在数据写入期间缺失该字段值，或显式将其设置为 `NULL`。
 
@@ -514,7 +514,7 @@ curl --request POST \
 
 - `id = 3` 的 Entity 完全省略 `embedding` 字段；Zilliz Cloud 将其存储为 `NULL`。
 
-## **索引行为\{#index-behavior}**
+## 索引行为\{#index-behavior}
 
 插入数据后，您可以像往常一样在启用 `nullable` 属性的字段上构建索引。区别在于 Zilliz Cloud 在索引构建期间如何处理 `NULL` 值：
 
@@ -676,7 +676,7 @@ curl --request POST \
 
 - `embedding` 为 `NULL` 的 Entity 仍保留在 Collection 中，但不会加入向量索引。
 
-## **搜索行为\{#search-behavior}**
+## 搜索行为\{#search-behavior}
 
 当您在启用 `nullable` 属性的字段上执行搜索操作时，Zilliz Cloud 只会评估搜索所用字段具有非空值的 Entity。向量字段值为 `NULL` 的 Entity 会自动跳过。
 
@@ -804,7 +804,7 @@ curl --request POST \
 
 - 返回结果数量取决于 Collection 中有效向量的数量。
 
-## **查询与过滤影响\{#query-filtering-implications}**
+## 查询与过滤影响\{#query-filtering-implications}
 
 前面的示例重点介绍向量字段。本节说明 **标量过滤表达式** 中 `NULL` 值的行为。
 
@@ -910,7 +910,7 @@ filter := \`status == "active"\`
 
 `status` 为 `NULL` 的 Entity 会从结果中排除。
 
-## **适用规则\{#applicable-rules}**
+## 适用规则\{#applicable-rules}
 
 如果字段同时配置了 `nullable` 和 `default_value`，以下规则决定 Zilliz Cloud 在插入时如何处理 `NULL` 输入或缺失字段值。
 
