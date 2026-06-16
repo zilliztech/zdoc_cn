@@ -1190,7 +1190,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
 
 在上述示例中，`embeddingList1` 包含了一个向量，而 `embeddingList2` 包含了两个向量。每个 EmbeddingList 都会触发一次独立的相似性搜索并返回 topK 个与之最相似的 Entity。
 
-## 针对 Struct Array 字段进行标量过滤\{#scalaring-filtering-in-a-structarray-field}
+## 针对 Struct Array 字段进行标量过滤 | ONDEMAND \{#scalaring-filtering-in-a-structarray-field}
 
 您可以使用 **Element Filter** 和 **Match 系列运算符**，对 StructArray 中的标量子字段进行标量过滤。有关上述两类运算符的更多详细信息和示例，请参阅 [StructArray 操作符](./struct-array-operators)。
 
