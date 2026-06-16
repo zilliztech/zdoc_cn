@@ -88,8 +88,98 @@ function testOperationWithIncludeLangExcludesZhCnOutput() {
   })
 }
 
+function testGlobalClustersGenerateUnderControlPlane() {
+  withTempDir(targetPath => {
+    const spec = {
+      openapi: '3.0.1',
+      info: { title: 'test', version: '1.0.0' },
+      tags: [
+        {
+          name: 'Global Clusters (V2)',
+          'x-i18n': {
+            'zh-CN': {
+              name: '全球集群 (V2)',
+            },
+          },
+          'x-include-target': ['zilliz'],
+        },
+      ],
+      paths: {
+        '/v2/globalClusters': {
+          get: {
+            summary: 'List Global Clusters',
+            description: 'List all global clusters in the account.',
+            'x-i18n': {
+              'zh-CN': {
+                summary: '列出全球集群',
+                description: '列出账户中的所有全球集群。',
+              },
+            },
+            tags: ['Global Clusters (V2)'],
+            parameters: [
+              {
+                name: 'Authorization',
+                in: 'header',
+                description: 'API key token',
+                required: true,
+                schema: { type: 'string' },
+              },
+            ],
+            responses: {
+              200: {
+                description: 'ok',
+                content: {
+                  'application/json': {
+                    schema: {
+                      type: 'object',
+                      properties: {
+                        code: { type: 'integer' },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      components: {},
+      servers: [],
+    }
+
+    const refGen = new RefGen({
+      specifications: spec,
+      lang: 'zh-CN',
+      target: 'zilliz',
+      target_path: targetPath,
+    })
+
+    refGen.make_groups()
+    refGen.write_refs()
+
+    const controlPlanePath = path.join(
+      targetPath,
+      'v2',
+      'control-plane',
+      'global-clusters-v2',
+      'list-global-clusters-v2.mdx',
+    )
+    const dataPlanePath = path.join(
+      targetPath,
+      'v2',
+      'data-plane',
+      'global-clusters-v2',
+      'list-global-clusters-v2.mdx',
+    )
+
+    assert.equal(fs.existsSync(controlPlanePath), true)
+    assert.equal(fs.existsSync(dataPlanePath), false)
+  })
+}
+
 function run() {
   testOperationWithIncludeLangExcludesZhCnOutput()
+  testGlobalClustersGenerateUnderControlPlane()
   console.log('apifox refGen lang filter tests passed')
 }
 
