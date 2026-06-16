@@ -6,7 +6,7 @@ sidebar_label: "快速开始：External Data Lake Search"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PUBLIC
+beta: ONDEMAND
 notebook: FALSE
 description: "按需搜索使您能够在无需持续运行计算资源的情况下，对存储在外部存储中的数据或已导入 Zilliz Cloud 的数据进行搜索。您可以基于 External Volume 或导入的文件创建 Collection，通过项目数据面 Endpoint 构建索引并 Refresh 元数据，并仅在需要执行 Search 或 Query 工作负载时启动 On-demand 集群。 | Cloud"
 type: origin

@@ -6,7 +6,7 @@ sidebar_label: "快速开始：按需搜索"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: FALSE
+beta: ONDEMAND
 notebook: FALSE
 description: "Zilliz Cloud 提供了按需计算资源，允许您按需运行相似性搜索和查询任务。如下图所示，按需计算资源在没有请求需要处理时会自动挂起，挂起的计算资源不产生任何费用。 | Cloud"
 type: origin
