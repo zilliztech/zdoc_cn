@@ -63,7 +63,7 @@ Zilliz Cloud 提供多样的项目版本类型以满足不同的用户需求。�
      <td><p>2 种类型可供选择：</p><ul><li><p>性能型</p></li><li><p>容量型</p></li></ul></td>
    </tr>
    <tr>
-     <td><p><a href="/docs/cloud-providers-and-regions">云服务提供商和地域</a></p></td>
+     <td><p><a href="./cloud-providers-and-regions">云服务提供商和地域</a></p></td>
      <td><p>阿里云</p></td>
      <td><p>阿里云</p></td>
      <td><p>阿里云、腾讯云、亚马逊云科技</p></td>
@@ -164,7 +164,7 @@ Zilliz Cloud 提供多样的项目版本类型以满足不同的用户需求。�
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Stage</p></td>
+     <td><p><a href="./managed-volume">Volume</a></p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
