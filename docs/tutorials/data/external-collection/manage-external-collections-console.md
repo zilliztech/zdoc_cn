@@ -6,7 +6,7 @@ sidebar_label: "控制台"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PUBLIC
+beta: ONDEMAND
 notebook: FALSE
 description: "本页介绍如何通过 Zilliz Cloud Web 控制台管理 External Collection。 | Cloud"
 type: origin

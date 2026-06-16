@@ -6,7 +6,7 @@ sidebar_label: "快照使用场景"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PRIVATE
+beta: ONDEMAND
 notebook: FALSE
 description: "本指南介绍快照的常见使用场景。 | Cloud"
 type: origin

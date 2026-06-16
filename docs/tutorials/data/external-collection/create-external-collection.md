@@ -6,7 +6,7 @@ sidebar_label: "创建 External Collection"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PUBLIC
+beta: ONDEMAND
 notebook: FALSE
 description: "External Collection 是 Zilliz Cloud 中的一种数据 Collection 类型，可直接访问存储在外部存储系统或数据库表（例如 AWS S3 和 Iceberg）中的数据，而无需将数据复制到 Zilliz Cloud 中。它充当数据湖之上的查询层，同时保持与 Zilliz Cloud 查询接口的兼容性。 | Cloud"
 type: origin

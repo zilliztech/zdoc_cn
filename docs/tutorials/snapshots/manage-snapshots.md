@@ -6,7 +6,7 @@ sidebar_label: "管理快照"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PRIVATE
+beta: ONDEMAND
 notebook: FALSE
 description: "本指南介绍如何创建和管理快照。 | Cloud"
 type: origin

@@ -6,7 +6,7 @@ sidebar_label: "MinHash Function"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PRIVATE
+beta: ONDEMAND
 notebook: FALSE
 description: "MinHash Function 可将原始文本转换为二进制向量，用于近似表示文档之间的 Jaccard 相似度。该 Function 会对文本进行 Shingling，并应用多个哈希函数生成固定长度的签名向量，从而支持大规模近重复检测和文档去重。 | Cloud"
 type: origin

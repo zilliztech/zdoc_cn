@@ -6,7 +6,7 @@ sidebar_label: "限制"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PUBLIC
+beta: ONDEMAND
 notebook: FALSE
 description: "因为 Zilliz Cloud 不会为 External Collection 存储原始数据，而只维护元数据以及到外部数据源的映射关系，因此 External Collection 是只读的。您无法从 Zilliz Cloud 侧执行写入或维护操作，包括 `insert`、`upsert`、`delete`、`import`、`flush` 和 `compact`。 | Cloud"
 type: origin

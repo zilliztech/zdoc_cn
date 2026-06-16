@@ -359,7 +359,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 对查询结果排序 | PRIVATE \{#sort-query-results}
+### 对查询结果排序 | ONDEMAND \{#sort-query-results}
 
 默认情况下，Query 返回结果的顺序不固定。使用 `order_by` 参数可以按一个或多个标量字段对结果排序。
 
@@ -400,7 +400,36 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.QueryReq;
+import io.milvus.v2.service.vector.response.QueryResp;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build());
+
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("order_by_fields", "id:asc");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\"")
+        .outputFields(Arrays.asList("vector", "color"))
+        .limit(3)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
 ```
 
 </TabItem>
@@ -416,7 +445,23 @@ res = client.query(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+import { MilvusClient } from "@zilliz/milvus2-sdk-node";
+
+const address = "YOUR_CLUSTER_ENDPOINT";
+const token = "YOUR_CLUSTER_TOKEN";
+const client = new MilvusClient({ address, token });
+
+const res = await client.query({
+  collection_name: "my_collection",
+  filter: 'color like "red%"',
+  output_fields: ["vector", "color"],
+  limit: 3,
+  // highlight-next-line
+  order_by: ["id:asc"],
+});
+
+console.log(res.data);
+
 ```
 
 </TabItem>
@@ -428,13 +473,9 @@ res = client.query(
 ```
 
 </TabItem>
-</Tabs>
 
-#### 多字段排序\{#multi-field-sort}
 
-您可以同时按多个字段排序。结果会先按列表中的第一个字段排序。当两条结果在该字段上的值相同时，再由第二个字段决定它们的顺序，依此类推。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -454,7 +495,23 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("order_by_fields", "rating:desc,price:asc");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "rating", "price"))
+        .limit(10)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
 ```
 
 </TabItem>
@@ -470,7 +527,17 @@ res = client.query(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+const res = await client.query({
+  collection_name: "my_collection",
+  filter: "",
+  output_fields: ["color", "rating", "price"],
+  limit: 10,
+  // highlight-next-line
+  order_by: ["rating:desc", "price:asc"],
+});
+
+console.log(res.data);
+
 ```
 
 </TabItem>
@@ -482,13 +549,9 @@ res = client.query(
 ```
 
 </TabItem>
-</Tabs>
 
-#### 结合分页排序\{#pagination-with-sort}
 
-将 `order_by` 与 `limit` 和 `offset` 一起使用，可以对排序后的结果进行分页。例如，如果要按价格排序展示商品列表，每个页面都会按正确的价格顺序显示下一批商品，且不会出现重复或遗漏。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -520,7 +583,38 @@ page2 = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("order_by_fields", "price:asc");
+
+QueryReq page1Req = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\"")
+        .outputFields(Arrays.asList("color", "price"))
+        .limit(5)
+        .offset(0)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp page1 = client.query(page1Req);
+for (QueryResp.QueryResult result : page1.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+QueryReq page2Req = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\"")
+        .outputFields(Arrays.asList("color", "price"))
+        .limit(5)
+        .offset(5)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp page2 = client.query(page2Req);
+for (QueryResp.QueryResult result : page2.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
 ```
 
 </TabItem>
@@ -536,7 +630,30 @@ page2 = client.query(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+const page1 = await client.query({
+  collection_name: "my_collection",
+  filter: 'color like "red%"',
+  output_fields: ["color", "price"],
+  limit: 5,
+  offset: 0,
+  // highlight-next-line
+  order_by: ["price:asc"],
+});
+
+console.log(page1.data);
+
+const page2 = await client.query({
+  collection_name: "my_collection",
+  filter: 'color like "red%"',
+  output_fields: ["color", "price"],
+  limit: 5,
+  offset: 5,
+  // highlight-next-line
+  order_by: ["price:asc"],
+});
+
+console.log(page2.data);
+
 ```
 
 </TabItem>
@@ -548,23 +665,14 @@ page2 = client.query(
 ```
 
 </TabItem>
-</Tabs>
 
-### 对查询结果进行分组聚合 | PRIVATE \{#aggregate-query-results}
 
-可以按一个或多个标量字段对查询结果进行分组，并对每个分组计算聚合值。支持的聚合算子包括 `count`、`min`、`max`、`sum` 和 `avg`。
 
-使用 `group_by_fields` 时需要注意：
 
-- `group_by_fields` 支持的字段类型：`INT8`、`INT16`、`INT32`、`INT64`、`VARCHAR` 和 `TIMESTAMPTZ`。对`FLOAT`、`DOUBLE`、向量、`JSON` 或 `ARRAY` 字段进行分组将返回错误。
 
-- `sum` 和 `avg` 仅支持数值类型——对 `VARCHAR` 字段使用这两个算子将返回错误。
 
-要启用聚合，向 `query()` 传入 `group_by_fields`，并在 `output_fields` 中加入聚合表达式（`count(*)`、`count(<field>)`、`min(<field>)`、`max(<field>)`、`sum(<field>)`、`avg(<field>)`）。
 
-以下示例按 `color` 字段对 Entity 进行分组，并返回每个颜色分组中的 Entity 数量：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -596,7 +704,42 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.QueryReq;
+import io.milvus.v2.service.vector.response.QueryResp;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build());
+
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("group_by_fields", "color");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "count(*)"))
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, count(*)=10}
+// {color=orange, count(*)=10}
+// {color=yellow, count(*)=10}
+// {color=green, count(*)=10}
+// {color=blue, count(*)=10}
+
 ```
 
 </TabItem>
@@ -624,11 +767,8 @@ res = client.query(
 ```
 
 </TabItem>
-</Tabs>
 
-一次调用中可以请求多个聚合表达式。以下示例按 `color` 分组，并返回每个分组的行数、平均价格和最高评分：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -653,7 +793,29 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("group_by_fields", "color");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "count(*)", "avg(price)", "max(rating)"))
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, count(*)=10, avg(price)=65.22, max(rating)=5}
+// {color=orange, count(*)=10, avg(price)=48.67, max(rating)=5}
+// {color=yellow, count(*)=10, avg(price)=64.15, max(rating)=3}
+// {color=green, count(*)=10, avg(price)=58.28, max(rating)=5}
+// {color=blue, count(*)=10, avg(price)=50.20, max(rating)=5}
+
 ```
 
 </TabItem>
@@ -681,11 +843,8 @@ res = client.query(
 ```
 
 </TabItem>
-</Tabs>
 
-向 `group_by_fields` 传入多个字段可以构成复合分组。以下示例按 `(color, rating)` 分组，并计算每个分组中的价格范围：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -711,7 +870,30 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("group_by_fields", "color,rating");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "rating", "min(price)", "max(price)"))
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, rating=5, min(price)=34.51, max(price)=70.90}
+// {color=orange, rating=2, min(price)=12.39, max(price)=81.99}
+// {color=yellow, rating=2, min(price)=22.62, max(price)=88.24}
+// {color=green, rating=1, min(price)=18.35, max(price)=59.53}
+// {color=blue, rating=4, min(price)=21.23, max(price)=82.45}
+// ...
+
 ```
 
 </TabItem>
@@ -739,11 +921,8 @@ res = client.query(
 ```
 
 </TabItem>
-</Tabs>
 
-还可以将 `group_by_fields` 与 `limit` 结合使用，限制返回的分组数量——当某个字段的基数较高、只需要采样部分分组时非常有用：
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -768,7 +947,30 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+Map<String, Object> queryParams = new HashMap<>();
+queryParams.put("group_by_fields", "color");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "avg(price)", "count(*)"))
+        // highlight-next-line
+        .limit(5)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, avg(price)=65.22, count(*)=10}
+// {color=orange, avg(price)=48.67, count(*)=10}
+// {color=yellow, avg(price)=64.15, count(*)=10}
+// {color=green, avg(price)=58.28, count(*)=10}
+// {color=blue, avg(price)=50.20, count(*)=10}
+
 ```
 
 </TabItem>
@@ -796,13 +998,9 @@ res = client.query(
 ```
 
 </TabItem>
-</Tabs>
 
-## 使用 QueryIterator\{#use-query-iterator}
 
-当您需要根据自定义条件查询，且分页返回所有符合条件的 Entity，可以使用 QueryIterator 创建一个迭代器。然后使用迭代器的 `next()` 方法循环遍历所有符合条件的 Entity。如下代码示例中假设 Collection 有 `id`、`vector` 和 `color` 三个字段。要求返回所有 `color` 以 `red` 开头的 Entity。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python

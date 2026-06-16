@@ -6,7 +6,7 @@ sidebar_label: "External Collection"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PUBLIC
+beta: ONDEMAND
 notebook: FALSE
 description: "本章节将介绍什么是 External Collection 以及如何创建和管理 External Collection。 | Cloud"
 type: origin

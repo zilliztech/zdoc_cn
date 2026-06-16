@@ -495,7 +495,7 @@ curl --request POST \
 
 Entity 级 TTL 允许每个 Entity 携带自己的绝对过期时间。过期时间存储在您在 Schema 中声明的专用 `TIMESTAMPTZ` 字段中，并通过 `ttl_field` Collection 属性将该字段标记为 TTL 字段。
 
-### 在新 Collection 上启用 | PRIVATE\{#enable-entity-ttl-on-a-new-collection}
+### 在新 Collection 上启用 | ONDEMAND\{#enable-entity-ttl-on-a-new-collection}
 
 在创建时启用 Entity 级 TTL，需要在同一个 `create_collection` 调用中完成两处新增：在 Schema 中加入一个 `TIMESTAMPTZ` 字段，并通过 `ttl_field` 属性指向该字段。
 
@@ -1182,7 +1182,7 @@ await client.dropCollectionProperties({
 
 删除 `ttl_field` 会使后续查询不再自动应用 TTL 过滤，但已经过期的 Entity 不会自动重新出现。要让一个已过期的 Entity 重新可见，需要使用 `None` 或未来的过期时间戳对其执行 Upsert——这是在同一次 load 会话中恢复对已过期数据访问的唯一方式。
 
-## 在两种模式之间迁移 | PRIVATE \{#migrate-between-the-two-modes}
+## 在两种模式之间迁移 | ONDEMAND \{#migrate-between-the-two-modes}
 
 ### 从 Collection 级切换到 Entity 级 TTL\{#switch-from-collection-to entity-ttl}
 

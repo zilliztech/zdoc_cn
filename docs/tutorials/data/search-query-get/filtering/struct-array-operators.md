@@ -6,7 +6,7 @@ sidebar_label: "StructArray 操作符"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PRIVATE
+beta: ONDEMAND
 notebook: FALSE
 description: "Entity 中的 Array of Structs，也称为 StructArray，用于存储一组有序的 Struct 元素。Array 中的每个 Struct 都共享同一个预定义 Schema，该 Schema 可包含多个向量字段和标量字段。当 Struct 中的标量子字段已创建索引时，您可以使用 Element Filter 和 Match 系列运算符 对其执行标量过滤。 | Cloud"
 type: origin

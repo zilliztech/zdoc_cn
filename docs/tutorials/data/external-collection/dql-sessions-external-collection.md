@@ -6,7 +6,7 @@ sidebar_label: "DQL Sessions"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: PUBLIC
+beta: ONDEMAND
 notebook: FALSE
 description: "按需计算中 Collection 的 DQL 操作（例如 Search、Query、Get 和 Hybrid Search）需要指定使用的 On-demand 集群计算资源。Zilliz Cloud 支持通过创建 Session 来满足您的按需计算需求。 | Cloud"
 type: origin

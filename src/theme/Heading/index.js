@@ -25,6 +25,10 @@ const BetaTag = (tag) => {
       tag_caption = "即将作废";
       tag_color = "#FF7F47";    
       break;
+    case tag === 'ONDEMAND':
+      tag_caption = "On-Demand Only";
+      tag_color = "#00A870";
+      break;
     case tag?.startsWith('Milvus'):
       tag_caption = 'Compatible with ' + tag;
       tag_color = "rgb(0, 179, 255)"
