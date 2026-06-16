@@ -26,7 +26,7 @@ const BetaTag = (tag) => {
       tag_color = "#FF7F47";    
       break;
     case tag === 'ONDEMAND':
-      tag_caption = "On-Demand Only";
+      tag_caption = "仅按需计算";
       tag_color = "#00A870";
       break;
     case tag?.startsWith('Milvus'):
