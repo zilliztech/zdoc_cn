@@ -48,6 +48,12 @@ import Supademo from '@site/src/components/Supademo';
 
 ![zh-view-organizations](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-view-organizations.png "zh-view-organizations")
 
+## 创建组织\{#create-an-organization}
+
+如果您需要创建多个组织，请[联系我们](http://support.zilliz.com.cn)开通功能。开通后您可以根据以下步骤自行创建组织。
+
+![XQCpw5364hU7Sfb4D0JcDmDJnpc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/XQCpw5364hU7Sfb4D0JcDmDJnpc.png)
+
 ## 编辑组织名称\{#edit-organization-name}
 
 要编辑组织名称，您必须是[组织管理员](./organization-users)。

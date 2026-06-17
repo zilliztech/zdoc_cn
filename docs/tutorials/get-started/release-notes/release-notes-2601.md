@@ -60,7 +60,7 @@ import Grid from '@site/src/components/Grid';
 
         - **基于查询语义的文本高亮（Semantic Highlighter）**：根据查询意图（而非关键词匹配）自动识别并高亮搜索结果中最相关的文本片段，提升搜索结果的可解释性。
 
-        - 该功能基于 Zilliz 近期开源的语义高亮模型（[zilliz/semantic-highlight-bilingual-v1](https://huggingface.co/zilliz/semantic-highlight-bilingual-v1)），并通过 Zilliz 托管模型服务（详见 [托管模型](./hosted-models)）提供开箱即用的推理支持。
+        - 该功能基于 Zilliz 近期开源的语义高亮模型（[zilliz/semantic-highlight-bilingual-v1](https://huggingface.co/zilliz/semantic-highlight-bilingual-v1)），并通过 Zilliz 托管模型服务（详见 [托管模型](/docs/function-and-model-inference-overview#where-model-inference-come-from)）提供开箱即用的推理支持。
 
         更多详情，可参考 [Semantic Highlighter](./semantic-highlighter)。
 
@@ -104,7 +104,7 @@ import Grid from '@site/src/components/Grid';
 
         - **Zilliz 托管模型（内测版）**
 可直接在 Zilliz 基础设施上部署全托管模型实例，实现稳定、高性能的推理能力，并且免数据传输费用。模型运行在 Zilliz Cloud 内部网络中，数据始终处于私有网络环境，兼顾更高安全性与超低延迟。
-更多内容，可参考 [托管模型](./hosted-models)。
+更多内容，可参考 [托管模型](/docs/function-and-model-inference-overview#where-model-inference-come-from)。
 
         此外，为了进一步简化与第三方模型的集成流程，我们新增了 **第三方模型提供商集成** 功能。该功能支持在 Zilliz Cloud 内集中管理 AI 模型的访问凭证，并可随时轮换 API Key，无需修改应用代码，帮助你实现更灵活、更安全的模型集成。
         更多内容，可参考 [模型供应商](./integrate-with-model-providers)。
@@ -168,4 +168,3 @@ import Grid from '@site/src/components/Grid';
     </div>
 
 </Grid>
-

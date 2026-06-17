@@ -819,7 +819,7 @@ Zilliz Cloud 提供如下集群部署方式：
 
 1. 设置模型供应商集成或部署托管模型。
 
-    [添加集成](./integrate-with-model-providers)，存储访问模型供应商所需的认证信息。或[部署](./hosted-models)托管模型。
+    [添加集成](./integrate-with-model-providers)，存储访问模型供应商所需的认证信息。或[部署](/docs/function-and-model-inference-overview#where-model-inference-come-from)托管模型。
 
 1. 创建 Collection 并设置 Embedding Function。
 

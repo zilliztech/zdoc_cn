@@ -474,8 +474,20 @@ console.log(res.data);
 
 </TabItem>
 
+<TabItem value='c++'>
 
+```c++
+// c++
+```
 
+</TabItem>
+</Tabs>
+
+#### 多字段排序\{#multi-field-sort}
+
+您可以同时按多个字段排序。结果会先按列表中的第一个字段排序。当两条结果在该字段上的值相同时，再由第二个字段决定它们的顺序，依此类推。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -550,8 +562,20 @@ console.log(res.data);
 
 </TabItem>
 
+<TabItem value='c++'>
 
+```c++
+// c++
+```
 
+</TabItem>
+</Tabs>
+
+#### 结合分页排序\{#pagination-with-sort}
+
+将 `order_by` 与 `limit` 和 `offset` 一起使用，可以对排序后的结果进行分页。例如，如果要按价格排序展示商品列表，每个页面都会按正确的价格顺序显示下一批商品，且不会出现重复或遗漏。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -666,13 +690,30 @@ console.log(page2.data);
 
 </TabItem>
 
+<TabItem value='c++'>
 
+```c++
+// c++
+```
 
+</TabItem>
+</Tabs>
 
+### 对查询结果进行分组聚合 | ONDEMAND \{#aggregate-query-results}
 
+可以按一个或多个标量字段对查询结果进行分组，并对每个分组计算聚合值。支持的聚合算子包括 `count`、`min`、`max`、`sum` 和 `avg`。
 
+使用 `group_by_fields` 时需要注意：
 
+- `group_by_fields` 支持的字段类型：`INT8`、`INT16`、`INT32`、`INT64`、`VARCHAR` 和 `TIMESTAMPTZ`。对`FLOAT`、`DOUBLE`、向量、`JSON` 或 `ARRAY` 字段进行分组将返回错误。
 
+- `sum` 和 `avg` 仅支持数值类型——对 `VARCHAR` 字段使用这两个算子将返回错误。
+
+要启用聚合，向 `query()` 传入 `group_by_fields`，并在 `output_fields` 中加入聚合表达式（`count(*)`、`count(<field>)`、`min(<field>)`、`max(<field>)`、`sum(<field>)`、`avg(<field>)`）。
+
+以下示例按 `color` 字段对 Entity 进行分组，并返回每个颜色分组中的 Entity 数量：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -768,7 +809,18 @@ for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
 
 </TabItem>
 
+<TabItem value='c++'>
 
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+一次调用中可以请求多个聚合表达式。以下示例按 `color` 分组，并返回每个分组的行数、平均价格和最高评分：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -844,7 +896,18 @@ for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
 
 </TabItem>
 
+<TabItem value='c++'>
 
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+向 `group_by_fields` 传入多个字段可以构成复合分组。以下示例按 `(color, rating)` 分组，并计算每个分组中的价格范围：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -922,7 +985,18 @@ for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
 
 </TabItem>
 
+<TabItem value='c++'>
 
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+还可以将 `group_by_fields` 与 `limit` 结合使用，限制返回的分组数量——当某个字段的基数较高、只需要采样部分分组时非常有用：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -999,8 +1073,20 @@ for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
 
 </TabItem>
 
+<TabItem value='c++'>
 
+```c++
+// cpp
+```
 
+</TabItem>
+</Tabs>
+
+## 使用 QueryIterator\{#use-query-iterator}
+
+当您需要根据自定义条件查询，且分页返回所有符合条件的 Entity，可以使用 QueryIterator 创建一个迭代器。然后使用迭代器的 `next()` 方法循环遍历所有符合条件的 Entity。如下代码示例中假设 Collection 有 `id`、`vector` 和 `color` 三个字段。要求返回所有 `color` 以 `red` 开头的 Entity。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python

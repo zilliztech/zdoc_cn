@@ -11,7 +11,7 @@ notebook: FALSE
 description: "版本说明书（2026/06） | Cloud"
 type: origin
 token: IEqzwRohQiApM6kTrMLccyWcncb
-sidebar_position: 1
+sidebar_position: 0
 keywords: 
   - 向量数据库
   - zilliz
@@ -27,6 +27,28 @@ import Admonition from '@theme/Admonition';
 import Grid from '@site/src/components/Grid';
 
 # 版本说明书（2026/06）
+
+<Grid columnSize="2" widthRatios="20,80">
+
+    <div>
+
+        **2026-06-17**
+
+    </div>
+
+    <div>
+
+        ## 功能增强（Enhancements）\{#enhancements}
+
+        - **备份恢复支持选择大版本** — 从 30 天内创建的备份恢复集群时，您现在可以选择目标 Milvus 大版本。例如，将 2.5.x 备份恢复为 2.5.x 集群，而无需强制升级到 2.6.x——这对需要版本一致性的灾备场景尤为重要。更多详情，请参考[恢复备份](./restore-from-snapshot)及[回收站](./use-recycle-bin)。
+
+        - **集群、项目及 API 密钥支持描述字段** — 您现在可以通过 RESTful API 为集群、项目和 API 密钥添加和更新描述信息，便于管理和识别大规模资源。
+
+        - **控制台支持多向量搜索** — Zilliz Cloud 控制台的搜索页面现已支持多向量搜索，您可以直接在 UI 中对多个向量字段执行混合搜索。
+
+    </div>
+
+</Grid>
 
 <Grid columnSize="2" widthRatios="20,80">
 

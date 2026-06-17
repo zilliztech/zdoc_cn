@@ -171,11 +171,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     1. 如需更新组织已绑定的云市场订阅，请先[解绑](./subscribe-on-aliyun-marketplace#unsubscribe-alibaba-marketplace)订阅，再重新绑定新的云市场订阅。
 
-    1. 如果您需要多个组织，每个分别绑定不同的云市场订阅，您可以：
-
-        1. [注册](./register-with-zilliz-cloud)一个新的 Zilliz Cloud 账号并创建一个新组织。然后将您已有账号[邀请](./project-users#invite-a-user-to-a-project)进入新组织，并授予组织管理员的权限。这样一来，您将隶属于多个组织，并且可以为每个组织绑定不同的云市场订阅。
-
-        1. [提交工单](http://support.zilliz.com.cn)，联系我们为您创建新组织。当前，Zilliz Cloud 暂不支持手动创建新组织。
+    1. 如果您需要多个组织，每个分别绑定不同的云市场订阅，您可以[提交工单](http://support.zilliz.com.cn)开通多组织功能。开通后，您可以自行[创建组织](./organization-settings#create-an-organization)。
 
 1. **组织列表中无组织**
 
@@ -185,7 +181,7 @@ Zilliz Cloud 现已登录阿里云云市场。本章主要介绍如何在阿里�
 
     这种情况下，您可以：
 
-    1. 创建一个新组织。
+    1. [提交工单](http://support.zilliz.com.cn)开通多组织功能。开通后，您可以自行[创建组织](./organization-settings#create-an-organization)。
 
     1. 等待其他用户向您[发送组织邀请](./project-users#invite-a-user-to-a-project)，并将您设置为组织管理员。
 

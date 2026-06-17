@@ -8,7 +8,7 @@ last_modified: FALSE
 deprecate_since: FALSE
 beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 是一项基于公有云向量数据库集群服务。通过我们的服务，您可以在您选择的公共云平台上轻松创建和管理您自己的向量数据库集群。 | Cloud"
+description: "Zilliz Cloud 支持阿里云、腾讯云、亚马逊云科技上的多个云服务商和区域。 | Cloud"
 type: origin
 token: BErdww1kOirndzkHrKoc2ibynlb
 sidebar_position: 3
@@ -27,11 +27,25 @@ import Admonition from '@theme/Admonition';
 
 # 云服务提供商和地域
 
-Zilliz Cloud 是一项基于公有云向量数据库集群服务。通过我们的服务，您可以在您选择的公共云平台上轻松创建和管理您自己的向量数据库集群。
+Zilliz Cloud 支持阿里云、腾讯云、亚马逊云科技上的多个云服务商和区域。
 
-Zilliz Cloud在阿里云、腾讯云和亚马逊云科技上提供跨区域的集群服务。您可以[随时联系我们要求增加新的云区域](https://zilliz.com.cn/cloud-region-request)。
+云地域支持情况可能因工作负载类型、部署选项和功能而异。创建项目前，请根据本文选择合适的云地域。
 
-## 阿里云\{#alibaba-cloud}
+## **如何选择云地域**\{#}
+
+- 选择靠近应用或用户的地域。
+
+- 考虑数据驻留和合规要求。
+
+- 考虑延迟和跨地域数据传输影响。
+
+- 检查目标地域是否支持所需功能。
+
+- 如果所需地域或功能不可用，请[联系我们](http://zilliz.com.cn/contact-sales)。
+
+## **支持的云地域**\{#}
+
+### 阿里云\{#}
 
 Zilliz Cloud 支持在阿里云以下地域部署集群。
 
@@ -39,56 +53,35 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
    <tr>
      <th><p><strong>大洲</strong></p></th>
      <th><p><strong>地域名称</strong></p></th>
-     <th><p><strong>Free 和 Serverless 集群</strong></p></th>
-     <th><p><strong>Dedicated 集群</strong></p></th>
-     <th><p><strong>On-demand 集群</strong></p></th>
    </tr>
    <tr>
      <td rowspan="4"><p>中国内地</p></td>
      <td><p>华东1（杭州）</p></td>
-     <td><p>✔</p></td>
-     <td><p>✔</p></td>
-     <td><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
    </tr>
    <tr>
      <td><p>华东2（上海）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
-     <td><p>✔</p></td>
    </tr>
    <tr>
      <td><p>华北2（北京）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
-     <td><p>✔</p></td>
    </tr>
    <tr>
      <td><p>华南1（深圳）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
-     <td rowspan="4"><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
    </tr>
    <tr>
      <td><p>北美</p></td>
      <td><p>美国（弗吉尼亚）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
    </tr>
    <tr>
      <td><p>亚太</p></td>
      <td><p>新加坡</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
    </tr>
    <tr>
      <td><p>中东</p></td>
      <td><p>沙特（利雅得-合作伙伴运营）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p><p>如需创建阿里云沙特（利雅得-合作伙伴运营）的集群，请<a href="http://zilliz.com.cn/contact-sales">联系销售</a>获取报价。</p></td>
    </tr>
 </table>
 
-## 腾讯云\{#tencent-cloud}
+### 腾讯云\{#}
 
 Zilliz Cloud 支持在腾讯云以下地域部署集群。
 
@@ -96,31 +89,21 @@ Zilliz Cloud 支持在腾讯云以下地域部署集群。
    <tr>
      <th><p><strong>大洲</strong></p></th>
      <th><p><strong>地域名称</strong></p></th>
-     <th><p><strong>Free 和 Serverless 集群</strong></p></th>
-     <th><p><strong>Dedicated 集群</strong></p></th>
-     <th><p><strong>On-demand 集群</strong></p></th>
    </tr>
    <tr>
      <td rowspan="2"><p>中国内地</p></td>
      <td><p>华北地区（北京）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
-     <td rowspan="3"><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
    </tr>
    <tr>
      <td><p>华东地区（上海）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
    </tr>
    <tr>
      <td><p>北美</p></td>
      <td><p>美国东部（弗吉尼亚）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
    </tr>
 </table>
 
-## 亚马逊云科技\{#aws}
+### 亚马逊云科技\{#}
 
 Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
 
@@ -128,16 +111,125 @@ Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
    <tr>
      <th><p><strong>大洲</strong></p></th>
      <th><p><strong>地域名称</strong></p></th>
-     <th><p><strong>Free 和 Serverless 集群</strong></p></th>
-     <th><p><strong>Dedicated 集群</strong></p></th>
-     <th><p><strong>On-demand 集群</strong></p></th>
    </tr>
    <tr>
      <td><p>中国内地</p></td>
      <td><p>中国（宁夏）</p></td>
-     <td><p>✖️</p></td>
-     <td><p>✔</p></td>
-     <td><p><a href="http://zilliz.com.cn/contact-sales">联系我们</a></p></td>
+   </tr>
+</table>
+
+## 云地域的功能支持情况\{#}
+
+不同云地域对计算类型、部署方式和功能的支持情况可能不同。创建项目前，请先确认目标地域是否支持所需能力。
+
+### 计算类型支持\{#}
+
+<table>
+   <tr>
+     <th><p>计算类型</p></th>
+     <th><p>阿里云</p></th>
+     <th><p>腾讯云</p></th>
+     <th><p>亚马逊云科技</p></th>
+   </tr>
+   <tr>
+     <td><p>Serving 集群</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>✅ 全部地域</p></td>
+   </tr>
+   <tr>
+     <td><p>按需计算</p></td>
+     <td><p>ℹ️ 部分地域：</p><ul><li><p>华东2（上海）</p></li><li><p>华北2（北京）</p></li></ul></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
+   </tr>
+</table>
+
+<Admonition type="info" icon="📘" title="说明">
+
+如果您选择的地域未支持按需计算，请[联系我们](http://zilliz.com.cn/contact-sales)。
+
+</Admonition>
+
+### 部署方式支持\{#}
+
+<table>
+   <tr>
+     <th><p>部署方式</p></th>
+     <th><p>阿里云</p></th>
+     <th><p>腾讯云</p></th>
+     <th><p>亚马逊云科技</p></th>
+   </tr>
+   <tr>
+     <td><p>SaaS（Free 和 Serverless）</p></td>
+     <td><p>ℹ️ 部分地域：</p><ul><li>华东1（杭州）</li></ul></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
+   </tr>
+   <tr>
+     <td><p>SaaS（Dedicated）</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>✅ 全部地域</p></td>
+   </tr>
+   <tr>
+     <td><p>BYOC</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>✅ 全部地域</p></td>
+   </tr>
+</table>
+
+<Admonition type="info" icon="📘" title="说明">
+
+如需 BYOC 部署，请[联系我们](http://zilliz.com.cn/contact-sales)。
+
+</Admonition>
+
+### 功能支持\{#}
+
+<table>
+   <tr>
+     <th><p>功能</p></th>
+     <th><p>阿里云</p></th>
+     <th><p>腾讯云</p></th>
+     <th><p>亚马逊云科技</p></th>
+   </tr>
+   <tr>
+     <td><p>Volume</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>❌</p></td>
+     <td><p>✅ 全部地域</p></td>
+   </tr>
+   <tr>
+     <td><p>External Collection</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
+   </tr>
+   <tr>
+     <td><p>Global Cluster（全球集群）</p></td>
+     <td><p>ℹ️ 请联系我们</p></td>
+     <td><p>ℹ️ 请联系我们</p></td>
+     <td><p>ℹ️ 请联系我们</p></td>
+   </tr>
+   <tr>
+     <td><p>Cross-region backup（跨地域备份）</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>❌</p></td>
+     <td><p>✅ 全部地域</p></td>
+   </tr>
+   <tr>
+     <td><p>托管模型</p></td>
+     <td><p>ℹ️ 部分地域：</p><ul><li>华北2（北京）</li></ul></td>
+     <td><p>❌</p></td>
+     <td><p>❌</p></td>
+   </tr>
+   <tr>
+     <td><p>导出备份文件</p></td>
+     <td><p>✅ 全部地域</p></td>
+     <td><p>❌</p></td>
+     <td><p>✅ 全部地域</p></td>
    </tr>
 </table>
 

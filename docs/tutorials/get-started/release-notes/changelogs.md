@@ -8,10 +8,10 @@ last_modified: FALSE
 deprecate_since: FALSE
 beta: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 6 月 3 日 | Cloud"
+description: "最近更新：2026 年 6 月 17 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
-sidebar_position: 0
+sidebar_position: 1
 keywords: 
   - zilliz
   - 向量数据库
@@ -28,7 +28,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 6 月 3 日
+**最近更新**：2026 年 6 月 17 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -47,6 +47,22 @@ import Grid from '@site/src/components/Grid';
 </Grid>
 
 ## 2026\{#2026}
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 6 月 17 日](./release-notes-2606)**
+
+    </div>
+
+    <div>
+
+        - 💾 您现在可以在恢复集群备份时指定新集群兼容的 Milvus 版本。具体内容可以参考[恢复备份](./restore-from-snapshot)及[回收站](./use-recycle-bin)。
+
+    </div>
+
+</Grid>
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -236,7 +252,7 @@ import Grid from '@site/src/components/Grid';
 
         - 🚀   Milvus v2.6.x 功能特性全面可用（GA）
 
-        - 💾  分层存储能力正式发布（GA）并[开始计费](./storage-cost)
+        - 💾  分层存储能力正式发布（GA）并[开始计费](./storage-cost#cold-data-access)
 
     </div>
 
@@ -779,4 +795,3 @@ import Grid from '@site/src/components/Grid';
     </div>
 
 </Grid>
-
