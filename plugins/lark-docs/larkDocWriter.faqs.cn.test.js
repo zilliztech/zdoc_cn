@@ -3,6 +3,7 @@ const assert = require('node:assert/strict')
 const fs = require('node:fs')
 const os = require('node:os')
 const path = require('node:path')
+const matter = require('gray-matter')
 
 const LarkDocWriter = require('./larkDocWriter')
 
@@ -70,4 +71,26 @@ test('write_faqs preserves CN source lookup and CN labels/anchors', async () => 
   assert.match(categoryContent, /## 问答/)
   assert.match(categoryContent, /### 问题一 \\{#q-1}/)
   assert.match(categoryContent, /- \[问题一\]\(#q-1\)/)
+})
+
+test('front matter escapes YAML double quoted backslashes', () => {
+  const writer = createWriter()
+  const frontMatter = writer.__front_matters(
+    'createRole()',
+    'Java | v2',
+    'java/v2-Authentication-createRole',
+    false,
+    false,
+    'docx',
+    'WJCAdWmpIolcU1x3T3fcZ1J2nWb',
+    3,
+    'createRole()',
+    '',
+    'javaSidebar',
+    '# createRole()\\{#createrole}'
+  )
+
+  const parsed = matter(`${frontMatter}\n\n# createRole()`)
+
+  assert.equal(parsed.data.description, '# createRole()\\{#createrole} | Java | v2')
 })
