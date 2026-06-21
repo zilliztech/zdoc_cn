@@ -168,5 +168,9 @@
     {
         "name": "global-clusters-v2",
         "description": "本系列 API 提供了管理 Zilliz Cloud 全球集群的相关接口。"
+    },
+    {
+        "name": "storage-integration-operations-v2",
+        "description": "本系列 API 提供了管理对象存储集成的相关接口。"
     }
 ]
