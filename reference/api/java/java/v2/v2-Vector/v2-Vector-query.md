@@ -142,11 +142,11 @@ A **QueryResp object representing specific query results with the specified outp
 
 **PARAMETERS:**
 
-- queryResults(List\<QueryResp.QueryResult\>)
+- queryResults(List&lt;QueryResp.QueryResult&gt;)
 
     A list of QueryResult objects with each QueryResult representing a queried entity. The members of QueryResult:
 
-    - **entity** (*Map\<String,Object\>*)
+    - **entity** (*Map&lt;String,Object&gt;*)
 
         A map that contains key-value pairs of field names and their values.
 

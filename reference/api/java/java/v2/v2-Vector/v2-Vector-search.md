@@ -268,7 +268,7 @@ A **SearchResp object representing specific search results with the specified ou
 
     A list of *SearchResp*.*SearchResult*, the size of searchResults equals the number of query vectors of the search. Each List\<SearchResult\> is a topK result of a query vector. Each SearchResult represents an entity hit by the search. Member of *SearchResult*:
 
-    - **entity** (*Map\<String, Object\>*)
+    - **entity** (*Map&lt;String, Object&gt;*)
 
         A map that stores the specific fields associated with the search result.
 

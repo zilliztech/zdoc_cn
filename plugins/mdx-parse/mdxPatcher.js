@@ -166,6 +166,15 @@ function normalizeCodeTagContent(content) {
     });
 }
 
+function escapeBackslashedAngleText(part) {
+    // Markdown-style escapes such as List\<QueryResp.QueryResult\> can still be
+    // parsed as MDX JSX by Docusaurus. Convert Java/C# type-looking spans to
+    // entities before MDX sees them.
+    return part.replace(/\\<([^<>\n`]*?(?:[.,]|[A-Z][A-Za-z0-9]*\.)[^<>\n`]*?)\\>/g, (_match, inner) => {
+        return `&lt;${inner}&gt;`;
+    });
+}
+
 /**
  * Pre-processing: escape any lowercase tag whose name is not a known HTML element or
  * content-filter tag, outside fenced code blocks and inline code spans.
@@ -243,6 +252,7 @@ function escapeNonHtmlTags(content) {
             const parts = line.split(/(`+[^`]+`+)/);
             line = parts.map((part, i) => {
                 if (i % 2 === 0) {
+                    part = escapeBackslashedAngleText(part);
                     // Escape non-HTML lowercase placeholder tags (e.g. <bucket_name>, <region-code>).
                     // Backslash-escaped placeholders (\<bucket_name>) are normalized too because
                     // downstream MDX loaders may still parse them as JSX in HTML contexts.
