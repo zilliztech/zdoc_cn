@@ -163,5 +163,11 @@
     "修改全球集群 CU": "modify-global-cluster-cu",
     "移除全球端点": "remove-global-endpoint",
     "列出可用全球集群地域": "list-available-global-cluster-regions",
-    "转换集群为全球集群": "convert-cluster-to-global-cluster"
+    "转换集群为全球集群": "convert-cluster-to-global-cluster",
+    "列出 Storage Integration": "list-storage-integrations",
+    "创建 Storage Integration": "create-storage-integration",
+    "查看 Storage Integration": "describe-storage-integration",
+    "删除 Storage Integration": "delete-storage-integration",
+    "校验 Storage Integration": "validate-storage-integration",
+    "生成 Storage Integration 授权材料": "generate-storage-integration-authorization-materials"
 }
