@@ -36,7 +36,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成。
 
 该存储集成可用于：
 
-- [External volumes](/docs/external-volume)
+- [External volumes](./external-volume)
 
 - [导出备份文件](./export-backup-files)
 
@@ -44,7 +44,11 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成。
 
 - [转发访问日志](./access-log-overview)
 
-https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限**企业版**项目使用。
+
+</Admonition>
 
 ![GPQdwo63IhxSjqbk9vkcdZQXngM](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/GPQdwo63IhxSjqbk9vkcdZQXngM.png)
 
@@ -81,7 +85,7 @@ https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
            </tr>
            <tr>
              <td><p>只读</p></td>
-             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External Collections 提供支持的 <a href="/docs/external-volume">External volumes</a>。</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External Collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
            </tr>
            <tr>
              <td><p>读写</p></td>
@@ -107,7 +111,7 @@ https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
 
     1. **Bucket 名称**：为您的 OSS 存储空间设置一个唯一名称。
 
-    1. **地域**：指定存储空间所在的云地域。注意，存储空间所在地域必须和目标 Zilliz Cloud 集群或 Volume所在的地域相同。有关 Zilliz Cloud 支持的云地域，请参考[云服务提供商和地域](/docs/cloud-providers-and-regions)。
+    1. **地域**：指定存储空间所在的云地域。注意，存储空间所在地域必须和目标 Zilliz Cloud 集群或 Volume所在的地域相同。有关 Zilliz Cloud 支持的云地域，请参考[云服务提供商和地域](./cloud-providers-and-regions)。
 
     1. 其他设置可以保持默认。配置完成后，点击**完成创建**。
 

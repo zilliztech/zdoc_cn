@@ -36,7 +36,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 该存储集成可用于：
 
-- [External volumes](/docs/external-volume)
+- [External volumes](./external-volume)
 
 - [导出备份文件](./export-backup-files)
 
@@ -44,7 +44,11 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 - [转发访问日志](./access-log-overview)
 
-https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限**企业版**项目使用。
+
+</Admonition>
 
 ![MWh0wX3wehaH1dbkEXpc5GbFnoc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MWh0wX3wehaH1dbkEXpc5GbFnoc.png)
 
@@ -81,7 +85,7 @@ https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
            </tr>
            <tr>
              <td><p>只读</p></td>
-             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External collections 提供支持的 <a href="/docs/external-volume">External volumes</a>。</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
            </tr>
            <tr>
              <td><p>读写</p></td>
@@ -109,7 +113,7 @@ https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
 
     <Admonition type="info" icon="📘" title="说明">
 
-    - 创建存储桶的云地域必须与 Zilliz Cloud 集群所在地域一致。Zilliz Cloud 支持的区域可参考[云服务提供商和地域](/docs/cloud-providers-and-regions)。
+    - 创建存储桶的云地域必须与 Zilliz Cloud 集群所在地域一致。Zilliz Cloud 支持的区域可参考[云服务提供商和地域](./cloud-providers-and-regions)。
 
     - 如果集群运行在不同区域，需要分别为每个区域创建集成。
 

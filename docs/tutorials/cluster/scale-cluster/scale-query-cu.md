@@ -104,7 +104,11 @@ curl --request POST \
 
 ## 定时扩缩容\{#scheduled-scaling}
 
-https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限**企业版**项目使用。
+
+</Admonition>
 
 定时扩缩容的 2 个调度计划之间时间间隔必须大于 30 分钟。
 
@@ -151,7 +155,11 @@ curl --request POST \
 
 ## 动态扩缩容\{#dynamic-scaling}
 
-https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限**企业版**项目使用。
+
+</Admonition>
 
 Zilliz Cloud 支持 Query CU 动态扩缩容。启用后，系统会基于实时 Query CU 加载容量指标自动调整 Query CU 资源，确保高效处理工作负载且不中断服务。
 
