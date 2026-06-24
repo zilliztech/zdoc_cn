@@ -36,8 +36,6 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成。
 
 该存储集成可用于：
 
-- [External volumes](./external-volume)
-
 - [导出备份文件](./export-backup-files)
 
 - [转发审计日志](./audit-logs)

@@ -79,7 +79,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>备份策略（可选）</strong></p></td>
-         <td><p>请按需决定是否开启云备份。开启后，会为该集群定期自动创建备份，可有效保护数据。开启云备份会产生备份费用。</p></td>
+         <td><p>请按需决定是否开启云备份。详情请参考[设置定时自动备份](./schedule-automatic-backups)。</p></td>
        </tr>
     </table>
 

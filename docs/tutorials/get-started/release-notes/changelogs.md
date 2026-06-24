@@ -8,7 +8,7 @@ last_modified: FALSE
 deprecate_since: FALSE
 beta: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 6 月 17 日 | Cloud"
+description: "最近更新：2026 年 6 月 24 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 1
@@ -28,7 +28,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 6 月 17 日
+**最近更新**：2026 年 6 月 24 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -47,6 +47,22 @@ import Grid from '@site/src/components/Grid';
 </Grid>
 
 ## 2026\{#2026}
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 6 月 24 日](./release-notes-2606)**
+
+    </div>
+
+    <div>
+
+        - 💾 您现在可以启用高级定时备份设置更加灵活地调整您的备份计划。具体内容可以参考[设置定时自动备份](./schedule-automatic-backups)。
+
+    </div>
+
+</Grid>
 
 <Grid columnSize="2" widthRatios="24,75">
 

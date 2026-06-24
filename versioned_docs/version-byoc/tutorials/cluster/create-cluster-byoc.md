@@ -71,7 +71,7 @@ import Procedures from '@site/src/components/Procedures';
 
         - **Data Node**: 处理数据变更以及日志到快照的转换，以实现持久化。
 
-    - **备份策略**: 确定要创建的集群的备份频率。Zilliz Cloud 将在集群创建后立即创建备份。后续备份将按照指定的计划进行。
+    - **备份策略**: 设置定时创建备份的频率。更多详细信息，请参考[设置定时自动备份](./schedule-automatic-backups)。
 
 1. 单击**创建集群**。 
 
