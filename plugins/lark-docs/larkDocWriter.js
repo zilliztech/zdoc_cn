@@ -5,6 +5,7 @@ const slugify = require('slugify')
 const fs = require('node:fs')
 const { URL } = require('node:url')
 const fetch = require('node-fetch')
+const { fetchFeishuJsonWithRetry } = require('./feishuFetch.js')
 const node_path = require('node:path')
 const cheerio = require('cheerio')
 const showdown = require('showdown')
@@ -404,22 +405,20 @@ class larkDocWriter {
     async __listed_docs() {
         const token = await this.tokenFetcher.token()
         let url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_token}/tables`
-        const table_id = (await (await fetch(url, {
+        const table_id = (await fetchFeishuJsonWithRetry(url, {
             method: "get",
             headers: {
-                'Content-Type': 'application/json; charset=utf-8',
                 'Authorization': `Bearer ${token}`
             }
-        })).json()).data.items[0].table_id
+        }, 'writer list bitable tables')).data.items[0].table_id
 
         url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_token}/tables/${table_id}/records?page_size=500`
-        this.records = (await (await fetch(url, {
+        this.records = (await fetchFeishuJsonWithRetry(url, {
             method: "get",
             headers: {
-                'Content-Type': 'application/json; charset=utf-8',
                 'Authorization': `Bearer ${token}`
             }
-        })).json()).data.items
+        }, 'writer list bitable records')).data.items
     }
 
     async __is_to_publish (title, slug, token=null) {

@@ -1,5 +1,5 @@
-const fetch = require('node-fetch')
 const tokenFetcher = require('./larkTokenFetcher.js')
+const { fetchFeishuJsonWithRetry } = require('./feishuFetch.js')
 const fs = require('fs')
 const node_path = require('path')
 const _ = require('lodash')
@@ -8,39 +8,8 @@ require('dotenv').config()
 
 const FEISHU_HOST = process.env.FEISHU_HOST
 const SPACE_ID = process.env.SPACE_ID
-const FEISHU_RETRY_ATTEMPTS = parseInt(process.env.FEISHU_RETRY_ATTEMPTS || '5', 10)
-const FEISHU_RETRY_DELAY_MS = parseInt(process.env.FEISHU_RETRY_DELAY_MS || '1000', 10)
 const FEISHU_MAX_CONCURRENT = parseInt(process.env.FEISHU_MAX_CONCURRENT || '1', 10)
 const FEISHU_MIN_TIME_MS = parseInt(process.env.FEISHU_MIN_TIME_MS || '500', 10)
-
-function shortError(err) {
-    return err?.stack || err?.message || String(err)
-}
-
-function isRetryableFetchError(err) {
-    return [
-        'ECONNRESET',
-        'ETIMEDOUT',
-        'ERR_STREAM_PREMATURE_CLOSE',
-        'ERR_INVALID_CHAR',
-    ].includes(err?.code) || ['system', 'request-timeout', 'body-timeout'].includes(err?.type)
-}
-
-function shouldRetryJsonResponse(res, json) {
-    return res.status === 429 || res.status >= 500 || json?.code === 99991400 || json?.status === 429
-}
-
-function retryAfterMs(res, attempt) {
-    const reset = res?.headers?.get?.('x-ogw-ratelimit-reset')
-    const retryAfter = res?.headers?.get?.('retry-after')
-    const parsed = Number(reset || retryAfter)
-
-    if (Number.isFinite(parsed) && parsed > 0) {
-        return parsed * 1000
-    }
-
-    return FEISHU_RETRY_DELAY_MS * attempt
-}
 
 class larkDocScraper {
     constructor(root_node, base_app_id, target_type, doc_source_dir) {
@@ -197,75 +166,14 @@ class larkDocScraper {
         return children
     }
 
-    async __wait(duration) {
-        return new Promise((resolve, _) => {
-            setTimeout(() => {
-                resolve()
-            }, duration)
-        })
-    }
-
-    __feishuHeaders(extraHeaders={}) {
-        return {
-            'Content-Type': 'application/json; charset=utf-8',
-            'Authorization': `Bearer ${this.token}`,
-            // Avoid node-fetch Gunzip failures from truncated compressed Feishu responses.
-            'Accept-Encoding': 'identity',
-            ...extraHeaders,
-        }
-    }
-
     async __fetchFeishuJson(url, options={}, label=url) {
-        return await this.limiter.schedule(() => this.__fetchFeishuJsonUnthrottled(url, options, label))
-    }
-
-    async __fetchFeishuJsonUnthrottled(url, options={}, label=url) {
-        let lastError
-
-        for (let attempt = 1; attempt <= FEISHU_RETRY_ATTEMPTS; attempt++) {
-            try {
-                const res = await fetch(url, {
-                    compress: false,
-                    ...options,
-                    headers: this.__feishuHeaders(options.headers),
-                })
-                const text = await res.text()
-                let json = {}
-
-                if (text) {
-                    try {
-                        json = JSON.parse(text)
-                    } catch (parseError) {
-                        if (!shouldRetryJsonResponse(res, null)) {
-                            throw parseError
-                        }
-                    }
-                }
-
-                if (shouldRetryJsonResponse(res, json)) {
-                    const err = new Error(`retryable Feishu response ${res.status}: ${text.slice(0, 300)}`)
-                    err.retryDelayMs = retryAfterMs(res, attempt)
-                    throw err
-                }
-
-                return json
-            } catch (err) {
-                lastError = err
-                const retryable = err.retryDelayMs || isRetryableFetchError(err)
-
-                if (!retryable || attempt === FEISHU_RETRY_ATTEMPTS) {
-                    break
-                }
-
-                const delay = err.retryDelayMs || (FEISHU_RETRY_DELAY_MS * attempt)
-                process.stderr.write(
-                    `[fetch-lark-docs] ${label} failed on attempt ${attempt}/${FEISHU_RETRY_ATTEMPTS}: ${shortError(err)}\n`
-                )
-                await this.__wait(delay)
-            }
-        }
-
-        throw lastError
+        return await this.limiter.schedule(() => fetchFeishuJsonWithRetry(url, {
+            ...options,
+            headers: {
+                'Authorization': `Bearer ${this.token}`,
+                ...options.headers,
+            },
+        }, label))
     }
 
     async __base() {
