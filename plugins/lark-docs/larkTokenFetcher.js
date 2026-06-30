@@ -21,8 +21,10 @@ class larkTokenFetcher {
                 "app_id": APP_ID,
                 "app_secret": APP_SECRET
             }),
+            compress: false,
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept-Encoding': 'identity'
             }
         }
 

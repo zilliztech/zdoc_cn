@@ -3,10 +3,44 @@ const tokenFetcher = require('./larkTokenFetcher.js')
 const fs = require('fs')
 const node_path = require('path')
 const _ = require('lodash')
+const Bottleneck = require('bottleneck')
 require('dotenv').config()
 
 const FEISHU_HOST = process.env.FEISHU_HOST
 const SPACE_ID = process.env.SPACE_ID
+const FEISHU_RETRY_ATTEMPTS = parseInt(process.env.FEISHU_RETRY_ATTEMPTS || '5', 10)
+const FEISHU_RETRY_DELAY_MS = parseInt(process.env.FEISHU_RETRY_DELAY_MS || '1000', 10)
+const FEISHU_MAX_CONCURRENT = parseInt(process.env.FEISHU_MAX_CONCURRENT || '1', 10)
+const FEISHU_MIN_TIME_MS = parseInt(process.env.FEISHU_MIN_TIME_MS || '500', 10)
+
+function shortError(err) {
+    return err?.stack || err?.message || String(err)
+}
+
+function isRetryableFetchError(err) {
+    return [
+        'ECONNRESET',
+        'ETIMEDOUT',
+        'ERR_STREAM_PREMATURE_CLOSE',
+        'ERR_INVALID_CHAR',
+    ].includes(err?.code) || ['system', 'request-timeout', 'body-timeout'].includes(err?.type)
+}
+
+function shouldRetryJsonResponse(res, json) {
+    return res.status === 429 || res.status >= 500 || json?.code === 99991400 || json?.status === 429
+}
+
+function retryAfterMs(res, attempt) {
+    const reset = res?.headers?.get?.('x-ogw-ratelimit-reset')
+    const retryAfter = res?.headers?.get?.('retry-after')
+    const parsed = Number(reset || retryAfter)
+
+    if (Number.isFinite(parsed) && parsed > 0) {
+        return parsed * 1000
+    }
+
+    return FEISHU_RETRY_DELAY_MS * attempt
+}
 
 class larkDocScraper {
     constructor(root_node, base_app_id, target_type, doc_source_dir) {
@@ -15,6 +49,10 @@ class larkDocScraper {
         this.base = base_app_id
         this.target_type = target_type
         this.doc_source_dir = doc_source_dir
+        this.limiter = new Bottleneck({
+            maxConcurrent: FEISHU_MAX_CONCURRENT,
+            minTime: FEISHU_MIN_TIME_MS,
+        })
 
         // fs.rmSync(this.doc_source_dir, { recursive: true, force: true })
     }
@@ -30,14 +68,7 @@ class larkDocScraper {
 
         if (this.target_type == "wiki") {
             let url = `${FEISHU_HOST}/open-apis/wiki/v2/spaces/get_node?token=${page_token}`
-            let res = await fetch(url, {
-                headers: {
-                    'Content-Type': 'application/json; charset=utf-8',
-                    'Authorization': `Bearer ${this.token}`
-                }
-            })
-
-            let jres = await res.json()
+            let jres = await this.__fetchFeishuJson(url, {}, `get wiki node ${page_token}`)
 
             if (jres.code == 0) {
                 this.docs = jres.data.node
@@ -47,14 +78,7 @@ class larkDocScraper {
 
         if (this.target_type == "onePager") {
             let url = `${FEISHU_HOST}/open-apis/wiki/v2/spaces/get_node?token=${page_token}`
-            let res = await fetch(url, {
-                headers: {
-                    'Content-Type': 'application/json; charset=utf-8',
-                    'Authorization': `Bearer ${this.token}`
-                }
-            })
-
-            let jres = await res.json()
+            let jres = await this.__fetchFeishuJson(url, {}, `get onePager node ${page_token}`)
 
             if (jres.code == 0) {
                 this.docs = jres.data.node
@@ -90,14 +114,7 @@ class larkDocScraper {
 
             if (recursive) {
                 let url = `${FEISHU_HOST}/open-apis/drive/explorer/v2/folder/${page_token}/meta`
-                let res = await fetch(url, {
-                    headers: {
-                        'Content-Type': 'application/json; charset=utf-8',
-                        'Authorization': `Bearer ${this.token}`
-                    }
-                })
-
-                let jres = await res.json()
+                let jres = await this.__fetchFeishuJson(url, {}, `get drive folder ${page_token}`)
 
                 if (jres.code == 0) {
                     this.docs = jres.data
@@ -188,28 +205,89 @@ class larkDocScraper {
         })
     }
 
+    __feishuHeaders(extraHeaders={}) {
+        return {
+            'Content-Type': 'application/json; charset=utf-8',
+            'Authorization': `Bearer ${this.token}`,
+            // Avoid node-fetch Gunzip failures from truncated compressed Feishu responses.
+            'Accept-Encoding': 'identity',
+            ...extraHeaders,
+        }
+    }
+
+    async __fetchFeishuJson(url, options={}, label=url) {
+        return await this.limiter.schedule(() => this.__fetchFeishuJsonUnthrottled(url, options, label))
+    }
+
+    async __fetchFeishuJsonUnthrottled(url, options={}, label=url) {
+        let lastError
+
+        for (let attempt = 1; attempt <= FEISHU_RETRY_ATTEMPTS; attempt++) {
+            try {
+                const res = await fetch(url, {
+                    compress: false,
+                    ...options,
+                    headers: this.__feishuHeaders(options.headers),
+                })
+                const text = await res.text()
+                let json = {}
+
+                if (text) {
+                    try {
+                        json = JSON.parse(text)
+                    } catch (parseError) {
+                        if (!shouldRetryJsonResponse(res, null)) {
+                            throw parseError
+                        }
+                    }
+                }
+
+                if (shouldRetryJsonResponse(res, json)) {
+                    const err = new Error(`retryable Feishu response ${res.status}: ${text.slice(0, 300)}`)
+                    err.retryDelayMs = retryAfterMs(res, attempt)
+                    throw err
+                }
+
+                return json
+            } catch (err) {
+                lastError = err
+                const retryable = err.retryDelayMs || isRetryableFetchError(err)
+
+                if (!retryable || attempt === FEISHU_RETRY_ATTEMPTS) {
+                    break
+                }
+
+                const delay = err.retryDelayMs || (FEISHU_RETRY_DELAY_MS * attempt)
+                process.stderr.write(
+                    `[fetch-lark-docs] ${label} failed on attempt ${attempt}/${FEISHU_RETRY_ATTEMPTS}: ${shortError(err)}\n`
+                )
+                await this.__wait(delay)
+            }
+        }
+
+        throw lastError
+    }
+
     async __base() {
         const fetcher = new tokenFetcher()
         await fetcher.fetchToken()
         const token = await fetcher.token()
 
         let url = `${FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base}/tables`
-        const table_id = (await (await fetch(url, {
+        const table_id = (await this.__fetchFeishuJson(url, {
             method: "get",
             headers: {
-                'Content-Type': 'application/json; charset=utf-8',
                 'Authorization': `Bearer ${token}`
             }
-        })).json()).data.items[0].table_id
+        }, 'list bitable tables')).data.items[0].table_id
 
         url = `${FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base}/tables/${table_id}/records?page_size=500`
-        const records = (await (await fetch(url, {
+        const records = (await this.__fetchFeishuJson(url, {
             method: "get",
             headers: {
-                'Content-Type': 'application/json; charset=utf-8',
                 'Authorization': `Bearer ${token}`
             }
-        })).json()).data.items
+        }, 'list bitable records')).data.items
 
         this.records = records
 
@@ -381,14 +459,7 @@ class larkDocScraper {
 
         if (node.node_type == 'shortcut') {
             let url = `${FEISHU_HOST}/open-apis/wiki/v2/spaces/get_node?token=${node.origin_node_token}`
-            let res = await fetch(url, {
-                headers: {
-                    'Content-Type': 'application/json; charset=utf-8',
-                    'Authorization': `Bearer ${this.token}`
-                }
-            })
-
-            let jres = await res.json()
+            let jres = await this.__fetchFeishuJson(url, {}, `get shortcut node ${node.origin_node_token}`)
 
             if (jres.code == 0) {
                 this.docs = jres.data.node
@@ -399,27 +470,13 @@ class larkDocScraper {
 
         if (node.has_child) {
             let url = `${FEISHU_HOST}/open-apis/wiki/v2/spaces/${SPACE_ID}/nodes?page_size=50&parent_node_token=${node.origin_node_token}`
-            let res = await fetch(url, {
-                headers: {
-                    'Content-Type': 'application/json; charset=utf-8',
-                    'Authorization': `Bearer ${this.token}`
-                }
-            })
-
-            let jres = await res.json()
+            let jres = await this.__fetchFeishuJson(url, {}, `list wiki children ${node.origin_node_token}`)
 
             if (jres.code == 0) {
                 node.children = await Promise.all(jres.data.items.map(async item => {
                     if (item.node_type == 'shortcut') {
                         let url = `${FEISHU_HOST}/open-apis/wiki/v2/spaces/get_node?token=${item.origin_node_token}`
-                        let res = await fetch(url, {
-                            headers: {
-                                'Content-Type': 'application/json; charset=utf-8',
-                                'Authorization': `Bearer ${this.token}`
-                            }
-                        })
-            
-                        let jres = await res.json()
+                        let jres = await this.__fetchFeishuJson(url, {}, `get child shortcut node ${item.origin_node_token}`)
                         
                         if (jres.code == 0) {
                             item = jres.data.node
@@ -444,10 +501,6 @@ class larkDocScraper {
                         delete child.blocks
                     }))
                 }
-            } else if (jres.status == 429) {
-                const timeout = res.headers['x-ogw-ratelimit-reset']
-                await this.__wait(timeout * 1000)
-                await this.__fetch_wiki_children(node, recursive)
             }
         } else {
             fs.writeFileSync(`${this.doc_source_dir}/${node.origin_node_token}.json`, JSON.stringify(node, null, 2))
@@ -459,14 +512,7 @@ class larkDocScraper {
         var page_token_expr = page_token ? `&page_token=${page_token}` : ''
 
         let url = `${FEISHU_HOST}/open-apis/drive/v1/files?folder_token=${folder_token}${page_token_expr}`
-        let res = await fetch(url, {
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8',
-                'Authorization': `Bearer ${this.token}`
-            }
-        })
-
-        let jres = await res.json()
+        let jres = await this.__fetchFeishuJson(url, {}, `list drive children ${folder_token}`)
 
         if (jres.code == 0) {
             this.docs.children = jres.data.files.sort((a, b) => {
@@ -517,10 +563,6 @@ class larkDocScraper {
                     }
                 }
             }
-        }  else if (jres.status == 429) {
-            const timeout = res.headers['x-ogw-ratelimit-reset']
-            await this.__wait(timeout * 1000)
-            await this.__fetch_drive_children(folder_token, page_token, recursive)
         }
     }
 
@@ -536,14 +578,7 @@ class larkDocScraper {
         if (token) {
             const page_token_expr = page_token ? `?page_token=${page_token}` : ''
             let url = `${FEISHU_HOST}/open-apis/docx/v1/documents/${token}/blocks${page_token_expr}`
-            let res = await fetch(url, {
-                headers: {
-                    'Content-Type': 'application/json; charset=utf-8',
-                    'Authorization': `Bearer ${this.token}`
-                }
-            })
-
-            let jres = await res.json()
+            let jres = await this.__fetchFeishuJson(url, {}, `list docx blocks ${token}`)
 
             if (jres.code == 0) {
                 if (page_token === null) {
@@ -571,52 +606,22 @@ class larkDocScraper {
                         }
                     }
                 }
-            } else if (jres.code == 99991400) {
-                const timeout = res.headers['x-ogw-ratelimit-reset']
-                await this.__wait(timeout * 1000)
-                await this.__fetch_blocks(node, page_token)
             }
         }
     }
 
     async __fetch_sheet_meta(sheetToken, sheetTitle) {
         const sheetMetaUrl = `${FEISHU_HOST}/open-apis/sheets/v3/spreadsheets/${sheetToken}/sheets/${sheetTitle}`
-
-        var res = await fetch(sheetMetaUrl, {
-            headers: {
-                'Authorization': `Bearer ${this.token}`,
-                'Content-Type': 'application/json'
-            }
-        })
-
-        if (res.status == 200) {
-            var sheetMetas = await res.json()
-            return sheetMetas
-        } else if (res.status == 429) {
-            const timeout = res.headers['x-ogw-ratelimit-reset']
-            await this.__wait(timeout * 1000)
-            await this.__fetch_sheet_meta(sheetToken, sheetTitle)
-        }
+        return await this.__fetchFeishuJson(sheetMetaUrl, {
+            headers: { 'Content-Type': 'application/json' }
+        }, `get sheet meta ${sheetToken}/${sheetTitle}`)
     }
 
     async __fetch_sheet_values(sheetToken, sheetTitle) {
         const sheetDataUrl = `${FEISHU_HOST}/open-apis/sheets/v2/spreadsheets/${sheetToken}/values/${sheetTitle}?valueRenderOption=UnformattedValue`
-
-        var res = await fetch(sheetDataUrl, {
-            headers: {
-                'Authorization': `Bearer ${this.token}`,
-                'Content-Type': 'application/json'
-            }
-        })
-
-        if (res.status == 200) {
-            var sheetData = await res.json()
-            return sheetData
-        } else if (res.status == 429) {
-            const timeout = res.headers['x-ogw-ratelimit-reset']
-            await this.__wait(timeout * 1000)
-            await this.__fetch_sheet_values(sheetToken, sheetTitle)
-        }
+        return await this.__fetchFeishuJson(sheetDataUrl, {
+            headers: { 'Content-Type': 'application/json' }
+        }, `get sheet values ${sheetToken}/${sheetTitle}`)
     }
 }
 

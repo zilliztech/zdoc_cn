@@ -31,7 +31,14 @@ async function fetchJsonWithRetry(url, options, label) {
 
   for (let attempt = 1; attempt <= FEISHU_RETRY_ATTEMPTS; attempt++) {
     try {
-      const res = await fetch(url, options)
+      const res = await fetch(url, {
+        compress: false,
+        ...options,
+        headers: {
+          'Accept-Encoding': 'identity',
+          ...(options.headers || {}),
+        },
+      })
       const text = await res.text()
       const data = text ? JSON.parse(text) : {}
 
