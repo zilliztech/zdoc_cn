@@ -13,10 +13,10 @@ type: docx
 token: HPs6dFV29ovzyBxpgUacXnnjngd
 sidebar_position: 1
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud

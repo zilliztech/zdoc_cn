@@ -13,10 +13,10 @@ type: docx
 token: QO5ldltYOoo5uFxS4ZJc24JWnUh
 sidebar_position: 1
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud

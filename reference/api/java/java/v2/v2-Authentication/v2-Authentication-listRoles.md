@@ -13,10 +13,10 @@ type: docx
 token: XIIyd3bMzoAVx3xVsoLcnQ2pnKh
 sidebar_position: 14
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud

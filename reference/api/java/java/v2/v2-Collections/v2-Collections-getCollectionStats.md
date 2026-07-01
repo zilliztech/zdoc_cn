@@ -13,10 +13,10 @@ type: docx
 token: E27SdesNPoKA8zx6jHkcejt0nWg
 sidebar_position: 17
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud

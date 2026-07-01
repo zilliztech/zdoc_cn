@@ -13,10 +13,10 @@ type: docx
 token: DUJsdflImor0joxV14ecSwpnnDb
 sidebar_position: 4
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

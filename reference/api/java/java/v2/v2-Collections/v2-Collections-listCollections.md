@@ -13,10 +13,10 @@ type: docx
 token: Vv4NdWVa5o5BSrx11OZcNVnQnbh
 sidebar_position: 20
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud

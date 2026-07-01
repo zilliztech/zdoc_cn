@@ -13,10 +13,10 @@ type: docx
 token: PUOBd229uoQGUIxnHLWcMSidnQh
 sidebar_position: 1
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

@@ -12,10 +12,10 @@ token: YyNNfpZsKlOCstdX7xRcXT4an6e
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

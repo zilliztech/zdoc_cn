@@ -13,10 +13,10 @@ type: docx
 token: BujpdsEJnozVT4xY3NFczyfrnDe
 sidebar_position: 6
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud

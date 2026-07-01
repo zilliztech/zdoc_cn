@@ -13,10 +13,10 @@ type: docx
 token: SachdJS5AopAZyxEfloceBnnnqg
 sidebar_position: 9
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud

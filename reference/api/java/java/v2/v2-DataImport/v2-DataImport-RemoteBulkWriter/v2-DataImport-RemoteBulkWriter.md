@@ -13,10 +13,10 @@ type: docx
 token: XAIndF6XWoQzvRxDvpLcgEE1nEb
 sidebar_position: 5
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud

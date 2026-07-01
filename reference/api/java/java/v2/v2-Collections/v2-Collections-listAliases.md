@@ -13,10 +13,10 @@ type: docx
 token: X6JXdPN7IoRffJxnaZccBvRanIM
 sidebar_position: 19
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud

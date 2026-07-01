@@ -13,10 +13,10 @@ type: docx
 token: PBYIdLALvoHd0pxwI8Ec4JsTnBX
 sidebar_position: 1
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud

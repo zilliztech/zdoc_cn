@@ -13,10 +13,10 @@ type: docx
 token: UrjHd9KZKo1Rlfxfj8AcmXNinlg
 sidebar_position: 2
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud

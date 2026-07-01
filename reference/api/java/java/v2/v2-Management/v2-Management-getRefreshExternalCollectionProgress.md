@@ -11,12 +11,12 @@ notebook: false
 description: "This operation returns the progress and current state of a previously started external collection refresh job. | Java | v2"
 type: docx
 token: FzEydqTwRoajhnxZOftcKxKpndg
-sidebar_position: 25
+sidebar_position: 27
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud

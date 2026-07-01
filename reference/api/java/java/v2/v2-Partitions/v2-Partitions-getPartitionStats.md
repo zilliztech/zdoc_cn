@@ -13,10 +13,10 @@ type: docx
 token: ZCESd1IrfoFHByx125kcd38Zndg
 sidebar_position: 3
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

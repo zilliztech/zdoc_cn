@@ -12,10 +12,10 @@ token: GKUCfGIFEluyMgdvioDc9sH7nzh
 sidebar_position: 4
 sidebar_label: "Database"
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud

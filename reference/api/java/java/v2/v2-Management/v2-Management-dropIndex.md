@@ -13,10 +13,10 @@ type: docx
 token: XHyydLsEAoPwB2xNhcwc9KBwn7g
 sidebar_position: 5
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

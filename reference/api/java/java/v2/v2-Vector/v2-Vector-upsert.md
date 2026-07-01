@@ -4,19 +4,19 @@ slug: /java/java/v2-Vector-upsert
 sidebar_key: java/v2-Vector-upsert
 sidebar_label: "upsert()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "This operation inserts new rows into a collection or updates existing rows when their primary keys already exist. You can also use partial updates and field-level operations to update selected fields. | Java | v2"
+description: "This operation inserts or updates data in a specific collection. | Java | v2"
 type: docx
-token: Dlw6dmlcIocK94xkMK3cv0ppnJd
+token: I7UWdVnAJobbSSxSPdHc024unMe
 sidebar_position: 9
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # upsert()
 
-This operation inserts new rows into a collection or updates existing rows when their primary keys already exist. You can also use partial updates and field-level operations to update selected fields.
+This operation inserts or updates data in a specific collection.
 
 ```java
 public UpsertResp upsert(UpsertReq request)
@@ -42,113 +42,107 @@ public UpsertResp upsert(UpsertReq request)
 ```java
 upsert(UpsertReq.builder()
     .data(List<JsonObject> data)
-    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .partitionName(String partitionName)
-    .partialUpdate(boolean partialUpdate)
-    .fieldOps(List<UpsertReq.FieldPartialUpdateOp> fieldOps)
     .build()
-);
+)
 ```
 
 **BUILDER METHODS:**
 
-- `data(List<JsonObject> data)` -
+- `data(List<JsonObject> data)`
 
-    A list of data rows to insert/upsert as JSON objects.
+    The data to insert or update into the current collection.
 
-- `databaseName(String databaseName)` -
+    The data to insert or update should be a `gson.JsonObject` that matches the schema of the current collection or a list of such dictionaries. 
 
-    The name of the database. Defaults to the current database if not specified.
+    The following code assumes that the schema of the current collection has two fields named **id** and **vector**. The former is the primary field and the latter is a field to hold 5-dimensional vector embeddings.
 
-- `collectionName(String collectionName)` -
+    <Admonition type="info" icon="📘" title="Notes">
 
-    The name of the target collection.
+    In Java SDK versions v2.4.1 or earlier versions, the input is a `fastjson.JSONObject`. But `fastjson` is not recommended to use now because of its unsafe deserialization vulnerability. Therefore, replace `fastjson` with `gson` if you use the Java SDK of v2.4.2 or later releases.
 
-- `partitionName(String partitionName)` -
+    </Admonition>
 
-    The name of the target partition.
+    ```java
+    List<JsonObject> data = new ArrayList<>();
+    
+    JsonObject dict1 = new JsonObject();
+    List<Float> vectorArray1 = new ArrayList<>();
+    vectorArray1.add(0.37417449965222693);
+    vectorArray1.add(-0.9401784221711342);
+    vectorArray1.add(0.9197526367693833);
+    vectorArray1.add(0.49519396415367245);
+    vectorArray1.add(-0.558567588166478);
+    
+    dict1.addProperty("id", 1L);
+    dict1.add("vector", gson.toJsonTree(vectorArray1));
+    
+    JsonObject dict2 = new JsonObject();
+    JSONArray vectorArray2 = new ArrayList<>();
+    vectorArray2.add(0.46949086179692356);
+    vectorArray2.add(-0.533609076732849);
+    vectorArray2.add(-0.8344432775467099);
+    vectorArray2.add(0.9797361846081416);
+    vectorArray2.add(0.6294256393761057);
+    
+    dict2.addProperty("id", 2L);
+    dict2.add("vector", gson.toJsonTree(vectorArray2));
+    
+    data.add(dict1);
+    data.add(dict2);
+    ```
 
-- `partialUpdate(boolean partialUpdate)` -
+- `collectionName(String collectionName)`
 
-    Whether to enable partial field updates during upsert. Set this to `true` when you want to update only the primary key and the fields provided in each row. If you use `ARRAY_APPEND` or `ARRAY_REMOVE` in `fieldOps`, the SDK sends the request with partial update semantics automatically.
+    The name of an existing collection.
 
-- `fieldOps(List<UpsertReq.FieldPartialUpdateOp> fieldOps)` -
+- `partitionName(String partitionName)`
 
-    Controls how fields in `data` are applied during a partial upsert. For most fields, omit this parameter or use the default `REPLACE` operation to replace the field value carried in the request. For `ARRAY` fields, use `ARRAY_APPEND` to append the request payload to the existing array, or `ARRAY_REMOVE` to remove all existing elements that match the request payload, without first reading and rewriting the full array. Each `FieldPartialUpdateOp` targets one `fieldName`. The value in `data` for that field must match the array `element_type`; after `ARRAY_APPEND`, the final array must not exceed the field `max_capacity`.
+    The name of an existing partition.
 
-**RETURNS:**
+**RETURN TYPE:**
 
 *UpsertResp*
+
+**RETURNS:**
 
 An **UpsertResp** object that contains information about the number of inserted or updated entities.
 
 **EXCEPTIONS:**
 
-- **MilvusClientException**
+- **MilvusClientExceptions**
 
-    This exception will be raised when any error occurs during this operation, including invalid field-level operation parameters such as a `null` operation, an empty `fieldName`, or a `null` `opType`.
+    This exception will be raised when any error occurs during this operation.
 
 ## Example\{#example}
 
 ```java
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import io.milvus.v2.client.ConnectConfig;
 import io.milvus.v2.client.MilvusClientV2;
 import io.milvus.v2.service.vector.request.UpsertReq;
 
-import java.util.Arrays;
-import java.util.Collections;
-
-Gson gson = new Gson();
-
-// 1. Set up a client.
+// 1. Set up a client
 ConnectConfig connectConfig = ConnectConfig.builder()
         .uri("YOUR_CLUSTER_ENDPOINT")
         .token("YOUR_CLUSTER_TOKEN")
         .build();
-
+        
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// 2. Upsert a complete row.
+// 2. Upsert operation
 JsonObject row = new JsonObject();
+List<Float> vectorList = new ArrayList<>();
+vectorList.add(2.0f);
+vectorList.add(3.0f);
+row.add("vector", gson.toJsonTree(vectorList));
 row.addProperty("id", 0L);
-row.add("vector", gson.toJsonTree(Arrays.asList(2.0f, 3.0f)));
-row.addProperty("color", "purple");
 
 UpsertReq upsertReq = UpsertReq.builder()
         .collectionName("test")
         .data(Collections.singletonList(row))
         .build();
 client.upsert(upsertReq);
-
-// 3. Partially update selected fields.
-JsonObject partialRow = new JsonObject();
-partialRow.addProperty("id", 0L);
-partialRow.addProperty("color", "green");
-
-UpsertReq partialUpdateReq = UpsertReq.builder()
-        .collectionName("test")
-        .data(Collections.singletonList(partialRow))
-        .partialUpdate(true)
-        .build();
-client.upsert(partialUpdateReq);
-
-// 4. Apply a field-level operation during upsert.
-JsonObject arrayRow = new JsonObject();
-arrayRow.addProperty("id", 0L);
-arrayRow.add("tags", gson.toJsonTree(Arrays.asList("new-tag")));
-
-UpsertReq fieldOpReq = UpsertReq.builder()
-        .collectionName("test")
-        .data(Collections.singletonList(arrayRow))
-        .partialUpdate(true)
-        .fieldOps(Collections.singletonList(
-                UpsertReq.FieldPartialUpdateOp.builder()
-                        .fieldName("tags")
-                        .opType(UpsertReq.FieldPartialUpdateOp.OpType.ARRAY_APPEND)
-                        .build()))
-        .build();
-client.upsert(fieldOpReq);
 ```
+

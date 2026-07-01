@@ -13,10 +13,10 @@ type: docx
 token: OalndLUMRoUqpMxr2QscYTCenre
 sidebar_position: 2
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

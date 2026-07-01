@@ -12,10 +12,10 @@ token: K6akf7IbXl5Jj1dFV8Fca62Inkd
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud

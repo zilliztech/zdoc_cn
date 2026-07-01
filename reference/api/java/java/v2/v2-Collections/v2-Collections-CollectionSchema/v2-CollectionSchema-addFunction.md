@@ -13,10 +13,10 @@ type: docx
 token: WI76dwejQosQWcxuhkccHOl7nXf
 sidebar_position: 4
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: BLFEde4BuoCjTSxjYSUcZerEnOb
 sidebar_position: 4
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud

@@ -9,13 +9,13 @@ deprecate_since: false
 description: "Snapshot operations. | Java | v2"
 type: folder
 token: DQpifjFvilUwaFdB7sGcYZo9nYg
-sidebar_position: 12
+sidebar_position: 13
 sidebar_label: "Snapshots"
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: RaBJd4clVo6KX4xjGJoc3Mz7nhg
 sidebar_position: 18
 keywords: 
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud

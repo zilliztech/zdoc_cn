@@ -13,10 +13,10 @@ type: docx
 token: AUQvd5EdFomWEWx3DrwcffYHnmb
 sidebar_position: 7
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud

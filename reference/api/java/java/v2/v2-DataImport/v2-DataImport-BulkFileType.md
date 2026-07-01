@@ -13,10 +13,10 @@ type: docx
 token: FGZadH85KoLEhRxkbLxcc1zbn4c
 sidebar_position: 1
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud

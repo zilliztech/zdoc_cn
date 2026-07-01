@@ -13,10 +13,10 @@ type: docx
 token: CJEzd0riyoJkcUxdYvjcKPoWn3c
 sidebar_position: 2
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud

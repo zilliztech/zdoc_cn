@@ -13,10 +13,10 @@ type: docx
 token: OUhTdWnXBoHqKdxTA0HcdMY5n4b
 sidebar_position: 3
 keywords: 
-  - hnsw algorithm
   - vector similarity search
   - approximate nearest neighbor search
   - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

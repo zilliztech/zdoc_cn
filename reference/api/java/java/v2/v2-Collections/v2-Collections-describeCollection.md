@@ -13,10 +13,10 @@ type: docx
 token: WEE6ddFntowCIixVMCmc3pESnug
 sidebar_position: 12
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud

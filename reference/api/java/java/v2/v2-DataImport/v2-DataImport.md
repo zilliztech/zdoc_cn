@@ -12,10 +12,10 @@ token: JNwTf1Enil3jErdNcSQc04LKnRd
 sidebar_position: 9
 sidebar_label: "Data Import"
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

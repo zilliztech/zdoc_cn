@@ -13,10 +13,10 @@ type: docx
 token: Y0N1dL4bVoyUnXxfSu7cjrgRnlc
 sidebar_position: 4
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

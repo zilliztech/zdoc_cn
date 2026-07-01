@@ -12,10 +12,10 @@ token: EVpQfxDmQloZX4dVW63c5h9mnHd
 sidebar_position: 5
 sidebar_label: "Management"
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: VlvQdg0fHoy8Uhxr8d6cpUnLn5y
 sidebar_position: 4
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud

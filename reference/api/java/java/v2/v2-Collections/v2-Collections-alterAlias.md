@@ -13,10 +13,10 @@ type: docx
 token: Fv8EdYIt4oThstxgpzqcm7C0nug
 sidebar_position: 1
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
@@ -42,7 +42,6 @@ public void alterAlias(AlterAliasReq request)
 ```java
 alterAlias(AlterAliasReq.builder()
     .alias(String alias)
-    .databaseName(String databaseName)
     .collectionName(String collectionName)
     .build()
 )
@@ -75,10 +74,6 @@ alterAlias(AlterAliasReq.builder()
     - `collection_2`'s alias = ["bob"]
 
     </Admonition>
-
-- `databaseName(String databaseName)`
-
-    The name of the database to which the target collection belongs.
 
 - `collectionName(String collectionName)`
 

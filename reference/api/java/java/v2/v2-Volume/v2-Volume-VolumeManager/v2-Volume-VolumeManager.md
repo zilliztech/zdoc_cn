@@ -13,10 +13,10 @@ type: docx
 token: QHyGdm4FyoFwCzxDgUUc9yQrnPf
 sidebar_position: 4
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud

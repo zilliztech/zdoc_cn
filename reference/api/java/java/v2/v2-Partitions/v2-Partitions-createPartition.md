@@ -13,10 +13,10 @@ type: docx
 token: WE4gduIjooCgQUxcKyLcwQe1n3g
 sidebar_position: 1
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud

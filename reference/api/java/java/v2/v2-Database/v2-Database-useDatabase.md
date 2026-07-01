@@ -13,10 +13,10 @@ type: docx
 token: LAJHdQKQQoPjmYxcfQgcvjvLnqh
 sidebar_position: 7
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud

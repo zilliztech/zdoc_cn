@@ -13,10 +13,10 @@ type: docx
 token: KJSvdrks9o6WOsxr0rZcPXe5ngn
 sidebar_position: 7
 keywords: 
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud

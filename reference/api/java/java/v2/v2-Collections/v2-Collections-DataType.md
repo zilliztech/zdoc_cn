@@ -13,10 +13,10 @@ type: docx
 token: RZ8idPxaho5yMoxJzGdc7QAcnNf
 sidebar_position: 10
 keywords: 
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud

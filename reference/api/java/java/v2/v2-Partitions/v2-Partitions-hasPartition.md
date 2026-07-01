@@ -13,10 +13,10 @@ type: docx
 token: KVSUdHV0ho7nnwxeQKMcEL47nKe
 sidebar_position: 4
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud

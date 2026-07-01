@@ -13,10 +13,10 @@ type: docx
 token: FZN8dtlIRoMSGBxF7b1cWX48n0b
 sidebar_position: 18
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud

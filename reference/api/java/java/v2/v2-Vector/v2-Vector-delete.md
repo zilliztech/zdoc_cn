@@ -13,10 +13,10 @@ type: docx
 token: NTCHdGKwNo9kl2xFzgKcjo8wndg
 sidebar_position: 1
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud

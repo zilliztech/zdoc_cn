@@ -13,10 +13,10 @@ type: docx
 token: MFv3drbbXouqVxxE1OicBBl5ndf
 sidebar_position: 11
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

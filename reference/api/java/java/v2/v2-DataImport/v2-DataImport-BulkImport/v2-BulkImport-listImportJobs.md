@@ -13,10 +13,10 @@ type: docx
 token: CN9sdiCicoERZpx9GhmcLa4Wn7g
 sidebar_position: 4
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: JB90dbBNRoz1I2xZY5rcSmJ1nSb
 sidebar_position: 12
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: IW5SdBOhUop0P8xBslCc6OHLnse
 sidebar_position: 5
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

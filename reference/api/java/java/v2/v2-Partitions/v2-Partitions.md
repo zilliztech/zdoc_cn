@@ -12,10 +12,10 @@ token: JukBfPwp8luly7dRHdWc1MEBnge
 sidebar_position: 6
 sidebar_label: "Partitions"
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud

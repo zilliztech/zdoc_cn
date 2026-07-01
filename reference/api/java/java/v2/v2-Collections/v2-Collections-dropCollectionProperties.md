@@ -13,10 +13,10 @@ type: docx
 token: OPPHd2AabonMIzxzfupcyNS9n1a
 sidebar_position: 15
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud

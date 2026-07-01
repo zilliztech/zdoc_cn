@@ -13,10 +13,10 @@ type: docx
 token: XzmYdQU59oMUagxiKVicyG8zn6f
 sidebar_position: 1
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud

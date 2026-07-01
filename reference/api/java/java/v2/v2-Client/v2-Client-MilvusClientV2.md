@@ -13,10 +13,10 @@ type: docx
 token: IeOWd0yR2onm5Ex6XyqcrGjKnpS
 sidebar_position: 1
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

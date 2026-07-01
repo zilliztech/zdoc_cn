@@ -12,10 +12,10 @@ token: OOcKfRAVdlXgf4dqW0sc9Zl2nyg
 sidebar_position: 10
 sidebar_label: "Volume"
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: O3E9duLvfoMC26x8AmDcomlWneh
 sidebar_position: 26
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

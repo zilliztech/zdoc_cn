@@ -13,10 +13,10 @@ type: docx
 token: AIRDdrhZloIQCrxCfc8cvxe4nmh
 sidebar_position: 30
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

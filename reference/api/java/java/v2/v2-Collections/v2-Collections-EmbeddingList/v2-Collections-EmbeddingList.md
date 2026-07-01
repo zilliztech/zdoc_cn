@@ -13,10 +13,10 @@ type: docx
 token: EXcNdtZrro7Ufkxp3G6cUArOn7b
 sidebar_position: 2
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud

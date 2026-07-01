@@ -13,10 +13,10 @@ type: docx
 token: UCpTdpkNEoHDyjxxCqqcZLSXnAe
 sidebar_position: 8
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

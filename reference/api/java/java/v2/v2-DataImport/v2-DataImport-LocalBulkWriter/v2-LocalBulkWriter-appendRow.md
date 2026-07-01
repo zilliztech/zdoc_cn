@@ -13,10 +13,10 @@ type: docx
 token: OgXWdeRGhoxMYqxzNSrcSZAknIb
 sidebar_position: 6
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud

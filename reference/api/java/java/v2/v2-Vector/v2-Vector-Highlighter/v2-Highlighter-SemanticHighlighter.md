@@ -13,10 +13,10 @@ type: docx
 token: LNRldueDGotZ1kx5wwlc63SDnLe
 sidebar_position: 3
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud

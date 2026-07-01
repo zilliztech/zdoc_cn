@@ -8,14 +8,14 @@ last_modified: v2.5.x
 deprecate_since: false
 description: "Methods related to implement role-based access control to your resources. | Java | v2"
 type: folder
-token: HR9xfgwXylmfqOdKmJ7c9xCqnQb
+token: LEj1fTFKLlUKSZdZjYEcnYgGnuh
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud

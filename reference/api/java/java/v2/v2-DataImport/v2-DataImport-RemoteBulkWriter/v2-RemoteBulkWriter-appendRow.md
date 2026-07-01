@@ -13,10 +13,10 @@ type: docx
 token: PLJTd37DWozRwbx74AIcQyh4nmc
 sidebar_position: 6
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud

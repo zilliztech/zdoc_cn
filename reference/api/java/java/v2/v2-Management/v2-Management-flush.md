@@ -13,10 +13,10 @@ type: docx
 token: N4R0dHR6MoiW2Rx9ClGc9MSlnOe
 sidebar_position: 7
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

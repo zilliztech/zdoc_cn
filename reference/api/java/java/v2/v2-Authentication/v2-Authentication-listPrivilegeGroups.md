@@ -13,10 +13,10 @@ type: docx
 token: TGsXduN5OoAjVyxZTvRc8HR2nse
 sidebar_position: 13
 keywords: 
-  - multimodal RAG
-  - llm hallucinations
-  - hybrid search
-  - lexical search
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

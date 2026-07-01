@@ -13,10 +13,10 @@ type: docx
 token: KaW0dGLZ9os1SExEsbqcHM4yn8c
 sidebar_position: 3
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: JQ4QdTaadoIDSPxDJRZcSDu3n5g
 sidebar_position: 3
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud

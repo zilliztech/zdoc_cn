@@ -13,10 +13,10 @@ type: docx
 token: BBYgdwIV5onkWxxowAhcCl5rnzc
 sidebar_position: 7
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud

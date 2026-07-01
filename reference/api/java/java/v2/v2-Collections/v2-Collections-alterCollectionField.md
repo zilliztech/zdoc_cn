@@ -13,10 +13,10 @@ type: docx
 token: OtrZdy7OtoC9N9xb8TjcCtM7nfc
 sidebar_position: 2
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: CW06d3MZQo2AzuxIv2ycCFpsn4b
 sidebar_position: 3
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud

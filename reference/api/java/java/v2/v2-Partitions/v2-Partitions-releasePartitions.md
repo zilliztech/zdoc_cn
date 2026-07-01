@@ -13,10 +13,10 @@ type: docx
 token: VsyQdDkXnoloWYxfjXNchc0dnng
 sidebar_position: 7
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

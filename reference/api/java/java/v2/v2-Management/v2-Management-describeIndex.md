@@ -13,10 +13,10 @@ type: docx
 token: SgJ7dKfisomLkqx1E3BccMO7nqf
 sidebar_position: 4
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud

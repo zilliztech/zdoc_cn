@@ -13,10 +13,10 @@ type: docx
 token: EeWldhw4AoT5WqxO8GgcSfjEnpb
 sidebar_position: 3
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

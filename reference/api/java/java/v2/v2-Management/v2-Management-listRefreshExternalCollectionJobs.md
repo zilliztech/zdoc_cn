@@ -11,12 +11,12 @@ notebook: false
 description: "This operation lists all external-collection refresh jobs, optionally filtered by collection name. | Java | v2"
 type: docx
 token: P9MFdEHMKoAfshxQhamcWrGknWg
-sidebar_position: 26
+sidebar_position: 28
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud

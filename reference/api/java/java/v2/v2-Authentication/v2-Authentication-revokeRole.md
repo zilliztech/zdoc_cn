@@ -13,10 +13,10 @@ type: docx
 token: Znb7dcNoeobIkkxGLGfcpVfUnIX
 sidebar_position: 19
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

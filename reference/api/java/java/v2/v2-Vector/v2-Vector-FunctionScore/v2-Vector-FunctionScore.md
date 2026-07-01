@@ -13,10 +13,10 @@ type: docx
 token: Au6Wda1HUonyXOx5Pfzc0Cpjnab
 sidebar_position: 2
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud

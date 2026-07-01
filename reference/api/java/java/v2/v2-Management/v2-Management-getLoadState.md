@@ -13,10 +13,10 @@ type: docx
 token: PAs7dwIIrop4OixCUr8ctHVLnXc
 sidebar_position: 9
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud

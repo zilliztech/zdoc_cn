@@ -13,10 +13,10 @@ type: docx
 token: DZcddGCD3oh29txhnB5cuxzzn4d
 sidebar_position: 7
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud

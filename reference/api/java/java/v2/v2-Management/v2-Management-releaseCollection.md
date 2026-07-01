@@ -13,10 +13,10 @@ type: docx
 token: K5t2dl0XloN4VHx1lcpc6Uq3nye
 sidebar_position: 16
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

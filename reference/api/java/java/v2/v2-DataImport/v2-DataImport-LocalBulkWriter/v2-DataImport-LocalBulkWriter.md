@@ -13,10 +13,10 @@ type: docx
 token: G7F9dQ8DwoZsaVxExdnc7K6an3g
 sidebar_position: 5
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud

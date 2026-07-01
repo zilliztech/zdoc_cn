@@ -13,10 +13,10 @@ type: docx
 token: RFv2dtZ1qoP9XQxJEGqcgLGUnhc
 sidebar_position: 9
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
   - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud

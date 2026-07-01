@@ -9,13 +9,13 @@ deprecate_since: false
 description: "Methods related to file resource management. | Java | v2"
 type: folder
 token: W5gwfoADilawLFd64CWcpuFMn0g
-sidebar_position: 11
+sidebar_position: 12
 sidebar_label: "File Resources"
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

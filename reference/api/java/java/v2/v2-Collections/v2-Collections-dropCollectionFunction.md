@@ -13,10 +13,10 @@ type: docx
 token: A6dgdXJdRoxwKAxGB1hctKXvnZg
 sidebar_position: 33
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud

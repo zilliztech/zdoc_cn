@@ -13,10 +13,10 @@ type: docx
 token: D0UGdkudVo5vtLxlZw3c6cdqnmc
 sidebar_position: 4
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
