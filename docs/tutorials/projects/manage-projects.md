@@ -84,6 +84,10 @@ import Procedures from '@site/src/components/Procedures';
              <td><p>输入要创建的项目名称。</p></td>
            </tr>
            <tr>
+             <td><p>描述（可选）</p></td>
+             <td><p>输入要创建的项目描述。最多 255 字符。</p></td>
+           </tr>
+           <tr>
              <td><p>地域</p></td>
              <td><p>选择用于部署工作负载的云地域。项目中的所有资源（例如集群、Volume 等）都会部署在该地域。项目创建后，地域不可更改。详情请参见<a href="./cu-types-explained">选择合适的集群类型</a>。</p></td>
            </tr>
@@ -100,21 +104,19 @@ import Procedures from '@site/src/components/Procedures';
     以下示例创建了一个名称为 `project-05` 的企业版项目。详情请参考[创建项目](/reference/restful/create-project-v2)。
 
     ```bash
-    export BASE_URL="https://api.cloud.zilliz.com.cn"
-    export TOKEN="YOUR_API_KEY"
-    
     curl --request POST \
-         --url "https://${BASE_URL}/v2/projects" \
-         --header "Authorization: Bearer ${TOKEN}" \
-         --header "Accept: application/json" \
-         --header "Content-type: application/json" \
-         --data-raw '{
-            "projectName": "project-05",
-            "plan": "Enterprise",
-            "projectType": "Regional",
-            "regions": ["ali-cn-hangzhou"]
-          }'
-    
+    --url "${BASE_URL}/v2/projects" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "projectName": "My Project",
+        "plan": "Enterprise",
+        "regionIds": [
+            "ali-cn-hangzhou"
+        ],
+        "description": "A project for organizing clusters and resources."
+    }'
     ```
 
     以下为输出结果。
@@ -153,12 +155,12 @@ import Procedures from '@site/src/components/Procedures';
 
     以下为返回结果示例。
 
-    ```json
+    ```bash
     {
       "code": 0,
       "data": {
         "projectId": "proj-a0195d6acacaf2bb985173",
-        "regions": ["ali-cn-hangzhou", "ali-cn-beijing"]
+        "regions": ["ali-cn-hangzhou"]
       }
     }
     
@@ -182,10 +184,6 @@ import Procedures from '@site/src/components/Procedures';
 
 您可以查看在您的权限范围内的所有项目的列表。
 
-- **通过 Web 控制台**
-
-    ![zh-view-projects-saas](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-view-projects-saas.png "zh-view-projects-saas")
-
 - **通过 RESTful API**
 
     以下示例查看当前组织下的全部项目。详情请参考[查看项目列表](/reference/restful/list-projects-v2)。
@@ -202,29 +200,33 @@ import Procedures from '@site/src/components/Procedures';
 
     以下为输出结果。
 
-    ```json
+    ```bash
     {
         "code": 0,
         "data": [
             {
                 "projectName": "Default Project",
                 "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
+                "regionIds": [
+                    "ali-cn-hangzhou"
+                ],
                 "instanceCount": 2,
-                "createTime": "2023-08-16T07:34:06Z"
+                "createTime": "2023-08-16T07:34:06Z",
+                "plan": "Enterprise",
+                "orgType": "SAAS",
+                "description": "A project for organizing clusters and resources."
             }
         ]
     }
     ```
 
+- **通过 Web 控制台**
+
+    ![XJTIwuEapharu1bRUmCcICTsnEo](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/XJTIwuEapharu1bRUmCcICTsnEo.png)
+
 ## 查看项目详情\{#view-project-details}
 
 您还可以查看某个项目的具体详情。
-
-- **通过 Web 控制台**
-
-    您可以在项目列表页查看项目名称、版本、集群数量、创建时间。您还可以点击某个项目，查看项目下的集群信息。
-
-    ![C2ItbMdsMoH2FWxmmHncejKVn0e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/C2ItbMdsMoH2FWxmmHncejKVn0e.png "C2ItbMdsMoH2FWxmmHncejKVn0e")
 
 - **通过 RESTful API**
 
@@ -232,42 +234,45 @@ import Procedures from '@site/src/components/Procedures';
 
     ```bash
     export TOKEN="YOUR_API_KEY"
-    export PROJECT_ID="proj-xxxxxxxxxxxxxxx"
+    export projectId="proj-xx"
     
     curl --request GET \
-         --url "https://${BASE_URL}/v2/projects/${PROJECT_ID}" \
-         --header "Authorization: Bearer ${API_KEY}"   \
-         --header "accept: application/json"
+    --url "${BASE_URL}/v2/projects/${projectId}" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Content-Type: application/json"
     ```
 
     以下为输出结果。
 
     ```json
     {
-      "code": 0,
-      "data": [
-        {
-          "projectName": "project1",
-          "projectId": "proj-xxxxxxxxxxxxxxx",
-          "instanceCount": 3,
-          "createTime": "2023-12-07T03:21:32Z",
-          "plan": "Enterprise"
+        "code": 0,
+        "data": {
+            "projectId": "proj-x",
+            "projectName": "My Project",
+            "regionIds": [
+                "ali-cn-hangzhou"
+            ],
+            "instanceCount": 2,
+            "createTime": "2023-08-16T07:34:06Z",
+            "plan": "Enterprise",
+            "orgType": "SAAS",
+            "description": "A project for organizing clusters and resources."
         }
-      ]
     }
     ```
 
-## 重命名项目\{#rename-a-project}
+- **通过 Web 控制台**
 
-要重命名项目，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台对项目进行重命名。
+    您可以在项目列表页查看项目名称、版本、集群数量、创建时间。您还可以点击某个项目，查看项目下的集群信息。
 
-<Admonition type="info" icon="📘" title="说明">
+    ![LT20bwZ0lolQiqxAUC3cyc5dnAg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/LT20bwZ0lolQiqxAUC3cyc5dnAg.png "LT20bwZ0lolQiqxAUC3cyc5dnAg")
 
-每个组织中都有一个默认项目。
+## 编辑项目详情\{#edit-project-details}
 
-</Admonition>
+要重命名项目或者修改项目描述，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台编辑项目详情。
 
-<Supademo id="cmhiwsw4r607mfati5u089sae?utm_source=link" title=""  />
+<Supademo id="cmhiwsw4r607mfati5u089sae" title=""  />
 
 ## 删除项目\{#delete-a-project}
 

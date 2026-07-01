@@ -187,15 +187,32 @@ curl --request POST \
 
 您需要配置以下集群信息：
 
-- **集群名称**：请输入集群的名称。当前存在随机默认值，您可根据需要修改该名称。
-
-- **集群设置**：
-
-    - **集群类型**：想了解更多关于集群类型的相关内容，可参见[选择合适的 CU 类型](/docs/cu-types-explained)。如需选择分层存储型 CU，集群规格需至少为 8 Query CU。
-
-    - **Query CU 数量**：您可以使用[计算器](https://zilliz.com.cn/pricing#calculator)估算所需 Query CU 数量。对于使用个人邮箱创建的组织，即使已配置支付方式，Dedicated 集群的 Query CU 最大也只能设置为 32。
-
-- （可选）**备份策略**：设置定时创建备份的频率。更多详细信息，请参考[设置定时自动备份](./schedule-automatic-backups)。
+<table>
+   <tr>
+     <th><p><strong>参数</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p><strong>集群名称</strong></p></td>
+     <td><p>请输入集群的名称。当前存在随机默认值，您可根据需要修改该名称</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>集群描述（可选）</strong></p></td>
+     <td><p>请输入集群的描述。最多 255 字符。</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>集群类型</strong></p></td>
+     <td><p>想了解更多关于集群类型的相关内容，可参见<a href="/docs/cu-types-explained">选择合适的 CU 类型</a>。如需选择分层存储型 CU，集群规格需至少为 8 Query CU。</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>Query CU</strong></p></td>
+     <td><p>您可以使用<a href="https://zilliz.com.cn/pricing#calculator">计算器</a>估算所需 Query CU 数量。对于使用个人邮箱创建的组织，即使已配置支付方式，Dedicated 集群的 Query CU 最大也只能设置为 32。</p></td>
+   </tr>
+   <tr>
+     <td><p><strong>备份策略（可选）</strong></p></td>
+     <td><p>设置定时创建备份的频率。更多详细信息，请参考 <a href="./schedule-automatic-backups">设置定时自动备份</a>。</p></td>
+   </tr>
+</table>
 
 集群创建过程中，请保存集群访问凭证（用户名和密码）。该信息将仅展示一次。
 
@@ -205,34 +222,24 @@ curl --request POST \
 
 <TabItem value="bash">
 
-以下为示例代码，请将示例中的 `{API_KEY}` 替换为您自己的Zilliz Cloud API 密钥。
-
-以下 `POST` 通过请求体在项目 `proj-xxxxxxxxxxxxxxxxxxxxx` 中创建了 1 个名称为 `Cluster-02`、Query CU 数量为 1、 集群类型为性能型的 Dedicated 集群。
+以下为示例代码，请将示例中的 `{API_KEY}` 替换为您自己的Zilliz Cloud API 密钥。更多详情，请参考[创建 Dedicated 集群](/reference/restful/create-dedicated-cluster-v2)。
 
 ```bash
 curl --request POST \
-     --url https://api.cloud.zilliz.com.cn/v2/clusters/createDedicated \
-     --header 'Authorization: Bearer ${API_KEY}' \
-     --header 'accept: application/json' \
-     --header 'content-type: application/json' \
-     --data-raw '{
-        "clusterName": "Cluster-02",
-        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
-        "regionId": "${REGION_ID}",
-        "plan": "Enterprise",
-        "clusterType": "Performance-optimized",
-        "cuSize": 1
-      }'
-     
-#  {
-#    code: 0,
-#    data: {
-#      "clusterId": "inxx-xxxxxxxxxxxxxxx",
-#      "username":"db_admin",
-#      "password":"****************",
-#      "prompt": "Successfully submitted, cluster is being created. You can access data about the creation progress and status of your cluster by DescribeCluster API. Once the cluster status is RUNNING, you may access your vector database using the SDK with the admin account and the initial password you specified."
-#     }
-#  }
+--url "${BASE_URL}/v2/clusters/createDedicated" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Accept: application/json" \
+--header "Request-Timeout: 5" \
+--header "Content-Type: application/json" \
+-d '{
+    "clusterName": "Cluster-05",
+    "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
+    "regionId": "ali-cn-hangzhou",
+    "plan": "Standard",
+    "cuType": "Performance-optimized",
+    "cuSize": 1,
+    "description": "A cluster for vector search workloads."
+}'
 ```
 
 以下为参数说明：
@@ -249,7 +256,7 @@ curl --request POST \
 
 - `cuSize`：集群的 Query CU 数量。参数值为 1-256 之间的整数。对于使用个人邮箱创建的组织，即使已配置支付方式，Dedicated 集群的 Query CU 最大也只能设置为 32。
 
-更多详情，请参考[创建 Dedicated 集群](/reference/restful/create-dedicated-cluster-v2)。
+- `description` (可选): 集群的描述。
 
 </TabItem>
 

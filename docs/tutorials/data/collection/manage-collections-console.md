@@ -64,7 +64,7 @@ Collection 的元数据包含以下内容：
 
 - Collection 名称
 
-- （可选）Collection 描述
+- （可选）Collection 描述。最多 1024 UTF 8 字节数。
 
 - Collection 所属的 Database。[Database](./database) 是介于 Cluster 与 Collection 之间的一层逻辑结构，用于组织和管理 Collection。你可以将相关的 Collection 分组归类到同一个 Database 下。
 
@@ -112,7 +112,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
     常见的 Pre-search Function 包括：BM25 Function、Model-based Function。
 
-    有关 Pre-search Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](/docs/function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)。
+    有关 Pre-search Function 工作机制的概念性说明，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#pre-search-functions-convert-text-to-vector-embeddings)。
 
     在 Zilliz Cloud 控制台中创建 Collection 时，你可以在 Collection 创建流程中添加 Function。
 
@@ -130,7 +130,7 @@ Index 是一种用于加速搜索与查询的数据结构。Zilliz Cloud 支持�
 
     - 不影响 candidate retrieval
 
-    有关 Post-search Function 的工作原理，请参见 [Function & 模型推理概述](/docs/function-and-model-inference-overview#post-search-functions-rerank-candidate-results)。
+    有关 Post-search Function 的工作原理，请参见 [Function & 模型推理概述](./function-and-model-inference-overview#post-search-functions-rerank-candidate-results)。
 
 ### Partition 和 Partition key\{#partition-partition-key}
 
@@ -208,6 +208,10 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 - **重命名 Collection**：可以修改现有 Collection 的名称。
 
+- **编辑 Collection 描述**：可以修改现有 Collection 的描述。
+
+    ![VcAwwkr0yhcqf3b3cfNcywp2nYJ](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/VcAwwkr0yhcqf3b3cfNcywp2nYJ.png)
+
 - **编辑 Collection 的 Schema 和配置**：目前 Zilliz Cloud 支持修改以下 Schema 和设置：
 
     - 可编辑现有 [VARCHAR](./use-string-field) 字段的 `max_length` 值。
@@ -238,7 +242,7 @@ Zilliz Cloud 支持通过 Web 控制台对已创建的 Collection 执行以下�
 
 - **编辑 Collection 时区**：Collection 时区用于定义 Collection 中所有 TIMESTAMPTZ Entity 的时区。默认使用 UTC，您也可以根据需求选择其他时区。
 
-- **修改 Collection TT**L：TTL (Time-to-live) 是一种 Collection 属性，决定了 Collection 中数据的到期时间。 数据到期后将被自动删除。详情请参考[设置 Collection 生存时间](/docs/set-collection-ttl)。
+- **修改 Collection TT**L：TTL (Time-to-live) 是一种 Collection 属性，决定了 Collection 中数据的到期时间。 数据到期后将被自动删除。详情请参考[设置 Collection 生存时间](./set-collection-ttl)。
 
 - **修改 Allow Insert Auto ID**：allow_insert_auto_id 属性允许启用了 Auto ID 的 Collection 在 Insert、Upsert、Bulk Insert 时接受用户提供的主键值。详情请参考[修改 Collection](./modify-collections#example-6-enable-allow_insert_auto_id)。
 
