@@ -1,5 +1,6 @@
 const utils = require('./larkUtils.js')
 const tokenFetcher = require('./larkTokenFetcher.js')
+const { isRetryableFetchError } = require('./feishuFetch.js')
 const https = require('node:https')
 const fetch = require('node-fetch')
 const Bottleneck = require('bottleneck')
@@ -76,27 +77,25 @@ class larkImageDownloader {
         const req = {
             method: 'GET',
             headers: {
+                'Accept-Encoding': 'identity',
                 Authorization: `Bearer ${token}`,
             },
         }
 
-        for (let attempt = 1; attempt <= retries; attempt++) {
-            try {
-                const res = await fetch(`${process.env.FEISHU_HOST}/open-apis/drive/v1/medias/${image_token}/download`, req)
-                const buffer = await res.buffer()
-                return { buffer }
-            } catch (err) {
-                if (attempt === retries) throw err
-                const delay = attempt * 5000
-                console.log(`ImageToken ${image_token} download failed (attempt ${attempt}/${retries}), retrying in ${delay/1000}s: ${err.message}`)
-                await new Promise(resolve => setTimeout(resolve, delay))
-            }
+        const res = await this.__fetchDownloadWithRetry(
+            `${process.env.FEISHU_HOST}/open-apis/drive/v1/medias/${image_token}/download`,
+            req,
+            `ImageToken ${image_token}`,
+            retries
+        )
+        if (!res.ok) {
+            throw new Error(`ImageToken ${image_token} download failed: HTTP ${res.status} ${res.statusText}`)
         }
-
-        return res
+        const buffer = await res.buffer()
+        return { buffer }
     }
 
-    async __downloadBoardPreview(board_token) {
+    async __downloadBoardPreview(board_token, retries=3) {
         console.log(`BoardToken: ${board_token}`)
         const fetcher = new tokenFetcher()
         await fetcher.fetchToken()
@@ -105,13 +104,52 @@ class larkImageDownloader {
         const req = {
             method: 'GET',
             headers: {
+                'Accept-Encoding': 'identity',
                 Authorization: `Bearer ${token}`,
             },
         }
 
-        let res = await fetch(`${process.env.FEISHU_HOST}/open-apis/board/v1/whiteboards/${board_token}/download_as_image`, req)
+        let res = await this.__fetchDownloadWithRetry(
+            `${process.env.FEISHU_HOST}/open-apis/board/v1/whiteboards/${board_token}/download_as_image`,
+            req,
+            `BoardToken ${board_token}`,
+            retries
+        )
 
         return res
+    }
+
+    async __fetchDownloadWithRetry(url, req, label, retries=3) {
+        for (let attempt = 1; attempt <= retries; attempt++) {
+            try {
+                const res = await fetch(url, {
+                    compress: false,
+                    ...req,
+                    headers: {
+                        'Accept-Encoding': 'identity',
+                        ...req.headers,
+                    },
+                })
+
+                if ((res.status === 429 || res.status >= 500) && attempt < retries) {
+                    throw new Error(`HTTP ${res.status} ${res.statusText || ''}`.trim())
+                }
+
+                return res
+            } catch (err) {
+                if ((!isRetryableFetchError(err) && !/^HTTP (429|5\d\d)\b/.test(err.message)) || attempt === retries) {
+                    throw err
+                }
+
+                const delay = attempt * 5000
+                console.log(`${label} download failed (attempt ${attempt}/${retries}), retrying in ${delay/1000}s: ${err.message}`)
+                await this.__wait(delay)
+            }
+        }
+    }
+
+    async __wait(duration) {
+        return new Promise(resolve => setTimeout(resolve, duration))
     }
 
     async __fetchCaption(key, node) {

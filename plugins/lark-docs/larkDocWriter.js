@@ -1,5 +1,5 @@
 const larkTokenFetcher = require('./larkTokenFetcher.js')
-const { removeTabsHallucinations, unescapeKnownJsxTags, normalizeCodeTagContent, normalizeEscapedGenericTypes } = require('../mdx-parse/mdxPatcher')
+const { removeTabsHallucinations, unescapeKnownJsxTags, normalizeCodeTagContent, normalizeEscapedGenericTypes, escapeNonHtmlTags } = require('../mdx-parse/mdxPatcher')
 const Downloader = require('./larkImageDownloader.js')
 const slugify = require('slugify')
 const fs = require('node:fs')
@@ -665,17 +665,17 @@ class larkDocWriter {
         const specs = recordData
         const method = (specs.method || 'get').toLowerCase()
         const endpoint = specs.endpoint || ''
-        const description = (specs.summary || title || '').replace(/"/g, '\\"')
+        const description = specs.summary || title || ''
 
         const frontMatter = `---
 displayed_sidebar: restfulSidebar
 sidebar_position: ${sidebar_position || 1}
 slug: /restful/${slug}
 beta: ${beta ? 'TRUE' : 'FALSE'}
-title: "${title || specs.summary || 'API'} | RESTful"
-description: "${description} | RESTful"
+title: ${this.__yaml_string(`${title || specs.summary || 'API'} | RESTful`)}
+description: ${this.__yaml_string(`${description} | RESTful`)}
 hide_table_of_contents: true
-sidebar_label: "${sidebar_label || title || specs.summary || 'API'}"
+sidebar_label: ${this.__yaml_string(sidebar_label || title || specs.summary || 'API')}
 sidebar_custom_props: { badges: ['${method}'] }
 ${keywords ? 'keywords: \n  - ' + keywords.split(',').map(k => k.trim()).join('\n  - ') + '\n' : ''}---`
 
@@ -693,6 +693,10 @@ export const method = "${method}"`
         const file_path = `${path}/${slug}.mdx`
         fs.writeFileSync(file_path, frontMatter + '\n\n' + mdxBody)
         console.log(`Generated API doc: ${file_path}`)
+    }
+
+    __yaml_string(value) {
+        return JSON.stringify(String(value ?? '').replace(/\r?\n/g, '|'))
     }
 
     __front_matters (title, suffix, slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar, description="") {
@@ -715,7 +719,7 @@ export const method = "${method}"`
         }
 
         if (description) {
-            description = description.trim().replace('\n', '|').replace(/\[(.*)\]\(.*\)/g, '$1').replace(':', '').replace(/\*+|_+/g, '').replace(/\"/g, "\\\"")
+            description = description.trim().replace('\n', '|').replace(/\[(.*)\]\(.*\)/g, '$1').replace(':', '').replace(/\*+|_+/g, '')
             description = description.replace(/<\/?[^>]+>/g, '').trim()
             if (description.length === 0) {
                 description = title
@@ -734,12 +738,12 @@ export const method = "${method}"`
         }
 
         let front_matter = '---\n' +
-        `title: "${title} | ${suffix}"` + '\n' +
+        `title: ${this.__yaml_string(`${title} | ${suffix}`)}` + '\n' +
         `slug: /${slug}` + '\n' +
-        `sidebar_label: "${sidebar_label !== "" ? sidebar_label : title}"` + '\n' +
+        `sidebar_label: ${this.__yaml_string(sidebar_label !== "" ? sidebar_label : title)}` + '\n' +
         `beta: ${beta ? beta : 'FALSE'}` + '\n' +
         `notebook: ${notebook ? notebook : 'FALSE'}` + '\n' +
-        `description: "${description} | ${suffix}"` + '\n' +
+        `description: ${this.__yaml_string(`${description} | ${suffix}`)}` + '\n' +
         `type: ${type}` + '\n' +
         `token: ${token}` + '\n' +
         `sidebar_position: ${sidebar_position}` + '\n' +
@@ -1034,7 +1038,7 @@ export const method = "${method}"`
             patchedContent = normalizeCodeTagContent(patchedContent);
             patchedContent = normalizeEscapedGenericTypes(patchedContent);
             patchedContent = this.__escape_currency_dollars(patchedContent);
-            patchedContent = this.__escape_non_html_tags(patchedContent);
+            patchedContent = escapeNonHtmlTags(patchedContent);
             let maxIterations = 50; // Prevent infinite loops
             let iteration = 0;
             const seenHashes = new Set();
