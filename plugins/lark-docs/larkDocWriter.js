@@ -5,6 +5,7 @@ const slugify = require('slugify')
 const fs = require('node:fs')
 const { URL } = require('node:url')
 const fetch = require('node-fetch')
+const { fetchFeishuJsonWithRetry } = require('./feishuFetch.js')
 const node_path = require('node:path')
 const cheerio = require('cheerio')
 const showdown = require('showdown')
@@ -404,22 +405,20 @@ class larkDocWriter {
     async __listed_docs() {
         const token = await this.tokenFetcher.token()
         let url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_token}/tables`
-        const table_id = (await (await fetch(url, {
+        const table_id = (await fetchFeishuJsonWithRetry(url, {
             method: "get",
             headers: {
-                'Content-Type': 'application/json; charset=utf-8',
                 'Authorization': `Bearer ${token}`
             }
-        })).json()).data.items[0].table_id
+        }, 'writer list bitable tables')).data.items[0].table_id
 
         url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_token}/tables/${table_id}/records?page_size=500`
-        this.records = (await (await fetch(url, {
+        this.records = (await fetchFeishuJsonWithRetry(url, {
             method: "get",
             headers: {
-                'Content-Type': 'application/json; charset=utf-8',
                 'Authorization': `Bearer ${token}`
             }
-        })).json()).data.items
+        }, 'writer list bitable records')).data.items
     }
 
     async __is_to_publish (title, slug, token=null) {
@@ -2089,7 +2088,9 @@ export const method = "${method}"`
             var page;
 
             try {
-                page = this.__fetch_doc_source(key, token);
+                page = key === 'origin_node_token' || typeof this.__fetch_link_doc_source !== 'function'
+                    ? this.__fetch_doc_source(key, token)
+                    : this.__fetch_link_doc_source(token);
             } catch (error) {
                 page = null;
             }
@@ -2329,9 +2330,14 @@ export const method = "${method}"`
         ]
     }
 
-    keyword_picker() {
+    keyword_picker(seedInput=null) {
         const keywords = fs.readFileSync(node_path.join('plugins', 'lark-docs', 'meta', 'keywords.txt'), 'utf8').trim().split('\n')
-        const seed = Math.floor(Math.random() * keywords.length)
+        let seed = Math.floor(Math.random() * keywords.length)
+        if (seedInput != null) {
+            seed = String(seedInput).split('').reduce((hash, char) => {
+                return (hash * 31 + char.charCodeAt(0)) >>> 0
+            }, 0) % keywords.length
+        }
         return [keywords[seed], keywords[(seed+1)%keywords.length], keywords[(seed+2)%keywords.length], keywords[(seed+3)%keywords.length]]
     }
 }
