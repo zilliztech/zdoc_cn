@@ -39,7 +39,7 @@
     "删除 Partition": "drop-partition",
     "创建用户": "create-user",
     "更新用户密码": "update-user-password",
-    "更新用户": "update-user-password",
+    "更新用户": "update-user",
     "删除用户": "drop-user",
     "查看用户详情": "describe-user",
     "查看用户列表": "list-users",
