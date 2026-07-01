@@ -108,6 +108,22 @@ function escapeCurrencyDollars(content) {
     return result.join('\n');
 }
 
+function normalizeEscapedGenericTypes(content) {
+    return transformOutsideFencedCodeBlocks(content, segment => {
+        const parts = segment.split(/(`+[^`]+`+)/);
+        return parts.map((part, i) => {
+            if (i % 2 !== 0) {
+                return part;
+            }
+
+            return part.replace(
+                /\\+<([A-Za-z_$][A-Za-z0-9_.$]*(?:\s*[,|]\s*[A-Za-z_$][A-Za-z0-9_.$]*)*)\\+>/g,
+                '&lt;$1&gt;'
+            );
+        }).join('');
+    });
+}
+
 function transformOutsideFencedCodeBlocks(content, transform) {
     const lines = content.split('\n');
     const result = [];
@@ -296,6 +312,7 @@ async function applyMdxPatches(content) {
         let patchedContent = removeTabsHallucinations(content);
         patchedContent = unescapeKnownJsxTags(patchedContent);
         patchedContent = normalizeCodeTagContent(patchedContent);
+        patchedContent = normalizeEscapedGenericTypes(patchedContent);
         patchedContent = escapeCurrencyDollars(patchedContent);
         patchedContent = escapeNonHtmlTags(patchedContent);
         let maxIterations = 50; // Prevent infinite loops
@@ -453,6 +470,7 @@ module.exports = {
     removeTabsHallucinations,
     unescapeKnownJsxTags,
     normalizeCodeTagContent,
+    normalizeEscapedGenericTypes,
     escapeCurrencyDollars,
     escapeNonHtmlTags,
 };
