@@ -146,6 +146,9 @@
     "查看按需集群列表": "list-on-demand-clusters",
     "删除按需集群": "delete-on-demand-cluster",
     "查看按需集群详情": "describe-on-demand-cluster",
+    "修改按需集群": "modify-on-demand-cluster",
+    "更新按需集群信息": "modify-on-demand-cluster",
+    "更新 Dedicated 集群信息": "modify-cluster",
     "从远端迁移": "migrate-from-remote",
     "启用按需计算": "enable-on-demand-compute",
     "查看按需计算状态": "describe-on-demand-compute",
@@ -169,5 +172,10 @@
     "查看 Storage Integration": "describe-storage-integration",
     "删除 Storage Integration": "delete-storage-integration",
     "校验 Storage Integration": "validate-storage-integration",
-    "生成 Storage Integration 授权材料": "generate-storage-integration-authorization-materials"
+    "生成 Storage Integration 授权材料": "generate-storage-integration-authorization-materials",
+    "列出 Spark 任务": "list-spark-jobs",
+    "创建 Spark 任务": "create-spark-job",
+    "校验 Spark 任务 Artifact": "validate-spark-job-artifact",
+    "查看 Spark 任务详情": "describe-spark-job",
+    "取消 Spark 任务": "cancel-spark-job"
 }
