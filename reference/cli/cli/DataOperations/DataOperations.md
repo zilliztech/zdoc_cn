@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to data operations. | Cloud"
 type: folder
-token: Ji3xfyZmUlvCShdh8rbc845Znnh
+token: Ag0Rf5tHcl6Wp7d37lBcUE8LnMg
 sidebar_position: 3
 sidebar_label: "Data Operations"
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - Data Operations
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

@@ -13,15 +13,15 @@ type: docx
 token: G7Gqdc2JzosNPDx3r4ictkbgnyh
 sidebar_position: 2
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - get
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

@@ -13,15 +13,15 @@ type: docx
 token: QcWcdXbgxooJO4xuwADc9YqAn8c
 sidebar_position: 6
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud
   - search
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

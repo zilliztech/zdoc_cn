@@ -12,15 +12,15 @@ token: QJJjfOjoGlLqVmdEtiJcriX2nWh
 sidebar_position: 8
 sidebar_label: "Vector"
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Vector
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

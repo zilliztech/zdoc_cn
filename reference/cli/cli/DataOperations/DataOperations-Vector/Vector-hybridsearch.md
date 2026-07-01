@@ -13,15 +13,15 @@ type: docx
 token: EiCXdUuf2oTB3HxiL20clnSPn8g
 sidebar_position: 3
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
   - hybrid-search
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

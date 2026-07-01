@@ -13,15 +13,15 @@ type: docx
 token: SOaOdH3o6o7dsyx1VjPc4LPynqc
 sidebar_position: 10
 keywords: 
-  - Vector Dimension
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - load
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

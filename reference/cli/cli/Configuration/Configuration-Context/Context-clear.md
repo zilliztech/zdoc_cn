@@ -13,15 +13,15 @@ type: docx
 token: TjRGdbrZsol6MHxRLWLcy8Rinbi
 sidebar_position: 1
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - clear
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

@@ -13,15 +13,15 @@ type: docx
 token: Pw8Xd2yoGolKYZxsg1ZcJ0Odnmb
 sidebar_position: 3
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - invoices
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

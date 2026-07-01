@@ -13,15 +13,15 @@ type: docx
 token: Nez2dlNZloLWEPxBHOWcad2anLf
 sidebar_position: 2
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
   - get
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

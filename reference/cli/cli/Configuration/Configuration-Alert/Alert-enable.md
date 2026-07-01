@@ -13,15 +13,15 @@ type: docx
 token: MLrJdT9TdojvcJxhauic8s9anBf
 sidebar_position: 4
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - open source vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud
   - enable
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

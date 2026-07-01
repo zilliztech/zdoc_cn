@@ -13,15 +13,15 @@ type: docx
 token: PgZ0dL39ho6wLbxJKANcm0jyn9b
 sidebar_position: 1
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud
   - compact
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

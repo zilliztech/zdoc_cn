@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to project management. | Cloud"
 type: folder
-token: RMdtf53TElufWpdluDgc5veVnqc
+token: ECvTfFzKElW00pdSugdcqakXnep
 sidebar_position: 7
 sidebar_label: "Project"
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - Project
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

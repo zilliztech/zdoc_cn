@@ -12,15 +12,15 @@ token: CQeKfK0rYlSpjTd0uFlcAZrYnZb
 sidebar_position: 6
 sidebar_label: "Role"
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
   - Role
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

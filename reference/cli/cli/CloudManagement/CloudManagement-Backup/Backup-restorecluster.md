@@ -4,7 +4,7 @@ slug: /cli/cli/Backup-restorecluster
 sidebar_key: cli/Backup-restorecluster
 sidebar_label: "restore-cluster"
 added_since: v0.1.x
-last_modified: false
+last_modified: v1.4.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: XAhudiqXqoHS1zxSDqgcNY9anxb
 sidebar_position: 7
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - restore-cluster
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -54,7 +54,8 @@ zilliz backup restore-cluster
 --project-id <value>
 --name <value>
 --cu-size <value>
---collection-status <LOADED | NOT_LOADED>
+--collection-status <KEEP | RELEASE>
+--restore-version-policy <LATEST | ORIGINAL>
 [--output <value>]
 [--query <value>]
 [--no-header]
@@ -106,7 +107,7 @@ zilliz backup restore-cluster
 
     Indicates the collection state after restoration.
 
-    Possible values: `LOADED` and `NOT_LOADED`.
+    Possible values: `KEEP` and `RELEASE`.
 
 - **--output, -o** (*string*) -
 
@@ -130,6 +131,10 @@ zilliz backup restore-cluster
 
     Indicates a JMESPath expression to filter output.
 
+- **--restore-version-policy** (*string*) -
+
+    Specifies the DB version restore policy. Possible values: `LATEST` and `ORIGINAL`.
+
 ## Example\{#example}
 
 ```bash
@@ -139,5 +144,6 @@ zilliz backup restore-cluster --cluster-id in01-xxxx \
 --project-id proj-xxxx \
 --name restored \
 --cu-size 1 \
---collection-status LOADED
+--collection-status KEEP \
+--restore-version-policy LATEST
 ```

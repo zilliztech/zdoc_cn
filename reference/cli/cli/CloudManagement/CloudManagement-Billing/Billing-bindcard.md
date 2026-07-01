@@ -13,15 +13,15 @@ type: docx
 token: G453dm4ZWo1e0Ux55b3czXwnnId
 sidebar_position: 1
 keywords: 
+  - Vector search
+  - knn algorithm
   - HNSW
   - What is unstructured data
-  - Vector embeddings
-  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - bind-card
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

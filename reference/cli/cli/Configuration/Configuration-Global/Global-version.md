@@ -4,7 +4,7 @@ slug: /cli/cli/Global-version
 sidebar_key: cli/Global-version
 sidebar_label: "version"
 added_since: v0.1.x
-last_modified: false
+last_modified: v1.4.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: MzJHdc3iSoGlKsx4D6TcoY5anOf
 sidebar_position: 1
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - version
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -66,3 +66,7 @@ zilliz version -o json
 # If a newer CLI is available, upgrade guidance is written to stderr:
 # Tips: A new version of zilliz (1.4.2) is available. Run \`zilliz upgrade\` to update.
 ```
+
+## Shell completion\{#shell-completion}
+
+Shell completion is configured automatically on first run and again after each upgrade. The CLI detects installed shells such as Bash, Zsh, Fish, Elvish, and PowerShell, registers completion for both `zilliz` and `zz`, and migrates setups created by the removed `completion install` command.

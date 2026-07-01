@@ -13,15 +13,15 @@ type: docx
 token: QeHdd8MunoG5Krxwpr1cx0Ninwd
 sidebar_position: 2
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - logout
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

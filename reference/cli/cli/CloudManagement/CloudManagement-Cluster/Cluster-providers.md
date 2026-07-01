@@ -13,15 +13,15 @@ type: docx
 token: Rhked7rPvopHixxQZe6czSUwnvf
 sidebar_position: 7
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud
   - providers
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

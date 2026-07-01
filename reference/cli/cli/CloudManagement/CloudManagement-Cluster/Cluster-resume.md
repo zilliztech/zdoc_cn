@@ -13,15 +13,15 @@ type: docx
 token: EfaUd8o9LoguWnx6jndcyTJfnzd
 sidebar_position: 9
 keywords: 
-  - RAG
-  - NLP
-  - Neural Network
-  - Deep Learning
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
   - resume
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

@@ -12,15 +12,15 @@ token: VqTofXsTzlF4nbdugKMcbg0onWd
 sidebar_position: 5
 sidebar_label: "Job"
 keywords: 
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Job
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

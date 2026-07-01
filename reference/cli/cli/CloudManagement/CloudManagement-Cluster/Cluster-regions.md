@@ -13,15 +13,15 @@ type: docx
 token: YHtudYo81oBKruxujL5cw0yZnxd
 sidebar_position: 8
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - regions
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

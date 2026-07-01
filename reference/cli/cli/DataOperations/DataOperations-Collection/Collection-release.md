@@ -13,15 +13,15 @@ type: docx
 token: G0s2d1DVconhc5xeX02cJWbUnLf
 sidebar_position: 12
 keywords: 
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
   - release
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

@@ -13,15 +13,15 @@ type: docx
 token: W7NedO3aXoF3UdxWp51cPe0kn2b
 sidebar_position: 6
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - revoke-role
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

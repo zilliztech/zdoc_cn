@@ -13,15 +13,15 @@ type: docx
 token: YXtHdG865oGg7IxwoZRcIJkQn8e
 sidebar_position: 6
 keywords: 
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
-  - milvus lite
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
   - revoke-privilege
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

@@ -13,15 +13,15 @@ type: docx
 token: ROPbdTU6doxFGRxxcfYcgyBPnqg
 sidebar_position: 6
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - get-load-state
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

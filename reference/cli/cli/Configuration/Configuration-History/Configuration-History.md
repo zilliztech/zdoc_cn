@@ -12,15 +12,15 @@ token: R8pjfCQvPlA4IEdzRUPcc8eAnxc
 sidebar_position: 7
 sidebar_label: "History"
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - History
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

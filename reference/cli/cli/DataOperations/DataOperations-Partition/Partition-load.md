@@ -13,15 +13,15 @@ type: docx
 token: GYyKdrbkvozJxVx6uGhcpMfonoe
 sidebar_position: 6
 keywords: 
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
   - load
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

@@ -13,15 +13,15 @@ type: docx
 token: LrKvdmIVCoeSGfxmyf6cdJ5TnFe
 sidebar_position: 5
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
   - whoami
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

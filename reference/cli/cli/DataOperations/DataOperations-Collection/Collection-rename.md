@@ -13,15 +13,15 @@ type: docx
 token: N1uadJS98ojQhixbOQacLOwknke
 sidebar_position: 13
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - rename
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

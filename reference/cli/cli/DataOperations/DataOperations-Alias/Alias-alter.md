@@ -13,15 +13,15 @@ type: docx
 token: PLvbdUqI6onWmWxFPYKcgcFpnwb
 sidebar_position: 1
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - alter
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

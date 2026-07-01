@@ -13,15 +13,15 @@ type: docx
 token: F01Gdx5b8onjxOxbhficUecWndf
 sidebar_position: 2
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - delete
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

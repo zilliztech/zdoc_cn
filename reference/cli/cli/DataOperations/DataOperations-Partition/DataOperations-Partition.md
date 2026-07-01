@@ -12,15 +12,15 @@ token: Bzxxffu0ClU5hkdrkmlchrXenrb
 sidebar_position: 5
 sidebar_label: "Partition"
 keywords: 
-  - milvus open source
   - how does milvus work
   - Zilliz vector database
   - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
   - Partition
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

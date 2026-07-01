@@ -12,15 +12,15 @@ token: PXOyfwEUtlY8xWdzQ62cXQeenOd
 sidebar_position: 3
 sidebar_label: "Cluster"
 keywords: 
-  - milvus open source
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - Cluster
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

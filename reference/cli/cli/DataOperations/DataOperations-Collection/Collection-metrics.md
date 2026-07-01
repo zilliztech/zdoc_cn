@@ -13,15 +13,15 @@ type: docx
 token: X1rVdVsuHogCohx1CX3cZFaQn1e
 sidebar_position: 11
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - metrics
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

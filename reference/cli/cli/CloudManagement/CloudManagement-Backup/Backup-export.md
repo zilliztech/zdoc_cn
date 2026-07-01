@@ -13,15 +13,15 @@ type: docx
 token: MqCqdE8mqotzaXxk8nfcOvHinX0
 sidebar_position: 5
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - export
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

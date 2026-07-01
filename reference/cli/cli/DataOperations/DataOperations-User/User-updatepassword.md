@@ -13,15 +13,15 @@ type: docx
 token: AB6Hd6NHUoNLXIxgXywc3hmtnjc
 sidebar_position: 7
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - update-password
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

@@ -13,15 +13,15 @@ type: docx
 token: AVX3dxX68oYAc1x06uVc7bgcnx1
 sidebar_position: 3
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
   - disable
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

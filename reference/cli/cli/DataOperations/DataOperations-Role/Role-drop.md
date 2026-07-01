@@ -13,15 +13,15 @@ type: docx
 token: YzVadE24uorV0gx5Se3ceumqnDh
 sidebar_position: 3
 keywords: 
+  - image similarity search
   - Context Window
   - Natural language search
   - Similarity Search
-  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

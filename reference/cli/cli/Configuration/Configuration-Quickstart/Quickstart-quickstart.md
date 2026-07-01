@@ -13,15 +13,15 @@ type: docx
 token: Aio6dbDToo45XdxkSX1cp9tKnkl
 sidebar_position: 1
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
   - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - quickstart
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

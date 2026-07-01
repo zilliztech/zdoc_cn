@@ -12,15 +12,15 @@ token: CLbTfXENAlL9T5dPoG8cmgGPnxP
 sidebar_position: 8
 sidebar_label: "Quickstart"
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud
   - Quickstart
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

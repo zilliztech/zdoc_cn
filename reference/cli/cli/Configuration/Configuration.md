@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to Zilliz CLI configurations | Cloud"
 type: folder
-token: EGSzfJvZplcqb5dWwzkcksiQn5d
+token: DGm8fFP8plvHz5d6sErcKcoLnRh
 sidebar_position: 2
 sidebar_label: "Configuration"
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - Configuration
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

@@ -13,15 +13,15 @@ type: docx
 token: E1lydJB5BorHaExspUKcwQ2ande
 sidebar_position: 2
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - current
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

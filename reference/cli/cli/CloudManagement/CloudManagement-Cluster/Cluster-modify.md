@@ -13,15 +13,15 @@ type: docx
 token: AYlXdnqMKoQOzRxSbWScn0A5nqf
 sidebar_position: 6
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - modify
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---

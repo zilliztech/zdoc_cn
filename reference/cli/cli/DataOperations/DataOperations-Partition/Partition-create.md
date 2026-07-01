@@ -13,15 +13,15 @@ type: docx
 token: JBRhd3cb5owndqxODOxcd08InRe
 sidebar_position: 1
 keywords: 
+  - vector databases comparison
+  - Faiss
   - Video search
   - AI Hallucination
-  - AI Agent
-  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv13
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
