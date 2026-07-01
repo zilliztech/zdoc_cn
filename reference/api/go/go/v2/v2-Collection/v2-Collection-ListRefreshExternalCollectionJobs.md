@@ -13,10 +13,10 @@ type: docx
 token: KTeqdqUI2o3YO1xg3EXcJqGcnbe
 sidebar_position: 26
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud

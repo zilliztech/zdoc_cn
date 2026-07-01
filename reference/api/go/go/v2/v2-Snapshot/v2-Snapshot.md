@@ -12,10 +12,10 @@ token: G4vvf4YHtlwg02d1ZyXcsRCCnud
 sidebar_position: 10
 sidebar_label: "Snapshot"
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud

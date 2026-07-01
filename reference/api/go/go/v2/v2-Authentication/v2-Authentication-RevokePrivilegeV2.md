@@ -13,10 +13,10 @@ type: docx
 token: StUJd0OCho7PKcxWOU7cPNzhn0d
 sidebar_position: 22
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

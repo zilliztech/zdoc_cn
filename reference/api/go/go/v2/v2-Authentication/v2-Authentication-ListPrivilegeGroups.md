@@ -13,10 +13,10 @@ type: docx
 token: H34hdV2rxodn9Pxy2Jyc8sBun9t
 sidebar_position: 14
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

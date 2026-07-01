@@ -12,10 +12,10 @@ token: Bzpgf2nwnlirRodpt9zcacAun7d
 sidebar_position: 5
 sidebar_label: "DataImport"
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

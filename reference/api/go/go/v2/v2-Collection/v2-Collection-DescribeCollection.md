@@ -13,10 +13,10 @@ type: docx
 token: SCP5dY88horVwExBCD2cuSChnZM
 sidebar_position: 11
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

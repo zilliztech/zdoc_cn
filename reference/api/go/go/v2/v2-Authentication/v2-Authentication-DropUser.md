@@ -13,10 +13,10 @@ type: docx
 token: QM8QdP63jofHxkxwxSEcXVXZnKX
 sidebar_position: 10
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud

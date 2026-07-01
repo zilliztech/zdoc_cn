@@ -13,10 +13,10 @@ type: docx
 token: Iz1ZdJDWVo0uoUxQjlPcIbS2nMo
 sidebar_position: 2
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud

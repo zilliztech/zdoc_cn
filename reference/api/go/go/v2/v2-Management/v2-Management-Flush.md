@@ -13,10 +13,10 @@ type: docx
 token: VUaadf505oQMTDx14XgcwJyNnDf
 sidebar_position: 9
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud

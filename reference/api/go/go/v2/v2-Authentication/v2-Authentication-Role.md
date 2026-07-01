@@ -13,10 +13,10 @@ type: docx
 token: MUdZdTFeDoEtcwxBCOycaHyanr7
 sidebar_position: 24
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud

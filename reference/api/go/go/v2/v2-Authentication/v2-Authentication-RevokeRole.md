@@ -13,10 +13,10 @@ type: docx
 token: PKWMdOpDkoIXhFxDsgrc8oQVnIf
 sidebar_position: 23
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud

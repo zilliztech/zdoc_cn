@@ -13,10 +13,10 @@ type: docx
 token: Wyvhd3725onAmAxegk1caOHonQg
 sidebar_position: 15
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud

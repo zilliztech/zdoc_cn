@@ -13,10 +13,10 @@ type: docx
 token: ZG2ndWgIwogyOAxAzH5ciWY3nlb
 sidebar_position: 2
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud

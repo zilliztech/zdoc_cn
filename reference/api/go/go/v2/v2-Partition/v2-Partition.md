@@ -12,10 +12,10 @@ token: EsbCfRCYllSGzXdrs2zcrQWcnHg
 sidebar_position: 7
 sidebar_label: "Partition"
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud

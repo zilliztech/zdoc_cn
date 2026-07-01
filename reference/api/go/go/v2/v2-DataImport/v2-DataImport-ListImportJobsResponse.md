@@ -13,10 +13,10 @@ type: docx
 token: C6WkdFvLuon9i8xlu3FcomiDn0b
 sidebar_position: 9
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

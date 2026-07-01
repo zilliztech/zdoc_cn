@@ -12,10 +12,10 @@ token: P8hMfnsOjlir3rdvsKDcEQG8nCc
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: K6obdWvXyoNLbMxNkggc9JyMnPd
 sidebar_position: 13
 keywords: 
-  - Video deduplication
-  - Video similarity search
   - Vector retrieval
   - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: QKItdAf6HoDzMVxzWEbcDVL9n5r
 sidebar_position: 9
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: EAs8dmRIuoMvW5xXLHdcDw2Gn0d
 sidebar_position: 6
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud

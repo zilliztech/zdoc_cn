@@ -12,10 +12,10 @@ token: Gc1lf2ABblRExId5rTucKTp6n2q
 sidebar_position: 6
 sidebar_label: "Management"
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - what is semantic search
+  - Embedding model
+  - image similarity search
+  - Context Window
   - zilliz
   - zilliz cloud
   - cloud

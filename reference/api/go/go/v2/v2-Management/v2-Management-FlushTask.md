@@ -13,10 +13,10 @@ type: docx
 token: BPXDdgDPzoaDTixPJLncvFZ0nig
 sidebar_position: 10
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: YP0vdMHw9oDlrcxjvg0cihgSnJb
 sidebar_position: 3
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: IPv6dB9pdoGXeRxdoL4c70pWnmg
 sidebar_position: 17
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud

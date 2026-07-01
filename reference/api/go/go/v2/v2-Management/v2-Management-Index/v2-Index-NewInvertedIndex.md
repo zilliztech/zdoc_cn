@@ -13,10 +13,10 @@ type: docx
 token: TxKwd5bEqoHUuLxqENic3Uv6nhg
 sidebar_position: 14
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud

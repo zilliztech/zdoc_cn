@@ -13,10 +13,10 @@ type: docx
 token: Du2ZdjCWIorDg4xdwercNnYgnJb
 sidebar_position: 23
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
   - zilliz
   - zilliz cloud
   - cloud

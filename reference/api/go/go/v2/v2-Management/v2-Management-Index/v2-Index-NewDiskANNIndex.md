@@ -13,10 +13,10 @@ type: docx
 token: HWG7dWY6XoKyapx5L5Mc69kLnld
 sidebar_position: 6
 keywords: 
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
   - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud

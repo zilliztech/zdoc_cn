@@ -13,10 +13,10 @@ type: docx
 token: JTQrddtCJoJBjwxrKZrcn1lPnEe
 sidebar_position: 23
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - rag llm architecture
+  - private llms
+  - nn search
+  - llm eval
   - zilliz
   - zilliz cloud
   - cloud

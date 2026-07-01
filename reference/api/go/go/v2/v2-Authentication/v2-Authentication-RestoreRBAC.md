@@ -13,10 +13,10 @@ type: docx
 token: YYvkdK6o5ovGGsxVyEtcEGXnn6b
 sidebar_position: 20
 keywords: 
-  - Vector search
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud

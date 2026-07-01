@@ -13,10 +13,10 @@ type: docx
 token: GbIAdIuWsoumzoxHWpOcVjVbnle
 sidebar_position: 8
 keywords: 
+  - Vector store
   - open source vector database
   - Vector index
   - vector database open source
-  - open source vector db
   - zilliz
   - zilliz cloud
   - cloud

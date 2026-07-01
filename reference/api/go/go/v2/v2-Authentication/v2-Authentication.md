@@ -12,10 +12,10 @@ token: MINQfdgeRlnbDzd1ofucUJDsnuW
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud

@@ -13,10 +13,10 @@ type: docx
 token: P84bd17ncosvh4xuahpcFGzoneb
 sidebar_position: 8
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - open source vector db
+  - vector database example
+  - rag vector database
+  - what is vector db
   - zilliz
   - zilliz cloud
   - cloud

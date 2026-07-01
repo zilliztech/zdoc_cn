@@ -13,10 +13,10 @@ type: docx
 token: CBg7dbZZ7oxxvJx1eV4cJXWGnbe
 sidebar_position: 7
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
   - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

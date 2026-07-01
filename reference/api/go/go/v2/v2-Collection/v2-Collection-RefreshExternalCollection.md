@@ -13,10 +13,10 @@ type: docx
 token: Mw42dp2VZoN4gFxdiSYcxDB8n0g
 sidebar_position: 27
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

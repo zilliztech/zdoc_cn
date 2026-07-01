@@ -13,10 +13,10 @@ type: docx
 token: DPcJdZceFoes0sxeRVKcKhaunq9
 sidebar_position: 15
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
   - zilliz
   - zilliz cloud
   - cloud

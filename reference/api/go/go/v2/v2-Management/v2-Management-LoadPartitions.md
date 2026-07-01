@@ -13,10 +13,10 @@ type: docx
 token: LMXGdDnueontIFxuqAIcS8D6nJc
 sidebar_position: 19
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud

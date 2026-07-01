@@ -13,10 +13,10 @@ type: docx
 token: GLdddi5uboT02bxj6cdc1FG2nvd
 sidebar_position: 9
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud

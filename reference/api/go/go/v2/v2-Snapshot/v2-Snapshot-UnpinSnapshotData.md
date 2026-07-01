@@ -13,10 +13,10 @@ type: docx
 token: NgKmd79aSob0ruxRuUEcZba7nge
 sidebar_position: 9
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud

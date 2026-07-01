@@ -13,10 +13,10 @@ type: docx
 token: Xq9Ydn3OJoYrHmxMVOLcMn9onHc
 sidebar_position: 16
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

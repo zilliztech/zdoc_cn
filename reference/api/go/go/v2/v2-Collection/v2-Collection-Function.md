@@ -13,10 +13,10 @@ type: docx
 token: G4dTdejt8otbQWxUqvucwKnBnYg
 sidebar_position: 17
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud

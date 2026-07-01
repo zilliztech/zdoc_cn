@@ -13,10 +13,10 @@ type: docx
 token: LBTLd1W4UoAbUHxvv6xce1gHnqf
 sidebar_position: 13
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

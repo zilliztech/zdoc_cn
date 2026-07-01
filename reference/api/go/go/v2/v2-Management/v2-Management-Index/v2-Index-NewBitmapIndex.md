@@ -13,10 +13,10 @@ type: docx
 token: EhzHdkYfUoOsprxhtPNcmMPKnEc
 sidebar_position: 5
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
+  - Embedding model
   - zilliz
   - zilliz cloud
   - cloud

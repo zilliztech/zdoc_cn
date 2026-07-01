@@ -13,10 +13,10 @@ type: docx
 token: Cased8tfhoZ25Sx4VALcy4gZnbh
 sidebar_position: 4
 keywords: 
+  - k nearest neighbor algorithm
+  - ANNS
   - Vector search
   - knn algorithm
-  - HNSW
-  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
