@@ -8,7 +8,7 @@ last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "# search()\{#search} | Java | v2"
+description: "This operation conducts a vector similarity search with an optional scalar filtering expression."
 type: docx
 token: ANw4d8gGEo46B4xxde3cC0xqndf
 sidebar_position: 7
@@ -30,8 +30,6 @@ import Admonition from '@theme/Admonition';
 
 
 # search()
-
-# search()\{#search}
 
 This operation conducts a vector similarity search with an optional scalar filtering expression.
 

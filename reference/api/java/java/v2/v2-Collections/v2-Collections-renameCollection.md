@@ -8,7 +8,7 @@ last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "# renameCollection()\{#renamecollection} | Java | v2"
+description: "This operation renames an existing collection."
 type: docx
 token: U7Ipdm0FTo8FCVxaxbZcwMygnWd
 sidebar_position: 21
@@ -30,8 +30,6 @@ import Admonition from '@theme/Admonition';
 
 
 # renameCollection()
-
-# renameCollection()\{#renamecollection}
 
 This operation renames an existing collection.
 

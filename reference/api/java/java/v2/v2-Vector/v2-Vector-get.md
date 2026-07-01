@@ -87,11 +87,11 @@ A **GetResp** object representing one or more queried entities.
 
 **PARAMETERS:**
 
-- **getResults** (*List\\\\<QueryResp.QueryResult\\\\>*)
+- **getResults** (*List&lt;QueryResp.QueryResult&gt;*)
 
     A list of **QueryResp.QueryResult** objects.
 
-- **fields** (*Map\\\\<String,Object\\\\>*)
+- **fields** (*Map&lt;String,Object&gt;*)
 
     A map that contains key-value pairs of field names and their values.
 
@@ -101,7 +101,7 @@ A **GetResp** object representing one or more queried entities.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example{#example}
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

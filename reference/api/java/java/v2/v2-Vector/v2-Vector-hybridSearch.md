@@ -8,7 +8,7 @@ last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "# hybridSearch()\{#hybridsearch} | Java | v2"
+description: "This operation performs multi-vector search on a collection and returns search results after reranking."
 type: docx
 token: R1NDdFPnVo4wTuxvHjFcozc8nMa
 sidebar_position: 3
@@ -30,8 +30,6 @@ import Admonition from '@theme/Admonition';
 
 
 # hybridSearch()
-
-# hybridSearch()\{#hybridsearch}
 
 This operation performs multi-vector search on a collection and returns search results after reranking.
 

@@ -8,7 +8,7 @@ last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "# query()\{#query} | Java | v2"
+description: "This operation conducts a scalar filtering with a specified boolean expression."
 type: docx
 token: U7eQdBzB0opJOXxRUcncnRDInSf
 sidebar_position: 5
@@ -30,8 +30,6 @@ import Admonition from '@theme/Admonition';
 
 
 # query()
-
-# query()\{#query}
 
 This operation conducts a scalar filtering with a specified boolean expression.
 

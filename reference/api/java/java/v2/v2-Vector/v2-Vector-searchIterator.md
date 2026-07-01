@@ -8,7 +8,7 @@ last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "# searchIterator()\{#searchiterator} | Java | v2"
+description: "This method returns a search iterator to iterate search results."
 type: docx
 token: X7Ybdk6yRoVRPZxeHklct1i2n8c
 sidebar_position: 8
@@ -30,8 +30,6 @@ import Admonition from '@theme/Admonition';
 
 
 # searchIterator()
-
-# searchIterator()\{#searchiterator}
 
 This method returns a search iterator to iterate search results.
 
