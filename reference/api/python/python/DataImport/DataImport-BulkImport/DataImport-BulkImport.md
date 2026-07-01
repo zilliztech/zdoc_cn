@@ -12,10 +12,10 @@ token: KpOtfu1TplkyiadlfQxcTa5vnFe
 sidebar_position: 2
 sidebar_label: "BulkImport"
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud

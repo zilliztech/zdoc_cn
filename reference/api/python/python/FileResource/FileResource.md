@@ -12,10 +12,10 @@ token: PWyVfD7HUl1x3ydji7RcraKin1g
 sidebar_position: 2
 sidebar_label: "FileResource"
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

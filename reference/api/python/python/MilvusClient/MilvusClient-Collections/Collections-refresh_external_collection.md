@@ -13,10 +13,10 @@ type: docx
 token: ZVs4dDpvmoXI0OxOnKhc9numnJd
 sidebar_position: 29
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud

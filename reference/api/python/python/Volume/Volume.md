@@ -12,10 +12,10 @@ token: Ih8RfZaaqlEGsudD31DcOpwvn2b
 sidebar_position: 7
 sidebar_label: "Volume"
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud

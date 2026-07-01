@@ -4,7 +4,7 @@ slug: /python/python/utility-create_user
 sidebar_key: python/utility-create_user
 sidebar_label: "create_user()"
 added_since: Inherit
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
@@ -13,10 +13,10 @@ type: docx
 token: N44ndTSrgoEBx7xCID5cXRS7n1c
 sidebar_position: 5
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud

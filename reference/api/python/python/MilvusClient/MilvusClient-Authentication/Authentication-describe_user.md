@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This operation describes a specific user. | Python | MilvusClient"
 type: docx
-token: Wz3HdtvPCoEquvxFY7PcDHxcnEe
+token: TwTnduPOioywHDx8hPQc80tRnKg
 sidebar_position: 6
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud

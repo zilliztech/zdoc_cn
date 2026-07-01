@@ -13,10 +13,10 @@ type: docx
 token: RSOkdriHRoRd8ixyVZOch1l9nDd
 sidebar_position: 9
 keywords: 
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud

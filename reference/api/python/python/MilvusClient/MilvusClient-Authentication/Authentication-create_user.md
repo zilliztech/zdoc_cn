@@ -10,13 +10,13 @@ beta: false
 notebook: false
 description: "This operation creates a user. | Python | MilvusClient"
 type: docx
-token: BDupd28JqoNY9HxVOTfcv86enRe
+token: EglSdm1jkozDSlxq6SEc4CRonVe
 sidebar_position: 4
 keywords: 
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

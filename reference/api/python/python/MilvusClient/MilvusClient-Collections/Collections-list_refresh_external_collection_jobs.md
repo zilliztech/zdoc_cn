@@ -13,10 +13,10 @@ type: docx
 token: VkBFdLHwao9hVMxzRurcBYIynFh
 sidebar_position: 28
 keywords: 
-  - what is milvus
-  - milvus database
-  - milvus lite
-  - milvus benchmark
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud

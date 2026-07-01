@@ -13,10 +13,10 @@ type: docx
 token: G31wdmzVFo687JxZTAGctQlKnir
 sidebar_position: 19
 keywords: 
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
   - zilliz
   - zilliz cloud
   - cloud

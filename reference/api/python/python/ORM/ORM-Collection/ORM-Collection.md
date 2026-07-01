@@ -13,10 +13,10 @@ type: docx
 token: OSehdj15Ao3AUvxOIJucXzU8nWW
 sidebar_position: 1
 keywords: 
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud

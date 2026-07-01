@@ -13,10 +13,10 @@ type: docx
 token: HVwRdVSbAo2jUexpxmdczdqPnzh
 sidebar_position: 1
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
@@ -162,7 +162,7 @@ resp = bulk_import(
     project_id="proj-xxx",
     region_id="ali-cn-hangzhou",
     collection_name="book_catalog",
-    object_urls=[
+    files=[
         ["s3://demo-bucket/books/part-0001.parquet"],
         ["s3://demo-bucket/books/part-0002.parquet"],
     ],
@@ -172,3 +172,25 @@ resp = bulk_import(
 
 print(resp.json())
 ```
+
+<include  target="milvus">
+
+```python
+from pymilvus.bulk_writer import bulk_import
+
+resp = bulk_import(
+    url="https://YOUR_CLUSTER_ENDPOINT",
+    api_key="username:password", # replace this with your actual credentials
+    collection_name="book_catalog",
+    files=[
+        ["s3://demo-bucket/books/part-0001.parquet"],
+        ["s3://demo-bucket/books/part-0002.parquet"],
+    ],
+    access_key="AKIA...",
+    secret_key="SECRET...",
+)
+
+print(resp.json())
+```
+
+</include>

@@ -13,10 +13,10 @@ type: docx
 token: G5c6dxWkno5FRAxeDMycR6AVntf
 sidebar_position: 5
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud

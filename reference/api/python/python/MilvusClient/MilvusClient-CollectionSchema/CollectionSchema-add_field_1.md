@@ -13,10 +13,10 @@ type: docx
 token: N3Fbd0ZZVoFo8DxJ9r8cNgcCnOd
 sidebar_position: 1
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
@@ -79,6 +79,8 @@ add_field(
 
         - **DataType.VARCHAR**,
 
+        - **DataType.TEXT**
+
     - Composite fields: Choose from a variety of options, including 
 
         - **DataType.JSON**
@@ -105,7 +107,7 @@ add_field(
 
     The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: [1, 65,535].
 
-    This is mandatory for a **DataType.VARCHAR** field.
+    This is mandatory for a DataType.VARCHAR field. Omit this parameter for a DataType.TEXT field.
 
 - **element_type** (*str*) -
 
@@ -182,6 +184,13 @@ schema.add_field(
 schema.add_field(
     field_name="scalar_01",
     datatype=DataType.INT32
+)
+
+# Add a TEXT field for long source content
+schema.add_field(
+    field_name="content",
+    datatype=DataType.TEXT,
+    enable_analyzer=True
 )
 
 # {

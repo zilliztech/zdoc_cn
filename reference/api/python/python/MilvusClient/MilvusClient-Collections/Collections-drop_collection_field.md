@@ -13,10 +13,10 @@ type: docx
 token: SpmqdHRBjoRKQuxTibQcx0zMnnb
 sidebar_position: 26
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud

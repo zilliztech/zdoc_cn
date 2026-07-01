@@ -8,15 +8,15 @@ last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "- regionid (str) - | Python"
+description: "This function lists bulk import jobs with optional collection and pagination filters, including project/region filters for project databases. | Python"
 type: docx
 token: N13hd7jVjoA6B1xlgwic2GKRn5f
 sidebar_position: 3
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud
@@ -30,10 +30,6 @@ import Admonition from '@theme/Admonition';
 
 
 # list_import_jobs()
-
-- **region_id** (*str*) -
-
-    Region ID for project-database job listing.
 
 This function lists bulk import jobs with optional collection and pagination filters, including project/region filters for project databases.
 
@@ -50,6 +46,10 @@ list_import_jobs(
     api_key: str = "",
     page_size: int = 10,
     current_page: int = 1,
+    
+    project_id: str = "",
+    region_id: str = "",
+    
     verify: bool | str = True,
     cert: str | tuple | None = None,
     **kwargs,
@@ -87,6 +87,18 @@ list_import_jobs(
 - **current_page** (*int*) -
 
     Page number to query.
+
+- **project_id** (*str*) -
+
+    A valid Zilliz Cloud project ID. 
+
+    This applies when you bulk import into a database for on-demand compute.
+
+- **region_id** (*str*) -
+
+    A valid Zilliz Cloud region ID.
+
+    This applies when you bulk import into a database for on-demand compute.
 
 - **verify** (*bool | str*) -
 
@@ -130,3 +142,4 @@ resp = list_import_jobs(
 
 print(resp.json())
 ```
+
