@@ -13,10 +13,10 @@ type: docx
 token: ByKKdHVcAojjyZxKK3PciOTVnQg
 sidebar_position: 23
 keywords: 
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud

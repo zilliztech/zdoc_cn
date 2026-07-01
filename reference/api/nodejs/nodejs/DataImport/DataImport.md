@@ -9,13 +9,13 @@ deprecate_since: false
 description: "Method related to data imports. | Node.js"
 type: folder
 token: OE6ef37Ztlb6FgdouLvcTcrpnAp
-sidebar_position: 9
+sidebar_position: 4
 sidebar_label: "Data Import"
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud

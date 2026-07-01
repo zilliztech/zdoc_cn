@@ -11,12 +11,12 @@ notebook: false
 description: "This operation checks the progress of a refresh job for an external collection. Use the jobid returned by refreshExternalCollection(). | Node.js"
 type: docx
 token: E7pZd2Yfzolgiyxcvz8cSFfKnoc
-sidebar_position: 32
+sidebar_position: 29
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud

@@ -11,12 +11,12 @@ notebook: false
 description: "This operation lists all refresh jobs for external collections. You can filter by collection name and database name. | Node.js"
 type: docx
 token: AG5zdQCpXoy11MxWgD0ciYBRnJb
-sidebar_position: 34
+sidebar_position: 30
 keywords: 
-  - Video search
-  - AI Hallucination
   - AI Agent
   - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud

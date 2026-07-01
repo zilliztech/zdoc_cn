@@ -13,10 +13,10 @@ type: docx
 token: Pyh3dttWKoBqcBx8FGhcArhAnqg
 sidebar_position: 6
 keywords: 
+  - vector database
   - IVF
   - knn
   - Image Search
-  - LLMs
   - zilliz
   - zilliz cloud
   - cloud

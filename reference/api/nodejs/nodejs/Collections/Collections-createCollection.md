@@ -13,10 +13,10 @@ type: docx
 token: KPZZd2TiAodSeWxUdlJciHGcnbg
 sidebar_position: 5
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
@@ -34,7 +34,7 @@ import Admonition from '@theme/Admonition';
 This operation creates a collection either with default or customized settings. 
 
 ```javascript
-await milvusClient.createCollection(data)
+createCollection(data): Promise<ResStatus>
 ```
 
 ## Request Syntax\{#request-syntax}
@@ -46,7 +46,7 @@ This method has the following alternatives.
 Using this request body, you can create a collection by simply setting the collection name and dimension of the vector field.
 
 ```javascript
-await milvusClient.createCollection({
+milvusClient.createCollection({
     db_name?: string
     collection_name: string;
     dimension: number;
@@ -60,10 +60,6 @@ await milvusClient.createCollection({
     primary_field_name?: string;
     vector_field_name?: string;
     timeout?: number;
-    external_source?: string;
-    external_spec?: string;
-    do_physical_backfill?: boolean;
-    file_source_ids?: Array<number | string>;
  })
 ```
 
@@ -141,28 +137,12 @@ await milvusClient.createCollection({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-- **external_source** (*string*) -
-
-    The external source path. This applies to the creation of external collections.
-
-- **external_spec** (*string*) -
-
-    The external spec configuration. This applies to the creation of external collections.
-
-- **do_physical_backfill** (*boolean*) -
-
-    Whether to physically backfill external data. This applies to the creation of external collections.
-
-- **file_resource_ids** (*Array&lt;number | string>*) -
-
-    The external file resource IDs. This applies to the creation of external collections.
-
 ### With CreateCollectionReq\{#with-createcollectionreq}
 
 Using this request body, you can customize the schema settings of the collection.
 
 ```javascript
-await milvusClient.createCollection({
+milvusClient.createCollection({
    db_name?: string,
    collection_name: string,
    consistency_level: number | string,
@@ -184,7 +164,6 @@ await milvusClient.createCollection({
          analyzer_params: Record<String, any>,
          enable_analyzer: boolean,
          enable_match: boolean,
-         multi_analyzer_params: Record<String, any>,
          'mmap.enabled': boolean
        },
        autoID?: boolean,
@@ -207,11 +186,7 @@ await milvusClient.createCollection({
    shards_num?: number,
    properties?: Properties,
    timeout?: number,
-   external_source?: string;
-   external_spec?: string;
-   do_physical_backfill?: boolean;
-   file_source_ids?: Array<number | string>;
-})
+ })
 ```
 
 **PARAMETERS:**
@@ -260,7 +235,7 @@ await milvusClient.createCollection({
 
     - **data_type** (*string)* -
 
-        The data type of the field. For an enumeration of all available data types, please see [DataType](./Collections-DataType).
+        The data type of the field. For an enumeration of all available data types, please see DataType.
 
     - **description** (*string)* -
 
@@ -346,27 +321,6 @@ await milvusClient.createCollection({
                 - `filter` (*list*) -
 
                     Lists filters to refine tokens produced by the tokenizer, with options for built-in filters and custom filters. For more information, refer to [Alphanumonly Filter](https://milvus.io/docs/alphanumonly-filer.md) and others.
-
-        - **multi_analyzer_params** (*object*) -
-
-            Configures multiple analyzers for text processing. The value of this parameter is a single JSON object that determines how Milvus selects the appropriate analyzer for each entity:
-
-            ```javascript
-            const multi_analyzer_params = {
-              // Define language-specific analyzers
-              // Each analyzer follows this format: <analyzer_name>: <analyzer_params>
-              "analyzers": {
-                "english": {"type": "english"},          // English-optimized analyzer
-                "chinese": {"type": "chinese"},          // Chinese-optimized analyzer
-                "default": {"tokenizer": "icu"}          // Required fallback analyzer
-              },
-              "by_field": "language",                    // Field determining analyzer selection
-              "alias": {
-                "cn": "chinese",                         // Use "cn" as shorthand for Chinese
-                "en": "english"                          // Use "en" as shorthand for English
-              }
-            }
-            ```
 
     - **autoID** (*boolean)* -
 
@@ -476,28 +430,12 @@ await milvusClient.createCollection({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-- **external_source** (*string*) -
-
-    The external source path. This applies to the creation of external collections.
-
-- **external_spec** (*string*) -
-
-    The external spec configuration. This applies to the creation of external collections.
-
-- **do_physical_backfill** (*boolean*) -
-
-    Whether to physically backfill external data. This applies to the creation of external collections.
-
-- **file_resource_ids** (*Array&lt;number | string>*) -
-
-    The external file resource IDs. This applies to the creation of external collections.
-
 ### With CreateCollectionWithSchemaAndIndexParamsReq\{#with-createcollectionwithschemaandindexparamsreq}
 
 Using this request body, you can customize the schema and index settings of the collection. Upon creation, the collection is automatically loaded.
 
 ```javascript
-await milvusClient.createCollection({
+milvusClient.createCollection({
    db_name?: string,
    collection_name: string,
    consistency_level: number | string,
@@ -519,7 +457,6 @@ await milvusClient.createCollection({
          analyzer_params: Record<String, any>,
          enable_analyzer: boolean,
          enable_match: boolean,
-         multi_analyzer_params: Record<String, any>,
          'mmap.enabled': boolean
        },
        nullable: boolean,
@@ -599,7 +536,7 @@ await milvusClient.createCollection({
 
     - **data_type** (*string)* -
 
-        The data type of the field. For an enumeration of all available data types, please see [DataType](./Collections-DataType).
+        The data type of the field. For an enumeration of all available data types, please see DataType.
 
     - **description** (*string)* -
 
@@ -684,27 +621,6 @@ await milvusClient.createCollection({
 
                     Lists filters to refine tokens produced by the tokenizer, with options for built-in filters and custom filters. For more information, refer to [Alphanumonly Filter](https://milvus.io/docs/alphanumonly-filer.md) and others.
 
-        - **multi_analyzer_params** (*object*) -
-
-            Configures multiple analyzers for text processing. The value of this parameter is a single JSON object that determines how Milvus selects the appropriate analyzer for each entity:
-
-            ```javascript
-            const multi_analyzer_params = {
-              // Define language-specific analyzers
-              // Each analyzer follows this format: <analyzer_name>: <analyzer_params>
-              "analyzers": {
-                "english": {"type": "english"},          // English-optimized analyzer
-                "chinese": {"type": "chinese"},          // Chinese-optimized analyzer
-                "default": {"tokenizer": "icu"}          // Required fallback analyzer
-              },
-              "by_field": "language",                    // Field determining analyzer selection
-              "alias": {
-                "cn": "chinese",                         // Use "cn" as shorthand for Chinese
-                "en": "english"                          // Use "en" as shorthand for English
-              }
-            }
-            ```
-
     - **autoID** (*boolean)* -
 
         Whether the primary field automatically increments upon data insertions into this collection.
@@ -721,7 +637,7 @@ await milvusClient.createCollection({
 
         For more information, refer to [Nullable & Default](https://milvus.io/docs/nullable-and-default.md).
 
-    - **default_value** (*[DataType](./Collections-DataType)*)
+    - **default_value** (*DataType*)
 
         Sets a default value for a specific field in a collection schema when creating it. This is particularly useful when you want certain fields to have an initial value even if no value is explicitly provided during data insertion.
 
@@ -837,22 +753,6 @@ await milvusClient.createCollection({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-- **external_source** (*string*) -
-
-    The external source path. This applies to the creation of external collections.
-
-- **external_spec** (*string*) -
-
-    The external spec configuration. This applies to the creation of external collections.
-
-- **do_physical_backfill** (*boolean*) -
-
-    Whether to physically backfill external data. This applies to the creation of external collections.
-
-- **file_resource_ids** (*Array&lt;number | string>*) -
-
-    The external file resource IDs. This applies to the creation of external collections.
-
 **RETURNS** *Promise\<ResStatus>*
 
 This method returns a promise that resolves to a **ResStatus** object.
@@ -882,10 +782,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 ## Example\{#example}
 
 ```java
-const milvusClient = new MilvusClient({
-    address: 'YOUR_CLUSTER_ENDPOINT',
-    token: 'YOUR_CLUSTER_TOKEN',
-});
+const milvusClient = new milvusClient(MILUVS_ADDRESS);
  const resStatus = await milvusClient.createCollection({
    collection_name: 'my_collection',
    fields: [

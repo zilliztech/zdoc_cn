@@ -12,10 +12,10 @@ token: IxaefGzWtlPFlTd617bcYS4cn4d
 sidebar_position: 10
 sidebar_label: "Snapshot"
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud

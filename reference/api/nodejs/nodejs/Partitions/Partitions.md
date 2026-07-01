@@ -9,13 +9,13 @@ deprecate_since: false
 description: "Methods related to the manipulation of the partitions in a collection. | Node.js"
 type: folder
 token: Hg5PfTIHll3FK4dbYdxcaURHn2n
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: "Partitions"
 keywords: 
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud

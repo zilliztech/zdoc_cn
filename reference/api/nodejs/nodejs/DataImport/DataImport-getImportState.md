@@ -3,7 +3,7 @@ title: "getImportState() | Node.js"
 slug: /node/node/DataImport-getImportState
 sidebar_key: node/DataImport-getImportState
 sidebar_label: "getImportState()"
-added_since: v3.0.x
+added_since: v2.6.12
 last_modified: v3.0.x
 deprecate_since: false
 beta: false
@@ -11,12 +11,12 @@ notebook: false
 description: "This operation retrieves the current state and metadata of a specific import task. Use this to poll for completion after calling `bulkInsert()`. | Node.js"
 type: docx
 token: DJ4NdIIQ4oeA7gx4bDQcxT3gn0c
-sidebar_position: 2
+sidebar_position: 17
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud

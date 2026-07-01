@@ -11,12 +11,12 @@ notebook: false
 description: "This operation triggers a data refresh for an external collection. Use this when the external data source has been updated and you want Milvus to reload the data. | Node.js"
 type: docx
 token: JoiWdRIFcojRI4xVXnCclEoVnh2
-sidebar_position: 38
+sidebar_position: 31
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud

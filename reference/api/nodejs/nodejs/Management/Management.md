@@ -9,13 +9,13 @@ deprecate_since: false
 description: "Methods for you to index, load, and release a collection. | Node.js"
 type: folder
 token: E5cpfv4EPlpWJ5dV0iJcPwo4nyf
-sidebar_position: 5
+sidebar_position: 6
 sidebar_label: "Management"
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud

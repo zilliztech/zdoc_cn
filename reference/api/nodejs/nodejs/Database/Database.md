@@ -9,13 +9,13 @@ deprecate_since: false
 description: "Methods reMethods for you to manage database. | Node.js"
 type: folder
 token: F0ZXfs6XSlspHxdg7DwcYb84nMf
-sidebar_position: 4
+sidebar_position: 5
 sidebar_label: "Database"
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud

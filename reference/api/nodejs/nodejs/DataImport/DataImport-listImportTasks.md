@@ -3,7 +3,7 @@ title: "listImportTasks() | Node.js"
 slug: /node/node/DataImport-listImportTasks
 sidebar_key: node/DataImport-listImportTasks
 sidebar_label: "listImportTasks()"
-added_since: v2.6.x
+added_since: inherit
 last_modified: v3.0.x
 deprecate_since: false
 beta: false
@@ -11,12 +11,12 @@ notebook: false
 description: "List import tasks for a collection, showing the status and details of bulk import operations. | Node.js"
 type: docx
 token: KX8pd5PnGoo8UAx8QhhcI5YpnHg
-sidebar_position: 3
+sidebar_position: 15
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud

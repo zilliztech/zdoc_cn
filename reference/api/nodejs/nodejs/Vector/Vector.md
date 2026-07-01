@@ -9,13 +9,13 @@ deprecate_since: false
 description: "Methods related to CRUD operations within a collection. | Node.js"
 type: folder
 token: HgpMfqiBwlO0sudMbiVcYpHHn5f
-sidebar_position: 7
+sidebar_position: 8
 sidebar_label: "Vector"
 keywords: 
-  - vector database open source
-  - open source vector db
-  - vector database example
-  - rag vector database
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud

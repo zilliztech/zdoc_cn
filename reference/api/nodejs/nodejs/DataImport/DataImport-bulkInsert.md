@@ -3,7 +3,7 @@ title: "bulkInsert() | Node.js"
 slug: /node/node/DataImport-bulkInsert
 sidebar_key: node/DataImport-bulkInsert
 sidebar_label: "bulkInsert()"
-added_since: v2.5.x
+added_since: inherit
 last_modified: v3.0.x
 deprecate_since: false
 beta: false
@@ -11,12 +11,12 @@ notebook: false
 description: "This operation imports the data from a specified data file into Milvus. | Node.js"
 type: docx
 token: V65MdZWnsoMwpfxkt0sc5qQPnbb
-sidebar_position: 1
+sidebar_position: 9
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud

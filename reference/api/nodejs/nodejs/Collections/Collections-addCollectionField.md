@@ -13,10 +13,10 @@ type: docx
 token: BKqIdIm0cop2s0xYjtQcSZL5nth
 sidebar_position: 19
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud

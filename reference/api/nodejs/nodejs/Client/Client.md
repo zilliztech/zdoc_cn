@@ -12,10 +12,10 @@ token: DNpsf7mK9l2ruTdk4fCcwoudnFe
 sidebar_position: 2
 sidebar_label: "Client"
 keywords: 
+  - ANN Search
+  - What are vector embeddings
   - vector database tutorial
   - how do vector databases work
-  - vector db comparison
-  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
