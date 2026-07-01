@@ -4,17 +4,17 @@ const os = require('node:os')
 const path = require('node:path')
 const RefGen = require('./refGen')
 
-function withTempDir(callback) {
+async function withTempDir(callback) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'apifox-refgen-lang-filter-'))
   try {
-    callback(dir)
+    await callback(dir)
   } finally {
     fs.rmSync(dir, { recursive: true, force: true })
   }
 }
 
-function testOperationWithIncludeLangExcludesZhCnOutput() {
-  withTempDir(targetPath => {
+async function testOperationWithIncludeLangExcludesZhCnOutput() {
+  await withTempDir(async targetPath => {
     const spec = {
       openapi: '3.0.1',
       info: { title: 'test', version: '1.0.0' },
@@ -74,7 +74,7 @@ function testOperationWithIncludeLangExcludesZhCnOutput() {
     })
 
     refGen.make_groups()
-    refGen.write_refs()
+    await refGen.write_refs()
 
     const filePath = path.join(
       targetPath,
@@ -88,8 +88,8 @@ function testOperationWithIncludeLangExcludesZhCnOutput() {
   })
 }
 
-function testGlobalClustersGenerateUnderControlPlane() {
-  withTempDir(targetPath => {
+async function testGlobalClustersGenerateUnderControlPlane() {
+  await withTempDir(async targetPath => {
     const spec = {
       openapi: '3.0.1',
       info: { title: 'test', version: '1.0.0' },
@@ -155,7 +155,7 @@ function testGlobalClustersGenerateUnderControlPlane() {
     })
 
     refGen.make_groups()
-    refGen.write_refs()
+    await refGen.write_refs()
 
     const controlPlanePath = path.join(
       targetPath,
@@ -177,8 +177,8 @@ function testGlobalClustersGenerateUnderControlPlane() {
   })
 }
 
-function testSidebarCustomPropsUsesBlockYaml() {
-  withTempDir(targetPath => {
+async function testSidebarCustomPropsUsesBlockYaml() {
+  await withTempDir(async targetPath => {
     const spec = {
       openapi: '3.0.1',
       info: { title: 'test', version: '1.0.0' },
@@ -232,7 +232,7 @@ function testSidebarCustomPropsUsesBlockYaml() {
     })
 
     refGen.make_groups()
-    refGen.write_refs()
+    await refGen.write_refs()
 
     const filePath = path.join(
       targetPath,
@@ -248,10 +248,10 @@ function testSidebarCustomPropsUsesBlockYaml() {
   })
 }
 
-function run() {
-  testOperationWithIncludeLangExcludesZhCnOutput()
-  testGlobalClustersGenerateUnderControlPlane()
-  testSidebarCustomPropsUsesBlockYaml()
+async function run() {
+  await testOperationWithIncludeLangExcludesZhCnOutput()
+  await testGlobalClustersGenerateUnderControlPlane()
+  await testSidebarCustomPropsUsesBlockYaml()
   console.log('apifox refGen lang filter tests passed')
 }
 
