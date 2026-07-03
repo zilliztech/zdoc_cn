@@ -104,6 +104,88 @@ import Admonition from '@theme/Admonition';
 
 下表对比了不同项目角色的权限差异。
 
+**按需计算**
+
+<table>
+    <tr>
+        <th><p>操作</p></th>
+        <th><p>项目管理员</p></th>
+        <th><p>集群管理员</p></th>
+        <th><p>项目读写</p></th>
+        <th><p>项目只读</p></th>
+    </tr>
+    <tr>
+        <td><p>创建按需计算集群</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>查看按需计算集群列表和详情</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+    </tr>
+    <tr>
+        <td><p>修改、重命名或删除按需计算集群</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>创建按需计算 Database</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>查看按需计算 Database 列表</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>删除按需计算 Database</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>在按需计算 Database 中创建或删除 Collection</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>向按需计算 Database 中的 Collection 导入数据</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>通过按需计算集群执行 Query、Search 或 Get</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+    </tr>
+    <tr>
+        <td><p>创建 Managed Volume 或 External Volume</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+</table>
+
 **集群操作**
 
 <table>
