@@ -260,11 +260,9 @@ Shard 的数量上限取决于 CU 规格。
 
 <table>
    <tr>
-     <th></th>
      <th><p><strong>Insert 和 Upsert 最大速率限制</strong></p></th>
    </tr>
    <tr>
-     <td></td>
      <td><p>16 MB/s + 1 MB/s × CU</p><p>最高不超过 256 MB/s。</p></td>
    </tr>
 </table>
@@ -407,4 +405,19 @@ Shard 的数量上限取决于 CU 规格。
 ## 迁移\{#migrations}
 
 您可以将数据从其他供应商迁移到您的 Zilliz Cloud 集群，每次迁移的最大集合数量会因您的 Zilliz Cloud 集群而异。每次迁移最多可以迁移 **10** 个 Collection。
+
+## Private Endpoint\{#private-endpoint}
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Private Enpoint</p></td>
+     <td><p>10</p></td>
+     <td><p>每个项目最多可创建 10 个 Private Endpoint。</p></td>
+   </tr>
+</table>
 

@@ -31,13 +31,15 @@ import Procedures from '@site/src/components/Procedures';
 
 本小节主要介绍如何在您的腾讯云 VPC 和您托管在腾讯云上的 Zilliz Cloud 集群之间建立私网连接。
 
-您需要在 Zilliz Cloud 项目中创建 Private Endpoint。创建完成后，Private Endpoint 将适用于项目下所有与 Private Endpoint 云服务提供商和地域相同的集群。
+您需要在 Zilliz Cloud 项目中创建 Private Endpoint。创建完成后，Private Endpoint 将适用于项目下所有与 Private Endpoint 云服务提供商和地域相同的**Dedicated** **Serving** **集群**或 **On-demand 集群**。
 
-<Admonition type="info" icon="📘" title="提示">
+<Admonition type="info" icon="📘" title="说明">
 
-Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会[收取一定费用](https://buy.cloud.tencent.com/price/vpc/overview)。
+每个项目最多可创建 10 个 Private Endpoint。
 
 </Admonition>
+
+Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会[收取一定费用](https://help.aliyun.com/zh/privatelink/product-overview/billing-description)。
 
 ## 配置思路\{#configuration-roadmap}
 
@@ -266,7 +268,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 <Admonition type="info" icon="📘" title="说明">
 
-- 私网连接仅影响[数据面（Data Plane）](/reference/restful/data-plane-v2)的操作。[控制面（Control Plane）](/reference/restful/control-plane-v2)的操作仍然可以通过公网进行。
+- 私网连接仅影响[数据面（Data Plane）](/reference/restful/data-plane)的操作。[控制面（Control Plane）](/reference/restful/control-plane)的操作仍然可以通过公网进行。
 
 - 重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。
 

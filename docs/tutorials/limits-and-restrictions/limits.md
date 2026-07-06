@@ -625,3 +625,18 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
    </tr>
 </table>
 
+## Private Endpoint\{#private-endpoint}
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Private Enpoint</p></td>
+     <td><p>10</p></td>
+     <td><p>每个项目最多可创建 10 个 Private Endpoint。</p></td>
+   </tr>
+</table>
+
