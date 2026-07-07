@@ -268,7 +268,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 <Admonition type="info" icon="📘" title="说明">
 
-- 私网连接仅影响[数据面（Data Plane）](/reference/restful/data-plane)的操作。[控制面（Control Plane）](/reference/restful/control-plane)的操作仍然可以通过公网进行。
+- 私网连接仅影响数据面（Data Plane）的操作。控制面（Control Plane）的操作仍然可以通过公网进行。
 
 - 重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。
 

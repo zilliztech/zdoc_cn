@@ -31,7 +31,7 @@ Zilliz Cloud 支持阿里云、腾讯云、亚马逊云科技上的多个云服�
 
 云地域支持情况可能因工作负载类型、部署选项和功能而异。创建项目前，请根据本文选择合适的云地域。
 
-## **如何选择云地域**\{#}
+## 如何选择云地域\{#how-to-choose-a-cloud-region}
 
 - 选择靠近应用或用户的地域。
 
@@ -43,9 +43,9 @@ Zilliz Cloud 支持阿里云、腾讯云、亚马逊云科技上的多个云服�
 
 - 如果所需地域或功能不可用，请[联系我们](http://zilliz.com.cn/contact-sales)。
 
-## **支持的云地域**\{#}
+## 支持的云地域\{#supported-regions}
 
-### 阿里云\{#}
+### 阿里云\{#alibaba-cloud}
 
 Zilliz Cloud 支持在阿里云以下地域部署集群。
 
@@ -81,7 +81,7 @@ Zilliz Cloud 支持在阿里云以下地域部署集群。
    </tr>
 </table>
 
-### 腾讯云\{#}
+### 腾讯云\{#tencent-cloud}
 
 Zilliz Cloud 支持在腾讯云以下地域部署集群。
 
@@ -103,7 +103,7 @@ Zilliz Cloud 支持在腾讯云以下地域部署集群。
    </tr>
 </table>
 
-### 亚马逊云科技\{#}
+### 亚马逊云科技\{#amazon-cn}
 
 Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
 
@@ -118,11 +118,11 @@ Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
    </tr>
 </table>
 
-## 云地域的功能支持情况\{#}
+## 云地域的功能支持情况\{#feature-support-by-cloud-region}
 
 不同云地域对计算类型、部署方式和功能的支持情况可能不同。创建项目前，请先确认目标地域是否支持所需能力。
 
-### 计算类型支持\{#}
+### 计算类型支持\{#compute-type-support}
 
 <table>
    <tr>
@@ -139,7 +139,7 @@ Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
    </tr>
    <tr>
      <td><p>按需计算</p></td>
-     <td><p>ℹ️ 部分地域：</p><ul><li><p>华东2（上海）</p></li><li><p>华北2（北京）</p></li></ul></td>
+     <td><p>✅ 全部地域</p></td>
      <td><p>❌</p></td>
      <td><p>❌</p></td>
    </tr>
@@ -151,7 +151,7 @@ Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
 
 </Admonition>
 
-### 部署方式支持\{#}
+### 部署方式支持\{#deployment-option-support}
 
 <table>
    <tr>
@@ -186,7 +186,7 @@ Zilliz Cloud 支持在亚马逊云科技以下地域部署集群。
 
 </Admonition>
 
-### 功能支持\{#}
+### 功能支持\{#feature-support}
 
 <table>
    <tr>
