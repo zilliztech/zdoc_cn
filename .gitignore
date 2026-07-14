@@ -18,6 +18,6 @@ plugins/lark-docs/**/*.json
 .build-card-state.json
 
 scripts/docs
-.claude
+.claude/settings.local.json
 .playwright*
 .qwen
