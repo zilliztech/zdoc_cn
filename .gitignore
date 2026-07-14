@@ -21,3 +21,4 @@ scripts/docs
 .claude/settings.local.json
 .playwright*
 .qwen
+.worktrees/
