@@ -19,6 +19,7 @@ plugins/lark-docs/**/*.json
 
 scripts/docs
 .claude/settings.local.json
+.claude/worktrees/
 .playwright*
 .qwen
 .worktrees/
