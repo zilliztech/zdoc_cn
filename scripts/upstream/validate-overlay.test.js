@@ -6,15 +6,15 @@ function validManifest(overrides = {}) {
   return {
     compatibility: 1,
     copy: [
-      { from: 'site-profile', to: 'site-profile/zh-CN' },
-      { from: 'content-config', to: 'content-config/zh-CN' },
+      { from: 'site-profile', to: 'site-profile/zh-CN', optional: true },
+      { from: 'content-config', to: 'content-config/zh-CN', optional: true },
       { from: 'config/cn-publish-replacements.js', to: 'config/cn-publish-replacements.js' },
       { from: 'plugins/cn-publish-normalizer', to: 'plugins/cn-publish-normalizer' },
-      { from: 'plugins/adapters/aliyun-oss', to: 'plugins/adapters/aliyun-oss' },
-      { from: 'rest-overrides/zh-CN', to: 'rest-overrides/zh-CN' },
-      { from: 'nginx/zh-CN', to: 'nginx/zh-CN' },
+      { from: 'plugins/adapters/aliyun-oss', to: 'plugins/adapters/aliyun-oss', optional: true },
+      { from: 'rest-overrides/zh-CN', to: 'rest-overrides/zh-CN', optional: true },
+      { from: 'nginx/zh-CN', to: 'nginx/zh-CN', optional: true },
       { from: 'ci', to: 'ci/zh-CN' },
-      { from: 'tests/zh-CN', to: 'tests/zh-CN' },
+      { from: 'tests/zh-CN', to: 'tests/zh-CN', optional: true },
     ],
     patches: [],
     ...overrides,
@@ -53,10 +53,26 @@ test('rejects blocked upstream-owned destinations', () => {
   }
 });
 
+test('rejects destinations outside the positive allowlist', () => {
+  for (const destination of [
+    'docs',
+    'blog',
+    'static/img',
+    'config/other.js',
+    '.github/workflows/build.yml',
+  ]) {
+    assert.throws(() => validateOverlayManifest(validManifest({ copy: [{ from: 'x', to: destination }] })), /allowlisted/i);
+  }
+
+  assert.throws(() => validateOverlayManifest(validManifest({
+    copy: [{ from: 'ci', to: 'ci' }],
+  })), /allowlisted/i);
+});
+
 test('rejects duplicate destinations, absolutes, and traversal', () => {
   assert.throws(() => validateOverlayManifest(validManifest({ copy: [
-    { from: 'a', to: 'site-profile/zh-CN' },
-    { from: 'b', to: 'site-profile/zh-CN' },
+    { from: 'site-profile', to: 'site-profile/zh-CN' },
+    { from: 'site-profile', to: 'site-profile/zh-CN' },
   ] })), /duplicate/i);
 
   assert.throws(() => validateOverlayManifest(validManifest({ copy: [{ from: '/tmp/a', to: 'site-profile/zh-CN' }] })), /relative/i);

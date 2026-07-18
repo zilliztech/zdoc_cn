@@ -36,6 +36,16 @@ function validateAssembled(rootDir = path.resolve(__dirname, '..', '..')) {
     }
   }
 
+  const skipped = manifest.skippedOptionalOverlayPaths || [];
+  const sortedSkipped = [...skipped].sort();
+  assertEqual(JSON.stringify(skipped), JSON.stringify(sortedSkipped), 'skipped optional overlay path order');
+  const copiedSet = new Set(copied);
+  for (const skippedPath of skipped) {
+    if (copiedSet.has(skippedPath)) {
+      throw new Error(`Overlay path cannot be both copied and skipped: ${skippedPath}`);
+    }
+  }
+
   for (const patch of manifest.patches || []) {
     assertEqual(patch.sha256, hashFile(path.join(rootDir, patch.path)), `patch hash for ${patch.path}`);
   }

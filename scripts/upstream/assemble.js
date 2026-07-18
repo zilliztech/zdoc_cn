@@ -41,6 +41,9 @@ function copyTree(source, target, options = {}) {
 
   ensureParent(target);
   if (stat.isSymbolicLink()) {
+    if (options.rejectSymlinks) {
+      throw new Error(`Symlinks are not allowed in overlay copies: ${source}`);
+    }
     fs.symlinkSync(fs.readlinkSync(source), target);
   } else {
     fs.copyFileSync(source, target);
@@ -86,7 +89,18 @@ function applyPatches(rootDir, assembledDir, patches) {
   });
 }
 
-function writeBuildManifest(rootDir, assembledDir, lock, overlayManifest, copiedOverlayPaths, patches) {
+function verifyMaterializedUpstream(upstreamDir, lock) {
+  const gitDir = path.join(upstreamDir, '.git');
+  if (!fs.existsSync(gitDir)) return;
+
+  const head = run('git', ['rev-parse', 'HEAD'], { cwd: upstreamDir });
+  if (head !== lock.commit) {
+    throw new Error(`Materialized upstream HEAD mismatch: expected ${lock.commit}, got ${head}`);
+  }
+
+}
+
+function writeBuildManifest(rootDir, assembledDir, lock, overlayManifest, copiedOverlayPaths, skippedOptionalOverlayPaths, patches) {
   const manifestPath = path.join(rootDir, 'overlay-manifest.json');
   const buildManifest = {
     upstream: {
@@ -102,6 +116,7 @@ function writeBuildManifest(rootDir, assembledDir, lock, overlayManifest, copied
     },
     patches,
     copiedOverlayPaths: [...copiedOverlayPaths].sort(),
+    skippedOptionalOverlayPaths: [...skippedOptionalOverlayPaths].sort(),
   };
   fs.writeFileSync(
     path.join(assembledDir, '.zdoc-build-manifest.json'),
@@ -122,24 +137,34 @@ function assembleWorkspace(options = {}) {
   if (!fs.existsSync(upstreamDir)) {
     throw new Error(`Materialized upstream does not exist: ${upstreamDir}`);
   }
+  verifyMaterializedUpstream(upstreamDir, lock);
 
   removePath(assembledDir);
   fs.mkdirSync(assembledDir, { recursive: true });
   copyTree(upstreamDir, assembledDir, { relativeRoot: assembledDir });
 
   const copiedOverlayPaths = [];
+  const skippedOptionalOverlayPaths = [];
   for (const entry of overlayManifest.copy) {
     const from = path.join(rootDir, entry.from);
-    if (!fs.existsSync(from)) continue;
+    if (!fs.existsSync(from)) {
+      if (entry.optional) {
+        skippedOptionalOverlayPaths.push(entry.from);
+        continue;
+      }
+      throw new Error(`Required overlay source does not exist: ${entry.from}`);
+    }
     copyTree(from, path.join(assembledDir, entry.to), {
       copiedFiles: copiedOverlayPaths,
       relativeRoot: assembledDir,
+      rejectSymlinks: true,
     });
   }
 
   copiedOverlayPaths.sort();
+  skippedOptionalOverlayPaths.sort();
   const patchManifest = applyPatches(rootDir, assembledDir, overlayManifest.patches);
-  return writeBuildManifest(rootDir, assembledDir, lock, overlayManifest, copiedOverlayPaths, patchManifest);
+  return writeBuildManifest(rootDir, assembledDir, lock, overlayManifest, copiedOverlayPaths, skippedOptionalOverlayPaths, patchManifest);
 }
 
 if (require.main === module) {
@@ -152,4 +177,5 @@ module.exports = {
   assembleWorkspace,
   copyTree,
   hashFile,
+  verifyMaterializedUpstream,
 };

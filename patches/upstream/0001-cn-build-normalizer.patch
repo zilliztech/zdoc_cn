@@ -8,7 +8,7 @@ index 7adbaef..0e4b7e5 100644
  const planeConfig = require('./plugins/apifox-docs/meta/plane-config.json');
 +const {remarkCnPublishNormalizer} = require('./plugins/cn-publish-normalizer/remarkCnPublishNormalizer');
 +const cnRemarkPlugins = [remarkMath, remarkMathFix, remarkCnPublishNormalizer];
- 
+
  // Remark plugin: fix escaped braces inside math nodes.
  // Doc sources use \{ and \} (MDX escapes) inside $...$ blocks.
 @@ -194,7 +196,7 @@ const config: Config = {

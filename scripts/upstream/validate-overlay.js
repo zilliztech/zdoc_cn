@@ -16,6 +16,18 @@ const BLOCKED_FILES = new Set([
   'pnpm-lock.yaml',
 ]);
 
+const ALLOWED_COPY_TARGETS = new Map([
+  ['site-profile', 'site-profile/zh-CN'],
+  ['content-config', 'content-config/zh-CN'],
+  ['config/cn-publish-replacements.js', 'config/cn-publish-replacements.js'],
+  ['plugins/cn-publish-normalizer', 'plugins/cn-publish-normalizer'],
+  ['plugins/adapters/aliyun-oss', 'plugins/adapters/aliyun-oss'],
+  ['rest-overrides/zh-CN', 'rest-overrides/zh-CN'],
+  ['nginx/zh-CN', 'nginx/zh-CN'],
+  ['ci', 'ci/zh-CN'],
+  ['tests/zh-CN', 'tests/zh-CN'],
+]);
+
 function isAbsolute(input) {
   return path.posix.isAbsolute(input) || path.win32.isAbsolute(input);
 }
@@ -45,10 +57,19 @@ function validateCopyEntry(entry, seenTargets) {
   }
   const from = normalizeRelativePath(entry.from, 'copy.from');
   const to = normalizeRelativePath(entry.to, 'copy.to');
+  for (const key of Object.keys(entry)) {
+    if (!['from', 'to', 'optional'].includes(key)) throw new Error(`Invalid copy entry key: ${key}`);
+  }
+  if (entry.optional !== undefined && typeof entry.optional !== 'boolean') {
+    throw new Error(`copy.optional must be boolean for ${to}`);
+  }
   if (isBlockedDestination(to)) throw new Error(`copy.to is blocked: ${to}`);
+  if (ALLOWED_COPY_TARGETS.get(from) !== to) {
+    throw new Error(`copy entry is not allowlisted: ${from} -> ${to}`);
+  }
   if (seenTargets.has(to)) throw new Error(`Duplicate overlay destination: ${to}`);
   seenTargets.add(to);
-  return { from, to };
+  return { from, to, optional: entry.optional === true };
 }
 
 function validatePatchEntry(entry, seenPatches) {
@@ -100,6 +121,7 @@ function readOverlayManifest(filePath = path.resolve(__dirname, '..', '..', 'ove
 module.exports = {
   BLOCKED_FILES,
   BLOCKED_PREFIXES,
+  ALLOWED_COPY_TARGETS,
   isBlockedDestination,
   normalizeRelativePath,
   readOverlayManifest,
