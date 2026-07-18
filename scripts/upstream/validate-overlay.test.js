@@ -8,6 +8,7 @@ function validManifest(overrides = {}) {
     copy: [
       { from: 'site-profile', to: 'site-profile/zh-CN' },
       { from: 'content-config', to: 'content-config/zh-CN' },
+      { from: 'config/cn-publish-replacements.js', to: 'config/cn-publish-replacements.js' },
       { from: 'plugins/cn-publish-normalizer', to: 'plugins/cn-publish-normalizer' },
       { from: 'plugins/adapters/aliyun-oss', to: 'plugins/adapters/aliyun-oss' },
       { from: 'rest-overrides/zh-CN', to: 'rest-overrides/zh-CN' },
@@ -25,6 +26,7 @@ test('accepts the declared CN overlay entries', () => {
   assert.deepEqual(manifest.copy.map((entry) => entry.to), [
     'site-profile/zh-CN',
     'content-config/zh-CN',
+    'config/cn-publish-replacements.js',
     'plugins/cn-publish-normalizer',
     'plugins/adapters/aliyun-oss',
     'rest-overrides/zh-CN',

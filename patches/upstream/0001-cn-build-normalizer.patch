@@ -1,0 +1,54 @@
+diff --git a/docusaurus.config.ts b/docusaurus.config.ts
+index 7adbaef..0e4b7e5 100644
+--- a/docusaurus.config.ts
++++ b/docusaurus.config.ts
+@@ -6,6 +6,8 @@ import remarkMath from 'remark-math';
+ import rehypeKatex from 'rehype-katex';
+ import {visit} from 'unist-util-visit';
+ const planeConfig = require('./plugins/apifox-docs/meta/plane-config.json');
++const {remarkCnPublishNormalizer} = require('./plugins/cn-publish-normalizer/remarkCnPublishNormalizer');
++const cnRemarkPlugins = [remarkMath, remarkMathFix, remarkCnPublishNormalizer];
+ 
+ // Remark plugin: fix escaped braces inside math nodes.
+ // Doc sources use \{ and \} (MDX escapes) inside $...$ blocks.
+@@ -194,7 +196,7 @@ const config: Config = {
+         routeBasePath: 'docs/byoc',
+         sidebarPath: './sidebarsByoc.ts',
+         breadcrumbs: false,
+-        remarkPlugins: [remarkMath, remarkMathFix],
++        remarkPlugins: cnRemarkPlugins,
+         rehypePlugins: [rehypeKatex, rehypeWrapTables, rehypeEmojiMarks],
+       },
+     ],
+@@ -206,7 +208,7 @@ const config: Config = {
+         routeBasePath: 'reference',
+         sidebarPath: './sidebarsReference.ts',
+         breadcrumbs: false,
+-        remarkPlugins: [remarkMath, remarkMathFix],
++        remarkPlugins: cnRemarkPlugins,
+         rehypePlugins: [rehypeKatex, rehypeWrapTables, rehypeEmojiMarks],
+       },
+     ],
+@@ -271,7 +273,7 @@ const config: Config = {
+           routeBasePath: 'docs',
+           sidebarPath: './sidebarsTutorial.ts',
+           breadcrumbs: false,
+-          remarkPlugins: [remarkMath, remarkMathFix],
++          remarkPlugins: cnRemarkPlugins,
+           rehypePlugins: [rehypeKatex, rehypeWrapTables, rehypeEmojiMarks],
+         },
+         blog: false,
+diff --git a/package.json b/package.json
+index 5a2a725..d1e69da 100644
+--- a/package.json
++++ b/package.json
+@@ -8,6 +8,9 @@
+     "build": "NODE_OPTIONS='--max-old-space-size=4096' docusaurus build",
+     "swizzle": "docusaurus swizzle",
+     "deploy": "docusaurus deploy",
++    "test:cn-publish-normalizer": "node plugins/cn-publish-normalizer/normalizeCnContent.test.js && node plugins/cn-publish-normalizer/remarkCnPublishNormalizer.test.js && node ../scripts/verify-cn-publish-artifacts.test.js",
++    "verify:cn-publish": "npm run test:cn-publish-normalizer && npm run build:cn-publish",
++    "build:cn-publish": "npm run build && node ../scripts/verify-cn-publish-artifacts.js build",
+     "clear": "docusaurus clear",
+     "serve": "docusaurus serve",
+     "write-translations": "docusaurus write-translations",

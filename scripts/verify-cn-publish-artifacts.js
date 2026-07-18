@@ -61,6 +61,13 @@ const FORBIDDEN_RULES = [
   },
 ];
 
+function stripTrailingUrlPunctuation(match) {
+  return match.replace(/[).,;:]+$/g, '');
+}
+
+FORBIDDEN_RULES[1].isForbiddenMatch = (match) => !/^https?:\/\/support\.zilliz\.com\.cn\/hc\/zh-cn\/?$/i.test(stripTrailingUrlPunctuation(match));
+FORBIDDEN_RULES[2].isForbiddenMatch = (match) => !/^https?:\/\/(?:www\.)?zilliz\.com\.cn\/(?:contact-sales|pricing)(?:$|[/?#])/i.test(stripTrailingUrlPunctuation(match));
+
 function shouldScanFile(filePath) {
   return TEXT_FILE_EXTENSIONS.has(path.extname(filePath).toLowerCase());
 }
@@ -157,11 +164,15 @@ function formatViolations(violations) {
     .join('\n');
 }
 
-function main() {
+function resolveBuildDir(arg) {
+  return arg ? path.resolve(process.cwd(), arg) : BUILD_DIR;
+}
+
+function main(buildDir = resolveBuildDir(process.argv[2])) {
   let violations;
   try {
-    normalizeArtifacts();
-    violations = scanArtifacts();
+    normalizeArtifacts(buildDir);
+    violations = scanArtifacts(buildDir);
   } catch (error) {
     console.error(`verify-cn-publish-artifacts failed: ${error.message}`);
     process.exitCode = 1;
@@ -185,6 +196,9 @@ if (require.main === module) {
 module.exports = {
   BUILD_DIR,
   FORBIDDEN_RULES,
+  stripTrailingUrlPunctuation,
+  resolveBuildDir,
+  main,
   normalizeArtifacts,
   scanArtifacts,
   formatViolations,

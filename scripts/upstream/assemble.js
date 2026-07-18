@@ -74,8 +74,9 @@ function applyPatches(rootDir, assembledDir, patches) {
   return patches.map((patch) => {
     const patchPath = path.join(rootDir, patch.path);
     if (!fs.existsSync(patchPath)) throw new Error(`Patch file does not exist: ${patch.path}`);
-    run('git', ['apply', '--check', patchPath], { cwd: assembledDir });
-    run('git', ['apply', patchPath], { cwd: assembledDir });
+    const env = { GIT_CEILING_DIRECTORIES: rootDir };
+    run('git', ['apply', '--check', patchPath], { cwd: assembledDir, env });
+    run('git', ['apply', patchPath], { cwd: assembledDir, env });
     return {
       path: patch.path,
       reason: patch.reason,

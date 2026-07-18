@@ -7,6 +7,7 @@ function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
     cwd: options.cwd,
     encoding: 'utf8',
+    env: options.env ? { ...process.env, ...options.env } : process.env,
     stdio: options.stdio || 'pipe',
   });
   if (result.status !== 0) {

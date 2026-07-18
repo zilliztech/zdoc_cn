@@ -7,6 +7,7 @@ const {
   scanArtifacts,
   formatViolations,
   normalizeArtifacts,
+  resolveBuildDir,
 } = require('./verify-cn-publish-artifacts');
 
 function withTempDir(run) {
@@ -24,7 +25,9 @@ function testPassesWhenArtifactsAreCnSafe() {
       path.join(tempDir, 'index.html'),
       [
         'https://support.zilliz.com.cn/hc/zh-cn',
+        '(https://support.zilliz.com.cn/hc/zh-cn).',
         'https://zilliz.com.cn/contact-sales',
+        '(https://zilliz.com.cn/pricing).',
         'https://zilliz.com.cn/pricing',
         'https://api.cloud.zilliz.com.cn',
         'https://{project-id}.{region}.api.cloud.zilliz.com.cn',
@@ -153,12 +156,18 @@ function testFormatsReadableReport() {
   assert.match(output, /index.html:3/);
 }
 
+function testResolvesExplicitBuildDirectoryFromCwd() {
+  const actual = resolveBuildDir('custom-build');
+  assert.equal(actual, path.resolve(process.cwd(), 'custom-build'));
+}
+
 function run() {
   testPassesWhenArtifactsAreCnSafe();
   testFindsAllForbiddenResidualClasses();
   testDetectsLegacyApiRegionClusterEndpointFamily();
   testNormalizeArtifactsRewritesResidualsBeforeScan();
   testFormatsReadableReport();
+  testResolvesExplicitBuildDirectoryFromCwd();
   console.log('verify-cn-publish-artifacts tests passed');
 }
 
