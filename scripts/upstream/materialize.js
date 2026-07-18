@@ -47,31 +47,46 @@ function resolveSourceDir(rootDir, sourceHint) {
     // Fall through to the original path so the caller reports a useful git error.
   }
 
-  return rootRelative;
+  return null;
+}
+
+function upstreamRemoteUrl(lock, options = {}) {
+  return options.remoteUrl || `https://github.com/${lock.repository}.git`;
+}
+
+function materializeFromRemote(lock, cloneDir, options = {}) {
+  run('git', ['init', cloneDir]);
+  run('git', ['remote', 'add', 'origin', upstreamRemoteUrl(lock, options)], { cwd: cloneDir });
+  run('git', ['fetch', '--depth=1', 'origin', lock.commit], { cwd: cloneDir });
+  run('git', ['checkout', '--detach', 'FETCH_HEAD'], { cwd: cloneDir });
 }
 
 function materializeUpstream(options = {}) {
   const rootDir = options.rootDir || path.resolve(__dirname, '..', '..');
   const lockPath = options.lockPath || path.join(rootDir, 'upstream.lock');
   const lock = options.lock || readLock(lockPath);
-  const sourceHint = lock.source || '../zdoc';
+  const sourceHint = options.sourceHint || process.env.ZDOC_UPSTREAM_SOURCE || lock.source || '../zdoc';
   const sourceDir = resolveSourceDir(rootDir, sourceHint);
   const upstreamDir = options.upstreamDir || path.join(rootDir, '.zdoc-upstream');
   const targetDir = options.targetDir || path.join(upstreamDir, 'worktree');
   const cloneDir = path.join(upstreamDir, 'clone-tmp');
 
-  assertGitWorkTree(sourceDir);
-  const resolvedCommit = resolveCommit(sourceDir, lock.commit);
-  if (resolvedCommit !== lock.commit) {
-    throw new Error(`Resolved commit mismatch: expected ${lock.commit}, got ${resolvedCommit}`);
-  }
-
   removePath(targetDir);
   removePath(cloneDir);
   fs.mkdirSync(upstreamDir, { recursive: true });
 
-  run('git', ['clone', '--no-checkout', sourceDir, cloneDir]);
-  run('git', ['checkout', '--detach', lock.commit], { cwd: cloneDir });
+  if (sourceDir) {
+    assertGitWorkTree(sourceDir);
+    const resolvedCommit = resolveCommit(sourceDir, lock.commit);
+    if (resolvedCommit !== lock.commit) {
+      throw new Error(`Resolved commit mismatch: expected ${lock.commit}, got ${resolvedCommit}`);
+    }
+    run('git', ['clone', '--no-checkout', sourceDir, cloneDir]);
+    run('git', ['checkout', '--detach', lock.commit], { cwd: cloneDir });
+  } else {
+    materializeFromRemote(lock, cloneDir, options);
+  }
+
   const head = run('git', ['rev-parse', 'HEAD'], { cwd: cloneDir });
   if (head !== lock.commit) {
     throw new Error(`Materialized HEAD mismatch: expected ${lock.commit}, got ${head}`);
@@ -86,4 +101,4 @@ if (require.main === module) {
   process.stdout.write(`${target}\n`);
 }
 
-module.exports = { materializeUpstream, resolveSourceDir, run };
+module.exports = { materializeUpstream, materializeFromRemote, resolveSourceDir, run, upstreamRemoteUrl };

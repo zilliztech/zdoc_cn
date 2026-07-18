@@ -1,0 +1,103 @@
+name: locked upstream overlay
+
+on:
+  pull_request:
+    branches:
+      - master
+      - dev
+    paths:
+      - ".github/workflows/locked-upstream-overlay.yml"
+      - "upstream.lock"
+      - "overlay-manifest.json"
+      - "patches/upstream/**"
+      - "scripts/upstream/**"
+      - "scripts/verify-cn-publish-artifacts.js"
+      - "scripts/verify-cn-publish-artifacts.test.js"
+      - "plugins/cn-publish-normalizer/**"
+      - "config/cn-publish-replacements.js"
+      - "package.json"
+  push:
+    branches:
+      - master
+      - dev
+    paths:
+      - ".github/workflows/locked-upstream-overlay.yml"
+      - "upstream.lock"
+      - "overlay-manifest.json"
+      - "patches/upstream/**"
+      - "scripts/upstream/**"
+      - "scripts/verify-cn-publish-artifacts.js"
+      - "scripts/verify-cn-publish-artifacts.test.js"
+      - "plugins/cn-publish-normalizer/**"
+      - "config/cn-publish-replacements.js"
+      - "package.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: locked-upstream-overlay-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout zdoc_cn
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          persist-credentials: false
+
+      - name: Checkout locked upstream
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          repository: zilliztech/zdoc
+          ref: 0cc5ad1a5234c762a1e999cc525045e96adfb25f
+          path: .zdoc-ci-upstream
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "20"
+
+      - name: Enable pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.32.1 --activate
+
+      - name: Run local overlay tests
+        run: |
+          node --test scripts/upstream/*.test.js
+          npm run test:cn-publish-normalizer
+          git diff --check
+
+      - name: Materialize locked upstream
+        env:
+          ZDOC_UPSTREAM_SOURCE: .zdoc-ci-upstream
+        run: npm run upstream:materialize
+
+      - name: Assemble workspace
+        run: |
+          npm run assemble
+          node scripts/upstream/validate-assembled.js
+
+      - name: Restore pnpm cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('.zdoc-assembled/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install assembled dependencies
+        run: pnpm --dir .zdoc-assembled install --frozen-lockfile
+
+      - name: Build assembled site
+        run: pnpm --dir .zdoc-assembled run build
+
+      - name: Verify CN publish artifacts
+        run: node scripts/verify-cn-publish-artifacts.js .zdoc-assembled/build

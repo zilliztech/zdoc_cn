@@ -63,3 +63,46 @@ test('fails when the locked commit is absent from the source checkout', () => {
 
   assert.throws(() => materializeUpstream({ rootDir: root }), /Locked upstream commit is not available/);
 });
+
+test('materializes from remote when the local source hint is absent', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-materialize-remote-'));
+  const { source, commit } = createFixtureRepo(root);
+  write(path.join(root, 'upstream.lock'), [
+    'repository: zilliztech/zdoc',
+    `commit: ${commit}`,
+    'compatibility: 1',
+    'source: missing-local-source',
+  ].join('\n'));
+
+  const target = materializeUpstream({ rootDir: root, remoteUrl: source });
+
+  assert.equal(git(target, ['rev-parse', 'HEAD']), commit);
+  assert.equal(git(target, ['branch', '--show-current']), '');
+  assert.equal(fs.readFileSync(path.join(target, 'README.md'), 'utf8'), 'upstream\n');
+});
+
+test('uses ZDOC_UPSTREAM_SOURCE before the lock source hint', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-materialize-env-'));
+  const { source, commit } = createFixtureRepo(root);
+  write(path.join(root, 'upstream.lock'), [
+    'repository: zilliztech/zdoc',
+    `commit: ${commit}`,
+    'compatibility: 1',
+    'source: missing-local-source',
+  ].join('\n'));
+
+  const previousSource = process.env.ZDOC_UPSTREAM_SOURCE;
+  process.env.ZDOC_UPSTREAM_SOURCE = source;
+  try {
+    const target = materializeUpstream({ rootDir: root });
+
+    assert.equal(git(target, ['rev-parse', 'HEAD']), commit);
+    assert.equal(fs.readFileSync(path.join(target, 'README.md'), 'utf8'), 'upstream\n');
+  } finally {
+    if (previousSource === undefined) {
+      delete process.env.ZDOC_UPSTREAM_SOURCE;
+    } else {
+      process.env.ZDOC_UPSTREAM_SOURCE = previousSource;
+    }
+  }
+});
