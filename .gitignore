@@ -18,6 +18,9 @@ plugins/lark-docs/**/*.json
 .build-card-state.json
 
 scripts/docs
+.zdoc-upstream/
+.zdoc-assembled/
+.zdoc-cache/
 .claude/settings.local.json
 .claude/worktrees/
 .playwright*

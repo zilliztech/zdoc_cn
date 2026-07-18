@@ -8,7 +8,7 @@ const ALLOWED_KEYS = new Set([...REQUIRED_KEYS, ...OPTIONAL_KEYS]);
 function parseScalar(value) {
   const trimmed = value.trim();
   if (/^['"].*['"]$/.test(trimmed)) return trimmed.slice(1, -1);
-  if (/^[0-9]+$/.test(trimmed)) return Number(trimmed);
+  if (/^[0-9]+$/.test(trimmed) && trimmed.length < 16) return Number(trimmed);
   return trimmed;
 }
 
