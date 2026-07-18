@@ -1,16 +1,17 @@
 ---
 title: "召回调优 | BYOC"
 slug: /tune-recall-rate
+sidebar_key: tune-recall-rate
 sidebar_label: "召回调优"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 引入了一个名为 `level` 的搜索参数，允许用户通过调整该参数来平衡召回率和搜索性能。同时，Zilliz Cloud 还允许用户设置 `enablerecallcalculation` 参数来决定是否在搜索结果中包含预估召回率信息。您可以配合使用这两个参数来对向量搜索结果进行调优。 | BYOC"
 type: origin
 token: Wb3KwVJBDiQvzikvXNbcUiZonEf
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -31,21 +32,21 @@ Zilliz Cloud 引入了一个名为 `level` 的搜索参数，允许用户通过�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>召回调优适用于所有搜索类型，包括基本 Vector Search、Filtered Search、Range Search、Grouping Search、多向量混合搜索以及 Search Iterator。</p>
+召回调优适用于所有搜索类型，包括基本 Vector Search、Filtered Search、Range Search、Grouping Search、多向量混合搜索以及 Search Iterator。
 
 </Admonition>
 
-## 概述
+## 概述\{#}
 
 Zilliz Cloud 向量搜索中的召回率通常是指成功召回的相关结果数量占所有相关结果数量的比值。该指标通常用来衡量集群准确召回相关结果的能力。
 
-![JHafbESR3oZ9GzxgELeci02inyg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JHafbESR3oZ9GzxgELeci02inyg.png)
+![JHafbESR3oZ9GzxgELeci02inyg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JHafbESR3oZ9GzxgELeci02inyg.png "JHafbESR3oZ9GzxgELeci02inyg")
 
 根据上述公式，您可以用搜索结果中获取的相关结果数量除以所有相关结果数量获得本次搜索的召回率。例如，如果某次向量搜索获取到了 100 条相关结果中的 90 条，那么此次向量搜索的召回率为 **0.9** 或 **90%**。
 
 高召回率通常意味着更加精确的搜索结果，搜索耗时可能也更长。您可能希望通过调节召回率在搜索效率和搜索准确率之间找到平衡。
 
-## 设置搜索参数
+## 设置搜索参数\{#}
 
 您可以通过在搜索请求中添加 `level` 参数的方式将该请求变更为可调优请求。
 
@@ -71,11 +72,11 @@ res = client.search(
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果将该参数设置为最大值仍无法满足要求，您可以联系 <a href="https://zilliz.com.cn/contact-sales">Zilliz Cloud 支持</a>。</p>
+如果将该参数设置为最大值仍无法满足要求，您可以联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
 
 </Admonition>
 
-## 调节召回率
+## 调节召回率\{#}
 
 为了方便您调整 `level` 参数，Zilliz Cloud 还提供了另一个名为 `enable_recall_calculation` 的参数。通过设置该参数为 `True`，您可以让 Zilliz Cloud 在搜索结果中包含本次搜索的预估召回率。
 
@@ -114,10 +115,10 @@ res = client.search(
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>开启 <code>enable_recall_calculation</code> 可能会影响搜索性能，不建议在生产环境使用。</p>
+开启 `enable_recall_calculation` 可能会影响搜索性能，不建议在生产环境使用。
 
 </Admonition>
 
-## 限制
+## 限制\{#}
 
 该功能当前仅对基本 Vector Search、Filtered Search 和 Range Search 有效。

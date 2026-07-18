@@ -1,16 +1,17 @@
 ---
 title: "Text Match | BYOC"
 slug: /text-match
+sidebar_key: text-match
 sidebar_label: "Text Match"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus 中的 Text Match 功能能够基于特定术语实现精确的文档检索。通过使用关键词预筛选文档，可以缩小向量搜索的范围，从而提升搜索效率。该功能还可以结合标量过滤，以进一步优化查询结果。 | BYOC"
 type: origin
 token: WWSZwJWLYiRBfckbN58cV85BnQb
-sidebar_position: 10
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -38,7 +39,7 @@ Milvus 中的 Text Match 功能能够基于特定术语实现精确的文档检�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Text Match 关注的是查询词的精确匹配，而不对匹配文档的相关性进行评分。如果希望基于查询词的语义和重要性来检索最相关的文档，建议使用 <a href="./full-text-search">全文搜索</a>。</p>
+Text Match 关注的是查询词的精确匹配，而不对匹配文档的相关性进行评分。如果希望基于查询词的语义和重要性来检索最相关的文档，建议使用 [全文搜索](./full-text-search)。
 
 </Admonition>
 
@@ -210,6 +211,18 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+schema->AddField({"id", milvus::DataType::INT64, "", true, true});
+schema->AddField(milvus::FieldSchema("text", milvus::DataType::VARCHAR).WithMaxLength(1000).EnableAnalyzer(true).EnableMatch(true));
+schema->AddField(milvus::FieldSchema("embeddings", milvus::DataType::FLOAT_VECTOR).WithDimension(5));
+
+```
+
+</TabItem>
 </Tabs>
 
 ### 可选：配置 Analyzer\{#optional-configure-an-analyzer}
@@ -335,6 +348,21 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+nlohmann::json analyzer_params = {{"type", "english"}};
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+schema->AddField({"id", milvus::DataType::INT64, "", true, true});
+schema->AddField(milvus::FieldSchema("text", milvus::DataType::VARCHAR).WithMaxLength(1000)
+                    .EnableAnalyzer(true).EnableMatch(true).WithAnalyzerParams(analyzer_params));
+schema->AddField(milvus::FieldSchema("embeddings", milvus::DataType::FLOAT_VECTOR).WithDimension(5));
+
+```
+
+</TabItem>
 </Tabs>
 
 有关可用分词器及其配置的更多信息，请参考 [Tokenizer](./analyzer)。
@@ -397,6 +425,14 @@ export filter="\"TEXT_MATCH(text, 'machine deep')\""
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(TEXT_MATCH(text, "machine deep"))";
+```
+
+</TabItem>
 </Tabs>
 
 您也可以使用逻辑运算符组合多个 `TEXT_MATCH` 表达式，以实现“AND”匹配。
@@ -440,6 +476,14 @@ export filter="\"TEXT_MATCH(text, 'machine deep')\""
 
     ```bash
     export filter="\"TEXT_MATCH(text, 'machine') and TEXT_MATCH(text, 'deep')\""
+    ```
+
+    </TabItem>
+
+    <TabItem value='c++'>
+
+    ```c++
+    const auto filter = R"(TEXT_MATCH(text, 'machine') and TEXT_MATCH(text, 'deep'))";
     ```
 
     </TabItem>
@@ -487,6 +531,14 @@ export filter="\"TEXT_MATCH(text, 'machine deep')\""
     ```
 
     </TabItem>
+
+    <TabItem value='c++'>
+
+    ```c++
+    const auto filter = R"(not TEXT_MATCH(text, 'deep') and TEXT_MATCH(text, 'machine') and TEXT_MATCH(text, 'learning'))";
+    ```
+
+    </TabItem>
     </Tabs>
 
 ### Search 时使用 Text Match\{#search-with-text-match}
@@ -499,7 +551,7 @@ Text Match 可以与向量相似度搜索结合使用，以缩小搜索范围并
 <TabItem value='python'>
 
 ```python
-# Match entities with `keyword1` or `keyword2`
+# Match entities with \`keyword1\` or \`keyword2\`
 filter = "TEXT_MATCH(text, 'keyword1 keyword2')"
 
 # Assuming 'embeddings' is the vector field and 'text' is the VARCHAR field
@@ -558,7 +610,7 @@ if err != nil {
 <TabItem value='javascript'>
 
 ```javascript
-// Match entities with `keyword1` or `keyword2`
+// Match entities with \`keyword1\` or \`keyword2\`
 const filter = "TEXT_MATCH(text, 'keyword1 keyword2')";
 
 // Assuming 'embeddings' is the vector field and 'text' is the VARCHAR field
@@ -588,6 +640,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "annsField": "embeddings",
@@ -604,6 +657,29 @@ curl --request POST \
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(TEXT_MATCH(text, 'keyword1 keyword2'))";
+std::vector<float> query_vector = {0.19886812562848388, 0.06023560599112088, 0.6976963061752597, 0.2614474506242501, 0.838729485096104};
+auto request = milvus::SearchRequest()
+                   .WithCollectionName("my_collection")
+                   .WithAnnsField("embeddings")
+                   .WithFilter(filter)
+                   .WithLimit(10)
+                   .AddOutputField("text")
+                   .AddOutputField("id")
+                   .AddFloatVector(query_vector);
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+```
+
+</TabItem>
 </Tabs>
 
 ### Query 时使用 Text Match\{#query-with-text-match}
@@ -616,7 +692,7 @@ Text Match 还可以用于查询操作中的标量过滤。通过在 `query()` �
 <TabItem value='python'>
 
 ```python
-# Match entities with both `keyword1` and `keyword2`
+# Match entities with both \`keyword1\` and \`keyword2\`
 filter = "TEXT_MATCH(text, 'keyword1') and TEXT_MATCH(text, 'keyword2')"
 
 result = client.query(
@@ -646,7 +722,7 @@ QueryResp queryResp = client.query(QueryReq.builder()
 <TabItem value='javascript'>
 
 ```javascript
-// Match entities with both `keyword1` and `keyword2`
+// Match entities with both \`keyword1\` and \`keyword2\`
 const filter = "TEXT_MATCH(text, 'keyword1') and TEXT_MATCH(text, 'keyword2')";
 
 const result = await client.query(

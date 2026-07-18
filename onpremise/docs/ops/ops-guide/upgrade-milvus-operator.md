@@ -1,11 +1,12 @@
 ---
 title: "升级 Milvus Operator | On-Premise"
 slug: /upgrade-milvus-operator
+sidebar_key: upgrade-milvus-operator
 sidebar_label: "升级 Milvus Operator"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管理包括所有 Milvus 组件和相关依赖项的 Milvus 服务栈的解决方案。本节将介绍如何升级 Milvus Operator。 | On-Premise"
 type: origin
@@ -89,6 +90,6 @@ Milvus Operator 是一种可帮助您在目标 Kubernetes 集群上部署和管�
         milvus-operator-bc87b8675-vbq7r   1/1     Running     0              1m24s
         ```
 
-## 常见问题
+## 常见问题\{#}
 
 可参考安装 Milvus Operator 时的[常见问题](./install-milvus-operator#faqs)。

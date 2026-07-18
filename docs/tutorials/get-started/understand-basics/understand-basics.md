@@ -11,7 +11,7 @@ notebook: FALSE
 description: "本章讨论在使用 Zilliz Cloud 时经常会用到的一些术语和概念。 | Cloud"
 type: origin
 token: WJJvw84crikA8Xk4P4IcJJvSnKd
-sidebar_position: 6
+sidebar_position: 7
 keywords: 
   - 向量数据库
   - zilliz

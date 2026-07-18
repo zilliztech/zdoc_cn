@@ -1,11 +1,12 @@
 ---
 title: "网络与安全 | BYOC"
 slug: /network-and-security
+sidebar_key: network-and-security
 sidebar_label: "网络与安全"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "了解如何设置集群访问白名单及添加私网连接来确保集群访问安全。 | BYOC"
 type: origin

@@ -1,11 +1,12 @@
 ---
 title: "通过 SDK 导入 | BYOC"
 slug: /import-data-via-sdks
+sidebar_key: import-data-via-sdks
 sidebar_label: "SDK"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。 | BYOC"
 type: origin
@@ -30,6 +31,14 @@ import TabItem from '@theme/TabItem';
 本节将帮助你了解如何使用 SDK 的 BulkWriter 和 BulkImport API 向 Collection 中导入数据。
 
 另外，您还可以参考我们的[数据导入指南](./data-import-zero-to-hero)。其中包含了数据准备和数据导入两个部分的内容。
+
+<Admonition type="info" icon="📘" title="说明">
+
+Zilliz Cloud 允许您将数据从任意对象存储导入到任意 Zilliz Cloud 集群，不用考虑托管集群的云服务商。例如，您可以将存储在阿里云上的数据导入到部署在腾讯云上的集群。
+
+但是，Zilliz Cloud 仍旧建议您从与目标集群位于相同云服务商相同云地域的对象存储桶中导入数据，以获得低时延、高稳定的数据操作体验。
+
+</Admonition>
 
 ## 安装依赖\{#install-denpendencies}
 
@@ -247,7 +256,7 @@ public static void main(String[] args) throws Exception {
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了保证数据导入成功，请确认当前 Collection 下正在运行或待运行的任务数量不大于 10,000 条。</p>
+为了保证数据导入成功，请确认当前 Collection 下正在运行或待运行的任务数量不大于 10,000 条。
 
 </Admonition>
 

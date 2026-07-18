@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Zilliz Cloud 除了支持 ANN Search 外，还提供基于标量的过滤查询功能。本节将介绍如何使用 Query、Get 和 QueryIterator 进行标量查询以及进行标量查询时的注意事项。 | Cloud"
 type: origin
 token: GMOpwnUH0iYRN1kbRidcET0cnKg
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -30,6 +30,12 @@ import TabItem from '@theme/TabItem';
 # Query
 
 Zilliz Cloud 除了支持 ANN Search 外，还提供基于标量的过滤查询功能。本节将介绍如何使用 Query、Get 和 QueryIterator 进行标量查询以及进行标量查询时的注意事项。
+
+<Admonition type="info" icon="📘" title="说明">
+
+如果在 Collection 创建后动态添加新字段，包含这些字段的搜索将为未显式设置值的 Entity 返回定义的默认值或 NULL。有关详细信息，请参阅[向 Collection 添加字段](./add-fields-to-an-existing-collection)。
+
+</Admonition>
 
 ## 概述\{#overview}
 
@@ -224,6 +230,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/get" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "id": [0, 1, 2],
@@ -339,6 +346,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "filter": "color like \"red%\"",
@@ -351,7 +359,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-### 对查询结果排序\{#sort-query-results} | 公测
+### 对查询结果排序 | ONDEMAND \{#sort-query-results}
 
 默认情况下，Query 返回结果的顺序不固定。使用 `order_by` 参数可以按一个或多个标量字段对结果排序。
 
@@ -392,7 +400,36 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.QueryReq;
+import io.milvus.v2.service.vector.response.QueryResp;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build());
+
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("order_by_fields", "id:asc");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\"")
+        .outputFields(Arrays.asList("vector", "color"))
+        .limit(3)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
 ```
 
 </TabItem>
@@ -408,7 +445,23 @@ res = client.query(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+import { MilvusClient } from "@zilliz/milvus2-sdk-node";
+
+const address = "YOUR_CLUSTER_ENDPOINT";
+const token = "YOUR_CLUSTER_TOKEN";
+const client = new MilvusClient({ address, token });
+
+const res = await client.query({
+  collection_name: "my_collection",
+  filter: 'color like "red%"',
+  output_fields: ["vector", "color"],
+  limit: 3,
+  // highlight-next-line
+  order_by: ["id:asc"],
+});
+
+console.log(res.data);
+
 ```
 
 </TabItem>
@@ -417,6 +470,14 @@ res = client.query(
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// c++
 ```
 
 </TabItem>
@@ -446,7 +507,23 @@ res = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("order_by_fields", "rating:desc,price:asc");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "rating", "price"))
+        .limit(10)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
 ```
 
 </TabItem>
@@ -462,7 +539,17 @@ res = client.query(
 <TabItem value='javascript'>
 
 ```javascript
-// nodejs
+const res = await client.query({
+  collection_name: "my_collection",
+  filter: "",
+  output_fields: ["color", "rating", "price"],
+  limit: 10,
+  // highlight-next-line
+  order_by: ["rating:desc", "price:asc"],
+});
+
+console.log(res.data);
+
 ```
 
 </TabItem>
@@ -471,6 +558,14 @@ res = client.query(
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// c++
 ```
 
 </TabItem>
@@ -512,7 +607,180 @@ page2 = client.query(
 <TabItem value='java'>
 
 ```java
-// java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("order_by_fields", "price:asc");
+
+QueryReq page1Req = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\"")
+        .outputFields(Arrays.asList("color", "price"))
+        .limit(5)
+        .offset(0)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp page1 = client.query(page1Req);
+for (QueryResp.QueryResult result : page1.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+QueryReq page2Req = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("color like \"red%\"")
+        .outputFields(Arrays.asList("color", "price"))
+        .limit(5)
+        .offset(5)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp page2 = client.query(page2Req);
+for (QueryResp.QueryResult result : page2.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+const page1 = await client.query({
+  collection_name: "my_collection",
+  filter: 'color like "red%"',
+  output_fields: ["color", "price"],
+  limit: 5,
+  offset: 0,
+  // highlight-next-line
+  order_by: ["price:asc"],
+});
+
+console.log(page1.data);
+
+const page2 = await client.query({
+  collection_name: "my_collection",
+  filter: 'color like "red%"',
+  output_fields: ["color", "price"],
+  limit: 5,
+  offset: 5,
+  // highlight-next-line
+  order_by: ["price:asc"],
+});
+
+console.log(page2.data);
+
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// c++
+```
+
+</TabItem>
+</Tabs>
+
+### 对查询结果进行分组聚合 | ONDEMAND \{#aggregate-query-results}
+
+可以按一个或多个标量字段对查询结果进行分组，并对每个分组计算聚合值。支持的聚合算子包括 `count`、`min`、`max`、`sum` 和 `avg`。
+
+使用 `group_by_fields` 时需要注意：
+
+- `group_by_fields` 支持的字段类型：`INT8`、`INT16`、`INT32`、`INT64`、`VARCHAR` 和 `TIMESTAMPTZ`。对`FLOAT`、`DOUBLE`、向量、`JSON` 或 `ARRAY` 字段进行分组将返回错误。
+
+- `sum` 和 `avg` 仅支持数值类型——对 `VARCHAR` 字段使用这两个算子将返回错误。
+
+要启用聚合，向 `query()` 传入 `group_by_fields`，并在 `output_fields` 中加入聚合表达式（`count(*)`、`count(<field>)`、`min(<field>)`、`max(<field>)`、`sum(<field>)`、`avg(<field>)`）。
+
+以下示例按 `color` 字段对 Entity 进行分组，并返回每个颜色分组中的 Entity 数量：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+from pymilvus import MilvusClient
+
+client = MilvusClient(
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
+)
+
+res = client.query(
+    collection_name="my_collection",
+    filter="",
+    # highlight-start
+    group_by_fields=["color"],
+    output_fields=["color", "count(*)"],
+    # highlight-end
+)
+
+# [{'color': 'red',    'count(*)': 10},
+#  {'color': 'orange', 'count(*)': 10},
+#  {'color': 'yellow', 'count(*)': 10},
+#  {'color': 'green',  'count(*)': 10},
+#  {'color': 'blue',   'count(*)': 10}]
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.vector.request.QueryReq;
+import io.milvus.v2.service.vector.response.QueryResp;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build());
+
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("group_by_fields", "color");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "count(*)"))
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, count(*)=10}
+// {color=orange, count(*)=10}
+// {color=yellow, count(*)=10}
+// {color=green, count(*)=10}
+// {color=blue, count(*)=10}
+
 ```
 
 </TabItem>
@@ -537,6 +805,278 @@ page2 = client.query(
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+一次调用中可以请求多个聚合表达式。以下示例按 `color` 分组，并返回每个分组的行数、平均价格和最高评分：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.query(
+    collection_name="my_collection",
+    filter="",
+    # highlight-start
+    group_by_fields=["color"],
+    output_fields=["color", "count(*)", "avg(price)", "max(rating)"],
+    # highlight-end
+)
+
+# [{'color': 'red',    'count(*)': 10, 'avg(price)': 65.22, 'max(rating)': 5},
+#  {'color': 'orange', 'count(*)': 10, 'avg(price)': 48.67, 'max(rating)': 5},
+#  {'color': 'yellow', 'count(*)': 10, 'avg(price)': 64.15, 'max(rating)': 3},
+#  {'color': 'green',  'count(*)': 10, 'avg(price)': 58.28, 'max(rating)': 5},
+#  {'color': 'blue',   'count(*)': 10, 'avg(price)': 50.20, 'max(rating)': 5}]
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("group_by_fields", "color");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "count(*)", "avg(price)", "max(rating)"))
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, count(*)=10, avg(price)=65.22, max(rating)=5}
+// {color=orange, count(*)=10, avg(price)=48.67, max(rating)=5}
+// {color=yellow, count(*)=10, avg(price)=64.15, max(rating)=3}
+// {color=green, count(*)=10, avg(price)=58.28, max(rating)=5}
+// {color=blue, count(*)=10, avg(price)=50.20, max(rating)=5}
+
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+向 `group_by_fields` 传入多个字段可以构成复合分组。以下示例按 `(color, rating)` 分组，并计算每个分组中的价格范围：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.query(
+    collection_name="my_collection",
+    filter="",
+    # highlight-start
+    group_by_fields=["color", "rating"],
+    output_fields=["color", "rating", "min(price)", "max(price)"],
+    # highlight-end
+)
+
+# [{'color': 'red',    'rating': 5, 'min(price)': 34.51, 'max(price)': 70.90},
+#  {'color': 'orange', 'rating': 2, 'min(price)': 12.39, 'max(price)': 81.99},
+#  {'color': 'yellow', 'rating': 2, 'min(price)': 22.62, 'max(price)': 88.24},
+#  {'color': 'green',  'rating': 1, 'min(price)': 18.35, 'max(price)': 59.53},
+#  {'color': 'blue',   'rating': 4, 'min(price)': 21.23, 'max(price)': 82.45},
+#  ...]
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+Map<String, Object> queryParams = new HashMap<>();
+// highlight-next-line
+queryParams.put("group_by_fields", "color,rating");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "rating", "min(price)", "max(price)"))
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, rating=5, min(price)=34.51, max(price)=70.90}
+// {color=orange, rating=2, min(price)=12.39, max(price)=81.99}
+// {color=yellow, rating=2, min(price)=22.62, max(price)=88.24}
+// {color=green, rating=1, min(price)=18.35, max(price)=59.53}
+// {color=blue, rating=4, min(price)=21.23, max(price)=82.45}
+// ...
+
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+还可以将 `group_by_fields` 与 `limit` 结合使用，限制返回的分组数量——当某个字段的基数较高、只需要采样部分分组时非常有用：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.query(
+    collection_name="my_collection",
+    filter="",
+    group_by_fields=["color"],
+    output_fields=["color", "avg(price)", "count(*)"],
+    # highlight-next-line
+    limit=5,
+)
+
+# [{'color': 'red',    'avg(price)': 65.22, 'count(*)': 10},
+#  {'color': 'orange', 'avg(price)': 48.67, 'count(*)': 10},
+#  {'color': 'yellow', 'avg(price)': 64.15, 'count(*)': 10},
+#  {'color': 'green',  'avg(price)': 58.28, 'count(*)': 10},
+#  {'color': 'blue',   'avg(price)': 50.20, 'count(*)': 10}]
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+Map<String, Object> queryParams = new HashMap<>();
+queryParams.put("group_by_fields", "color");
+
+QueryReq queryReq = QueryReq.builder()
+        .collectionName("my_collection")
+        .filter("")
+        .outputFields(Arrays.asList("color", "avg(price)", "count(*)"))
+        // highlight-next-line
+        .limit(5)
+        .queryParams(queryParams)
+        .build();
+
+QueryResp queryResp = client.query(queryReq);
+for (QueryResp.QueryResult result : queryResp.getQueryResults()) {
+    System.out.println(result.getEntity());
+}
+
+// Output
+// {color=red, avg(price)=65.22, count(*)=10}
+// {color=orange, avg(price)=48.67, count(*)=10}
+// {color=yellow, avg(price)=64.15, count(*)=10}
+// {color=green, avg(price)=58.28, count(*)=10}
+// {color=blue, avg(price)=50.20, count(*)=10}
+
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
 ```
 
 </TabItem>
@@ -811,6 +1351,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/get" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionNames": ["partitionA"],
@@ -823,6 +1364,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/get" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionNames": ["partitionA"],

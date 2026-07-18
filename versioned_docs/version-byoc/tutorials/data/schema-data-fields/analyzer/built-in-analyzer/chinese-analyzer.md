@@ -1,11 +1,12 @@
 ---
 title: "Chinese | BYOC"
 slug: /chinese-analyzer
+sidebar_key: chinese-analyzer
 sidebar_label: "Chinese"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Chinese Analyzer 专门设计用于处理中文文本，提供有效的分段和分词。 | BYOC"
 type: origin
@@ -156,7 +157,7 @@ analyzerParams='{
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Chinese Analyzer 不接受任何可选参数。</p>
+Chinese Analyzer 不接受任何可选参数。
 
 </Admonition>
 
@@ -297,7 +298,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

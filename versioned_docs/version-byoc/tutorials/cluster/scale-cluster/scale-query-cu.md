@@ -1,11 +1,12 @@
 ---
 title: "Query CU 扩缩容 | BYOC"
 slug: /scale-query-cu
+sidebar_key: scale-query-cu
 sidebar_label: "Query CU 扩缩容"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "随着工作负载增长和数据写入量的增加，集群可能会达到容量上限。在这种情况下，读取操作仍可正常进行，但新的写入请求可能会失败。 | BYOC"
 type: origin
@@ -35,15 +36,19 @@ import Supademo from '@site/src/components/Supademo';
 
 本指南将介绍如何根据变化的工作负载调整集群 Query CU 数量。
 
+本页内容仅适用于 Serving 集群。
+
+On-demand 集群会自动扩缩容：有请求到达时自动拉起，空闲时自动缩容至 0，无需手动干预。
+
 ## 注意事项\{#considerations}
 
 - **资源限制：**
 
     - **扩容**
 
-        - Dedicated 企业版集群：最多支持 256  Query CU
+        - Dedicated 企业版集群：最多支持 2048  Query CU
 
-        - **Query CU 数量 × Replica 数量**的乘积不得超过 256。
+        - **Query CU 数量 × Replica 数量**的乘积不得超过 204,800。
 
         如需更大 Query CU 数量，请[联系销售](http://zilliz.com.cn/contact-sales)。
 
@@ -59,6 +64,8 @@ import Supademo from '@site/src/components/Supademo';
 
 - **扩缩容过程中**：集群状态将变为“修改中”，在此期间无法执行任何操作。如触发多个扩缩容任务，将按触发时间顺序依次处理。扩缩容任务完成时间取决于数据量。
 
+- **扩缩容过程中的计费**：在 Query CU 扩缩容任务执行期间，Zilliz Cloud 会继续按照原有的 Query CU 配置对集群计费。只有当扩缩容任务成功完成后，才会按照新的 Query CU 数量计费。如果扩缩容任务仍在进行中或未成功完成，则仍按照原有的 Query CU 配置计费。
+
 - **性能影响**：扩缩容过程中可能会出现轻微的服务抖动。
 
 - **备份限制**：动态和定时扩缩容设置不会包含在[备份](./backup-and-restore)中。恢复集群后需要重新手动配置。
@@ -73,12 +80,13 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>当您在 <strong>Query Node CU 扩缩容</strong>对话框中单击<strong>保存</strong>后，您将看到自动弹出的<strong>检查项目资源配额</strong>窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：</p>
-<ul>
-<li><p>单击<strong>前往项目资源设置</strong>按钮，以便编辑当前项目的资源设置，或者</p></li>
-<li><p>单击<strong>返回上一步</strong>按钮，以便编辑当前集群的相关设置。</p></li>
-</ul>
-<p>操作期间会消耗少量额外资源，并在操作完成后释放。</p>
+当您在 **Query Node CU 扩缩容**对话框中单击**保存**后，您将看到自动弹出的**检查项目资源配额**窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：
+
+- 单击**前往项目资源设置**按钮，以便编辑当前项目的资源设置，或者
+
+- 单击**返回上一步**按钮，以便编辑当前集群的相关设置。
+
+操作期间会消耗少量额外资源，并在操作完成后释放。
 
 </Admonition>
 
@@ -104,7 +112,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
+此功能仅限**企业版**项目使用。
 
 </Admonition>
 
@@ -155,7 +163,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限<strong>企业版</strong>项目中的 <strong>Dedicated</strong> 集群使用。</p>
+此功能仅限**企业版**项目使用。
 
 </Admonition>
 
@@ -169,10 +177,9 @@ Zilliz Cloud 支持 Query CU 动态扩缩容。启用后，系统会基于实时
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>选择比当前 Query CU 小的最大值会立刻触发缩容。</p></li>
-<li><p>选择比当前 Query CU 大的最小值会立刻触发扩容。</p></li>
-</ul>
+- 选择比当前 Query CU 小的最大值会立刻触发缩容。
+
+- 选择比当前 Query CU 大的最小值会立刻触发扩容。
 
 </Admonition>
 
@@ -265,13 +272,16 @@ curl --request POST \
 
 ## 常见问题\{#faq}
 
-1. **集群缩容时有哪些限制？**
+**集群缩容时有哪些限制？**
 
-    - 启用了 Replica 的集群，缩容后 Query CU 数量不得少于 8。
+- 启用了 Replica 的集群，缩容后 Query CU 数量不得少于 8。
 
-    - 缩容请求仅在同时满足以下两个条件时才会成功：
+- 缩容请求仅在同时满足以下两个条件时才会成功：
 
-        - 当前数据量小于新 Query CU 容量的 80%；
+    - 当前数据量小于新 Query CU 容量的 80%；
 
-        - 当前的 Collection 和 Partition 数量在新 Query CU 所支持的上限范围内。
+    - 当前的 Collection 和 Partition 数量在新 Query CU 所支持的上限范围内。
 
+**当我对 Dedicated 集群进行扩缩容时，扩缩容期间会按照旧配置还是新配置计费？**
+
+扩缩容期间，将按照集群的原有配置计费。只有当扩缩容任务成功完成后，才会按照新的配置计费。

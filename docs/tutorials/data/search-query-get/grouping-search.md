@@ -11,7 +11,7 @@ notebook: FALSE
 description: "如果搜索结果中所有 Entity 在某个标量字段上的取值都相同时，搜索结果可能并不能真实反映与查询向量相似的所有向量在向量空间中的分布情况。为了提升召回结果的多样性，可以考虑使用 Grouping Search。本节将介绍如何使用 Grouping Search 以及与之相关的注意事项。 | Cloud"
 type: origin
 token: CjZpwlRVNilNytkbHdncperpnbf
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz
@@ -238,6 +238,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": [
@@ -398,6 +399,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": [
@@ -423,7 +425,7 @@ curl --request POST \
 
 有关更多参数信息，请参考 [search()](/reference/python/python/Vector-search)。
 
-## 通过标量字段对分组结果进行排序\{#order-groups-by-a-scalar-field} | 公测
+## 通过标量字段对分组结果进行排序 | PRIVATE \{#order-groups-by-a-scalar-field}
 
 在使用 Grouping Search 时，你可以配合使用 `order_by_fields`，按照某个标量字段对各个分组进行排序。这样既能保证不同分组之间结果的多样性，又能让分组整体遵循价格、评分等与业务相关的排序规则。
 
@@ -480,6 +482,14 @@ res = client.search(
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
 ```
 
 </TabItem>

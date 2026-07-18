@@ -1,16 +1,17 @@
 ---
 title: "Phrase Match | BYOC"
 slug: /phrase-match
+sidebar_key: phrase-match
 sidebar_label: "Phrase Match"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "短语匹配允许您搜索包含查询词为精确短语的文档。默认情况下，这些词必须按相同顺序且彼此直接相邻出现。例如，查询 \"robotics machine learning\" 会匹配类似 \"…typical robotics machine learning models…\" 这样的文本，其中 \"robotics\"、\"machine\" 和 \"learning\" 按顺序出现，中间没有其他词。 | BYOC"
 type: origin
 token: AXhtwvmowicwpskTZCWcNhgOnog
-sidebar_position: 12
+sidebar_position: 15
 keywords: 
   - 向量数据库
   - zilliz
@@ -259,6 +260,29 @@ export schema="{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+const std::string address = "YOUR_CLUSTER_ENDPOINT";
+const std::string token = "YOUR_CLUSTER_TOKEN";
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{address, token};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+schema->AddField(milvus::FieldSchema("id", milvus::DataType::VARCHAR, "", true, true).WithMaxLength(100));
+schema->AddField(milvus::FieldSchema("dense_vector", milvus::DataType::FLOAT_VECTOR).WithDimension(4));
+```
+
+</TabItem>
 </Tabs>
 
 默认情况下，Zilliz Cloud 使用 [standard analyzer](./standard-analyzer)，该分析器会根据空格和标点对文本进行分词，并将文本转换为小写。
@@ -346,10 +370,11 @@ await client.createCollection(schema);
 ```bash
 # restful
 # check collection exist
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export COLLECTION_NAME="tech_articles"
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/has" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"$COLLECTION_NAME\"
   }"
@@ -357,6 +382,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/has" \
 # drop existing collection
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/collections/drop" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\"
   }"
@@ -365,10 +391,32 @@ curl -X POST "http://${MILVUS_HOST}/v2/vectordb/collections/drop" \
 curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data "{
     \"collectionName\": \"$COLLECTION_NAME\",
     \"schema\": $schema
 }"  
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto collection_name = "tech_articles";
+
+milvus::HasCollectionResponse response;
+auto status = client->HasCollection(milvus::HasCollectionRequest().WithCollectionName(collection_name), response);
+if (response.Has()) {
+    status = client->DropCollection(milvus::DropCollectionRequest().WithCollectionName(collection_name));
+}
+
+status = client->CreateCollection(milvus::CreateCollectionRequest()
+                                    .WithCollectionName(collection_name)
+                                    .WithCollectionSchema(schema));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -537,6 +585,7 @@ await client.loadCollection({
 # Insert the data into the collection
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert" \
   -H "Content-Type: application/json" \
+  -H "Request-Timeout: 10" \
   -H "Authorization: Bearer <token>" \
   -d '{
     "collectionName": "tech_articles",
@@ -567,6 +616,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert" \
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/indexes/create" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "tech_articles",
     "indexParams": [
@@ -582,9 +632,46 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/indexes/create" \
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/load" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "tech_articles"
   }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::EntityRows data = {
+    {{"text", "Machine learning is a subset of artificial intelligence that focuses on algorithms."}, {"embeddings", std::vector<float>{0.1, 0.2, 0.3, 0.4, 0.5}}},
+    {{"text", "Deep learning machine algorithms require large datasets for training."}, {"embeddings", std::vector<float>{0.2, 0.3, 0.4, 0.5, 0.6}}},
+    {{"text", "The machine learning model showed excellent performance on the test set.", std::vector<float>{0.3, 0.4, 0.5, 0.6, 0.7}}},
+    {{"text", "Natural language processing and machine learning go hand in hand."}, {"embeddings", std::vector<float>{0.4, 0.5, 0.6, 0.7, 0.8}}},
+    {{"text", "This article discusses various learning machine techniques and applications."}, {"embeddings", std::vector<float>{0.5, 0.6, 0.7, 0.8, 0.9}}}
+};
+
+milvus::InsertResponse response;
+auto status = client->Insert(milvus::InsertRequest()
+                                .WithCollectionName(collection_name)
+                                .WithRowsData(std::move(data))
+                                , response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::IndexDesc index_vector("embeddings", "embeddings_index", milvus::IndexType::AUTOINDEX, milvus::MetricType::COSINE);
+status = client->CreateIndex(milvus::CreateIndexRequest()
+                                    .WithCollectionName(collection_name)
+                                    .AddIndex(std::move(index_vector)));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+status = client->LoadCollection(milvus::LoadCollectionRequest().WithCollectionName(collection_name));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -598,7 +685,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/load" \
 
 <Admonition type="info" icon="📘" title="注释">
 
-<p><code>PHRASE_MATCH</code> 表达式不区分大小写。您可以使用 <code>PHRASE_MATCH</code> 或 <code>phrase_match</code>。</p>
+`PHRASE_MATCH` 表达式不区分大小写。您可以使用 `PHRASE_MATCH` 或 `phrase_match`。
 
 </Admonition>
 
@@ -644,6 +731,14 @@ PHRASE_MATCH(field_name, phrase, slop)
 ```bash
 # restful
 export filter = "PHRASE_MATCH(field_name, phrase, slop)"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(PHRASE_MATCH(text, 'machine learning'))";
 ```
 
 </TabItem>
@@ -736,12 +831,34 @@ const result = await client.query({
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/query" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <token>" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "tech_articles",
     "filter": "PHRASE_MATCH(text, '\''machine learning'\'')",
     "outputFields": ["id", "text"],
     "limit": 100
   }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(PHRASE_MATCH(text, 'machine learning'))";
+
+auto request = milvus::QueryRequest()
+                       .WithCollectionName(collection_name)
+                       .WithFilter(filter)
+                       .AddOutputField("id")
+                       .AddOutputField("text")
+                       .WithLimit(100);
+
+milvus::QueryResponse response;
+auto status = client->Query(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -835,15 +952,16 @@ const result_slop1 = await client.search({
 
 ```bash
 # restful
-export MILVUS_HOST="localhost:19530"
+export MILVUS_HOST="YOUR_CLUSTER_ENDPOINT"
 export COLLECTION_NAME="tech_articles"
 export AUTH_TOKEN="your_token_here"
 
-# Search数据
+# Search data
 echo "Searching with PHRASE_MATCH filter (slop=1)..."
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"annsField\": \"embeddings\",
@@ -853,6 +971,30 @@ curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
     \"limit\": 10,
     \"outputFields\": [\"id\", \"text\"]
   }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(PHRASE_MATCH(text, 'learning machine', 1))";
+
+std::vector<float> query_vector = {0.1, 0.2, 0.3, 0.4, 0.5};
+auto request = milvus::SearchRequest()
+                   .WithCollectionName(collection_name)
+                   .WithAnnsField("embeddings")
+                   .WithFilter(filter)
+                   .WithLimit(10)
+                   .AddOutputField("id")
+                   .AddOutputField("text")
+                   .AddFloatVector(query_vector);
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -945,6 +1087,7 @@ const result_slop2 = await client.search({
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"annsField\": \"embeddings\",
@@ -954,6 +1097,30 @@ curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
     \"limit\": 10,
     \"outputFields\": [\"id\", \"text\"]
   }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(PHRASE_MATCH(text, 'machine learning', 2))";
+
+std::vector<float> query_vector = {0.1, 0.2, 0.3, 0.4, 0.5};
+auto request = milvus::SearchRequest()
+                   .WithCollectionName(collection_name)
+                   .WithAnnsField("embeddings")
+                   .WithFilter(filter)
+                   .WithLimit(10)
+                   .AddOutputField("id")
+                   .AddOutputField("text")
+                   .AddFloatVector(query_vector);
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -1044,6 +1211,7 @@ const result_slop3 = await client.search({
 curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"annsField\": \"embeddings\",
@@ -1056,9 +1224,33 @@ curl -X POST "http://${MILVUS_HOST}/v2/vectordb/entities/search" \
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(PHRASE_MATCH(text, 'machine learning', 3))";
+
+std::vector<float> query_vector = {0.1, 0.2, 0.3, 0.4, 0.5};
+auto request = milvus::SearchRequest()
+                   .WithCollectionName(collection_name)
+                   .WithAnnsField("embeddings")
+                   .WithFilter(filter)
+                   .WithLimit(10)
+                   .AddOutputField("id")
+                   .AddOutputField("text")
+                   .AddFloatVector(query_vector);
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+```
+
+</TabItem>
 </Tabs>
 
-## 注意事项
+## 注意事项\{#}
 
 - 为字段启用短语匹配会触发倒排索引的创建，这会消耗存储资源。在决定启用此功能时，请考虑对存储的影响，因为存储空间的占用会根据文本大小、唯一词元以及所使用的分析器而有所不同。
 

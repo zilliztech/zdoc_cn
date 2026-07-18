@@ -58,9 +58,42 @@ import Procedures from '@site/src/components/Procedures';
 
 添加新的从集群后，Zilliz Cloud 将创建该集群并开始从主集群复制数据。新从集群显示为 CREATING 状态，初始数据同步完成后转为 RUNNING 状态。
 
-以下 Demo 展示了如何添加从集群。
+- **通过 Web 控制台**
 
-<Supademo id="cmkat4dkp1h55ke4xyc8i7c9y" title=""  />
+    以下 Demo 展示了如何添加从集群。
+
+    <Supademo id="cmkat4dkp1h55ke4xyc8i7c9y" title=""  />
+
+- **通过 RESTful API**
+
+    以下示例展示了如何添加从集群。详情请参考[创建全球集群](/reference/restful/create-global-cluster-v2)。
+
+    ```bash
+    curl --request POST \
+      --url "https://api.cloud.zilliz.com/v2/globalClusters/glo-xxxxxxxxxxxxxxxx/secondaryClusters" \
+      --header "Authorization: Bearer ${API_KEY}" \
+      --header "Accept: application/json" \
+      --header "Content-Type: application/json" \
+      --data-raw '{
+        "secondaryClusters": [
+          {
+            "clusterName": "secondary-cluster-ap",
+            "regionId": "aws-ap-southeast-1"
+          }
+        ]
+      }'
+    ```
+
+    以下为输出结果。
+
+    ```bash
+    {
+      "code": 0,
+      "data": {
+        "jobId": "job-xxxxxxxxxxxxxxxx"
+      }
+    }
+    ```
 
 ## 删除从集群\{#drop-secondary-cluster}
 
@@ -72,9 +105,37 @@ import Procedures from '@site/src/components/Procedures';
 
 - 向该集群的数据复制立即停止。
 
-以下截图展示了如何删除从集群。
+您可以通过 Web 控制台或 RESTful API 删除从集群。
 
-![HoGrwE4RyhqZVNbG1WscPHVLnxl](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HoGrwE4RyhqZVNbG1WscPHVLnxl.png)
+- **通过 Web 控制台**
+
+    以下截图展示了如何删除从集群。
+
+    ![HoGrwE4RyhqZVNbG1WscPHVLnxl](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HoGrwE4RyhqZVNbG1WscPHVLnxl.png)
+
+- **通过 RESTful API**
+
+    以下示例展示了如何删除从集群。详情请参考[删除全球集群成员集群](/reference/restful/delete-global-member-cluster-v2)。
+
+    ```bash
+    curl --request DELETE \
+      --url "https://api.cloud.zilliz.com/v2/globalClusters/glo-xxxxxxxxxxxxxxxx/clusters/in01-xxxxxxxxxxxxxxx" \
+      --header "Authorization: Bearer ${API_KEY}" \
+      --header "Accept: application/json"
+    ```
+
+    以下为输出结果。
+
+    ```bash
+    {
+      "code": 0,
+      "data": {
+        "globalClusterId": "glo-xxxxxxxxxxxxxxxx",
+        "clusterId": "in01-xxxxxxxxxxxxxxx",
+        "prompt": "The cluster has been deleted. If you consider this action to be an error, you have the option to restore the deleted cluster from the recycle bin within a 30-day period. Kindly note, this recovery feature does not apply to free clusters."
+      }
+    }
+    ```
 
 ## 将全球集群转换为普通集群\{#convert-a-global-cluster-to-a-regular-cluster}
 
@@ -91,6 +152,15 @@ import Procedures from '@site/src/components/Procedures';
     ![Q2ygwsmNdhXFreb2pzGcWFrBnIf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Q2ygwsmNdhXFreb2pzGcWFrBnIf.png)
 
 </Procedures>
+
+您还可以通过 RESTful API 移除全球 Endpoint。以下为示例代码，详情请参考[移除全球端点](/reference/restful/remove-global-endpoint-v2)。
+
+```bash
+curl --request POST \
+  --url "https://api.cloud.zilliz.com/v2/globalClusters/glo-xxxxxxxxxxxxxxxx/removeGlobalEndpoint" \
+  --header "Authorization: Bearer ${API_KEY}" \
+  --header "Accept: application/json"
+```
 
 全球 Endpoint 移除后，通过全球 Endpoint 连接的应用将立即断开。请确保更新应用代码中的连接 Endpoint。下表说明了转换后的变化。
 

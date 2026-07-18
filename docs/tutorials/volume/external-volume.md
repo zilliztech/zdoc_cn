@@ -125,20 +125,19 @@ External Volume 映射至您自有云服务对象存储（如阿里云 OSS 或�
     <TabItem value='bash'>
 
     ```bash
-    export BASE_URL="https://api.cloud.zilliz.com.cn"
-    export TOKEN="YOUR_API_KEY"
-    
     curl --request POST \
     --url "${BASE_URL}/v2/volumes/create" \
     --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
     --header "Content-Type: application/json" \
     -d '{
-        "projectId": "proj-xxxx",
+        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
         "regionId": "ali-cn-hangzhou",
-        "volumeName": "external_volume",
+        "volumeName": "my_external_volume",
         "type": "EXTERNAL",
-        "storageIntegrationId": "integ-xxxx",
-        "path": "/data/"
+        "storageIntegrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+        "path": "data/",
+        "description": "A volume for storing collection data."
     }'
     
     # {
@@ -183,6 +182,10 @@ External Volume 映射至您自有云服务对象存储（如阿里云 OSS 或�
          <td><p><code>path</code></p></td>
          <td><p>存储路径。当 <code>type=EXTERNAL</code> 时必填。</p></td>
        </tr>
+       <tr>
+         <td><p><code>description</code>(可选)</p></td>
+         <td><p>要创建的 Volume 描述。最多 255 个字符。</p></td>
+       </tr>
     </table>
 
 - **通过 Web 控制台**
@@ -210,7 +213,7 @@ External Volume 映射至您自有云服务对象存储（如阿里云 OSS 或�
            </tr>
            <tr>
              <td><p>描述</p></td>
-             <td><p>可选参数。</p></td>
+             <td><p>可选参数。最多 255 个字符。</p></td>
            </tr>
            <tr>
              <td><p>Volume 类型</p></td>
@@ -332,17 +335,28 @@ External Volume 映射至您自有云服务对象存储（如阿里云 OSS 或�
     --header "Content-Type: application/json"
     
     # {
-    #     "code": 0,
-    #     "data": {
-    #         "volumes": [
-    #            {
-    #                "volumeName": "external_volume",
-    #                "type": "EXTERNAL"
-    #            }
-    #        ],
-    #        "count": 1,
+    #    "code": 200,
+    #    "data": {
+    #        "count": 3,
     #        "currentPage": 1,
-    #        "pageSize": 10
+    #        "pageSize": 10,
+    #        "volumes": [
+    #            {
+    #                "volumeName": "my_volume_1",
+    #                "type": "MANAGED",
+    #                "description": "A volume for storing collection data."
+    #            },
+    #            {
+    #                "volumeName": "my_volume_2",
+    #                "type": "EXTERNAL",
+    #                "description": "A volume for storing collection data."
+    #            },
+    #            {
+    #                "volumeName": "my_volume_3",
+    #                "type": "MANAGED",
+    #                "description": "A volume for storing collection data."
+    #            }
+    #        ]
     #    }
     #}
     ```
@@ -585,7 +599,7 @@ External Volume 映射至您自有云服务对象存储（如阿里云 OSS 或�
 
 两种方式都允许您从外部的云服务对象存储中导入数据。不同之处在于：
 
--  External Volume 通过存储集成来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
+-  External Volume 通过[存储集成](./integrate-with-storage-bucket)来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
 
 - 直接从外部存储导入时，需要在每次导入请求中提供凭证（access key、secret key）。这种方式更适合一次性导入，但不具备凭证隔离和复用能力。
 

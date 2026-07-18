@@ -56,46 +56,46 @@ Zilliz Cloud 全球集群支持两种操作来更改主集群所在的区域：
 下表对比了两种操作。
 
 <table>
-    <tr>
-        <th></th>
-        <th><p>优雅切换</p></th>
-        <th><p>强切</p></th>
-    </tr>
-    <tr>
-        <td><p>适用场景</p></td>
-        <td><p>计划性操作：区域轮换、合规要求、数据驻留变更。</p></td>
-        <td><p>主集群所在区域发生非计划性故障或中断。</p></td>
-    </tr>
-    <tr>
-        <td><p>触发方式</p></td>
-        <td><p>在所有主集群和从集群均处于运行状态时手动发起。</p></td>
-        <td><p>当主集群变为异常状态时，作为恢复操作手动发起。</p></td>
-    </tr>
-    <tr>
-        <td><p>数据丢失（RPO）</p></td>
-        <td><p>0 — 无数据丢失。仅在数据完全同步后才执行切换。</p></td>
-        <td><p>等于强切时的同步延迟。</p></td>
-    </tr>
-    <tr>
-        <td><p>停机时间（RTO）</p></td>
-        <td><p>接近零。全球 Endpoint 自动重新路由。</p></td>
-        <td><p>通常约几分钟。</p></td>
-    </tr>
-    <tr>
-        <td><p>前提条件</p></td>
-        <td><p>所有集群必须处于 RUNNING 状态。同步延迟必须 ≤ 30 秒，超过此阈值将拒绝优雅切换。</p></td>
-        <td><p>可随时触发（高风险操作）。至少一个从集群必须可达。</p></td>
-    </tr>
-    <tr>
-        <td><p>原主集群的处理方式</p></td>
-        <td><p>降级为从集群。</p></td>
-        <td><p>废弃并移入<a href="https://zilliverse.feishu.cn/wiki/FgDZw6JJuiICETkqrqHckN4pneb">回收站</a>。系统自动创建新的从集群。</p></td>
-    </tr>
-    <tr>
-        <td><p>应用变更</p></td>
-        <td><p>使用全球 Endpoint 时无需变更，路由自动更新。详情请参见 。</p></td>
-        <td><p>使用全球 Endpoint 时无需变更，路由自动更新。详情请参见  。</p></td>
-    </tr>
+   <tr>
+     <th></th>
+     <th><p><strong>优雅切换</strong></p></th>
+     <th><p><strong>强切</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>适用场景</p></td>
+     <td><p>计划性操作：区域轮换、合规要求、数据驻留变更。</p></td>
+     <td><p>主集群所在区域发生非计划性故障或中断。</p></td>
+   </tr>
+   <tr>
+     <td><p>触发方式</p></td>
+     <td><p>在所有主集群和从集群均处于运行状态时手动发起。</p></td>
+     <td><p>当主集群变为异常状态时，作为恢复操作手动发起。</p></td>
+   </tr>
+   <tr>
+     <td><p>数据丢失（RPO）</p></td>
+     <td><p>0 — 无数据丢失。仅在数据完全同步后才执行切换。</p></td>
+     <td><p>等于强切时的同步延迟。</p></td>
+   </tr>
+   <tr>
+     <td><p>停机时间（RTO）</p></td>
+     <td><p>接近零。全球 Endpoint 自动重新路由。</p></td>
+     <td><p>通常约几分钟。</p></td>
+   </tr>
+   <tr>
+     <td><p>前提条件</p></td>
+     <td><p>所有集群必须处于 RUNNING 状态。同步延迟必须 ≤ 30 秒，超过此阈值将拒绝优雅切换。</p></td>
+     <td><p>可随时触发（高风险操作）。至少一个从集群必须可达。</p></td>
+   </tr>
+   <tr>
+     <td><p>原主集群的处理方式</p></td>
+     <td><p>降级为从集群。</p></td>
+     <td><p>废弃并移入<a href="./use-recycle-bin">回收站</a>。系统自动创建新的从集群。</p></td>
+   </tr>
+   <tr>
+     <td><p>应用变更</p></td>
+     <td><p>使用全球 Endpoint 时无需变更，路由自动更新。详情请参见 <a href="./connect-to-global-cluster">连接全球集群</a> 。</p></td>
+     <td><p>使用全球 Endpoint 时无需变更，路由自动更新。详情请参见  <a href="./connect-to-global-cluster">连接全球集群</a> 。</p></td>
+   </tr>
 </table>
 
 ### 集群状态转换\{#cluster-status-transitions}
@@ -135,25 +135,55 @@ Zilliz Cloud 全球集群支持两种操作来更改主集群所在的区域：
 
 ### 操作步骤\{#procedures}
 
-以下 Demo 展示了如何执行优雅切换。
+- **通过 Web 控制台**
 
-<Supademo id="cmnpic07n84n2aburnc12drnr" title=""  />
+    以下 Demo 展示了如何执行优雅切换。
 
-<Procedures>
+    <Supademo id="cmnpic07n84n2aburnc12drnr" title=""  />
 
-1. 前往全球集群页面。
+    <Procedures>
 
-1. 点击**优雅切换**或**强切**。
+    1. 前往全球集群页面。
 
-1. 选择要提升的目标从集群。
+    1. 点击**优雅切换**或**强切**。
 
-1. 选择**优雅切换**。
+    1. 选择要提升的目标从集群。
 
-1. 在弹窗中确认操作。
+    1. 选择**优雅切换**。
 
-</Procedures>
+    1. 在弹窗中确认操作。
 
-发起优雅切换后，Zilliz Cloud 会等待目标从集群与当前主集群完全同步，然后将其提升为新主集群。
+    </Procedures>
+
+    发起优雅切换后，Zilliz Cloud 会等待目标从集群与当前主集群完全同步，然后将其提升为新主集群。
+
+- **通过 RESTful API**
+
+    以下示例展示了如何执行优雅切换。详情请参考[切换全球集群](/reference/restful/switchover-global-cluster-v2)。
+
+    ```bash
+    curl --request POST \
+    --url "${BASE_URL}/v2/globalClusters/${globalClusterId}/switchover" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "newPrimaryClusterId": "in01-secondary"
+    }'
+    ```
+
+    以下为输出结果。
+
+    ```bash
+    {
+      "code": 0,
+      "data": {
+        "globalClusterId": "glo-xxxxxxxxxxxxxxxx",
+        "oldPrimaryClusterId": "in01-primary",
+        "newPrimaryClusterId": "in01-secondary",
+        "jobId": "job-xxxxxxxxxxxxxxxx"
+      }
+    }
+    ```
 
 ### 优雅切换后\{#after-the-switchover}
 
@@ -179,29 +209,60 @@ Zilliz Cloud 全球集群支持两种操作来更改主集群所在的区域：
 
 ### 操作步骤\{#procedures}
 
-以下 Demo 展示了如何执行强切。
+- **通过 Web 控制台**
 
-<Supademo id="cmnpile4s01nlzz0j6ryixd11" title=""  />
+    以下 Demo 展示了如何执行强切。
 
-<Procedures>
+    <Supademo id="cmnpile4s01nlzz0j6ryixd11" title=""  />
 
-1. 导航到全球集群页面。
+    <Procedures>
 
-1. 点击**优雅切换或强切**。
+    1. 导航到全球集群页面。
 
-1. 选择要提升的目标从集群。
+    1. 点击**优雅切换或强切**。
 
-1. 选择**强切**。
+    1. 选择要提升的目标从集群。
 
-1. 在弹窗中确认操作。
+    1. 选择**强切**。
 
-</Procedures>
+    1. 在弹窗中确认操作。
 
-<Admonition type="info" icon="📘" title="说明">
+    </Procedures>
 
-如果强切失败，集群将保持异常（ABNORMAL）状态。您可以重试强切操作或[提交工单](http://support.zilliz.com.cn)。
+    <Admonition type="info" icon="📘" title="说明">
 
-</Admonition>
+    如果强切失败，集群将保持异常（ABNORMAL）状态。您可以重试强切操作或[提交工单](http://support.zilliz.com.cn)。
+
+    </Admonition>
+
+- **通过 RESTful API**
+
+    以下示例展示了如何执行强切。详情请参考[故障转移全球集群](/reference/restful/failover-global-cluster-v2)。
+
+    ```bash
+    curl --request POST \
+      --url "https://api.cloud.zilliz.com/v2/globalClusters/glo-xxxxxxxxxxxxxxxx/failover" \
+      --header "Authorization: Bearer ${API_KEY}" \
+      --header "Accept: application/json" \
+      --header "Content-Type: application/json" \
+      --data-raw '{
+        "newPrimaryClusterId": "in01-secondary"
+      }'
+    ```
+
+    以下为输出结果。
+
+    ```bash
+    {
+      "code": 0,
+      "data": {
+        "globalClusterId": "glo-xxxxxxxxxxxxxxxx",
+        "oldPrimaryClusterId": "in01-primary",
+        "newPrimaryClusterId": "in01-secondary",
+        "jobId": "job-xxxxxxxxxxxxxxxx"
+      }
+    }
+    ```
 
 ### 强切后\{#after-the-failover}
 
@@ -220,24 +281,24 @@ Zilliz Cloud 全球集群支持两种操作来更改主集群所在的区域：
 下表总结了优雅切换和强切期间及完成后，全球 Endpoint 和公共 Endpoint 的行为。
 
 <table>
-    <tr>
-        <th><p>Endpoint 类型</p></th>
-        <th><p>优雅切换期间</p></th>
-        <th><p>强切期间</p></th>
-        <th><p>完成后</p></th>
-    </tr>
-    <tr>
-        <td><p>全球 Endpoint</p></td>
-        <td><p>写入短暂暂停，随后路由到新主集群。读取不受影响。</p></td>
-        <td><p>写入不可用，直到新主集群提升完成。从集群上的读取可用。</p></td>
-        <td><p>写入和读取自动路由到新主集群和从集群。无需修改代码。</p></td>
-    </tr>
-    <tr>
-        <td><p>公共 Endpoint</p></td>
-        <td><p>各集群的公共 Endpoint 保持不变。原主集群变为从集群。</p></td>
-        <td><p>原主集群被废弃。新主集群的公共 Endpoint 接受写入。</p></td>
-        <td><p>需要更新应用，使用新主集群的公共 Endpoint 进行写入。</p></td>
-    </tr>
+   <tr>
+     <th><p><strong>Endpoint 类型</strong></p></th>
+     <th><p><strong>优雅切换期间</strong></p></th>
+     <th><p><strong>强切期间</strong></p></th>
+     <th><p><strong>完成后</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>全球 Endpoint</p></td>
+     <td><p>写入短暂暂停，随后路由到新主集群。读取不受影响。</p></td>
+     <td><p>写入不可用，直到新主集群提升完成。从集群上的读取可用。</p></td>
+     <td><p>写入和读取自动路由到新主集群和从集群。无需修改代码。</p></td>
+   </tr>
+   <tr>
+     <td><p>公共 Endpoint</p></td>
+     <td><p>各集群的公共 Endpoint 保持不变。原主集群变为从集群。</p></td>
+     <td><p>原主集群被废弃。新主集群的公共 Endpoint 接受写入。</p></td>
+     <td><p>需要更新应用，使用新主集群的公共 Endpoint 进行写入。</p></td>
+   </tr>
 </table>
 
 ## 对进行中任务的影响\{#impact-on-in-progress-tasks}

@@ -123,3 +123,4 @@ import Admonition from '@theme/Admonition';
 ## 集群指标与告警\{#}
 
 全球集群中的每个集群（包括主集群和从集群）都暴露与普通 Dedicated 集群相同的指标。您可以在集群详情页查看这些指标、为这些指标创建告警，或将其导出到外部监控系统。详情请参见[指标与告警快速参考](./metrics-alerts-reference)。
+

@@ -1,11 +1,12 @@
 ---
 title: "使用 Struct Array 进行 Schema 设计 | BYOC"
 slug: /schema-design-with-structs
+sidebar_key: schema-design-with-structs
 sidebar_label: "Struct Array 设计指南"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "现代 AI 应用，尤其是在物联网（IoT）和自动驾驶领域，通常会对丰富的结构化事件进行推理：带有时间戳和向量嵌入的传感器读数、带有错误代码和音频片段的诊断日志，或带有位置、速度和场景上下文的行程片段。这些应用要求数据库原生支持嵌套数据的存储和搜索。 | BYOC"
 type: origin
@@ -69,7 +70,7 @@ Struct Array 字段允许您将一组有序的 Structs 存入其中，每个 Str
 
 索引对于向量字段是必需的，包括集合中的向量字段和在结构体中定义的向量字段。对于结构体中的向量字段，您应该使用 `AUTOINDEX` 作为索引类型，使用 `MAX_SIM` 系列相似度类型作为度量类型。
 
-关于 Struct Array 的更多限制，可以阅读[使用限制](./use-array-of-structs#limits)一节的内容。
+关于 Struct Array 的更多限制，可以阅读[使用限制](./use-array-of-structs)一节的内容。
 
 ## 一个现实世界的例子：为自动驾驶数据集 CoVLA 建模\{#a-real-world-example-modeling-the-covla-dataset-for-autonomous-driving}
 
@@ -306,7 +307,7 @@ CoVLA 数据集是一个大规模、多模态的驾驶数据集，包含 10000 �
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>虽然 front_car 对象并不包含向量，但是因为数据体积超过 JSON 字段的上限，你仍然需要将其作为 Struct Array 引入。</p>
+    虽然 front_car 对象并不包含向量，但是因为数据体积超过 JSON 字段的上限，你仍然需要将其作为 Struct Array 引入。
 
     </Admonition>
 

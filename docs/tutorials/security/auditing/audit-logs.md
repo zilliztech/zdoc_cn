@@ -99,7 +99,7 @@ import Procedures from '@site/src/components/Procedures';
 
 ### 操作步骤\{#procedure}
 
-![zh-configure-auditing-1](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-configure-auditing-1.png "zh-configure-auditing-1")
+![I1hiwIU8lh04ADbBQdGceiHTnFM](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/I1hiwIU8lh04ADbBQdGceiHTnFM.png)
 
 <Procedures>
 
@@ -107,9 +107,9 @@ import Procedures from '@site/src/components/Procedures';
 
 1. 在目标项目页面，选择**集群**。
 
-1. 进入目标集群的详情页面，选择**审计日志**选项卡。当集群处于创建中、删除中或已删除状态时，该选项卡将不可用。
+1. 进入目标集群的详情页面，选择**日志**选项卡。当集群处于创建中、删除中或已删除状态时，该选项卡将不可用。
 
-1. 在**审计日志**区域，点击**开启**。
+1. 在**审计日志**区域，点击**配置**。
 
 1. 在弹出的对话框中，指定对象存储集成配置信息：
 
@@ -125,7 +125,7 @@ import Procedures from '@site/src/components/Procedures';
 
     - **导出路径**：指定在存储桶中存放审计日志的目录路径。
 
-1. 点击**开启**。当**审计日志**状态显示为**运行中**时，说明已成功启用。如果状态显示为异常，请参阅[常见问题](./audit-logs#faq)获取故障排查方法。
+1. 点击**保存**。当**审计日志**状态显示为**运行中**时，说明已成功启用。如果状态显示为异常，请参阅[常见问题](./audit-logs#faq)获取故障排查方法。
 
 </Procedures>
 
@@ -137,7 +137,7 @@ import Procedures from '@site/src/components/Procedures';
 
 启用审计日志后，您可以根据需要编辑其配置或将其禁用。
 
-![zh-configure-auditing-2](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-configure-auditing-2.png "zh-configure-auditing-2")
+![HFfowWebphLNCMbB7yacq1C1nzc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HFfowWebphLNCMbB7yacq1C1nzc.png)
 
 ## 常见问题\{#faq}
 

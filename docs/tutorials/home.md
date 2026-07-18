@@ -908,7 +908,3 @@ Zilliz Cloud 提供如下集群部署方式：
 </Blocks>
 
 <Banner bannerText="仍旧无法找到您需要的信息？" bannerLinkText="试试 Ask AI" />
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />

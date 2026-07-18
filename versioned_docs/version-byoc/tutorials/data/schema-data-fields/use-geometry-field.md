@@ -1,16 +1,17 @@
 ---
 title: "Geometry 类型 | BYOC"
 slug: /use-geometry-field
+sidebar_key: use-geometry-field
 sidebar_label: "Geometry 类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在构建地理信息系统 (GIS)、地图工具或基于位置的服务 (LBS) 等应用时，通常需要存储和查询几何数据。 | BYOC"
 type: origin
 token: IMamwu8Qyiaad2kbkJjc7p9Snag
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -43,7 +44,7 @@ Milvus 中的 `GEOMETRY` 数据类型为此提供了解决方案，使您能够�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>要使用 GEOMETRY 类型，请将您的 SDK 升级至最新版本。</p>
+要使用 GEOMETRY 类型，请将您的 SDK 升级至最新版本。
 
 </Admonition>
 
@@ -194,6 +195,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"schema\": {
@@ -234,7 +236,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在此示例中，Collection 的 Schema 中定义的 GEOMETRY 字段允许空值（<code>nullable=True</code>）。有关详细信息，请参考 <a href="./nullable-and-default">Nullable 和默认值</a>。</p>
+在此示例中，Collection 的 Schema 中定义的 GEOMETRY 字段允许空值（`nullable=True`）。有关详细信息，请参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -360,6 +362,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"data\": [
@@ -491,6 +494,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/indexes/create" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"indexParams\": [
@@ -507,6 +511,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/load" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\"
   }"
@@ -536,7 +541,7 @@ sleep 3
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>某些运算符（如 <code>ST_DWITHIN</code>）可能需要额外的参数。有关各运算符的详细说明和使用示例，请参阅 <a href="./geometry-operators">Geometry 操作符</a>。</p>
+某些运算符（如 `ST_DWITHIN`）可能需要额外的参数。有关各运算符的详细说明和使用示例，请参阅 [Geometry 操作符](./geometry-operators)。
 
 </Admonition>
 
@@ -610,12 +615,12 @@ const top_left_lon = 13.403683;
 const top_left_lat = 52.520711;
 const bottom_right_lon = 13.455868;
 const bottom_right_lat = 52.495862;
-const bounding_box_wkt = `POLYGON((${top_left_lon} ${top_left_lat}, ${bottom_right_lon} ${top_left_lat}, ${bottom_right_lon} ${bottom_right_lat}, ${top_left_lon} ${bottom_right_lat}, ${top_left_lon} ${top_left_lat}))`;
+const bounding_box_wkt = \`POLYGON((${top_left_lon} ${top_left_lat}, ${bottom_right_lon} ${top_left_lat}, ${bottom_right_lon} ${bottom_right_lat}, ${top_left_lon} ${bottom_right_lat}, ${top_left_lon} ${top_left_lat}))\`;
 
 const query_results = await milvusClient.query({
   collection_name: 'geo_collection',
   // highlight-next-line
-  filter: `st_within(geo, '${bounding_box_wkt}')`,
+  filter: \`st_within(geo, '${bounding_box_wkt}')\`,
   output_fields: ['name', 'geo'],
 });
 for (const ret of query_results.data) {
@@ -641,6 +646,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"st_within(geo, 'POLYGON((13.403683 52.520711, 13.455868 52.520711, 13.455868 52.495862, 13.403683 52.495862, 13.403683 52.520711))')\",
@@ -707,12 +713,12 @@ for (QueryResp.QueryResult result : queryResults) {
 const center_point_lon = 13.403683;
 const center_point_lat = 52.520711;
 const radius_meters = 1000.0;
-const central_point_wkt = `POINT(${center_point_lon} ${center_point_lat})`;
+const central_point_wkt = \`POINT(${center_point_lon} ${center_point_lat})\`;
 
 const query_results_dwithin = await milvusClient.query({
   collection_name: 'geo_collection',
   // highlight-next-line
-  filter: `st_dwithin(geo, '${central_point_wkt}', ${radius_meters})`,
+  filter: \`st_dwithin(geo, '${central_point_wkt}', ${radius_meters})\`,
   output_fields: ['name', 'geo'],
 });
 for (const ret of query_results_dwithin.data) {
@@ -738,6 +744,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"st_dwithin(geo, 'POINT(13.403683 52.520711)', 1000.0)\",
@@ -814,11 +821,11 @@ const search_results = await milvusClient.search({
   limit: 3,
   output_fields: ["name", "geo"],
   // highlight-next-line
-  filter: `st_within(geo, '${bounding_box_wkt}')`,
+  filter: \`st_within(geo, '${bounding_box_wkt}')\`,
 });
 for (const hits of search_results.results) {
   for (const hit of hits) {
-    console.log(`hit: ${JSON.stringify(hit)}`);
+    console.log(\`hit: ${JSON.stringify(hit)}\`);
   }
 }
 ```
@@ -853,6 +860,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   --data "{
     \"collectionName\": \"geo_collection\",
     \"data\": [${QUERY_VECTOR}],
@@ -886,4 +894,4 @@ curl --request POST \
 
 ### GEOMETRY 字段是否可以设置为可空 (nullable) 或指定默认值？\{#Can-I-define-the-GEOMETRY-field-as-nullable-or-set-a-default-value}
 
-可以。GEOMETRY 字段支持 nullable 属性，并可设置 WKT 格式 的默认值。更多信息请参考 [Nullable 和默认值](./nullable-and-default)。
+可以。GEOMETRY 字段支持 nullable 属性，并可设置 WKT 格式 的默认值。更多信息请参考 [Nullable 和默认值](./nullable-fields)。

@@ -33,7 +33,11 @@ import Supademo from '@site/src/components/Supademo';
 
 控制台 IP 白名单仅针对组织 Web 控制台生效，不影响对项目集群的访问。若需限制对集群的访问，请参阅[设置集群 IP 白名单](./setup-whitelist)。
 
-https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限**企业版**项目使用。
+
+</Admonition>
 
 ## 限制\{#limits}
 

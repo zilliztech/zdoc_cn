@@ -1,11 +1,12 @@
 ---
 title: "License 管理 | On-Premise"
 slug: /license-usage
+sidebar_key: license-usage
 sidebar_label: "License 管理"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Milvus 商业版镜像使用 Zilliz 自主开发的 Cardinal 内核，集成了 License 校验逻辑。启动时，需要您导入由 Zilliz 生成的 License 配置信息进行授权，否则 Milvus 实例将无法启动。 | On-Premise"
 type: origin
@@ -55,9 +56,9 @@ spec:
 
 当正确导入 License 配置后，启动 Milvus 镜像部署流程时会提示 `Success check license` 信息。
 
-![DMpebCHp6o4tK6xfMT1cI5YanSb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DMpebCHp6o4tK6xfMT1cI5YanSb.png)
+![DMpebCHp6o4tK6xfMT1cI5YanSb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/DMpebCHp6o4tK6xfMT1cI5YanSb.png "DMpebCHp6o4tK6xfMT1cI5YanSb")
 
 License 中包含了过期时间信息。当 License 过期后 Milvus 实例将无法运行。此时，可以通过检查 Milvus 实例日志的方式查看到 License 过期提示信息。
 
-![Es87bgPcEoffO9xr1UpcsHvtnAc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Es87bgPcEoffO9xr1UpcsHvtnAc.png)
+![Es87bgPcEoffO9xr1UpcsHvtnAc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Es87bgPcEoffO9xr1UpcsHvtnAc.png "Es87bgPcEoffO9xr1UpcsHvtnAc")
 

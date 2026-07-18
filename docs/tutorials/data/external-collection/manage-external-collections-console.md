@@ -36,7 +36,7 @@ import Supademo from '@site/src/components/Supademo';
 
 开始之前，请确保您已创建 [External Volume](./external-volume)。
 
-<Supademo id="cmokttyiy05dxpimdm3d8vnxv" title=""  />
+<Supademo id="cmpdu0ib10p9uqm8qfrtzqu8i" title=""  />
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -44,7 +44,7 @@ import Supademo from '@site/src/components/Supademo';
 
 </Admonition>
 
-## Refresh 数据\{#refresh-data}
+## 刷新 Collection 数据\{#refresh-data}
 
 ![SSXSw4P7jhepf8bIQ8KcBuSrnch](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/SSXSw4P7jhepf8bIQ8KcBuSrnch.png)
 
@@ -58,5 +58,5 @@ import Supademo from '@site/src/components/Supademo';
 
 删除 External Collection 只会移除 Zilliz Cloud 中的 Schema、Manifest 和索引，您的数据仍会完整保留在对象存储中。
 
-<Supademo id="cmokvd5hr06grpimd8ugly112" title=""  />
+<Supademo id="cmpdubvzy0qcaqm8qwyypazbd" title=""  />
 

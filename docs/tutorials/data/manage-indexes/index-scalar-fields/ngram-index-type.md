@@ -208,37 +208,13 @@ NGRAM 索引会被应用于：
 
 - 前缀匹配
 
-    ```python
-    # Match any string that starts with the substring "database"
-    filter = 'text LIKE "database%"'
-    ```
-
 - 后缀匹配
-
-    ```python
-    # Match any string that ends with the substring "database"
-    filter = 'text LIKE "%database"'
-    ```
 
 - 中缀匹配
 
-    ```python
-    # Match any string that contains the substring "database" anywhere
-    filter = 'text LIKE "%database%"'
-    ```
-
 - 通配符匹配
 
-    ```python
-    # Match any string where "st" appears first, and "um" appears later in the text 
-    filter = 'text LIKE "%st%um%"'
-    ```
-
 - JSON 路径查询
-
-    ```python
-    filter = 'json_field["body"] LIKE "%database%"'
-    ```
 
 有关更多信息，请参考[基本操作符](./basic-filtering-operators)。
 

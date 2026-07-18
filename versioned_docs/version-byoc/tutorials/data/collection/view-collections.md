@@ -1,11 +1,12 @@
 ---
 title: "查看 Collection | BYOC"
 slug: /view-collections
+sidebar_key: view-collections
 sidebar_label: "查看 Collection"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "您既可以查看当前连接的数据库中已创建的 Collection 名称列表，也可以针对某个 Collection 了解其详细情况。 | BYOC"
 type: origin
@@ -81,7 +82,7 @@ System.out.println(resp.getCollectionNames());
 import { MilvusClient } from '@zilliz/milvus2-sdk-node';
 
 const client = new MilvusClient({
-    address: 'localhost:19530',
+    address: 'YOUR_CLUSTER_ENDPOINT',
     token: 'YOUR_CLUSTER_TOKEN'
 });
 
@@ -104,7 +105,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 token := "YOUR_CLUSTER_TOKEN"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
@@ -134,7 +135,30 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/list" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{}'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{"YOUR_CLUSTER_ENDPOINT", "YOUR_CLUSTER_TOKEN"};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::ListCollectionsResponse response;
+status = client->ListCollections(milvus::ListCollectionsRequest(), response);
+for (auto& name : response.CollectionNames()) {
+    std::cout << "\t" << name << std::endl;
+}
 ```
 
 </TabItem>
@@ -211,9 +235,27 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/describe" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup"
 }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::DescribeCollectionResponse response;
+auto status = client->DescribeCollection(milvus::DescribeCollectionRequest()
+                                            .WithCollectionName("quick_setup"),
+                                         response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+std::cout << "Collection name: " << response.Desc().CollectionName() << std::endl;
+std::cout << "Collection ID: " << response.Desc().ID() << std::endl;
 ```
 
 </TabItem>

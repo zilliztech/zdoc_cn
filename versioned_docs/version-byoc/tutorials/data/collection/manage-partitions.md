@@ -1,16 +1,17 @@
 ---
 title: "管理 Partition | BYOC"
 slug: /manage-partitions
+sidebar_key: manage-partitions
 sidebar_label: "管理 Partition"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collection 具有相同的数据结构，但只包含该 Collection 的一部分数据。本节将介绍如何管理 Partition 及相关注意事项。 | BYOC"
 type: origin
 token: T944whOEaiDKWbkhJVUcLxmNnRg
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -47,7 +48,7 @@ Partition 是 Collection 的子集。每个 Partition 都与其所在的 Collect
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在 Zilliz Cloud 中，Partition Key 是一种基于 Partition 的搜索优化方案，用来根据用户指定的标量字段的取值自动将 Entity 存放到不同的 Partition 中。该功能通常用来实现基于 Partition 的多租户能力，提升搜索性能。如果您想要了解 Partition Key 的详细信息，可以参考<a href="./use-partition-key">使用 Partition Key</a>。</p>
+在 Zilliz Cloud 中，Partition Key 是一种基于 Partition 的搜索优化方案，用来根据用户指定的标量字段的取值自动将 Entity 存放到不同的 Partition 中。该功能通常用来实现基于 Partition 的多租户能力，提升搜索性能。如果您想要了解 Partition Key 的详细信息，可以参考[使用 Partition Key](./use-partition-key)。
 
 </Admonition>
 
@@ -145,7 +146,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
@@ -177,6 +178,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/list" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -187,6 +189,34 @@ curl --request POST \
 #         "_default"
 #     ]
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{"YOUR_CLUSTER_ENDPOINT", "YOUR_CLUSTER_TOKEN"};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::ListPartitionsResponse response;
+status = client->ListPartitions(milvus::ListPartitionsRequest()
+                                    .WithCollectionName("my_collection"),
+                                response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+for (auto& info : response.PartitionInfos()) {
+    std::cout << "\t" << info.Name() << std::endl;
+}
 ```
 
 </TabItem>
@@ -304,6 +334,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionName": "partitionA"
@@ -318,6 +349,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/list" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -329,6 +361,29 @@ curl --request POST \
 #         "partitionA"
 #     ]
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->CreatePartition(milvus::CreatePartitionRequest()
+                                         .WithCollectionName("my_collection")
+                                         .WithPartitionName("partitionA"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::ListPartitionsResponse response;
+status = client->ListPartitions(milvus::ListPartitionsRequest().WithCollectionName("my_collection"), response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+for (auto& info : response.PartitionInfos()) {
+    std::cout << "\t" << info.Name() << std::endl;
+}
 ```
 
 </TabItem>
@@ -418,6 +473,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/has" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionName": "partitionA"
@@ -429,6 +485,19 @@ curl --request POST \
 #        "has": true
 #     }
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::HasPartitionResponse response;
+auto status = client->HasPartition(milvus::HasPartitionRequest()
+                                    .WithCollectionName("my_collection")
+                                    .WithPartitionName("partitionA"),
+                                   response);
+std::cout << response.Has() << std::endl;
 ```
 
 </TabItem>
@@ -551,6 +620,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/load" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionNames": ["partitionA"]
@@ -565,6 +635,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/get_load_state" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionNames": ["partitionA"]
@@ -578,6 +649,29 @@ curl --request POST \
 #         "message": ""
 #     }
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->LoadPartitions(milvus::LoadPartitionsRequest()
+                                        .WithCollectionName("my_collection")
+                                        .AddPartitionName("partitionA"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::GetLoadStateResponse response;
+status = client->GetLoadState(milvus::GetLoadStateRequest()
+                                .WithCollectionName("my_collection")
+                                .AddPartitionName("partitionA"),
+                              response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+std::cout << std::to_string(response.State()) << std::endl;
 ```
 
 </TabItem>
@@ -689,6 +783,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/release" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionNames": ["partitionA"]
@@ -703,6 +798,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/get_load_state" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionNames": ["partitionA"]
@@ -716,6 +812,29 @@ curl --request POST \
 #         "message": ""
 #     }
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->ReleasePartitions(milvus::ReleasePartitionsRequest()
+                                .WithCollectionName("my_collection")
+                                .AddPartitionName("partitionA"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::GetLoadStateResponse response;
+status = client->GetLoadState(milvus::GetLoadStateRequest()
+                                .WithCollectionName("my_collection")
+                                .AddPartitionName("partitionA"),
+                              response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+std::cout << std::to_string(response.State()) << std::endl;
 ```
 
 </TabItem>
@@ -864,6 +983,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/release" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionNames": ["partitionA"]
@@ -878,6 +998,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/drop" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "partitionName": "partitionA"
@@ -892,6 +1013,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/partitions/list" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -902,6 +1024,39 @@ curl --request POST \
 #         "_default"
 #     ]
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->ReleasePartitions(milvus::ReleasePartitionsRequest()
+                                            .WithCollectionName("my_collection")
+                                            .AddPartitionName("partitionA"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+status = client->DropPartition(milvus::DropPartitionRequest()
+                                .WithCollectionName("my_collection")
+                                .WithPartitionName("partitionA"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::ListPartitionsResponse response;
+status = client->ListPartitions(milvus::ListPartitionsRequest()
+                                    .WithCollectionName("my_collection"),
+                                response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+for (auto& info : response.PartitionInfos()) {
+    std::cout << "\t" << info.Name() << std::endl;
+}
+
 ```
 
 </TabItem>

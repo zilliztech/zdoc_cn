@@ -1,11 +1,12 @@
 ---
 title: "管理 MFA | BYOC"
 slug: /multi-factor-auth
+sidebar_key: multi-factor-auth
 sidebar_label: "管理 MFA"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本教程将介绍如何在 Zilliz Cloud 账号设置中管理多重身份认证（MFA）。目前，Zilliz Cloud 仅支持通过邮箱进行多重身份认证。 | BYOC"
 type: origin
@@ -47,7 +48,7 @@ import Procedures from '@site/src/components/Procedures';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>如未收到验证码或验证码过期，请点击重新发送验证码。</p>
+    如未收到验证码或验证码过期，请点击重新发送验证码。
 
     </Admonition>
 
@@ -65,11 +66,11 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 关闭 MFA\{#disable-mfa}
 
-undefined
+![disable_mfa](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/disable_mfa.png "disable_mfa")
 
-如过您已开启 MFA，请执行以下步骤以关闭 MFA：
+如果您已开启 MFA，请执行以下步骤以关闭 MFA：
 
-\<Procedures>
+<Procedures>
 
 1. 登录 [Zilliz Cloud 界面](https://cloud.zilliz.com.cn/login)。
 
@@ -81,11 +82,11 @@ undefined
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>如未收到验证码或验证码过期，请点击重新发送验证码。</p>
+    如未收到验证码或验证码过期，请点击重新发送验证码。
 
     </Admonition>
 
 1. MFA 关闭成功后，界面右上角弹出确认信息"关闭邮箱验证"。
 
-\<Procedures>
+</Procedures>
 

@@ -32,6 +32,14 @@ import TabItem from '@theme/TabItem';
 
 另外，您还可以参考我们的[数据导入指南](./data-import-zero-to-hero)。其中包含了数据准备和数据导入两个部分的内容。
 
+<Admonition type="info" icon="📘" title="说明">
+
+Zilliz Cloud 允许您将数据从任意对象存储导入到任意 Zilliz Cloud 集群，不用考虑托管集群的云服务商。例如，您可以将存储在阿里云上的数据导入到部署在腾讯云上的集群。
+
+但是，Zilliz Cloud 仍旧建议您从与目标集群位于相同云服务商相同云地域的对象存储桶中导入数据，以获得低时延、高稳定的数据操作体验。
+
+</Admonition>
+
 ## 安装依赖\{#install-denpendencies}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
@@ -448,7 +456,7 @@ public static void main(String[] args) throws Exception {
 
 两种方式都允许您从外部的云服务对象存储中导入数据。不同之处在于：
 
--  External Volume 通过存储集成来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
+-  External Volume 通过[存储集成](./integrate-with-storage-bucket)来管理凭证。凭证只需配置一次，即可在多个 Volume 和操作中复用。数据工程师无需直接接触云存储密钥。
 
 - 直接从外部存储导入时，需要在每次导入请求中提供凭证（access key、secret key）。这种方式更适合一次性导入，但不具备凭证隔离和复用能力。
 

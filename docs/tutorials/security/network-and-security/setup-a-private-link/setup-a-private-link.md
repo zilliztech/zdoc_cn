@@ -37,6 +37,14 @@ Zilliz Cloud 允许您通过私网连接（PrivateLink）访问您的集群。�
 
 您可以根据您的 Zilliz Cloud 集群所在云服务商选择参考如下文档：
 
+<Admonition type="info" icon="📘" title="说明">
+
+每个项目最多可创建 10 个 Private Endpoint。
+
+</Admonition>
+
+
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />

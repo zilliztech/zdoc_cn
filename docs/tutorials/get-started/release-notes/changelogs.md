@@ -8,7 +8,7 @@ last_modified: FALSE
 deprecate_since: FALSE
 beta: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 4 月 11 日 | Cloud"
+description: "最近更新：2026 年 6 月 24 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 1
@@ -28,7 +28,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 4 月 11 日
+**最近更新**：2026 年 6 月 24 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -40,13 +40,109 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        - 外部 Volume 即将上线。
+        - 更多 Vector Lakebase 特性正在开发中。
 
     </div>
 
 </Grid>
 
 ## 2026\{#2026}
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 6 月 24 日](./release-notes-2606#enhancements)**
+
+    </div>
+
+    <div>
+
+        - 💾 您现在可以启用高级定时备份设置更加灵活地调整您的备份计划。具体内容可以参考[设置定时自动备份](./schedule-automatic-backups)。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 6 月 17 日](./release-notes-2606#enhancements)**
+
+    </div>
+
+    <div>
+
+        - 💾 您现在可以在恢复集群备份时指定新集群兼容的 Milvus 版本。具体内容可以参考[恢复备份](./restore-from-snapshot)及[回收站](./use-recycle-bin)。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 6 月 3 日](./release-notes-2606#nullable-vector)**
+
+    </div>
+
+    <div>
+
+        - 🔐 向量字段现已支持 `nullable` 属性，这意味着您可以为已有 Collection 新增向量字段。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 5 月 20 日](./release-notes-2605#vector-lakebase-public-preview)**
+
+    </div>
+
+    <div>
+
+        - 🏠 Zilliz Cloud 从向量数据库产品演进为 Vector Lakebase 平台，重点功能包括： 
+
+            - [按需搜索](./on-demand-compute)
+
+            - [外部数据湖搜索](./external-collection)
+
+        - 🐦 Milvus v3.0.x 在 Zilliz Cloud 进入公测（Public Review），主要功能包括：    
+
+            - [外部集合](./external-collection)与回填
+
+            - [可空向量](./nullable-fields)，
+
+            - Embedding 列表检索与过滤（Embedding list searches and filtering），
+
+            - [MinHash Function](./minhash-function)
+
+            - [搜索](./single-vector-search#sort-search-results-by-scalar-fields)与[查询](./get-and-scalar-query#aggregate-query-results)的 Order by，
+
+            - [快照](./snapshots)（Snapshots），
+
+            - [Entity](./set-collection-ttl#set-entity-ttl)[ TTL](./set-collection-ttl#set-entity-ttl)，
+
+            - Force merge，
+
+            - 自定义词典与分词器，以及
+
+            - Spark 语义去重与异常检测
+
+        - 💾 用于导入、迁移和外部集合流程的只读 [External Volumes](./external-volume) 已上线。
+
+        - 🔍︎ Collection 级[大 Top-K](./use-large-topk) 功能可用，已将启用集合的最大返回实体数从 16,384 扩展到 1,000,000。
+
+        - 🗺️ 项目中已支持[地](./manage-projects#add-project-regions)[域约束](./manage-projects#add-project-regions)，帮助企业管理数据驻留，并让区域数据平面访问边界更清晰。
+
+    </div>
+
+</Grid>
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -234,7 +330,7 @@ import Grid from '@site/src/components/Grid';
 
         - ⏰   为您的集群[设置定时告警间隔时间](./manage-project-alerts#alert-settings)，减少冗余告警信息。
 
-        - 🔧   无须重新创建 Collection 即可[启用 Dynamic Field](./modify-collections#example-4-enable-dynamic-field)。
+        - 🔧   无须重新创建 Collection 即可[启用 Dynamic Field](./modify-collections#example-5-enable-dynamic-field)。
 
         - 💳   订阅计划现为项目级设置，而集群则保留原有的部署方案。更多详情，可阅读[Zilliz Cloud 版本对比](./select-zilliz-cloud-service-plans)。
 

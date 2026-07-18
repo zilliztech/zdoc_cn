@@ -32,7 +32,7 @@ import Supademo from '@site/src/components/Supademo';
 
 为实现主动管理，您可以在[指标](./view-cluster-metric-charts)页面查看 **Query CU 加载容量**，判断是否需要扩容。根据业务需求和访问模式，您可以上调 Query CU 数量以扩大集群容量，或在需求量减少时下调 Query CU 数量以降低成本。
 
-注意：对于 1-12 Query CU 的集群，请直接进行集群扩缩容。对于超过 12 Query CU 的集群，请增加 [Replica 数量](./manage-replica)。
+注意：对于 1-8 Query CU 的集群，请直接进行集群扩缩容。对于超过 8 Query CU 的集群，请增加 [Replica 数量](./manage-replica)。
 
 本指南将介绍如何根据变化的工作负载调整集群 Query CU 数量。
 
@@ -54,13 +54,13 @@ On-demand 集群会自动扩缩容：有请求到达时自动拉起，空闲时�
 
         - Dedicated 企业版集群：最多支持 2048  Query CU
 
-        - **Query CU 数量 × Replica 数量**的乘积不得超过 20480。
+        - **Query CU 数量 × Replica 数量**的乘积不得超过 204,800。
 
         如需更大 Query CU 数量，请[联系销售](http://zilliz.com.cn/contact-sales)。
 
     - **缩容**
 
-        - 对于已设置多副本（Replica）的集群，Query CU 数量不得缩减到低于 12 CU。
+        - 对于已设置多副本（Replica）的集群，Query CU 数量不得缩减到低于 8 CU。
 
         - 缩容请求仅在满足以下条件时才会成功：
 
@@ -69,6 +69,8 @@ On-demand 集群会自动扩缩容：有请求到达时自动拉起，空闲时�
             - 当前 Collection 和 Partition 数量小于新 Query CU 数量所支持的最大 Collection 和 Partition 数。
 
 - **扩缩容过程中**：集群状态将变为“修改中”，在此期间无法执行任何操作。如触发多个扩缩容任务，将按触发时间顺序依次处理。扩缩容任务完成时间取决于数据量。
+
+- **扩缩容过程中的计费**：在 Query CU 扩缩容任务执行期间，Zilliz Cloud 会继续按照原有的 Query CU 配置对集群计费。只有当扩缩容任务成功完成后，才会按照新的 Query CU 数量计费。如果扩缩容任务仍在进行中或未成功完成，则仍按照原有的 Query CU 配置计费。
 
 - **性能影响**：扩缩容过程中可能会出现轻微的服务抖动。
 
@@ -102,7 +104,11 @@ curl --request POST \
 
 ## 定时扩缩容\{#scheduled-scaling}
 
-https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限**企业版**项目使用。
+
+</Admonition>
 
 定时扩缩容的 2 个调度计划之间时间间隔必须大于 30 分钟。
 
@@ -149,7 +155,11 @@ curl --request POST \
 
 ## 动态扩缩容\{#dynamic-scaling}
 
-https://zilliverse.feishu.cn/sync/EaQKd6kURsSBc1bD8Loc4RsjnCg
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限**企业版**项目使用。
+
+</Admonition>
 
 Zilliz Cloud 支持 Query CU 动态扩缩容。启用后，系统会基于实时 Query CU 加载容量指标自动调整 Query CU 资源，确保高效处理工作负载且不中断服务。
 
@@ -256,13 +266,16 @@ curl --request POST \
 
 ## 常见问题\{#faq}
 
-1. **集群缩容时有哪些限制？**
+**集群缩容时有哪些限制？**
 
-    - 启用了 Replica 的集群，缩容后 Query CU 数量不得少于 8。
+- 启用了 Replica 的集群，缩容后 Query CU 数量不得少于 8。
 
-    - 缩容请求仅在同时满足以下两个条件时才会成功：
+- 缩容请求仅在同时满足以下两个条件时才会成功：
 
-        - 当前数据量小于新 Query CU 容量的 80%；
+    - 当前数据量小于新 Query CU 容量的 80%；
 
-        - 当前的 Collection 和 Partition 数量在新 Query CU 所支持的上限范围内。
+    - 当前的 Collection 和 Partition 数量在新 Query CU 所支持的上限范围内。
 
+**当我对 Dedicated 集群进行扩缩容时，扩缩容期间会按照旧配置还是新配置计费？**
+
+扩缩容期间，将按照集群的原有配置计费。只有当扩缩容任务成功完成后，才会按照新的配置计费。

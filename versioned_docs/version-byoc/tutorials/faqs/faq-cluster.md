@@ -4,7 +4,7 @@ slug: /faq-cluster
 sidebar_label: "FAQ：集群"
 beta: FALSE
 notebook: FALSE
-description: " | BYOC"
+description: "本文列举了在使用 Zilliz Cloud 集群时可能遇到的常见问题及对应解决方法。 | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 2
@@ -17,7 +17,7 @@ sidebar_position: 2
 
 ## 目录
 
-- [如何为集群缩容？](#how-can-i-scale-down-my-cluster-cu-size)
+- [如何为 Dedicated 集群缩容？](#how-can-i-scale-down-my-cluster-cu-size)
 - [为什么会连接超时以及如何处理连接超时报错？](#how-can-i-deal-with-a-connection-timeout-error-when-i-attempt-to-connect-to-zilliz-cloud)
 - [为什么无法连接集群?](#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created)
 - [如何解决使用 Node.js SDK 无法连接 Zilliz Cloud 的问题?](#what-can-i-do-if-i-cannot-connect-to-zilliz-cloud-with-nodejs-sdk)
@@ -29,7 +29,7 @@ sidebar_position: 2
 
 
 
-### 如何为集群缩容？ \{#how-can-i-scale-down-my-cluster-cu-size}
+### 如何为 Dedicated 集群缩容？ \{#how-can-i-scale-down-my-cluster-cu-size}
 
 如果您需要为集群缩容，请[提交工单](https://support.zilliz.com.cn/hc/zh-cn)。
 
@@ -45,9 +45,9 @@ sidebar_position: 2
 
     Zilliz Cloud 集群已启用 TLS。请确保在连接参数中加入 `secure`，并将其设置为 `true`。未正确设置改参数可能导致连接失败和超时。
 
-- 未将本地 IP 地址加入白名单
+- VPC 安全组设置有误
 
-    连接集群时，请确保关闭 VPN /代理，并已将获取到的公共 IP 地址（不可使用私有 IP 地址）加入集群白名单中。
+    如果连接超时，可能需要检查您的 VPC 安全组设置，确保连接源 IP 地址可用于连接。
 
 ### 为什么无法连接集群? \{#why-cant-i-connect-to-the-cluster-after-the-cluster-is-created}
 

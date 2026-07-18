@@ -11,7 +11,7 @@ notebook: FALSE
 description: "在构建地理信息系统 (GIS)、地图工具或基于位置的服务 (LBS) 等应用时，通常需要存储和查询几何数据。 | Cloud"
 type: origin
 token: IMamwu8Qyiaad2kbkJjc7p9Snag
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -195,6 +195,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"schema\": {
@@ -235,7 +236,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-在此示例中，Collection 的 Schema 中定义的 GEOMETRY 字段允许空值（`nullable=True`）。有关详细信息，请参考 [Nullable 和默认值](./nullable-and-default)。
+在此示例中，Collection 的 Schema 中定义的 GEOMETRY 字段允许空值（`nullable=True`）。有关详细信息，请参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -361,6 +362,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"data\": [
@@ -492,6 +494,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/indexes/create" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"indexParams\": [
@@ -508,6 +511,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/load" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\"
   }"
@@ -642,6 +646,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"st_within(geo, 'POLYGON((13.403683 52.520711, 13.455868 52.520711, 13.455868 52.495862, 13.403683 52.495862, 13.403683 52.520711))')\",
@@ -739,6 +744,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"filter\": \"st_dwithin(geo, 'POINT(13.403683 52.520711)', 1000.0)\",
@@ -854,6 +860,7 @@ curl --request POST \
   --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
+  --header "Request-Timeout: 10" \
   --data "{
     \"collectionName\": \"geo_collection\",
     \"data\": [${QUERY_VECTOR}],
@@ -887,4 +894,4 @@ curl --request POST \
 
 ### GEOMETRY 字段是否可以设置为可空 (nullable) 或指定默认值？\{#Can-I-define-the-GEOMETRY-field-as-nullable-or-set-a-default-value}
 
-可以。GEOMETRY 字段支持 nullable 属性，并可设置 WKT 格式 的默认值。更多信息请参考 [Nullable 和默认值](./nullable-and-default)。
+可以。GEOMETRY 字段支持 nullable 属性，并可设置 WKT 格式 的默认值。更多信息请参考 [Nullable 和默认值](./nullable-fields)。

@@ -4,7 +4,7 @@ slug: /faq-data-import
 sidebar_label: "FAQ：数据导入"
 beta: FALSE
 notebook: FALSE
-description: " | BYOC"
+description: "本文列举了在 Zilliz Cloud 导入数据时可能遇到的常见问题及对应解决方法。 | BYOC"
 type: origin
 token: YVAzwqHdti7uHSkZL6icsY7hnpe
 sidebar_position: 4
@@ -81,5 +81,5 @@ sidebar_position: 4
       username: 'username',
       password: 'your-pass',
       channelOptions: channelOptions
-    })`
+    })\`
     ```

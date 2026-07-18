@@ -1,16 +1,17 @@
 ---
 title: "Stop | BYOC"
 slug: /stop-filter
+sidebar_key: stop-filter
 sidebar_label: "Stop"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`stop` 过滤器删除分词文本中的指定停用词，帮助消除常见且意义不大的词。您可以使用 `stopwords` 参数配置停用词列表。 | BYOC"
 type: origin
 token: PcaswIdMjiPOrAkyA0uc5aXOn0b
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -269,7 +270,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

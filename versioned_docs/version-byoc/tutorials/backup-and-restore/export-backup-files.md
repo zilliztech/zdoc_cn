@@ -1,11 +1,12 @@
 ---
 title: "导出备份文件 | BYOC"
 slug: /export-backup-files
+sidebar_key: export-backup-files
 sidebar_label: "导出备份文件"
-beta: PRIVATE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PRIVATE
 notebook: FALSE
 description: "您可以通过 Zilliz Cloud 控制台将备份文件导出至对象存储。 | BYOC"
 type: origin
@@ -35,7 +36,7 @@ import Procedures from '@site/src/components/Procedures';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能目前仅对 <strong>Dedicated</strong> 集群提供<strong>内测</strong>（Private Preview）。如需启用此功能或了解相关费用，请联系 <a href="http://support.zilliz.com.cn">Zilliz Cloud 支持团队</a>。</p>
+此功能目前仅对 **Dedicated** 集群提供**内测**（Private Preview）。如需启用此功能或了解相关费用，请联系 [Zilliz Cloud 支持团队](http://support.zilliz.com.cn)。
 
 </Admonition>
 
@@ -61,7 +62,7 @@ import Procedures from '@site/src/components/Procedures';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>只有处于<strong>创建完成</strong>状态的备份文件可以被导出。</p>
+    只有处于**创建完成**状态的备份文件可以被导出。
 
     </Admonition>
 
@@ -116,7 +117,7 @@ curl --request POST \
 
 点击**导出**后，系统会自动生成一个导出任务：
 
-\<Procedures>
+<Procedures>
 
 1. 在左侧导航栏中进入**任务**页面。
 
@@ -128,7 +129,7 @@ curl --request POST \
 
     - **失败**：任务失败。这可能是由于导出过程中使用的资源（例如角色 ARN 或备份文件）在任务执行期间被删除所导致。
 
-\<Procedures>
+</Procedures>
 
 ## 取消导出任务\{#cancel-export-job}
 
@@ -136,7 +137,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>取消任务不会移除已上传至存储空间的数据。</p>
+ 取消任务不会移除已上传至存储空间的数据。
 
 </Admonition>
 

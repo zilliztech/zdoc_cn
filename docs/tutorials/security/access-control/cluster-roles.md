@@ -104,7 +104,7 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
     ![add-cluster-role-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-role-cn.png "add-cluster-role-cn")
 
-1. 输入角色名称。
+1. 输入角色名称和描述（可选）。
 
 1. 配置角色的集群、Database、Collection 权限。选择权限组并选择目标资源。
 
@@ -126,9 +126,9 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
     如需自行组合权限创建权限组，请[联系我们](http://support.zilliz.com.cn)。
 
-    ![add-cluster-role-form-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-role-form-cn.png "add-cluster-role-form-cn")
+    ![U2Cqb3XZ0oYK9JxhLCXce3UpnPL](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/U2Cqb3XZ0oYK9JxhLCXce3UpnPL.png "U2Cqb3XZ0oYK9JxhLCXce3UpnPL")
 
-1. 点击**创建**。 每个集群中最多可创建 20 个自定义集群角色。
+1. 点击**创建**。 每个集群中最多可创建 500 个自定义集群角色。
 
 ## 将角色授予用户\{#grant-a-role-to-a-user}
 

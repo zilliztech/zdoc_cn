@@ -1,11 +1,12 @@
 ---
 title: "通过 RESTful API 导入 | BYOC"
 slug: /import-data-via-restful-api
+sidebar_key: import-data-via-restful-api
 sidebar_label: "RESTful API"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文介绍如何通过 RESTful API 将数据导入现有 Collection 中。 | BYOC"
 type: origin
@@ -36,6 +37,14 @@ import Admonition from '@theme/Admonition';
 
 - 已创建 Collection，且该 Collection 的 Schema 与示例数据集相匹配。详情请参见[创建 Collection](./manage-collections-sdks)。
 
+<Admonition type="info" icon="📘" title="说明">
+
+Zilliz Cloud 允许您将数据从任意对象存储导入到任意 Zilliz Cloud 集群，不用考虑托管集群的云服务商。例如，您可以将存储在阿里云上的数据导入到部署在腾讯云上的集群。
+
+但是，Zilliz Cloud 仍旧建议您从与目标集群位于相同云服务商相同云地域的对象存储桶中导入数据，以获得低时延、高稳定的数据操作体验。
+
+</Admonition>
+
 ## 导入数据\{#import-data}
 
 要从外部存储导入数据，需要先将数据上传到对象存储桶（如阿里云 OSS）。上传完成后，需获取文件路径和桶凭据，以便 Zilliz Cloud 从您的桶中提取数据。
@@ -52,7 +61,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为了成功导入数据，请确保目标 Collection 中的正在运行或待运行的导入任务不超过 10 个。</p>
+为了成功导入数据，请确保目标 Collection 中的正在运行或待运行的导入任务不超过 10 个。
 
 </Admonition>
 

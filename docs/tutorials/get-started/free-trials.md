@@ -11,7 +11,7 @@ notebook: FALSE
 description: "为帮助您测试 Zilliz Cloud 向量数据库特性和评估使用成本，Zilliz Cloud 提供 Free 集群和免费试用。您仅需注册账号即可，无需绑定支付方式。 | Cloud"
 type: origin
 token: WWlIwejMNiAEmmkce5fcZu4UnMd
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz

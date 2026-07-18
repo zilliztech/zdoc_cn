@@ -11,7 +11,7 @@ notebook: FALSE
 description: "`removepunct` 过滤器会从 token 流中移除单独存在的标点符号。 | Cloud"
 type: origin
 token: RA2vwGhS9itlQpkgoeXcKHVenpe
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz

@@ -44,13 +44,13 @@ import Admonition from '@theme/Admonition';
 
 ### 步骤 1. 配置包年包月集群\{#step-1-configure-annual-subscription-cluster}
 
-1. 登录 Zilliz Cloud。在合适的项目下点击 **+ 创建集群**。
+1. 登录 Zilliz Cloud。在合适的项目下点击 **Serving 集群**，随后点击 **+ 创建集群**。
 
-    ![create-annual-subscription-cluster-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/create-annual-subscription-cluster-cn.png "create-annual-subscription-cluster-cn")
+    ![GQoabFaXBoIZWOxkvvEcRvRvnze](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/GQoabFaXBoIZWOxkvvEcRvRvnze.png "GQoabFaXBoIZWOxkvvEcRvRvnze")
 
 1. 选择 **Dedicated** 部署方式并配置集群。目前仅 Dedicated 集群支持包年包月的计费方式。
 
-    ![configure-annual-subscription-cluster-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/configure-annual-subscription-cluster-cn.png "configure-annual-subscription-cluster-cn")
+    ![JZZMbfDXNoE5Xlx04fPcaf6lnGd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JZZMbfDXNoE5Xlx04fPcaf6lnGd.png "JZZMbfDXNoE5Xlx04fPcaf6lnGd")
 
     <table>
        <tr>
@@ -62,8 +62,8 @@ import Admonition from '@theme/Admonition';
          <td><p>请输入集群的名称。Zilliz Cloud 会提供随机的默认名称，您可按需修改集群名称。</p></td>
        </tr>
        <tr>
-         <td><p><strong>云服务提供商和地域</strong></p></td>
-         <td><p>请选择集群部署的云服务提供商和地域。所有可选择云服务提供商和地域请参考 <a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></td>
+         <td><p><strong>集群描述（可选）</strong></p></td>
+         <td><p>请输入集群的描述。最多 255 字符。</p></td>
        </tr>
        <tr>
          <td><p><strong>计费方式</strong></p></td>
@@ -79,7 +79,7 @@ import Admonition from '@theme/Admonition';
        </tr>
        <tr>
          <td><p><strong>备份策略（可选）</strong></p></td>
-         <td><p>请按需决定是否开启云备份。开启后，会为该集群定期自动创建备份，可有效保护数据。开启云备份会产生备份费用。</p></td>
+         <td><p>请按需决定是否开启云备份。详情请参考 <a href="./schedule-automatic-backups">设置定时自动备份</a>。</p></td>
        </tr>
     </table>
 

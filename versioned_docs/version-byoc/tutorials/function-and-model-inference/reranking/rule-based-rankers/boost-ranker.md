@@ -1,11 +1,12 @@
 ---
 title: "Boost Ranker | BYOC"
 slug: /boost-ranker
+sidebar_key: boost-ranker
 sidebar_label: "Boost Ranker"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Boost Ranker 不单纯依赖基于向量距离计算的语义相似度，而是让你能够以有意义的方式影响搜索结果。它非常适合使用元数据过滤快速调整搜索结果的场景。 | BYOC"
 type: origin
@@ -72,7 +73,7 @@ Boost Ranker 不单纯依赖基于向量距离计算的语义相似度，而是�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>暂时不支持将 Boost Ranker 用于多向量混合搜索（Hybrid Search）中多路结果的重排。</p>
+暂时不支持将 Boost Ranker 用于多向量混合搜索（Hybrid Search）中多路结果的重排。
 
 </Admonition>
 
@@ -345,7 +346,7 @@ Boost Ranker 不单纯依赖基于向量距离计算的语义相似度，而是�
 
     <Admonition type="info" icon="📘" title="注释">
 
-    <p>权重必须是你选择的一个浮点数。在像上述示例这样的情况下，分数越小表示相关性越高，使用小于<strong>1</strong>的权重。否则，使用大于<strong>1</strong>的权重。</p>
+    权重必须是你选择的一个浮点数。在像上述示例这样的情况下，分数越小表示相关性越高，使用小于**1**的权重。否则，使用大于**1**的权重。
 
     </Admonition>
 
@@ -489,6 +490,18 @@ const rerank = {
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto rerank = std::make_shared<milvus::BoostRerank>("boost");
+rerank->SetFilter("doctype == 'abstract'");
+rerank->SetWeight(0.5);
+rerank->SetRandomScoreField("id");
+rerank->SetRandomScoreSeed(126);
+```
+
+</TabItem>
 </Tabs>
 
 <table>
@@ -538,7 +551,7 @@ const rerank = {
      <td><p><code>params.random_score</code></p></td>
      <td><p>否</p></td>
      <td><p>指定一个随机函数，该函数会随机生成一个介于<code>0</code>和<code>1</code>之间的值。它有以下两个可选参数：</p><ul><li><p><code>种子</code>（数字）指定用于启动伪随机数生成器（PRNG）的初始值。</p></li><li><p><code>字段</code> （字符串）指定一个字段的名称，该字段的值将用作生成随机数的随机因子。具有唯一值的字段就足够了。</p><p>建议您同时设置<code>种子</code>和<code>字段</code>，以通过使用相同的种子和字段值来确保各代之间的一致性。</p></li></ul></td>
-     <td><p><code>\{"seed": 126, "field": "id"}</code></p></td>
+     <td><p><code>\{"seed": 126, "field": "id"\}</code></p></td>
    </tr>
 </table>
 
@@ -616,7 +629,7 @@ import { MilvusClient } from '@zilliz/milvus2-sdk-node';
 
 // Connect to the Milvus server
 const client = new MilvusClient({
-  address: 'localhost:19530',
+  address: 'YOUR_CLUSTER_ENDPOINT',
   token: 'YOUR_CLUSTER_TOKEN'
 });
 
@@ -640,6 +653,39 @@ console.log('Search results:', searchResults);
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{"YOUR_CLUSTER_ENDPOINT", "YOUR_CLUSTER_TOKEN"};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+auto function_score = std::make_shared<milvus::FunctionScore>();
+function_score->AddFunction(rerank);
+
+std::vector<float> query_vector = {-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911};
+auto request = milvus::SearchRequest()
+                   .WithCollectionName("my_collection")
+                   .WithAnnsField("vector")
+                   .WithRerank(function_score)
+                   .AddOutputField("doctype")
+                   .AddFloatVector(query_vector);
+
+milvus::SearchResponse response;
+status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -810,6 +856,38 @@ await client.search({
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto fix_weight_ranker = std::make_shared<milvus::BoostRerank>("boost");
+fix_weight_ranker->SetWeight(0.8);
+
+auto random_weight_ranker = std::make_shared<milvus::BoostRerank>("boost");
+random_weight_ranker->SetWeight(0.4);
+random_weight_ranker->SetRandomScoreSeed(126);
+
+auto function_score = std::make_shared<milvus::FunctionScore>();
+function_score->AddFunction(fix_weight_ranker);
+function_score->AddFunction(random_weight_ranker);
+
+std::vector<float> query_vector = {-0.619954382375778, 0.4479436794798608, -0.17493894838751745, -0.4248030059917294, -0.8648452746018911};
+auto request = milvus::SearchRequest()
+                   .WithCollectionName("my_collection")
+                   .WithAnnsField("vector")
+                   .WithLimit(10)
+                   .WithRerank(function_score)
+                   .AddOutputField("doctype")
+                   .AddFloatVector(query_vector);
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>

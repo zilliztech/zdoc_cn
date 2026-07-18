@@ -11,7 +11,7 @@ notebook: FALSE
 description: "对 Collection 执行 Load 操作是在 Collection 中进行 Search 和 Query 的前提条件。本节主要介绍如何 Load 和 Release Collection。 | Cloud"
 type: origin
 token: G7jYwhWH4iVtGakm2BHcGuzIn3f
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -200,6 +200,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/load" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -213,6 +214,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/get_load_state" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -225,6 +227,37 @@ curl --request POST \
 #         "message": ""
 #     }
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{"YOUR_CLUSTER_ENDPOINT", "YOUR_CLUSTER_TOKEN"};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+status = client->LoadCollection(milvus::LoadCollectionRequest()
+                                    .WithCollectionName("my_collection"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::GetLoadStateResponse response;
+status = client->GetLoadState(milvus::GetLoadStateRequest()
+                                .WithCollectionName("my_collection"),
+                              response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+std::cout << std::to_string(response.State()) << std::endl;
 ```
 
 </TabItem>
@@ -335,6 +368,30 @@ fmt.Println(state)
 ```bash
 # REST
 # Not supported yet
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->LoadCollection(milvus::LoadCollectionRequest()
+                                        .WithCollectionName("my_collection")
+                                        .AddLoadField("my_id")
+                                        .AddLoadField("my_vector")
+                                        .WithSkipDynamicField(true));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::GetLoadStateResponse response;
+status = client->GetLoadState(milvus::GetLoadStateRequest()
+                                .WithCollectionName("my_collection"),
+                              response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+std::cout << std::to_string(response.State()) << std::endl;
 ```
 
 </TabItem>
@@ -458,6 +515,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/release" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -471,6 +529,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/get_load_state" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -483,6 +542,27 @@ curl --request POST \
 #         "message": ""
 #     }
 # }
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->ReleaseCollection(milvus::ReleaseCollectionRequest()
+                                            .WithCollectionName("my_collection"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::GetLoadStateResponse response;
+status = client->GetLoadState(milvus::GetLoadStateRequest()
+                                .WithCollectionName("my_collection"),
+                              response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+std::cout << std::to_string(response.State()) << std::endl;
 ```
 
 </TabItem>

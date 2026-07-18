@@ -1,11 +1,12 @@
 ---
-title: "集群 | BYOC"
+title: "Serving 集群 | BYOC"
 slug: /cluster
-sidebar_label: "集群"
-beta: FALSE
+sidebar_key: cluster
+sidebar_label: "Serving 集群"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "关于在 Zilliz Cloud 上管理集群需要知道的内容。 | BYOC"
 type: origin
@@ -23,7 +24,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 集群
+# Serving 集群
 
 关于在 Zilliz Cloud 上管理集群需要知道的内容。
 

@@ -1,8 +1,8 @@
 ---
-title: "管理项目任务 | Cloud"
+title: "项目任务 | Cloud"
 slug: /job-center
 sidebar_key: job-center
-sidebar_label: "管理项目任务"
+sidebar_label: "项目任务"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -28,7 +28,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 管理项目任务
+# 项目任务
 
 Zilliz Cloud 提供了一个直观的任务中心页面，将同一项目下的所有历史和异步数据任务整合在一起。
 

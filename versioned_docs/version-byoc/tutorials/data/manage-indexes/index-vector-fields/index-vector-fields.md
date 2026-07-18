@@ -1,11 +1,12 @@
 ---
 title: "创建 Vector Index | BYOC"
 slug: /index-vector-fields
+sidebar_key: index-vector-fields
 sidebar_label: "创建 Vector Index"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本教程将介绍如何为 Collection 中的向量字段创建向量索引（Vector Index）并管理索引。 | BYOC"
 type: origin
@@ -257,7 +258,7 @@ console.log(res.error_code)
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>目前，每个字段上仅可创建 1 个索引文件。</p>
+目前，每个字段上仅可创建 1 个索引文件。
 
 </Admonition>
 

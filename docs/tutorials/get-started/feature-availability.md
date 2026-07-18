@@ -11,7 +11,7 @@ notebook: FALSE
 description: "最后更新时间：2025 年 10 月 13 日 | Cloud"
 type: origin
 token: EZ2jwCJD7iazqKkmSGRcBfjWnCh
-sidebar_position: 14
+sidebar_position: 15
 keywords: 
   - zilliz
   - 向量数据库
@@ -69,13 +69,13 @@ import Admonition from '@theme/Admonition';
 
     - **功能使用**：不可用。
 
-## 如何识别功能支持情况\{#}
+## 如何识别功能支持情况\{#how-to-identify-a-feature-s-availability-phase}
 
 Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶段。如无特别说明，默认为正式可用（GA）。
 
-## 当前功能支持情况\{#}
+## 当前功能支持情况\{#current-feature-availability}
 
-### 内测版\{#}
+### 内测版\{#private-preview}
 
 - [导出备份文件](./export-backup-files)
 
@@ -87,7 +87,7 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 </Admonition>
 
-### 公测版\{#}
+### 公测版\{#public-preview}
 
 - [Text Embedding](./model-based-functions) 和 [Rerank](./reranking) Function
 
@@ -99,7 +99,7 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 - [访问日志](./access-logs)
 
-- 按需计算
+- [按需计算](./on-demand-compute)
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -107,7 +107,7 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 </Admonition>
 
-### 停用预告\{#}
+### 停用预告\{#deprecation-notice}
 
 - [从 NumPy 文件导入数据](./data-import-numpy)
 
@@ -115,7 +115,7 @@ Zilliz Cloud 文档中，每个功能会以标签形式标注其当前支持阶�
 
 - [合并数据](./merge-data)
 
-### 已停用\{#}
+### 已停用\{#deprecated}
 
 - Pipelines
 

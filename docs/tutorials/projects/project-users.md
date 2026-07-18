@@ -1,8 +1,8 @@
 ---
-title: "管理项目用户 | Cloud"
+title: "项目用户 | Cloud"
 slug: /project-users
 sidebar_key: project-users
-sidebar_label: "管理项目用户"
+sidebar_label: "项目用户"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -28,7 +28,7 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
-# 管理项目用户
+# 项目用户
 
 在 Zilliz Cloud 中，您可以邀请用户加入项目并根据他们的工作职能分配角色。这些角色决定了用户对项目的访问权限以及他们可以执行的操作。
 
@@ -103,6 +103,88 @@ import Admonition from '@theme/Admonition';
 ### 项目角色与访问策略权限比较\{#project-role-and-access-comparison}
 
 下表对比了不同项目角色的权限差异。
+
+**按需计算**
+
+<table>
+    <tr>
+        <th><p>操作</p></th>
+        <th><p>项目管理员</p></th>
+        <th><p>集群管理员</p></th>
+        <th><p>项目读写</p></th>
+        <th><p>项目只读</p></th>
+    </tr>
+    <tr>
+        <td><p>创建按需计算集群</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>查看按需计算集群列表和详情</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+    </tr>
+    <tr>
+        <td><p>修改、重命名或删除按需计算集群</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>创建按需计算 Database</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>查看按需计算 Database 列表</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>删除按需计算 Database</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>在按需计算 Database 中创建或删除 Collection</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>向按需计算 Database 中的 Collection 导入数据</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+    </tr>
+    <tr>
+        <td><p>通过按需计算集群执行 Query、Search 或 Get</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+        <td><p>✅</p></td>
+    </tr>
+    <tr>
+        <td><p>创建 Managed Volume 或 External Volume</p></td>
+        <td><p>✅</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+        <td><p>❌</p></td>
+    </tr>
+</table>
 
 **集群操作**
 

@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | Cloud"
 type: origin
 token: C6tVwPqeBiqNCwkbdCcc9dTpnYe
-sidebar_position: 13
+sidebar_position: 14
 keywords: 
   - 向量数据库
   - zilliz

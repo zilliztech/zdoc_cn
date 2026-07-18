@@ -1,11 +1,12 @@
 ---
 title: "Analyzer 概述 | BYOC"
 slug: /analyzer-overview
+sidebar_key: analyzer-overview
 sidebar_label: "Analyzer 概述"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在文本处理中，Analyzer 是一个关键组件，用于将原始文本转换为结构化、可搜索的格式。每个 Analyzer 通常由两个核心元素组成：分词器（tokenizer）和过滤器（filter）。它们共同将输入文本转换为词元（token），并对这些词元进行优化，以便为高效的索引和检索做好准备。 | BYOC"
 type: origin
@@ -39,11 +40,11 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>使用 Analyzer 可能会影响性能：  </p>
-<ul>
-<li><p><strong>全文搜索</strong>：对于全文搜索，DataNode 和 QueryNode 通道的数据消耗速度较慢，因为它们必须等待分词完成。因此，新摄入的数据需要更长时间才能被搜索到。</p></li>
-<li><p><strong>关键字匹配</strong>：对于关键字匹配，索引创建速度也较慢，因为需要先完成分词才能构建索引。  </p></li>
-</ul>
+使用 Analyzer 可能会影响性能：  
+
+- **全文搜索**：对于全文搜索，DataNode 和 QueryNode 通道的数据消耗速度较慢，因为它们必须等待分词完成。因此，新摄入的数据需要更长时间才能被搜索到。
+
+- **关键字匹配**：对于关键字匹配，索引创建速度也较慢，因为需要先完成分词才能构建索引。  
 
 </Admonition>
 
@@ -57,7 +58,7 @@ Zilliz Cloud中的 Analyzer 由一个分词器和零个或多个过滤器组成�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>分词器仅支持 UTF-8 格式。未来版本将增加对其他格式的支持。  </p>
+分词器仅支持 UTF-8 格式。未来版本将增加对其他格式的支持。  
 
 </Admonition>
 
@@ -75,10 +76,9 @@ Zilliz Cloud提供两种类型的 Analyzer，以满足不同的文本处理需�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>如果在创建 Collection 时省略 Analyzer 设置，Zilliz Cloud 会默认使用 <code>standard</code> Analyzer 来进行文本处理。更多详情，可以参考  <a href="./standard-analyzer">Standard</a>。</p></li>
-<li><p>为了更好地提升查询和搜索性能，根据您的文本语言选择一个合适的 Analyzer 是十分必要的。虽然 <code>standard</code> Analyzer 适用于大多数西方语言，但对于中文、日语和韩语这样有着特殊语法结构的语言来说却不是最佳选择。在这种情况下，建议您选择使用 <code>chinese</code> 或自定义使用指定分词器（如 lindera 或 icu）和过滤器的 Analyzer ，准确分词可以极大保障搜索结果的可靠性。</p></li>
-</ul>
+- 如果在创建 Collection 时省略 Analyzer 设置，Zilliz Cloud 会默认使用 `standard` Analyzer 来进行文本处理。更多详情，可以参考  [Standard](./standard-analyzer)。
+
+- 为了更好地提升查询和搜索性能，根据您的文本语言选择一个合适的 Analyzer 是十分必要的。虽然 `standard` Analyzer 适用于大多数西方语言，但对于中文、日语和韩语这样有着特殊语法结构的语言来说却不是最佳选择。在这种情况下，建议您选择使用 `chinese` 或自定义使用指定分词器（如 lindera 或 icu）和过滤器的 Analyzer ，准确分词可以极大保障搜索结果的可靠性。
 
 </Admonition>
 
@@ -637,7 +637,7 @@ ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
 cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     token: "YOUR_CLUSTER_TOKEN"
 })
 if err != nil {
@@ -711,7 +711,7 @@ schema := entity.NewSchema().WithAutoID(true).WithDynamicFieldEnabled(false)
     <TabItem value='javascript'>
 
     ```javascript
-    // Use a built-in analyzer for VARCHAR field `title_en`
+    // Use a built-in analyzer for VARCHAR field \`title_en\`
     const analyzerParamsBuiltIn = {
       type: "chinese",
     };
@@ -824,7 +824,7 @@ schema := entity.NewSchema().WithAutoID(true).WithDynamicFieldEnabled(false)
     <TabItem value='javascript'>
 
     ```javascript
-    // Configure a custom analyzer for VARCHAR field `title`
+    // Configure a custom analyzer for VARCHAR field \`title\`
     const analyzerParamsCustom = {
       tokenizer: "standard",
       filter: [
@@ -1119,6 +1119,12 @@ if err != nil {
 您也可以使用 Zilliz Cloud 控制台完成上述配置。具体可参考如下演示。
 
 <Supademo id="cmfxiu7c342st10k8ql0xi1av" title=""  />
+
+<Admonition type="info" icon="📘" title="**说明**">
+
+Analyzer 配置在 Collection 创建后不可修改。如需更改 Analyzer 配置，请创建新的 Collection 并[迁移](./migrate-between-clusters)数据。
+
+</Admonition>
 
 ## 更进一步\{#whats-next}
 

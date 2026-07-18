@@ -164,7 +164,7 @@ Zilliz Cloud 提供多样的项目版本类型以满足不同的用户需求。�
      <td><p>✔</p></td>
    </tr>
    <tr>
-     <td><p>Stage</p></td>
+     <td><p><a href="./managed-volume">Volume</a></p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>
      <td><p>✔</p></td>

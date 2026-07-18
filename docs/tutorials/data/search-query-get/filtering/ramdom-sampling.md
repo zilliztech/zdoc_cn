@@ -11,7 +11,7 @@ notebook: FALSE
 description: "处理大规模数据集时，你通常无需处理所有数据就能获得见解或测试过滤逻辑。随机抽样提供了一种解决方案，它允许你处理具有统计代表性的数据子集，从而显著减少查询时间和资源消耗。 | Cloud"
 type: origin
 token: Ox1iwZzfWi3Rxrkz2BQc8z3Uncb
-sidebar_position: 6
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz

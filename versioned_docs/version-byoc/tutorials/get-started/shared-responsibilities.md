@@ -1,16 +1,17 @@
 ---
 title: "共同责任 | BYOC"
 slug: /shared-responsibilities
+sidebar_key: shared-responsibilities
 sidebar_label: "共同责任"
-beta: CONTACT SALES
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: CONTACT SALES
 notebook: FALSE
 description: "本页面概述了Zilliz Cloud和BYOC用户的职责，以明确与云管理、升级、安全、访问控制、服务可用性和技术支持相关的任务分工，确保在保持安全高效的运营环境的同时实现顺畅协作。 | BYOC"
 type: origin
 token: Im9Twy8oRiXmfMkbXbYccZVSn5b
-sidebar_position: 8
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz
@@ -28,7 +29,7 @@ import Admonition from '@theme/Admonition';
 
 本页面概述了Zilliz Cloud和BYOC用户的职责，以明确与云管理、升级、安全、访问控制、服务可用性和技术支持相关的任务分工，确保在保持安全高效的运营环境的同时实现顺畅协作。
 
-## 云管理
+## 云管理\{#}
 
 <table>
    <tr>
@@ -63,7 +64,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 升级与安全
+## 升级与安全\{#}
 
 <table>
    <tr>
@@ -93,7 +94,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 访问控制
+## 访问控制\{#}
 
 <table>
    <tr>
@@ -113,7 +114,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 服务可用性
+## 服务可用性\{#}
 
 <table>
    <tr>
@@ -133,7 +134,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## 技术支持
+## 技术支持\{#}
 
 <table>
    <tr>

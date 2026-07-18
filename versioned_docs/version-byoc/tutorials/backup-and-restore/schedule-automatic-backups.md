@@ -1,11 +1,12 @@
 ---
 title: "设置定时自动备份 | BYOC"
 slug: /schedule-automatic-backups
+sidebar_key: schedule-automatic-backups
 sidebar_label: "设置定时自动备份"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持为集群设置定时自动备份，帮助您在发生异常问题时及时恢复数据。自动备份适用于整个集群，不支持单独为某个 Collection 设置定时自动备份。 | BYOC"
 type: origin
@@ -25,6 +26,8 @@ import Admonition from '@theme/Admonition';
 
 
 import Supademo from '@site/src/components/Supademo';
+
+import Procedures from '@site/src/components/Procedures';
 
 # 设置定时自动备份
 
@@ -58,19 +61,31 @@ Zilliz Cloud 支持为集群**设置定时自动备份**，帮助您在发生异
 
 ### 通过 Web 控制台\{#via-web-console}
 
-在控制台开启定时自动备份后，Zilliz Cloud 默认配置如下：
-
-- **备份频率**：每天
-
-- **备份时间段**：每天上午 8 点至 10 点之间 (UTC +08:00)
-
-- **备份保留天数**：7 天
-
-您可以按需调整上述配置。
-
 以下 Demo 展示如何开启并配置定时自动备份：
 
-<Supademo id="cmcsvbmq70k7d9st8g2772jpx?utm_source=link" title=""  />
+<Supademo id="cmcsvbmq70k7d9st8g2772jpx" title=""  />
+
+<Procedures>
+
+1. 前往目标集群。
+
+1. 点击**备份**页签。
+
+1. 打开**备份策略**开关。
+
+1. 设置定时自动备份的调度计划。
+
+    - **时区**: 用于触发定时备份任务的时区。
+
+    - **调度计划**: 从以下模式中选择一种以设置调度计划。
+
+        - **基础**: 选择频率（每周或每月）并选择日期和时间。
+
+        - **高级**: 通过输入 Cron 表达式来自定义调度计划。更多详情请参考 [Cron 表达式](./cron-expression)。
+
+1. 点击**保存**。
+
+</Procedures>
 
 ### 通过 RESTful API\{#via-restful-api}
 
@@ -89,33 +104,6 @@ curl --request POST \
     "startTime": "02:00-04:00",
     "retentionDays": 7,
     "enabled": true
-}'
-```
-
-您也可以选择在使用上述备份策略创建备份的同时，将其拷贝到指定的其它地域。
-
-```bash
-curl --request POST \
---url "${BASE_URL}/v2/clusters/${CLUSTER_ID}/backups/policy" \
---header "Authorization: Bearer ${TOKEN}" \
---header "Content-Type: application/json" \
--d '{
-    "frequency": "1,2,3,5",
-    "startTime": "02:00-04:00",
-    "retentionDays": 7,
-    "enabled": true,
-    "crossRegionPolicies": [
-        {
-            "regionId": "ali-cn-hangzhou",
-            "retentionDays": 7,
-            "region": "cn-hangzhou"
-        },
-        {
-            "regionId": "ali-cn-shanghai",
-            "retentionDays": 7,
-            "region": "cn-shanghai"
-        }
-    ]
 }'
 ```
 

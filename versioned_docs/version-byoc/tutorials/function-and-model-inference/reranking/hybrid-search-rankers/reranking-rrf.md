@@ -1,11 +1,12 @@
 ---
 title: "RRF Ranker | BYOC"
 slug: /reranking-rrf
+sidebar_key: reranking-rrf
 sidebar_label: "RRF Ranker"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "RRF (互反排名融合) Ranker 是 Zilliz Cloud 混合搜索的一种重排序策略，它根据多个向量搜索路径的排名位置而非原始相似度得分来平衡结果。就像体育锦标赛会考虑选手的排名而非个人统计数据一样，RRF Ranker 根据每个项目在不同搜索路径中的排名高低来合并搜索结果，从而生成一个公平且平衡的最终排名。 | BYOC"
 type: origin
@@ -238,7 +239,7 @@ RRF Ranker 策略的主要工作流程如下：
 
 使用 RRF Ranker 策略时，需要配置参数 `k`。它是一个平滑参数，可以有效改变全文搜索与向量搜索的相对权重。该参数的默认值为 60，可在 (0, 16384) 范围内调整。取值应为浮点数，建议值在 [10, 100] 之间。虽然 `k=60` 是常见选择，但最优 `k` 值可能因具体应用和数据集而异。我们建议根据具体用例测试和调整此参数，以实现最佳性能。
 
-### 创建一个 RRF Ranker
+### 创建一个 RRF Ranker\{#rrf-ranker}
 
 在您的集合设置了多个向量字段后，使用适当的平滑参数创建一个RRF排序器：
 
@@ -308,6 +309,16 @@ const rerank = {
 
 ```bash
 # Restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto rerank = std::make_shared<milvus::Function>("rrf", milvus::FunctionType::RERANK);
+rerank->AddParam("reranker", "rrf");
+rerank->AddParam("k", "100");
 ```
 
 </TabItem>
@@ -480,6 +491,38 @@ const search = await milvusClient.search({
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto text_search = milvus::SubSearchRequest()
+                    .WithLimit(10)
+                    .WithAnnsField("text_vector")
+                    .AddEmbeddedText("modern dining table");
+
+auto image_search = milvus::SubSearchRequest()
+                    .WithLimit(10)
+                    .WithAnnsField("image_vector")
+                    .AddFloatVector(image_embedding);
+
+auto request = milvus::HybridSearchRequest()
+                    .WithCollectionName(collection_name)
+                    .WithLimit(10)
+                    .AddSubRequest(std::make_shared<milvus::SubSearchRequest>(std::move(text_search)))
+                    .AddSubRequest(std::make_shared<milvus::SubSearchRequest>(std::move(image_search)))
+                    .WithRerank(rerank)
+                    .AddOutputField("product_name")
+                    .AddOutputField("price")
+                    .AddOutputField("category");
+
+milvus::SearchResponse response;
+auto status = client->HybridSearch(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>

@@ -42,8 +42,6 @@ import Admonition from '@theme/Admonition';
 
 - 您无法在 Schema 中定义 Functions。
 
-- External Collection 创建后，您无法修改其 Schema。
-
 - 您无法使用基于 BM25 的 Text Match。
 
 - 要使外部数据可用于查询，您必须先创建索引，然后手动触发 `RefreshExternalCollection`，以便 Zilliz Cloud 为数据构建元数据和索引。
@@ -142,7 +140,7 @@ import Admonition from '@theme/Admonition';
      <td rowspan="2"><p><strong>Schema</strong></p></td>
      <td><p><strong>AddField</strong></p></td>
      <td><p>✅</p></td>
-     <td><p>❌</p></td>
+     <td><p>✅</p></td>
      <td><p>✅</p></td>
    </tr>
    <tr>

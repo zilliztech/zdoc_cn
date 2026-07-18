@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Partition Key 是一种搜索优化解决方案，通过作为 Collection 的 Namespace 来实现逻辑数据隔离。通过将特定标量字段（如租户 ID 或项目名称）指定为 Partition Key，您可以在单个 Collection 内将数据有效分割成不同的 Namespace。这使得搜索请求能够通过筛选条件限定在特定 Namespace 内，从而显著缩小搜索范围并提升整体效率。本文介绍如何实现这种基于 Namepsace 的优化以及使用 Partition Key 时的注意事项。 | Cloud"
 type: origin
 token: QT2Vw3FvJiuwzBkeZvicRBlsnae
-sidebar_position: 17
+sidebar_position: 19
 keywords: 
   - 向量数据库
   - zilliz
@@ -245,6 +245,28 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{"YOUR_CLUSTER_ENDPOINT", "YOUR_CLUSTER_TOKEN"};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+schema->AddField({"id", milvus::DataType::INT64, "", true, true});
+schema->AddField(milvus::FieldSchema("vector", milvus::DataType::FLOAT_VECTOR).WithDimension(5));
+schema->AddField(milvus::FieldSchema("my_varchar", milvus::DataType::VARCHAR).WithPartitionKey(true).WithMaxLength(512));
+
+```
+
+</TabItem>
 </Tabs>
 
 ### 设置 Partition 数量\{#set-partition-nums}
@@ -324,11 +346,26 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
     \"params\": $params
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->CreateCollection(milvus::CreateCollectionRequest()
+                                          .WithCollectionName("my_collection")
+                                          .WithCollectionSchema(schema)
+                                          .WithNumPartitions(128));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -399,6 +436,15 @@ export filter='partition_key == "x" && <other conditions>'
 
 # Filter based on multiple partition key values
 export filter='partition_key in ["x", "y", "z"] && <other conditions>'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+const auto filter = R"(partition_key == 'x' && <other conditions>)";
+const auto filter = R"(partition_key in ['x', 'y', 'z'] && <other conditions>)";
 ```
 
 </TabItem>
@@ -491,11 +537,26 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
     \"params\": $params
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->CreateCollection(milvus::CreateCollectionRequest()
+                                          .WithCollectionName("my_collection")
+                                          .WithCollectionSchema(schema)
+                                          .AddProperty("partitionkey.isolation", "true"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>

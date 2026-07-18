@@ -1,11 +1,12 @@
 ---
 title: "导入导出 | BYOC"
 slug: /data-import-export
+sidebar_key: data-import-export
 sidebar_label: "导入导出"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本章介绍 Zilliz Cloud 数据导入导出操作的相关步骤。 | BYOC"
 type: origin

@@ -1,11 +1,12 @@
 ---
 title: "BM25 Function | BYOC"
 slug: /bm25-function
+sidebar_key: bm25-function
 sidebar_label: "BM25 Function"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "BM25 Function 通过将原始文本转换为稀疏向量，并基于词法相关性对文档进行评分，从而实现全文检索。它采用基于词项的匹配机制和考虑词频的加权方式，高效检索与查询词高度匹配的文本内容。 | BYOC"
 type: origin
@@ -35,7 +36,7 @@ BM25 Function 通过将原始文本转换为稀疏向量，并基于词法相关
 
 ## BM25 的工作原理\{#how-bm25-works}
 
-BM25 是一种广泛应用于全文检索的基于词项的相关性评分算法。在 Zilliz CloudMilvus 中，BM25 以稀疏检索流水线的形式实现：系统将文本转换为词项加权表示，并通过分布式稀疏索引检索 Top-K 文档。
+BM25 是一种广泛应用于全文检索的基于词项的相关性评分算法。在 Zilliz Cloud 中，BM25 以稀疏检索流水线的形式实现：系统将文本转换为词项加权表示，并通过分布式稀疏索引检索 Top-K 文档。
 
 整体流程由两条对称的路径组成：文档写入和查询文本处理，二者共享相同的文本分析逻辑。
 
@@ -240,9 +241,12 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
+token := "YOUR_CLUSTER_TOKEN"
+
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
+    APIKey: token
 })
 if err != nil {
     fmt.Println(err.Error())
@@ -330,6 +334,28 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{"YOUR_CLUSTER_ENDPOINT", "YOUR_CLUSTER_TOKEN"};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+schema->AddField({"id", milvus::DataType::INT64, "", true, true});
+schema->AddField(milvus::FieldSchema("text", milvus::DataType::VARCHAR).WithMaxLength(1000).EnableAnalyzer(true));
+schema->AddField(milvus::FieldSchema("sparse", milvus::DataType::SPARSE_FLOAT_VECTOR));
+
+```
+
+</TabItem>
 </Tabs>
 
 #### 定义 BM25 Function\{#define-bm25-function}
@@ -347,7 +373,7 @@ bm25_function = Function(
     input_field_names=["text"], # Name of the VARCHAR field containing raw text data
     output_field_names=["sparse"], # Name of the SPARSE_FLOAT_VECTOR field reserved to store generated embeddings
     # highlight-next-line
-    function_type=FunctionType.BM25, # Set to `BM25`
+    function_type=FunctionType.BM25, # Set to \`BM25\`
 )
 
 schema.add_function(bm25_function)
@@ -438,6 +464,17 @@ export schema='{
             }
         ]
     }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::FunctionPtr function = std::make_shared<milvus::Function>("text_bm25_emb", milvus::FunctionType::BM25);
+function->AddInputFieldName("text");
+function->AddOutputFieldName("sparse");
+schema->AddFunction(function);
 ```
 
 </TabItem>
@@ -536,6 +573,17 @@ export indexParams='[
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto index_params = milvus::IndexDesc("sparse", "", milvus::IndxType::SPARSE_INVERTED_INDEX, milvus::MetricType::BM25);
+index_params.AddExtraParam("inverted_index_algo", "DAAT_MAXSCORE");
+index_params.AddExtraParam("bm25_k1", "1.2");
+index_params.AddExtraParam("bm25_b", "0.75");
+```
+
+</TabItem>
 </Tabs>
 
 #### 创建 Collection\{#create-the-collection}
@@ -607,11 +655,26 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
     \"indexParams\": $indexParams
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->CreateCollection(milvus::CreateCollectionRequest()
+                                    .WithCollectionName("my_collection")
+                                    .WithCollectionSchema(schema))
+                                    .AddIndex(std::move(index_params));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -692,6 +755,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "data": [
         {"text": "information retrieval is a field of study."},
@@ -701,6 +765,27 @@ curl --request POST \
     "collectionName": "my_collection"
 }'
 
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::EntityRows data = {
+    {{"text", "information retrieval is a field of study."}},
+    {{"text", "information retrieval focuses on finding relevant information in large datasets."}},
+    {{"text", "data mining and information retrieval overlap in research."}}
+};
+
+milvus::InsertResponse response;
+auto status = client->Insert(milvus::InsertRequest()
+                                .WithCollectionName("my_collection")
+                                .WithRowsData(std::move(data))
+                                , response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -805,6 +890,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data-raw '{
     "collectionName": "my_collection",
     "data": [
@@ -822,5 +908,23 @@ curl --request POST \
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value='c++'>
+
+```c++
+auto request = milvus::SearchRequest()
+                       .WithCollectionName("my_collection")
+                       .AddEmbeddedText("whats the focus of information retrieval?")
+                       .WithLimit(3)
+                       .WithAnnsField("sparse")
+                       .AddOutputField("text");
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+```
+
+</TabItem>
+</Tabs>

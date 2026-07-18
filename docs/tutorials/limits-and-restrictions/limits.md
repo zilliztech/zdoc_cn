@@ -67,13 +67,13 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>集群用户</p></td>
-     <td><p>100</p></td>
-     <td><p>每个集群中最多可容纳 100 名集群用户。</p></td>
+     <td><p>500</p></td>
+     <td><p>每个集群中最多可容纳 500 名集群用户。</p></td>
    </tr>
    <tr>
      <td><p>集群自定义角色</p></td>
-     <td><p>20</p></td>
-     <td><p>每个集群中最多可创建 20 个自定义角色。如需取消此限制，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
+     <td><p>500</p></td>
+     <td><p>每个集群中最多可创建 500 个自定义角色。如需取消此限制，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p></td>
    </tr>
 </table>
 
@@ -195,8 +195,8 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Serving-Dedicated</p></td>
-     <td><p>CU 规格 &ast; Replica 数量 &lt;=20480</p></td>
-     <td><p>在自助操作时，单个 Serving-Dedicated 集群最多使用 2048 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 20480。</p></td>
+     <td><p>CU 规格 &ast; Replica 数量 &lt;=204,800</p></td>
+     <td><p>在自助操作时，单个 Serving-Dedicated 集群最多使用 2,048 个 CU。如果创建了 Replica，CU 规格与 Replica 数量的乘积不得超过 204,800。</p></td>
    </tr>
    <tr>
      <td><p>On-demand</p></td>
@@ -263,7 +263,7 @@ Dedicated 集群的容量上限会根据您选择的 CU 类型与 CU 大小的�
 
 ## Replica\{#replicas}
 
-如需添加 Replica，集群规格需要为 **12 CU 或以上**。此外，Replica 功能还具有以下限制
+如需添加 Replica，集群规格需要为 **8 CU 或以上**。此外，Replica 功能还具有以下限制
 
 <table>
    <tr>
@@ -273,15 +273,23 @@ Dedicated 集群的容量上限会根据您选择的 CU 类型与 CU 大小的�
    </tr>
    <tr>
      <td><p>Replica 数量</p></td>
-     <td><p>10</p></td>
-     <td><p>每个集群最多可添加 10 个 Replica。</p></td>
+     <td><p>100</p></td>
+     <td><p>每个集群最多可添加 100 个 Replica。</p></td>
    </tr>
    <tr>
      <td><p>Query CU x Replica 数量</p></td>
-     <td><p>20480</p></td>
-     <td><p>每个集群的 Query CU x Replica 数量不得超过 20480</p></td>
+     <td><p>204,800</p></td>
+     <td><p>每个集群的 Query CU x Replica 数量不得超过 204,800</p></td>
    </tr>
 </table>
+
+<Admonition type="info" icon="📘" title="说明">
+
+对于创建较早、兼容 Milvus 版本较低的部分集群，可能需要规格在 12 CU 或以上才可以添加 Replica。
+
+如果想在小规模集群（Query CU 数量小于 8）中添加 Replica，请[联系我们](https://support.zilliz.com.cn/hc/zh-cn)。
+
+</Admonition>
 
 ## Collection\{#collections}
 
@@ -622,6 +630,21 @@ Shard 的数量上限取决于集群部署方式和 CU 规格。
    <tr>
      <td><p>Serverless / Dedicated</p></td>
      <td><p>10</p></td>
+   </tr>
+</table>
+
+## Private Endpoint\{#private-endpoint}
+
+<table>
+   <tr>
+     <th><p><strong>内容</strong></p></th>
+     <th><p><strong>最大数量</strong></p></th>
+     <th><p><strong>描述</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>Private Enpoint</p></td>
+     <td><p>10</p></td>
+     <td><p>每个项目最多可创建 10 个 Private Endpoint。</p></td>
    </tr>
 </table>
 

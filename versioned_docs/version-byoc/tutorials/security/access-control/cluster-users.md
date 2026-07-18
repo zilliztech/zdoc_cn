@@ -1,11 +1,12 @@
 ---
 title: "管理集群用户（控制台） | BYOC"
 slug: /cluster-users
+sidebar_key: cluster-users
 sidebar_label: "管理集群用户（控制台）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，您可以创建集群用户并为其分配集群角色以定义权限，从而实现数据安全。 | BYOC"
 type: origin
@@ -42,27 +43,29 @@ import Admonition from '@theme/Admonition';
 
 - 输入用户的用户名
 
+- （可选）输入用户的描述
+
 - 授予该用户内置角色或自定义角色。有关角色的详细信息，请参考[管理集群角色（控制台）](./cluster-roles)。
 
 - 为该用户设置[鉴权](./cluster-credentials)时使用的密码。
 
-![add-cluster-user-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-user-cn.png "add-cluster-user-cn")
+![VpSHbBL9qoIU2txgK5QckGcfnqb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/VpSHbBL9qoIU2txgK5QckGcfnqb.png "VpSHbBL9qoIU2txgK5QckGcfnqb")
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>每个集群中最多可创建 100 名集群用户。</p>
+每个集群中最多可创建 500 名集群用户。
 
 </Admonition>
 
 ## 编辑集群用户角色\{#edit-the-role-of-a-cluster-user}
 
-![dit-cluster-user-role-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/dit-cluster-user-role-zh.png "dit-cluster-user-role-zh")
+![JXGGbWgyKoWB9bxlgBOcE6ZgnOb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JXGGbWgyKoWB9bxlgBOcE6ZgnOb.png "JXGGbWgyKoWB9bxlgBOcE6ZgnOb")
 
 ## 删除集群用户\{#drop-a-cluster-user}
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>集群默认用户 <strong>db_admin</strong> 不支持删除。</p>
+集群默认用户 **db_admin** 不支持删除。
 
 </Admonition>
 

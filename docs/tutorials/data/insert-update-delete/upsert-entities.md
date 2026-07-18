@@ -43,7 +43,7 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
 ![Af76wmsgbh7C0cbfQ36cTbUonpe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Af76wmsgbh7C0cbfQ36cTbUonpe.png)
 
-如果目标 Collection 在其主键字段上启用了 AutoID，Zilliz Cloud 将在插入请求负载中携带的数据之前为其生成一个新的主键。
+目标 Collection 的主键字段如果启用了 `autoID`，‎`upsert` 请求仍然必须包含目标 Entity 的主键。Zilliz Cloud 会使用请求中提供的主键定位要被替换的 Entity，并在插入前为请求负载中的新数据生成一个新的主键。
 
 对于启用了允许为空的字段，如果不需要更新，则可以在 `upsert` 请求中省略它们。
 
@@ -56,6 +56,8 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 若要执行合并操作，请在 `upsert` 中将 `partial_update` 设置为`True` 并在请求中指定主键和要更新的字段以及它们的值。
 
 收到此类请求后，Zilliz Cloud 会执行强一致性查询以检索 Entity，根据请求中的数据更新字段值，插入修改后的数据，然后删除请求中携带的具有原始主键的现有 Entity。
+
+对于 `ARRAY` 字段，合并模式还支持两个操作符：`ARRAY_APPEND` 和 `ARRAY_REMOVE`。它们允许您直接向现有 `ARRAY` 字段追加元素，或从现有 `ARRAY` 字段中移除匹配的元素，而无需先查询 Entity 来获取当前字段值。有关详细信息和代码示例，请参阅[使用部分更新操作符对 ARRAY 字段执行 Upsert](./upsert-entities#upsert-array-fields-with-partial-update-operators)。
 
 ### 更新字段值\{#update-field-values}
 
@@ -101,11 +103,21 @@ Milvus中的插入更新操作可以在**覆盖**或**合并**模式下工作。
 
         例如，如果请求中包含的数据是`{extras: {"author": "Jane", "genre": "fantasy"}}`，则更新后目标 Entity 的`extras`字段中的键值对将变为`{"author": "Jane", "year": 2020, "tags": ["fiction"], "genre": "fantasy"}`。
 
+- **Upsert** `ARRAY` **字段。**
+
+    默认情况下，`ARRAY` 字段在合并模式下遵循 **REPLACE** 语义：请求中携带的值会完整覆盖现有数组。如需进行更细粒度的更新，Milvus 还支持两个操作符：
+
+    - `ARRAY_APPEND` 将请求载荷中的元素追加到现有数组中。
+
+    - `ARRAY_REMOVE` 从现有数组中移除与请求载荷中的值匹配的所有元素。
+
+    使用任一操作符都会隐式启用部分更新语义；您无需额外将 `partial_update` 设置为 `True`。有关操作符语法、支持的元素类型和其他限制，请参阅[使用部分更新操作符对 ARRAY 字段执行 Upsert](./upsert-entities#upsert-array-fields-with-partial-update-operators)。
+
 ### 限制与约束\{#limits-and-restrictions}
 
 根据上述内容，有若干限制和约束需要遵循：
 
-- `upsert` 请求必须始终包含目标 Entity 的主键。
+- `upsert` 请求必须始终包含目标实体的 Entity，即使启用了 `autoID`。对于使用了 `autoID` 的Collection，请求中的主键用于标识需要被替换的现有 Entity。Zilliz Cloud 会为插入的替换 Entity 生成新的主键。
 
 - 目标 Collection 必须已加载且可用于查询。
 
@@ -292,6 +304,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/upsert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "data": [
         {"id": 0, "vector": [0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592], "title": "Artificial Intelligence in Real Life", "issue": "vol.12"},
@@ -457,6 +470,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/upsert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "data": [
         {"id": 10, "vector": [0.06998888224297328, 0.8582816610326578, -0.9657938677934292, 0.6527905683627726, -0.8668460657158576], "title": "Layour Design Reference", "issue": "vol.34"},
@@ -616,6 +630,7 @@ export UPSERT_DATA='[
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/upsert" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${TOKEN}" \
+  -H "Request-Timeout: 10" \
   -d "{
     \"collectionName\": \"${COLLECTION_NAME}\",
     \"data\": ${UPSERT_DATA},
@@ -632,6 +647,423 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/upsert" \
 #         ]
 #     }
 # }
+```
+
+</TabItem>
+</Tabs>
+
+## 使用部分更新操作符对 ARRAY 字段执行 Upsert \{#upsert-array-fields-with-partial-update-operators}
+
+在引入部分更新操作符（`ARRAY_APPEND` 和 `ARRAY_REMOVE`）之前，如果您需要更新 `ARRAY` 字段中的部分元素，通常需要在客户端执行读取-修改-写入流程：先查询现有数组，在应用代码中修改数组，然后通过 Upsert 写入完整的新数组。部分更新操作符允许您只发送需要追加或移除的元素，从而减少客户端逻辑，并避免在 Upsert 前额外查询一次现有数组。
+
+假设主键为 `1` 的 Entity 已有 `tags = ["new", "trial"]`。在没有部分更新操作符时，添加数组元素 `"premium"` 需要 Upsert 完整的新数组：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+client.upsert(
+    collection_name="users",
+    # highlight-start
+    data=[{"pk": 1, "tags": ["new", "trial", "premium"]}],
+    partial_update=True,
+    # highlight-end
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+List<JsonObject> replacementData = Collections.singletonList(
+        gson.fromJson("{\"pk\": 1, \"tags\": [\"new\", \"trial\", \"premium\"]}", JsonObject.class)
+);
+
+client.upsert(UpsertReq.builder()
+        .collectionName("users")
+        // highlight-start
+        .partialUpdate(true)
+        .data(replacementData)
+        // highlight-end
+        .build());
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+如果使用部分更新操作符 `ARRAY_APPEND`，只需发送要追加的元素：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+client.upsert(
+    collection_name="users",
+    # highlight-start
+    data=[{"pk": 1, "tags": ["premium"]}],
+    field_ops={"tags": FieldOp.array_append()},
+    # highlight-end
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+List<JsonObject> appendData = Collections.singletonList(
+        gson.fromJson("{\"pk\": 1, \"tags\": [\"premium\"]}", JsonObject.class)
+);
+
+UpsertReq.FieldPartialUpdateOp appendTags = UpsertReq.FieldPartialUpdateOp.builder()
+        .fieldName("tags")
+        .opType(UpsertReq.FieldPartialUpdateOp.OpType.ARRAY_APPEND)
+        .build();
+
+client.upsert(UpsertReq.builder()
+        .collectionName("users")
+        // highlight-start
+        .data(appendData)
+        .fieldOps(Collections.singletonList(appendTags))
+        // highlight-end
+        .build());
+
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+</Tabs>
+
+<Admonition type="info" icon="📘" title="说明">
+
+通过 `field_ops` 为字段指定任一操作符时，会隐式启用部分更新语义。您无需同时传入 `partial_update=True`。
+
+</Admonition>
+
+### 使用限制\{#limits}
+
+- 请求载荷中的值必须与目标 `ARRAY` 字段的 `element_type` 匹配。例如，如果目标字段为 `ARRAY<VARCHAR>`，请求载荷必须包含字符串值。
+
+- 在当前版本中，`ARRAY_APPEND` 和 `ARRAY_REMOVE` 支持 `element_type` 为 `BOOL`、`INT8`、`INT16`、`INT32`、`INT64`、`FLOAT`、`DOUBLE` 或 `VARCHAR` 的 `ARRAY` 字段。
+
+- 执行 `ARRAY_APPEND` 后，最终数组长度不得超过该字段的 `max_capacity`。
+
+- 对同一 Entity 的并发 Upsert 请求不会跨请求保持原子性。如果两个请求同时更新同一个 `ARRAY` 字段，后写入的请求可能会覆盖先写入的结果。如果您需要保留所有并发变更，请在应用层进行协调。
+
+### 示例\{#example}
+
+以下示例使用一个简单的 `users` Collection，其中包含主键字段 `pk`、类型为 `ARRAY<VARCHAR>` 的 `tags` 字段，以及 `embedding` 向量字段。示例先插入两个带有初始 `tags` 值的 Entity，然后使用 `ARRAY_APPEND` 和 `ARRAY_REMOVE` 展示每个操作符如何修改已存储的数组。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+from pymilvus import DataType, FieldOp, MilvusClient
+
+client = MilvusClient(
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
+)
+
+# 1. Create a collection with an ARRAY<VARCHAR> field
+schema = client.create_schema(enable_dynamic_field=False)
+schema.add_field("pk", DataType.INT64, is_primary=True)
+schema.add_field("embedding", DataType.FLOAT_VECTOR, dim=5)
+schema.add_field(
+    "tags",
+    DataType.ARRAY,
+    element_type=DataType.VARCHAR,
+    max_capacity=8,
+    max_length=32,
+)
+
+index_params = client.prepare_index_params()
+index_params.add_index(
+    field_name="embedding",
+    index_type="AUTOINDEX",
+    metric_type="L2",
+)
+
+client.create_collection(
+    collection_name="users",
+    schema=schema,
+    index_params=index_params
+)
+
+# 2. Seed two entities
+client.insert(
+    collection_name="users",
+    data=[
+        {"pk": 1, "embedding": [0.1, 0.2, 0.3, 0.4, 0.5], "tags": ["new"]},
+        {"pk": 2, "embedding": [0.6, 0.7, 0.8, 0.9, 1.0], "tags": ["new", "trial"]},
+    ],
+)
+
+# 3. Append tags without reading the existing ARRAY values
+client.upsert(
+    collection_name="users",
+    # highlight-start
+    data=[
+        {"pk": 1, "tags": ["premium", "vip"]},
+        {"pk": 2, "tags": ["premium"]},
+    ],
+    field_ops={"tags": FieldOp.array_append()},
+    # highlight-end
+)
+
+res = client.query(
+    collection_name="users",
+    filter="pk in [1, 2]",
+    output_fields=["pk", "tags"],
+)
+print(res)
+
+# Example output:
+# data: [
+#   "{'pk': 1, 'tags': ['new', 'premium', 'vip']}",
+#   "{'pk': 2, 'tags': ['new', 'trial', 'premium']}"
+# ]
+
+# 4. Remove matching tags without replacing the full ARRAY field
+client.upsert(
+    collection_name="users",
+    # highlight-start
+    data=[
+        {"pk": 1, "tags": ["new"]},
+        {"pk": 2, "tags": ["trial"]},
+    ],
+    field_ops={"tags": FieldOp.array_remove()},
+    # highlight-end
+)
+
+res = client.query(
+    collection_name="users",
+    filter="pk in [1, 2]",
+    output_fields=["pk", "tags"],
+)
+print(res)
+
+# Example output:
+# data: [
+#   "{'pk': 1, 'tags': ['premium', 'vip']}",
+#   "{'pk': 2, 'tags': ['new', 'premium']}"
+# ]
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.common.ConsistencyLevel;
+import io.milvus.v2.common.DataType;
+import io.milvus.v2.common.IndexParam;
+import io.milvus.v2.service.collection.request.AddFieldReq;
+import io.milvus.v2.service.collection.request.CreateCollectionReq;
+import io.milvus.v2.service.vector.request.InsertReq;
+import io.milvus.v2.service.vector.request.QueryReq;
+import io.milvus.v2.service.vector.request.UpsertReq;
+import io.milvus.v2.service.vector.response.QueryResp;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build());
+Gson gson = new Gson();
+
+// 1. Create a collection with an ARRAY<VARCHAR> field
+CreateCollectionReq.CollectionSchema schema = CreateCollectionReq.CollectionSchema.builder()
+        .enableDynamicField(false)
+        .build();
+
+schema.addField(AddFieldReq.builder()
+        .fieldName("pk")
+        .dataType(DataType.Int64)
+        .isPrimaryKey(true)
+        .build());
+schema.addField(AddFieldReq.builder()
+        .fieldName("embedding")
+        .dataType(DataType.FloatVector)
+        .dimension(5)
+        .build());
+schema.addField(AddFieldReq.builder()
+        .fieldName("tags")
+        .dataType(DataType.Array)
+        .elementType(DataType.VarChar)
+        .maxCapacity(8)
+        .maxLength(32)
+        .build());
+
+List<IndexParam> indexParams = Collections.singletonList(IndexParam.builder()
+        .fieldName("embedding")
+        .indexType(IndexParam.IndexType.AUTOINDEX)
+        .metricType(IndexParam.MetricType.L2)
+        .build());
+
+client.createCollection(CreateCollectionReq.builder()
+        .collectionName("users")
+        .collectionSchema(schema)
+        .indexParams(indexParams)
+        .consistencyLevel(ConsistencyLevel.STRONG)
+        .build());
+
+// 2. Seed two entities
+List<JsonObject> data = Arrays.asList(
+        gson.fromJson("{\"pk\": 1, \"embedding\": [0.1, 0.2, 0.3, 0.4, 0.5], \"tags\": [\"new\"]}", JsonObject.class),
+        gson.fromJson("{\"pk\": 2, \"embedding\": [0.6, 0.7, 0.8, 0.9, 1.0], \"tags\": [\"new\", \"trial\"]}", JsonObject.class)
+);
+
+client.insert(InsertReq.builder()
+        .collectionName("users")
+        .data(data)
+        .build());
+
+// 3. Append tags without reading the existing ARRAY values
+List<JsonObject> appendData = Arrays.asList(
+        gson.fromJson("{\"pk\": 1, \"tags\": [\"premium\", \"vip\"]}", JsonObject.class),
+        gson.fromJson("{\"pk\": 2, \"tags\": [\"premium\"]}", JsonObject.class)
+);
+
+UpsertReq.FieldPartialUpdateOp appendTags = UpsertReq.FieldPartialUpdateOp.builder()
+        .fieldName("tags")
+        .opType(UpsertReq.FieldPartialUpdateOp.OpType.ARRAY_APPEND)
+        .build();
+
+client.upsert(UpsertReq.builder()
+        .collectionName("users")
+        // highlight-start
+        .data(appendData)
+        .fieldOps(Collections.singletonList(appendTags))
+        // highlight-end
+        .build());
+
+QueryResp res = client.query(QueryReq.builder()
+        .collectionName("users")
+        .filter("pk in [1, 2]")
+        .outputFields(Arrays.asList("pk", "tags"))
+        .consistencyLevel(ConsistencyLevel.STRONG)
+        .build());
+System.out.println(res);
+
+// Example output:
+// [
+//   {"pk": 1, "tags": ["new", "premium", "vip"]},
+//   {"pk": 2, "tags": ["new", "trial", "premium"]}
+// ]
+
+// 4. Remove matching tags without replacing the full ARRAY field
+List<JsonObject> removeData = Arrays.asList(
+        gson.fromJson("{\"pk\": 1, \"tags\": [\"new\"]}", JsonObject.class),
+        gson.fromJson("{\"pk\": 2, \"tags\": [\"trial\"]}", JsonObject.class)
+);
+
+UpsertReq.FieldPartialUpdateOp removeTags = UpsertReq.FieldPartialUpdateOp.builder()
+        .fieldName("tags")
+        .opType(UpsertReq.FieldPartialUpdateOp.OpType.ARRAY_REMOVE)
+        .build();
+
+client.upsert(UpsertReq.builder()
+        .collectionName("users")
+        // highlight-start
+        .data(removeData)
+        .fieldOps(Collections.singletonList(removeTags))
+        // highlight-end
+        .build());
+
+res = client.query(QueryReq.builder()
+        .collectionName("users")
+        .filter("pk in [1, 2]")
+        .outputFields(Arrays.asList("pk", "tags"))
+        .consistencyLevel(ConsistencyLevel.STRONG)
+        .build());
+System.out.println(res);
+
+// Example output:
+// [
+//   {"pk": 1, "tags": ["premium", "vip"]},
+//   {"pk": 2, "tags": ["new", "premium"]}
+// ]
+
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
 ```
 
 </TabItem>

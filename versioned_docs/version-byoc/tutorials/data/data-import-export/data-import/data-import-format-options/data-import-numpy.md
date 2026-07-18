@@ -1,11 +1,12 @@
 ---
 title: "从 NumPy 文件中导入 | BYOC"
 slug: /data-import-numpy
+sidebar_key: data-import-numpy
 sidebar_label: "从 NumPy 文件中导入"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "作为 Numpy 标准二进制文件格式，`.npy` 格式用于存放单个数组及其形状和数据类型信息，以便在不同机器上正确重构。 | BYOC"
 type: origin
@@ -33,7 +34,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="danger" icon="🚧" title="警告">
 
-<p>此特性已经废弃，请勿用于生产目的。</p>
+此特性已经废弃，请勿用于生产目的。
 
 </Admonition>
 
@@ -43,18 +44,17 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><strong>是否启用 AutoID</strong></li>
-</ul>
-<p>Collection 中的 id 字段作为主键区分 Entity。如果需要 Zilliz Cloud 为插入的数据自动生成主键，可以启用 AutoID。在这种情况下，批量导入数据时需要排队主键列。</p>
-<ul>
-<li><strong>是否启用 Dynamic Field</strong></li>
-</ul>
-<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>&#36;meta</strong> 字段中。</p>
-<ul>
-<li><strong>大小写</strong></li>
-</ul>
-<p>字典键名和 Collection 的字段名是大小写敏感的。您需要确保待导入字典的键名和目标 Collection 的字段名是完全对应的。比如，目标 Collection 中有个字段名为 <strong>id</strong>，那么待导入字典的键名也应该为 <strong>id</strong>。使用 <strong>ID</strong> 或 <strong>Id</strong> 会导致报错。</p>
+- **是否启用 AutoID**
+
+    Collection 中的 id 字段作为主键区分 Entity。如果需要 Zilliz Cloud 为插入的数据自动生成主键，可以启用 AutoID。在这种情况下，批量导入数据时需要排队主键列。
+
+- **是否启用 Dynamic Field**
+
+    当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 **&#36;meta** 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 **&#36;meta** 字段中。
+
+- **大小写**
+
+    字典键名和 Collection 的字段名是大小写敏感的。您需要确保待导入字典的键名和目标 Collection 的字段名是完全对应的。比如，目标 Collection 中有个字段名为 **id**，那么待导入字典的键名也应该为 **id**。使用 **ID** 或 **Id** 会导致报错。
 
 </Admonition>
 
@@ -88,7 +88,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您的文件体积较小，建议您使用多路径或源文件夹的方式将所有文件一次性导入。Zilliz Cloud 针对这两种方式做了内部优化，可以降低后续资源消耗。</p>
+如果您的文件体积较小，建议您使用多路径或源文件夹的方式将所有文件一次性导入。Zilliz Cloud 针对这两种方式做了内部优化，可以降低后续资源消耗。
 
 </Admonition>
 
@@ -142,7 +142,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果文件夹路径下包含多种格式文件，请求会失败。</p>
+如果文件夹路径下包含多种格式文件，请求会失败。
 
 </Admonition>
 
@@ -157,11 +157,11 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
    </tr>
    <tr>
      <td><p>阿里云 OSS</p></td>
-     <td><p><code><i>http</i>s://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/</code></p></td>
+     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/numpy-folder/</code></p></td>
    </tr>
    <tr>
      <td><p>腾讯云 COS</p></td>
-     <td><p><code><i>http</i>s://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder/</code></p></td>
+     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/numpy-folder/</code></p></td>
    </tr>
    <tr>
      <td><p>亚马逊云科技 S3</p></td>
@@ -175,7 +175,7 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>一个合法的 NumPy 文件夹集合中的每个文件的文件名应该与目标 Collection 的 Schema 中定义的字段名称相同，其中的数据格式应该符合各字段的定义。</p>
+一个合法的 NumPy 文件夹集合中的每个文件的文件名应该与目标 Collection 的 Schema 中定义的字段名称相同，其中的数据格式应该符合各字段的定义。
 
 </Admonition>
 

@@ -11,7 +11,7 @@ notebook: FALSE
 description: "在  Zilliz Cloud 中，Full Text Search 是对基于稠密向量](./use-dense-vector)的语义搜索的补充。它能够在大规模文本集合中查找包含特定术语或短语的文本，弥补语义搜索的遗漏，从而提升整体搜索效果。它支持直接插入和使用原始文本数据进行相似性搜索，Milvus 会自动将文本转换为[稀疏向量](./use-sparse-vector)表示。Full Text Search 使用 [BM25 算法进行相关性评分，根据查询文本返回最相关的文档，从而提高文本搜索的整体精度。 | Cloud"
 type: origin
 token: TO6fwkZ2jiT6FSkkgbCcyHTvn0d
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - 向量数据库
   - zilliz
@@ -240,6 +240,28 @@ export schema='{
             }
         ]
     }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{"YOUR_CLUSTER_ENDPOINT", "YOUR_CLUSTER_TOKEN"};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+schema->AddField({"id", milvus::DataType::INT64, "", true, true});
+schema->AddField(milvus::FieldSchema("text", milvus::DataType::VARCHAR).WithMaxLength(1000).EnableAnalyzer(true));
+schema->AddField(milvus::FieldSchema("sparse", milvus::DataType::SPARSE_FLOAT_VECTOR));
+
 ```
 
 </TabItem>
@@ -510,6 +532,17 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::FunctionPtr function = std::make_shared<milvus::Function>("text_bm25_emb", milvus::FunctionType::BM25);
+function->AddInputFieldName("text");
+function->AddOutputFieldName("sparse");
+schema->AddFunction(function);
+```
+
+</TabItem>
 </Tabs>
 
 <table>
@@ -632,6 +665,17 @@ export indexParams='[
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto index_params = milvus::IndexDesc("sparse", "", milvus::IndxType::SPARSE_INVERTED_INDEX, milvus::MetricType::BM25);
+index_params.AddExtraParam("inverted_index_algo", "DAAT_MAXSCORE");
+index_params.AddExtraParam("bm25_k1", "1.2");
+index_params.AddExtraParam("bm25_b", "0.75");
+```
+
+</TabItem>
 </Tabs>
 
 <table>
@@ -738,11 +782,26 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
     \"indexParams\": $indexParams
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->CreateCollection(milvus::CreateCollectionRequest()
+                                    .WithCollectionName("my_collection")
+                                    .WithCollectionSchema(schema))
+                                    .AddIndex(std::move(index_params));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -817,6 +876,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "data": [
         {"text": "information retrieval is a field of study."},
@@ -826,6 +886,27 @@ curl --request POST \
     "collectionName": "my_collection"
 }'
 
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+milvus::EntityRows data = {
+    {{"text", "information retrieval is a field of study."}},
+    {{"text", "information retrieval focuses on finding relevant information in large datasets."}},
+    {{"text", "data mining and information retrieval overlap in research."}}
+};
+
+milvus::InsertResponse response;
+auto status = client->Insert(milvus::InsertRequest()
+                                .WithCollectionName("my_collection")
+                                .WithRowsData(std::move(data))
+                                , response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -928,6 +1009,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data-raw '{
     "collectionName": "my_collection",
     "data": [
@@ -942,6 +1024,25 @@ curl --request POST \
         "params":{}
     }
 }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto request = milvus::SearchRequest()
+                       .WithCollectionName("my_collection")
+                       .AddEmbeddedText("whats the focus of information retrieval?")
+                       .WithLimit(3)
+                       .WithAnnsField("sparse")
+                       .AddOutputField("text");
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>

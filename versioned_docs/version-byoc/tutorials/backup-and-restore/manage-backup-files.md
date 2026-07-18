@@ -1,11 +1,12 @@
 ---
 title: "管理备份文件 | BYOC"
 slug: /manage-backup-files
+sidebar_key: manage-backup-files
 sidebar_label: "管理备份文件"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文将介绍如何查看、重命名和删除已有的备份文件。 | BYOC"
 type: origin
@@ -43,7 +44,7 @@ import Supademo from '@site/src/components/Supademo';
 
 如需在 Zilliz Cloud 控制台中查看备份文件及其详情，请点击左侧导航栏中的“备份”。
 
-![AoJxbOCy2ofs3KxvDrAcTymMneR](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/AoJxbOCy2ofs3KxvDrAcTymMneR.png)
+![AoJxbOCy2ofs3KxvDrAcTymMneR](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/AoJxbOCy2ofs3KxvDrAcTymMneR.png "AoJxbOCy2ofs3KxvDrAcTymMneR")
 
 ### 通过 RESTful API\{#via-restful-api}
 
@@ -64,24 +65,27 @@ import Supademo from '@site/src/components/Supademo';
     {
       "code": 0,
       "data": {
-        "count": 10,
+        "count": 1,
         "currentPage": 1,
-        "pageSize": 10,
+        "pageSize": 10, 
         "backups": [
-          {
-            "backupId": "backup1_0b9d15a0ddexxxx",
-            "projectId": "proj-20e13e974c7d659a83xxxx",
-            "backupName": "Dedicated-01_backup3",
-            "backupType": "CLUSTER",
-            "creationMethod": "AUTO",
-            "status": "CREATING",
-            "size": 0,
-            "expireTime": "2024-09-02T02:27:51Z",
-            "clusterId": "in01-3e5ad8adc38xxxx",
+           {
+            "projectId": "proj-a0195d6acacaf2bb985173",
+            "backupId": "backup0_1e3c0988ecb7f0d",
+            "backupName": "Dedicated-01_backup1",
+            "backupType": "CLUSTER", // CLUSTER or COLLECTION
+            "creationMethod": "AUTO", // AUTO or MANUAL
+            "size": 112, // unit: B
+            "expireTime": "2024-08-30T16:49:50Z",
+            "clusterId": "in01-31a6b840e50b72d",
             "clusterName": "Dedicated-01",
-            "createTime": "2024-08-26T02:27:51Z"
-          },
-          ...
+            "createTime": "2024-07-30T16:49:50Z",
+            "status": "AVAILABLE", // AVAILABLE or CREATING
+            "restoreNewInstancePolicies": [
+                "LATEST",
+                "ORIGINAL"
+             ]
+           }
         ]
       }
     }
@@ -104,19 +108,41 @@ import Supademo from '@site/src/components/Supademo';
     {
       "code": 0,
       "data": {
-        "clusterId": "in01-3e5ad8adc38xxxx",
-        "clusterName": "Dedicated-01",
-        "regionId": "ali-cn-hangzhou",
-        "projectId": "proj-20e13e974c7d659a83xxxx",
-        "backupId": "backup1_0b9d15a0ddexxxx",
-        "backupName": "Dedicated-01_backup3",
-        "backupType": "CLUSTER",
-        "creationMethod": "AUTO",
+        "clusterId": "in01-31a6b840e50b72d",
+        "clusterName": "Dediacted-01",
+        "projectId": "proj-b44a39b0c51cf21791a841",
+        "backupId": "backup0_1e3c0988ecb7f0d",
+        "backupName": "Dedicated-01_backup1",
+        "backupType": "CLUSTER", // cluster/collection
+        "creationMethod": "MANUAL", // auto/manual
         "status": "AVAILABLE",
-        "size": 0,
-        "collections": [],
-        "createTime": "2024-08-26T02:27:51Z",
-        "expireTime": "2024-09-02T02:27:51Z"
+        "size": 112, // unit: B
+        "regionId": "ali-cn-hangzhou",
+        "expireTime": "2024-08-30T16:49:50Z",
+        "collections": [
+           {
+               "collectionName": "medium_articles",
+               "description": "Sample collection",
+               "status": "LOADED" // LOADED/UNLOADED
+           }
+         ],     
+         "dbCollections": [
+            {
+              "dbName": "",
+              "collections": [
+               {
+                   "collectionName": "medium_articles",
+                   "description": "Sample collection",
+                   "status": "LOADED" // LOADED/UNLOADED
+               }
+               ]
+            }
+         ],
+        "createTime": "2024-07-30T16:49:50Z",
+        "restoreNewInstancePolicies": [
+                "LATEST",
+                "ORIGINAL"
+             ]
       }
     }
     ```

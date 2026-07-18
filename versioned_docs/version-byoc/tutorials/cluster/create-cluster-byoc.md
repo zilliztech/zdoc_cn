@@ -1,11 +1,12 @@
 ---
 title: "创建集群 | BYOC"
 slug: /create-cluster-byoc
+sidebar_key: create-cluster-byoc
 sidebar_label: "创建集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本节介绍如何创建集群。 | BYOC"
 type: origin
@@ -54,6 +55,8 @@ import Procedures from '@site/src/components/Procedures';
 
     - **集群名称**: 需要保证全局唯一，您可根据需要修改该名称。
 
+    - **（可选）集群描述**：最多 255 个字符。
+
     - **集群设置**:
 
         - **集群类型**: 根据您的性能需求，选择合适的集群类型。界面上有关于集群类型的简要介绍，并提供[计算器](https://zilliz.com/pricing#calculator)供您自助估算成本。更多信息，可以参考[选择合适的集群类型](./cu-types-explained)。
@@ -82,7 +85,7 @@ import Procedures from '@site/src/components/Procedures';
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>操作期间会消耗少量额外资源，并在操作完成后释放。</p>
+    操作期间会消耗少量额外资源，并在操作完成后释放。
 
     </Admonition>
 
@@ -110,7 +113,8 @@ curl --request POST \
         "regionId": "${REGION_ID}",
         "plan": "Enterprise",
         "clusterType": "Performance-optimized",
-        "cuSize": 1
+        "cuSize": 1,
+        "description": "A cluster for vector search workloads."
       }'
      
 #  {
@@ -138,7 +142,9 @@ curl --request POST \
 
 - `clusterType`：集群的类型。仅支持 **Performance-optimized**（性能型）。
 
-- `cuSize`：集群的 Query CU 数量。参数值为 1-256 之间的整数。
+- `cuSize`：集群的 Query CU 数量。参数值为 1-2,048 之间的整数。
+
+- `description`（可选）: 最多 255 个字符。
 
 </TabItem>
 

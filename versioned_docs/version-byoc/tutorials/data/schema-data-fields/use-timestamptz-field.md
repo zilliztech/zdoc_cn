@@ -1,16 +1,17 @@
 ---
 title: "TIMESTAMPTZ 类型 | BYOC"
 slug: /use-timestamptz-field
+sidebar_key: use-timestamptz-field
 sidebar_label: "TIMESTAMPTZ 类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "应用需要在跨区域处理中追踪时间（例如电商系统、协作工具或分布式日志系统），通常必须精确处理带有时区信息的时间戳。`TIMESTAMPTZ` 数据类型在 Zilliz Cloud 中通过存储带有时区的时间戳来提供这一能力。 | BYOC"
 type: origin
 token: E722wYOs1i8YbVkrFrcci3Rynfb
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -62,11 +63,11 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>你可以为 <code>TIMESTAMPTZ</code> 字段设置 <code>nullable=True</code> 以允许缺失值。</p></li>
-<li><p>你可以通过 <code>default_value</code> 属性以 ISO 8601 格式指定默认时间戳。</p></li>
-</ul>
-<p>有关更多信息，请参考 <a href="./nullable-and-default">Nullable 和默认值</a>。</p>
+- 你可以为 `TIMESTAMPTZ` 字段设置 `nullable=True` 以允许缺失值。
+
+- 你可以通过 `default_value` 属性以 ISO 8601 格式指定默认时间戳。
+
+有关更多信息，请参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -164,7 +165,7 @@ client.createCollection(requestCreate);
 ```javascript
 const { MilvusClient, DataType } = require('@zilliz/milvus2-sdk-node');
 
-const serverAddress = 'localhost:19530';
+const serverAddress = 'YOUR_CLUSTER_ENDPOINT';
 const collectionName = 'timestamptz_test123';
 
 const client = new MilvusClient({
@@ -210,6 +211,7 @@ curl --request POST \
      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/create \
      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \
      --header 'Content-Type: application/json' \
+     --header "Request-Timeout: 10" \
      --data '{
        "collectionName": "timestamptz_test123",
        "schema": {
@@ -334,7 +336,7 @@ const dayStr = String(day).padStart(2, '0');
 const hourStr = String(hour).padStart(2, '0');
 const minuteStr = String(minute).padStart(2, '0');
 const secondStr = String(second).padStart(2, '0');
-return `${year}-${monthStr}-${dayStr}T${hourStr}:${minuteStr}:${secondStr}${timezoneOffset}`;
+return \`${year}-${monthStr}-${dayStr}T${hourStr}:${minuteStr}:${secondStr}${timezoneOffset}\`;
 };
 
 const data = [];
@@ -373,7 +375,12 @@ data: data,
 <TabItem value='bash'>
 
 ```bash
-curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{        "collectionName": "timestamptz_test123",        "data": [          { "id": 1, "tsz": "2026-01-14T19:50:00Z", "vec": [0.1, 0.2, 0.3, 0.4] },          { "id": 2, "tsz": "2026-01-14T12:00:00+08:00", "vec": [0.5, 0.6, 0.7, 0.8] },          { "id": 3, "vec": [0.9, 0.0, 0.1, 0.2] }        ]      }'
+curl --request POST \      
+    --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/insert \      
+    --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      
+    --header 'Content-Type: application/json' \      
+    --header "Request-Timeout: 10" \
+    --data '{        "collectionName": "timestamptz_test123",        "data": [          { "id": 1, "tsz": "2026-01-14T19:50:00Z", "vec": [0.1, 0.2, 0.3, 0.4] },          { "id": 2, "tsz": "2026-01-14T12:00:00+08:00", "vec": [0.5, 0.6, 0.7, 0.8] },          { "id": 3, "vec": [0.9, 0.0, 0.1, 0.2] }        ]      }'
 ```
 
 </TabItem>
@@ -467,7 +474,12 @@ await client.loadCollection({
 <TabItem value='bash'>
 
 ```bash
-curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/load \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{ "collectionName": "timestamptz_test123" }'
+curl --request POST \      
+    --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/load \      
+    --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      
+    --header 'Content-Type: application/json' \      
+    --header "Request-Timeout: 10" \
+    --data '{ "collectionName": "timestamptz_test123" }'
 ```
 
 </TabItem>
@@ -477,14 +489,15 @@ curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/collections/l
 
 ### 基于时间戳过滤的查询\{#query-with-timestamp-filtering}
 
-使用算术运算符（如 ==、!=、\<、>、\<=、>=）。
+使用算术运算符（如 ==、!=、\<、>、&lt;=、>=）。
 
 有关 Zilliz Cloud 中可用的完整算术运算符列表，请参考 [基本操作符](./basic-filtering-operators)。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>不支持链式范围表达式（例如 <code>lower_bound &lt; tsz &lt; upper_bound</code>）。</p>
-<p>请改用逻辑与条件，例如：<code>tsz &gt; lower_bound AND tsz &lt; upper_bound</code>。</p>
+不支持链式范围表达式（例如 `lower_bound < tsz < upper_bound`）。
+
+请改用逻辑与条件，例如：`tsz > lower_bound AND tsz < upper_bound`。
 
 </Admonition>
 
@@ -566,6 +579,7 @@ curl --request POST \
      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/query \
      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \
      --header 'Content-Type: application/json' \
+     --header "Request-Timeout: 10" \
      --data '{
        "collectionName": "timestamptz_test123",
        "filter": "tsz != ISO '\''2025-01-03T00:00:00+08:00'\''",
@@ -583,7 +597,7 @@ curl --request POST \
 
 - `ISO '2025-01-03T00:00:00+08:00'` 是遵循 ISO 8601 格式的时间戳字面量，包含其时区偏移量。
 
-- `!=` 用于将字段值与该字面量进行比较。其他支持的运算符包括 ==、\<、\<=、> 和 >=。
+- `!=` 用于将字段值与该字面量进行比较。其他支持的运算符包括 ==、\<、&lt;=、> 和 >=。
 
 ### 时间区间（Interval）运算\{#interval-operations}
 
@@ -659,7 +673,12 @@ console.log(results);
 <TabItem value='bash'>
 
 ```bash
-curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/query \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{        "collectionName": "timestamptz_test123",        "filter": "tsz + INTERVAL '\''P0D'\'' != ISO '\''2025-01-03T00:00:00+08:00'\''",        "outputFields": ["id", "tsz"],        "limit": 10      }'
+curl --request POST \      
+    --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/query \      
+    --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      
+    --header 'Content-Type: application/json' \      
+    --header "Request-Timeout: 10" \
+    --data '{        "collectionName": "timestamptz_test123",        "filter": "tsz + INTERVAL '\''P0D'\'' != ISO '\''2025-01-03T00:00:00+08:00'\''",        "outputFields": ["id", "tsz"],        "limit": 10      }'
 ```
 
 </TabItem>
@@ -667,17 +686,19 @@ curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/quer
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>INTERVAL 值遵循 <a href="https://www.w3.org/TR/xmlschema-2/#duration">ISO 8601 的持续时间</a>语法。例如：</p>
-<ul>
-<li><p><code>P1D</code> → 1 天</p></li>
-<li><p><code>PT3H</code> → 3 小时</p></li>
-<li><p><code>P2DT6H</code> → 2 天 6 小时</p></li>
-</ul>
-<p>你可以在过滤表达式中直接使用 INTERVAL 运算，例如：</p>
-<ul>
-<li><p><code>tsz + INTERVAL 'P3D'</code> → 加 3 天</p></li>
-<li><p><code>tsz - INTERVAL 'PT2H'</code> → 减 2 小时</p></li>
-</ul>
+INTERVAL 值遵循 [ISO 8601 的持续时间](https://www.w3.org/TR/xmlschema-2/#duration)语法。例如：
+
+- `P1D` → 1 天
+
+- `PT3H` → 3 小时
+
+- `P2DT6H` → 2 天 6 小时
+
+你可以在过滤表达式中直接使用 INTERVAL 运算，例如：
+
+- `tsz + INTERVAL 'P3D'` → 加 3 天
+
+- `tsz - INTERVAL 'PT2H'` → 减 2 小时
 
 </Admonition>
 
@@ -761,7 +782,12 @@ console.log(results);
 <TabItem value='bash'>
 
 ```bash
-curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search \      --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      --header 'Content-Type: application/json' \      --data '{        "collectionName": "timestamptz_test123",        "data": [[0.1, 0.2, 0.3, 0.4]],        "limit": 5,        "filter": "tsz > ISO '\''2025-01-05T00:00:00+08:00'\''",        "outputFields": ["id", "tsz"]      }'
+curl --request POST \      
+    --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search \      
+    --header 'Authorization: Bearer YOUR_CLUSTER_TOKEN' \      
+    --header 'Content-Type: application/json' \      
+    --header "Request-Timeout: 10" \
+    --data '{        "collectionName": "timestamptz_test123",        "data": [[0.1, 0.2, 0.3, 0.4]],        "limit": 5,        "filter": "tsz > ISO '\''2025-01-05T00:00:00+08:00'\''",        "outputFields": ["id", "tsz"]      }'
 ```
 
 </TabItem>
@@ -769,7 +795,7 @@ curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/sear
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果你的 Collection 包含两个或以上的向量字段，你可以在执行混合搜索时结合时间戳过滤。详情请参考<a href="./hybrid-search">多向量混合搜索</a>。</p>
+如果你的 Collection 包含两个或以上的向量字段，你可以在执行混合搜索时结合时间戳过滤。详情请参考[多向量混合搜索](./hybrid-search)。
 
 </Admonition>
 
@@ -804,7 +830,7 @@ curl --request POST \      --url YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/sear
 
 要查看分步骤说明与示例代码，请参阅以下页面：
 
-- [修改 Collection](./modify-collections#example-6-set-collection-time-zone)
+- [修改 Collection](./modify-collections#example-7-set-collection-time-zone)
 
 - [Query](./get-and-scalar-query#temporarily-set-a-timezone-for-a-query)
 

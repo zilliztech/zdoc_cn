@@ -70,7 +70,7 @@ Struct Array 字段允许您将一组有序的 Structs 存入其中，每个 Str
 
 索引对于向量字段是必需的，包括集合中的向量字段和在结构体中定义的向量字段。对于结构体中的向量字段，您应该使用 `AUTOINDEX` 作为索引类型，使用 `MAX_SIM` 系列相似度类型作为度量类型。
 
-关于 Struct Array 的更多限制，可以阅读[使用限制](./use-array-of-structs#limits)一节的内容。
+关于 Struct Array 的更多限制，可以阅读[使用限制](./use-array-of-structs)一节的内容。
 
 ## 一个现实世界的例子：为自动驾驶数据集 CoVLA 建模\{#a-real-world-example-modeling-the-covla-dataset-for-autonomous-driving}
 

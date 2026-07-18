@@ -11,7 +11,7 @@ notebook: FALSE
 description: "本指南将帮助你在本地设置 Zilliz CLI 和 Agent 集成。设置完成后，你可以通过自然语言让 Agent 操作 Zilliz Cloud，也可以直接在终端、脚本和 CI 工作流中使用 CLI。 | Cloud"
 type: origin
 token: WTHSwHKU0iriJtkhWC2cVHM2nud
-sidebar_position: 0
+sidebar_position: 3
 keywords: 
   - 向量数据库
   - zilliz
@@ -63,7 +63,7 @@ import Procedures from '@site/src/components/Procedures';
 
     前往 **Discover** 页签并搜索 zilliz。选择 zilliz plugin 并安装。
 
-    ![HiRrbywpvo7mN7xFIjecc4A1nzf](/img/HiRrbywpvo7mN7xFIjecc4A1nzf.png "HiRrbywpvo7mN7xFIjecc4A1nzf")
+    ![HiRrbywpvo7mN7xFIjecc4A1nzf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HiRrbywpvo7mN7xFIjecc4A1nzf.png "HiRrbywpvo7mN7xFIjecc4A1nzf")
 
 1. 运行 quickstart wizard。并根据指导安装 CLI 、进行身份验证、连接集群。
 

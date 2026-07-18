@@ -1,11 +1,12 @@
 ---
 title: "指数衰减 | BYOC"
 slug: /exponential-decay
+sidebar_key: exponential-decay
 sidebar_label: "指数衰减"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "指数衰减会使搜索结果呈现出初始阶段急剧下降，随后是长尾的特征。就像突发新闻周期一样，相关性起初迅速减弱，但有些报道随着时间的推移仍保持重要性，指数衰减对刚刚超出理想范围的项目大举罚分，同时仍让距离较远的项目仍可以被发现。当你希望高度优先考虑接近程度或时效性，但又不想完全排除距离较远的选项时，这种方法是理想的选择。 | BYOC"
 type: origin
@@ -88,11 +89,11 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>所有时间参数（<code>origin</code>、<code>offset</code>、<code>scale</code>）必须使用与 Collection 中数据相同的单位。如果您的 Collection 以不同的单位（毫秒、微秒）存储时间戳，请相应地调整所有参数。</p>
+所有时间参数（`origin`、`offset`、`scale`）必须使用与 Collection 中数据相同的单位。如果您的 Collection 以不同的单位（毫秒、微秒）存储时间戳，请相应地调整所有参数。
 
 </Admonition>
 
-![Vg4mbHAc1oyPUqx6Q4lcyElTn4b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Vg4mbHAc1oyPUqx6Q4lcyElTn4b.png)
+![Vg4mbHAc1oyPUqx6Q4lcyElTn4b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Vg4mbHAc1oyPUqx6Q4lcyElTn4b.png "Vg4mbHAc1oyPUqx6Q4lcyElTn4b")
 
 上图展示了指数衰减如何影响数字新闻平台中新闻文章的排名：
 
@@ -119,7 +120,7 @@ $$
 其中：
 
 $$
-\lambda = \frac\{\ln(decay)}{scale}
+\lambda = \frac{\ln(decay)}{scale}
 $$
 
 用通俗易懂的语言来解释一下：
@@ -140,7 +141,7 @@ $$
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考<a href="./tutorial-implement-time-based-ranking">教程：实现基于时间的搜索结果重排</a>。</p>
+在使用 Decay Ranker 之前，你必须首先创建一个包含适当数字类型字段（如时间戳、距离等）的集合，这些字段将用于衰减计算。有关包括 Collection 设置、 Schema 定义和数据插入的完整工作示例，请参考[教程：实现基于时间的搜索结果重排](./tutorial-implement-time-based-ranking)。
 
 </Admonition>
 
@@ -150,7 +151,7 @@ $$
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p><strong>时间单位一致性</strong>：使用基于时间的衰减时，确保 <code>origin</code>、<code>scale</code> 和 <code>offset</code> 参数使用与您的 Collection 中的数据使用相同的时间单位。如果您的 Collection 中的数据以秒为单位存储时间戳，则所有参数都使用秒。如果使用毫秒，则所有参数都使用毫秒。</p>
+**时间单位一致性**：使用基于时间的衰减时，确保 `origin`、`scale` 和 `offset` 参数使用与您的 Collection 中的数据使用相同的时间单位。如果您的 Collection 中的数据以秒为单位存储时间戳，则所有参数都使用秒。如果使用毫秒，则所有参数都使用毫秒。
 
 </Admonition>
 
@@ -235,6 +236,20 @@ const rerank = {
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto rerank = std::make_shared<milvus::DecayRerank>("news_recency");
+rerank->AddInputFieldName("publish_time");
+rerank->SetFunction("exp");
+rerank->SetOrigin(1736870400);
+rerank->SetScale(24 * 60 * 60);
+rerank->SetOffset(3 * 60 * 60);
+rerank->SetDecay(0.5);
 ```
 
 </TabItem>
@@ -323,5 +338,29 @@ const result = await milvusClient.search({
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value='c++'>
+
+```c++
+auto function_score = std::make_shared<milvus::FunctionScore>();
+function_score->AddFunction(rerank);
+
+auto request = milvus::SearchRequest()
+                   .WithCollectionName(collection_name)
+                   .WithAnnsField("dense")
+                   .WithRerank(function_score)
+                   .WithLimit(10)
+                   .AddOutputField("title")
+                   .AddOutputField("publish_time")
+                   .AddFloatVector(your_query_vector)
+                   .WithConsistencyLevel(milvus::ConsistencyLevel::STRONG);
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+```
+
+</TabItem>
+</Tabs>

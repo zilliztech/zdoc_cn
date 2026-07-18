@@ -1,11 +1,12 @@
 ---
 title: "统计 Entity 数量 | BYOC"
 slug: /count-entities
+sidebar_key: count-entities
 sidebar_label: "统计 Entity 数量"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本文展示了如何统计 Collection 中的 Entity 数量，并解释了Entity 计数可能与实际数字不同的原因。 | BYOC"
 type: origin
@@ -59,7 +60,7 @@ Zilliz Cloud 为您提供了两种统计集合中 Entity 数量的方法。
 
 <Admonition type="info" icon="📘" title="注释">
 
-<p>上述两种方法均将具有相同主键的 Entity 视为独立 Entity。</p>
+上述两种方法均将具有相同主键的 Entity 视为独立 Entity。
 
 </Admonition>
 
@@ -208,6 +209,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "test_collection",
     "filter": "",
@@ -344,19 +346,19 @@ milvusClient.getCollectionStats({
 
 您可以在集群的**实体计数**和**已加载实体（近似值）**的**指标**选项卡中找到它们。这两个值都是估算值。曲线中的值是通过[使用](./count-entities#use-get_collection_stats)[`get_collection_stats()`](./count-entities#use-get_collection_stats)获取的。如果没有进一步的数据插入和删除，**实体计数**曲线最终将反映当前集合中实体的实际数量。
 
-![MCbMbZ8McoWwc3xDzBtcd7ebn4f](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MCbMbZ8McoWwc3xDzBtcd7ebn4f.png)
+![MCbMbZ8McoWwc3xDzBtcd7ebn4f](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MCbMbZ8McoWwc3xDzBtcd7ebn4f.png "MCbMbZ8McoWwc3xDzBtcd7ebn4f")
 
 ### Collection 详情\{#collection-details}
 
 您可以在集合的详情标签页中找到其实际实体计数。此值是通过使用[查询并将](./count-entities#query-with-count-as-the-output-field)[`count(*)`](./count-entities#query-with-count-as-the-output-field)[作为输出字段](./count-entities#query-with-count-as-the-output-field)获得的。
 
-![OzLub9Ytvo7AJnxqlpWccT7nn7f](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/OzLub9Ytvo7AJnxqlpWccT7nn7f.png)
+![OzLub9Ytvo7AJnxqlpWccT7nn7f](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/OzLub9Ytvo7AJnxqlpWccT7nn7f.png "OzLub9Ytvo7AJnxqlpWccT7nn7f")
 
 ### Partitions\{#partitions}
 
 您还可以使用集合的**分区**选项卡来查找其子分区中已加载实体的估计数量。此值通过使用`get_partition_stats()`获得。
 
-![SQ6qbK1qhoAeo9x4G61cgU6dnDU](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/SQ6qbK1qhoAeo9x4G61cgU6dnDU.png)
+![SQ6qbK1qhoAeo9x4G61cgU6dnDU](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/SQ6qbK1qhoAeo9x4G61cgU6dnDU.png "SQ6qbK1qhoAeo9x4G61cgU6dnDU")
 
 ## 常见问题解答\{#faqs}
 

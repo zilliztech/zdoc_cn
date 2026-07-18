@@ -98,6 +98,16 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+```
+
+</TabItem>
 </Tabs>
 
 ## 添加主键\{#add_primary_field}
@@ -185,6 +195,14 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_id", milvus::DataType::INT64, "", true, false));
+```
+
+</TabItem>
 </Tabs>
 
 当您在添加主键字段时，需要显式指定该字段为主键字段，即设置 `is_primary` 为 `True`。如果您选择使用 **Int64** 类型的主键，主键值应该类似 `12345` 这样的整数；如果您选择使用 **VarChar** 类型的主键，主键值应该类似于 `'my_entity_1234'` 这样的字符串。
@@ -267,6 +285,14 @@ export schema="{
         $vectorField
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_vector", milvus::DataType::FLOAT_VECTOR).WithDimension(5));
 ```
 
 </TabItem>
@@ -371,6 +397,14 @@ export schema="{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_varchar", milvus::DataType::VARCHAR).WithMaxLength(512));
+```
+
+</TabItem>
 </Tabs>
 
 ### 添加数值类型的字段\{#add-number-fields}
@@ -438,6 +472,14 @@ export schema="{
         $int64Field
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_int64", milvus::DataType::INT64));
 ```
 
 </TabItem>
@@ -512,6 +554,14 @@ export schema="{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_bool", milvus::DataType::BOOL));
+```
+
+</TabItem>
 </Tabs>
 
 ### 添加 JSON 类型的字段\{#add-json-fields}
@@ -581,6 +631,14 @@ export schema="{
         $jsonField
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_json", milvus::DataType::JSON));
 ```
 
 </TabItem>
@@ -670,6 +728,17 @@ export schema="{
         $arrayField
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_array", milvus::DataType::ARRAY)
+                                    .WithElementType(milvus::DataType::VARCHAR)
+                                    .WithMaxCapacity(5)
+                                    .WithMaxLength(512));
 ```
 
 </TabItem>

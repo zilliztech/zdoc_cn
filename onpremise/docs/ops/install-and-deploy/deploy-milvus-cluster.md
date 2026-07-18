@@ -1,11 +1,12 @@
 ---
 title: "部署 Milvus 集群 | On-Premise"
 slug: /deploy-milvus-cluster
+sidebar_key: deploy-milvus-cluster
 sidebar_label: "部署 Milvus 集群"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "本节将介绍在完成 Milvus Operator 安装后如何部署 Milvus 集群，包括如何规划 Milvus 集群资源、准备 Milvus 集群部署声明文件以及如何部署 Milvus 集群。 | On-Premise"
 type: origin
@@ -28,7 +29,8 @@ displayed_sidebar: onPremiseSidebar
 
 
 import Admonition from '@theme/Admonition';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 部署 Milvus 集群
 
@@ -79,7 +81,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>推荐 Kubernetes 集群中的主机数量为奇数。</p>
+推荐 Kubernetes 集群中的主机数量为奇数。
 
 </Admonition>
 
@@ -359,7 +361,7 @@ kubectl apply -f milvus-manifest.yaml
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Milvus 集群的部署由 License 控制。在执行上述命令时，如果填入的 License 信息正确，可以在命令回显中看到<code>Success check license</code>。</p>
+Milvus 集群的部署由 License 控制。在执行上述命令时，如果填入的 License 信息正确，可以在命令回显中看到`Success check license`。
 
 </Admonition>
 
@@ -398,7 +400,7 @@ kubectl apply -f milvus-manifest.yaml
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>上述命令会在后台执行端口转发。关闭当前 Shell 会话后，端口转发仍保持生效状态。如该操作不符合预期，可删除<code>kubectl port-foward</code>命令后的 <code>&amp;</code> 符号，让端口转发随当前 Shell 会话结束。</p>
+    上述命令会在后台执行端口转发。关闭当前 Shell 会话后，端口转发仍保持生效状态。如该操作不符合预期，可删除`kubectl port-foward`命令后的 `&` 符号，让端口转发随当前 Shell 会话结束。
 
     </Admonition>
 
@@ -507,12 +509,19 @@ kubectl apply -f milvus-manifest.yaml
 
         再比如下面例子是querynode 内存耗尽导致被oom kill 而重启
 
+        <Tabs groupId="code" defaultValue='shell' values={[{"label":"Zilliz CLI","value":"shell"},{"label":"cURL","value":"bash"}]}>
+        <TabItem value='shell'>
+
         ```shell
         milvus
         [querynode] not ready, detail: component[querynode]: 
           pod[in01-cd5d8b22e7b6ad5-milvus-standalone-6fb5dcb49d-vt84r]:
             container[querynode]: restartCount[1] lastState[terminated] reason[OOMKilled]
         ```
+
+        </TabItem>
+
+        <TabItem value='bash'>
 
         ```bash
         # add-command-prompt
@@ -522,6 +531,9 @@ kubectl apply -f milvus-manifest.yaml
             ,pulsar:.status.conditions[2].message\
             ,milvus:.status.conditions[3].message"
         ```
+
+        </TabItem>
+        </Tabs>
 
         比如，返回的结果如下，表明 etcd 连接失败。此时，可申请 Zilliz 支持团队介入排查 etcd 异常原因。
 

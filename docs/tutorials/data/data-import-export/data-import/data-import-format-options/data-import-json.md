@@ -40,17 +40,14 @@ JSON Lines 是一种文本格式，每一行都是一个完整且合法的 JSON 
    <tr>
      <th><p><strong>文件格式</strong></p></th>
      <th><p><strong>示例</strong></p></th>
-     <th></th>
    </tr>
    <tr>
      <td><p>JSON (.json)</p></td>
      <td><pre><code class="json language-json"> [     \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]\},     \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]\},     \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]\} ]</code></pre></td>
-     <td></td>
    </tr>
    <tr>
      <td><p>JSON Lines (.ndjson, .jsonl)</p></td>
      <td><pre><code class="json language-json"> \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]\} \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]\} \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]\}</code></pre></td>
-     <td></td>
    </tr>
 </table>
 

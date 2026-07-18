@@ -1,16 +1,17 @@
 ---
 title: "备份与恢复 | BYOC"
 slug: /backup-and-restore
+sidebar_key: backup-and-restore
 sidebar_label: "备份与恢复"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 集群中的数据备份与恢复。 | BYOC"
 type: origin
 token: SbePwiLrZi2hZqk5NpRcmramnEN
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz

@@ -165,18 +165,16 @@ export TOKEN="YOUR_API_KEY"
     <TabItem value='bash'>
 
     ```bash
-    export BASE_URL="https://api.cloud.zilliz.com.cn"
-    export TOKEN="YOUR_API_KEY"
-    
     curl --request POST \
     --url "${BASE_URL}/v2/volumes/create" \
     --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
     --header "Content-Type: application/json" \
     -d '{
         "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
         "regionId": "ali-cn-hangzhou",
-        "volumeName": "managed_volume",
-        "type": "MANAGED"
+        "volumeName": "my_volume",
+        "description": "A volume for storing collection data."
     }'
     
     # {
@@ -213,6 +211,10 @@ export TOKEN="YOUR_API_KEY"
          <td><p><code>type</code>(可选)</p></td>
          <td><p>可填写的参数值：<code>MANAGED</code> 或 <code>EXTERNAL</code>。</p><p>若省略该参数，默认创建 Managed Volume。</p></td>
        </tr>
+       <tr>
+         <td><p><code>description</code>(可选)</p></td>
+         <td><p>要创建的 Volume 描述。最多 255 个字符。</p></td>
+       </tr>
     </table>
 
 - **通过 Web 控制台**
@@ -240,7 +242,7 @@ export TOKEN="YOUR_API_KEY"
            </tr>
            <tr>
              <td><p>描述</p></td>
-             <td><p>可选参数。</p></td>
+             <td><p>可选参数。最多 255 个字符。</p></td>
            </tr>
            <tr>
              <td><p>Volume 类型</p></td>
@@ -362,17 +364,28 @@ export TOKEN="YOUR_API_KEY"
     --header "Content-Type: application/json"
     
     # {
-    #     "code": 0,
-    #     "data": {
-    #         "volumes": [
-    #            {
-    #                "volumeName": "external_volume",
-    #                "type": "EXTERNAL"
-    #            }
-    #        ],
-    #        "count": 1,
+    #    "code": 200,
+    #    "data": {
+    #        "count": 3,
     #        "currentPage": 1,
-    #        "pageSize": 10
+    #        "pageSize": 10,
+    #        "volumes": [
+    #            {
+    #                "volumeName": "my_volume_1",
+    #                "type": "MANAGED",
+    #                "description": "A volume for storing collection data."
+    #            },
+    #            {
+    #                "volumeName": "my_volume_2",
+    #                "type": "EXTERNAL",
+    #                "description": "A volume for storing collection data."
+    #            },
+    #            {
+    #                "volumeName": "my_volume_3",
+    #                "type": "MANAGED",
+    #                "description": "A volume for storing collection data."
+    #            }
+    #        ]
     #    }
     #}
     ```
@@ -382,7 +395,7 @@ export TOKEN="YOUR_API_KEY"
 
 - **通过 Web 控制台**
 
-    ![Sb2dwi4emhxlWtbi1tNcyeMQn3e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Sb2dwi4emhxlWtbi1tNcyeMQn3e.png)
+    ![WXtPwcoT4heZicblLYmctLRunrf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/WXtPwcoT4heZicblLYmctLRunrf.png)
 
 ## 查看 Volume 详情\{#Describe-managed-volume}
 
@@ -838,7 +851,7 @@ export TOKEN="YOUR_API_KEY"
      <th><p><strong>说明</strong></p></th>
    </tr>
    <tr>
-     <td><p><strong>运行中</strong></p></td>
+     <td><p><strong>可用</strong></p></td>
      <td><p>Volume 处于正常运行状态，可正常使用。 </p></td>
    </tr>
    <tr>

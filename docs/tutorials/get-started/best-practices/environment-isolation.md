@@ -11,7 +11,7 @@ notebook: FALSE
 description: "在企业级应用开发和部署过程中，合理的环境隔离与访问控制至关重要。Zilliz Cloud 通过组织、项目、集群的层级结构，提供灵活的环境隔离方案。本文将帮助您根据运营、安全和财务需求选择最合适的隔离策略。 | Cloud"
 type: origin
 token: Mn3vwEyK0iFAQrkEKMFcklRInBg
-sidebar_position: 3
+sidebar_position: 2
 keywords: 
   - 向量数据库
   - zilliz

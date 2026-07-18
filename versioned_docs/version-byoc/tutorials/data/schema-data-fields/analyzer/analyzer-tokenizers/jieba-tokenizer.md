@@ -1,11 +1,12 @@
 ---
 title: "Jieba | BYOC"
 slug: /jieba-tokenizer
+sidebar_key: jieba-tokenizer
 sidebar_label: "Jieba"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Jieba 分词器通过将中文文本拆分为其组成的单词来处理文本。 | BYOC"
 type: origin
@@ -36,7 +37,7 @@ Jieba 分词器通过将中文文本拆分为其组成的单词来处理文本�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p><code>jieba</code> 分词器在输出的分词结果中会将标点符号作为独立的词元予以保留。例如：<code>"你好！世界。"</code> 的分词结果为 <code>["你好", "！", "世界", "。"]</code>。如果需要在分词结果中去除标点符号词元，需要使用 <code>removepunct</code> 过滤器。</p>
+`jieba` 分词器在输出的分词结果中会将标点符号作为独立的词元予以保留。例如：`"你好！世界。"` 的分词结果为 `["你好", "！", "世界", "。"]`。如果需要在分词结果中去除标点符号词元，需要使用 `removepunct` 过滤器。
 
 </Admonition>
 
@@ -179,11 +180,14 @@ analyzer_params = {
 <TabItem value='java'>
 
 ```java
-Map<String, Object> analyzerParams = new HashMap<>();
-analyzerParams.put("type", "jieba");
-analyzerParams.put("dict", Collections.singletonList("customDictionary"));
-analyzerParams.put("mode", "exact");
-analyzerParams.put("hmm", false);
+Map<String, Object> analyzerParams = new HashMap<>();                                                                          
+analyzerParams.put("tokenizer", new HashMap<String, Object>() {{
+  put("type", "jieba");                                                                                                      
+  put("dict", Arrays.asList("customDictionary"));             
+  put("mode", "exact");
+  put("hmm", false);
+}});
+
 ```
 
 </TabItem>
@@ -199,7 +203,14 @@ analyzerParams.put("hmm", false);
 <TabItem value='go'>
 
 ```go
-analyzerParams = map[string]any{"type": "jieba", "dict": []any{"customDictionary"}, "mode": "exact", "hmm": false}
+analyzerParams := map[string]interface{}{
+  "tokenizer": map[string]interface{}{
+      "type": "jieba",
+      "dict": []string{"customDictionary"},
+      "mode": "exact",
+      "hmm":  false,
+  },
+}
 ```
 
 </TabItem>
@@ -268,11 +279,13 @@ analyzer_params = {
 <TabItem value='java'>
 
 ```java
-Map<String, Object> analyzerParams = new HashMap<>();
-analyzerParams.put("type", "jieba");
-analyzerParams.put("dict", Collections.singletonList("结巴分词器"));
-analyzerParams.put("mode", "exact");
-analyzerParams.put("hmm", false);
+Map<String, Object> analyzerParams = new HashMap<>();                                                                          
+analyzerParams.put("tokenizer", new HashMap<String, Object>() {{
+  put("type", "jieba");                                                                                                      
+  put("dict", Arrays.asList("结巴分词器"));                   
+  put("mode", "exact");
+  put("hmm", false);
+}});
 ```
 
 </TabItem>
@@ -288,7 +301,14 @@ analyzerParams.put("hmm", false);
 <TabItem value='go'>
 
 ```go
-analyzerParams = map[string]any{"type": "jieba", "dict": []any{"结巴分词器"}, "mode": "exact", "hmm": false}
+analyzerParams := map[string]interface{}{
+  "tokenizer": map[string]interface{}{
+      "type": "jieba",
+      "dict": []string{"结巴分词器"},
+      "mode": "exact",
+      "hmm":  false,
+  },
+}
 ```
 
 </TabItem>
@@ -373,7 +393,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

@@ -1,11 +1,12 @@
 ---
 title: "管理项目告警 | BYOC"
 slug: /manage-project-alerts
+sidebar_key: manage-project-alerts
 sidebar_label: "管理项目告警"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "项目告警功能通过对集群指标（如 CU、Query QPS）进行主动监控，在满足指定条件时发送通知，帮助您主动监控 Zilliz Cloud 集群的状态。配置项目告警后，您能在潜在问题出现时立即收到通知，确保及时处理。 | BYOC"
 type: origin
@@ -179,7 +180,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>您可以通过 RESTful API 管理告警。有关具体信息，请参考  <a href="/reference/restful/update-alert-rule-v2">Update Alert Rule</a> 和 <a href="/reference/restful/delete-alert-rule-v2">Delete Alert Rule</a>。</p>
+您可以通过 RESTful API 管理告警。有关具体信息，请参考  [Update Alert Rule](/reference/restful/update-alert-rule-v2) 和 [Delete Alert Rule](/reference/restful/delete-alert-rule-v2)。
 
 </Admonition>
 
@@ -221,7 +222,7 @@ curl --request POST \
 
 <Admonition type="caution" icon="🚧" title="警告">
 
-<p>告警删除是永久性的且无法撤销。请确保不再需要该告警后再进行操作。</p>
+告警删除是永久性的且无法撤销。请确保不再需要该告警后再进行操作。
 
 </Admonition>
 
@@ -241,7 +242,7 @@ curl --request POST \
 
 ## FAQ\{#faq}
 
-### 告警触发后，我会多久收到一次通知？
+### 告警触发后，我会多久收到一次通知？\{#}
 
 告警通知遵循自动频率模式：
 

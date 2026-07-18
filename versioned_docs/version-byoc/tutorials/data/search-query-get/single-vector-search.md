@@ -1,11 +1,12 @@
 ---
 title: "基本 Vector Search | BYOC"
 slug: /single-vector-search
+sidebar_key: single-vector-search
 sidebar_label: "基本 Vector Search"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "近似最近邻（ANN）Search 通过构建索引的方式对向量空间中的向量进行预排序，并在收到 Search 请求时根据索引快速定位到与查询向量相似可能性较高的子集中进行对比查询，从而提升查询效率。本节主要介绍如何使用 Milvus 进行 ANN Search 及相关的注意事项。 | BYOC"
 type: origin
@@ -83,8 +84,7 @@ res = client.search(
     collection_name="quick_setup",
     anns_field="vector",
     data=[query_vector],
-    limit=3,
-    search_params={"metric_type": "IP"}
+    limit=3
 )
 
 for hits in res:
@@ -171,7 +171,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 token := "YOUR_CLUSTER_TOKEN"
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
@@ -244,6 +244,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -493,6 +494,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -537,6 +539,73 @@ curl --request POST \
 #     ],
 #     "topks":[3]
 # }
+```
+
+</TabItem>
+</Tabs>
+
+## 主键搜索\{#Primary-Key Search}
+
+除了可以在搜索请求中设置查询向量外，您还可以使用 Collection 中在指定字段上包含了查询向量的 Entity 的主键来进行查询。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.search(
+    collection_name="quick_setup",
+    anns_field="vector",
+    # highlight-start
+    ids=[551, 296, 43],
+    # highlight-end
+    limit=3
+)
+
+for hits in res:
+    for hit in hits:
+        print(hit)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// node.js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  -H "Request-Timeout: 10" \
+  -d '{
+    "collectionName": "quick_setup",
+    "annsField": "vector",
+    "ids": [551, 296, 43],
+    "limit": 3
+  }'
 ```
 
 </TabItem>
@@ -684,6 +753,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "partitionNames": ["partitionA"],
@@ -732,7 +802,6 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=3, # The number of results to return
-    search_params={"metric_type": "IP"}，
     # highlight-next-line
     output_fields=["color"]
 )
@@ -863,6 +932,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -898,6 +968,141 @@ curl --request POST \
 
 </TabItem>
 </Tabs>
+
+## 通过标量字段对搜索结果进行排序 | PRIVATE \{#sort-search-results-by-scalar-fields}
+
+默认情况下，Zilliz Cloud 会按照结果与查询向量的相似度得分对搜索结果进行排序。如果你希望返回的 Entity 遵循某个标量字段的排序规则，可以在搜索请求中添加 `order_by_fields` 参数。
+
+`order_by_fields` 中的每一项都需要指定一个标量字段以及排序方向。排序方向可以是 `"asc"`（升序）或 `"desc"`（降序）。如果省略 `order` 字段，Zilliz Cloud 会默认按该字段的升序进行排序。
+
+下面的示例按照 `price` 字段从低到高对搜索结果进行排序。如果你希望在响应中查看该字段的值，请将该排序字段一并添加到 `output_fields` 中。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.search(
+    collection_name="product_catalog",
+    data=query_vectors,
+    anns_field="embedding",
+    limit=20,
+    output_fields=["id", "price", "rating", "category"],
+    # highlight-start
+    order_by_fields=[
+        {"field": "price", "order": "asc"}
+    ],
+    # highlight-end
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+你也可以按多个标量字段进行排序。Zilliz Cloud 会按照你指定的字段顺序依次应用排序规则。在下面的示例中，Zilliz Cloud 首先按 `price` 进行升序排序；对于具有相同 `price` 的 Entity，则再按 `rating` 进行降序排序。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.search(
+    collection_name="product_catalog",
+    data=query_vectors,
+    anns_field="embedding",
+    limit=20,
+    output_fields=["id", "price", "rating", "category"],
+    # highlight-start
+    order_by_fields=[
+        {"field": "price", "order": "asc"},
+        {"field": "rating", "order": "desc"},
+    ],
+    # highlight-end
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// nodejs
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
+```
+
+</TabItem>
+</Tabs>
+
+对于在所有指定排序字段上取值都相同的 Entity，Zilliz Cloud 会保留它们原本按相似度得分排列的顺序。
 
 ## 使用 Limit 和 Offset 参数\{#use-limit}
 
@@ -949,7 +1154,6 @@ res = client.search(
     data=[query_vector],
     limit=3, # The number of results to return
     search_params={
-        "metric_type": "IP", 
         # highlight-next-line
         "offset": 10 # The records to skip
     }
@@ -1044,6 +1248,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -1066,7 +1271,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>查询参数 <code>Level</code> 当前仍处于公测阶段。如果您设置了高于 <code>5</code> 的值而搜索结果没有变化，您的 Cluster 可能尚未支持该参数。您可以继续按照 <code>1</code> - <code>5</code> 的范围调节召回效果或联系 <a href="https://zilliz.com.cn/contact-sales">Zilliz Cloud 支持</a>。</p>
+查询参数 `Level` 当前仍处于公测阶段。如果您设置了高于 `5` 的值而搜索结果没有变化，您的 Cluster 可能尚未支持该参数。您可以继续按照 `1` - `5` 的范围调节召回效果或联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
 
 </Admonition>
 
@@ -1182,6 +1387,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -1209,7 +1415,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>查询参数 <code>enable_recall_rate</code> 当前仍处于公测阶段。您的集群可能尚未支持该参数。如需体验，可以联系 <a href="https://zilliz.com.cn/contact-sales">Zilliz Cloud 支持</a>。</p>
+查询参数 `enable_recall_rate` 当前仍处于公测阶段。您的集群可能尚未支持该参数。如需体验，可以联系 [Zilliz Cloud 支持](https://zilliz.com.cn/contact-sales)。
 
 </Admonition>
 
@@ -1328,6 +1534,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -1349,6 +1556,77 @@ curl --request POST \
 
 </TabItem>
 </Tabs>
+
+## 为 Search 临时设置一个时区\{#temporarily-set-a-timezone-for-a-search}
+
+如果你的 Collection 包含 `TIMESTAMPTZ` 字段，你可以在一次操作中通过在 search 调用中设置 `timezone` 参数，临时覆盖 Database 或 Collection 的默认时区。这会控制在该次操作中 `TIMESTAMPTZ` 值的显示和比较方式。
+
+以下示例展示了如何为 search 操作设置临时时区：
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
+res = client.search(
+    collection_name="quick_setup",
+    anns_field="vector",
+    data=[query_vector],
+    limit=3,
+    # highlight-next-line
+    timezone="America/Havana",
+)
+```
+
+</TabItem>
+
+<TabItem value='java'>
+
+```java
+// java
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+// js
+```
+
+</TabItem>
+
+<TabItem value='go'>
+
+```go
+// go
+```
+
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
+# restful
+export QUERY_VECTOR='[0.1, 0.2, 0.3, 0.4]'                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                          
+curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \                                                                                                                                                                                     
+-H "Content-Type: application/json" \  
+-H "Request-Timeout: 10" \                                                                                                                                                                                                               
+-d '{                                                                                                                                                                                                                                                 
+  "collectionName": "quick_setup",                                                                                                                                                                                                                    
+  "annsField": "vector",                                                                                                                                                                                                                              
+  "data": ['"$QUERY_VECTOR"'],                                                                                                                                                                                                                        
+  "limit": 3,                                                                                                                                                                                                                                         
+  "searchParams": {                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    "timezone": "America/Havana"                                                                                                                                                                                                                      
+  }                                                                                                                                                                                                                                                   
+}'
+```
+
+</TabItem>
+</Tabs>
+
+参数 `timezone` 的值必须是有效的 [IANA 时区标识符](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)，例如 **Asia/Shanghai**、**America/Chicago** 或 **UTC**。关于如何使用 `TIMESTAMPTZ` 字段的详细信息，请参见[TIMESTAMPTZ 类型](./use-timestamptz-field)。
 
 ## ANN Search 能力增强\{#enhancing-ann-search}
 

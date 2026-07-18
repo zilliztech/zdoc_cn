@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Zilliz Cloud 支持用于查询和过滤 JSON 字段的高级操作符，使其成为管理复杂结构化数据的完美工具。这些操作符可实现对 JSON 文档的高效查询，允许您根据 JSON 字段中的特定元素、值或条件检索实体。本节将指导您在 Zilliz Cloud 中使用特定于 JSON 的操作符，并提供实际示例来说明其功能。 | Cloud"
 type: origin
 token: CzWlwISZRiHErEkRmEfcqga4nzd
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz

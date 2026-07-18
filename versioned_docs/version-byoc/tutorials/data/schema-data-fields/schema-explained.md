@@ -1,11 +1,12 @@
 ---
 title: "了解 Schema | BYOC"
 slug: /schema-explained
+sidebar_key: schema-explained
 sidebar_label: "了解 Schema"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您需要根据业务需要，设计并创建好 Collection 的 Schema。本章将介绍设计与创建 Schema 时需要注意的相关事项。 | BYOC"
 type: origin
@@ -37,7 +38,7 @@ Schema 定义了 Collection 的数据结构。在创建 Collection 之前，您�
 
 如下图所示，一个典型的 Collection Schema 包含一个主键，至少一个向量列和若干标量列。下图说明了如何将一篇文章映射成一个 Collection Schema。
 
-![RFGTbrPmmoa7b8xAg34cRdUmnXe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/RFGTbrPmmoa7b8xAg34cRdUmnXe.png)
+![RFGTbrPmmoa7b8xAg34cRdUmnXe](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/RFGTbrPmmoa7b8xAg34cRdUmnXe.png "RFGTbrPmmoa7b8xAg34cRdUmnXe")
 
 搜索系统的数据模型设计通常包括分析业务需求，并将信息抽象为使用 Schema 表达的数据模型。例如，搜索一段文本时，必须通过 Embedding 将字面字符串转换为向量并对这些向量字段建立索引。除这一基本要求外，Schema 中可能还需要定义其他属性，如出版时间和作者。有了这些元数据（标量字段），就可以通过元数据过滤来完善语义搜索，以便返回特定日期之后或特定作者发表的文本。您还可以在搜索时要求在搜索结果中返回这些标量甚至主文本，然后在应用程序中呈现信息量更为丰富的搜索结果。您应该为每个标量分配一个以整数或字符串形式命名的唯一标识符，它们对于实现复杂的搜索逻辑至关重要。
 
@@ -94,6 +95,16 @@ schema := entity.NewSchema()
 export schema='{
     "fields": []
 }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
 ```
 
 </TabItem>
@@ -184,6 +195,14 @@ export schema='{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_id", milvus::DataType::INT64, "", true, false));
+```
+
+</TabItem>
 </Tabs>
 
 当您在添加主键字段时，需要显式指定该字段为主键字段，即设置 `is_primary` 为 `True`。如果您选择使用 **Int64** 类型的主键，主键值应该类似 `12345` 这样的整数；如果您选择使用 **VarChar** 类型的主键，主键值应该类似于 `'my_entity_1234'` 这样的字符串。
@@ -266,6 +285,14 @@ export schema="{
         $vectorField
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_vector", milvus::DataType::FLOAT_VECTOR).WithDimension(5));
 ```
 
 </TabItem>
@@ -370,6 +397,14 @@ export schema="{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_varchar", milvus::DataType::VARCHAR).WithMaxLength(512));
+```
+
+</TabItem>
 </Tabs>
 
 ### 添加数值类型的字段\{#add-number-fields}
@@ -437,6 +472,14 @@ export schema="{
         $int64Field
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_int64", milvus::DataType::INT64));
 ```
 
 </TabItem>
@@ -511,6 +554,14 @@ export schema="{
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_bool", milvus::DataType::BOOL));
+```
+
+</TabItem>
 </Tabs>
 
 ### 添加 JSON 类型的字段\{#add-json-fields}
@@ -580,6 +631,14 @@ export schema="{
         $jsonField
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_json", milvus::DataType::JSON));
 ```
 
 </TabItem>
@@ -669,6 +728,17 @@ export schema="{
         $arrayField
     ]
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("my_array", milvus::DataType::ARRAY)
+                                    .WithElementType(milvus::DataType::VARCHAR)
+                                    .WithMaxCapacity(5)
+                                    .WithMaxLength(512));
 ```
 
 </TabItem>

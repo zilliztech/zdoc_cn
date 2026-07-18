@@ -1,16 +1,17 @@
 ---
 title: "Geometry 操作符 | BYOC"
 slug: /geometry-operators
+sidebar_key: geometry-operators
 sidebar_label: "Geometry 操作符"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "支持一组用于在 `GEOMETRY` 字段上进行过滤的运算符，这些运算符对于管理和分析几何数据至关重要。这些运算符能够实现有效的空间查询，使您能够根据对象之间的几何关系检索实体。 | BYOC"
 type: origin
 token: U0i0wkfowidG7xkkyercDwvKnMf
-sidebar_position: 7
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -36,13 +37,13 @@ import Admonition from '@theme/Admonition';
 
 要了解更多关于 `GEOMETRY` 字段在  中的信息，请参考 [Geometry 类型](./use-geometry-field)。
 
-## 可用的几何运算符
+## 可用的几何运算符\{#}
 
 下表总结了  中可用的几何运算符。在**示例**列中，`geo_field` 表示 `GEOMETRY` 字段的名称，该字段在您的集合模式中定义。
 
 <Admonition type="info" icon="📘" title="注释">
 
-<p>操作符名称必须<strong>全部大写</strong>或<strong>全部小写</strong>。不要在同一个操作符名称中混用大小写。</p>
+操作符名称必须**全部大写**或**全部小写**。不要在同一个操作符名称中混用大小写。
 
 </Admonition>
 
@@ -89,7 +90,7 @@ import Admonition from '@theme/Admonition';
    </tr>
 </table>
 
-## ST_EQUALS / st_equals
+## ST_EQUALS / st_equals\{#stequals-stequals}
 
 如果两个几何图形在空间上完全相同，即它们具有完全相同的位置和维度集合，则 `ST_EQUALS` 运算符返回`TRUE`。
 
@@ -102,7 +103,7 @@ import Admonition from '@theme/Admonition';
 filter = "ST_EQUALS(geo_field, 'POINT (10 20)')"
 ```
 
-## ST_TOUCHES / st_touches
+## ST_TOUCHES / st_touches\{#sttouches-sttouches}
 
 如果两个几何图形的边界接触但内部不相交，则 `ST_TOUCHES` 运算符返回 `TRUE`。这对于检测邻接关系很有用。
 
@@ -115,7 +116,7 @@ filter = "ST_EQUALS(geo_field, 'POINT (10 20)')"
 filter = "ST_TOUCHES(geo_field, 'LINESTRING(0 0, 1 1)')"
 ```
 
-## ST_OVERLAPS / st_overlaps
+## ST_OVERLAPS / st_overlaps\{#stoverlaps-stoverlaps}
 
 如果两个相同维度的几何图形有部分相交，且相交部分的维度与原始几何图形相同，但不等于其中任何一个，则 `ST_OVERLAPS` 运算符返回 `TRUE`。
 
@@ -128,7 +129,7 @@ filter = "ST_TOUCHES(geo_field, 'LINESTRING(0 0, 1 1)')"
 filter = "ST_OVERLAPS(geo_field, 'POLYGON((0 0, 0 10, 10 10, 10 0, 0 0))')"
 ```
 
-## ST_CROSSES / st_crosses
+## ST_CROSSES / st_crosses\{#stcrosses-stcrosses}
 
 如果两个几何图形的交集形成的几何图形的维度低于原始几何图形，则 `ST_CROSSES` 运算符返回 `TRUE`。这通常适用于一条线穿过一个多边形或另一条线的情况。
 
@@ -141,7 +142,7 @@ filter = "ST_OVERLAPS(geo_field, 'POLYGON((0 0, 0 10, 10 10, 10 0, 0 0))')"
 filter = "ST_CROSSES(geo_field, 'LINESTRING(5 0, 5 10)')"
 ```
 
-## ST_CONTAINS / st_contains
+## ST_CONTAINS / st_contains\{#stcontains-stcontains}
 
 `ST_CONTAINS` 运算符在第一个几何图形完全包含第二个几何图形时返回 `TRUE`。这对于查找多边形内的点，或较大多边形内的较小多边形很有用。
 
@@ -154,7 +155,7 @@ filter = "ST_CROSSES(geo_field, 'LINESTRING(5 0, 5 10)')"
 filter = "ST_CONTAINS(geo_field, 'POLYGON ((0 0, 10 0, 10 10, 0 10, 0 0))')"
 ```
 
-## ST_INTERSECTS / st_intersects
+## ST_INTERSECTS / st_intersects\{#stintersects-stintersects}
 
 `ST_INTERSECTS` 运算符在两个几何图形的边界或内部有任何公共点时返回 `TRUE`。这是一个用于检测任何形式空间重叠的通用运算符。
 
@@ -167,7 +168,7 @@ filter = "ST_CONTAINS(geo_field, 'POLYGON ((0 0, 10 0, 10 10, 0 10, 0 0))')"
 filter = "ST_INTERSECTS(geo_field, 'LINESTRING (1 1, 2 2)')"
 ```
 
-## ST_WITHIN / st_within
+## ST_WITHIN / st_within\{#stwithin-stwithin}
 
 如果第一个几何图形完全位于第二个几何图形的内部或边界上，则 `ST_WITHIN` 运算符返回`TRUE`。它是`ST_CONTAINS` 的逆运算。
 

@@ -1,13 +1,14 @@
 ---
 title: "阿里云对象存储 | BYOC"
 slug: /integrate-with-storage-bucket
+sidebar_key: integrate-with-storage-bucket
 sidebar_label: "阿里云 OSS"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出到指定的 OSS 存储桶。 | BYOC"
+description: "Zilliz Cloud 支持与阿里云对象存储 OSS 集成。 | BYOC"
 type: origin
 token: IwAbwxWzQiGVc0khATdcOoCbnCg
 sidebar_position: 1
@@ -31,7 +32,15 @@ import Procedures from '@site/src/components/Procedures';
 
 # 阿里云对象存储
 
-Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出到指定的 OSS 存储桶。
+Zilliz Cloud 支持与阿里云对象存储 OSS 集成。
+
+该存储集成可用于：
+
+- [导出备份文件](./export-backup-files)
+
+- [转发审计日志](./audit-logs)
+
+- [转发访问日志](./access-log-overview)
 
 ![GPQdwo63IhxSjqbk9vkcdZQXngM](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/GPQdwo63IhxSjqbk9vkcdZQXngM.png)
 
@@ -59,6 +68,23 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
     - **配置描述**（可选）：为此集成添加描述（如：`for export backup file`）。
 
+    - **Bucket 权限**：选择 Zilliz Cloud 对您的对象存储桶具有的访问级别。下表说明了这些选项。
+
+        <table>
+           <tr>
+             <th><p><strong>权限</strong></p></th>
+             <th><p><strong>说明</strong></p></th>
+           </tr>
+           <tr>
+             <td><p>只读</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。</p></td>
+           </tr>
+           <tr>
+             <td><p>读写</p></td>
+             <td><p>Zilliz Cloud 既可以从 bucket 中读取数据，也可以向 bucket 中写入数据。用于<a href="./export-backup-files">导出备份文件</a>、<a href="./audit-logs">转发审计日志</a>或<a href="./access-log-overview">转发访问日志</a>。</p></td>
+           </tr>
+        </table>
+
 1. 继续执行[步骤 2](./integrate-with-storage-bucket)。
 
 </Procedures>
@@ -77,7 +103,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
     1. **Bucket 名称**：为您的 OSS 存储空间设置一个唯一名称。
 
-    1. **地域**：指定存储空间所在的云地域。注意，存储空间所在地域必须和目标 Zilliz Cloud 集群所在的地域相同。
+    1. **地域**：指定存储空间所在的云地域。注意，存储空间所在地域必须和目标 Zilliz Cloud 集群或 Volume所在的地域相同。
 
     1. 其他设置可以保持默认。配置完成后，点击**完成创建**。
 
@@ -130,7 +156,7 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p><code>$bucket</code> 应替换为您实际的 OSS 存储空间名称。</p>
+    `$bucket` 应替换为您实际的 OSS 存储空间名称。
 
     </Admonition>
 
@@ -206,6 +232,130 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 之后您便可以将备份文件导出到您的阿里云 OSS。有关导出的具体步骤，请参考[导出备份文件](./export-backup-files)。
 
+## 调用接口创建存储集成\{#create-storage-integration-programmatically}
+
+除了在 Zilliz Cloud 控制台上进行操作之外，您还可以调用接口创建存储集成。
+
+<Procedures>
+
+1. 创建 OSS 存储空间。
+
+    更多详情，可参考上面的[设置 OSS 存储空间](./integrate-with-storage-bucket#step-2-create-s3-bucket)小节或[创建存储空间](https://help.aliyun.com/zh/oss/user-guide/create-a-bucket-4)。
+
+1. 生成鉴权材料。
+
+    ```bash
+    export BASE_URL="https://api.cloud.zilliz.com.cn"
+    export TOKEN="YOUR_API_KEY"
+    
+    curl --request POST \
+    --url "${BASE_URL}/v2/storageIntegrations/authorizationMaterials" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
+        "regionId": "ali-cn-hangzhou",
+        "bucketName": "zilliz-bucket-for-integration-0819"
+    }'
+    ```
+
+    根据上述请求，Zilliz Cloud 会生成您在阿里云控制台上创建权限策略及 RAM 角色时所需的凭据。返回的响应如下：
+
+    ```bash
+    {
+      "code": 0,
+      "data": {
+        "readonly": "{...}",
+        "readwrite": "{...}",
+        "ramPolicy": "{...}",
+        "trustPolicy": "{...}",
+        "zillizAccount": "306787409409",
+        "externalId": "zilliz-external-AbCdEf12345678"
+      }
+    }
+    ```
+
+    关于请求及响应中各字段的说明，可以参考[生成 Storage Integration 授权材料](/reference/restful/generate-storage-integration-authorization-materials-v2)。
+
+1. 使用返回的 `readonly`、`readwrite`、`ramPolicy`、`trustPolicy` 及 `zillizAccount` 创建 RAM 角色，并为其添加必要的权限，使其可以操作您的 OSS 存储空间。
+
+    请记录下已创建的 RAM 角色 ARN，其格式类似 `acs:ram::1234567890123456:root`。关于如何创建 RAM 角色，可以参考[创建权限策略](./integrate-with-storage-bucket#step-3-create-iam-policy)及[创建 RAM 角色](./integrate-with-storage-bucket#step-4-create-iam-role)两小节的内容。
+
+1. 验证使用上述凭据创建的 RAM 角色是否可以正常访问您的 OSS 存储空间。
+
+    在请求中，您需要将 `externalCred.roleArn` 设置为上一步获得的 RAM 角色 ARN，并将 `externalCred.externalId` 设置为生成的授权材料中的 `externalId`。
+
+    ```bash
+    curl --request POST \
+    --url "${BASE_URL}/v2/storageIntegrations/validate" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
+        "regionId": "ali-cn-hangzhou",
+        "bucketName": "my-bucket",
+        "externalCred": {
+            "roleArn": "acs:ram::1234567890123456:root",
+            "externalId": "zilliz-external-AbCdEf12345678"
+        }
+    }'
+    ```
+
+    验证成功的响应如下：
+
+    ```bash
+    {
+        "code": 0,
+        "data": {
+            "success": true,
+            "message": ""
+        }
+    }
+    ```
+
+    关于请求及响应中各字段的说明，可以参考[校验 Storage Integration](/reference/restful/validate-storage-integration-v2)。
+
+1. 创建存储集成。
+
+    此请求在验证请求的基础上增加了 `description` 参数。
+
+    ```bash
+    curl --request POST \
+    --url "${BASE_URL}/v2/storageIntegrations" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
+        "name": "analytics-oss",
+        "description": "Alibaba OSS bucket for external tables",
+        "regionId": "ali-cn-hangzhou",
+        "bucketName": "my-bucket",
+        "externalCred": {
+            "roleArn": "acs:ram::1234567890123456:root",
+            "externalId": "zilliz-external-AbCdEf12345678"
+        }
+    }'
+    ```
+
+    上述请求的响应格式如下：
+
+    ```bash
+    {
+        "code": 0,
+        "data": {
+            "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+            "name": "analytics-oss"
+        }
+    }
+    ```
+
+    关于请求及响应中各字段的说明，可以参考[创建 Storage Integration](/reference/restful/create-storage-integration-v2)。
+
+</Procedures>
+
 ## 管理集成\{#manage-integrations}
 
 集成添加完成后，您可以查看其详细信息或根据需要删除该集成。
@@ -216,3 +366,105 @@ Zilliz Cloud 支持与阿里云对象存储 OSS 集成，将备份文件导出�
 
 如果您需要使用 RESTful API 接口导出文件到您集成到 Zilliz Cloud 的对象存储桶中，您可以单击**查看详情**查看该对象存储桶的集成详情并复制该桶的集成 ID。
 
+除此之外，您还可以执行如下命令获取集成 ID。
+
+```bash
+export TOKEN="YOUR_API_KEY"
+
+curl --request GET \
+--url "${BASE_URL}/v2/storageIntegrations?projectId=proj-xxxxxxxxxxxxxxxxxxxxxx" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Request-Timeout: 5" \
+--header "Content-Type: application/json"
+```
+
+上述请求的响应如下：
+
+```bash
+{
+    "code": 0,
+    "data": {
+        "storageIntegrations": [
+            {
+                "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+                "name": "analytics-oss",
+                "status": "ACTIVE",
+                "message": "",
+                "regionId": "ali-cn-hangzhou",
+                "bucketName": "my-bucket"
+            }
+        ],
+        "count": 1,
+        "currentPage": 1,
+        "pageSize": 10
+    }
+}
+```
+
+关于请求及响应中各字段的说明，可以参考[列出 Storage Integration](/reference/restful/list-storage-integrations-v2)。
+
+### 查看集成详情\{#view-integration-details}
+
+您还可以执行如下命令查看指定集成的详情。
+
+```bash
+export integrationId="integ-xxxxxxxxxxxxxxxxxxx"
+
+curl --request GET \
+--url "${BASE_URL}/v2/storageIntegrations/${integrationId}" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Request-Timeout: 5" \
+--header "Content-Type: application/json"
+```
+
+上述请求的响应如下：
+
+```bash
+{
+    "code": 0,
+    "data": {
+        "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+        "name": "analytics-oss",
+        "description": "Alibaba OSS bucket for external tables",
+        "status": "ACTIVE",
+        "message": "",
+        "regionId": "ali-cn-hangzhou",
+        "bucketName": "my-bucket",
+        "externalCred": {
+            "roleArn": "acs:ram::1234567890123456:root",
+            "externalId": "zilliz-external-AbCdEf12345678"
+        },
+        "createTime": "2024-07-30T16:49:50Z"
+    }
+}
+```
+
+关于请求及响应中各字段的说明，可以参考[查看 Storage Integration](/reference/restful/describe-storage-integration-v2)。
+
+### 删除集成\{#delete-storage-integration}
+
+除了可以在 Zilliz Cloud 控制台上单击删除按钮之外，您还可以执行如下命令来删除指定集成。
+
+```bash
+export integrationId="integ-xxxxxxxxxxxxxxxxxxx"
+
+curl --request DELETE \
+--url "${BASE_URL}/v2/storageIntegrations/${integrationId}" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Request-Timeout: 5" \
+--header "Content-Type: application/json"
+```
+
+上述请求的响应如下：
+
+```bash
+{
+    "code": 0,
+    "data": {
+        "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+        "name": "analytics-oss"
+    }
+}
+```
+
+关于请求及响应中各字段的说明，可以参考[删除 Storage Integration](/reference/restful/delete-storage-integration-v2)。

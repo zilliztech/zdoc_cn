@@ -1,11 +1,12 @@
 ---
 title: "教程：实现基于时间的排序 | BYOC"
 slug: /tutorial-implement-time-based-ranking
+sidebar_key: tutorial-implement-time-based-ranking
 sidebar_label: "教程：实现基于时间的排序"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在许多搜索应用中，内容的时效性与相关性同样重要。新闻文章、产品列表、社交媒体帖子和研究论文都受益于能平衡语义相关性与时效性的排名系统。本教程将展示如何使用 Decay Ranker 在 Zilliz Cloud 中实现基于时间的排名。 | BYOC"
 type: origin

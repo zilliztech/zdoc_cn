@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Array 类型的字段用于存放相同数据类型的一组元素。如下示例展示了如何使用 Array 类型的字段存放数据。 | Cloud"
 type: origin
 token: LKIuw8JSfice0ek9PvTc2GxXnZz
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
@@ -45,7 +45,7 @@ Array 类型的字段用于存放相同数据类型的一组元素。如下示�
 
 ## 相关限制\{#}
 
-- **默认值与空值**：Array 字段不支持设置默认值。但是您可以将 `nullable` 设置为 `True` 来允许元素为空值。具体可参考[Nullable 和默认值](./nullable-and-default)。
+- **默认值与空值**：Array 字段不支持设置默认值。但是您可以将 `nullable` 设置为 `True` 来允许元素为空值。具体可参考[Nullable 和默认值](./nullable-fields)。
 
 - **数据类型**：Array 字段内所有元素的数据类型必须相同。您可以通过设置 `element_type` 参数来指定元素的数据类型。如果您将 `element_type` 设置为 `VARCHAR`，您还需要为元素设置 `max_length` 参数来指定元素的最大长度。
 
@@ -544,6 +544,12 @@ curl --request POST \
 
 </TabItem>
 </Tabs>
+
+<Admonition type="info" icon="📘" title="说明">
+
+除了插入或替换完整数组之外，`ARRAY` 字段还支持在 Upsert 请求中使用 `ARRAY_APPEND` 和 `ARRAY_REMOVE` 部分更新操作符。这些操作符允许您向现有数组追加元素，或从现有数组中移除匹配的元素，而无需先获取当前数组值，从而避免客户端读取-修改-写入流程。有关详细信息，请参阅[使用部分更新操作符对 ARRAY 字段执行 Upsert](./upsert-entities#upsert-array-fields-with-partial-update-operators)。
+
+</Admonition>
 
 ## 使用过滤表达式查询\{#query-with-filter-expressions}
 

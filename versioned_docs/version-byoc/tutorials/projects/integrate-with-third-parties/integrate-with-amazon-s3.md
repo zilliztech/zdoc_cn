@@ -1,13 +1,14 @@
 ---
 title: "Amazon S3 | BYOC"
 slug: /integrate-with-amazon-s3
+sidebar_key: integrate-with-amazon-s3
 sidebar_label: "Amazon S3"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 支持与 Amazon Simple Storage Service（Amazon S3） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。 | BYOC"
+description: "Zilliz Cloud 支持与 Amazon Simple Storage Service（Amazon S3） 集成。 | BYOC"
 type: origin
 token: Bt3swdJKaigDQgkrzSwcoEEgnV4
 sidebar_position: 2
@@ -31,7 +32,15 @@ import Procedures from '@site/src/components/Procedures';
 
 # Amazon S3
 
-Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成，用于转发审计日志或导出备份文件至指定的 S3 存储桶。
+Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.amazonaws.cn/AmazonS3/latest/userguide/Welcome.html)） 集成。
+
+该存储集成可用于：
+
+- [导出备份文件](./export-backup-files)
+
+- [转发审计日志](./audit-logs)
+
+- [转发访问日志](./access-log-overview)
 
 ![MWh0wX3wehaH1dbkEXpc5GbFnoc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MWh0wX3wehaH1dbkEXpc5GbFnoc.png)
 
@@ -43,7 +52,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 ## 步骤 1：集成基础设置\{#step-1-start-integration-on-zilliz-cloud}
 
-<Supademo id="cmeksbxva065wv9kqaibjgsu1" title="步骤 1：集成基础设置" />
+<Supademo id="cmeksbxva065wv9kqaibjgsu1" title=""  />
 
 <Procedures>
 
@@ -59,9 +68,26 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     - **配置描述**（可选）：为此集成添加描述（如：`for export backup file`）。
 
+    - **Bucket 权限**：选择 Zilliz Cloud 对您的对象存储桶具有的访问级别。下表说明了这些选项。
+
+        <table>
+           <tr>
+             <th><p><strong>权限</strong></p></th>
+             <th><p><strong>说明</strong></p></th>
+           </tr>
+           <tr>
+             <td><p>只读</p></td>
+             <td><p>Zilliz Cloud 只能从存储桶中读取文件。用于为 External collections 提供支持的 <a href="./external-volume">External volumes</a>。</p></td>
+           </tr>
+           <tr>
+             <td><p>读写</p></td>
+             <td><p>Zilliz Cloud 既可以从 bucket 中读取数据，也可以向 bucket 中写入数据。用于<a href="./export-backup-files">导出备份文件</a>、<a href="./audit-logs">转发审计日志</a>或<a href="./access-log-overview">转发访问日志</a>。</p></td>
+           </tr>
+        </table>
+
 1. 点击**下一步**。在**创建 Amazon S3 存储桶**步骤中，完成以下操作：
 
-    1. 在 **Zilliz Cloud 集群地域**选项中，选择 Zilliz Cloud 集群所在的云地域。之后创建的存储桶所在的云地域需与 Zilliz Cloud 集群所在的云地域相同。
+    1. 在 **Zilliz Cloud 集群地域**选项中，选择 Zilliz Cloud 集群或 Volum 所在的云地域。之后创建的存储桶所在的云地域需与 Zilliz Cloud 集群或 Volume所在的云地域相同。
 
     1. 打开 [Amazon S3 控制台](http://console.amazonaws.cn/s3)，继续执行[步骤 2](./integrate-with-amazon-s3#create-s3-bucket)。
 
@@ -79,10 +105,9 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <ul>
-    <li><p>创建存储桶的云地域必须与 Zilliz Cloud 集群所在地域一致。Zilliz Cloud 支持的区域可参考<a href="./cloud-providers-and-regions">云服务提供商和地域</a>。</p></li>
-    <li><p>如果集群运行在不同区域，需要分别为每个区域创建集成。</p></li>
-    </ul>
+    - 创建存储桶的云地域必须与 Zilliz Cloud 集群所在地域一致。Zilliz Cloud 支持的区域可参考[云服务提供商和地域](./cloud-providers-and-regions)。
+
+    - 如果集群运行在不同区域，需要分别为每个区域创建集成。
 
     </Admonition>
 
@@ -184,10 +209,9 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <ul>
-    <li><p><code>&lt;bucket&gt;</code> 需要替换为你的存储桶实际名称。</p></li>
-    <li><p><code>&lt;region&gt;</code>, <code>&lt;account_id&gt;</code>, and <code>&lt;key_id&gt;</code> 需要替换为对应的值。详情请参考 AWS 文档中的<a href="https://docs.amazonaws.cn/kms/latest/developerguide/concepts.html">密钥标识符</a>一节的相关内容。</p></li>
-    </ul>
+    - `<bucket>` 需要替换为你的存储桶实际名称。
+
+    - `<region>`, `<account_id>`, and `<key_id>` 需要替换为对应的值。详情请参考 AWS 文档中的[密钥标识符](https://docs.amazonaws.cn/kms/latest/developerguide/concepts.html)一节的相关内容。
 
     </Admonition>
 
@@ -247,7 +271,7 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p><code>306787409409</code> 和 <code>my-external-id</code> 需要替换为控制台实际显示的亚马逊云科技账号 ID 和 External ID。</p>
+    `306787409409` 和 `my-external-id` 需要替换为控制台实际显示的亚马逊云科技账号 ID 和 External ID。
 
     </Admonition>
 
@@ -277,12 +301,240 @@ Zilliz Cloud 支持与 Amazon Simple Storage Service（[Amazon S3](https://docs.
 
 之后您便可以转发审计日志或导出备份文件到您的 Amazon S3 存储桶。有关更多信息，请参考[审计日志](./audit-logs)或[导出备份文件](./export-backup-files)。
 
+## 调用接口创建存储集成\{#create-storage-integration-programmatically}
+
+除了在 Zilliz Cloud 控制台上进行操作之外，您还可以调用接口创建存储集成。
+
+<Procedures>
+
+1. 创建 OSS 存储空间。
+
+    更多详情，可参考上面的[创建存储桶](./integrate-with-storage-bucket#step-2-create-s3-bucket)小节或 [CreateBucket](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/API_CreateBucket.html)。
+
+1. 生成鉴权材料。
+
+    ```bash
+    export BASE_URL="https://api.cloud.zilliz.com.cn"
+    export TOKEN="YOUR_API_KEY"
+    
+    curl --request POST \
+    --url "${BASE_URL}/v2/storageIntegrations/authorizationMaterials" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
+        "regionId": "aws-cn-northwest-1",
+        "bucketName": "my-bucket"
+    }'
+    ```
+
+    根据上述请求，Zilliz Cloud 会生成您在阿里云控制台上创建权限策略及 RAM 角色时所需的凭据。返回的响应如下：
+
+    ```bash
+    {
+      "code": 0,
+      "data": {
+        "readonly": "{...}",
+        "readwrite": "{...}",
+        "iamPolicy": "{...}",
+        "trustPolicy": "{...}",
+        "zillizAccount": "306787409409",
+        "externalId": "zilliz-external-AbCdEf12345678"
+      }
+    }
+    ```
+
+    关于请求及响应中各字段的说明，可以参考[生成 Storage Integration 授权材料](/reference/restful/generate-storage-integration-authorization-materials-v2)。
+
+1. 使用返回的 `readonly`、`readwrite`、`iamPolicy`、`trustPolicy` 及 `zillizAccount` 创建 IAM 角色，并为其添加必要的权限，使其可以操作您的存储桶。
+
+    请记录下已创建的 IAM 角色 ARN，其格式类似 `arn:aws:iam::123456789012:role/zilliz-bucket-role`。关于如何创建 IAM 角色，可以参考[创建 IAM 策略](./integrate-with-amazon-s3#create-iam-policy)及[创建 IAM 角色](./integrate-with-amazon-s3#create-iam-role)两小节的内容。
+
+1. 验证使用上述凭据创建的 IAM 角色是否可以正常访问您的存储桶。
+
+    在请求中，您需要将 `externalCred.roleArn` 设置为上一步获得的 IAM 角色 ARN，并将 `externalCred.externalId` 设置为生成的授权材料中的 `externalId`。
+
+    ```bash
+    curl --request POST \
+    --url "${BASE_URL}/v2/storageIntegrations/validate" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
+        "regionId": "aws-cn-northwest-1",
+        "bucketName": "my-bucket",
+        "externalCred": {
+            "roleArn": "arn:aws:iam::123456789012:role/zilliz-bucket-role",
+            "externalId": "zilliz-external-AbCdEf12345678"
+        }
+    }'
+    ```
+
+    验证成功的响应如下：
+
+    ```bash
+    {
+        "code": 0,
+        "data": {
+            "success": true,
+            "message": ""
+        }
+    }
+    ```
+
+    关于请求及响应中各字段的说明，可以参考[校验 Storage Integration](/reference/restful/validate-storage-integration-v2)。
+
+1. 创建存储集成。
+
+    此请求在验证请求的基础上增加了 `description` 参数。
+
+    ```bash
+    curl --request POST \
+    --url "${BASE_URL}/v2/storageIntegrations" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Request-Timeout: 5" \
+    --header "Content-Type: application/json" \
+    -d '{
+        "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxx",
+        "name": "analytics-s3",
+        "description": "S3 bucket for external tables",
+        "regionId": "aws-cn-northwest-1",
+        "bucketName": "my-bucket",
+        "externalCred": {
+            "roleArn": "arn:aws:iam::123456789012:role/zilliz-bucket-role",
+            "externalId": "zilliz-external-AbCdEf12345678"
+        }
+    }'
+    ```
+
+    上述请求的响应格式如下：
+
+    ```bash
+    {
+        "code": 0,
+        "data": {
+            "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+            "name": "analytics-s3"
+        }
+    }
+    ```
+
+    关于请求及响应中各字段的说明，可以参考[创建 Storage Integration](/reference/restful/create-storage-integration-v2)。
+
+</Procedures>
+
 ## 管理集成\{#manage-integrations}
 
 集成添加完成后，您可以查看其详细信息或根据需要删除该集成。
 
-![IohLb8sC2oQHLUxn4GzcDLF4nth](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IohLb8sC2oQHLUxn4GzcDLF4nth.png)
+![IohLb8sC2oQHLUxn4GzcDLF4nth](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IohLb8sC2oQHLUxn4GzcDLF4nth.png "IohLb8sC2oQHLUxn4GzcDLF4nth")
 
 ### 获取集成 ID\{#obtain-the-integration-id}
 
 如果您需要使用 RESTful API 接口导出文件到您集成到 Zilliz Cloud 的对象存储桶中，您可以单击**查看详情**查看该对象存储桶的集成详情并复制该桶的集成 ID。
+
+除此之外，您还可以执行如下命令获取集成 ID。
+
+```bash
+export TOKEN="YOUR_API_KEY"
+
+curl --request GET \
+--url "${BASE_URL}/v2/storageIntegrations?projectId=proj-xxxxxxxxxxxxxxxxxxxxxx" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Request-Timeout: 5" \
+--header "Content-Type: application/json"
+```
+
+上述请求的响应如下：
+
+```bash
+{
+    "code": 0,
+    "data": {
+        "storageIntegrations": [
+            {
+                "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+                "name": "analytics-s3",
+                "status": "ACTIVE",
+                "message": "",
+                "regionId": "aws-cn-northwest-1",
+                "bucketName": "my-bucket"
+            }
+        ],
+        "count": 1,
+        "currentPage": 1,
+        "pageSize": 10
+    }
+}
+```
+
+关于请求及响应中各字段的说明，可以参考[列出 Storage Integration](/reference/restful/list-storage-integrations-v2)。
+
+### 查看集成详情\{#view-integration-details}
+
+您还可以执行如下命令查看指定集成的详情。
+
+```bash
+export integrationId="integ-xxxxxxxxxxxxxxxxxxx"
+
+curl --request GET \
+--url "${BASE_URL}/v2/storageIntegrations/${integrationId}" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Request-Timeout: 5" \
+--header "Content-Type: application/json"
+```
+
+上述请求的响应如下：
+
+```bash
+{
+    "code": 0,
+    "data": {
+        "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+        "name": "analytics-s3",
+        "description": "S3 bucket for external tables",
+        "status": "ACTIVE",
+        "message": "",
+        "regionId": "aws-cn-northwest-1",
+        "bucketName": "my-bucket",
+        "externalCred": {
+            "roleArn": "arn:aws:iam::123456789012:role/zilliz-bucket-role",
+            "externalId": "zilliz-external-AbCdEf12345678"
+        },
+        "createTime": "2024-07-30T16:49:50Z"
+    }
+}
+```
+
+关于请求及响应中各字段的说明，可以参考[查看 Storage Integration](/reference/restful/describe-storage-integration-v2)。
+
+### 删除集成\{#delete-storage-integration}
+
+除了可以在 Zilliz Cloud 控制台上单击删除按钮之外，您还可以执行如下命令来删除指定集成。
+
+```bash
+export integrationId="integ-xxxxxxxxxxxxxxxxxxx"
+
+curl --request DELETE \
+--url "${BASE_URL}/v2/storageIntegrations/${integrationId}" \
+--header "Authorization: Bearer ${TOKEN}" \
+--header "Request-Timeout: 5" \
+--header "Content-Type: application/json"
+```
+
+上述请求的响应如下：
+
+```bash
+{
+    "code": 0,
+    "data": {
+        "integrationId": "integ-xxxxxxxxxxxxxxxxxxx",
+        "name": "analytics-s3"
+    }
+}
+```
+
+关于请求及响应中各字段的说明，可以参考[删除 Storage Integration](/reference/restful/delete-storage-integration-v2)。
+

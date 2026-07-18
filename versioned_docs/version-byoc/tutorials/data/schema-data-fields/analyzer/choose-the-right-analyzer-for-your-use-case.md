@@ -1,11 +1,12 @@
 ---
 title: "最佳实践：如何选择合适的 Analyzer | BYOC"
 slug: /choose-the-right-analyzer-for-your-use-case
+sidebar_key: choose-the-right-analyzer-for-your-use-case
 sidebar_label: "最佳实践"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "最佳实践：如何选择合适的 Analyzer | BYOC"
 type: origin
@@ -35,7 +36,7 @@ import Supademo from '@site/src/components/Supademo';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>本指南侧重于 Analyzer 选择的实际决策方法。关于 Analyzer 组件的技术细节以及如何添加 Analyzer 参数，请参考 <a href="./analyzer-overview">Analyzer 概述</a>。</p>
+本指南侧重于 Analyzer 选择的实际决策方法。关于 Analyzer 组件的技术细节以及如何添加 Analyzer 参数，请参考 [Analyzer 概述](./analyzer-overview)。
 
 </Admonition>
 
@@ -370,7 +371,7 @@ schema.add_field(
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>对于东亚语言（中文、日语、韩语等），请重点使用语言特定的过滤器。这些语言的文本处理方式不同，通常不需要或无法从词干提取中获益。</p>
+对于东亚语言（中文、日语、韩语等），请重点使用语言特定的过滤器。这些语言的文本处理方式不同，通常不需要或无法从词干提取中获益。
 
 </Admonition>
 
@@ -511,7 +512,7 @@ print("Analyzer output:", result)
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>在将 Analyzer 应用到 Collection 前，建议先使用 <strong>run_analyzer</strong> 来测试和验证文本分析效果。</p>
+ 在将 Analyzer 应用到 Collection 前，建议先使用 **run_analyzer** 来测试和验证文本分析效果。
 
 </Admonition>
 
@@ -616,6 +617,23 @@ analyzer_params = {
         "type": "stop",
         "stop_words": [<put stop words list here>]
     }]
+}
+```
+
+### 韩语\{#korean}
+
+```json
+{
+    "tokenizer": {
+        "type": "lindera",
+        "dict_kind": "ko-dic",
+        "filter": [
+            {
+                "kind": "korean_stop_tags",
+                "tags": ["SP", "SSC", "SSO", "SC", "SE", "SF", "JKS", "JKC", "JKG", "JKO", "JKB", "JKV", "JKQ", "JX", "JC", "UNK", "EP", "ETM"]
+            }
+        ]
+    }
 }
 ```
 
@@ -754,7 +772,7 @@ analyzer_params = {
 
 - 在内容中实现 language identifier。详情参见 [Language Identifier](./language-identifier-tokenizer)。
 
-## 在 Zilliz Cloud 配置和预览 Analyzer
+## 在 Zilliz Cloud 配置和预览 Analyzer\{#zilliz-cloud-analyzer}
 
 你可以直接在 Zilliz Cloud 控制台中配置和测试 Analyzer，而无需编写代码。具体可参考如下演示。
 

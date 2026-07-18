@@ -1,11 +1,12 @@
 ---
 title: "管理集群角色（SDK） | BYOC"
 slug: /cluster-roles-sdk
+sidebar_key: cluster-roles-sdk
 sidebar_label: "管理集群角色（SDK）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "集群角色定义了用户在集群内的权限。具体而言，集群角色控制集群用户在集群、Database 和 Collection 层级的权限。 | BYOC"
 type: origin
@@ -35,7 +36,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限 Dedicated 集群使用。</p>
+此功能仅限 Dedicated 集群使用。
 
 </Admonition>
 
@@ -43,9 +44,7 @@ import TabItem from '@theme/TabItem';
 
 以下示例展示了如何创建一个角色 `role_a`。
 
-角色名称需要遵循以下规则：
-
-- 必须以字母开头且只可以包含大写或小写字母、数字和下划线
+角色名称必须以字母开头且只可以包含大写或小写字母、数字和下划线。
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
@@ -53,8 +52,8 @@ import TabItem from '@theme/TabItem';
 ```python
 from pymilvus import MilvusClient
 
-client.create_role(role_name="role_a")
-import io.milvus.v2.service.rbac.request.CreateRoleReq;
+client.create_role(role_name="role_a", description="a cluster read only role")
+
 ```
 
 </TabItem>
@@ -62,8 +61,10 @@ import io.milvus.v2.service.rbac.request.CreateRoleReq;
 <TabItem value='java'>
 
 ```java
+import io.milvus.v2.service.rbac.request.CreateRoleReq;
 CreateRoleReq createRoleReq = CreateRoleReq.builder()
         .roleName("role_a")
+        .description("a cluster read only role")
         .build();
        
 ```
@@ -91,7 +92,8 @@ curl --request POST \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
 -d '{
-    "roleName": "role_a"
+    "roleName": "role_a",
+    "description": "a cluster read only role"
 }'
 ```
 
@@ -152,53 +154,43 @@ curl --request POST \
 ['role_a']
 ```
 
-## 为角色分配内置权限组\{#grant-a-built-in-privilege-group-to-a-role}
+## 为角色分配权限组\{#grant-a-privilege-group-to-a-role}
+
+在 Zilliz Cloud 中，你可以为一个角色分配如下权限：
+
+- 内置权限组：Zilliz Cloud 提供了九种内置权限组。关于每种内置权限组中包含哪些权限，可以参考[内置权限组](./cluster-privileges#built-in-privilege-groups)。
+
+- 自定义权限组：如果内置权限组不能满足您的需要，您也可以通过将多个权限组合的方式创建自定义权限组。更多详情，可参考[自定义权限组](./cluster-privileges#custom-privilege-group)。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>目前 Zilliz Cloud 仅支持为自定义角色分配内置权限组。有关内置权限组的详细信息，请参考<a href="./cluster-privileges">权限</a>。</p>
-<p>如需为自定义角色分配特定权限或自定义权限组，请<a href="http://support.zilliz.com">联系我们</a>。</p>
+- 如需为角色分配自定义权限组，请[联系我们](http://support.zilliz.com)开通功能。
+
+- Milvus 2.5 及以上版本的集群不再支持为角色分配单个权限。
 
 </Admonition>
 
-以下示例展示了如何为角色 `role_a` 分配内置权限组 `COLL_ADMIN`。
+以下示例展示了如何为角色 `role_a` 分配在 `default` Database 中的名为 `collection_01` 的 Collection 中的 `PrivilegeSearch` 权限及名为 `privilege_group_1` 的自定义权限组。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Go","value":"go"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
 from pymilvus import MilvusClient
 
-client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-
 client.grant_privilege_v2(
     role_name="role_a",
-    privilege="COLL_ADMIN"
-    collection_name='collection_01'
+    privilege="privilege_group_1",
+    collection_name='collection_01',
     db_name='default',
 )
 
 client.grant_privilege_v2(
     role_name="role_a",
-    privilege="ClusterReadOnly"
-    collection_name='*'
+    privilege="ClusterReadOnly",
+    collection_name='*',
     db_name='*',
 )
-```
-
-</TabItem>
-
-<TabItem value='go'>
-
-```go
-import "github.com/milvus-io/milvus-sdk-go/v2/client"
-
-client.GrantV2(context.Background(), "role_a", "collection_01", "COLL_ADMIN", entity.WithOperatePrivilegeDatabase("default"))
-
-client.GrantV2(context.Background(), "role_a", "*", "ClusterReadOnly", entity.WithOperatePrivilegeDatabase("*"))
 ```
 
 </TabItem>
@@ -210,7 +202,7 @@ import io.milvus.v2.service.rbac.request.GrantPrivilegeReqV2
 
 client.grantPrivilegeV2(GrantPrivilegeReqV2.builder()
         .roleName("role_a")
-        .privilege("COLL_ADMIN")
+        .privilege("privilege_group_1")
         .collectionName("collection_01")
         .dbName("default")
         .build());
@@ -225,6 +217,44 @@ client.grantPrivilegeV2(GrantPrivilegeReqV2.builder()
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+import (
+    "context"
+    "fmt"
+
+    "github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+    Address: "YOUR_CLUSTER_ENDPOINT",
+    APIKey:  "YOUR_CLUSTER_TOKEN",
+})
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+defer client.Close(ctx)
+
+err = client.GrantV2(ctx, milvusclient.NewGrantV2Option("role_a", "privilege_group_1", "default", "collection_01"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+err = client.GrantV2(ctx, milvusclient.NewGrantV2Option("role_a", "ClusterReadOnly", "*", "*"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
 <TabItem value='javascript'>
 
 ```javascript
@@ -234,12 +264,19 @@ const address = "YOUR_CLUSTER_ENDPOINT";
 const token = "YOUR_CLUSTER_TOKEN";
 const client = new MilvusClient({address, token});
 
-await milvusClient.grantPrivilege({
-   roleName: 'role_a',
-   object: 'Collection', 
-   objectName: 'collection_01',
-   privilegeName: 'COLL_ADMIN'
- });
+await client.grantPrivilegeV2({
+    role: "role_a",
+    privilege: "privilege_group_1"
+    collection_name: 'collection_01'
+    db_name: 'default',
+});
+
+await client.grantPrivilegeV2({
+    role: "role_a",
+    privilege: "ClusterReadOnly"
+    collection_name: '*'
+    db_name: '*',
+});
 ```
 
 </TabItem>
@@ -253,7 +290,7 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "roleName": "role_a",
-    "privilege": "COLL_ADMIN",
+    "privilege": "privilege_group_1",
     "collectionName": "collection_01",
     "dbName":"default"
 }'
@@ -273,6 +310,53 @@ curl --request POST \
 
 </TabItem>
 </Tabs>
+
+以下是参数及其说明：
+
+- **role_name**：需要授予权限组的目标角色名称。
+
+- **privilege**：需要授予该角色的权限组。可选的参数值请参考[权限与权限组](./cluster-privileges)
+
+- **Resource**：权限组对应的目标资源，可以是指定的集群、Database 或 Collection。
+
+    下表说明了如何指定资源。
+
+    <table>
+       <tr>
+         <th><p><strong>层级</strong></p></th>
+         <th><p><strong>资源</strong></p></th>
+         <th><p><strong>Grant Method</strong></p></th>
+         <th><p><strong>Notes</strong></p></th>
+       </tr>
+       <tr>
+         <td rowspan="2"><p><strong>Collection</strong></p></td>
+         <td><p>指定 Collection</p></td>
+         <td><pre><code class="python language-python"> client.grant_privilege_v2(     role_name="roleA",      privilege="CollectionAdmin",     collection_name="col1",      db_name="db1" )</code></pre></td>
+         <td><p>输入目标 Collection 的名称，以及该 Collection 所属 Database 的名称。</p></td>
+       </tr>
+       <tr>
+         <td><p>当前 Database 下所有 Collection</p></td>
+         <td><pre><code class="python language-python"> client.grant_privilege_v2(     role_name="roleA",      privilege="CollectionAdmin",     collection_name="&ast;",      db_name="db1" )</code></pre></td>
+         <td><p>输入目标 Database 的名称，并将 Collection 名称设置为通配符 <code>&ast;</code>。</p></td>
+       </tr>
+       <tr>
+         <td rowspan="2"><p><strong>Database</strong></p></td>
+         <td><p>指定 Database</p></td>
+         <td><pre><code class="python language-python"> client.grant_privilege_v2(     role_name="roleA",      privilege="DatabaseAdmin",      collection_name="&ast;",      db_name="db1" )</code></pre></td>
+         <td><p>输入目标 Database 的名称，并将 Collection 名称设置为通配符 <code>&ast;</code>。</p></td>
+       </tr>
+       <tr>
+         <td><p>当前集群下所有 Database</p></td>
+         <td><pre><code class="python language-python"> client.grant_privilege_v2(     role_name="roleA",      privilege="DatabaseAdmin",      collection_name="&ast;",      db_name="&ast;" )</code></pre></td>
+         <td><p>将 Database 名称和 Collection 名称都设置为通配符 <code>&ast;</code>。</p></td>
+       </tr>
+       <tr>
+         <td><p><strong>集群</strong></p></td>
+         <td><p>当前集群</p></td>
+         <td><pre><code class="python language-python"> client.grant_privilege_v2(     role_name="roleA",      privilege="ClusterAdmin",      collection_name="&ast;",      db_name="&ast;" )</code></pre></td>
+         <td><p>将 Database 名称和 Collection 名称都设置为通配符 <code>&ast;</code>。</p></td>
+       </tr>
+    </table>
 
 ## 查看角色权限\{#describe-a-role}
 
@@ -344,52 +428,32 @@ curl --request POST \
 ```python
 {
      "role": "role_a",
-     "privileges": [
-         "COLL_ADMIN"
-     ]
+     "descripton": "a cluster read only role",
+     "privilege": "ClusterReadOnly"
 }
 ```
 
-## 撤销为角色分配的内置权限组\{#revoke-a-built-in-privilege-group-from-a-role}
+## 撤销为角色分配的权限组\{#revoke-a-privilege-group-from-a-role}
 
-以下示例展示了如何撤销已分配给角色 `role_a` 的内置权限组 `COLL_ADMIN`。
+以下示例展示了如何撤销已分配给角色 `role_a` 的 `privilege_group_1` 自定义权限组和内置权限组 `ClusterReadOnly`。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Go","value":"go"},{"label":"Java","value":"java"},{"label":"cURL","value":"bash"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
-from pymilvus import MilvusClient
-
-client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
-    token="YOUR_CLUSTER_TOKEN"
-)
-   
 client.revoke_privilege_v2(
     role_name="role_a",
-    privilege="COLL_ADMIN"
-    collection_name='collection_01'
+    privilege="privilege_group_1",
+    collection_name='collection_01',
     db_name='default',
 )
 
 client.revoke_privilege_v2(
     role_name="role_a",
-    privilege="ClusterReadOnly"
-    collection_name='*'
+    privilege="ClusterReadOnly",
+    collection_name='*',
     db_name='*',
 )
-```
-
-</TabItem>
-
-<TabItem value='go'>
-
-```go
-import "github.com/milvus-io/milvus-sdk-go/v2/client"
-
-client.RevokeV2(context.Background(), "role_a", "collection_01", "COLL_ADMIN", entity.WithOperatePrivilegeDatabase("default"))
-
-client.RevokeV2(context.Background(), "role_a", "*", "ClusterReadOnly", entity.WithOperatePrivilegeDatabase("*"))
 ```
 
 </TabItem>
@@ -401,7 +465,7 @@ import io.milvus.v2.service.rbac.request.RevokePrivilegeReqV2
 
 client.revokePrivilegeV2(RevokePrivilegeReqV2.builder()
         .roleName("role_a")
-        .privilege("COLL_ADMIN")
+        .privilege("privilege_group_1")
         .collectionName("collection_01")
         .dbName("default")
         .build());
@@ -416,6 +480,46 @@ client.revokePrivilegeV2(RevokePrivilegeReqV2.builder()
 
 </TabItem>
 
+<TabItem value='go'>
+
+```go
+err = client.RevokePrivilegeV2(ctx, milvusclient.NewRevokePrivilegeV2Option("role_a", "privilege_group_1", "collection_01").
+    WithDbName("default"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+
+err = client.RevokePrivilegeV2(ctx, milvusclient.NewRevokePrivilegeV2Option("role_a", "ClusterReadOnly", "*").
+    WithDbName("*"))
+if err != nil {
+    fmt.Println(err.Error())
+    // handle error
+}
+```
+
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
+await client.revokePrivilegeV2({
+    role: 'role_a',
+    collection_name: 'collection_01',
+    privilege: 'Search',
+    db_name: 'default'
+});
+
+await client.revokePrivilegeV2({
+    role: 'role_a',
+    collection_name: '*',
+    privilege: 'ClusterReadOnly',
+    db_name: '*'
+});
+```
+
+</TabItem>
+
 <TabItem value='bash'>
 
 ```bash
@@ -425,7 +529,7 @@ curl --request POST \
 --header "Content-Type: application/json" \
 -d '{
     "roleName": "role_a",
-    "privilege": "COLL_ADMIN",
+    "privilege": "Search",
     "collectionName": "collection_01",
     "dbName":"default"
 }'
@@ -452,7 +556,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>内置的 <code>admin</code> 角色无法删除。</p>
+内置的 `admin` 角色无法删除。
 
 </Admonition>
 

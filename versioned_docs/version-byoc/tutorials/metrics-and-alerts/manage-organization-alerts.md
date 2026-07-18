@@ -1,11 +1,12 @@
 ---
 title: "管理组织告警 | BYOC"
 slug: /manage-organization-alerts
+sidebar_key: manage-organization-alerts
 sidebar_label: "管理组织告警"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "组织告警功能监控您整个 Zilliz Cloud 组织的账单和账户相关指标。与专注于集群性能的项目告警不同，组织告警帮助您追踪现金余额、用量金额，以确保服务不中断并预防意外的账单问题。通过接收关于用量金额耗尽、支付失败和使用量阈值的及时通知，您可以随时掌握账户健康状况，避免服务中断。 | BYOC"
 type: origin
@@ -42,11 +43,11 @@ import Supademo from '@site/src/components/Supademo';
 
 <Supademo id="cmbkfl0zw8lgwsn1rjl3mhptl" title="Zilliz Cloud - 查看组织告警 Demo" />
 
-### 告警历史
+### 告警历史\{#}
 
 使用**告警历史**选项卡调查过去的告警活动，了解账单模式。这对于分析支出趋势、审查信用使用情况或向利益相关者展示账户管理非常有用。
 
-### 告警设置
+### 告警设置\{#}
 
 使用**告警设置**选项卡监控所有与账单相关告警的当前状态。当您需要确认哪些告警正在保护您的组织并检查其配置时，可在此处查看。
 
@@ -125,7 +126,7 @@ import Supademo from '@site/src/components/Supademo';
 
 ## FAQ\{#faq}
 
-### 告警触发后，我会多久收到一次通知？
+### 告警触发后，我会多久收到一次通知？\{#}
 
 告警通知遵循自动频率模式：
 

@@ -11,7 +11,7 @@ notebook: FALSE
 description: "作为一款分布式向量数据库，Zilliz Cloud 提供了多种一致性水平来确保在数据读写期间每个节点或副本都能获取到相同的数据。当前，支持使用的一致性水平包括 Strong、Bounded、Eventually 。其中，Bounded 是默认使用的一致性水平。 | Cloud"
 type: origin
 token: IJhRwKG2Qi8m1skZoD7ckUkxnBe
-sidebar_position: 20
+sidebar_position: 22
 keywords: 
   - 向量数据库
   - zilliz
@@ -164,6 +164,21 @@ curl --request POST \
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->CreateCollection(milvus::CreateSimpleCollectionRequest()
+                                          .WithCollectionName("my_collection")
+                                          .WithCollectionSchema(schema)
+                                          .WithConsistencyLevel(milvus::ConsistencyLevel::BOUNDED));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+```
+
+</TabItem>
 </Tabs>
 
 参数 `consistency_level` 可用的取值为 `Strong`、`Bounded`、`Eventually`、`Session`。
@@ -179,8 +194,7 @@ curl --request POST \
 res = client.search(
     collection_name="my_collection",
     data=[query_vector],
-    limit=3,
-    search_params={"metric_type": "IP"}，
+    limit=3
     # highlight-start
     consistency_level="Bounded",
     # highlight-next
@@ -237,6 +251,25 @@ curl --request POST \
     "limit": 3,
     "consistencyLevel": "Bounded"
 }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+std::vector<float> query_vector = {0.3580376395471989, -0.6023495712049978, 0.18414012509913835, -0.26286205330961354, 0.9029438446296592};
+auto request = milvus::SearchRequest()
+                           .WithCollectionName("my_collection")
+                           .WithLimit(3)
+                           .AddFloatVector(std::move(query_vector))
+                           .WithConsistencyLevel(milvus::ConsistencyLevel::BOUNDED);
+
+milvus::SearchResponse response;
+auto status = client->Search(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -310,6 +343,24 @@ curl --request POST \
     "consistencyLevel": "Bounded",
     "limit": 3
 }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto request = milvus::QueryRequest()
+                       .WithCollectionName("my_collection")
+                       .WithFilter(R"(color like "red%")")
+                       .WithLimit(3)
+                       .WithConsistencyLevel(milvus::ConsistencyLevel::BOUNDED);
+
+milvus::QueryResponse response;
+auto status = client->Query(request, response);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>

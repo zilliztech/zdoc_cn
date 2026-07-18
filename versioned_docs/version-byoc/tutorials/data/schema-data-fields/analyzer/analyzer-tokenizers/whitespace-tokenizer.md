@@ -1,11 +1,12 @@
 ---
 title: "Whitespace | BYOC"
 slug: /whitespace-tokenizer
+sidebar_key: whitespace-tokenizer
 sidebar_label: "Whitespace"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "空格分词器在单词之间存在空格时，将文本划分为词项。 | BYOC"
 type: origin
@@ -223,7 +224,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {
@@ -325,7 +326,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

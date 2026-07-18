@@ -159,7 +159,7 @@ Zilliz Cloud 支持两种类型的 Database，具体取决于其托管和访问�
 
 <Admonition type="info" icon="📘" title="说明">
 
-请使用不同的 Endpoint 连接两种不同类型的 Database。详情请参见访问端点。
+请使用不同的 Endpoint 连接两种不同类型的 Database。详情请参见[访问端点](./access-connection-endpoints)。
 
 </Admonition>
 

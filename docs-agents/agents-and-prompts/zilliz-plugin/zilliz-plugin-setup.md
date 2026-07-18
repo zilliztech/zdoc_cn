@@ -1,13 +1,14 @@
 ---
 title: "Zilliz Claude Code Plugin Setup | Cloud"
 slug: /zilliz-plugin-setup
+sidebar_key: zilliz-plugin-setup
 sidebar_label: "Setup"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
-description: "This guide provides multiple methods for integrating Zilliz Plugins into your LLM Agent-powered workflows. | Cloud"
+description: "This guide explains how to install and set up the Zilliz Plugin in Claude Code. | Cloud"
 type: origin
 token: UDxnwONhSidaQikY6NGcRdmOnUh
 sidebar_position: 1
@@ -32,15 +33,41 @@ import Procedures from '@site/src/components/Procedures';
 
 # Zilliz Claude Code Plugin Setup
 
-This guide provides multiple methods for integrating Zilliz Plugins into your LLM Agent-powered workflows.
+This guide explains how to install and set up the Zilliz Plugin in Claude Code.
 
-## Prerequisites
+## Prerequisites\{#prerequisites}
 
 - You have already installed [Claude Code](https://code.claude.com/).
 
-## Setup Procedure
+## Setup Procedure\{#setup-procedure}
 
 <Procedures>
+
+1. Run Claude Code
+
+    ```bash
+    > claude
+    ```
+
+1. Open the plugin marketplace
+
+    ```bash
+    /plugin
+    ```
+
+1. Find and install the Zilliz Plugin
+
+    Go to the **Discover** tab and search for zilliz. Select the zilliz plugin to install it.
+
+    ![TqS3b4z7Ho9xcXxHJaIc7HTZn1e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/TqS3b4z7Ho9xcXxHJaIc7HTZn1e.png "TqS3b4z7Ho9xcXxHJaIc7HTZn1e")
+
+</Procedures>
+
+If your environment does not support marketplace discovery, you may still be able to install the plugin by adding the Zilliz plugin marketplace manually.
+
+<details>
+
+<summary>Install by adding Zilliz Cloud plugin marketplace</summary>
 
 1. Run Claude Code
 
@@ -60,9 +87,9 @@ This guide provides multiple methods for integrating Zilliz Plugins into your LL
     /plugin install zilliz@zilliztech/zilliz-plugin
     ```
 
-</Procedures>
+</details>
 
-## Initial Setup
+## Initial Setup\{#initial-setup}
 
 After installation, run the quickstart wizard:
 
@@ -126,7 +153,7 @@ The wizard will guide you through:
 
 </Procedures>
 
-## Verification
+## Verification\{#verification}
 
 Test the plugin with a simple command:
 
@@ -136,7 +163,7 @@ You: "List my clusters"
 
 The plugin should display your Zilliz Cloud clusters.
 
-## Troubleshooting
+## Troubleshooting\{#troubleshooting}
 
 - **Plugin shows "CLI not found"**
 
@@ -185,7 +212,7 @@ The plugin should display your Zilliz Cloud clusters.
     zilliz context set --cluster-id <cluster-id>
     ```
 
-## Next Steps
+## Next Steps\{#next-steps}
 
 - [Capabilities Reference](./zilliz-plugin-capabilities)
 

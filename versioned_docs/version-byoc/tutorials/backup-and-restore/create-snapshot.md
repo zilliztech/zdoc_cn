@@ -1,11 +1,12 @@
 ---
 title: "创建备份 | BYOC"
 slug: /create-snapshot
+sidebar_key: create-snapshot
 sidebar_label: "创建备份"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，备份指的是数据副本，用于在发生数据丢失或系统故障时恢复整个集群或集群中的部分 Collection。 | BYOC"
 type: origin

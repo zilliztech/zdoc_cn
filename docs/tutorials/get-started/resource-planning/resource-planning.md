@@ -11,7 +11,7 @@ notebook: FALSE
 description: "在将您的数据迁移到 Zilliz Cloud 之前需要提前规划好相关资源。 | Cloud"
 type: origin
 token: EruqwJUYliwbOgkLjsAcqRwYn0b
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz

@@ -1,16 +1,17 @@
 ---
 title: "JSON 类型 | BYOC"
 slug: /use-json-fields
+sidebar_key: use-json-fields
 sidebar_label: "JSON 类型"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "了解如何使用 JSON 类型。 | BYOC"
 type: origin
 token: FI8pwZYA7iIbNWkYp4xcEu5Xnab
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz

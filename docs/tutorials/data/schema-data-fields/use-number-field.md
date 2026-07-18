@@ -11,7 +11,7 @@ notebook: FALSE
 description: "布尔与数值类型的标量字段用于存放布尔值或标量数值。布尔值是指在两个可能的值中取一个，而标量数值则既可能是整数，也可能是小数。它们通常用来表示数量、度量值或其它需要进行逻辑或数学运算的数据。 | Cloud"
 type: origin
 token: Axmuw0uKmiIwdhk3pH9cGKThn5d
-sidebar_position: 7
+sidebar_position: 8
 keywords: 
   - 向量数据库
   - zilliz
@@ -79,7 +79,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-Zilliz Cloud 允许布尔类型或数值类型的字段为空。您也可以为它们设置默认值。简单来说，您可以将字段的 `nullable` 设置为 `True` 来允许字段为空，并通过 `default_value` 为字段设置默认值，具体可以参考 [Nullable 和默认值](./nullable-and-default)。
+Zilliz Cloud 允许布尔类型或数值类型的字段为空。您也可以为它们设置默认值。简单来说，您可以将字段的 `nullable` 设置为 `True` 来允许字段为空，并通过 `default_value` 为字段设置默认值，具体可以参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 

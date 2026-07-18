@@ -1,16 +1,17 @@
 ---
 title: "Regex | BYOC"
 slug: /regex-filter
+sidebar_key: regex-filter
 sidebar_label: "Regex"
-beta: PUBLIC
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: PUBLIC
 notebook: FALSE
 description: "`regex` 过滤器是一种正则表达式过滤器：只有匹配你提供的表达式的 token 才会被保留，其余的都会被丢弃。 | BYOC"
 type: origin
 token: EcNmwuOtTi8VTDk6XtLcJsxznWx
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - 向量数据库
   - zilliz
@@ -246,7 +247,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

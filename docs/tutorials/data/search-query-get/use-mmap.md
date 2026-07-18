@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Mmap 允许在不将磁盘上的文件加载到内存的情况下通过内存访问这些文件。通过配置 mmap，Zilliz Cloud 可以根据访问频次的不同将索引和数据分别存放到内存或磁盘上，不仅优化了数据加载行为，扩大了 Collection 的容量，也不会给搜索性能带来负面影响。本文将帮助您理解 Zilliz Cloud 如何利用 mmap 实现快速高效的数据存储和检索能力及使用该能力需要注意的相关事项。 | Cloud"
 type: origin
 token: IRH1wYwjXicDLFkRcZwcMJl1n3g
-sidebar_position: 18
+sidebar_position: 20
 keywords: 
   - 向量数据库
   - zilliz
@@ -358,6 +358,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema
@@ -367,6 +368,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/fields/alter_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "fieldName": "doc_chunk",
@@ -375,6 +377,30 @@ curl --request POST \
     }
 }'
 
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+#include "milvus/MilvusClientV2.h"
+
+const std::string CLUSTER_ENDPOINT = "YOUR_CLUSTER_ENDPOINT";
+const std::string TOKEN = "YOUR_CLUSTER_TOKEN";
+
+auto client = milvus::MilvusClientV2::Create();
+
+milvus::ConnectParam connect_param{CLUSTER_ENDPOINT, TOKEN};
+auto status = client->Connect(connect_param);
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+milvus::CollectionSchemaPtr schema = std::make_shared<milvus::CollectionSchema>();
+schema->AddField({"id", milvus::DataType::INT64, "", true, false});
+schema->AddField(milvus::FieldSchema("vector", milvus::DataType::FLOAT_VECTOR).WithDimension(5));
+schema->AddField(milvus::FieldSchema("doc_chunk", milvus::DataType::VARCHAR).WithMaxLength(512).AddProperty("mmap.enabled", "true"));
 ```
 
 </TabItem>
@@ -502,6 +528,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/indexes/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "indexParams": [
@@ -519,6 +546,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/indexes/alter_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "indexName": "title",
@@ -526,6 +554,31 @@ curl --request POST \
         "mmap.enabled": true
     }
 }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+schema->AddField(milvus::FieldSchema("title", milvus::DataType::VARCHAR).WithMaxLength(512));
+
+milvus::IndexDesc index("title", "", milvus::IndexType::AUTOINDEX);
+index.AddExtraParam("mmap.enabled", "false");
+auto status = client->CreateIndex(milvus::CreateIndexRequest()
+                                    .WithCollectionName("my_collection")
+                                    .AddIndex(std::move(index)));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+status = client->AlterIndexProperties(milvus::AlterIndexPropertiesRequest()
+                                    .WithCollectionName("my_collection")
+                                    .WithIndexName("title")
+                                    .AddProperty("mmap.enabled", "true"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
 ```
 
 </TabItem>
@@ -599,6 +652,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
@@ -606,6 +660,21 @@ curl --request POST \
         \"mmap.enabled\": \"false\"
     }
 }"
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->CreateCollection(milvus::CreateCollectionRequest()
+                                          .WithCollectionName("my_collection")
+                                          .WithCollectionSchema(schema)
+                                          .AddProperty("mmap.enabled", "false"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
 ```
 
 </TabItem>
@@ -716,6 +785,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/release" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
@@ -724,6 +794,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/alter_properties" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "properties": {
@@ -735,9 +806,36 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/load" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection"
 }'
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+auto status = client->ReleaseCollection(milvus::ReleaseCollectionRequest()
+                                            .WithCollectionName("my_collection"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+status = client->AlterCollectionProperties(milvus::AlterCollectionPropertiesRequest()
+                                            .WithCollectionName("my_collection")
+                                            .AddProperty("mmmap.enabled", "false"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
+status = client->LoadCollection(milvus::LoadCollectionRequest()
+                                    .WithCollectionName("my_collection"));
+if (!status.IsOk()) {
+    std::cout << status.Message() << std::endl;
+}
+
 ```
 
 </TabItem>

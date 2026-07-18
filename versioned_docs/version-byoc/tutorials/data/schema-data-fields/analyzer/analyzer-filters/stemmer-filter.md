@@ -1,16 +1,17 @@
 ---
 title: "Stemmer | BYOC"
 slug: /stemmer-filter
+sidebar_key: stemmer-filter
 sidebar_label: "Stemmer"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`stemmer` 过滤器将单词简化为其基本或根形式（称为词干提取），使得匹配不同变化形式中具有相似意义的单词变得更加容易。`stemmer` 过滤器支持多种语言，允许在各种语言环境中有效地进行搜索和索引。 | BYOC"
 type: origin
 token: DNLUwvDBWibe0hkIBE2cOixJn7c
-sidebar_position: 9
+sidebar_position: 10
 keywords: 
   - 向量数据库
   - zilliz
@@ -275,7 +276,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

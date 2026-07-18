@@ -1,11 +1,12 @@
 ---
 title: "Replica 扩缩容 | BYOC"
 slug: /manage-replica
+sidebar_key: manage-replica
 sidebar_label: "Replica 扩缩容"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和资源的拷贝。使用 Replica 可以提升查询吞吐量和系统稳定性。 | BYOC"
 type: origin
@@ -35,19 +36,21 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 本文介绍如何为 Zilliz Cloud 集群设置 Replica。
 
-## 使用限制\{#limits}
+本页内容仅适用于 Serving 集群。
 
-在集群创建完成后，满足以下条件时，您可以设置 Replica：
+On-demand 集群会自动扩缩容：有请求到达时自动拉起，空闲时自动缩容至 0，无需手动干预。
 
-- 集群 Query CU 数量大于等于 8。
+## 注意事项\{#considerations}
 
-- Query CU 数量 x Replica 数量不得超过 256。
+- **资源限制：**在集群创建完成后，满足以下条件时，您可以设置 Replica：
 
-<Admonition type="caution" icon="🚧" title="警告">
+    - 集群 Query CU 数量大于等于 8。
 
-<p>修改 Replica 数量可能会短暂影响数据读取。请谨慎操作。</p>
+    - Query CU 数量 x Replica 数量不得超过 204,800。
 
-</Admonition>
+- **扩缩容过程中的计费**：在 Replica 扩缩容任务执行期间，Zilliz Cloud 会继续按照原有的 Replica 配置对集群计费。只有当扩缩容任务成功完成后，才会按照新的 Replica 数量计费。如果扩缩容任务仍在进行中或未成功完成，则仍按照原有的 Replica 配置计费。
+
+- **性能影响**：扩缩容过程中可能会出现轻微的服务抖动，短暂影响数据读取。
 
 ## 手动扩缩容\{#manual-scaling}
 
@@ -59,16 +62,17 @@ Zilliz Cloud 支持针对集群创建 Replica。Replica 是对集群中数据和
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>当您在 <strong>集群 Replica 扩缩容</strong>对话框中单击<strong>保存</strong>后，您将看到自动弹出的<strong>检查项目资源配额</strong>窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：</p>
-<ul>
-<li><p>单击<strong>前往项目资源设置</strong>按钮，以便编辑当前项目的资源设置，或者</p></li>
-<li><p>单击<strong>返回上一步</strong>按钮，以便编辑当前集群的相关设置。</p></li>
-</ul>
-<p>操作期间会消耗少量额外资源，并在操作完成后释放。</p>
+当您在 **集群 Replica 扩缩容**对话框中单击**保存**后，您将看到自动弹出的**检查项目资源配额**窗口。如果当前项目的资源充足，该窗口在检查完成后会自动消失。如果资源不足，您可以：
+
+- 单击**前往项目资源设置**按钮，以便编辑当前项目的资源设置，或者
+
+- 单击**返回上一步**按钮，以便编辑当前集群的相关设置。
+
+操作期间会消耗少量额外资源，并在操作完成后释放。
 
 </Admonition>
 
-您还可以使用 RESTful API 设置 Replica。`replica` 参数的取值应为 1 到 8 之间的整数。更多详情，请参考[修改集群副本数量](/reference/restful/modify-cluster-replica-v2)。
+您还可以使用 RESTful API 设置 Replica。`replica` 参数的取值应为 1 到 100 之间的整数。更多详情，请参考[修改集群副本数量](/reference/restful/modify-cluster-replica-v2)。
 
 ```bash
 export TOKEN="YOUR_API_KEY"
@@ -133,10 +137,9 @@ Zilliz Cloud 支持 Replica 动态扩缩容。启用后，系统会基于实时 
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>选择比当前 Replica 数量小的最大值会立刻触发缩容。</p></li>
-<li><p>选择比当前 Replica 数量大的最小值会立刻触发扩容。</p></li>
-</ul>
+- 选择比当前 Replica 数量小的最大值会立刻触发缩容。
+
+- 选择比当前 Replica 数量大的最小值会立刻触发扩容。
 
 </Admonition>
 

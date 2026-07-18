@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Semantic Highlighter 在句子级别识别并高亮搜索结果中语义最相关的部分，帮助您从检索到的 top-K 文档中提取关键信息。 | Cloud"
 type: origin
 token: N8GrwhtgwiXDAzklITacqFQknSe
-sidebar_position: 13
+sidebar_position: 14
 keywords: 
   - 向量数据库
   - zilliz

@@ -1,11 +1,12 @@
 ---
 title: "BYOC 简介 | BYOC"
 slug: /byoc-intro
+sidebar_key: byoc-intro
 sidebar_label: "BYOC 简介"
-beta: CONTACT SALES
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: CONTACT SALES
 notebook: FALSE
 description: "BYOC 部署方案可以帮助有需要的组织在自己的云账户下托管应用和数据，而无须使用 Zilliz Cloud 提供的基础设施。该方案适合因特定安全合规要求而需要拥有完整数据主权的组织使用。 | BYOC"
 type: origin
@@ -29,7 +30,7 @@ BYOC 部署方案可以帮助有需要的组织在自己的云账户下托管应
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>Zilliz BYOC 部署方案目前处于<strong>正式可用</strong>阶段。如需了解详情或试用，请联系 <a href="https://zilliz.com.cn/contact-sales">Zilliz Cloud 技术支持</a>。</p>
+Zilliz BYOC 部署方案目前处于**正式可用**阶段。如需了解详情或试用，请联系 [Zilliz Cloud 技术支持](https://zilliz.com.cn/contact-sales)。
 
 </Admonition>
 
@@ -62,6 +63,8 @@ Zilliz BYOC 提供了一种独特的完全托管式部署选项，让您在降�
 ![D1sawFTYuhDAhPbaEvscp4QWnHf](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/D1sawFTYuhDAhPbaEvscp4QWnHf.png)
 
 根据上述架构图，您需要提供一个 VPC、一个对象存储桶以及以最小授权方式让 Zilliz Cloud 可以以您的身份在您的 VPC 中部署 K8S 集群及其它必要的组件，包括 Milvus Operator，数据导入和备份工具、包括 Grafana 及 Prometheus 等监控工具的监控栈以及 Milvus 实例。
+
+注意，监控工具栈在您的 VPC 中与您的 BYOC 基础设施部署在一起，并未经过 Zilliz Cloud 控制面。如需启用或配置监控工具栈，请联系 [Zilliz 技术支持](https://support.zilliz.com.cn/hc/zh-cn)。
 
 另外，Zilliz Cloud 还在您的 VPC 和 Zilliz 之间建立了如下两层相互独立的通讯链路：
 

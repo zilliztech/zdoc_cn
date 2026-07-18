@@ -1,11 +1,12 @@
 ---
 title: "管理集群角色（控制台） | BYOC"
 slug: /cluster-roles
+sidebar_key: cluster-roles
 sidebar_label: "管理集群角色（控制台）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "集群角色定义了用户在集群中的权限。具体而言，集群角色控制集群用户在集群、Database 和 Collection 层级的权限。 | BYOC"
 type: origin
@@ -91,8 +92,9 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>此功能仅限 Dedicated 集群使用。</p>
-<p>目前 Zilliz Cloud 仅支持为自定义角色分配内置权限组。如需创建自定义角色并分配特定权限或自定义权限组，请<a href="http://support.zilliz.com.cn">联系我们</a>。</p>
+此功能仅限 Dedicated 集群使用。
+
+目前 Zilliz Cloud 仅支持为自定义角色分配内置权限组。如需创建自定义角色并分配特定权限或自定义权限组，请[联系我们](http://support.zilliz.com.cn)。
 
 </Admonition>
 
@@ -102,7 +104,7 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
     ![add-cluster-role-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-role-cn.png "add-cluster-role-cn")
 
-1. 输入角色名称。
+1. 输入角色名称和描述（可选）。
 
 1. 配置角色的集群、Database、Collection 权限。选择权限组并选择目标资源。
 
@@ -118,15 +120,15 @@ Zilliz Cloud 提供 3 种内置的集群角色，每种内置角色都包含了�
 
     <Admonition type="info" icon="📘" title="说明">
 
-    <p>上述三个层级的内置权限组之间没有级联关系。设置实例层级的权限组并不会自动设置该实例下所有 Database 和 Collection 的权限，Database 和 Collection 层级的权限需要单独手动设置。</p>
+    上述三个层级的内置权限组之间没有级联关系。设置实例层级的权限组并不会自动设置该实例下所有 Database 和 Collection 的权限，Database 和 Collection 层级的权限需要单独手动设置。
 
     </Admonition>
 
     如需自行组合权限创建权限组，请[联系我们](http://support.zilliz.com.cn)。
 
-    ![add-cluster-role-form-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-role-form-cn.png "add-cluster-role-form-cn")
+    ![U2Cqb3XZ0oYK9JxhLCXce3UpnPL](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/U2Cqb3XZ0oYK9JxhLCXce3UpnPL.png "U2Cqb3XZ0oYK9JxhLCXce3UpnPL")
 
-1. 点击**创建**。 每个集群中最多可创建 20 个自定义集群角色。
+1. 点击**创建**。 每个集群中最多可创建 500 个自定义集群角色。
 
 ## 将角色授予用户\{#grant-a-role-to-a-user}
 

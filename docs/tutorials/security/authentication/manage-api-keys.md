@@ -247,9 +247,11 @@ import Admonition from '@theme/Admonition';
 
 1. 输入 **API 密钥名称**并设置 **API 密钥权限**。
 
-    ![EqLZbydEpoa9U1xoS8Wc3YZrncg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/EqLZbydEpoa9U1xoS8Wc3YZrncg.png "EqLZbydEpoa9U1xoS8Wc3YZrncg")
+    ![MtgFbs5n0oTKjsx1IvjcKU66nmd](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/MtgFbs5n0oTKjsx1IvjcKU66nmd.png "MtgFbs5n0oTKjsx1IvjcKU66nmd")
 
     - **API 密钥名称**： 名称长度不可超过 64 个字符。
+
+    - **API 密钥描述（可选）**： 要创建的 API 密钥的描述。最多 255 个字符。
 
     - **API 密钥权限**：您可以通过指定用户角色或特定项目，来定义自定义 API 密钥的访问范围。为实现更精细化的访问控制，您还可以通过**将访问权限限制到指定集群和 Volume** 来限制密钥可访问的集群和 Volume 范围。
 

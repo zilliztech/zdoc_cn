@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Zilliz Cloud 中的 Highlighter 会在文本字段中对匹配到的词项进行标注，通过在其前后包裹可自定义的标签来实现高亮显示。高亮有助于解释文档为何被命中，提升结果的可读性，并支持在搜索与 RAG 应用中的富文本渲染。 | Cloud"
 type: origin
 token: UAiSwzyTxi8EJ4k45cwcXJ10neb
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - 向量数据库
   - zilliz
@@ -326,7 +326,7 @@ client.insert(collection_name=COLLECTION_NAME, data=[{"text": t} for t in docs])
 print(f"✓ Collection created with {len(docs)} documents\n")
 
 # Helper for search params
-SEARCH_PARAMS = {"metric_type": "BM25", "params": {"drop_ratio_search": 0.0}}
+SEARCH_PARAMS = {"params": {"drop_ratio_search": 0.0}}
 
 # Expected output:
 # ✓ Collection created with 4 documents

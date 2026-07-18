@@ -1,16 +1,17 @@
 ---
 title: "Decompounder | BYOC"
 slug: /decompounder-filter
+sidebar_key: decompounder-filter
 sidebar_label: "Decompounder"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`decompounder` 过滤器根据指定的字典将复合词拆分为单个组成部分，从而更容易搜索复合术语的部分。该过滤器对于经常使用复合词的语言（如德语）特别有用。 | BYOC"
 type: origin
 token: FI9Lw2JwTimpxikTjtpctKK1nbc
-sidebar_position: 8
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz
@@ -288,7 +289,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

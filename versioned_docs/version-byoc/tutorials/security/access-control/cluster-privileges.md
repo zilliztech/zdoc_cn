@@ -1,11 +1,12 @@
 ---
 title: "权限与权限组 | BYOC"
 slug: /cluster-privileges
+sidebar_key: cluster-privileges
 sidebar_label: "权限与权限组"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "权限指的是对 Zilliz Cloud 资源（如集群、Database 和 Collection）进行特定操作的权限。权限被分配给角色，然后将角色授权给用户，用户就可以在资源上根据权限执行的操作。例如，权限可以是允许将数据插入名为 `collection01` 的集合的权限。 | BYOC"
 type: origin
@@ -46,7 +47,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>上述三个层级的内置权限组之间没有级联关系。设置实例层级的权限组并不会自动设置该实例下所有 Database 和 Collection 的权限，Database 和 Collection 层级的权限需要单独手动设置。</p>
+上述三个层级的内置权限组之间没有级联关系。设置实例层级的权限组并不会自动设置该实例下所有 Database 和 Collection 的权限，Database 和 Collection 层级的权限需要单独手动设置。
 
 </Admonition>
 
@@ -449,13 +450,13 @@ import TabItem from '@theme/TabItem';
    </tr>
 </table>
 
-### 自定义权限组\{#custom-privilege-group}
+### 自定义权限组 | PRIVATE\{#custom-privilege-group}
 
 如果内置权限组无法满足您的需求，您可以使用 SDK 创建自定义权限组，并将所需权限添加到这些权限组中。
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如需创建和管理自定义权限组，请<a href="http://support.zilliz.com.cn">提交工单</a>，我们将为您启用此功能。</p>
+该特性为**内测版**特性。如需创建和管理自定义权限组，请[提交工单](http://support.zilliz.com.cn)，我们将为您启用此功能。
 
 </Admonition>
 

@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Zilliz Cloud 为查询 ARRAY 字段提供了强大的操作符，使您可以根据 ARRAY 字段内容过滤和查询 Entity。 | Cloud"
 type: origin
 token: Cb49wcNhsimyyCkHPOwcg6dTn0b
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 向量数据库
   - zilliz

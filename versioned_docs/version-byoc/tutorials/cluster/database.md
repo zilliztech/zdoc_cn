@@ -1,11 +1,12 @@
 ---
 title: "Database | BYOC"
 slug: /database
+sidebar_key: database
 sidebar_label: "Database"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 在集群和 Collection 之间引入了一层 Database，可帮助您更高效地组织和管理数据，同时满足您的多租需求。 | BYOC"
 type: origin
@@ -62,7 +63,7 @@ Zilliz Cloud 在集群和 Collection 之间引入了一层 **Database**，可帮
 from pymilvus import MilvusClient
 
 client = MilvusClient(
-    uri="YOUR_CLUSTER_ENDPOINT",
+    uri="https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530",
     token="YOUR_CLUSTER_TOKEN"
 )
 
@@ -81,7 +82,7 @@ import io.milvus.v2.client.ConnectConfig;
 import io.milvus.v2.service.database.request.*;
 
 ConnectConfig config = ConnectConfig.builder()
-        .uri("YOUR_CLUSTER_ENDPOINT")
+        .uri("https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530")
         .token("YOUR_CLUSTER_TOKEN")
         .build();
 MilvusClientV2 client = new MilvusClientV2(config);
@@ -99,7 +100,7 @@ client.createDatabase(createDatabaseReq);
 ```javascript
 import {MilvusClient} from '@zilliz/milvus2-sdk-node';
 const client = new MilvusClient({ 
-    address: "YOUR_CLUSTER_ENDPOINT",
+    address: "https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530",
     token: 'YOUR_CLUSTER_TOKEN' 
 });
 
@@ -114,9 +115,8 @@ await client.createDatabase({
 
 ```go
 cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
-    Username: "Milvus",
-    Password: "root",
+    Address: "https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530",
+    APIKey: "YOUR_CLUSTER_TOKEN"
 })
 if err != nil {
     // handle err
@@ -133,7 +133,7 @@ if err != nil {
 <TabItem value='bash'>
 
 ```bash
-export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export CLUSTER_ENDPOINT="https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530"
 export TOKEN="YOUR_CLUSTER_TOKEN"
 
 curl --request POST \
@@ -294,7 +294,7 @@ log.Println(db)
 <TabItem value='bash'>
 
 ```bash
-export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export CLUSTER_ENDPOINT="https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530"
 export TOKEN="YOUR_CLUSTER_TOKEN"
 
 curl --request POST \
@@ -499,7 +499,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>RESTful API 不支持该操作。</p>
+RESTful API 不支持该操作。
 
 </Admonition>
 
@@ -616,7 +616,7 @@ if err != nil {
 <TabItem value='bash'>
 
 ```bash
-export CLUSTER_ENDPOINT="YOUR_CLUSTER_ENDPOINT"
+export CLUSTER_ENDPOINT="https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530"
 export TOKEN="YOUR_CLUSTER_TOKEN"
 
 curl --request POST \

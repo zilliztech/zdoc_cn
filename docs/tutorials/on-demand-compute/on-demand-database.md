@@ -41,11 +41,11 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 使用限制\{#limitations}
 
-- 您需要具备**项目管理员**权限才能管理 Database。
+- 您需要具备**项目管理员**权限才能管理 Database。如需了解角色权限，请参考[项目用户](./project-users#project-role-and-access-comparison)。
 
 - 在每个项目中，最多可以在按需计算中创建 100 个 Database。
 
-- 按需计算下的 Database 中所有 Collection（managed 或 [external](./external-collection)） 均不支持删除 Index。
+- 按需计算下的 Database 中所有 Collection（[Managed](./collection) 或 [External](./external-collection)） 均不支持删除 Index。
 
 ## 创建 Database\{#create-database}
 
@@ -76,15 +76,13 @@ import Procedures from '@site/src/components/Procedures';
 
     1. 点击 **Database**。
 
-    1. 点击**创建 Database**。
+    1. 点击树状结构中 **Database** 右侧的 **+** 。
 
     1. 输入 Database 名称。
 
     1. 点击**创建**。
 
     </Procedures>
-
-
 
 ## 查看 Database\{#view-databases}
 
@@ -104,6 +102,14 @@ import Procedures from '@site/src/components/Procedures';
 - **Via web console**
 
     ![BfnGwj1m1hTvdDbZJrdcYvB3nId](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/BfnGwj1m1hTvdDbZJrdcYvB3nId.png)
+
+    <Procedures>
+
+    1. 前往项目，点击**按需计算资源**  **> Databases**。
+
+    1. 查看 Database 列表。
+
+    </Procedures>
 
 ## 删除 Database\{#drop-database}
 
@@ -132,4 +138,14 @@ Database 会被立刻删除且无法恢复。该操作不可撤销。
 
     ![OssbwyAK7h7JbzbgCbAcE1zAn1b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/OssbwyAK7h7JbzbgCbAcE1zAn1b.png)
 
-    
+    <Procedures>
+
+    1. 前往项目，点击**按需计算资源**  **> Databases**。
+
+    1. 点击目标 Database, 点击 **...**, 选择**删除**。
+
+    1. 输入 Database 名称。
+
+    1. 点击**删除**。
+
+    </Procedures>

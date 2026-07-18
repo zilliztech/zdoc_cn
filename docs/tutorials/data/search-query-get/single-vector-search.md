@@ -84,8 +84,7 @@ res = client.search(
     collection_name="quick_setup",
     anns_field="vector",
     data=[query_vector],
-    limit=3,
-    search_params={"metric_type": "IP"}
+    limit=3
 )
 
 for hits in res:
@@ -245,6 +244,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -494,6 +494,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -557,8 +558,7 @@ res = client.search(
     # highlight-start
     ids=[551, 296, 43],
     # highlight-end
-    limit=3,
-    search_params={"metric_type": "IP"}
+    limit=3
 )
 
 for hits in res:
@@ -599,14 +599,12 @@ for hits in res:
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
+  -H "Request-Timeout: 10" \
   -d '{
     "collectionName": "quick_setup",
     "annsField": "vector",
     "ids": [551, 296, 43],
-    "limit": 3,
-    "searchParams": {
-      "metric_type": "IP"
-    }
+    "limit": 3
   }'
 ```
 
@@ -755,6 +753,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "partitionNames": ["partitionA"],
@@ -803,7 +802,6 @@ res = client.search(
     collection_name="quick_setup",
     data=[query_vector],
     limit=3, # The number of results to return
-    search_params={"metric_type": "IP"}，
     # highlight-next-line
     output_fields=["color"]
 )
@@ -934,6 +932,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -970,7 +969,7 @@ curl --request POST \
 </TabItem>
 </Tabs>
 
-## 通过标量字段对搜索结果进行排序\{#sort-search-results-by-scalar-fields} | 公测
+## 通过标量字段对搜索结果进行排序 | PRIVATE \{#sort-search-results-by-scalar-fields}
 
 默认情况下，Zilliz Cloud 会按照结果与查询向量的相似度得分对搜索结果进行排序。如果你希望返回的 Entity 遵循某个标量字段的排序规则，可以在搜索请求中添加 `order_by_fields` 参数。
 
@@ -1026,6 +1025,14 @@ res = client.search(
 
 ```bash
 # restful
+```
+
+</TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
 ```
 
 </TabItem>
@@ -1085,6 +1092,14 @@ res = client.search(
 ```
 
 </TabItem>
+
+<TabItem value='c++'>
+
+```c++
+// cpp
+```
+
+</TabItem>
 </Tabs>
 
 对于在所有指定排序字段上取值都相同的 Entity，Zilliz Cloud 会保留它们原本按相似度得分排列的顺序。
@@ -1139,7 +1154,6 @@ res = client.search(
     data=[query_vector],
     limit=3, # The number of results to return
     search_params={
-        "metric_type": "IP", 
         # highlight-next-line
         "offset": 10 # The records to skip
     }
@@ -1234,6 +1248,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -1372,6 +1387,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -1518,6 +1534,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "data": [
@@ -1555,7 +1572,6 @@ res = client.search(
     anns_field="vector",
     data=[query_vector],
     limit=3,
-    search_params={"metric_type": "IP"},
     # highlight-next-line
     timezone="America/Havana",
 )
@@ -1594,14 +1610,14 @@ res = client.search(
 export QUERY_VECTOR='[0.1, 0.2, 0.3, 0.4]'                                                                                                                                                                                                              
                                                                                                                                                                                                                                                           
 curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/entities/search" \                                                                                                                                                                                     
--H "Content-Type: application/json" \                                                                                                                                                                                                                 
+-H "Content-Type: application/json" \  
+-H "Request-Timeout: 10" \                                                                                                                                                                                                               
 -d '{                                                                                                                                                                                                                                                 
   "collectionName": "quick_setup",                                                                                                                                                                                                                    
   "annsField": "vector",                                                                                                                                                                                                                              
   "data": ['"$QUERY_VECTOR"'],                                                                                                                                                                                                                        
   "limit": 3,                                                                                                                                                                                                                                         
-  "searchParams": {                                                                                                                                                                                                                                   
-    "metric_type": "IP",                                                                                                                                                                                                                              
+  "searchParams": {                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     "timezone": "America/Havana"                                                                                                                                                                                                                      
   }                                                                                                                                                                                                                                                   
 }'

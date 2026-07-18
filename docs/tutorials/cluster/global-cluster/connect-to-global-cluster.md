@@ -137,9 +137,53 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 通过全球 Endpoint 连接\{#connect-using-the-global-endpoint}
 
-全球 Endpoint 是一个统一的 URL，会将请求路由到全球集群中的相应集群。在 SDK 客户端中将其作为 `uri` 使用。
+全球 Endpoint 是一个统一的 URL，会始终将请求路由到全球集群中当前的主集群。您可以将其作为 SDK 客户端中的 `uri` 使用。
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
+如果执行了优雅切换（Switchover) 或强切（Failover）操作，Zilliz Cloud 会自动将 全球 Endpoint 指向新的主集群。这样，您的应用可以继续使用同一个 Endpoint，而无需手动更改集群 URI。
+
+Zilliz Cloud 支持通过 SDK 和 RESTful API 连接到全球 Endpoint。对于生产环境中的应用，推荐使用 SDK 客户端。
+
+<details>
+
+<summary>为什么推荐使用 SDK 连接，而不是 RESTful API 连接？</summary>
+
+SDK 客户端可以获取 Global Cluster topology，包括 endpoint 列表、主集群和备集群角色，以及集群健康状态。基于这些信息，当主集群发生变化时，SDK 客户端可以更快做出响应。SDK 客户端未来还将支持读写分离，即将写请求路由到主集群，并根据 Global Cluster topology 路由符合条件的读请求。
+
+相比之下，RESTful API 连接不会在客户端维护 Global Cluster topology 信息。因此，在发生 switchover 或 failover 后，RESTful API 连接切换到新主集群可能需要更长时间。出于同样原因，RESTful API 连接无法支持读写分离。
+
+下表对比了 SDK 连接和 RESTful API 连接。
+
+<table>
+   <tr>
+     <th><p><strong>维度</strong></p></th>
+     <th><p><strong>SDK 连接</strong></p></th>
+     <th><p><strong>RESTful API 连接</strong></p></th>
+   </tr>
+   <tr>
+     <td><p>适用场景</p></td>
+     <td><p>需要在角色切换期间更快恢复，并希望未来使用读写分离能力的生产应用。</p></td>
+     <td><p>轻量脚本、简单 REST 集成，以及一次性管理操作。</p></td>
+   </tr>
+   <tr>
+     <td><p>Topology 感知</p></td>
+     <td><p>可以获取全球集群的 Topology 拓扑图，包括 Endpoint 列表、主集群和备集群角色，以及集群健康状态。</p></td>
+     <td><p>不会维护全球集群的 Topology 拓扑图信息。</p></td>
+   </tr>
+   <tr>
+     <td><p>主集群变更处理</p></td>
+     <td><p>当 Switchover 或 Failover 后主集群发生变化时，通常可以在数秒内更快做出响应。</p></td>
+     <td><p>由于客户端不维护 Topology 拓扑图信息，切换到新主集群可能需要更长时间，通常为分钟级。</p></td>
+   </tr>
+   <tr>
+     <td><p>读写分离</p></td>
+     <td><p>✅ 即将支持</p></td>
+     <td><p>❌ 不支持</p></td>
+   </tr>
+</table>
+
+</details>
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -171,34 +215,6 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 </TabItem>
 
-<TabItem value='javascript'>
-
-```javascript
-const { MilvusClient } = require("@zilliz/milvus2-sdk-node")
-
-// Use the global endpoint for automatic routing
-const client = new MilvusClient({
-    address: "YOUR_GLOBAL_ENDPOINT",  // Global endpoint from the console
-    token: "YOUR_CLUSTER_TOKEN"       // API key or username:password
-})
-```
-
-</TabItem>
-
-<TabItem value='go'>
-
-```go
-import "github.com/milvus-io/milvus/client/v2/milvusclient"
-
-// Use the global endpoint for automatic routing
-client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "YOUR_GLOBAL_ENDPOINT", // Global endpoint from the console
-    APIKey:  "YOUR_CLUSTER_TOKEN", // API key or username:password
-})
-```
-
-</TabItem>
-
 <TabItem value='bash'>
 
 ```bash
@@ -206,7 +222,6 @@ curl --request POST \
   --url "YOUR_GLOBAL_ENDPOINT" \
   --header "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
   --header "Content-Type: application/json" \
-  --data '{"dbName": "default"}'
 ```
 
 </TabItem>
@@ -283,7 +298,6 @@ curl --request POST \
   --url "YOUR_CLUSTER_PUBLIC_ENDPOINT" \
   --header "Authorization: Bearer YOUR_CLUSTER_TOKEN" \
   --header "Content-Type: application/json" \
-  --data '{"dbName": "default"}'
 ```
 
 </TabItem>

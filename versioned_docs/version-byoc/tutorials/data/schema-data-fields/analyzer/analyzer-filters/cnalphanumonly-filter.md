@@ -1,11 +1,12 @@
 ---
 title: "Cnalphanumonly | BYOC"
 slug: /cnalphanumonly-filter
+sidebar_key: cnalphanumonly-filter
 sidebar_label: "Cnalphanumonly"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "`cnalphanumonly` 过滤器删除包含除汉字、英文字母或数字以外的任何字符的词项。 | BYOC"
 type: origin
@@ -217,7 +218,7 @@ import (
 )
 
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
-    Address: "localhost:19530",
+    Address: "YOUR_CLUSTER_ENDPOINT",
     APIKey:  "YOUR_CLUSTER_TOKEN",
 })
 if err != nil {

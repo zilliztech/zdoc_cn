@@ -1,11 +1,12 @@
 ---
 title: "删除 Entity | BYOC"
 slug: /delete-entities
+sidebar_key: delete-entities
 sidebar_label: "删除 Entity"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 支持通过过滤表达式批量删除 Entity，也支持基于指定的主键值删除 Entity。对于不再需要的 Entity，可以执行删除操作。 | BYOC"
 type: origin
@@ -48,7 +49,7 @@ client = MilvusClient(
 res = client.delete(
     collection_name="quick_setup",
     # highlight-next-line
-    filter="color in ['red_7025', 'purple_4976]"
+    filter="color in ['red_7025', 'purple_4976']"
 )
 
 print(res)
@@ -122,7 +123,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-milvusAddr := "localhost:19530"
+milvusAddr := "YOUR_CLUSTER_ENDPOINT"
 client, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
     Address: milvusAddr,
 })
@@ -151,6 +152,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/delete" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "filter": "color in [\"red_7025\", \"purple_4976\"]"
@@ -241,6 +243,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/delete" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "filter": "id in [18, 19]"
@@ -335,6 +338,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/delete" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "quick_setup",
     "partitionName": "partitionA",

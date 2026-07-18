@@ -11,7 +11,7 @@ notebook: FALSE
 description: "支持一组用于在 `GEOMETRY` 字段上进行过滤的运算符，这些运算符对于管理和分析几何数据至关重要。这些运算符能够实现有效的空间查询，使您能够根据对象之间的几何关系检索实体。 | Cloud"
 type: origin
 token: U0i0wkfowidG7xkkyercDwvKnMf
-sidebar_position: 7
+sidebar_position: 9
 keywords: 
   - 向量数据库
   - zilliz

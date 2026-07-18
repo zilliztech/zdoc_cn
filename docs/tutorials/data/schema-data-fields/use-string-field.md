@@ -1,8 +1,8 @@
 ---
-title: "字符串类型 | Cloud"
+title: "VarChar 类型 | Cloud"
 slug: /use-string-field
 sidebar_key: use-string-field
-sidebar_label: "字符串类型"
+sidebar_label: "VarChar 类型"
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
@@ -30,7 +30,7 @@ import Admonition from '@theme/Admonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 字符串类型
+# VarChar 类型
 
 在 Zilliz Cloud 中，`VARCHAR` 是用于存储字符串类型的数据类型，适用于可变长度字符串的存储。
 
@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
 
 <Admonition type="info" icon="📘" title="说明">
 
-Zilliz Cloud 支持为 `VARCHAR` 字段设置 Null 值和默认值。如需开启这些设置，需要在创建字段时，将 `nullable` 设置为 `True` 以及将 `default_value` 设置为一个字符串。关于 Null 值和默认值的详细情况，可以参考 [Nullable 和默认值](./nullable-and-default)。
+Zilliz Cloud 支持为 `VARCHAR` 字段设置 Null 值和默认值。如需开启这些设置，需要在创建字段时，将 `nullable` 设置为 `True` 以及将 `default_value` 设置为一个字符串。关于 Null 值和默认值的详细情况，可以参考 [Nullable 和默认值](./nullable-fields)。
 
 </Admonition>
 
@@ -446,6 +446,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/collections/create" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d "{
     \"collectionName\": \"my_collection\",
     \"schema\": $schema,
@@ -582,6 +583,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/insert" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 --data '{
     "data": [
         {"varchar_field1": "Product A", "varchar_field2": "High quality product", "pk": 1, "embedding": [0.1, 0.2, 0.3]},
@@ -691,6 +693,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "filter": "varchar_field1 == \"Product A\"",
@@ -791,6 +794,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "filter": "varchar_field2 is null",
@@ -889,6 +893,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/query" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "filter": "varchar_field1 == \"Unknown\"",
@@ -1011,6 +1016,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": [

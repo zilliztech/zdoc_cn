@@ -11,7 +11,7 @@ notebook: FALSE
 description: "Range Search 是一种通过指定搜索结果的相似度得分范围的方式提升 ANN Search 的召回质量的搜索增强方法。本节将介绍如何使用 Range Search 以及相关注意事项。 | Cloud"
 type: origin
 token: NZ3BwhuN0ip6MqkT4pQcqyO7nDd
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
   - 向量数据库
   - zilliz
@@ -257,6 +257,7 @@ curl --request POST \
 --url "${CLUSTER_ENDPOINT}/v2/vectordb/entities/search" \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
+--header "Request-Timeout: 10" \
 -d '{
     "collectionName": "my_collection",
     "data": [

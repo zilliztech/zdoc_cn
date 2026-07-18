@@ -35,6 +35,12 @@ import Supademo from '@site/src/components/Supademo';
 
 本文将介绍如何**手动创建备份**。如需自动创建备份，请参见[创建自动备份](./schedule-automatic-backups)。
 
+<Admonition type="info" icon="📘" title="说明">
+
+此功能仅限 **Dedicated** 集群使用。
+
+</Admonition>
+
 ## 限制说明\{#limits}
 
 - **访问控制**：仅项目管理员、组织管理员或拥有备份权限的自定义角色可执行备份操作。

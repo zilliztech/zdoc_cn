@@ -1,16 +1,17 @@
 ---
 title: "Dynamic Field | BYOC"
 slug: /enable-dynamic-field
+sidebar_key: enable-dynamic-field
 sidebar_label: "Dynamic Field"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "Zilliz Cloud 允许您通过 dynamic field 的特殊功能插入具有灵活、不断演进 schema 的 entity。此字段实现为名为 `$meta` 的隐藏 JSON 字段，它会自动存储数据中未在 collection schema 中明确定义的字段。 | BYOC"
 type: origin
 token: C6tVwPqeBiqNCwkbdCcc9dTpnYe
-sidebar_position: 13
+sidebar_position: 14
 keywords: 
   - 向量数据库
   - zilliz
@@ -393,13 +394,13 @@ _, err = client.Insert(ctx, milvusclient.NewColumnBasedInsertOption("my_collecti
     column.NewColumnVarChar("overview", []string{"Great product"}),
     column.NewColumnInt32("words", []int32{150}),
     column.NewColumnJSONBytes("dynamic_json", [][]byte{
-        []byte(`{
+        []byte(\`{
             varchar: 'some text',
             nested: {
                 value: 42.5,
             },
             string_price: '99.99',
-        }`),
+        }\`),
     }),
 ))
 if err != nil {
@@ -446,7 +447,7 @@ Zilliz Cloud 允许您使用 **JSON 路径索引**为 dynamic field 内的特定
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>为 dynamic field 键建立索引是<strong>可选操作</strong>。您仍然可以在没有索引的情况下按 dynamic field 键查询或过滤，但由于需要进行暴力搜索，性能可能会较慢。</p>
+为 dynamic field 键建立索引是**可选操作**。您仍然可以在没有索引的情况下按 dynamic field 键查询或过滤，但由于需要进行暴力搜索，性能可能会较慢。
 
 </Admonition>
 
@@ -653,9 +654,9 @@ jsonIndex1 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", "overview")
     .WithIndexName("overview_index")
 jsonIndex2 := index.NewJSONPathIndex(index.AUTOINDEX, "double", "words")
     .WithIndexName("words_index")
-jsonIndex3 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", `dynamic_json['varchar']`)
+jsonIndex3 := index.NewJSONPathIndex(index.AUTOINDEX, "varchar", \`dynamic_json['varchar']\`)
     .WithIndexName("json_varchar_index")
-jsonIndex4 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `dynamic_json['nested']['value']`)
+jsonIndex4 := index.NewJSONPathIndex(index.AUTOINDEX, "double", \`dynamic_json['nested']['value']\`)
     .WithIndexName("json_nested_index")
 
 indexOpt1 := milvusclient.NewCreateIndexOption("my_collection", "overview", jsonIndex1)
@@ -778,7 +779,7 @@ indexParams.push({
 <TabItem value='go'>
 
 ```go
-jsonIndex5 := index.NewJSONPathIndex(index.AUTOINDEX, "double", `dynamic_json['string_price']`)
+jsonIndex5 := index.NewJSONPathIndex(index.AUTOINDEX, "double", \`dynamic_json['string_price']\`)
     .WithIndexName("json_string_price_index")
 indexOpt5 := milvusclient.NewCreateIndexOption("my_collection", "dynamic_json", jsonIndex5)
 ```
@@ -808,10 +809,9 @@ export stringPriceIndex='{
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><p>如果类型转换失败（例如值 <code>"not_a_number"</code> 无法转换为数字），该值将被跳过且不会被索引。</p></li>
-<li><p>有关转换函数参数的详细信息，请参考 <a href="./use-json-fields">JSON 类型</a>。</p></li>
-</ul>
+- 如果类型转换失败（例如值 `"not_a_number"` 无法转换为数字），该值将被跳过且不会被索引。
+
+- 有关转换函数参数的详细信息，请参考 [JSON 类型](./use-json-fields)。
 
 </Admonition>
 
@@ -1113,7 +1113,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>dynamic field 中的键默认不会包含在返回结果中，必须显式指定后才会返回。</p>
+dynamic field 中的键默认不会包含在返回结果中，必须显式指定后才会返回。
 
 </Admonition>
 

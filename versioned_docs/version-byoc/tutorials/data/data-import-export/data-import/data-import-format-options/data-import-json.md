@@ -1,11 +1,12 @@
 ---
 title: "从 JSON/JSON Lines 文件中导入 | BYOC"
 slug: /data-import-json
+sidebar_key: data-import-json
 sidebar_label: "从 JSON/JSON Lines 文件中导入"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "JSON 文件是一个轻量化的，对人和机器都友好的数据格式。因为它的语言无关特性，并遵循类 C 语言程序员熟悉的规范，JSON 是一个非常理想的数据交换格式。 | BYOC"
 type: origin
@@ -39,17 +40,14 @@ JSON Lines 是一种文本格式，每一行都是一个完整且合法的 JSON 
    <tr>
      <th><p><strong>文件格式</strong></p></th>
      <th><p><strong>示例</strong></p></th>
-     <th></th>
    </tr>
    <tr>
      <td><p>JSON (.json)</p></td>
-     <td><pre><code class="json language-json"> [     \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]},     \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]},     \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]} ]</code></pre></td>
-     <td></td>
+     <td><pre><code class="json language-json"> [     \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]\},     \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]\},     \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]\} ]</code></pre></td>
    </tr>
    <tr>
      <td><p>JSON Lines (.ndjson, .jsonl)</p></td>
-     <td><pre><code class="json language-json"> \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]} \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]} \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]}</code></pre></td>
-     <td></td>
+     <td><pre><code class="json language-json"> \{"primary_key":89,"vector":[0.7857309327639853,0.6185684289533679]\} \{"primary_key":-22,"vector":[0.7227987733802379,0.6910585598920134]\} \{"primary_key":85,"vector":[0.7948503430666686,0.6068055142521362]\}</code></pre></td>
    </tr>
 </table>
 
@@ -59,18 +57,17 @@ JSON Lines 是一种文本格式，每一行都是一个完整且合法的 JSON 
 
 <Admonition type="info" icon="📘" title="说明">
 
-<ul>
-<li><strong>是否启用 AutoID</strong></li>
-</ul>
-<p>Collection 中的 id 字段作为主键区分 Entity。如果需要 Zilliz Cloud 为插入的数据自动生成主键，可以启用 AutoID。在这种情况下，批量导入数据时需要排队主键列。</p>
-<ul>
-<li><strong>是否启用 Dynamic Field</strong></li>
-</ul>
-<p>当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 <strong>&#36;meta</strong> 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 <strong>&#36;meta</strong> 字段中。</p>
-<ul>
-<li><strong>大小写</strong></li>
-</ul>
-<p>字典键名和 Collection 的字段名是大小写敏感的。您需要确保待导入字典的键名和目标 Collection 的字段名是完全对应的。比如，目标 Collection 中有个字段名为 <strong>id</strong>，那么待导入字典的键名也应该为 <strong>id</strong>。使用 <strong>ID</strong> 或 <strong>Id</strong> 会导致报错。</p>
+- **是否启用 AutoID**
+
+    Collection 中的 id 字段作为主键区分 Entity。如果需要 Zilliz Cloud 为插入的数据自动生成主键，可以启用 AutoID。在这种情况下，批量导入数据时需要排队主键列。
+
+- **是否启用 Dynamic Field**
+
+    当目标 Collection 启用了 Dynamic Field 并且您希望导入 Schema 中未定义的字段时，您可以在导入数据中纳入一个名为 **&#36;meta** 的字段，并将所有未在 Schema 中定义的字段以键值对的方式存放到 **&#36;meta** 字段中。
+
+- **大小写**
+
+    字典键名和 Collection 的字段名是大小写敏感的。您需要确保待导入字典的键名和目标 Collection 的字段名是完全对应的。比如，目标 Collection 中有个字段名为 **id**，那么待导入字典的键名也应该为 **id**。使用 **ID** 或 **Id** 会导致报错。
 
 </Admonition>
 
@@ -96,7 +93,7 @@ JSON Lines 是一种文本格式，每一行都是一个完整且合法的 JSON 
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果您的文件体积较小，建议您使用多路径或源文件夹的方式将所有文件一次性导入。Zilliz Cloud 针对这两种方式做了内部优化，可以降低后续资源消耗。</p>
+如果您的文件体积较小，建议您使用多路径或源文件夹的方式将所有文件一次性导入。Zilliz Cloud 针对这两种方式做了内部优化，可以降低后续资源消耗。
 
 </Admonition>
 
@@ -150,7 +147,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>如果文件夹路径下包含多种格式文件，请求会失败。</p>
+如果文件夹路径下包含多种格式文件，请求会失败。
 
 </Admonition>
 
@@ -187,11 +184,11 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
    </tr>
    <tr>
      <td><p>阿里云 OSS</p></td>
-     <td><p><code><i>http</i>s://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
+     <td><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/</code></p><p><code>https://bucket-name.oss-cn-hangzhou.aliyuncs.com/json-folder/data.json</code></p></td>
    </tr>
    <tr>
      <td><p>腾讯云 COS</p></td>
-     <td><p><code><i>http</i>s://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
+     <td><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/</code></p><p><code>https://&lt;BucketName-APPID&gt;.cos.ap-beijing.myqcloud.com/json-folder/data.json</code></p></td>
    </tr>
    <tr>
      <td><p>亚马逊云科技 S3</p></td>
@@ -205,7 +202,7 @@ Zilliz Cloud 支持从您的云存储中导入数据。下表罗列了 Zilliz Cl
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p>需要注意的是，一个合法的 JSON 文件中有一个名为 <strong>rows</strong> 的根键，其值为一个字典列表，每个字典列表代表一个需要插入的 Entity 对象。</p>
+需要注意的是，一个合法的 JSON 文件中有一个名为 **rows** 的根键，其值为一个字典列表，每个字典列表代表一个需要插入的 Entity 对象。
 
 </Admonition>
 

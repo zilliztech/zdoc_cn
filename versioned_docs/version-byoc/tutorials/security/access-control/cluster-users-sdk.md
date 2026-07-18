@@ -1,11 +1,12 @@
 ---
 title: "管理集群用户（SDK） | BYOC"
 slug: /cluster-users-sdk
+sidebar_key: cluster-users-sdk
 sidebar_label: "管理集群用户（SDK）"
-beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
+beta: FALSE
 notebook: FALSE
 description: "在 Zilliz Cloud 中，您可以创建集群用户并为他们分配集群角色，从而定义用户权限并实现数据安全。 | BYOC"
 type: origin
@@ -52,7 +53,7 @@ client = MilvusClient(
     token="YOUR_CLUSTER_TOKEN"
 )
 
-client.create_user(user_name="user_1", password="P@ssw0rd")
+client.create_user(user_name="user_1", password="P@ssw0rd", description="a new user in the developers team")
 ```
 
 </TabItem>
@@ -74,6 +75,7 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 CreateUserReq createUserReq = CreateUserReq.builder()
         .userName("user_1")
         .password("P@ssw0rd")
+        .description("a new user in the developers team")
         .build();
         
 client.createUser(createUserReq);
@@ -111,6 +113,7 @@ curl --request POST \
 -d '{
     "userName": "user_1",
     "password": "P@ssw0rd"
+    "description": "a new user in the developers team"
 }'
 ```
 
@@ -310,7 +313,7 @@ curl --request POST \
 结果如下所示：
 
 ```bash
-{'user_name': 'user_1', 'roles': 'role_a'}
+{'user_name': 'user_1', 'description':'a new user in the developers team', 'roles': 'role_a'}
 ```
 
 ## 撤销角色\{#revoke-a-role}
@@ -379,7 +382,7 @@ curl --request POST \
 
 <Admonition type="info" icon="📘" title="说明">
 
-<p><code>root</code> 用户无法删除。</p>
+`root` 用户无法删除。
 
 </Admonition>
 
