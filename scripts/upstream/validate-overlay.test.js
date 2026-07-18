@@ -1,6 +1,38 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
 const test = require('node:test');
-const { validateOverlayManifest } = require('./validate-overlay');
+const { readOverlayManifest, validateOverlayManifest } = require('./validate-overlay');
+
+const ROOT_DIR = path.resolve(__dirname, '..', '..');
+
+function workflowPathsFor(workflowContent, eventName) {
+  const lines = workflowContent.split(/\r?\n/);
+  const eventStart = lines.findIndex((line) => line === `  ${eventName}:`);
+  assert.notEqual(eventStart, -1, `missing ${eventName} event`);
+
+  const paths = [];
+  let inPaths = false;
+  for (let index = eventStart + 1; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (/^  [a-z_]+:/.test(line)) break;
+    if (line === '    paths:') {
+      inPaths = true;
+      continue;
+    }
+    if (inPaths) {
+      const match = line.match(/^      - "(.+)"$/);
+      if (match) paths.push(match[1]);
+    }
+  }
+
+  assert.notEqual(paths.length, 0, `missing ${eventName} paths`);
+  return paths;
+}
+
+function workflowPatternForOverlaySource(source) {
+  return path.posix.extname(source) ? source : `${source}/**`;
+}
 
 function validManifest(overrides = {}) {
   return {
@@ -96,4 +128,17 @@ test('validates patch declarations', () => {
   assert.throws(() => validateOverlayManifest(validManifest({
     patches: [{ path: 'patches/upstream/0001-example.patch' }],
   })), /reason/);
+});
+
+test('locked upstream workflow watches every declared overlay source', () => {
+  const manifest = readOverlayManifest(path.join(ROOT_DIR, 'overlay-manifest.json'));
+  const workflow = fs.readFileSync(path.join(ROOT_DIR, '.github/workflows/locked-upstream-overlay.yml'), 'utf8');
+  const requiredPatterns = manifest.copy.map((entry) => workflowPatternForOverlaySource(entry.from));
+
+  for (const eventName of ['pull_request', 'push']) {
+    const paths = workflowPathsFor(workflow, eventName);
+    for (const pattern of requiredPatterns) {
+      assert.ok(paths.includes(pattern), `${eventName} must watch ${pattern}`);
+    }
+  }
 });

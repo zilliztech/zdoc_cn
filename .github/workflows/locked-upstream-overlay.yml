@@ -13,8 +13,15 @@ on:
       - "scripts/upstream/**"
       - "scripts/verify-cn-publish-artifacts.js"
       - "scripts/verify-cn-publish-artifacts.test.js"
-      - "plugins/cn-publish-normalizer/**"
+      - "ci/**"
+      - "site-profile/**"
+      - "content-config/**"
       - "config/cn-publish-replacements.js"
+      - "plugins/cn-publish-normalizer/**"
+      - "plugins/adapters/aliyun-oss/**"
+      - "rest-overrides/zh-CN/**"
+      - "nginx/zh-CN/**"
+      - "tests/zh-CN/**"
       - "package.json"
   push:
     branches:
@@ -28,8 +35,15 @@ on:
       - "scripts/upstream/**"
       - "scripts/verify-cn-publish-artifacts.js"
       - "scripts/verify-cn-publish-artifacts.test.js"
-      - "plugins/cn-publish-normalizer/**"
+      - "ci/**"
+      - "site-profile/**"
+      - "content-config/**"
       - "config/cn-publish-replacements.js"
+      - "plugins/cn-publish-normalizer/**"
+      - "plugins/adapters/aliyun-oss/**"
+      - "rest-overrides/zh-CN/**"
+      - "nginx/zh-CN/**"
+      - "tests/zh-CN/**"
       - "package.json"
   workflow_dispatch:
 
@@ -51,11 +65,21 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Read upstream lock
+        id: upstream-lock
+        run: |
+          commit="$(awk '/^commit:/ {print $2}' upstream.lock)"
+          if ! printf '%s' "$commit" | grep -Eq '^[0-9a-f]{40}$'; then
+            echo "upstream.lock commit must be a 40-character lowercase SHA: $commit" >&2
+            exit 1
+          fi
+          echo "commit=$commit" >> "$GITHUB_OUTPUT"
+
       - name: Checkout locked upstream
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
           repository: zilliztech/zdoc
-          ref: 0cc5ad1a5234c762a1e999cc525045e96adfb25f
+          ref: ${{ steps.upstream-lock.outputs.commit }}
           path: .zdoc-ci-upstream
           persist-credentials: false
 
