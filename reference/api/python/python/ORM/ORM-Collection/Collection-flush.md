@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "flush() | Python | ORM"
 slug: /python/python/Collection-flush
+sidebar_key: python/Collection-flush
 sidebar_label: "flush()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: VdiwdqQ9iofbkoxcc8Kcqk5gnhZ
 sidebar_position: 11
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
   - flush()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation seals all segments in the collection. Any insertions after this operation will generate a new segment.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 flush(
@@ -43,9 +43,11 @@ flush(
 
 <Admonition type="info" icon="📘" title="Can I call `flush()` after every data insertion?">
 
-<p>When new data is inserted, it is written into a growing segment. Once the size of a growing segment reaches its upper limit, Zilliz Cloud automatically seals the segment. </p>
-<p>Continuously calling this operation results in many sealed segments of small sizes, which can gradually degrade search performance. </p>
-<p>It is recommended that you wait for Zilliz Cloud to seal all segments before conducting any searches.</p>
+When new data is inserted, it is written into a growing segment. Once the size of a growing segment reaches its upper limit, Zilliz Cloud automatically seals the segment. 
+
+Continuously calling this operation results in many sealed segments of small sizes, which can gradually degrade search performance. 
+
+It is recommended that you wait for Zilliz Cloud to seal all segments before conducting any searches.
 
 </Admonition>
 
@@ -71,7 +73,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -108,7 +110,7 @@ collection.flush()
 collection.num_entities # 5
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `flush()`:
 

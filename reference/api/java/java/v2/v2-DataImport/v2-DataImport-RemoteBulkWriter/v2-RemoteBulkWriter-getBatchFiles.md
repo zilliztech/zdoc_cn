@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getBatchFiles() | Java | v2"
 slug: /java/java/v2-RemoteBulkWriter-getBatchFiles
+sidebar_key: java/v2-RemoteBulkWriter-getBatchFiles
 sidebar_label: "getBatchFiles()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: YlpQdEUnKoFR3xxizt2cCV8UnZb
 sidebar_position: 4
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - getBatchFiles()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation returns a list of files passed to the current LocalBulkWriter ins
 public List<List<String>> getBatchFiles()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 remoteBulkWriter.getBatchFiles()
@@ -51,7 +51,7 @@ remoteBulkWriter.getBatchFiles()
 
 *List\<List\<String>>*
 
-## Example
+## Example\{#example}
 
 ```java
 List<List<String>> batchFiles = remoteBulkWriter.getBatchFiles();

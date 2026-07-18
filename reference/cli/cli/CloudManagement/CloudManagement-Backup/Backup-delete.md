@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "delete | Cloud"
 slug: /cli/cli/Backup-delete
+sidebar_key: cli/Backup-delete
 sidebar_label: "delete"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation deletes a backup. | Cloud"
 type: docx
-token: HXoRdtosOo9mFLxdKLic4telnWW
+token: F01Gdx5b8onjxOxbhficUecWndf
 sidebar_position: 2
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - delete
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes a backup.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a backup is a copy of your data that enables you to restore the entire cluster or specific collections in the event of data loss or system failure.
 
@@ -41,11 +41,11 @@ You can delete a backup if it is no longer needed. The deleted backup will immed
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz backup delete 
@@ -57,7 +57,7 @@ zilliz backup delete
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -99,7 +99,7 @@ zilliz backup delete
 
     Indicates whether to skip the interactive prompts.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz backup delete \

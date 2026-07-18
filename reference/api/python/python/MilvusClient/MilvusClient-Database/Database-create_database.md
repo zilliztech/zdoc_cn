@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_database() | Python | MilvusClient"
 slug: /python/python/Database-create_database
+sidebar_key: python/Database-create_database
 sidebar_label: "create_database()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: S278drWUVoRZ5fx8XkfcWaZfnwh
 sidebar_position: 2
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
   - zilliz
   - zilliz cloud
   - cloud
   - create_database()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,25 @@ This operation creates a database.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated serving clusters and on-demand compute. 
+
+- For a database in a dedicated serving clusters, create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a database for on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create_database(
@@ -59,6 +73,10 @@ create_database(
     Name of the database to create.
 
 - **properties** (*dict* | *None*) -
+
+    <Admonition type="info" icon="📘" title="This does not apply to databases for on-demand compute.">
+    
+    </Admonition>
 
     Properties of the database to be created. Possible database properties are as follows:
 
@@ -102,7 +120,7 @@ create_database(
 
 - `MilvusException` - Raised if any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
@@ -110,10 +128,7 @@ from pymilvus import MilvusClient
 client = MilvusClient(uri, token) # db = "default" 
 
 client.create_database(
-    db_name="my_db"， 
-    properties={
-        "database.replica.number": 3
-    }
+    db_name="my_db"
 )
 ```
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "BulkFileType | Python"
 slug: /python/python/DataImport-BulkFileType
+sidebar_key: python/DataImport-BulkFileType
 sidebar_label: "BulkFileType"
 added_since: Inherit
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: NV3Ud1M9iojhaSxZY4ec8RjgnlP
 sidebar_position: 1
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud
   - BulkFileType
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,15 +33,15 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - **NPY** = 1
 
     Sets the file type to **NumPy** (*.npy*).
 
-- **JSON_RB** = 2
+- **JSON** = 2
 
-    Sets the file type to **JSON** (*.json*).
+    Sets the file type to **JSON** (*.json*). 
 
 - **PARQUET** = 3
 
@@ -51,7 +51,7 @@ This is an enumeration that provides the following constants.
 
     Sets the file type to **CSV** (*.csv*).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import LocalBulkWriter, BulkFileType
@@ -61,6 +61,6 @@ local_writer = LocalBulkWriter(
     local_path=Path(OUTPUT_PATH).joinpath('json'),
     segment_size=4*1024*1024,
     # highlight-next
-    file_type=BulkFileType.JSON_RB
+    file_type=BulkFileType.PARQUET
 )
 ```

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropCollectionProperties() | Node.js"
 slug: /node/node/Collections-dropCollectionProperties
+sidebar_key: node/Collections-dropCollectionProperties
 sidebar_label: "dropCollectionProperties()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EjFMdRFz0ofehXxxCPqc6raSnAg
 sidebar_position: 11
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollectionProperties()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation resets the properties of a specific collection to their default values.
 
 ```javascript
-dropCollectionProperties(data): Promise<ResStatus>
+await milvusClient.dropCollectionProperties(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.dropCollectionProperties({
+await milvusClient.dropCollectionProperties({
    db_name?: string
    collection_name: string,
    properties: string[],
@@ -106,10 +106,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.dropCollectionProperties({
     collection_name: 'my-collection',
     delete_keys: ["collection.ttl.seconds"]

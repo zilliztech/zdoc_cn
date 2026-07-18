@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/CohereEmbeddingFunction-encode_documents
+sidebar_key: python/CohereEmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FIyedc51So0onWxtPAjcHFkmnHe
 sidebar_position: 2
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - encode_documents()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in documents and encodes them into vector embeddings.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_documents(
@@ -61,7 +61,7 @@ A list where each element is a NumPy array.
 
     This exception will be raised when you specify multiple embedding types or use the `int8` or `uint8` data type for CohereEmbeddingFunction initialization.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import CohereEmbeddingFunction

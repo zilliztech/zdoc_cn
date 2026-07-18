@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "upload_file_to_volume() | Python"
 slug: /python/python/VolumeFileManager-upload_file_to_volume
+sidebar_key: python/VolumeFileManager-upload_file_to_volume
 sidebar_label: "upload_file_to_volume()"
 added_since: false
 last_modified: false
 deprecate_since: false
 beta: false
 notebook: false
-description: "This operation uploads the local file at the specified source path to the target file path within the specified volume. | Python"
+description: "This operation uploads the local file at the specified source path to the target file path within the specified managed volume. | Python"
 type: docx
 token: Fr3rdPTuXoC0Lzx7urIcwBqWnDb
 sidebar_position: 1
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - upload_file_to_volume()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,15 @@ import Admonition from '@theme/Admonition';
 
 # upload_file_to_volume()
 
-This operation uploads the local file at the specified source path to the target file path within the specified volume.
+This operation uploads the local file at the specified source path to the target file path within the specified managed volume.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This applies only to managed volumes. External volumes are read-only.
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 upload_file_to_volume(
@@ -83,7 +89,7 @@ An object with the following data structure:
 
     The path to the data file within the specified volume after this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus.bulk_writer.volume_file_manager import VolumeFileManager

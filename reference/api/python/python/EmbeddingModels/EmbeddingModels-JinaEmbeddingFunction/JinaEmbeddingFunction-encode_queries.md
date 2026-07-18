@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/JinaEmbeddingFunction-encode_queries
+sidebar_key: python/JinaEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FgbjdQHBEoITxgxk7NMc1NzpnAc
 sidebar_position: 2
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in a list of query strings and encodes each query into a vector embedding.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_queries(
@@ -61,13 +61,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when the response from the Jina API does not contain the `data` key.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import JinaEmbeddingFunction
 
 jina_ef = JinaEmbeddingFunction(
-    model_name="jina-embeddings-v2-base-en", # Defaults to `jina-embeddings-v2-base-en`
+    model_name="jina-embeddings-v2-base-en", # Defaults to \`jina-embeddings-v2-base-en\`
     api_key="YOUR_JINAAI_API_KEY" # Provide your Jina AI API key
 )
 

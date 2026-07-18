@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop() | Python | ORM"
 slug: /python/python/Collection-drop
+sidebar_key: python/Collection-drop
 sidebar_label: "drop()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: L8UTdDNkPoeew0x6LoDcfHx4nof
 sidebar_position: 8
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud
   - drop()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops the current collection. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop(
@@ -61,7 +61,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -81,7 +81,7 @@ collection = Collection(
 collection.drop()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop()`:
 

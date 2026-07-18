@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "connect() | Python | ORM"
 slug: /python/python/Connections-connect
+sidebar_key: python/Connections-connect
 sidebar_label: "connect()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: KzCXdTVVSoOmkbxuFjsccDlXnff
 sidebar_position: 2
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - connect()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation establishes a connection to a Zilliz Cloud cluster using the provided alias, address, and authentication parameters.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 connect(
@@ -56,10 +56,9 @@ connect(
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <ul>
-    <li><p>If the specified connection alias does not exist, a new one will be added, and the parameters specified below are added as the parameters of the connection alias.</p></li>
-    <li><p>If the specified connection alias has already been added by calling <strong>add_connection()</strong>, the parameters specified below overwrite those of the connection alias.</p></li>
-    </ul>
+    - If the specified connection alias does not exist, a new one will be added, and the parameters specified below are added as the parameters of the connection alias.
+
+    - If the specified connection alias has already been added by calling **add_connection()**, the parameters specified below overwrite those of the connection alias.
 
     </Admonition>
 
@@ -97,7 +96,7 @@ connect(
 
     - **address** (*string*) -
 
-        The actual address to connect. Example address: **localhost:19530**.
+        The actual address to connect. Example address: **YOUR_CLUSTER_ENDPOINT**.
 
     - **uri** (*string*) -
 
@@ -163,7 +162,7 @@ None
 
 None
 
-## Exceptions
+## Exceptions\{#exceptions}
 
 - **NotImplementedError**:
 
@@ -177,7 +176,7 @@ None
 
     This exception will be raised when the server specified in the connection parameters is not reachable/ready and the client cannot connect to it.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections
@@ -195,7 +194,7 @@ connections.connect(uri=uri)
 
 # Use environment variable
 # The following assumes that you have already set an environment 
-# variable using export MILVUS_URI=http://username:password@localhost:19530
+# variable using export MILVUS_URI=http://username:password@YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Use environment files
@@ -208,7 +207,7 @@ connections.connect()
 connections.connect(db_name="books")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `connect()`:
 

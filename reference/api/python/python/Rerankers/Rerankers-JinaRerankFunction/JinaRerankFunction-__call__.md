@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/JinaRerankFunction-__call__
+sidebar_key: python/JinaRerankFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: R3gEdUOSfo6JzMxwUsTcevNHn9g
 sidebar_position: 2
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation in [JinaRerankFunction](./Rerankers-JinaRerankFunction) takes in a query and document strings and returns a list of `RerankResult` objects with the top k documents ranked by score.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -90,13 +90,13 @@ Each `RerankResult` object contains:
 
     This exception will be raised when the response from the Jina API does not contain the `results` key.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.reranker import JinaRerankFunction
 
 jina_rf = JinaRerankFunction(
-    model_name="jina-reranker-v1-base-en", # Defaults to `jina-reranker-v1-base-en`
+    model_name="jina-reranker-v1-base-en", # Defaults to \`jina-reranker-v1-base-en\`
     api_key="YOUR_JINAAI_API_KEY"
 )
 

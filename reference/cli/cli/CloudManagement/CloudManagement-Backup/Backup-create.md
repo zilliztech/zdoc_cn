@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Backup-create
+sidebar_key: cli/Backup-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a backup for a cluster. | Cloud"
 type: docx
-token: QZ2zdL2buoahCwxPTp7cbCe4nBc
+token: RriNdfGjjofQL4x8XlhcHug6nvd
 sidebar_position: 1
 keywords: 
-  - Video search
-  - AI Hallucination
-  - AI Agent
-  - semantic search
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a backup for a cluster.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a backup is a copy of your data that enables you to restore the entire cluster or specific collections in the event of data loss or system failure.
 
@@ -43,11 +43,11 @@ Backup creation incurs additional charges, with pricing based on the cloud regio
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz backup create
@@ -60,7 +60,7 @@ zilliz backup create
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -152,7 +152,7 @@ zilliz backup create
     }
     ```
 
-## Example
+## Example\{#example}
 
 ```bash
 # Full cluster backup (default)

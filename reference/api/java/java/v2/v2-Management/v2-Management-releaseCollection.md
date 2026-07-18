@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "releaseCollection() | Java | v2"
 slug: /java/java/v2-Management-releaseCollection
+sidebar_key: java/v2-Management-releaseCollection
 sidebar_label: "releaseCollection()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation releases the data of a specific collection from memory. | Java | v2"
 type: docx
-token: KJArdiXZvoBtdIxumpocfe5knJc
+token: K5t2dl0XloN4VHx1lcpc6Uq3nye
 sidebar_position: 16
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
   - releaseCollection()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation releases the data of a specific collection from memory.
 public void releaseCollection(ReleaseCollectionReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 releaseCollection(ReleaseCollectionReq.builder()
@@ -46,30 +46,26 @@ releaseCollection(ReleaseCollectionReq.builder()
     .async(Boolean async)
     .timeout(Long timeout)
     .build()
-)
+);
 ```
 
 **BUILDER METHODS:**
 
-- `databaseName(String databaseName)`
+- `databaseName(String databaseName)` -
 
-    The name of the database to which the target collection belongs.
+    The name of the database. Defaults to the current database if not specified.
 
-- `collectionName(String collectionName)`
+- `collectionName(String collectionName)` -
 
-    The name of a collection.
+    The name of the target collection.
 
-- `async(Boolean async)`
+- `async(Boolean async)` -
 
-    Whether this operation is asynchronous.
+    Whether to run the operation asynchronously. Defaults to `Boolean.TRUE`.
 
-    The value defaults to `Boolean.True`, indicating immediate return while the process may still run in the background.
+- `timeout(Long timeout)` -
 
-- `timeout(Long timeout)`
-
-    The timeout duration of the process. The process terminates after the specified duration expires.
-
-    The value defaults to `60000L`, indicating the timeout duration is one minute.
+    The timeout duration in milliseconds. Defaults to `60000L`.
 
 **RETURNS:**
 
@@ -77,11 +73,11 @@ releaseCollection(ReleaseCollectionReq.builder()
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+- **MilvusClientException**
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

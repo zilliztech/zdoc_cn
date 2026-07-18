@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call()\_\_ | Python"
+title: "\\_\\_call()\\_\\_ | Python"
 slug: /python/python/CohereEmbeddingFunction-__call__
+sidebar_key: python/CohereEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: P2n8d2wQtoK8YqxnccocmNwRnKb
 sidebar_position: 4
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call()\_\_
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [CohereEmbeddingFunction](./EmbeddingModels-CohereEmbeddingFun
 
 The **\_\_call\_\_()** method of CohereEmbeddingFunction shares the same functionality as [encode_documents()](./CohereEmbeddingFunction-encode_documents) and [encode_queries()](./CohereEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -68,7 +68,7 @@ A list where each element is a NumPy array.
 
     This exception will be raised when you specify multiple embedding types or use the `int8` or `uint8` data type for CohereEmbeddingFunction initialization.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import CohereEmbeddingFunction

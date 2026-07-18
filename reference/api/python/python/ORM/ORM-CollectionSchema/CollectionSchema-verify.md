@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "verify() | Python | ORM"
 slug: /python/python/CollectionSchema-verify
+sidebar_key: python/CollectionSchema-verify
 sidebar_label: "verify()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: KSECdBDcUoIkL7xI4KOc29Ukn1g
 sidebar_position: 5
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
   - verify()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation performs final validation checks on the CollectionSchema to detect any obvious problems.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 verify()
@@ -57,7 +57,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType  

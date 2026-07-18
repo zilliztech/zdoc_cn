@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "has_collection() | Python | ORM"
 slug: /python/python/utility-has_collection
+sidebar_key: python/utility-has_collection
 sidebar_label: "has_collection()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: TWOxdwDYRo4CCHxDdZbc7IOznCg
 sidebar_position: 17
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
   - has_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks whether a collection exists.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 has_collection(
@@ -73,12 +73,12 @@ A boolean value indicates whether the specified partition exists.
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Check whether a partition exists
@@ -87,7 +87,7 @@ collection.has_collection(
 ) # True
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 - [drop_collection()](./utility-drop_collection)
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "release() | Python | ORM"
 slug: /python/python/Partition-release
+sidebar_key: python/Partition-release
 sidebar_label: "release()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ZQ2RdE2AOoH9bfx4k3Sc3Ny0ngb
 sidebar_position: 9
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - Machine Learning
+  - RAG
+  - NLP
+  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
   - release()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation releases the data of the current partition from memory.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 release(
@@ -61,7 +61,7 @@ release(
 
     This arises when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -87,7 +87,7 @@ partition.load()
 partition.release()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `release()`:
 

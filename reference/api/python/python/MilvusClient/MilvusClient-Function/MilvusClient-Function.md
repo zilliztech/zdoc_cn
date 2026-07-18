@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "Function | Python | MilvusClient"
 slug: /python/python/MilvusClient-Function
+sidebar_key: python/MilvusClient-Function
 sidebar_label: "Function"
 added_since: v2.5.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "A `Function` instance for generating vector embeddings from user-provided raw data or applying a reranking strategy to the search results in Milvus. | Python | MilvusClient"
 type: docx
-token: RrW9dOM8do7d3ixXIP9clJJUnVg
+token: GaCYdVohYoHFhrx897zcmcNfn6e
 sidebar_position: 3
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - Function
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ A `Function` instance for generating vector embeddings from user-provided raw da
 class pymilvus.Function
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 This constructor initializes a new `Function` instance designed to transform user's raw data into vector embeddings or applying a reranking strategy to the search results. This is achieved through an automated process that simplifies similarity search operations.
 
@@ -59,23 +59,25 @@ Function(
 
     The name of the function. This identifier is used to reference the function within queries and collections.
 
-- `function_type` (*FunctionType*) -
+- `function_type` (*[FunctionType](./Collections-FunctionType)*) -
 
     **[REQUIRED]**
 
     The type of embedding function to use. Possible values:
 
-    - `FunctionType.BM25`: Generates sparse vectors based on the BM25 ranking algorithm from a `VARCHAR` field.
+    - FunctionType.BM25: Generates sparse vectors based on the BM25 ranking algorithm from a VARCHAR or TEXT field.
 
-    - `FunctionType.TEXTEMBEDDING`: Generates dense vectors that capture semantic meaning from a `VARCHAR` field.
+    - FunctionType.TEXTEMBEDDING: Generates dense vectors that capture semantic meaning from a VARCHAR or TEXT field.
 
-    - `FunctionType.RERANK`: Applies reranking strategies to the search results.
+    - `FunctionType.MINHASH`: Generates binary vectors that approximate [Jaccard similarity](https://en.wikipedia.org/wiki/Jaccard_index) between documents.
+
+- `FunctionType.RERANK`: Applies reranking strategies to the search results.
 
 - `input_field_names` (*Union[str, List[str]]*) -
 
     **[REQUIRED]**
 
-    The name of the field containing the raw data that requires conversion to a vector representation. This parameter accepts only one field name.
+    The name of the VARCHAR or TEXT field containing the raw data that requires conversion to a vector representation. For FunctionType.BM25 and FunctionType.TEXTEMBEDDING, this parameter accepts only one field name.
 
 - `output_field_names` (*Union[str, List[str]]*) -
 
@@ -83,7 +85,7 @@ Function(
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>This applies only when you set <code>function_type</code> to <code>FunctionType.BM25</code> and <code>FunctionType.TEXTEMBEDDING</code>.</p>
+    This applies only when you set `function_type` to `FunctionType.BM25` and `FunctionType.TEXTEMBEDDING`.
 
     </Admonition>
 
@@ -137,7 +139,7 @@ Function(
 
             <Admonition type="info" icon="📘" title="Notes">
 
-            <p>If you shorten the vector dimension, ensure the <code>dim</code> value specified in the schema's <code>add_field</code> method for the vector field matches the final output dimension of your embedding function.</p>
+            If you shorten the vector dimension, ensure the `dim` value specified in the schema's `add_field` method for the vector field matches the final output dimension of your embedding function.
 
             </Admonition>
 
@@ -332,7 +334,7 @@ A `Function` object that can be registered with a Milvus collection, facilitatin
 
     This exception will be raised when there is an overlap between `input_field_names` and `output_field_names`, meaning that the same field name is present in both.
 
-## Examples
+## Examples\{#examples}
 
 - Use `BM25`
 

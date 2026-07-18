@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "VoyageRerankFunction | Python"
 slug: /python/python/Rerankers-VoyageRerankFunction
+sidebar_key: python/Rerankers-VoyageRerankFunction
 sidebar_label: "VoyageRerankFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Smobd2lIho2yQPxtRhLcLcKznCf
 sidebar_position: 1
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud
   - VoyageRerankFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.reranker.VoyageRerankFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a VoyageRerankFunction for common use cases.
 
@@ -58,14 +58,14 @@ VoyageRerankFunction(
 
     The API key for accessing the Voyage API. For information on how to create an API key, refer to [API Key and Python Client](https://docs.voyageai.com/docs/api-key-and-installation).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.reranker import VoyageRerankFunction
 
 # Define the rerank function
 voyage_rf = VoyageRerankFunction(
-    model_name="rerank-lite-1",  # Specify the model name. Defaults to `rerank-lite-1`.
+    model_name="rerank-lite-1",  # Specify the model name. Defaults to \`rerank-lite-1\`.
     api_key=VOYAGE_API_KEY # Replace with your Voyage API key
 )
 ```

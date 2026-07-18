@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/InstructorEmbeddingFunction-__call__
+sidebar_key: python/InstructorEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: VmAIdW9J2oH6iWxDh2PcJYfRnne
 sidebar_position: 4
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [InstructorEmbeddingFunction](./EmbeddingModels-InstructorEmbe
 
 The **\_\_call\_\_()** method of InstructorEmbeddingFunction shares the same functionality as [encode_documents()](./InstructorEmbeddingFunction-encode_documents) and [encode_queries()](./InstructorEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -66,13 +66,13 @@ A list where each element is a NumPy array.
 
 *None*
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import InstructorEmbeddingFunction
 
 ef = InstructorEmbeddingFunction(
-    model_name="hkunlp/instructor-xl", # Defaults to `hkunlp/instructor-xl`
+    model_name="hkunlp/instructor-xl", # Defaults to \`hkunlp/instructor-xl\`
     query_instruction="Represent the question for retrieval:",
     doc_instruction="Represent the document for retrieval:"
 )

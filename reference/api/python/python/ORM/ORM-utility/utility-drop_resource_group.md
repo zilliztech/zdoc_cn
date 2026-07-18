@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_resource_group() | Python | ORM"
 slug: /python/python/utility-drop_resource_group
+sidebar_key: python/utility-drop_resource_group
 sidebar_label: "drop_resource_group()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EofGdftYjoQ9E6x8mxLcpbG1nhc
 sidebar_position: 11
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
   - drop_resource_group()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops a resource group. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop_resource_group(
@@ -75,12 +75,12 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a new resource group
@@ -96,7 +96,7 @@ utility.drop_resource_group(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop_resource_group()`:
 

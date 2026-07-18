@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "describeAlias() | Java | v2"
 slug: /java/java/v2-Collections-describeAlias
+sidebar_key: java/v2-Collections-describeAlias
 sidebar_label: "describeAlias()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation displays the details of an alias. | Java | v2"
 type: docx
-token: RWaHdvzdvoxGdbxj44cc5SmBnzd
+token: BDqGdp4uqo3XRexslRNcts9knmd
 sidebar_position: 11
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - describeAlias()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,26 +37,16 @@ This operation displays the details of an alias.
 public DescribeAliasResp describeAlias(DescribeAliasReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 describeAlias(DescribeAliasReq.builder()
-    .databaseName(String databaseName)
-    .collection(String collectionName)
     .alias(String alias)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
-
-- `databaseName(String databaseName)`
-
-    The name of the database to which the target collection belongs.
-
-- `collectionName(String collectionName)`
-
-    The name of the target collection of this operation.
 
 - `alias(String alias)`
 
@@ -78,7 +68,7 @@ A **DescribeAliasResp** object containing the alias details.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -96,8 +86,6 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 2. Describe alias
 DescribeAliasReq describeAliasReq = DescribeAliasReq.builder()
-        .databaseName("my_database")
-        .collectionName("my_collection")
         .alias("test_alias")
         .build();
 DescribeAliasResp describeAliasResp = client.describeAlias(describeAliasReq);

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/MistralAIEmbeddingFunction-encode_queries
+sidebar_key: python/MistralAIEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: SptWdOyFqoGM5VxVS16cofqfnDg
 sidebar_position: 2
 keywords: 
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in a list of query strings and encodes each query into a vector embedding.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_queries(
@@ -61,13 +61,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when `api_key` is not provided and the `MISTRALAI_API_KEY` environment variable is also not set.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import MistralAIEmbeddingFunction
 
 ef = MistralAIEmbeddingFunction(
-    model_name="mistral-embed", # Defaults to `mistral-embed`
+    model_name="mistral-embed", # Defaults to \`mistral-embed\`
     api_key="MISTRAL_API_KEY" # Provide your Mistral AI API key
 )
 

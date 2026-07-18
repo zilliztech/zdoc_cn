@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "describeCollection() | Java | v2"
 slug: /java/java/v2-Collections-describeCollection
+sidebar_key: java/v2-Collections-describeCollection
 sidebar_label: "describeCollection()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists detailed information about a specific collection. | Java | v2"
 type: docx
-token: F8lCdDCa3oD48WxWyURcmfoznYt
+token: WEE6ddFntowCIixVMCmc3pESnug
 sidebar_position: 12
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - describeCollection()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,109 +37,44 @@ This operation lists detailed information about a specific collection.
 public DescribeCollectionResp describeCollection(DescribeCollectionReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 describeCollection(DescribeCollectionReq.builder()
     .databaseName(String databaseName)
     .collectionName(String collectionName)
+    .collectionId(Long collectionId)
     .build()
-)
+);
 ```
 
 **BUILDER METHODS:**
 
-- `databaseName(String databaseName)`
+- `databaseName(String databaseName)` -
 
-    The name of the database to which the target collection belongs.
+    The name of the database. Defaults to the current database if not specified.
 
-- `collectionName(String collectionName)`
+- `collectionName(String collectionName)` -
 
-    The name of an existing collection.
+    The name of the target collection.
 
-    Setting this to a non-existing collection results in **MilvusException**.
+- `collectionId(Long collectionId)` -
 
-**RETURN TYPE:**
-
-*DescribeCollectionResp*
+    The numeric ID of the collection. Use this when you need to identify a collection by ID instead of name.
 
 **RETURNS:**
 
+*DescribeCollectionResp*
+
 A **DescribeCollectionResp** object that contains detailed information about the specified collection.
-
-**PARAMETERS:**
-
-- **collectionName** (*String*)
-
-    The name of the current collection.
-
-- **collectionID** (*Long*)
-
-    The ID of the collection.
-
-- **databaseName** (*String*)
-
-    The name of the database to which the current collection belongs.
-
-- **description** (*String*)
-
-    The description of the current collection.
-
-- **numOfPartitions** (*long*)
-
-    The number of partitions in the current collection.
-
-- **fieldNames** (*List\<String\>*)
-
-    A list of fields in the current collection.
-
-- **vectorFieldName** (*List\<String\>*)
-
-    The name of the vector field.
-
-- **primaryFieldName** (*String*)
-
-    The name of the primary field.
-
-- **enableDynamicField** (*Boolean*)
-
-    Whether to use the reserved JSON field **&#36;meta** to save non-schema-defined fields and their values as key-value pairs.
-
-- **autoID** (*Boolean*)
-
-    Whether Zilliz Cloud automatically generates the primary key for the collection.
-
-- **collectionSchema** (*CreateCollectionReq.CollectionSchema*)
-
-    The scheme of the collection.
-
-- **createTime** (*Long*)
-
-    The time when the collection was created.
-
-- **createUtcTime** (*Long*) -
-
-    The time when the collection was created in UTC.
-
-- **consistencyLevel** (*ConsistencyLevel*) -
-
-    The consistency level of the collection.
-
-- **shardsNum** (*Integer*) -
-
-    The number of shards in the collection.
-
-- **properties** (*Map\<String, String>*) -
-
-    The properties of the current collection. 
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+- **MilvusClientException**
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

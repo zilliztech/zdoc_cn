@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "wait_for_index_building_complete() | Python | ORM"
 slug: /python/python/utility-wait_for_index_building_complete
+sidebar_key: python/utility-wait_for_index_building_complete
 sidebar_label: "wait_for_index_building_complete()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: MfR8dw5TioPvw3xvrstcgYixnUb
 sidebar_position: 43
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
   - wait_for_index_building_complete()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation blocks the current process until the specified index has been built.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 wait_for_index_building_complete(
@@ -94,7 +94,7 @@ None
 
     This exception will be raised if multiple indexes exist but the index name is left unspecified.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import (
@@ -106,7 +106,7 @@ from pymilvus import (
     utility,
 )
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a collection
@@ -151,7 +151,7 @@ utility.wait_for_index_building_complete(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `wait_for_index_building_complete()`
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getField() | Java | v2"
 slug: /java/java/v2-CollectionSchema-getField
+sidebar_key: java/v2-CollectionSchema-getField
 sidebar_label: "getField()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: AXWod56QkoprlXxOXkwcPXfonHg
 sidebar_position: 3
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - getField()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation gets the details of a specific field, including schema informatio
 public CreateCollectionReq.FieldSchema getField(String fieldName)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 CollectionSchema.getField(String fieldName)
@@ -63,7 +63,7 @@ A [FieldSchema](./v2-Collections-FieldSchema) object containing details of the f
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.service.collection.request.CreateCollectionReq;

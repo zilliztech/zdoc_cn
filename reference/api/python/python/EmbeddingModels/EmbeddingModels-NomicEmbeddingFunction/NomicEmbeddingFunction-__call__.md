@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/NomicEmbeddingFunction-__call__
+sidebar_key: python/NomicEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Dsl1dDLBeoGixjxt2lpcFP5ynSA
 sidebar_position: 4
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [NomicEmbeddingFunction](./EmbeddingModels-NomicEmbeddingFunct
 
 The **\_\_call\_\_()** method of NomicEmbeddingFunction shares the same functionality as [encode_documents()](./NomicEmbeddingFunction-encode_documents) and [encode_queries()](./NomicEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -66,13 +66,13 @@ A list where each element is a NumPy array.
 
 *None*
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import NomicEmbeddingFunction
 
 ef = NomicEmbeddingFunction(
-    model_name="nomic-embed-text-v1.5", # Defaults to `mistral-embed`
+    model_name="nomic-embed-text-v1.5", # Defaults to \`mistral-embed\`
     api_key="NOMIC_API_KEY" # Provide your Nomic API key
 )
 

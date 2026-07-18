@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "listDatabases() | Node.js"
 slug: /node/node/Database-listDatabases
+sidebar_key: node/Database-listDatabases
 sidebar_label: "listDatabases()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation lists all existing databases. | Node.js"
 type: docx
-token: Kp9Dd2dIgoxyDixuqtqctPZXnFb
+token: DZMUdKbtfoT1HbxaXEDcgFkJnsh
 sidebar_position: 5
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - listDatabases()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation lists all existing databases.
 
 ```javascript
-listDatabases(data?): Promise<ListDatabasesResponse>
+await milvusClient.listDatabases(data?)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.listDatabases({
+await milvusClient.listDatabases({
     timeout?: number
 })
 ```
@@ -53,7 +53,7 @@ milvusClient.listDatabases({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ListDatabaseResponse>*
+**RETURNS** *Promise |&lt;ListDatabaseResponse&gt;*
 
 This method returns a promise that resolves to a **ListDatabaseResponse** object.
 
@@ -90,9 +90,12 @@ This method returns a promise that resolves to a **ListDatabaseResponse** object
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const res = await milvusClient.listDatabases();
 ```

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/InstructorEmbeddingFunction-encode_queries
+sidebar_key: python/InstructorEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LrvhdFR5Vo1ZnExohgicdi58njc
 sidebar_position: 2
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in a list of query strings and encodes each query into a vector embedding.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_queries(
@@ -59,13 +59,13 @@ A list where each element is a NumPy array.
 
 *None*
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import InstructorEmbeddingFunction
 
 ef = InstructorEmbeddingFunction(
-    model_name="hkunlp/instructor-xl", # Defaults to `hkunlp/instructor-xl`
+    model_name="hkunlp/instructor-xl", # Defaults to \`hkunlp/instructor-xl\`
     query_instruction="Represent the question for retrieval:",
     doc_instruction="Represent the document for retrieval:"
 )

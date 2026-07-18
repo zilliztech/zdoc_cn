@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "search() | Node.js"
 slug: /node/node/Vector-search
+sidebar_key: node/Vector-search
 sidebar_label: "search()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Node.js"
 type: docx
-token: C8kgdOn3pozkrtxCBMLcqcSTnTb
-sidebar_position: 8
+token: HYv3d0NiRoc09Bx4rz0cIhqknb5
+sidebar_position: 7
 keywords: 
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - search()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation conducts a vector similarity search with an optional scalar filtering expression.
 
 ```javascript
-search(data): Promise<ResStatus>
+await milvusClient.search(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.search({
+await milvusClient.search({
   db_name?: string,
   collection_name: string,
   partition_names?: string[];
@@ -222,7 +222,7 @@ milvusClient.search({
 
 - **hints** (*string*) -
 
-     A hints string to improve search performance.
+    A hints string to improve search performance.
 
 - **round_decimal** (*number*) -
 
@@ -366,10 +366,13 @@ This method returns a promise that resolves to a **SearchResults** object.
 
     Each number indicates the recall rate of a search against a query vector.
 
-## Example
+## Example\{#example}
 
 ```plaintext
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const searchResults = await milvusClient.search({
    collection_name: 'my_collection',
    vector: [1, 2, 3, 4],

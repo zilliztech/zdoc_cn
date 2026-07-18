@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/MGTEEmbeddingFunction-__call__
+sidebar_key: python/MGTEEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: L4PUdEhrpoS1Q5xN3m2chVVEnWg
 sidebar_position: 4
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [MGTEEmbeddingFunction](./EmbeddingModels-MGTEEmbeddingFunctio
 
 The **\_\_call\_\_()** method of MGTEEmbeddingFunction shares the same functionality as [encode_documents()](./MGTEEmbeddingFunction-encode_documents) and [encode_queries()](./MGTEEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -66,7 +66,7 @@ A dictionary that contains the encoded embeddings, both dense and sparse.
 
 *None*
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.hybrid import MGTEEmbeddingFunction

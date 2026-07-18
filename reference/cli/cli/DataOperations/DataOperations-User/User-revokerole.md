@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "revoke-role | Cloud"
 slug: /cli/cli/User-revokerole
+sidebar_key: cli/User-revokerole
 sidebar_label: "revoke-role"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation revokes a role from a user. | Cloud"
 type: docx
-token: Bp4sdXEoYoKuYtxs7WwcZBQFncb
+token: W7NedO3aXoF3UdxWp51cPe0kn2b
 sidebar_position: 6
 keywords: 
-  - hallucinations llm
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - revoke-role
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation revokes a role from a user.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz user revoke-role
@@ -50,7 +50,7 @@ zilliz user revoke-role
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--user** (*string*) -
 
@@ -86,7 +86,7 @@ zilliz user revoke-role
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz user revoke-role --user my_user --role admin

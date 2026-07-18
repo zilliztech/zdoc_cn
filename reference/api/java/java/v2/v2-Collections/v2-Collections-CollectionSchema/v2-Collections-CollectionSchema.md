@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "CollectionSchema | Java | v2"
 slug: /java/java/v2-Collections-CollectionSchema
+sidebar_key: java/v2-Collections-CollectionSchema
 sidebar_label: "CollectionSchema"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Java | v2"
 type: docx
-token: FxUxdWGz2oUh1ixyquZcAndBnAf
+token: IXVHdXVncoEp64xD6vdcvUJwnlH
 sidebar_position: 2
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - CollectionSchema
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ A **CollectionSchema** instance represents the schema of a collection. A schema 
 io.milvus.v2.service.collection.request.CreateCollectionReq.CollectionSchema
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs the schema of a collection by defining fields, data types, and other parameters.
 
@@ -51,11 +51,11 @@ CreateCollectionReq.CollectionSchema.builder()
 
 - `fieldSchemaList(List<CreateCollectionReq.FieldSchema>)`
 
-    A list of **FieldSchema** objects that define the fields in the collection schema.
+    A list of **[FieldSchema](./v2-Collections-FieldSchema)** objects that define the fields in the collection schema.
 
     <Admonition type="info" icon="📘" title="What is a field schema?">
 
-    <p>A field schema represents and contains metadata for a single field, while <strong>CollectionSchema</strong> ties together a list of FieldSchema objects to define the full schema.</p>
+    A field schema represents and contains metadata for a single field, while **CollectionSchema** ties together a list of FieldSchema objects to define the full schema.
 
     </Admonition>
 
@@ -73,7 +73,7 @@ A **CollectionSchema** object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.common.DataType;
@@ -87,7 +87,7 @@ collectionSchema.addField(AddFieldReq.builder().fieldName("id").dataType(DataTyp
 collectionSchema.addField(AddFieldReq.builder().fieldName("vector").dataType(DataType.FloatVector).dimension(dim).build());
 ```
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the `CollectionSchema` class:
 

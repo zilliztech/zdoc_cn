@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/Model2VecEmbeddingFunction-__call__
+sidebar_key: python/Model2VecEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WJpVd6gQzoxCEUxM93ScXsL5ntA
 sidebar_position: 4
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [Model2VecEmbeddingFunction](./EmbeddingModels-Model2VecEmbedd
 
 The **\_\_call\_\_()** method of Model2VecEmbeddingFunction shares the same functionality as [encode_documents()](./Model2VecEmbeddingFunction-encode_documents) and [encode_queries()](./Model2VecEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -67,7 +67,7 @@ A list where each element is a NumPy array.
 
     This exception will be raised when the model2vec module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

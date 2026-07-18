@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "release() | Python | ORM"
 slug: /python/python/Collection-release
+sidebar_key: python/Collection-release
 sidebar_label: "release()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CBwkdDs7MoKkVKx0kJgcPUNxn6s
 sidebar_position: 24
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - release()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation releases the data of the current collection from memory.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 release(
@@ -47,7 +47,7 @@ release(
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -70,7 +70,7 @@ collection.load()
 collection.release()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `release()`:
 

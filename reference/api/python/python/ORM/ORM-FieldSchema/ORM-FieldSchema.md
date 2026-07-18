@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "FieldSchema | Python | ORM"
 slug: /python/python/ORM-FieldSchema
+sidebar_key: python/ORM-FieldSchema
 sidebar_label: "FieldSchema"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EVKhdy0vwoSLSux2RW2c660unjh
 sidebar_position: 2
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
   - FieldSchema
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ A **FieldSchema** instance defines the data type and related attributes of a spe
 class pymilvus.FieldSchema
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs the schema of a field by defining the field name, data type, and other parameters.
 
@@ -83,7 +83,7 @@ FieldSchema(
 
         Setting this to **True** makes the current field the primary field.
 
-        As an alternative, you can set **primary_field** when creating a **CollectionSchema** object.
+        As an alternative, you can set **primary_field** when creating a **[CollectionSchema](./MilvusClient-CollectionSchema)** object.
 
     - **auto_id** (*bool*)
 
@@ -101,9 +101,11 @@ FieldSchema(
 
         <Admonition type="info" icon="📘" title="What is a partition key?">
 
-        <p>Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.</p>
-        <p>This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.</p>
-        <p>As an alternative, you can set <strong>partition<em>key</em>field</strong> when creating a <strong>CollectionSchema</strong> object.</p>
+        Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.
+
+        This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.
+
+        As an alternative, you can set **partition_key_field** when creating a **[CollectionSchema](./MilvusClient-CollectionSchema)** object.
 
         </Admonition>
 
@@ -153,6 +155,6 @@ A **FieldSchema** object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the `FieldSchema` class:

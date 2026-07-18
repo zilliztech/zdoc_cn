@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/SpladeEmbeddingFunction-encode_queries
+sidebar_key: python/SpladeEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: S9zPdiLkpokjfkxfZ68cWIFynnd
 sidebar_position: 2
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
+  - Large language model
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in a list of query strings and encodes each query into a vector embedding.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_queries(
@@ -61,7 +61,7 @@ Compressed sparse row matrices representing the query embeddings.
 
     This exception will be raised when the transformers library is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

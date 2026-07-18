@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "insert() | Python | ORM"
 slug: /python/python/Partition-insert
+sidebar_key: python/Partition-insert
 sidebar_label: "insert()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QXDxdv36FoVgjcxDV1gcDwWXnsd
 sidebar_position: 5
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud
   - insert()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation inserts data into the current partition.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Using the <strong>partition_name</strong> parameter in the <strong>insert()</strong> method of a <strong>Collection</strong> object is equivalent to using the <strong>insert()</strong> method of a <strong>Partition</strong> object.</p>
+Using the **partition_name** parameter in the **insert()** method of a **[Collection](./ORM-Collection)** object is equivalent to using the **insert()** method of a **[Partition](./ORM-Partition)** object.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 insert(
@@ -170,7 +170,7 @@ A **MutationResult** object that contains the following fields:
 
         The timestamp at which this operation is completed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, Partition, FieldSchema, CollectionSchema, DataType
@@ -201,7 +201,7 @@ res.insert_count
 10
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `insert()`:
 

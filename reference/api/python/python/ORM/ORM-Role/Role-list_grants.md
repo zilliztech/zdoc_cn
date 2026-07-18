@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_grants() | Python | ORM"
 slug: /python/python/Role-list_grants
+sidebar_key: python/Role-list_grants
 sidebar_label: "list_grants()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: YRoGdgQmWoIEaJx84ICcHTILnMe
 sidebar_position: 8
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - list_grants()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all privileges granted to the current role.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_grants(
@@ -77,7 +77,7 @@ The **GrantItem** objects contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role
@@ -91,7 +91,7 @@ res = list_grants(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_replicas()`:
 

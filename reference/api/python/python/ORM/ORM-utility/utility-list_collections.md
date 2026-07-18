@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_collections() | Python | ORM"
 slug: /python/python/utility-list_collections
+sidebar_key: python/utility-list_collections
 sidebar_label: "list_collections()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QgxEdfBMSodYo6xCg24cH3hInr4
 sidebar_position: 24
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - list_collections()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all collections in the database used in the current connection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_collections(
@@ -67,7 +67,7 @@ A list of collection names.
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
@@ -77,7 +77,7 @@ connections.connect()
 utility.list_collections()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_collections()`:
 

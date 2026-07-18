@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_resource_group() | Python | ORM"
 slug: /python/python/utility-create_resource_group
+sidebar_key: python/utility-create_resource_group
 sidebar_label: "create_resource_group()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: X5qsdhFQ5oOhkcxOprzcOZq4nMc
 sidebar_position: 4
 keywords: 
+  - Dense embedding
   - Faiss vector database
   - Chroma vector database
   - nlp search
-  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
   - create_resource_group()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,13 +35,15 @@ This operation creates a new resource group.
 
 <Admonition type="info" icon="📘" title="What is a resource group?">
 
-<p>A resource group can hold several or all of the query nodes in a Zilliz Cloud cluster. When you load a collection by calling load(), Zilliz Cloud loads the data of the collection into certain query nodes.</p>
-<p>There is a default resource group named <strong>_<em>default</em>resource_group</strong> available in every Zilliz Cloud cluster that holds all its query nodes. </p>
-<p>Use <strong>describe<em>resource</em>group()</strong> to check the actual number. If there are multiple query nodes available, consider creating resource groups and distributing the query nodes among them.</p>
+A resource group can hold several or all of the query nodes in a Zilliz Cloud cluster. When you load a collection by calling load(), Zilliz Cloud loads the data of the collection into certain query nodes.
+
+There is a default resource group named **__default_resource_group** available in every Zilliz Cloud cluster that holds all its query nodes. 
+
+Use **describe_resource_group()** to check the actual number. If there are multiple query nodes available, consider creating resource groups and distributing the query nodes among them.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create_resource_group(
@@ -114,12 +116,12 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a resource group
@@ -144,7 +146,7 @@ except Exception:
 
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `create_resource_group()`:
 

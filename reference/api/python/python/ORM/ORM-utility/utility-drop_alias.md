@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_alias() | Python | ORM"
 slug: /python/python/utility-drop_alias
+sidebar_key: python/utility-drop_alias
 sidebar_label: "drop_alias()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: V7BWdrC39oPAauxoWBzcaldwnVc
 sidebar_position: 9
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - drop_alias()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,9 @@ import Admonition from '@theme/Admonition';
 
 # drop_alias()
 
-This operation drops a specified collection alias. 
+This operation drops a specified [collection ](./ORM-Collection)alias. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop_alias(
@@ -54,7 +54,7 @@ drop_alias(
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>When dropping an alias, you do not need to provide the collection name because one alias can only be assigned to exactly one collection. Therefore, the server knows which collection the specified alias belongs to.</p>
+    When dropping an alias, you do not need to provide the collection name because one alias can only be assigned to exactly one collection. Therefore, the server knows which collection the specified alias belongs to.
 
     </Admonition>
 
@@ -86,12 +86,12 @@ None
 
     This exception will be raised when this operation fails.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, Collection, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get an existing collection
@@ -116,7 +116,7 @@ utility.drop_alise(alias="bob")
 utility.list_aliases(collection_name="collection_1") # ['tom']
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop_alias()`:
 

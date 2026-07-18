@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listDatabases() | Java | v2"
 slug: /java/java/v2-Database-listDatabases
+sidebar_key: java/v2-Database-listDatabases
 sidebar_label: "listDatabases()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: IHoodknUJohFAbxMFg3c0q8un6f
 sidebar_position: 6
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
   - zilliz
   - zilliz cloud
   - cloud
   - listDatabases()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -51,7 +51,7 @@ A ListDatabasesResp object contains a list of all database names.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add_field() | Python | MilvusClient"
 slug: /python/python/CollectionSchema-add_field_1
+sidebar_key: python/CollectionSchema-add_field_1
 sidebar_label: "add_field()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation adds a field to the schema of a collection. | Python | MilvusClient"
 type: docx
-token: Ehbdd1HRLoB34nxU6hQcRk2Mnug
+token: N3Fbd0ZZVoFo8DxJ9r8cNgcCnOd
 sidebar_position: 1
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - add_field()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation adds a field to the schema of a collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 add_field(
@@ -51,7 +51,7 @@ add_field(
 
     The name of the field.
 
-- **datatype** (*[DataType](./Collections-DataType)*) - 
+- **[datatype](./Collections-DataType)** (*[DataType](./Collections-DataType)*) - 
 
     **[REQUIRED]**
 
@@ -79,6 +79,8 @@ add_field(
 
         - **DataType.VARCHAR**,
 
+        - **DataType.TEXT**
+
     - Composite fields: Choose from a variety of options, including 
 
         - **DataType.JSON**
@@ -91,12 +93,13 @@ add_field(
 
     Whether the current field is the primary field in a collection.
 
+    This does not apply to external collections.
+
     <Admonition type="info" icon="📘" title="Notes">
 
-    <ul>
-    <li><p>Each collection has only one primary field.</p></li>
-    <li><p>A primary field should be of either the <strong>DataType.INT64</strong> type or the <strong>DataType.VARCHAR</strong> type.</p></li>
-    </ul>
+    - Each collection has only one primary field.
+
+    - A primary field should be of either the **DataType.INT64** type or the **DataType.VARCHAR** type.
 
     </Admonition>
 
@@ -104,7 +107,7 @@ add_field(
 
     The maximum byte length for strings allowed to be inserted. Note that multibyte characters (e.g., Unicode characters) may occupy more than one byte each, so ensure the byte length of inserted strings does not exceed the specified limit. Value range: [1, 65,535].
 
-    This is mandatory for a **DataType.VARCHAR** field.
+    This is mandatory for a DataType.VARCHAR field. Omit this parameter for a DataType.TEXT field.
 
 - **element_type** (*str*) -
 
@@ -128,11 +131,15 @@ add_field(
 
     Whether the current field serves as the partition key. Each collection can have one partition key.
 
+    This does not apply to external collections.
+
     <Admonition type="info" icon="📘" title="What is the partition key?">
 
-    <p>To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.</p>
-    <p>When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.</p>
-    <p>For details, refer to <a href="/docs/use-partition-key">Use Partition Key</a> and <a href="https://milvus.io/docs/multi_tenancy.md">Multi-tenancy</a>.</p>
+    To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.
+
+    When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.
+
+    For details, refer to [Use Partition Key](/docs/use-partition-key) and [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md).
 
     </Admonition>
 
@@ -142,7 +149,7 @@ add_field(
 
 **RETURNS:**
 
-A **CollectionSchema** object contains the fields that have been added to the schema.
+A **[CollectionSchema](./MilvusClient-CollectionSchema)** object contains the fields that have been added to the schema.
 
 **EXCEPTIONS:**
 
@@ -150,7 +157,7 @@ A **CollectionSchema** object contains the fields that have been added to the sc
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import DataType, FieldSchema, CollectionSchema
@@ -177,6 +184,13 @@ schema.add_field(
 schema.add_field(
     field_name="scalar_01",
     datatype=DataType.INT32
+)
+
+# Add a TEXT field for long source content
+schema.add_field(
+    field_name="content",
+    datatype=DataType.TEXT,
+    enable_analyzer=True
 )
 
 # {

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "addUserToRole() | Node.js"
 slug: /node/node/Authentication-addUserToRole
+sidebar_key: node/Authentication-addUserToRole
 sidebar_label: "addUserToRole()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Qc72dTKgroNdHjxIG2xcwNdmnHb
 sidebar_position: 2
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - addUserToRole()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation adds a user to a specific role.
 
 ```javascript
-addUserToRole(data): Promise<ResStatus>
+await milvusClient.addUserToRole(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.addUserToRole({
+await milvusClient.addUserToRole({
    username: string,
    rolename: string,
    timeout?: number
@@ -93,10 +93,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-milvusClient.addUserToRole({
+await milvusClient.addUserToRole({
     username: 'myUser',
     roleName: 'myRole'
 });

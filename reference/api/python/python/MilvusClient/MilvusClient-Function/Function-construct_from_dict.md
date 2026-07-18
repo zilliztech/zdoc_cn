@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "construct_from_dict() | Python | MilvusClient"
 slug: /python/python/Function-construct_from_dict
+sidebar_key: python/Function-construct_from_dict
 sidebar_label: "construct_from_dict()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Ulypd24byoDBOpxGnnJcbF3Nnkb
 sidebar_position: 2
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - construct_from_dict()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation constructs a `Function` object from a dictionary representation.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 construct_from_dict(
@@ -49,7 +49,7 @@ construct_from_dict(
 
 **RETURN TYPE:**
 
-*Function*
+*[Function](./MilvusClient-Function)*
 
 **RETURNS:**
 
@@ -61,7 +61,7 @@ A `Function` object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Function  

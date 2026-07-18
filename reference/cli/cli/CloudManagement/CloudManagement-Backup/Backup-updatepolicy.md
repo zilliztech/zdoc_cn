@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "update-policy | Cloud"
 slug: /cli/cli/Backup-updatepolicy
+sidebar_key: cli/Backup-updatepolicy
 sidebar_label: "update-policy"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation updates the backup policy of a cluster. | Cloud"
 type: docx
-token: TVB4dJXYfoSiFexcIFwcez5dnug
+token: PJsSdI8JBoUchVx1IkrcmakLnCc
 sidebar_position: 9
 keywords: 
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - update-policy
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation updates the backup policy of a cluster.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud allows you to enable **automatic backups** for your clusters, helping ensure data recovery in case of unexpected issues. Automatic backups apply to the **entire cluster**—backing up individual collections automatically is not supported.
 
@@ -41,11 +41,11 @@ You can run this command to update the automatic backup policy. Running this com
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz backup update-policy
@@ -60,7 +60,7 @@ zilliz backup update-policy
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -169,7 +169,7 @@ zilliz backup update-policy
     }
     ```
 
-## Example
+## Example\{#example}
 
 ```bash
 # Enable daily backup at 2am UTC with 7-day retention

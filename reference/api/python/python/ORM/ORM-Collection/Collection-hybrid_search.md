@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "hybrid_search() | Python | ORM"
 slug: /python/python/Collection-hybrid_search
+sidebar_key: python/Collection-hybrid_search
 sidebar_label: "hybrid_search()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QqOSdTDaLoOKGRxiKEtcuuiAnrf
 sidebar_position: 17
 keywords: 
-  - natural language processing
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud
   - hybrid_search()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation performs multi-vector search on a collection and returns search results after reranking.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 hybrid_search(
@@ -136,8 +136,9 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>A <strong>SearchResult</strong> object contains a list of <strong>Hits</strong> objects, each corresponding to a query vector in the search request. </p>
-    <p>A <strong>Hits</strong> object contains a list of <strong>Hit</strong> objects, each corresponding to an entity hit by the search.</p>
+    A **SearchResult** object contains a list of **Hits** objects, each corresponding to a query vector in the search request. 
+
+    A **Hits** object contains a list of **Hit** objects, each corresponding to an entity hit by the search.
 
     </Admonition>
 
@@ -194,7 +195,7 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 collection = Collection(name='{your_collection_name}') # Replace with the actual name of your collection

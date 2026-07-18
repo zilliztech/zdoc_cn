@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "update_password() | Python | ORM"
 slug: /python/python/utility-update_password
+sidebar_key: python/utility-update_password
 sidebar_label: "update_password()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: SGjed7w9toewDlxmXHKc7BFancf
 sidebar_position: 41
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - update_password()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation updates the password for a specific user.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 update_password(
@@ -93,12 +93,12 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a user
@@ -113,7 +113,7 @@ update_password(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `update_password()`
 

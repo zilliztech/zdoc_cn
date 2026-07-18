@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "set | Cloud"
 slug: /cli/cli/Configure-set
+sidebar_key: cli/Configure-set
 sidebar_label: "set"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation sets a configuration value. | Cloud"
 type: docx
-token: Rg7gdgezgopJlVxClKOcI4UtnXR
+token: Jp9VdKpVoooz9ix1vYMcAun4nwe
 sidebar_position: 4
 keywords: 
-  - Video similarity search
-  - Vector retrieval
   - Audio similarity search
   - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - set
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation sets a configuration value.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>You can also run <code>zilliz configure</code> instead, and follow the interactive guidance. Setting <code>api_key</code> can be used as an alternative to <code>zilliz login</code>.</p>
+You can also run `zilliz configure` instead, and follow the interactive guidance. Setting `api_key` can be used as an alternative to `zilliz login`.
 
 </Admonition>
 
-## Usage
+## Usage\{#usage}
 
 ```bash
 zilliz configure set <KEY> <VALUE>
@@ -57,7 +57,7 @@ zilliz configure set <KEY> <VALUE>
 
     Indicates the value of the configuration item.
 
-## Example
+## Example\{#example}
 
 ```bash
 # set api key

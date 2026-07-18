@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "status | Cloud"
 slug: /cli/cli/Import-status
+sidebar_key: cli/Import-status
 sidebar_label: "status"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets the status of an import job. | Cloud"
 type: docx
-token: WgScdvYdRoGsQyxTnfDcLim2nBh
+token: Lu5EdzR9So5gUCxL71YcX30Enkh
 sidebar_position: 3
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - status
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets the status of an import job.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz import status
@@ -82,7 +82,7 @@ zilliz import status
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz import status --job-id job-xxxx --cluster-id in01-xxxxxxxxxxxx

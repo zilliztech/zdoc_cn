@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "grantRole() | Node.js"
 slug: /node/node/Authentication-grantRole
+sidebar_key: node/Authentication-grantRole
 sidebar_label: "grantRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LPJsdEnvwo6apcxjhZgc3rpDnuc
 sidebar_position: 16
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
   - grantRole()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation grants a role to a user.
 
 ```javascript
-grantRole(data): Promise<ResStatus>
+await milvusClient.grantRole(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.grantRole({
+await milvusClient.grantRole({
    username: string,
    roleName: string,
    timeout?: number
@@ -93,10 +93,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-milvusClient.grantRole({
+await milvusClient.grantRole({
    username: 'my',
    roleName: 'myrole'
  })

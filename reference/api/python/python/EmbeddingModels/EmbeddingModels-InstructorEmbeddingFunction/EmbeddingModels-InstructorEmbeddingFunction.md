@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "InstructorEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-InstructorEmbeddingFunction
+sidebar_key: python/EmbeddingModels-InstructorEmbeddingFunction
 sidebar_label: "InstructorEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: YmnmdEeHFoctZexccqNcr8xXn8c
 sidebar_position: 3
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Audio search
+  - what is semantic search
+  - Embedding model
+  - image similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - InstructorEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ InstructorEmbeddingFunction is a class in pymilvus that handles encoding text in
 pymilvus.model.dense.InstructorEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a MistralAIEmbeddingFunction for common use cases.
 
@@ -83,13 +83,13 @@ InstructorEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [instructor-embedding](https://github.com/xlang-ai/instructor-embedding?tab=readme-ov-file#the-encode-function).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import InstructorEmbeddingFunction
 
 ef = InstructorEmbeddingFunction(
-    model_name="hkunlp/instructor-xl", # Defaults to `hkunlp/instructor-xl`
+    model_name="hkunlp/instructor-xl", # Defaults to \`hkunlp/instructor-xl\`
     query_instruction="Represent the question for retrieval:",
     doc_instruction="Represent the document for retrieval:"
 )

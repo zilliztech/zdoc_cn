@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "construct_from_dict() | Python | ORM"
 slug: /python/python/FieldSchema-construct_from_dict
+sidebar_key: python/FieldSchema-construct_from_dict
 sidebar_label: "construct_from_dict()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DCLUdOpVjohl8HxPUx1cGjokngf
 sidebar_position: 1
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - construct_from_dict()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation constructs a FieldSchema object from a dictionary representation.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 construct_from_dict(
@@ -43,8 +43,9 @@ construct_from_dict(
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This is a class method. You should call it from the class instead of an instance of the class as follows:</p>
-<p><code>FieldSchema.construct_from_dict()</code></p>
+This is a class method. You should call it from the class instead of an instance of the class as follows:
+
+`FieldSchema.construct_from_dict()`
 
 </Admonition>
 
@@ -56,7 +57,7 @@ construct_from_dict(
 
 **RETURN TYPE:**
 
-*FieldSchema*
+*[FieldSchema](./ORM-FieldSchema)*
 
 **RETURNS:**
 
@@ -68,7 +69,7 @@ A FieldSchema object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import FieldSchema, DataType  

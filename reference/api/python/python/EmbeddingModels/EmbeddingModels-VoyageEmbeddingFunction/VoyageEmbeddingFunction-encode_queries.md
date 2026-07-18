@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/VoyageEmbeddingFunction-encode_queries
+sidebar_key: python/VoyageEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CHnGdE7XlosONPxsVDDc6Fv5n8c
 sidebar_position: 2
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in a list of query strings and encodes each query into a vector embedding.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_queries(
@@ -61,13 +61,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when the Voyage module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import VoyageEmbeddingFunction
 
 voyage_ef = VoyageEmbeddingFunction(
-    model_name="voyage-lite-02-instruct", # Defaults to `voyage-2`
+    model_name="voyage-lite-02-instruct", # Defaults to \`voyage-2\`
     api_key='YOUR_API_KEY' # Replace with your own Voyage API key
 )
 

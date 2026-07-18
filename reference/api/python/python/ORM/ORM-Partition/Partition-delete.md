@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "delete() | Python | ORM"
 slug: /python/python/Partition-delete
+sidebar_key: python/Partition-delete
 sidebar_label: "delete()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: V9BidASNqoWYrmxo11ecuN99neg
 sidebar_position: 1
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
   - delete()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation deletes entities from a partition with a boolean expression.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Using the <strong>partition_name</strong> parameter in the <strong>delete()</strong> method of a <strong>Collection</strong> object is equivalent to using the <strong>delete()</strong> method of a <strong>Partition</strong> object.</p>
+Using the **partition_name** parameter in the **delete()** method of a **[Collection](./ORM-Collection)** object is equivalent to using the **delete()** method of a **[Partition](./ORM-Partition)** object.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 delete(
@@ -110,7 +110,7 @@ A **MutationResult** object that contains the following fields:
 
     This arises when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, Partition, CollectionSchema, FieldSchema, DataType
@@ -149,7 +149,7 @@ partition.insert(
 res = partition.delete("id in [ 0, 1 ]")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `delete()`:
 

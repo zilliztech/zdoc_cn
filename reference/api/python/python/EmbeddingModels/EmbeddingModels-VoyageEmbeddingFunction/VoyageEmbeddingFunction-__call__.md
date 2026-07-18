@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/VoyageEmbeddingFunction-__call__
+sidebar_key: python/VoyageEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DQFbdMhfcodFuxxhYFeccDzEnkf
 sidebar_position: 4
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [VoyageEmbeddingFunction](./EmbeddingModels-VoyageEmbeddingFun
 
 The **\_\_call\_\_()** method of VoyageEmbeddingFunction shares the same functionality as [encode_documents()](./VoyageEmbeddingFunction-encode_documents) and [encode_queries()](./VoyageEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -68,13 +68,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when the Voyage module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import VoyageEmbeddingFunction
 
 voyage_ef = VoyageEmbeddingFunction(
-    model_name="voyage-lite-02-instruct", # Defaults to `voyage-2`
+    model_name="voyage-lite-02-instruct", # Defaults to \`voyage-2\`
     api_key='YOUR_API_KEY' # Replace with your own Voyage API key
 )
 

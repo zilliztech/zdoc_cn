@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "Model2VecEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-Model2VecEmbeddingFunction
+sidebar_key: python/EmbeddingModels-Model2VecEmbeddingFunction
 sidebar_label: "Model2VecEmbeddingFunction"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WiT4dJ1SJod0fdx4z23cwFbAn7c
 sidebar_position: 3
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - Model2VecEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.dense.Model2VecEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an Model2VecEmbeddingFunction for common use cases.
 
@@ -60,7 +60,7 @@ Model2VecEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization when loading a model from the Hugging Face Hub, including parameters such as huggingface authentication tokens.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

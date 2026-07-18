@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_roles() | Python | ORM"
 slug: /python/python/utility-list_roles
+sidebar_key: python/utility-list_roles
 sidebar_label: "list_roles()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ClLXdDs64oixJBxlIrCcEB2dngb
 sidebar_position: 27
 keywords: 
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
   - list_roles()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists the information about all existing roles.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_roles(
@@ -93,12 +93,12 @@ A **RoleItem** object contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, Role, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a user
@@ -122,7 +122,7 @@ utility.list_roles(include_user_info=True)
 # - RoleItem: <role_name:public>, <users:()>
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_roles()`
 

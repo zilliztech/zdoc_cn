@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "start | Cloud"
 slug: /cli/cli/Import-start
+sidebar_key: cli/Import-start
 sidebar_label: "start"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation starts a data import job. | Cloud"
 type: docx
-token: EMBrd9PtWoNfh4xBseQcPzaOn2b
+token: KXgLdSiiZoMou6xEvnQcdVe3n25
 sidebar_position: 2
 keywords: 
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud
   - start
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation starts a data import job.
 
-## Description
+## Description\{#description}
 
 To import data, ensure it is converted to the acceptable format. For details, refer to [Use BulkWriter](/docs/use-bulkwriter).
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz import start
@@ -49,7 +49,7 @@ zilliz import start
 --body <value>
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -107,7 +107,7 @@ zilliz import start
     }
     ```
 
-## Example
+## Example\{#example}
 
 ```bash
 # Import from S3

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "grant-privilege | Cloud"
 slug: /cli/cli/Role-grantprivilege
+sidebar_key: cli/Role-grantprivilege
 sidebar_label: "grant-privilege"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation grants a privilege to a role. | Cloud"
 type: docx
-token: ZtdUdawpZoLgrYx31XkcQxeOnNb
+token: U83ddOym4o7WgAx1ekac4nFHnzf
 sidebar_position: 4
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
   - zilliz
   - zilliz cloud
   - cloud
   - grant-privilege
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation grants a privilege to a role.
 
-## Description
+## Description\{#description}
 
 A **privilege** refers to the permission of specific operations on certain Zilliz Cloud resources such as clusters, databases, and collections. Privileges are assigned to roles, which are then granted to users, defining the operations users can perform on the resources. An example of a privilege could be the permission to insert data into a collection named `collection_01`.
 
@@ -43,11 +43,11 @@ Possible privileges are listed on [Privileges and Privilege Groups](/docs/cluste
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz role grant-privilege
@@ -61,7 +61,7 @@ zilliz role grant-privilege
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--role** (*string*) -
 
@@ -119,7 +119,7 @@ zilliz role grant-privilege
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 # Grant search on a specific collection

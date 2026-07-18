@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/OnnxEmbeddingFunction-__call__
+sidebar_key: python/OnnxEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PlzSdJTGnoFVH6xSlS6cYBHZnph
 sidebar_position: 4
 keywords: 
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
-  - how does milvus work
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [OnnxEmbeddingFunction](./EmbeddingModels-OnnxEmbeddingFunctio
 
 The `call` method of OnnxEmbeddingFunction shares the same functionality as [encode_documents()](./OnnxEmbeddingFunction-encode_documents) and [encode_queries()](./OnnxEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -65,14 +65,14 @@ A list where each element is a NumPy array.
 
 *None*
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import OnnxEmbeddingFunction
 
 onnx_ef = OnnxEmbeddingFunction(
-    model_name="GPTCache/paraphrase-albert-onnx", # Defaults to `GPTCache/paraphrase-albert-onnx`
-    tokenizer_name="GPTCache/paraphrase-albert-small-v2" # Defaults to `GPTCache/paraphrase-albert-small-v2`
+    model_name="GPTCache/paraphrase-albert-onnx", # Defaults to \`GPTCache/paraphrase-albert-onnx\`
+    tokenizer_name="GPTCache/paraphrase-albert-small-v2" # Defaults to \`GPTCache/paraphrase-albert-small-v2\`
 )
 
 docs = [

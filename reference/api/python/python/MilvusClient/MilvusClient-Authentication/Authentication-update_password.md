@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "update_password() | Python | MilvusClient"
 slug: /python/python/Authentication-update_password
+sidebar_key: python/Authentication-update_password
 sidebar_label: "update_password()"
 added_since: v2.3.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation updates the password of a specific user. | Python | MilvusClient"
 type: docx
-token: WGDod7Qehou4GWx4Co2cJ34VnKb
+token: B4MWdXervo5cC0xBUaVcSiTgnMg
 sidebar_position: 20
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
+  - nn search
   - zilliz
   - zilliz cloud
   - cloud
   - update_password()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation updates the password of a specific user.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 update_password(
@@ -94,7 +94,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -116,7 +116,7 @@ client.update_password(
 )
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_user()](./Authentication-create_user)
 

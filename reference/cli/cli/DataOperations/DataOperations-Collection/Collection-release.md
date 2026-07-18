@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "release | Cloud"
 slug: /cli/cli/Collection-release
+sidebar_key: cli/Collection-release
 sidebar_label: "release"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation releases a collection from memory. | Cloud"
 type: docx
-token: Tl8cdrCCvoT8Six3cy0co3SDnjd
-sidebar_position: 11
+token: G0s2d1DVconhc5xeX02cJWbUnLf
+sidebar_position: 12
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - LLMs
+  - Machine Learning
+  - RAG
+  - NLP
   - zilliz
   - zilliz cloud
   - cloud
   - release
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation releases a collection from memory.
 
-## Usage
+## Usage\{#usage}
 
 ```bash
 zilliz collection release
@@ -80,7 +80,7 @@ zilliz collection release
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection release --name my_collection

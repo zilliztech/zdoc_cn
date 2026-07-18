@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "upgrade | Cloud"
 slug: /cli/cli/Project-upgrade
+sidebar_key: cli/Project-upgrade
 sidebar_label: "upgrade"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation upgrades a project's subscription plan. | Cloud"
 type: docx
-token: LZksdPD7Ao7HdwxYr4Lc3IHlngg
+token: QIhWdtFpNotKksx7KmxcTdwXnEh
 sidebar_position: 4
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - upgrade
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation upgrades a project's subscription plan.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz project upgrade [OPTIONS]
@@ -51,7 +51,7 @@ zilliz project upgrade [OPTIONS]
 
     Indicates a target subscription plan. Possible values: <include lang="en-US">`Serverless`, `Standard`, </include>`Enterprise`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz project upgrade --project-id proj-xxxxxxxxxxxx --plan Enterprise

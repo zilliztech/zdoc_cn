@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "Partition | Python | ORM"
 slug: /python/python/ORM-Partition
+sidebar_key: python/ORM-Partition
 sidebar_label: "Partition"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: X9scdVMmxoBTuUxlKhecJXEunHd
 sidebar_position: 7
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Partition
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,13 +37,13 @@ A **Partition** instance represents a partition within a collection.
 class pymilvus.Partition
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a partition in a collection by name, description, and other parameters. 
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>When using partitions, ensure that <strong>enable<em>partition</em>key</strong> is not set to <strong>True</strong> in the collection schema. Otherwise, an error will occur.</p>
+When using partitions, ensure that **enable_partition_key** is not set to **True** in the collection schema. Otherwise, an error will occur.
 
 </Admonition>
 
@@ -57,18 +57,19 @@ Partition(
 
 **PARAMETERS:**
 
-- **collection** (*Collection* | *str*) - 
+- **[collection](./ORM-Collection)** (*[Collection](./ORM-Collection)* | *str*) - 
 
     **[REQUIRED]**
 
     The collection in which to create a partition. 
 
-    You can either reference a **Collection** object or its name.
+    You can either reference a **[Collection](./ORM-Collection)** object or its name.
 
     <Admonition type="info" icon="📘" title="What is a collection?">
 
-    <p>A collection collects data in a two-dimensional table with a fixed number of columns and a variable number of rows. In the table, each column corresponds to a field, and each row represents an entity.</p>
-    <p>A collection can support up to 64 partitions.</p>
+    A collection collects data in a two-dimensional table with a fixed number of columns and a variable number of rows. In the table, each column corresponds to a field, and each row represents an entity.
+
+    A collection can support up to 64 partitions.
 
     </Admonition>
 
@@ -96,7 +97,7 @@ A **Partition** object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, Partition
@@ -108,7 +109,7 @@ collection = Collection("book")
 partition = Partition(collection, "novel", "")
 ```
 
-## Members
+## Members\{#members}
 
 The following are the members of the `Partition` class:
 

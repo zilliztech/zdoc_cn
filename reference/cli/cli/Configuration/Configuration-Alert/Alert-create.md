@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Alert-create
+sidebar_key: cli/Alert-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new alert rule. | Cloud"
 type: docx
-token: XM95d6m5QoaHfPxnNAycJSM1nRU
+token: VSewdBpmioKEJ2xtGAHczoO5nWh
 sidebar_position: 1
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new alert rule.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud allows you to configure alert rules to receive notifications about the events of concern. There are organization alerts and project alerts.
 
@@ -45,7 +45,7 @@ Alert notifications in Zilliz Cloud keep you informed about events occurring wit
 
 Running this command without any options triggers a set of interactive prompts to help you set it up.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alert create
@@ -64,7 +64,7 @@ zilliz alert create
 [--output <json | table | text>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--project-id** (*string*) -
 
@@ -168,7 +168,7 @@ zilliz alert create
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alert create --project-id porj-xxxx \

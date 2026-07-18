@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "createDatabase() | Java | v2"
 slug: /java/java/v2-Database-createDatabase
+sidebar_key: java/v2-Database-createDatabase
 sidebar_label: "createDatabase()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: IqQudFVIKot4mVxWD4xclJymn8g
 sidebar_position: 2
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - createDatabase()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation creates a database with a name.
 public void createDatabase(CreateDatabaseReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 createDatabase(CreateDatabaseReq.builder()
@@ -67,7 +67,7 @@ The properties of the database, such as replica number, resource groups.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.param.Constant;

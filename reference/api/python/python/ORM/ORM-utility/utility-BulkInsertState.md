@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "BulkInsertState | Python | ORM"
 slug: /python/python/utility-BulkInsertState
+sidebar_key: python/utility-BulkInsertState
 sidebar_label: "BulkInsertState"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Arn1dIKgwoISFoxT7xVc3UrBnAf
 sidebar_position: 2
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
   - BulkInsertState
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - **ImportPending** = 0
 

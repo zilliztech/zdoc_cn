@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "DataType | Python | MilvusClient"
 slug: /python/python/Collections-DataType
+sidebar_key: python/Collections-DataType
 sidebar_label: "DataType"
 added_since: Inherit
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Python | MilvusClient"
 type: docx
-token: KvNsd3aV4ocRNJxrZN2cg1zenqb
+token: MKrAdumLvohQfDxgpMwcEB8dnqb
 sidebar_position: 7
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - DataType
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - BOOL
 
@@ -67,6 +67,10 @@ This is an enumeration that provides the following constants.
 
     Sets the data type to **Varchar**.
 
+- TEXT
+
+    Sets the data type to **TEXT**. Use this scalar type to store long text content such as documents, passages, tickets, or logs. Unlike **VARCHAR**, TEXT does not require `max_length`.
+
 - ARRAY
 
     Sets the data type to **Array**.
@@ -78,6 +82,10 @@ This is an enumeration that provides the following constants.
 - GEOMETRY
 
     Sets the datatype to **Geometry**.
+
+- TIMESTAMPTZ
+
+    Sets the datatype to **TIMESTAMPTZ**.
 
 - STRUCT
 

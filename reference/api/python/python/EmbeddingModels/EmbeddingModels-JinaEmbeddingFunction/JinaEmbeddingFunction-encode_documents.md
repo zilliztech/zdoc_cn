@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/JinaEmbeddingFunction-encode_documents
+sidebar_key: python/JinaEmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ZMs1dJJOGobyBjxRo7icXtE8nPe
 sidebar_position: 1
 keywords: 
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - encode_documents()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in documents and encodes them into vector embeddings.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_documents(
@@ -61,13 +61,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when the response from the Jina API does not contain the `data` key.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import JinaEmbeddingFunction
 
 jina_ef = JinaEmbeddingFunction(
-    model_name="jina-embeddings-v2-base-en", # Defaults to `jina-embeddings-v2-base-en`
+    model_name="jina-embeddings-v2-base-en", # Defaults to \`jina-embeddings-v2-base-en\`
     api_key="YOUR_JINAAI_API_KEY" # Provide your Jina AI API key
 )
 

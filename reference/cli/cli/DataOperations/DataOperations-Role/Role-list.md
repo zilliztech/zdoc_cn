@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Role-list
+sidebar_key: cli/Role-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all roles. | Cloud"
 type: docx
-token: RnVSdpa8Uog0ufxOa5Bc2LN2n9d
+token: BNH0dujcioUq4Px0EmncEqlOnVe
 sidebar_position: 5
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation lists all roles.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz role list
@@ -49,7 +49,7 @@ zilliz role list
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--output, -o** (*string*) -
 
@@ -77,7 +77,7 @@ zilliz role list
 
     Indicates a database name. The value defaults to `default`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz role list

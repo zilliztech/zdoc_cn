@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "suspend | Cloud"
 slug: /cli/cli/Cluster-suspend
+sidebar_key: cli/Cluster-suspend
 sidebar_label: "suspend"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation suspends a running cluster. Suspending stops compute charges. | Cloud"
 type: docx
-token: RaGJdFRlQo2nlVxxyc5cbUtCnsh
+token: RjlQdGJyzolWm0xZVyUc6yAdnyc
 sidebar_position: 10
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - suspend
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation suspends a running cluster. Suspending stops compute charges.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster suspend
@@ -43,7 +43,7 @@ zilliz cluster suspend
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -75,7 +75,7 @@ zilliz cluster suspend
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz cluster suspend --cluster-id in01-xxxxxxxxxxxx

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "load_collection() | Python | MilvusClient"
 slug: /python/python/Management-load_collection
+sidebar_key: python/Management-load_collection
 sidebar_label: "load_collection()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: YtiQdxTYzoCaYDxEMZcc8TEenQb
 sidebar_position: 10
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - load_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation loads the data of a specific collection into memory.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 load_collection(
@@ -74,7 +80,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -165,7 +171,7 @@ client.load_collection(
 )
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [get_load_state()](./Management-get_load_state)
 

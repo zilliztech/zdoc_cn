@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to database management. | Cloud"
 type: folder
-token: ZFTJfkMAKlR9nTdEPhWcO0Mcnlb
+token: CcKQfofa1lkWPhdqzZ3cg3FAnDb
 sidebar_position: 3
 sidebar_label: "Database"
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - Database
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

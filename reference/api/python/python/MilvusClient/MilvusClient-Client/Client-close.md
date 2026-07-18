@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "close() | Python | MilvusClient"
 slug: /python/python/Client-close
+sidebar_key: python/Client-close
 sidebar_label: "close()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CWZGd48FJoFHXYx40NMcTd2FnKc
 sidebar_position: 1
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - close()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation closes the current Milvus client.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 close() -> None
@@ -55,7 +55,7 @@ None
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

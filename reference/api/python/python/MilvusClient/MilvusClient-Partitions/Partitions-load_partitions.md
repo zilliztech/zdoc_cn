@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "load_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-load_partitions
+sidebar_key: python/Partitions-load_partitions
 sidebar_label: "load_partitions()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: TMq5d6wFmoT8u3xwuruc8k6wnTg
 sidebar_position: 6
 keywords: 
-  - Unstructured Data
-  - vector database
-  - IVF
-  - knn
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - load_partitions()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation loads a specific set of partitions in a specified collection into memory.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 load_partitions(
@@ -75,7 +81,7 @@ None
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A collection is in the loaded state only if any or all of its partitions are loaded.</p>
+A collection is in the loaded state only if any or all of its partitions are loaded.
 
 </Admonition>
 
@@ -85,7 +91,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -128,7 +134,7 @@ client.get_load_state(
 # {'state': <LoadState: Loaded>}
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_partition()](./Partitions-create_partition)
 

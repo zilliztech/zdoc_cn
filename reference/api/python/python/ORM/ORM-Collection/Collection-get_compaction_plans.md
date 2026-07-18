@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_compaction_plans() | Python | ORM"
 slug: /python/python/Collection-get_compaction_plans
+sidebar_key: python/Collection-get_compaction_plans
 sidebar_label: "get_compaction_plans()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: D6Q7dq4USotLS3xxMP0cFiGLnsf
 sidebar_position: 12
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
+  - open source vector database
   - zilliz
   - zilliz cloud
   - cloud
   - get_compaction_plans()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets the current compaction plans.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 get_compaction_plans(
@@ -61,7 +61,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -89,7 +89,7 @@ collection.get_compaction_plans()
 #  - plans: []
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_compaction_plans()`:
 

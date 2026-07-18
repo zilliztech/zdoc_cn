@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_indexes() | Python | ORM"
 slug: /python/python/utility-list_indexes
+sidebar_key: python/utility-list_indexes
 sidebar_label: "list_indexes()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XLepdUCcTow6rpx5vxxcbLXZnyb
 sidebar_position: 25
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - list_indexes()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all indexes of a specific collection.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 list_indexes(
@@ -85,7 +85,7 @@ The names of all built indexes in a list.
 
     This exception will be raised if the specified collection does not exist.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import (
@@ -97,7 +97,7 @@ from pymilvus import (
     utility,
 )
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a collection
@@ -137,7 +137,7 @@ utility.list_indexes(
 
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_indexes()`
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "flush() | Python | ORM"
 slug: /python/python/Partition-flush
+sidebar_key: python/Partition-flush
 sidebar_label: "flush()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: VRGwdg75Ao7ZXQx7uANc9wzXnVb
 sidebar_position: 3
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
   - flush()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation seals all segments in the partition. Any insertions after this operation will generate a new segment.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 flush(
@@ -43,9 +43,11 @@ flush(
 
 <Admonition type="info" icon="📘" title="Can I call `flush()` after every data insertion?">
 
-<p>When new data is inserted, it is written into growing segments. Once the size of a growing segment reaches its upper limit, Zilliz Cloud automatically seals the segment. </p>
-<p>Continuously calling this operation results in many sealed segments of small sizes, which can gradually degrade search performance. </p>
-<p>It is recommended that you wait for Zilliz Cloud to seal all segments before conducting any searches.</p>
+When new data is inserted, it is written into growing segments. Once the size of a growing segment reaches its upper limit, Zilliz Cloud automatically seals the segment. 
+
+Continuously calling this operation results in many sealed segments of small sizes, which can gradually degrade search performance. 
+
+It is recommended that you wait for Zilliz Cloud to seal all segments before conducting any searches.
 
 </Admonition>
 
@@ -69,7 +71,7 @@ flush(
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -112,7 +114,7 @@ partition.flush()
 partition.num_entities # 5
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `flush()`:
 

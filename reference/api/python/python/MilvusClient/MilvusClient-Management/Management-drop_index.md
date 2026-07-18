@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_index() | Python | MilvusClient"
 slug: /python/python/Management-drop_index
+sidebar_key: python/Management-drop_index
 sidebar_label: "drop_index()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: NPnQdZCJ7oF002xTntecdI2ini8
 sidebar_position: 5
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
   - drop_index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation drops an index from a specific collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+Collections for on-demand compute do not support this operation.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 drop_index(
@@ -76,7 +82,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, DataType
@@ -175,7 +181,7 @@ client.drop_index(
 )
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [add_index()](./Management-add_index)
 

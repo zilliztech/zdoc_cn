@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_server_type() | Python | ORM"
 slug: /python/python/utility-get_server_type
+sidebar_key: python/utility-get_server_type
 sidebar_label: "get_server_type()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: UOIddRBUXotHvyx4Yyocer0mnId
 sidebar_position: 15
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
   - get_server_type()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks the type of the Zilliz Cloud cluster.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 get_server_type(
@@ -69,14 +69,14 @@ The server type. Possible values are as follows:
 ```python
 from pymilvus import connections, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Check the server type
 server_type = utility.get_server_type()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_server_type()`:
 

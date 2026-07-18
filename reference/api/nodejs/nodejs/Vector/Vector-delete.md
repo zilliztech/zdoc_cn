@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "delete() | Node.js"
 slug: /node/node/Vector-delete
+sidebar_key: node/Vector-delete
 sidebar_label: "delete()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: KOZHdyeQvo4htOxhO8BcbEudnNd
 sidebar_position: 2
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud
   - delete()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -38,19 +38,18 @@ This operation deletes entities by their IDs or with a boolean expression.
 delete(data): Promise<MutationResult>
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 This method has the following alternatives.
 
-### With DeleteByIdsReq
+### With DeleteByIdsReq\{#with-deletebyidsreq}
 
 ```javascript
 milvusClient.delete({
    db_name: string,
    collection_name: string,
-   partition_name?: string,
    ids: string[] | number[],
-   consistency_level: string,
+   partition_name?: string,
    timeout?: number
  })
 ```
@@ -66,10 +65,6 @@ milvusClient.delete({
     **[REQUIRED]**
 
     The name of an existing collection.
-
-- **partition_name** (*string*) -
-
-    The name of an existing partition in the collection.
 
 - **ids** (*string[]* | *number[]*) -
 
@@ -79,9 +74,9 @@ milvusClient.delete({
 
     The value defaults to **None**, indicating that a scalar filtering condition applies.
 
-- **consistency_level** (*ConsistencyLevelEnum*) -
+- **partition_name** (*string*) -
 
-    The consistency level of the target collection. The value defaults to **Bounded** (**1**) with options of **Strong** (**0**), **Bounded** (**1**), **Session** (**2**), and **Eventually** (**3**).
+    The name of an existing partition in the collection.
 
 - **timeout** (*number*) -
 
@@ -89,37 +84,50 @@ milvusClient.delete({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<MutationResult>*
+**RETURNS** *Promise\<ResStatus>*
 
-### With DeleteByFilterReq
+This method returns a promise that resolves to a **ResStatus** object.
+
+```javascript
+{
+    code: number,
+    error_code: string | number,
+    reason: string
+}
+```
+
+**PARAMETERS:**
+
+- **code** (*number*) -
+
+    A code that indicates the operation result. It remains **0** if this operation succeeds.
+
+- **error_code** (*string* | *number*) -
+
+    An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+
+- **reason** (*string*) - 
+
+    The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
+
+### With DeleteByFilterReq\{#with-deletebyfilterreq}
 
 ```javascript
 milvusClient.delete({
-   db_name: string,
    collection_name: string,
-   partition_name?: string,
    filter: string,
-   exprValues?: keyValueObject,
-   consistency_level?: string,
+   partition_name?: string,
    timeout?: number
  })
 ```
 
 **PARAMETERS:**
 
-- **db_name** (*string*) -
-
-    The name of the database that holds the target collection.
-
 - **collection_name** (*string*) -
 
     **[REQUIRED]**
 
     The name of an existing collection.
-
-- **partition_name** (*string*) -
-
-    The name of an existing partition in the collection.
 
 - **filter** (*string*) -
 
@@ -129,9 +137,9 @@ milvusClient.delete({
 
     You can set this parameter to an empty string to skip scalar filtering. To build a scalar filtering condition, refer to [Boolean Expression Rules](https://milvus.io/docs/boolean.md). 
 
-- **consistency_level** (*ConsistencyLevelEnum*) -
+- **partition_name** (*string*) -
 
-    The consistency level of the target collection. The value defaults to **Bounded** (**1**) with options of **Strong** (**0**), **Bounded** (**1**), **Session** (**2**), and **Eventually** (**3**).
+    The name of an existing partition in the collection.
 
 - **timeout** (*number*) -
 
@@ -139,9 +147,33 @@ milvusClient.delete({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<MutationResult>*
+**RETURNS** *Promise\<ResStatus>*
 
-## Example
+This method returns a promise that resolves to a **ResStatus** object.
+
+```javascript
+{
+    code: number,
+    error_code: string | number,
+    reason: string
+}
+```
+
+**PARAMETERS:**
+
+- **code** (*number*) -
+
+    A code that indicates the operation result. It remains **0** if this operation succeeds.
+
+- **error_code** (*string* | *number*) -
+
+    An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+
+- **reason** (*string*) - 
+
+    The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
+
+## Example\{#example}
 
 <Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"}]}>
 <TabItem value='python'>

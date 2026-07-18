@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "flush_all() | Python | ORM"
 slug: /python/python/utility-flush_all
+sidebar_key: python/utility-flush_all
 sidebar_label: "flush_all()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Uwsfd443boKKgyx2zZTcYDqKnCe
 sidebar_position: 12
 keywords: 
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
-  - vector database
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - flush_all()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation seals all segments.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 flush_all(
@@ -67,7 +67,7 @@ None
 
 N/A
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import (
@@ -79,7 +79,7 @@ from pymilvus import (
     utility,
 )
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a collection
@@ -95,13 +95,13 @@ collection = Collection(
 collection.insert([[1, 2], [[1.0, 2.0], [3.0, 4.0]]])
 
 utility.flush_all(_async=False) # synchronized flush_all
-# or use `future` to flush_all asynchronously
+# or use \`future\` to flush_all asynchronously
 
 future = utility.flush_all(_async=True)
 future.done() # flush_all finished
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to the `flush_all()` method:
 

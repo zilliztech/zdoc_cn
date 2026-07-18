@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "Role | Python | ORM"
 slug: /python/python/ORM-Role
+sidebar_key: python/ORM-Role
 sidebar_label: "Role"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LZL1d0kckouPXNxJLCmcwbCTnkG
 sidebar_position: 11
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
   - zilliz
   - zilliz cloud
   - cloud
   - Role
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ A **Role** instance represents a role with specific privileges to access your .
 class pymilvus.Role
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a role by name and other parameters.
 
@@ -50,7 +50,7 @@ Role(
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Calling the constructor alone does not create the role. You have to explicitly call the <code>create()</code> method of the role object to create the role.</p>
+Calling the constructor alone does not create the role. You have to explicitly call the `create()` method of the role object to create the role.
 
 </Admonition>
 
@@ -82,7 +82,7 @@ A role object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role
@@ -93,7 +93,7 @@ role = Role(
 )
 ```
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the `Role` class:
 

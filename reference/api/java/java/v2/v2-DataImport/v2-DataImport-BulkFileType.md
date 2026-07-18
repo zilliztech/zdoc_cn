@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "BulkFileType | Java | v2"
 slug: /java/java/v2-DataImport-BulkFileType
+sidebar_key: java/v2-DataImport-BulkFileType
 sidebar_label: "BulkFileType"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FGZadH85KoLEhRxkbLxcc1zbn4c
 sidebar_position: 1
 keywords: 
-  - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
   - zilliz
   - zilliz cloud
   - cloud
   - BulkFileType
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - **PARQUET**
 

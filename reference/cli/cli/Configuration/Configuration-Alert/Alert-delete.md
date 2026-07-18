@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "delete | Cloud"
 slug: /cli/cli/Alert-delete
+sidebar_key: cli/Alert-delete
 sidebar_label: "delete"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation deletes an alert rule. | Cloud"
 type: docx
-token: RAZ5dMgFUoufLJxfmzvcInernmc
+token: L6dIdJaeGoNfmcxAXC2cW82znke
 sidebar_position: 2
 keywords: 
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
   - delete
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes an alert rule.
 
-## Description
+## Description\{#description}
 
 You can run this command to remove the specified alert rule once it is no longer needed. This operation is irreversible; exercise caution. To get an exhaustive list of existing alert rules, run `zilliz alert list`.
 
 Running this command without any options triggers a set of interactive prompts to help you set it up.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alert delete
@@ -49,7 +49,7 @@ zilliz alert delete
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--id** (*string*) -
 
@@ -77,7 +77,7 @@ zilliz alert delete
 
     Indicates whether to skip the confirmation prompts.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alert delete

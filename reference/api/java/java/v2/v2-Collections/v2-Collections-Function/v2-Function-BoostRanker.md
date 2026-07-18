@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "BoostRanker | Java | v2"
 slug: /java/java/v2-Function-BoostRanker
+sidebar_key: java/v2-Function-BoostRanker
 sidebar_label: "BoostRanker"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QO5ldltYOoo5uFxS4ZJc24JWnUh
 sidebar_position: 1
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
   - BoostRanker
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ The BoostRanker extends from the **Function** class and provides extra parameter
 public class BoostRanker extends CreateCollectionReq.Function
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 BoostRanker.builder()
@@ -76,7 +76,7 @@ BoostRanker.builder()
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>Only use basic operators, such as <code>==</code>, <code>&gt;</code>, or <code>&lt;</code>. Using advanced operators, such as <code>text_match</code> or <code>phrase_match</code>, will degrade search performance.</p>
+    Only use basic operators, such as `==`, `>`, or `<`. Using advanced operators, such as `text_match` or `phrase_match`, will degrade search performance.
 
     </Admonition>
 
@@ -108,9 +108,9 @@ BoostRanker.builder()
 
 **RETURNS:**
 
- A boost ranker instance.
+A boost ranker instance.
 
-## Examples:
+## Examples:\{#examples}
 
 ```java
 import io.milvus.v2.service.collection.request.CreateCollectionReq.Function;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "load_state() | Python | ORM"
 slug: /python/python/utility-load_state
+sidebar_key: python/utility-load_state
 sidebar_label: "load_state()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: BJysdlj1MoksHZxNRxicHn9fnSh
 sidebar_position: 33
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
   - load_state()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation returns the load status of a specific collection.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 load_state(
@@ -101,7 +101,7 @@ The possible states are as follows:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import (
@@ -113,7 +113,7 @@ from pymilvus import (
     utility,
 )
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a collection
@@ -167,7 +167,7 @@ utility.load_state(
 ) # <LoadState: NotLoad>
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `load_state()`:
 

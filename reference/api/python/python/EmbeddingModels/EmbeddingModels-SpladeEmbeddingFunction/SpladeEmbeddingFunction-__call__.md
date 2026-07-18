@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/SpladeEmbeddingFunction-__call__
+sidebar_key: python/SpladeEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LJqud2x3AojxV4xKONocTe4YnFb
 sidebar_position: 4
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [SpladeEmbeddingFunction](./EmbeddingModels-SpladeEmbeddingFun
 
 Unlike [encode_documents()](./SpladeEmbeddingFunction-encode_documents) or [encode_queries()](./SpladeEmbeddingFunction-encode_queries), which enable you to prepend **doc_instruction** or **query_instruction** and utilize **k_tokens_document** or **k_tokens_query** for result pruning, the **\_\_call\_\_()** method directly returns embeddings without offering the option to prepend instructions or prune results.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -67,7 +67,7 @@ Compressed sparse row matrices representing the document embeddings.
 
     This exception will be raised when the transformers library is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

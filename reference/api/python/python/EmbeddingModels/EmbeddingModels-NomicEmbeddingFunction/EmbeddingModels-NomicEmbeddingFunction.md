@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "NomicEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-NomicEmbeddingFunction
+sidebar_key: python/EmbeddingModels-NomicEmbeddingFunction
 sidebar_label: "NomicEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OOQvdXDqdoqKfmxEkTecfuVMnsb
 sidebar_position: 3
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
   - zilliz
   - zilliz cloud
   - cloud
   - NomicEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ NomicEmbeddingFunction is a class in pymilvus that handles encoding text into em
 pymilvus.model.dense.NomicEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a NomicEmbeddingFunction for common use cases.
 
@@ -70,12 +70,12 @@ NomicEmbeddingFunction(
 
         How to handle texts longer than the model can accept. One of `mean` or `truncate`.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import NomicEmbeddingFunction
 
 ef = NomicEmbeddingFunction(
-    model_name="nomic-embed-text-v1.5", # Defaults to `mistral-embed`
+    model_name="nomic-embed-text-v1.5", # Defaults to \`mistral-embed\`
 )
 ```

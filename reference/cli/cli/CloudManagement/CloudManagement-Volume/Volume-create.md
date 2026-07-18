@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Volume-create
+sidebar_key: cli/Volume-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new volume. | Cloud"
 type: docx
-token: GO7LdV0RfoCgcvx18DjcvS27nJb
+token: H86odvFbDomzPjxjOtCc75jDnGf
 sidebar_position: 1
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
+  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new volume.
 
-## Description
+## Description\{#description}
 
 A volume is an object store that holds either structured data or collections of unstructured data files. It provides a unified place to access, store, govern, and organize these data assets. Structured and unstructured data from local file systems or cloud object storage are first uploaded into a volume in Zilliz Cloud. From there, you can import or migrate structured data directly into collections, or run ETL pipelines to transform unstructured data into embeddings and then load those embeddings into collections.
 
 Running this command without any options triggers a set of interactive prompots for you to set up the command.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz volume create
@@ -51,7 +51,7 @@ zilliz volume create
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--project-id** (*string*) -
 
@@ -137,7 +137,7 @@ zilliz volume create
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz volume create --project-id proj-xxxx \

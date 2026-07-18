@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "listGrant() | Node.js"
 slug: /node/node/Authentication-listGrant
+sidebar_key: node/Authentication-listGrant
 sidebar_label: "listGrant()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HSIDdxQGEoPdyaxkMDjcAWGQnpd
 sidebar_position: 17
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - listGrant()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,10 +34,10 @@ import Admonition from '@theme/Admonition';
 This operation lists the privileges granted to the specified role.
 
 ```javascript
-listGrant(data): Promise<SelectGrantResponse>
+await milvusClient.listGrant(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
  milvusClient.listGrants({
@@ -151,7 +151,7 @@ This method returns a promise that resolves to a **SelectGrantResponse** object.
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
  milvusClient.listGrant({

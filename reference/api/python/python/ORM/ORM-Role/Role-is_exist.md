@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "is_exist() | Python | ORM"
 slug: /python/python/Role-is_exist
+sidebar_key: python/Role-is_exist
 sidebar_label: "is_exist()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: F8WOdIoz4okn5OxMEymcXNuRnkb
 sidebar_position: 6
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
   - is_exist()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks whether the current role exists.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 is_exist()
@@ -55,7 +55,7 @@ A boolean value indicating whether the current role exists or not
 
 *None*
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role, utility
@@ -67,7 +67,7 @@ role = Role(name="test")
 role.is_exist()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `is_exist()`:
 

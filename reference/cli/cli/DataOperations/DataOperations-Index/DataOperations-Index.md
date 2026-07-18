@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to index management. | Cloud"
 type: folder
-token: SSAIfziL4leZFodS2geclHkLn9f
+token: EflgfwlI7lX3Dgd6xrbcFXhunzh
 sidebar_position: 4
 sidebar_label: "Index"
 keywords: 
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Index
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

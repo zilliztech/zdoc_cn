@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/OpenAIEmbeddingFunction-__call__
+sidebar_key: python/OpenAIEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FieTdj7WDoVbBVxp5xjcqO02nrh
 sidebar_position: 4
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - vector database open source
+  - open source vector db
+  - vector database example
+  - rag vector database
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [OpenAIEmbeddingFunction](./EmbeddingModels-OpenAIEmbeddingFun
 
 The **\_\_call\_\_()** method of OpenAIEmbeddingFunction shares the same functionality as [encode_documents()](./OpenAIEmbeddingFunction-encode_documents) and [encode_queries()](./OpenAIEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -67,7 +67,7 @@ A list where each element is a NumPy array.
 
     This exception will be raised when the OpenAI module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

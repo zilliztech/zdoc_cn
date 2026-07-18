@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "RRFRanker | Java | v2"
 slug: /java/java/v2-Function-RRFRanker
+sidebar_key: java/v2-Function-RRFRanker
 sidebar_label: "RRFRanker"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FuSTdeSCdojDu0xSBEmcYgv9n4g
 sidebar_position: 6
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - RRFRanker
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ The **RRFRanker** class extends from the **Function** class and provides extra p
 public class RRFRanker extends CreateCollectionReq.Function
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 RRFRanker.builder()
@@ -72,9 +72,9 @@ RRFRanker.builder()
 
 **RETURNS:**
 
- A RRF ranker instance.
+A RRF ranker instance.
 
-## Examples:
+## Examples:\{#examples}
 
 ```java
 import io.milvus.v2.service.collection.request.CreateCollectionReq.Function;

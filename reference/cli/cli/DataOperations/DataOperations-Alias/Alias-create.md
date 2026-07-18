@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Alias-create
+sidebar_key: cli/Alias-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates an alias pointing to a collection. | Cloud"
 type: docx
-token: SclAd0NPBoMQ9Pxtg0vcQxK0n2f
+token: WxTjdBaBqoNhRex5kR0cfekqnOc
 sidebar_position: 2
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation creates an alias pointing to a collection.
 
-## Description
+## Description\{#description}
 
 You can assign an alias to a collection and conduct searches/queries against the alias so that the associated collection responds. Use this command to change the collection associated with the specified alias.
 
 Running this command without any prompts triggers a set of interactive prompts to help set it up.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alias create
@@ -51,7 +51,7 @@ zilliz alias create
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -95,7 +95,7 @@ zilliz alias create
 
     Indicates the JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alias create --collection my_collection --alias my_alias

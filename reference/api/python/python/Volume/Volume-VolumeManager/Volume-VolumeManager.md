@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "VolumeManager | Python"
 slug: /python/python/Volume-VolumeManager
+sidebar_key: python/Volume-VolumeManager
 sidebar_label: "VolumeManager"
 added_since: false
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "A `VolumeManager` instance maintains a connection to Zilliz Cloud's Volume service. Before creating, listing, or deleting volumes, you need to initiate a `VolumeManager` instance. | Python"
 type: docx
-token: XdZ6dFzA3oUu4dxWh7Kcz4dhnQg
-sidebar_position: 4
+token: G5c6dxWkno5FRAxeDMycR6AVntf
+sidebar_position: 5
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - VolumeManager
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -39,11 +39,11 @@ class pymilvus.bulk_writer.volume_manager import VolumeManager
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A volume is an intermediate storage spot where you can hold your data for further processing, such as data merging, migration, or importing. For details, refer to <a href="/docs/volume">Volume</a>.</p>
+A volume is an intermediate storage spot where you can hold your data for further processing, such as data merging, migration, or importing. For details, refer to [Volume](/docs/volume).
 
 </Admonition>
 
-## Constructor
+## Constructor\{#constructor}
 
 This constructor initializes a new `VolumeManager` instance designed to maintain a connection to Zilliz Cloud's Volume service.
 
@@ -60,7 +60,7 @@ VolumeManager(
 
     **[REQUIRED]**
 
-    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com` (Global) or `https://api.cloud.zilliz.com.cn` (China), depending on the platform you have registered with.
+    The Zilliz Cloud endpoint, which is `https:*//*api.cloud.zilliz.com`.
 
 - **api_key** (*str*) -
 
@@ -76,7 +76,7 @@ VolumeManager(
 
 A `VolumeManager` instance.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.bulk_writer.volume_manager import VolumeManager

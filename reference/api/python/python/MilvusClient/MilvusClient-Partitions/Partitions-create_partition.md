@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_partition() | Python | MilvusClient"
 slug: /python/python/Partitions-create_partition
+sidebar_key: python/Partitions-create_partition
 sidebar_label: "create_partition()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: I6hvdlYUuoUaw3xWqSnce4Fin9g
 sidebar_position: 1
 keywords: 
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
-  - hallucinations llm
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
   - zilliz
   - zilliz cloud
   - cloud
   - create_partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a partition in the target collection.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 create_partition(
@@ -65,7 +71,7 @@ create_partition(
 
 **RETURN TYPE:**
 
-*Partition*
+*[Partition](./ORM-Partition)*
 
 **RETURNS:**
 
@@ -77,7 +83,7 @@ A partition object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -98,7 +104,7 @@ client.create_partition(
 )
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [drop_partition()](./Partitions-drop_partition)
 

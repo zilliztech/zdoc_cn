@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop() | Python | ORM"
 slug: /python/python/Partition-drop
+sidebar_key: python/Partition-drop
 sidebar_label: "drop()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: D3sndK8DgoqDkUxaNGcctwcSnuE
 sidebar_position: 2
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
+  - cheap vector database
   - zilliz
   - zilliz cloud
   - cloud
   - drop()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,9 @@ import Admonition from '@theme/Admonition';
 
 # drop()
 
-This operation drops the current partition. 
+This operation drops the current [partition](./ORM-Partition). 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop(
@@ -61,7 +61,7 @@ drop(
 
     This arises when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -87,7 +87,7 @@ partition = Partition(
 partition.drop()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop()`:
 

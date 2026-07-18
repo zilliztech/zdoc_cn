@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_connection_addr() | Python | ORM"
 slug: /python/python/Connections-get_connection_addr
+sidebar_key: python/Connections-get_connection_addr
 sidebar_label: "get_connection_addr()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: H2zBdRHVtovNQGxvb0xcwpSKnBd
 sidebar_position: 5
 keywords: 
+  - knn
+  - Image Search
+  - LLMs
   - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
   - zilliz
   - zilliz cloud
   - cloud
   - get_connection_addr()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation retrieves the configuration of the specified connection by alias.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 get_connection_addr(alias: str)
@@ -61,7 +61,7 @@ A dictionary containing the connection configuration.
 
     This exception will be raised when the connection configuration is invalid.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections
@@ -72,7 +72,7 @@ connections.get_connection_addr(alias="default")
 # {'address': 'in03-**************.api.ali-cn-hangzhou'}
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_connection_addr()`:
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "close() | Java | v2"
 slug: /java/java/v2-LocalBulkWriter-close
+sidebar_key: java/v2-LocalBulkWriter-close
 sidebar_label: "close()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OEcUdoX1yoc94axfwpjcdA2jnEf
 sidebar_position: 2
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - close()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation closes the current LocalBulkWriter instance.
 public void close()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 localBulkWriter.close()
@@ -51,7 +51,7 @@ localBulkWriter.close()
 
 *void*
 
-## Example
+## Example\{#example}
 
 ```java
 localBulkWriter.close()

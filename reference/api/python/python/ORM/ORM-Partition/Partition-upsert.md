@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "upsert() | Python | ORM"
 slug: /python/python/Partition-upsert
+sidebar_key: python/Partition-upsert
 sidebar_label: "upsert()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: MQMzddDnao5Zz0xmSRncZM2nn5b
 sidebar_position: 11
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - upsert()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -36,11 +36,11 @@ This operation inserts new records into the database or updates existing ones.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>An upsert is a data-level operation that will overwrite an existing entity if a specified field already exists in a collection, and insert a new entity if the specified value doesn’t already exist.</p>
+An upsert is a data-level operation that will overwrite an existing entity if a specified field already exists in a collection, and insert a new entity if the specified value doesn’t already exist.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 upsert(
@@ -184,7 +184,7 @@ A **MutationResult** object that contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, Partition, FieldSchema, CollectionSchema, DataType
@@ -215,7 +215,7 @@ res.upsert_count
 10
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `upsert()`:
 

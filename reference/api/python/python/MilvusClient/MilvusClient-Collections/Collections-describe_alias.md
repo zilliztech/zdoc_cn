@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "describe_alias() | Python | MilvusClient"
 slug: /python/python/Collections-describe_alias
+sidebar_key: python/Collections-describe_alias
 sidebar_label: "describe_alias()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HN7nddgueo3scIxmPXAcpjkFnDf
 sidebar_position: 8
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - describe_alias()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,27 @@ import Admonition from '@theme/Admonition';
 
 This operation displays the details of an alias.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies to dedicated serving clusters and on-demand compute. 
+
+- For a collection in a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a collection in on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 describe_alias(
@@ -98,7 +118,7 @@ A dictionary containing the alias details.
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -125,7 +145,7 @@ client.describe_alias(alias="test")
 # }
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [alter_alias()](./Collections-alter_alias)
 

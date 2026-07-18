@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "alter_alias() | Python | ORM"
 slug: /python/python/utility-alter_alias
+sidebar_key: python/utility-alter_alias
 sidebar_label: "alter_alias()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: MfTsdrbGcoO9JqxjgPtcMZTvncc
 sidebar_position: 1
 keywords: 
-  - vector database example
   - rag vector database
   - what is vector db
   - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - alter_alias()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 This operation reassigns the alias of one collection to another.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 alter_alias(
@@ -70,21 +70,25 @@ alter_alias(
 
     The alias of the collection. Note that the alias should exist beforehand.
 
-    <Admonition type="info" icon="📘" title="What is a collection alias?">
+    <Admonition type="info" icon="📘" title="What is a[ collection](./ORM-Collection) alias?">
 
-    <p>A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. </p>
-    <p>In , a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.</p>
-    <p>Below is an example of reassigning the alias of one collection to another:</p>
-    <p>Suppose there are two collections: <code>collection_1</code> and <code>collection_2</code>. There is also a collection alias named <code>bob</code>, which was originally assigned to <code>collection_1</code>:</p>
-    <ul>
-    <li><p><code>collection_1</code>'s alias = ["bob"]</p></li>
-    <li><p><code>collection_2</code>'s alias = []</p></li>
-    </ul>
-    <p>After calling <code>alter_alias("collection_2", "bob")</code>:</p>
-    <ul>
-    <li><p><code>collection_1</code>'s alias = []</p></li>
-    <li><p><code>collection_2</code>'s alias = ["bob"]</p></li>
-    </ul>
+    A[ collection](./ORM-Collection) alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
+
+    In , a[ collection](./ORM-Collection) alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
+
+    Below is an example of reassigning the alias of one collection to another:
+
+    Suppose there are two collections: `collection_1` and `collection_2`. There is also a collection alias named `bob`, which was originally assigned to `collection_1`:
+
+    - `collection_1`'s alias = ["bob"]
+
+    - `collection_2`'s alias = []
+
+    After calling `alter_alias("collection_2", "bob")`:
+
+    - `collection_1`'s alias = []
+
+    - `collection_2`'s alias = ["bob"]
 
     </Admonition>
 
@@ -104,7 +108,7 @@ alter_alias(
 
 **RETURNS:**
 
- None
+None
 
 **EXCEPTIONS:**
 
@@ -112,12 +116,12 @@ alter_alias(
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, Collection, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get two existing collections
@@ -139,7 +143,7 @@ utility.list_aliases(collection_name="collection_1") # []
 utility.list_aliases(collection_name="collection_2") # ['bob']
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `alter_alias()`:
 

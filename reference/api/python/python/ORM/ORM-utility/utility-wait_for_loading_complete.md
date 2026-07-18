@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "wait_for_loading_complete() | Python | ORM"
 slug: /python/python/utility-wait_for_loading_complete
+sidebar_key: python/utility-wait_for_loading_complete
 sidebar_label: "wait_for_loading_complete()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PLKXdUB1EoNX8gxKHruc9GcEnsg
 sidebar_position: 44
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
   - wait_for_loading_complete()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation blocks the current process until the specified collection has been loaded.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 wait_for_loading_complete(
@@ -77,12 +77,12 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get an existing collection
@@ -100,7 +100,7 @@ utility.wait_for_loading_complete(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `wait_for_loading_complete()`:
 

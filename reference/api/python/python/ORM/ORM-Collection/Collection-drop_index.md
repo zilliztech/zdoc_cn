@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_index() | Python | ORM"
 slug: /python/python/Collection-drop_index
+sidebar_key: python/Collection-drop_index
 sidebar_label: "drop_index()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: AtkDdtMAWodFzExARxnco5xLnsg
 sidebar_position: 9
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - drop_index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes index from the current collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop_index(timeout: float | None)
@@ -59,7 +59,7 @@ drop_index(timeout: float | None)
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -101,7 +101,7 @@ collection.drop_index()
 collection.has_index() # False
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop_index()`:
 

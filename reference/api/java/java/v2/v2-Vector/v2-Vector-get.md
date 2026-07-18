@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "get() | Java | v2"
 slug: /java/java/v2-Vector-get
+sidebar_key: java/v2-Vector-get
 sidebar_label: "get()"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Java | v2"
 type: docx
-token: DDshdoIEoo7X1BxpciBc66Rlndd
+token: Xl3QdxmFxo3MNCxWlrxc9jFbnFc
 sidebar_position: 2
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - get()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,12 +37,13 @@ This operation gets specific entities by their IDs.
 public GetResp get(GetReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 get(GetReq.builder()
     .databaseName(String databaseName)
     .collectionName(String collectionName)
+    .clusterId(String clusterId)
     .partitionName(String partitionName)
     .ids(List<Object> ids)
     .outputFields(List<String> outputFields)
@@ -59,6 +60,10 @@ get(GetReq.builder()
 - `collectionName(String collectionName)`
 
     The name of an existing collection.
+
+- `clusterId(String clusterId)`
+
+    The target cluster ID for this vector read request. Use `session(String clusterId)` when multiple requests should share the same cluster ID.
 
 - `partitionName(String partitionName)`
 
@@ -96,7 +101,7 @@ A **GetResp** object representing one or more queried entities.
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -119,4 +124,3 @@ GetReq getReq = GetReq.builder()
         .build();
 GetResp getResp = client.get(getReq);
 ```
-

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/OnnxEmbeddingFunction-encode_queries
+sidebar_key: python/OnnxEmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ZkWBdbMZkoBjT1xe4qDcTBOHnGx
 sidebar_position: 2
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in a list of query strings and encodes each query into a vector embedding.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_queries(
@@ -59,14 +59,14 @@ A list where each element is a NumPy array.
 
 *None*
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import OnnxEmbeddingFunction
 
 onnx_ef = OnnxEmbeddingFunction(
-    model_name="GPTCache/paraphrase-albert-onnx", # Defaults to `GPTCache/paraphrase-albert-onnx`
-    tokenizer_name="GPTCache/paraphrase-albert-small-v2" # Defaults to `GPTCache/paraphrase-albert-small-v2`
+    model_name="GPTCache/paraphrase-albert-onnx", # Defaults to \`GPTCache/paraphrase-albert-onnx\`
+    tokenizer_name="GPTCache/paraphrase-albert-small-v2" # Defaults to \`GPTCache/paraphrase-albert-small-v2\`
 )
 
 queries = ["When was artificial intelligence founded", 

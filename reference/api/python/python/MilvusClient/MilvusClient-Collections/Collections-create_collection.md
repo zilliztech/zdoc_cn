@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_collection() | Python | MilvusClient"
 slug: /python/python/Collections-create_collection
+sidebar_key: python/Collections-create_collection
 sidebar_label: "create_collection()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation supports creating a collection in two distinct ways quick setup or custom setup. | Python | MilvusClient"
 type: docx
-token: H7eOdq9hOo7so7xes5LchIVwnrb
+token: NbYidGUPcokra9xJ6IAcUNLEn9f
 sidebar_position: 5
 keywords: 
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - create_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,29 @@ import Admonition from '@theme/Admonition';
 
 # create_collection()
 
-This operation supports creating a collection in two distinct ways: quick setup or custom setup. 
+This operation supports creating a collection in two distinct ways: quick setup or custom setup.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies to dedicated serving clusters and on-demand compute. 
+
+- For a collection in a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a collection in on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 create_collection(
@@ -111,13 +131,13 @@ create_collection(
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-- **schema** (*CollectionSchema* | *None*)
+- **schema** (*[CollectionSchema](./MilvusClient-CollectionSchema)* | *None*)
 
     The schema of this collection.
 
     Setting this to **None** indicates this collection will be created in a quick setup manner. 
 
-    To set up a collection with a customized schema, you need to create a **CollectionSchema** object and reference it here. In this case, Zilliz Cloud ignores all other schema-related settings carried in the request.
+    To set up a collection with a customized schema, you need to create a **[CollectionSchema](./MilvusClient-CollectionSchema)** object and reference it here. In this case, Zilliz Cloud ignores all other schema-related settings carried in the request.
 
 - **index_params** (*IndexParams* | *None*)
 
@@ -143,8 +163,9 @@ create_collection(
 
         <Admonition type="info" icon="📘" title="What is sharding?">
 
-        <p>Sharding refers to distributing write operations to different nodes to make the most of the parallel computing potential of a Milvus cluster for writing data.</p>
-        <p>By default, a collection contains one shard.</p>
+        Sharding refers to distributing write operations to different nodes to make the most of the parallel computing potential of a Milvus cluster for writing data.
+
+        By default, a collection contains one shard.
 
         </Admonition>
 
@@ -156,9 +177,11 @@ create_collection(
 
         <Admonition type="info" icon="📘" title="What is the partition key?">
 
-        <p>To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.</p>
-        <p>When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.</p>
-        <p>For details, refer to <a href="/docs/use-partition-key">Use Partition Key</a> and <a href="https://milvus.io/docs/multi_tenancy.md">Multi-tenancy</a>.</p>
+        To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.
+
+        When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.
+
+        For details, refer to [Use Partition Key](/docs/use-partition-key) and [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md).
 
         </Admonition>
 
@@ -180,9 +203,11 @@ create_collection(
 
         <Admonition type="info" icon="📘" title="What is the consistency level?">
 
-        <p>Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.</p>
-        <p>Zilliz Cloud provides three consistency levels: <strong>Strong</strong>, <strong>Bounded Staleness</strong>, and <strong>Eventually</strong>, with <strong>Bounded Staleness</strong> set as the default.</p>
-        <p>You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.</p>
+        Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
+
+        Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
+
+        You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
 
         </Admonition>
 
@@ -192,7 +217,11 @@ create_collection(
 
         - **collection.ttl.seconds** (*int*)
 
-            The time-to-live (TTL) of a collection in seconds.
+            The collection-level time-to-live (TTL) in seconds.
+
+        - **ttl_field** (*str*)
+
+            Name of the `TIMESTAMPTZ` field to use as the logical timestamp for entity-level TTL expiration.
 
         - **mmap.enabled** (*bool*) -
 
@@ -220,9 +249,9 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
-### Set up a Milvus client
+### Set up a Milvus client\{#set-up-a-milvus-client}
 
 ```python
 from pymilvus import MilvusClient
@@ -233,7 +262,7 @@ client = MilvusClient(
 )
 ```
 
-### Create a collection
+### Create a collection\{#create-a-collection}
 
 You can choose between a quick setup or a customized setup as follows:
 
@@ -341,3 +370,83 @@ You can choose between a quick setup or a customized setup as follows:
     ```
 
     In the above code, the collection will also be created. However, without `index_param`, data in the collection will not be indexed and loaded into memory.
+
+- **Create an external collection**
+
+    ```python
+    from pymilvus import MilvusClient, DataType
+    
+    # connect the database
+    client = MilvusClient(
+        uri="https://{project-id}.{region}.api.zillizcloud.com",
+        token="YOUR_API_KEY"
+    )
+    
+    schema = MilvusClient.create_schema(
+        external_source='volume://my_volume/path/to/a/folder/',
+        external_spec='{"format": "parquet"}'
+    )
+    
+    schema.add_field(
+        field_name="product_id",
+        datatype=DataType.INT64,
+        # highlight-next
+        external_field="id" # field name in the external data file
+    )
+    schema.add_field(
+        field_name="product_name",
+        datatype=DataType.VARCHAR,
+        max_length=512,
+        # highlight-next
+        external_field="name"
+    )
+    schema.add_field(
+        field_name="embedding",
+        datatype=DataType.FLOAT_VECTOR,
+        dim=768,
+        # highlight-next
+        external_field="vector"
+    )
+    
+    client.use_database(
+        db_name="my_database"
+    )
+    # create the collection
+    client.create_collection(
+        collection_name="test_collection",
+        schema=schema
+    )
+    
+    index_params = client.prepare_index_params()
+    # Add indexes
+    index_params.add_index(
+        field_name="embedding",
+        index_type="AUTOINDEX",
+        metric_type="COSINE"
+    )
+    index_params.add_index(
+        field_name="product_name",
+        index_type="AUTOINDEX"
+    )
+    client.create_index(
+        db_name="my_database",
+        collection_name="test_collection",
+        index_params=index_params
+    )
+    
+    job_id = client.refresh_external_collection(
+        db_name="my_database",
+        collection_name="test_collection"
+    )
+    while True:
+        progress = client.get_refresh_external_collection_progress(job_id=job_id)
+        print(f"  {progress.state}: {progress.progress}%")
+        if progress.state == "RefreshCompleted":
+            elapsed = progress.end_time - progress.start_time
+            print(f"  Completed in {elapsed}ms")
+            break
+        elif progress.state == "RefreshFailed":
+            print(f"  Failed: {progress.reason}")
+            break
+        time.sleep(2)
+    ```

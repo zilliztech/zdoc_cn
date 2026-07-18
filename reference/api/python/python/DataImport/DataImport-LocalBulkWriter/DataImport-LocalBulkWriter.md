@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "LocalBulkWriter | Python"
 slug: /python/python/DataImport-LocalBulkWriter
+sidebar_key: python/DataImport-LocalBulkWriter
 sidebar_label: "LocalBulkWriter"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: RcvXdmCVBog9M8xNyUFcwefnneh
 sidebar_position: 3
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - LocalBulkWriter
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,13 +37,13 @@ A LocalBulkWriter instance rewrites your raw data locally in a format that Zilli
 class pymilvus.LocalBulkWriter
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a LocalBulkWriter object by schema, output path, segment size, and file type.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A <strong>LocalBulkWriter</strong> object intends to rewrite your raw data locally in a format that Zilliz Cloud understands.</p>
+A **LocalBulkWriter** object intends to rewrite your raw data locally in a format that Zilliz Cloud understands.
 
 </Admonition>
 
@@ -83,8 +83,9 @@ writer = LocalBulkWriter(
 
     <Admonition type="info" icon="📘" title="How does BulkWriter segment my data?">
 
-    <p>The way <strong>BulkWriter</strong> segments your data varies with the target file type.</p>
-    <p>If the generated file exceeds the specified segment size, <strong>BulkWriter</strong> creates multiple files and names them in sequence numbers, each no larger than the segment size.</p>
+    The way **BulkWriter** segments your data varies with the target file type.
+
+    If the generated file exceeds the specified segment size, **BulkWriter** creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>
 
@@ -107,7 +108,7 @@ writer = LocalBulkWriter(
     }
     ```
 
-    -  **sep** (*string*)
+    - **sep** (*string*)
 
         The delimiter of CSV file. The value must be a string of length 1, which defaults to `","`. The following strings are not allowed: `"\0"`, `"\n"`, `"\r"`, `"""`.
 
@@ -129,7 +130,7 @@ A **LocalBulkWriter** object.
 
     This exception will be raised when the provided schema is invalid.
 
-## Properties
+## Properties\{#properties}
 
 - **uuid** (*str*) -
 
@@ -143,7 +144,7 @@ A **LocalBulkWriter** object.
 
     A list of the generated file names.
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the **LocalBulkWriter** class:
 

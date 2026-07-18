@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "count() | Node.js"
 slug: /node/node/Vector-count
+sidebar_key: node/Vector-count
 sidebar_label: "count()"
 added_since: v2.4.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: NaOadUNSpo1EsIxPMSfc0R4Hnfb
 sidebar_position: 1
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - count()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation counts the number of entities that match the specified filtering expression.
 
 ```javascript
-count(data): Promise<CountResult>
+await milvusClient.count(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.count({
+await milvusClient.count({
     db_name?: string,
     collection_name: string,
     expr?: string,
@@ -70,28 +70,24 @@ milvusClient.count({
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise*\<*CountResult*>
+**RETURNS** *Promise&lt;CountResult&gt;*
 
 This method returns a promise that resolves to a **CountResult** object.
 
-```javascript
+```typescript
 {
     data: number,
-    status: {
-        code: number,
-        error_code: number | string,
-        reason: string
-    }
+    status:  ResStatus
 }
 ```
 
 **PARAMETERS:**
 
 - **data** (*number*) -
+The number of rows in the collection that match the supplied filter expression. When no expression is supplied, this is the total row count.
 
-    The number of entities that match the specified filtering expression.
-
-- **status** (*object*) -
+- **ResStatus**
+A **ResStatus** object.
 
     - **code** (*number*) -
 
@@ -99,16 +95,19 @@ This method returns a promise that resolves to a **CountResult** object.
 
     - **error_code** (*string* | *number*) -
 
-        An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+        An error code that indicates an occurred error. It remains **Success** if this operation succeeds.
 
-    - **reason** (*string*) - 
+    - **reason** (*string*) -
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Examples
+## Examples\{#examples}
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const num_entities = await milvusClient.count({
    collection_name: 'my_collection',
    expr: "age in [1,2,3,4,5,6,7,8]",

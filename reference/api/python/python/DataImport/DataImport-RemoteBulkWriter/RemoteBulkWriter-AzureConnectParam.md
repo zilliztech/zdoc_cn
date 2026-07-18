@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "AzureConnectParam | Python"
 slug: /python/python/RemoteBulkWriter-AzureConnectParam
+sidebar_key: python/RemoteBulkWriter-AzureConnectParam
 sidebar_label: "AzureConnectParam"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: C2YSddNqZoDNmNxWqqEcuzhKn4f
 sidebar_position: 2
 keywords: 
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - AzureConnectParam
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,20 +31,21 @@ import Admonition from '@theme/Admonition';
 
 # AzureConnectParam
 
-An **AzureConnectParam** instance sets connection parameters for a **RemoteBulkWriter** instance.
+An **AzureConnectParam** instance sets connection parameters for a **[RemoteBulkWriter](./DataImport-RemoteBulkWriter)** instance.
 
 ```python
 class pymilvus.RemoteBulkWriter.AzureConnectParam
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an **AzureConnectParam** object by a set of parameters, such as **container_name**, **account_url**, **credential**, etc.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>An <strong>AzureConnectParam</strong> object defines the parameters necessary for Zilliz Cloud to connect to an Azure blob storage bucket.</p>
-<p>You need to create this object before initializing a <strong>RemoteBulkWriter</strong> object.</p>
+An **AzureConnectParam** object defines the parameters necessary for Zilliz Cloud to connect to an Azure blob storage bucket.
+
+You need to create this object before initializing a **[RemoteBulkWriter](./DataImport-RemoteBulkWriter)** object.
 
 </Admonition>
 
@@ -73,7 +74,7 @@ connect_param = RemoteBulkWriter.AzureConnectParam(
 
 - **account_url** (*str*)
 
-    A string in format like `<i>http</i>s://<storage-account>.blob.core.windows.net`.
+    A string in format like `https://<storage-account>.blob.core.windows.net`.
 
     Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) for more info.
 

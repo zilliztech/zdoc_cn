@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "modify | Cloud"
 slug: /cli/cli/Cluster-modify
+sidebar_key: cli/Cluster-modify
 sidebar_label: "modify"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation modifies a cluster configuration, such as scaling the number of allocated CUs or the number of replicas to create. | Cloud"
 type: docx
-token: YmP7dBDHPo5rKAxGFRGcUFjznLd
+token: AYlXdnqMKoQOzRxSbWScn0A5nqf
 sidebar_position: 6
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - modify
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation modifies a cluster configuration, such as scaling the number of allocated CUs or the number of replicas to create.
 
-## Description
+## Description\{#description}
 
 You can change the CU size and number of replicas of the specified cluster using this command. This command applies only to Dedicated clusters.
 
 Running
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster modify
@@ -52,7 +52,7 @@ zilliz cluster modify
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -125,7 +125,7 @@ zilliz cluster modify
     }
     ```
 
-## Example
+## Example\{#example}
 
 ```bash
 # Scale to 2 CUs

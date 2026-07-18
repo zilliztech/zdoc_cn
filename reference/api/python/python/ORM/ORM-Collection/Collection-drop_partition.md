@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_partition() | Python | ORM"
 slug: /python/python/Collection-drop_partition
+sidebar_key: python/Collection-drop_partition
 sidebar_label: "drop_partition()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Aym2dpBuIo81mExCqyLcSWhunBe
 sidebar_position: 10
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
   - drop_partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -40,7 +40,7 @@ drop_partition(
 )
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 from pymilvus import Collection
@@ -78,7 +78,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -107,7 +107,7 @@ collection.drop_partition("test_partition")
 collection.has_partition("test_partition") # False
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop_collection()`:
 

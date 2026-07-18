@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropIndex() | Java | v2"
 slug: /java/java/v2-Management-dropIndex
+sidebar_key: java/v2-Management-dropIndex
 sidebar_label: "dropIndex()"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: XHyydLsEAoPwB2xNhcwc9KBwn7g
 sidebar_position: 5
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - dropIndex()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation drops an index from a specific collection.
 public void dropIndex(DropIndexReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropIndex(DropIndexReq.builder()
@@ -77,7 +77,7 @@ dropIndex(DropIndexReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

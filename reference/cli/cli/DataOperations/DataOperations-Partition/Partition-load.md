@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "load | Cloud"
 slug: /cli/cli/Partition-load
+sidebar_key: cli/Partition-load
 sidebar_label: "load"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation loads partitions into memory. | Cloud"
 type: docx
-token: VzoRdU4TloXwScxB2a5cOzFAnwc
+token: GYyKdrbkvozJxVx6uGhcpMfonoe
 sidebar_position: 6
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
   - load
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation loads partitions into memory.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz partition load
@@ -45,7 +45,7 @@ zilliz partition load
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -75,7 +75,7 @@ zilliz partition load
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz partition load --collection my_collection --names '["p1", "p2"]'

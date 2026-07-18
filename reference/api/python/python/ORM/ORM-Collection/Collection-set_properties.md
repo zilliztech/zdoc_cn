@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "set_properties() | Python | ORM"
 slug: /python/python/Collection-set_properties
+sidebar_key: python/Collection-set_properties
 sidebar_label: "set_properties()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ECmAdaYKboPTNlxqkLxcUEZ4nrh
 sidebar_position: 27
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - set_properties()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation sets properties for the collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 set_properties(
@@ -69,7 +69,7 @@ set_properties(
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -93,7 +93,7 @@ collection.set_properties(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `insert()`:
 

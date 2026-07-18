@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/VoyageEmbeddingFunction-encode_documents
+sidebar_key: python/VoyageEmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: S9zrdw1etovCFKx0gcic6AiVn0e
 sidebar_position: 1
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - encode_documents()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in documents and encodes them into vector embeddings.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_documents(
@@ -61,13 +61,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when the Voyage module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import VoyageEmbeddingFunction
 
 voyage_ef = VoyageEmbeddingFunction(
-    model_name="voyage-lite-02-instruct", # Defaults to `voyage-2`
+    model_name="voyage-lite-02-instruct", # Defaults to \`voyage-2\`
     api_key='YOUR_API_KEY' # Replace with your own Voyage API key
 )
 

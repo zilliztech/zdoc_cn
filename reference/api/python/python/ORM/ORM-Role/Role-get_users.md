@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_users() | Python | ORM"
 slug: /python/python/Role-get_users
+sidebar_key: python/Role-get_users
 sidebar_label: "get_users()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CCOhd671iog6rRxu8aOcaPncnLK
 sidebar_position: 4
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - get_users()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all users associated with the current role.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 get_users()
@@ -51,7 +51,7 @@ N/A
 
 A tuple that contains the names of all users added to the current role.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role
@@ -63,7 +63,7 @@ role = Role(name="admin")
 users = role.get_users() # (admin, )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_users()`:
 

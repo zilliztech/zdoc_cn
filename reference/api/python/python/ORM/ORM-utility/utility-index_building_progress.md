@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "index_building_progress() | Python | ORM"
 slug: /python/python/utility-index_building_progress
+sidebar_key: python/utility-index_building_progress
 sidebar_label: "index_building_progress()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OVfodiKa6o3qTGxadYicI975nhh
 sidebar_position: 21
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - index_building_progress()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation returns the progress of the index-building process.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 index_building_progress(
@@ -106,7 +106,7 @@ The dictionary has the following keys:
 
     This exception will be raised if multiple indexes exist but the index name is left unspecified.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import (
@@ -118,7 +118,7 @@ from pymilvus import (
     utility,
 )
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a collection
@@ -163,7 +163,7 @@ utility.index_building_progress(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `index_building_progress()`
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "grantRole() | Java | v2"
 slug: /java/java/v2-Authentication-grantRole
+sidebar_key: java/v2-Authentication-grantRole
 sidebar_label: "grantRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JB90dbBNRoz1I2xZY5rcSmJ1nSb
 sidebar_position: 12
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - grantRole()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation grants a role to a user.
 public void grantRole(GrantRoleReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 grantRole(GrantRoleReq.builder()
@@ -67,7 +67,7 @@ grantRole(GrantRoleReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

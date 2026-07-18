@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "OpenAIEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-OpenAIEmbeddingFunction
+sidebar_key: python/EmbeddingModels-OpenAIEmbeddingFunction
 sidebar_label: "OpenAIEmbeddingFunction"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QPcodlsnAoSMvIxEFmlcMNPbntd
 sidebar_position: 3
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
   - OpenAIEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.dense.OpenAIEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an OpenAIEmbeddingFunction for common use cases.
 
@@ -73,7 +73,7 @@ OpenAIEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [Client](https://github.com/openai/openai-python/blob/main/src/openai/_client.py).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

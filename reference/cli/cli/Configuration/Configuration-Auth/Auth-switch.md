@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "switch | Cloud"
 slug: /cli/cli/Auth-switch
+sidebar_key: cli/Auth-switch
 sidebar_label: "switch"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation switches to a different organization. | Cloud"
 type: docx
-token: EQcvdvxQWoicwnxrGGpcThwYnKd
+token: WVn4dXc9FocqhRxmuwlcFcTynBg
 sidebar_position: 4
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - switch
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,15 @@ import Admonition from '@theme/Admonition';
 
 This operation switches to a different organization.
 
-## Synopsis
+**Note:** `zilliz auth switch` is a deprecated alias kept for backwards compatibility. Use the top-level `zilliz switch` command in new scripts.
+
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz auth switch <ORG_ID>
 ```
 
-## Options
+## Options\{#options}
 
 - **ORG_ID** (*string*) -
 
@@ -47,7 +49,7 @@ zilliz auth switch <ORG_ID>
 
     If this option is left unspecified, an interactive selection list is displayed for you to choose from.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz auth switch

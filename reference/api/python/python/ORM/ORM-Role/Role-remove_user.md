@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "remove_user() | Python | ORM"
 slug: /python/python/Role-remove_user
+sidebar_key: python/Role-remove_user
 sidebar_label: "remove_user()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: SlmSdaD7rocMJsxThNHcOtEknVd
 sidebar_position: 9
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - remove_user()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation removes a user from the current role. Once removed, the user will lose the permissions allowed for the current role.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 remove_user(
@@ -63,7 +63,7 @@ remove_user(
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role
@@ -78,7 +78,7 @@ role.remove_user(username)
 users = role.get_users()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `add_user()`:
 

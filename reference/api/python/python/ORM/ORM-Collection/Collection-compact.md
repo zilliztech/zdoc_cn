@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "compact() | Python | ORM"
 slug: /python/python/Collection-compact
+sidebar_key: python/Collection-compact
 sidebar_label: "compact()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: BHx6dnSmPoaqHAxKCvncbuk9nWb
 sidebar_position: 2
 keywords: 
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - compact()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation compacts and merges small segments in the current collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 compact(
@@ -61,7 +61,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -81,7 +81,7 @@ collection = Collection(
 collection.compact()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `compact()`:
 

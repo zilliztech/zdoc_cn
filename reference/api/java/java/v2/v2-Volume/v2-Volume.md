@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "Classes and methods related to Zilliz Cloud's Volume service. | Java | v2"
 type: folder
-token: O6ngfC8y5lIhIWdEGDAcXHzcntl
+token: OOcKfRAVdlXgf4dqW0sc9Zl2nyg
 sidebar_position: 10
 sidebar_label: "Volume"
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - Volume
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 ---
 

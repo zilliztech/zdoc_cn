@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "SentenceTransformerEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-SentenceTransformerEmbeddingFunction
+sidebar_key: python/EmbeddingModels-SentenceTransformerEmbeddingFunction
 sidebar_label: "SentenceTransformerEmbeddingFunction"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JOFedA4h8otTjHxsYQ7cnjsunHd
 sidebar_position: 3
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - Embedding model
+  - image similarity search
+  - Context Window
+  - Natural language search
   - zilliz
   - zilliz cloud
   - cloud
   - SentenceTransformerEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.dense.SentenceTransformerEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a SentenceTransformerEmbeddingFunction for common use cases.
 
@@ -83,7 +83,7 @@ SentenceTransformerEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [SentenceTransformer](https://github.com/UKPLab/sentence-transformers/blob/master/sentence_transformers/SentenceTransformer.py).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

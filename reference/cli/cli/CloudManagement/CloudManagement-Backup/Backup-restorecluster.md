@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: cliSidebar
 title: "restore-cluster | Cloud"
 slug: /cli/cli/Backup-restorecluster
+sidebar_key: cli/Backup-restorecluster
 sidebar_label: "restore-cluster"
 added_since: v0.1.x
-last_modified: false
+last_modified: v1.4.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation restores a backup to a new cluster. | Cloud"
 type: docx
-token: TUQ6df38Do0bKbxu9ODcbZMtnAb
+token: XAhudiqXqoHS1zxSDqgcNY9anxb
 sidebar_position: 7
 keywords: 
-  - Faiss
-  - Video search
-  - AI Hallucination
-  - AI Agent
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - restore-cluster
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation restores a backup to a new cluster.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a backup is a copy of your data that enables you to restore the entire cluster or specific collections in the event of data loss or system failure.
 
@@ -41,11 +41,11 @@ Restoring a cluster creates a new cluster and copies all backed-up collections t
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz backup restore-cluster
@@ -54,13 +54,14 @@ zilliz backup restore-cluster
 --project-id <value>
 --name <value>
 --cu-size <value>
---collection-status <LOADED | NOT_LOADED>
+--collection-status <KEEP | RELEASE>
+--restore-version-policy <LATEST | ORIGINAL>
 [--output <value>]
 [--query <value>]
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -106,7 +107,7 @@ zilliz backup restore-cluster
 
     Indicates the collection state after restoration.
 
-    Possible values: `LOADED` and `NOT_LOADED`.
+    Possible values: `KEEP` and `RELEASE`.
 
 - **--output, -o** (*string*) -
 
@@ -130,7 +131,11 @@ zilliz backup restore-cluster
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+- **--restore-version-policy** (*string*) -
+
+    Specifies the DB version restore policy. Possible values: `LATEST` and `ORIGINAL`.
+
+## Example\{#example}
 
 ```bash
 # Restore with collections loaded
@@ -139,5 +144,6 @@ zilliz backup restore-cluster --cluster-id in01-xxxx \
 --project-id proj-xxxx \
 --name restored \
 --cu-size 1 \
---collection-status LOADED
+--collection-status KEEP \
+--restore-version-policy LATEST
 ```

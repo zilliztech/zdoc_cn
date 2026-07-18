@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "CrossEncoderRerankFunction | Python"
 slug: /python/python/Rerankers-CrossEncoderRerankFunction
+sidebar_key: python/Rerankers-CrossEncoderRerankFunction
 sidebar_label: "CrossEncoderRerankFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HVGNdMYOvojQoXxvDmEcnHYanMh
 sidebar_position: 1
 keywords: 
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
   - zilliz
   - zilliz cloud
   - cloud
   - CrossEncoderRerankFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.reranker.CrossEncoderRerankFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a CrossEncoderRerankFunction for common use cases.
 
@@ -73,7 +73,7 @@ CrossEncoderRerankFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [cross_encoder](https://www.sbert.net/docs/package_reference/cross_encoder.html#cross-encoder).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.reranker import CrossEncoderRerankFunction

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_users() | Python | MilvusClient"
 slug: /python/python/Authentication-list_users
+sidebar_key: python/Authentication-list_users
 sidebar_label: "list_users()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EZ2YdBHoDoRTlxx91tscffm1nSb
 sidebar_position: 15
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud
   - list_users()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists the names of all existing users.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 list_users(
@@ -67,7 +67,7 @@ A list of user names.
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -87,7 +87,7 @@ client.list_users()
 # ['db_admin', 'user_1']
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_user()](./Authentication-create_user)
 

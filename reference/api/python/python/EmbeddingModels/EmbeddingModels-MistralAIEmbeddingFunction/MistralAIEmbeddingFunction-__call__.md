@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/MistralAIEmbeddingFunction-__call__
+sidebar_key: python/MistralAIEmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -21,7 +21,7 @@ keywords:
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [MistralAIEmbeddingFunction](./EmbeddingModels-MistralAIEmbedd
 
 The **\_\_call\_\_()** method of MistralAIEmbeddingFunction shares the same functionality as [encode_documents()](./MistralAIEmbeddingFunction-encode_documents) and [encode_queries()](./MistralAIEmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -68,13 +68,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when `api_key` is not provided and the `MISTRALAI_API_KEY` environment variable is also not set.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import MistralAIEmbeddingFunction
 
 ef = MistralAIEmbeddingFunction(
-    model_name="mistral-embed", # Defaults to `mistral-embed`
+    model_name="mistral-embed", # Defaults to \`mistral-embed\`
     api_key="MISTRAL_API_KEY" # Provide your Mistral AI API key
 )
 

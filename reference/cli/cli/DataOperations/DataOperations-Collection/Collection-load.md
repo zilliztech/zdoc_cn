@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "load | Cloud"
 slug: /cli/cli/Collection-load
+sidebar_key: cli/Collection-load
 sidebar_label: "load"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation loads a collection into memory for search. | Cloud"
 type: docx
-token: Q577dSJWeoSb23xarfmcmMeqncg
+token: SOaOdH3o6o7dsyx1VjPc4LPynqc
 sidebar_position: 10
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - load
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation loads a collection into memory for search.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection load
@@ -44,7 +44,7 @@ zilliz collection load
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -80,7 +80,7 @@ zilliz collection load
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection load --name my_collection

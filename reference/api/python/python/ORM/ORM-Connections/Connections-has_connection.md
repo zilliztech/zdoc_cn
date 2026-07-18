@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "has_connection() | Python | ORM"
 slug: /python/python/Connections-has_connection
+sidebar_key: python/Connections-has_connection
 sidebar_label: "has_connection()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XeZwdeK64oGD8rx9DA3ciqNinnh
 sidebar_position: 6
 keywords: 
-  - Video deduplication
   - Video similarity search
   - Vector retrieval
   - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - has_connection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks if a connection with the given alias has already been established.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 has_connection(alias: str)
@@ -57,8 +57,9 @@ A Boolean value indicating whether the connection exists.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>An existing connection alias does not necessarily indicates that the corresponding connection has been established.</p>
-<p>This operation evaluates to <strong>True</strong> only if the connection alias exists and the corresponding connection has been established.</p>
+An existing connection alias does not necessarily indicates that the corresponding connection has been established.
+
+This operation evaluates to **True** only if the connection alias exists and the corresponding connection has been established.
 
 </Admonition>
 
@@ -68,7 +69,7 @@ A Boolean value indicating whether the connection exists.
 
     This exception will be raised when the connection configuration is invalid.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections
@@ -79,7 +80,7 @@ connections.has_connection(alias="default")
 # True
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `has_connection()`:
 

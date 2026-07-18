@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getImportProgress() | Java | v2"
 slug: /java/java/v2-BulkImport-getImportProgress
+sidebar_key: java/v2-BulkImport-getImportProgress
 sidebar_label: "getImportProgress()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EjnFdC5EfoIkoExSBOxcEC2hnbg
 sidebar_position: 3
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - getImportProgress()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation gets the progress of the specified bulk-import job.
 public static String getImportProgress(String url, BaseDescribeImportRequest request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 bulkImport.getImportProgress(
@@ -54,7 +54,6 @@ bulkImport.getImportProgress(
 
     ```python
     https://api.cloud.zilliz.com
-    # https://api.cloud.zilliz.com.cn 
     ```
 
 - **request** (*[BaseDescribeImportRequest](./v2-BulkImport-getImportProgress#basedescribeimportrequest)*) -  
@@ -69,11 +68,11 @@ bulkImport.getImportProgress(
 
 The import progress of the specified import job.
 
-## BaseDescribeImportRequest
+## BaseDescribeImportRequest\{#basedescribeimportrequest}
 
 A **BaseDescribeImportRequest** instance is implemented in **CloudDescribeImportRequest**.
 
-### CloudDescribeImportRequest
+### CloudDescribeImportRequest\{#clouddescribeimportrequest}
 
 ```java
 CloudDescribeImportRequest.builder()
@@ -92,7 +91,7 @@ CloudDescribeImportRequest.builder()
 
     The ID of an existing import job.
 
-## Example
+## Example\{#example}
 
 ```java
 

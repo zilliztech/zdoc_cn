@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "MistralAIEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-MistralAIEmbeddingFunction
+sidebar_key: python/EmbeddingModels-MistralAIEmbeddingFunction
 sidebar_label: "MistralAIEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CvxodXz8OoWXrlxD7OVcqqJLn8e
 sidebar_position: 3
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - MistralAIEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ MistralAIEmbeddingFunction is a class in pymilvus that handles encoding text int
 pymilvus.model.dense.MistralAIEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a MistralAIEmbeddingFunction for common use cases.
 
@@ -63,13 +63,13 @@ MistralAIEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [Embedding API](https://docs.mistral.ai/api/#tag/embeddings/operation/embeddings_v1_embeddings_post).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import MistralAIEmbeddingFunction
 
 ef = MistralAIEmbeddingFunction(
-    model_name="mistral-embed", # Defaults to `mistral-embed`
+    model_name="mistral-embed", # Defaults to \`mistral-embed\`
     api_key="MISTRAL_API_KEY" # Provide your Mistral AI API key
 )
 ```

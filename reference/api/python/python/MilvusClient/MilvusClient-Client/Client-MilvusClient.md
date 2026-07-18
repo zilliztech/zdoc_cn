@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "MilvusClient | Python | MilvusClient"
 slug: /python/python/Client-MilvusClient
+sidebar_key: python/Client-MilvusClient
 sidebar_label: "MilvusClient"
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "A MilvusClient instance represents a Python client that connects to a specific Zilliz Cloud cluster. | Python | MilvusClient"
 type: docx
-token: TUrSdmskuoGdFRxFT75c6xhinzc
+token: SojTdgw1joOuA8xMzb5cMUFYnce
 sidebar_position: 2
 keywords: 
-  - Embedding model
-  - image similarity search
-  - Context Window
-  - Natural language search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
   - zilliz
   - zilliz cloud
   - cloud
   - MilvusClient
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,13 +37,13 @@ A **MilvusClient** instance represents a Python client that connects to a specif
 pymilvus.MilvusClient
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a client for common use cases.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This client serves as an easy-to-use alternative for the current set of APIs that handles Create, Read, Update, and Delete (CRUD) operations on Zilliz Cloud.</p>
+This client serves as an easy-to-use alternative for the current set of APIs that handles Create, Read, Update, and Delete (CRUD) operations on Zilliz Cloud.
 
 </Admonition>
 
@@ -65,9 +65,19 @@ MilvusClient(
 
     The URI of the Zilliz Cloud cluster. For example:
 
-    ```plaintext
-    https://inxx-xxxxxxxxxxxxxxxxx.ali-cn-hangzhou.zillizcloud.com:19540
-    ```
+    - **Cluster endpoint**
+
+        - **Free & Serverless**
+
+            `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+        - **Dedicated**
+
+            `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+    - **Project endpoint (On-demand)**
+
+        `https://{project-id}.{region}.api.zillizcloud.com`
 
 - **user** (*string*) -
 
@@ -97,7 +107,7 @@ MilvusClient(
 
     - An [API](/docs/manage-api-keys)[ key](/docs/manage-api-keys) with sufficient permissions, or
 
-    - A pair of [username and password ](/docs/cluster-credentials)used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`.
+    - A pair of [username and password ](/docs/cluster-credentials)used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`. This applies only when you use a cluster endpoint.
 
 - **timeout** (*float* | *None*)  
 
@@ -105,7 +115,7 @@ MilvusClient(
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
@@ -120,7 +130,7 @@ client = MilvusClient(
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Set <strong>uri</strong> to your cluster endpoint. The <strong>token</strong> parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of <code>username:p@ssw0rd</code>.</p>
+Set **uri** to your cluster endpoint. The **token** parameter can be a Zilliz Cloud API key with sufficient permissions or the credentials of a cluster user in the format of `username:p@ssw0rd`.
 
 </Admonition>
 

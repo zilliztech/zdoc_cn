@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getFields() | Java | v2"
 slug: /java/java/v2-StructFieldSchema-getFields
+sidebar_key: java/v2-StructFieldSchema-getFields
 sidebar_label: "getFields()"
 added_since: v2.6.x
 last_modified: false
@@ -11,17 +11,17 @@ notebook: false
 description: "This operation returns the fields of the Struct elements in an Array of Structs. | Java | v2"
 type: docx
 token: FIzIdKrRNooFttxaf3Pc1vOlnnc
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
   - getFields()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation returns the fields of the Struct elements in an Array of Structs.
 public List<CreateCollectionReq.FieldSchema> getFields()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 getFields()
@@ -45,13 +45,13 @@ getFields()
 
 **RETURN TYPE:**
 
-*List\<CreateCollectionReq.FieldSchema>*
+*List&lt;CreateCollectionReq.FieldSchema&gt;*
 
 **RETURNS:**
 
 The return value will be the fields of the Struct elements in an Array of Structs.
 
-## Examples
+## Examples\{#examples}
 
 ```java
 // You can get an instance of StructFieldSchema by describing

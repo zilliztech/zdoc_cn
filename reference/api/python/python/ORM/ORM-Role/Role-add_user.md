@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add_user() | Python | ORM"
 slug: /python/python/Role-add_user
+sidebar_key: python/Role-add_user
 sidebar_label: "add_user()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: W7GJdpYrYoYhSaxW6uzcVAZinYf
 sidebar_position: 1
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
   - add_user()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation adds an existing user to the current role. Once added, the user gets permissions allowed for the current role and can perform certain operations.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 add_user(
@@ -63,7 +63,7 @@ add_user(
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role, utility
@@ -89,7 +89,7 @@ utility.list_roles(include_user_info=True)
 # - RoleItem: <role_name:public>, <users:()>
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `add_user()`:
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "upsert() | Python | ORM"
 slug: /python/python/Collection-upsert
+sidebar_key: python/Collection-upsert
 sidebar_label: "upsert()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: AQ1ydMXbOog5VJxITgUc4GFvnVe
 sidebar_position: 28
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - upsert()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation inserts new records into the database or updates existing ones.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>An upsert is a data-level operation that will overwrite an existing entity if a specified field already exists in a collection, and insert a new entity if the specified value doesn’t already exist.</p>
+An upsert is a data-level operation that will overwrite an existing entity if a specified field already exists in a collection, and insert a new entity if the specified value doesn’t already exist.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 upsert(
@@ -171,7 +171,7 @@ A **MutationResult** object that contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -234,7 +234,7 @@ res = collection.upsert(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `insert()`:
 

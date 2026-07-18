@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to user management. | Cloud"
 type: folder
-token: KVy0fojDTl01lHdWSFWcVflBnSf
+token: MLhsf6VLElWmWudpYZXcamShn0e
 sidebar_position: 7
 sidebar_label: "User"
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud
   - User
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

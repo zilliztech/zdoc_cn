@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "create | Cloud"
 slug: /cli/cli/Cluster-create
+sidebar_key: cli/Cluster-create
 sidebar_label: "create"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a new cluster. | Cloud"
 type: docx
-token: KNCGdB4VfolyidxJBWOcuUGin3c
+token: GZ2jdLkKAojfofxm9BTcvwVCn4b
 sidebar_position: 1
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud
   - create
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,33 +33,25 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new cluster.
 
-## Description
-
-Zilliz Cloud provides various cluster deployment options to accommodate the distinct business needs. 
-
-- **Free**: provides a starting point for learning and personal projects with limitations on storage, vCU consumption, and the number of collections.
-
-- **Serverless**: provides a shared environment that automatically scales to match your workload - no need to provision resources. This option delivers excellent cost efficiency and elasticity for unpredictable or spiky traffic.
-
-- **Dedicated**: provides isolated, reserved environments for production workloads that demand consistent and predictable performance. This option is ideal for sustained high-throughput and latency-sensitive applications.
+## Description\{#description}
 
 Regarding dedicated clusters, Zilliz Cloud offers the following cluster types: **Performance-optimized, Capacity-optimized**, and **Tiered-storage.**
 
-### Performance-optimized cluster
+### Performance-optimized cluster\{#performance-optimized-cluster}
 
 - Tailored for scenarios emphasizing low latency and high throughput.
 
 - Ideal for real-time applications like generative AI, recommendation systems, chatbots, and more.
 
-### Capacity-optimized cluster
+### Capacity-optimized cluster\{#capacity-optimized-cluster}
 
 - Crafted for handling vast datasets, boasting five times the data capacity of its Performance-optimized counterpart, albeit with subdued search performance.
 
 - Ideal for large-scale unstructured data search, copyright detection, and identity verification.
 
-### Tiered-storage cluster
+### Tiered-storage cluster\{#tiered-storage-cluster}
 
-- Best for ultra-large-scale, cost-sensitive workloads with clear hot and cold data patterns.
+- Best for ultra-large-scale, cost-sensitive workloads.
 
 - Ideal for applications that need to store massive volumes of data at a low cost. The capacity of a Tiered-storage cluster is 4 times that of a Capacity-optimized cluster.
 
@@ -67,11 +59,11 @@ Running this command without any options triggers a set of interactive prompts.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Tiered-storage clusters are unavailable in BYOC projects.</p>
+Tiered-storage clusters are unavailable in BYOC projects.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster create
@@ -85,7 +77,7 @@ zilliz cluster create
 [--output <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -159,7 +151,7 @@ zilliz cluster create
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>For available regions in your BYOC project, consult with your organization owner.</p>
+    For available regions in your BYOC project, consult with your organization owner.
 
     </Admonition>
 
@@ -211,7 +203,7 @@ zilliz cluster create
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz cluster create --name my-cluster \

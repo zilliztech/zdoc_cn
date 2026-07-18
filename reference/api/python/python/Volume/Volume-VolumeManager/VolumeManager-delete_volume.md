@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "delete_volume() | Python"
 slug: /python/python/VolumeManager-delete_volume
+sidebar_key: python/VolumeManager-delete_volume
 sidebar_label: "delete_volume()"
 added_since: false
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FbzLd0f5ToAPRdxa8XWcWfUwnwe
 sidebar_position: 2
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud
   - delete_volume()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes a volume.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 delete_volume(
@@ -57,7 +57,7 @@ delete_volume(
 
 None
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus.bulk_writer.volume_manager import VolumeManager

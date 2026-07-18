@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "JinaEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-JinaEmbeddingFunction
+sidebar_key: python/EmbeddingModels-JinaEmbeddingFunction
 sidebar_label: "JinaEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: U7NJd5eKAo0c1TxYZndcgPj2nlc
 sidebar_position: 3
 keywords: 
-  - Zilliz database
   - Unstructured Data
   - vector database
   - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
   - JinaEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ JinaEmbeddingFunction is a class in pymilvus that handles encoding text into emb
 pymilvus.model.dense.JinaEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a JinaEmbeddingFunction for common use cases.
 
@@ -63,13 +63,13 @@ JinaEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [Embedding API](https://jina.ai/embeddings/).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import JinaEmbeddingFunction
 
 jina_ef = JinaEmbeddingFunction(
-    model_name="jina-embeddings-v2-base-en", # Defaults to `jina-embeddings-v2-base-en`
+    model_name="jina-embeddings-v2-base-en", # Defaults to \`jina-embeddings-v2-base-en\`
     api_key="YOUR_JINAAI_API_KEY" # Provide your Jina AI API key
 )
 ```

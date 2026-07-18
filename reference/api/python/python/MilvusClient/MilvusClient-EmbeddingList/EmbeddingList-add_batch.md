@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add_batch() | Python | MilvusClient"
 slug: /python/python/EmbeddingList-add_batch
+sidebar_key: python/EmbeddingList-add_batch
 sidebar_label: "add_batch()"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: TJundbM8FoU8UKxczaMcix3QnHb
 sidebar_position: 2
 keywords: 
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
-  - Zilliz
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
   - add_batch()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,9 @@ import Admonition from '@theme/Admonition';
 
 # add_batch()
 
-This operation adds multiple vector embeddings to the current **EmbeddingList** instance.
+This operation adds multiple vector embeddings to the current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 add_batch(
@@ -46,15 +46,15 @@ add_batch(
 
 - **embeddings** (*List[np.ndarray], np.ndarray*) - 
 
-    The vector embeddings that are to be added to the current **EmbeddingList** instance.
+    The vector embeddings that are to be added to the current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance.
 
 **RETURN TYPE:**
 
-*EmbeddingList*
+*[EmbeddingList](./MilvusClient-EmbeddingList)*
 
 **RETURNS:**
 
-The current **EmbeddingList** instance itself for method chaining
+The current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance itself for method chaining
 
 **EXCEPTIONS:**
 
@@ -62,7 +62,7 @@ The current **EmbeddingList** instance itself for method chaining
 
     This exception will be raised if the provided vector embeddings do not match the existing ones in dimensionality.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import EmbeddingList

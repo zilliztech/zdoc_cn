@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "wait_for_compaction_completed() | Python | ORM"
 slug: /python/python/Collection-wait_for_compaction_completed
+sidebar_key: python/Collection-wait_for_compaction_completed
 sidebar_label: "wait_for_compaction_completed()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: VFKIdx0tDoeAzSx4Ud6c3u5Snsf
 sidebar_position: 29
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - ANNS
+  - Vector search
+  - knn algorithm
+  - HNSW
   - zilliz
   - zilliz cloud
   - cloud
   - wait_for_compaction_completed()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation blocks the current session until the compaction request is completed.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 wait_for_compaction_completed(
@@ -61,7 +61,7 @@ None
 
     This arises when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -84,7 +84,7 @@ collection.compact()
 collection.wait_for_compaction_completed()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `wait_for_compaction_completed()`:
 

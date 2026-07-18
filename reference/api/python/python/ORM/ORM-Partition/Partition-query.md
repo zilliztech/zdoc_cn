@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "query() | Python | ORM"
 slug: /python/python/Partition-query
+sidebar_key: python/Partition-query
 sidebar_label: "query()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: N97pdfkjlo9j61xrtL2cbB79nKe
 sidebar_position: 8
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - query()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation conducts a query on the entity scalar field(s) with a boolean expression.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 query(
@@ -72,9 +72,11 @@ query(
 
         <Admonition type="info" icon="📘" title="What is the consistency level?">
 
-        <p>Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.</p>
-        <p>Zilliz Cloud provides three consistency levels: <strong>Strong</strong>, <strong>Bounded Staleness</strong>, and <strong>Eventually</strong>, with <strong>Bounded Staleness</strong> set as the default.</p>
-        <p>You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.</p>
+        Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
+
+        Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
+
+        You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
 
         </Admonition>
 
@@ -86,7 +88,7 @@ query(
 
         <Admonition type="info" icon="📘" title="Notes">
 
-        <p>This parameter is valid when the default consistency level applies.</p>
+        This parameter is valid when the default consistency level applies.
 
         </Admonition>
 
@@ -98,7 +100,7 @@ query(
 
         <Admonition type="info" icon="📘" title="Notes">
 
-        <p>This parameter is valid when a consistency level other than the default one applies.</p>
+        This parameter is valid when a consistency level other than the default one applies.
 
         </Admonition>
 
@@ -132,7 +134,7 @@ A list of the query results.
 
     This arises when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, Partition, CollectionSchema, FieldSchema, DataType
@@ -204,7 +206,7 @@ res = partition.query(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `query()`:
 

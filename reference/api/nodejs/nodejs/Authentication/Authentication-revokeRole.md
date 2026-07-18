@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "revokeRole() | Node.js"
 slug: /node/node/Authentication-revokeRole
+sidebar_key: node/Authentication-revokeRole
 sidebar_label: "revokeRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: W7XJdZDHnoFECDxCYoMcrZqrnnd
 sidebar_position: 27
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
   - revokeRole()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation revokes the role assigned to a user.
 
 ```javascript
-revokeRole(data): Promise<ResStatus>
+await milvusClient.revokeRole(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.revokeRole({
+await milvusClient.revokeRole({
    username: string,
    roleName: string，
    timeout?: number
@@ -93,10 +93,10 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-milvusClient.removeUserFromRole({
+await milvusClient.removeUserFromRole({
    username: 'my',
    roleName: 'myrole'
  });

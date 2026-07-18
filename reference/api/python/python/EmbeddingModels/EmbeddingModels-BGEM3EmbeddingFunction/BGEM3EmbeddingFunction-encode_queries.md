@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_queries() | Python"
 slug: /python/python/BGEM3EmbeddingFunction-encode_queries
+sidebar_key: python/BGEM3EmbeddingFunction-encode_queries
 sidebar_label: "encode_queries()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: UehMdosTGoZVzaxdTcUcpy1ynef
 sidebar_position: 3
 keywords: 
-  - knn algorithm
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud
   - encode_queries()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in a list of query strings and encodes each query into a vector embedding.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_queries(
@@ -63,15 +63,15 @@ When initializing [BGEM3EmbeddingFunction](./EmbeddingModels-BGEM3EmbeddingFunct
 
     This exception will be raised when the FlagEmbedding module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model
 
 bge_m3_ef = model.hybrid.BGEM3EmbeddingFunction(
-    model_name='BAAI/bge-m3', # Specify t`he model name
+    model_name='BAAI/bge-m3', # Specify t\`he model name
     device='cpu', # Specify the device to use, e.g., 'cpu' or 'cuda:0'
-    use_fp16=False # Whether to use fp16. `False` for `device='cpu'`.
+    use_fp16=False # Whether to use fp16. \`False\` for \`device='cpu'\`.
 )
 
 queries = ["When was artificial intelligence founded", 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "load() | Python | ORM"
 slug: /python/python/Partition-load
+sidebar_key: python/Partition-load
 sidebar_label: "load()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: TWxddf6iboyM15xK4Kzc8ASknRb
 sidebar_position: 6
 keywords: 
-  - Audio search
-  - what is semantic search
-  - Embedding model
-  - image similarity search
+  - managed milvus
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
   - zilliz
   - zilliz cloud
   - cloud
   - load()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation loads the data of the current partition into memory.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Using the <strong>partition_names</strong> parameter in the <strong>load()</strong> method of a <strong>Collection</strong> object is equivalent to using the <strong>load()</strong> method of corresponding <strong>Partition</strong> objects.</p>
+Using the **partition_names** parameter in the **load()** method of a **[Collection](./ORM-Collection)** object is equivalent to using the **load()** method of corresponding **[Partition](./ORM-Partition)** objects.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 load(
@@ -72,7 +72,7 @@ load(
 
     This arises when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, Partition, CollectionSchema, FieldSchema, DataType
@@ -103,7 +103,7 @@ partition.load(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `load()`:
 

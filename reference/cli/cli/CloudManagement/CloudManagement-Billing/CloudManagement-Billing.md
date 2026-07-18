@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to billing and payment management. | Cloud"
 type: folder
-token: ItZcfBNHclfCEgdfAYacPWDEnzO
+token: VQMkfU9xUl3ywPdBTJRcoP5Vnkb
 sidebar_position: 2
 sidebar_label: "Billing"
 keywords: 
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
-  - Vector retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - Billing
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

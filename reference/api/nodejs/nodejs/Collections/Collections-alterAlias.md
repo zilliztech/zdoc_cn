@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "alterAlias() | Node.js"
 slug: /node/node/Collections-alterAlias
+sidebar_key: node/Collections-alterAlias
 sidebar_label: "alterAlias()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DXTLdtFCso7fo6xJHShc7XLpngh
 sidebar_position: 1
 keywords: 
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - cosine distance
-  - what is a vector database
-  - vectordb
-  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - alterAlias()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation reassigns the alias of one collection to another.
 
 ```javascript
-alterAlias(data): Promise<ResStatus>
+await milvusClient.alterAlias(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.alterAlias({
+await milvusClient.alterAlias({
    alias: string,
    db_name: string
    collection_name: string,
@@ -58,19 +58,23 @@ milvusClient.alterAlias({
 
     <Admonition type="info" icon="📘" title="What is a collection alias?">
 
-    <p>A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. </p>
-    <p>On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.</p>
-    <p>Below is an example of reassigning the alias of one collection to another:</p>
-    <p>Suppose there are two collections: <code>collection_1</code> and <code>collection_2</code>. There is also a collection alias named <code>bob</code>, which was originally assigned to <code>collection_1</code>:</p>
-    <ul>
-    <li><p><code>collection_1</code>'s alias = ["bob"]</p></li>
-    <li><p><code>collection_2</code>'s alias = []</p></li>
-    </ul>
-    <p>After calling <code>alter_alias("collection_2", "bob")</code>:</p>
-    <ul>
-    <li><p><code>collection_1</code>'s alias = []</p></li>
-    <li><p><code>collection_2</code>'s alias = ["bob"]</p></li>
-    </ul>
+    A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
+
+    On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
+
+    Below is an example of reassigning the alias of one collection to another:
+
+    Suppose there are two collections: `collection_1` and `collection_2`. There is also a collection alias named `bob`, which was originally assigned to `collection_1`:
+
+    - `collection_1`'s alias = ["bob"]
+
+    - `collection_2`'s alias = []
+
+    After calling `alter_alias("collection_2", "bob")`:
+
+    - `collection_1`'s alias = []
+
+    - `collection_2`'s alias = ["bob"]
 
     </Admonition>
 
@@ -116,10 +120,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.alterAlias({
    alias: 'my_collection_alias',
    collection_name: 'my_collection',

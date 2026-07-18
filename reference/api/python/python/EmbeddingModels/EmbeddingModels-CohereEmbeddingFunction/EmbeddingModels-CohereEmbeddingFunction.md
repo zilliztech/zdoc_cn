@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "CohereEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-CohereEmbeddingFunction
+sidebar_key: python/EmbeddingModels-CohereEmbeddingFunction
 sidebar_label: "CohereEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JzDLdkv3QoCY8OxKpBjc5zsmnId
 sidebar_position: 1
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
   - CohereEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ CohereEmbeddingFunction is a class in pymilvus that handles encoding text into e
 pymilvus.model.dense.CohereEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a CohereEmbeddingFunction for common use cases.
 
@@ -98,7 +98,7 @@ CohereEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [Embed](https://docs.cohere.com/reference/embed).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import CohereEmbeddingFunction

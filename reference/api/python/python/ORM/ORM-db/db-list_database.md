@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_database() | Python | ORM"
 slug: /python/python/db-list_database
+sidebar_key: python/db-list_database
 sidebar_label: "list_database()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PV1PdliWZooAB8xAE5scZO2Nn6K
 sidebar_position: 3
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - Chroma vs Milvus
+  - Annoy vector search
+  - milvus
+  - Zilliz
   - zilliz
   - zilliz cloud
   - cloud
   - list_database()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -40,7 +40,7 @@ list_database(
 )
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 from pymilvs import db
@@ -70,7 +70,7 @@ A list of database names.
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, db
@@ -86,7 +86,7 @@ db.list_database()
 # ["default", "test"]
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_database()`:
 

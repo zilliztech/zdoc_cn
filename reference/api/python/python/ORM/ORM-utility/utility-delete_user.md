@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "delete_user() | Python | ORM"
 slug: /python/python/utility-delete_user
+sidebar_key: python/utility-delete_user
 sidebar_label: "delete_user()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: E7zOdU2JpoqaU5xNYXvcAjgPnNh
 sidebar_position: 6
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
   - delete_user()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes an existing user.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 delete_user(
@@ -84,19 +84,19 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Delete an existing user
 user = utility.delete_user(user="admin", password="123456")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `delete_user()`
 

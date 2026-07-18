@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "CollectionSchema | Python | ORM"
 slug: /python/python/ORM-CollectionSchema
+sidebar_key: python/ORM-CollectionSchema
 sidebar_label: "CollectionSchema"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CmFKd9eG2oE6xmx9dIGcVPycnth
 sidebar_position: 2
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - CollectionSchema
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ A **CollectionSchema** instance represents the schema of a collection. A schema 
 class pymilvus.CollectionSchema
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs the schema of a collection by defining fields, data types, and other parameters.
 
@@ -58,7 +58,7 @@ CollectionSchema(
 
     <Admonition type="info" icon="📘" title="What is a field schema?">
 
-    <p>A field schema represents and contains metadata for a single field, while <strong>CollectionSchema</strong> ties together a list of FieldSchema objects to define the full schema.</p>
+    A field schema represents and contains metadata for a single field, while **CollectionSchema** ties together a list of FieldSchema objects to define the full schema.
 
     </Admonition>
 
@@ -84,7 +84,7 @@ CollectionSchema(
 
         <Admonition type="info" icon="📘" title="What is a dynamic field?">
 
-        <p>If the data being inserted into the target collection includes fields that are not defined in the collection's schema, those fields will be saved in a dynamic field as key-value pairs.</p>
+        If the data being inserted into the target collection includes fields that are not defined in the collection's schema, those fields will be saved in a dynamic field as key-value pairs.
 
         </Admonition>
 
@@ -108,9 +108,11 @@ CollectionSchema(
 
         <Admonition type="info" icon="📘" title="What is a partition key?">
 
-        <p>Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.</p>
-        <p>This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.</p>
-        <p>As an alternative, you can set <strong>partition<em>key</em>field</strong> when creating a <strong>CollectionSchema</strong> object.</p>
+        Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.
+
+        This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.
+
+        As an alternative, you can set **partition_key_field** when creating a **CollectionSchema** object.
 
         </Admonition>
 
@@ -152,7 +154,7 @@ A **CollectionSchema** object.
 
     - This exception will be raised if the **auto_id** parameter has been set but the value is not a boolean.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType
@@ -177,7 +179,7 @@ schema = CollectionSchema(
 )
 ```
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the `CollectionSchema` class:
 

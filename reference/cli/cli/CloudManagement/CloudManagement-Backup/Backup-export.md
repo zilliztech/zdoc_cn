@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "export | Cloud"
 slug: /cli/cli/Backup-export
+sidebar_key: cli/Backup-export
 sidebar_label: "export"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation exports a backup to external storage. | Cloud"
 type: docx
-token: A4XEdRBSZoBVotxjz8Bca39Dnbf
+token: MqCqdE8mqotzaXxk8nfcOvHinX0
 sidebar_position: 5
 keywords: 
-  - open source vector database
-  - Vector index
-  - vector database open source
-  - open source vector db
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
+  - approximate nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - export
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation exports a backup to external storage.
 
-## Description
+## Description\{#description}
 
 In Zilliz Cloud, a backup is a copy of your data that enables you to restore the entire cluster or specific collections in the event of data loss or system failure.
 
@@ -41,11 +41,11 @@ You can export backup files to an integrated storage service identified by its i
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Usage
+## Usage\{#usage}
 
 ```bash
 zilliz backup export
@@ -106,7 +106,7 @@ zilliz backup export
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz backup export --cluster-id in01-xxxx \

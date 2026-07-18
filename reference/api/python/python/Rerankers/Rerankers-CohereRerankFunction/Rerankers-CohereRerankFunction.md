@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "CohereRerankFunction | Python"
 slug: /python/python/Rerankers-CohereRerankFunction
+sidebar_key: python/Rerankers-CohereRerankFunction
 sidebar_label: "CohereRerankFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: GAWOdft83oZPvHxtxzZcjrQunGg
 sidebar_position: 1
 keywords: 
-  - Vectorization
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
+  - rag vector database
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
   - zilliz
   - zilliz cloud
   - cloud
   - CohereRerankFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.reranker.CohereRerankFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a CohereRerankFunction for common use cases.
 
@@ -58,14 +58,14 @@ CohereRerankFunction(
 
     The API key for accessing the Cohere API. For information on how to create an API key, refer to [Cohere dashboard](https://dashboard.cohere.com/api-keys).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.reranker import CohereRerankFunction
 
 # Define the rerank function
 cohere_rf = CohereRerankFunction(
-    model_name="rerank-english-v3.0",  # Specify the model name. Defaults to `rerank-english-v2.0`.
+    model_name="rerank-english-v3.0",  # Specify the model name. Defaults to \`rerank-english-v2.0\`.
     api_key=COHERE_API_KEY # Replace with your Cohere API key
 )
 ```

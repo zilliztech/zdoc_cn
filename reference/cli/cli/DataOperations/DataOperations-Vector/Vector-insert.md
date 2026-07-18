@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "insert | Cloud"
 slug: /cli/cli/Vector-insert
+sidebar_key: cli/Vector-insert
 sidebar_label: "insert"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation inserts entities into a collection. | Cloud"
 type: docx
-token: O4dddYwASo2Rx9xXi3Ccn9dcnSc
+token: IyKzdBU2zoXcNUxvmhvcJCISnJe
 sidebar_position: 4
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - insert
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation inserts entities into a collection.
 
-## Description
+## Description\{#description}
 
 When inserting or upserting data, ensure the data structure matches the schema of the target collection. You can either
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz vector insert
@@ -51,7 +51,7 @@ zilliz vector insert
 [--body <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -144,7 +144,7 @@ zilliz vector insert
 
     Indicates the name of the partition to insert data into.
 
-## Example
+## Example\{#example}
 
 ```bash
 # Insert with inline JSON

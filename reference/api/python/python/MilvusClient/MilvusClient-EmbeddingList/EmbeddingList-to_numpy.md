@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "to_numpy() | Python | MilvusClient"
 slug: /python/python/EmbeddingList-to_numpy
+sidebar_key: python/EmbeddingList-to_numpy
 sidebar_label: "to_numpy()"
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
 beta: false
 notebook: false
-description: "This operation converts the current EmbeddingList instance into a two-dimensional (2D) NumPy array containing all vector embeddings. | Python | MilvusClient"
+description: "This operation converts the current EmbeddingList NumPy array containing all vector embeddings. | Python | MilvusClient"
 type: docx
 token: XQAQd2tPKon4JgxKEoAc0CCHnUg
 sidebar_position: 6
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - to_numpy()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,9 @@ import Admonition from '@theme/Admonition';
 
 # to_numpy()
 
-This operation converts the current **EmbeddingList** instance into a two-dimensional (2D) NumPy array containing all vector embeddings.
+This operation converts the current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance into a two-dimensional (2D) NumPy array containing all vector embeddings.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 to_numpy()
@@ -51,9 +51,9 @@ A 2D NumPy array containing all vector embeddings in the shape **(num_embeddings
 
 - **ValueError**:
 
-    This exception will be raised if the current **EmbeddingList** instance is empty.
+    This exception will be raised if the current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance is empty.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import EmbeddingList

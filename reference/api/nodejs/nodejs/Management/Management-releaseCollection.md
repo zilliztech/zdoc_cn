@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "releaseCollection() | Node.js"
 slug: /node/node/Management-releaseCollection
+sidebar_key: node/Management-releaseCollection
 sidebar_label: "releaseCollection()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: UxOXdeKF1oOIBuxTjPhcKBtPnRb
 sidebar_position: 20
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - k nearest neighbor algorithm
+  - ANNS
+  - Vector search
+  - knn algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - releaseCollection()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation releases the data of a specific collection from memory.
 
 ```javascript
-releaseCollection(data): Promise<ResStatus>
+await milvusClient.releaseCollection(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.releaseCollection({ 
+await milvusClient.releaseCollection({ 
     db_name: string,
     collection_name: 'my_collection',
     timeout?: number 
@@ -91,10 +91,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.releaseCollection({ collection_name: 'my_collection' });
 ```
 

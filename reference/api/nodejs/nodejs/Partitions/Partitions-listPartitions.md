@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "listPartitions() | Node.js"
 slug: /node/node/Partitions-listPartitions
+sidebar_key: node/Partitions-listPartitions
 sidebar_label: "listPartitions()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: IvnLd6nXooRR6NxM9jdcDxCHnhh
 sidebar_position: 5
 keywords: 
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
-  - cosine distance
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
   - listPartitions()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -37,14 +37,14 @@ This operation lists the partitions in a specified collection.
 listPartitions(data): Promise<ShowPartitionsResponse>
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
 milvusClient.listPartitions({
     db_name: string,
     collection_name: string,
-    timeout?: number,
-    type?: ShowPartitionsType
+    type?: ShowPartitionsType,
+    timeout?: number
  })
 ```
 
@@ -60,21 +60,13 @@ milvusClient.listPartitions({
 
     The name of an existing collection.
 
+- **type** (*ShowPartitionsType*) -
+
+     Whether to list all partitions or just the loaded one. Possible values are **All** and **Loaded**.
+
 - **timeout** (*number*)  
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
-
-- **type** (*ShowPartitionsType*) - 
-
-    Determines whether to list all partitions or only the loaded ones. A **ShowPartitionsType** has the following values:
-
-    - **All** = 0
-
-        Indicates that all partitions are to be listed.
-
-    - **Loaded** = 1
-
-        Indicates that only the loaded partitions are to be listed.
 
 **RETURNS** *Promise\<ShowPartitionsResponse>*
 
@@ -122,7 +114,7 @@ This method returns a promise that resolves to a **ShowPartitionsResponse** obje
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 new milvusClient(MILUVS_ADDRESS).listPartitions({

@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to authentication. | Cloud"
 type: folder
-token: PXh2fHhrulidp6dvqn2cORWSnwe
+token: NORefWujnlbXKSdmo1tclDHdn6g
 sidebar_position: 2
 sidebar_label: "Auth"
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
   - zilliz
   - zilliz cloud
   - cloud
   - Auth
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_database_properties() | Python | MilvusClient"
 slug: /python/python/Database-drop_database_properties
+sidebar_key: python/Database-drop_database_properties
 sidebar_label: "drop_database_properties()"
 added_since: v2.5.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops the setting of the specified properties. | Python | MilvusClient"
 type: docx
-token: UPVjdLtz1ogFeKxP45wcqyKincc
+token: AdSXdtNDsoTMnJx1QoGcSsnZnWd
 sidebar_position: 5
 keywords: 
-  - Machine Learning
-  - RAG
-  - NLP
-  - Neural Network
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
+  - llm-as-a-judge
   - zilliz
   - zilliz cloud
   - cloud
   - drop_database_properties()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation drops the setting of the specified properties.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated clusters.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop_database_properties(
@@ -102,7 +102,7 @@ drop_database_properties(
 
 - `MilvusException` - Raised if any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

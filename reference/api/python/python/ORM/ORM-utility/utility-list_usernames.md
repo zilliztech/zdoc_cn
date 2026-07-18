@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_usernames() | Python | ORM"
 slug: /python/python/utility-list_usernames
+sidebar_key: python/utility-list_usernames
 sidebar_label: "list_usernames()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: RXi3dgtNYogU0cxmTsgcdT72nsc
 sidebar_position: 29
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
   - list_usernames()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists the names of all existing users.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_usernames(
@@ -68,19 +68,19 @@ A list that contains the names of all existing users.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # List all existing usernames
 users = utility.list_usernames()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_usernames()`
 

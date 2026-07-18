@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/BGEM3EmbeddingFunction-__call__
+sidebar_key: python/BGEM3EmbeddingFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: K7qWdSwtNo976VxcvopczGLjnLf
 sidebar_position: 4
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,7 +35,7 @@ This operation in [BGEM3EmbeddingFunction](./EmbeddingModels-BGEM3EmbeddingFunct
 
 The **\_\_call\_\_()** method of BGEM3EmbeddingFunction shares the same functionality as [encode_documents()](./BGEM3EmbeddingFunction-encode_documents) and [encode_queries()](./BGEM3EmbeddingFunction-encode_queries).
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -69,16 +69,16 @@ When initializing [BGEM3EmbeddingFunction](./EmbeddingModels-BGEM3EmbeddingFunct
 
     This exception will be raised when the FlagEmbedding module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model
 
 # Create a BGEM3EmbeddingFunction instance
 bge_m3_ef = model.hybrid.BGEM3EmbeddingFunction(
-    model_name='BAAI/bge-m3', # Specify t`he model name
+    model_name='BAAI/bge-m3', # Specify t\`he model name
     device='cpu', # Specify the device to use, e.g., 'cpu' or 'cuda:0'
-    use_fp16=False # Whether to use fp16. `False` for `device='cpu'`.
+    use_fp16=False # Whether to use fp16. \`False\` for \`device='cpu'\`.
 )
 
 docs = [

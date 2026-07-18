@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_compaction_state() | Python | ORM"
 slug: /python/python/Collection-get_compaction_state
+sidebar_key: python/Collection-get_compaction_state
 sidebar_label: "get_compaction_state()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: AXcMd0xiOovIX6xR4ZrcKA15nwh
 sidebar_position: 13
 keywords: 
-  - how does milvus work
-  - Zilliz vector database
-  - Zilliz database
-  - Unstructured Data
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
   - get_compaction_state()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets the current compaction state. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 get_compaction_state(
@@ -61,7 +61,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -91,7 +91,7 @@ collection.get_compaction_state()
 #  - complete plan number: 4
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_compaction_state()`:
 

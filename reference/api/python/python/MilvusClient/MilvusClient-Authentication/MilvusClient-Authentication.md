@@ -4,23 +4,23 @@ slug: /python/MilvusClient-Authentication
 beta: false
 notebook: false
 added_since: v2.3.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 description: "Methods related to implement role-based access control to your resources. | Python | MilvusClient"
 type: folder
-token: W9SBfQfXUlZAXDdK6nTcop4rnFd
+token: VWo0fuUollpgQ5dnvPkcc92Mntf
 sidebar_position: 1
 sidebar_label: "Authentication"
 keywords: 
-  - Deep Learning
-  - Knowledge base
-  - natural language processing
-  - AI chatbots
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
   - zilliz
   - zilliz cloud
   - cloud
   - Authentication
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 ---
 

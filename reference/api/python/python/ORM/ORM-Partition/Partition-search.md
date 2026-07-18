@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "search() | Python | ORM"
 slug: /python/python/Partition-search
+sidebar_key: python/Partition-search
 sidebar_label: "search()"
 added_since: Inherit
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: XW72dhBuNoqNWhxUQLtcfa6Fnwd
 sidebar_position: 10
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
   - search()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,19 +33,20 @@ import Admonition from '@theme/Admonition';
 
 This operation conducts a vector similarity search with an optional scalar filtering expression.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 search(
-    data: list[list[float]], 
-    anns_field: str, 
-    param: dict, 
-    limit: int 
-    expr: str | None, 
-    partition_names: list[str] | None, 
-    output_fields: list[str] | None, 
-    timeout: float | None, 
-    round_decimal: int
+    data: list[list[float]],
+    anns_field: str,
+    param: dict,
+    limit: int
+    expr: str | None,
+    partition_names: list[str] | None,
+    output_fields: list[str] | None,
+    timeout: float | None,
+    round_decimal: int,
+    search_aggregation: Optional[SearchAggregation] = None
 )
 ```
 
@@ -129,6 +130,10 @@ search(
 
     The value defaults to **-1**, indicating that Zilliz Cloud skips rounding the calculated distances and returns the raw value.
 
+- **search_aggregation** (*Optional[SearchAggregation]*) -
+
+    Hierarchical bucket aggregation spec. Mutually exclusive with **group_by_field**. When set, **limit** is ignored and the root *SearchAggregation.size* controls top-level bucket count.
+
 **RETURN TYPE:**
 
 *SearchResult*
@@ -141,8 +146,9 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>A <strong>SearchResult</strong> object contains a list of <strong>Hits</strong> objects, each corresponding to a query vector in the search request. </p>
-    <p>A <strong>Hits</strong> object contains a list of <strong>Hit</strong> objects, each corresponding to an entity hit by the search.</p>
+    A **SearchResult** object contains a list of **Hits** objects, each corresponding to a query vector in the search request. 
+
+    A **Hits** object contains a list of **Hit** objects, each corresponding to an entity hit by the search.
 
     </Admonition>
 
@@ -199,7 +205,7 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, Partition
@@ -255,7 +261,7 @@ for hits in res:
         
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `search()`:
 

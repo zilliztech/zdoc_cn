@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "loading_progress() | Python | ORM"
 slug: /python/python/utility-loading_progress
+sidebar_key: python/utility-loading_progress
 sidebar_label: "loading_progress()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HQiHd82orov0XvxAzLWcl5xRnzc
 sidebar_position: 31
 keywords: 
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
   - loading_progress()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation returns the load progress of a specific collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 loading_progress(
@@ -88,7 +88,7 @@ The dictionary has the following keys:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import (
@@ -100,7 +100,7 @@ from pymilvus import (
     utility,
 )
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a collection
@@ -137,7 +137,7 @@ utility.loading_progress(
 ) # {loading_progress: '100%' }
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `loading_progress()`:
 

@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "compact() | Node.js"
 slug: /node/node/Management-compact
+sidebar_key: node/Management-compact
 sidebar_label: "compact()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: DCK5d56UZop0kGxpQu8cLqlvndg
 sidebar_position: 2
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - compact()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,10 +34,10 @@ import Admonition from '@theme/Admonition';
 This operation compacts and merges small segments into a larger one to save memory usage and improve search performance.
 
 ```javascript
-compact(data): Promise<CompactionResponse>
+await milvusClient.compact(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
 milvusClient.compact()
@@ -57,28 +57,28 @@ milvusClient.compact()
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise\<CompactionResponse>*
+**RETURNS** *Promise&lt;CompactionResponse&gt;*
 
-This method returns a promise that resolves to a *CompactionResponse* object.
+This method returns a promise that resolves to a **CompactionResponse** object.
 
-```javascript
+```typescript
 {
     compactionID: string,
-    status: {
-        code: number,
-        error_code: string | number,
-        reason: string
-    }
+    compactionPlanCount: number,
+    status:  ResStatus
 }
 ```
 
 **PARAMETERS:**
 
-- **compactionID** (*number*) -
+- **compactionID** (*string*) -
+The identifier of the compaction operation. Pass this value to `getCompactionState()` or `getCompactionStateWithPlans()` to poll progress.
 
-    Compaction task ID.
+- **compactionPlanCount** (*number*) -
+The number of compaction plans generated for this operation.
 
-- **status** (*ResStatus*) - 
+- **ResStatus**
+A **ResStatus** object.
 
     - **code** (*number*) -
 
@@ -86,16 +86,19 @@ This method returns a promise that resolves to a *CompactionResponse* object.
 
     - **error_code** (*string* | *number*) -
 
-        An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+        An error code that indicates an occurred error. It remains **Success** if this operation succeeds.
 
-    - **reason** (*string*) - 
+    - **reason** (*string*) -
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.compact({
       collection_name: 'my_collection',
  });

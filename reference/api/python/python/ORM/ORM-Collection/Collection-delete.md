@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "delete() | Python | ORM"
 slug: /python/python/Collection-delete
+sidebar_key: python/Collection-delete
 sidebar_label: "delete()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: TJMVdi4U2oBFnAxO95jctzVAnzg
 sidebar_position: 6
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - delete()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes entities with a boolean expression.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 delete(
@@ -111,7 +111,7 @@ A **MutationResult** object that contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -146,7 +146,7 @@ res = collection.delete("id in [ 0, 1 ]")
 
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `delete()`:
 

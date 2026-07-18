@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "load() | Python | ORM"
 slug: /python/python/Collection-load
+sidebar_key: python/Collection-load
 sidebar_label: "load()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HQDndiGwloWKIexgPCUcEZGenOh
 sidebar_position: 20
 keywords: 
-  - private llms
-  - nn search
-  - llm eval
-  - Sparse vs Dense
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
   - load()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation loads the data of the current collection into memory. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 load(
@@ -45,7 +45,7 @@ load(
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This operation is non-blocking. You can call <code>utility.wait_for_loading_complete()</code> to block the current process.</p>
+This operation is non-blocking. You can call `utility.wait_for_loading_complete()` to block the current process.
 
 </Admonition>
 
@@ -75,11 +75,11 @@ load(
 
 <Admonition type="danger" icon="🚧" title="Warning">
 
-<p>If you try to load a collection that is not indexed, you will receive a <strong>MilvusException</strong>.</p>
+If you try to load a collection that is not indexed, you will receive a **MilvusException**.
 
 </Admonition>
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -126,7 +126,7 @@ collection.load(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `load()`:
 

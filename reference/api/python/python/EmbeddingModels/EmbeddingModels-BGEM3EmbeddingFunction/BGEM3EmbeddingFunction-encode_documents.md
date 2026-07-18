@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/BGEM3EmbeddingFunction-encode_documents
+sidebar_key: python/BGEM3EmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Q0rYdTPkEoRZgUx99LCcfMDUnvh
 sidebar_position: 2
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
+  - lexical search
   - zilliz
   - zilliz cloud
   - cloud
   - encode_documents()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in documents and encodes them into vector embeddings.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_documents(
@@ -63,15 +63,15 @@ When initializing [BGEM3EmbeddingFunction](./EmbeddingModels-BGEM3EmbeddingFunct
 
     This exception will be raised when the FlagEmbedding module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model
 
 bge_m3_ef = model.hybrid.BGEM3EmbeddingFunction(
-    model_name='BAAI/bge-m3', # Specify t`he model name
+    model_name='BAAI/bge-m3', # Specify t\`he model name
     device='cpu', # Specify the device to use, e.g., 'cpu' or 'cuda:0'
-    use_fp16=False # Whether to use fp16. `False` for `device='cpu'`.
+    use_fp16=False # Whether to use fp16. \`False\` for \`device='cpu'\`.
 )
 
 docs = [

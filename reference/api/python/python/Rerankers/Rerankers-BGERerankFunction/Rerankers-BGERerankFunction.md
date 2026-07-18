@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "BGERerankFunction | Python"
 slug: /python/python/Rerankers-BGERerankFunction
+sidebar_key: python/Rerankers-BGERerankFunction
 sidebar_label: "BGERerankFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: GxAZd9O9gozzhExhMHWcMnXPngh
 sidebar_position: 1
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - BGERerankFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.reranker.BGERerankFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a BGERerankFunction for common use cases.
 
@@ -73,14 +73,14 @@ BGERerankFunction(
 
     Optional. The device to use for running the model. If not specified, the model will be run on the CPU. You can specify `cpu` for the CPU and `cuda:n` for the nth GPU device.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.reranker import BGERerankFunction
 
 # Define the rerank function
 bge_rf = BGERerankFunction(
-    model_name="BAAI/bge-reranker-v2-m3",  # Specify the model name. Defaults to `BAAI/bge-reranker-v2-m3`.
+    model_name="BAAI/bge-reranker-v2-m3",  # Specify the model name. Defaults to \`BAAI/bge-reranker-v2-m3\`.
     device="cpu" # Specify the device to use, e.g., 'cpu' or 'cuda:0'
 )
 ```

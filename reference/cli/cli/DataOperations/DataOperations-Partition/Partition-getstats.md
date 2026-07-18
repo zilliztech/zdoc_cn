@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "get-stats | Cloud"
 slug: /cli/cli/Partition-getstats
+sidebar_key: cli/Partition-getstats
 sidebar_label: "get-stats"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets partition statistics. | Cloud"
 type: docx
-token: R2iYdl0Hnous6rxl5KMccADVn1c
+token: VEEzdJ5tyoaFVbxG6JvcDpULnMg
 sidebar_position: 3
 keywords: 
+  - natural language processing
   - AI chatbots
   - cosine distance
   - what is a vector database
-  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
   - get-stats
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation gets partition statistics.
 
-## Description
+## Description\{#description}
 
 The command returns the number of entities in the specified partition.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz partition get-stats
@@ -49,7 +49,7 @@ zilliz partition get-stats
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -89,7 +89,7 @@ zilliz partition get-stats
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz partition get-stats --collection my_collection --partition my_partition

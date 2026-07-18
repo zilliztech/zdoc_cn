@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "partition() | Python | ORM"
 slug: /python/python/Collection-partition
+sidebar_key: python/Collection-partition
 sidebar_label: "partition()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: SvCrdEJIdosGQYxQZhrc2OAXnpd
 sidebar_position: 21
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud
   - partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets the specified partition in the current collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 partition(
@@ -63,7 +63,7 @@ A **Partition** object. If the current collection does not have a partition of t
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -83,7 +83,7 @@ collection = Collection(
 partition = collection.partition(partition_name="test_partition")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `partition()`:
 

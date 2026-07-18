@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "search_iterator() | Python | ORM"
 slug: /python/python/Collection-search_iterator
+sidebar_key: python/Collection-search_iterator
 sidebar_label: "search_iterator()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HrnndnWtKoPuenxvsXBchF1wnnh
 sidebar_position: 26
 keywords: 
-  - k nearest neighbor algorithm
-  - ANNS
-  - Vector search
-  - knn algorithm
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
   - search_iterator()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation returns a Python iterator for you to iterate over the search results. It is useful especially when the search result contains a large volume of data.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 search_iterator(
@@ -146,7 +146,7 @@ A **SearchIterator** for you to iterate over the search result.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -219,7 +219,7 @@ while True:
 
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `search_iterator()`:
 

@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to project management. | Cloud"
 type: folder
-token: RWFvfrzqEl1BB3d3rkgctazrnqb
-sidebar_position: 6
+token: ECvTfFzKElW00pdSugdcqakXnep
+sidebar_position: 7
 sidebar_label: "Project"
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
   - zilliz
   - zilliz cloud
   - cloud
   - Project
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

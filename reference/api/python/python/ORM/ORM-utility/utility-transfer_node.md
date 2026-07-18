@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "transfer_node() | Python | ORM"
 slug: /python/python/utility-transfer_node
+sidebar_key: python/utility-transfer_node
 sidebar_label: "transfer_node()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QHcpd1aJzo5aYbxJtMXc58een4f
 sidebar_position: 39
 keywords: 
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
-  - milvus open source
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - transfer_node()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation moves a specific number of query nodes from the source resource group to the target resource group.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 transfer_node(
@@ -100,7 +100,7 @@ None.
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get the number of query nodes in the source resource group
@@ -132,7 +132,7 @@ res = utility.describe_resource_group(name="rg_01")
 res.num_available_node # 1
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `transfer_node()`:
 

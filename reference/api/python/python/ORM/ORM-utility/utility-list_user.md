@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_user() | Python | ORM"
 slug: /python/python/utility-list_user
+sidebar_key: python/utility-list_user
 sidebar_label: "list_user()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JeG6d5Sg2oPmXPxEhnyciq4snNd
 sidebar_position: 28
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud
   - list_user()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists the information of a specific user.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_user(
@@ -100,12 +100,12 @@ A **UserItem** object contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, Role, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # List the information of a specific user
@@ -119,7 +119,7 @@ users = utility.list_user(
 # - UserItem: <username:admin>, <roles:('admin',)>
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_user()`:
 

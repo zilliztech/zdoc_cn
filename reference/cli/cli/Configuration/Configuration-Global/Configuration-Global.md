@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to system management. | Cloud"
 type: folder
-token: HQ85fH0pflAopvdTHUWc1hhHnzc
+token: NYgzfcJMylBEqqd8UBMcuEWKnga
 sidebar_position: 6
 sidebar_label: "Global"
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
+  - ANNS
   - zilliz
   - zilliz cloud
   - cloud
   - Global
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "createVolume() | Java | v2"
 slug: /java/java/v2-VolumeManager-createVolume
+sidebar_key: java/v2-VolumeManager-createVolume
 sidebar_label: "createVolume()"
 added_since: false
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Efi4dCKhFoYpEZxRfWRcvFEXnBg
 sidebar_position: 1
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - createVolume()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation creates volume.
 public void createVolume(CreateVolumeRequest request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 createVolume(CreateVolumeRequest.builder()
@@ -76,7 +76,7 @@ createVolume(CreateVolumeRequest.builder()
 
 None
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.bulkwriter.VolumeManager;

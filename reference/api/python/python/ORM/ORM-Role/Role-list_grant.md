@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_grant() | Python | ORM"
 slug: /python/python/Role-list_grant
+sidebar_key: python/Role-list_grant
 sidebar_label: "list_grant()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: JXNXdQuwhoYmZQxSohNcdxtwnzh
 sidebar_position: 7
 keywords: 
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
-  - milvus lite
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
+  - Video similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - list_grant()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists the relationship between the current role and the specified object.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_grant(
@@ -117,7 +117,7 @@ A **GrantItem** object contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role
@@ -133,7 +133,7 @@ res = list_grant(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_replicas()`:
 

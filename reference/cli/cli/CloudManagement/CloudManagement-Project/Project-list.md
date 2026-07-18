@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Project-list
+sidebar_key: cli/Project-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all projects. | Cloud"
 type: docx
-token: AMQEd3tO4o7CSSxZ51NcLA2AnVc
+token: KZ5gdkIy0ojiWixSU0dc6C5KnEd
 sidebar_position: 3
 keywords: 
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
-  - openai vector db
+  - Video deduplication
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all projects.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz project list
@@ -42,7 +42,7 @@ zilliz project list
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--output, -o** (*string*) -
 
@@ -66,7 +66,7 @@ zilliz project list
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz project list

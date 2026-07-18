@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "rename_collection() | Python | MilvusClient"
 slug: /python/python/Collections-rename_collection
+sidebar_key: python/Collections-rename_collection
 sidebar_label: "rename_collection()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation renames an existing collection. | Python | MilvusClient"
 type: docx
-token: IeiIdJ71Pox2OjxMiOzczUTenud
+token: WR4qdjFUXog2JHxuJpMcWcVlnEf
 sidebar_position: 18
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
   - rename_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,13 +33,35 @@ import Admonition from '@theme/Admonition';
 
 This operation renames an existing collection.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method applies to dedicated serving clusters and on-demand compute. 
+
+- For a collection in a serving cluster, please create **[MilvusClient](./Client-MilvusClient)** with the cluster endpoint.
+
+    - **Free & Serverless**
+
+        `https://{cluster-id}.serverless.{region}.vectordb.zillizcloud.com`
+
+    - **Dedicated**
+
+        `https://{cluster-id}.{region}.vectordb.zillizcloud.com:19530`
+
+- For a collection in on-demand compute, create **[MilvusClient](./Client-MilvusClient)** with the project endpoints.
+
+    `https://{project-id}.{region}.api.zillizcloud.com`
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 rename_collection(
     old_name: str,
     new_name: str,
-    timeout: Optional[float] = None
+    target_db: Optional[str] = "",
+    timeout: Optional[float] = None,
+    **kwargs,
 ) -> None
 ```
 
@@ -61,11 +83,13 @@ rename_collection(
 
     Setting this to the value of **old_name** results in a **MilvusException**.
 
+- **target_db** (*Optional[str]*) -
+
+    The name of the target database to which the collection will be moved. Defaults to an empty string, which means the collection stays in the current database.
+
 - **timeout** (*float* | *None*) -
 
-    The timeout duration for this operation. 
-
-    Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+    The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
 **RETURN TYPE:**
 
@@ -81,45 +105,32 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
 
-# 1. Set up a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
-    token="user:password"
+    uri="YOUR_CLUSTER_ENDPOINT",
+    token="YOUR_CLUSTER_TOKEN"
 )
 
-# 2. Create a collection
+# Create a collection
 client.create_collection(
     collection_name="test_collection",
     dimension=5
 )
 
-# 3. Rename the collection
+# Rename the collection
 client.rename_collection(
     old_name="test_collection",
     new_name="test_collection_renamed"
 )
+
+# Move collection to another database
+client.rename_collection(
+    old_name="test_collection_renamed",
+    new_name="test_collection",
+    target_db="my_database"
+)
 ```
-
-## Related methods
-
-- [create_collection()](./Collections-create_collection)
-
-- [create_schema()](./Collections-create_schema)
-
-- [describe_collection()](./Collections-describe_collection)
-
-- [drop_collection()](./Collections-drop_collection)
-
-- [get_collection_stats()](./Collections-get_collection_stats)
-
-- [has_collection()](./Collections-has_collection)
-
-- [list_collections()](./Collections-list_collections)
-
-- [DataType](./Collections-DataType)
-

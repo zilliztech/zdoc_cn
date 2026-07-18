@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to data operations. | Cloud"
 type: folder
-token: NCdLfrAg5lUS2DdG0QOcGGMFnHh
+token: Ag0Rf5tHcl6Wp7d37lBcUE8LnMg
 sidebar_position: 3
 sidebar_label: "Data Operations"
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - Data Operations
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

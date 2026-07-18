@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "addCollectionField() | Node.js"
 slug: /node/node/Collections-addCollectionField
+sidebar_key: node/Collections-addCollectionField
 sidebar_label: "addCollectionField()"
 added_since: v2.6.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation adds a new scalar field to an existing collection without recreating it. The field becomes available almost immediately with minimal delay due to internal schema synchronization. | Node.js"
 type: docx
-token: JqOJdOA6Dooy2cxAXTkcQpBEnyk
+token: BKqIdIm0cop2s0xYjtQcSZL5nth
 sidebar_position: 19
 keywords: 
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
   - addCollectionField()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,19 +34,19 @@ import Admonition from '@theme/Admonition';
 This operation adds a new scalar field to an existing collection without recreating it. The field becomes available almost immediately with minimal delay due to internal schema synchronization.
 
 ```javascript
-addCollectionField(data: AddCollectionFieldReq): Promise<ResStatus>
+await milvusClient.addCollectionField(data: AddCollectionFieldReq)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>If the collection has the dynamic field enabled and you add a static field with the same name as an existing dynamic field key, the static field will mask the dynamic field key. The original dynamic values remain accessible via the <code>$meta['field_name']</code> syntax.</p>
+If the collection has the dynamic field enabled and you add a static field with the same name as an existing dynamic field key, the static field will mask the dynamic field key. The original dynamic values remain accessible via the `$meta['field_name']` syntax.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.addCollectionField({
+await milvusClient.addCollectionField({
     collection_name: string,
     db_name?: string,
     field: FieldType,
@@ -185,6 +185,10 @@ milvusClient.addCollectionField({
 
                 Lists filters to refine tokens produced by the tokenizer, with options for built-in filters and custom filters. For more information, refer to [Alphanumonly Filter](https://milvus.io/docs/alphanumonly-filer.md) and others.
 
+    - **external_field** (*string*) -
+
+        The name of the field in the external source file that this field maps to. This parameter applies to external collections.
+
 - **timeout** (*number*) -  
 
     The timeout duration for this operation. Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
@@ -215,7 +219,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
 const milvusClient = new MilvusClient(MILVUS_ADDRESS);

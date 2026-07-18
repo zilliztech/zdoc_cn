@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "using_database() | Python | ORM"
 slug: /python/python/db-using_database
+sidebar_key: python/db-using_database
 sidebar_label: "using_database()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: GXXTd7JIgoUKhzxiI6ncWtwjnVc
 sidebar_position: 4
 keywords: 
-  - HNSW
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud
   - using_database()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation sets a database as the default for the current connection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 A Milvus cluster ships with a default database named **default**. All collection operations are performed within the default database. You can use this method to change the default database.
 
@@ -68,7 +68,7 @@ None
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, db
@@ -85,7 +85,7 @@ db.using_database("test")
 conn = connections.connect(host="127.0.0.1", port=19530, db_name="test")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `using_database()`:
 

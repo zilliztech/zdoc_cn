@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "describe() | Python | ORM"
 slug: /python/python/Collection-describe
+sidebar_key: python/Collection-describe
 sidebar_label: "describe()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: EZwsd887JojFjLxbMByckhW0nxg
 sidebar_position: 7
 keywords: 
-  - nn search
-  - llm eval
-  - Sparse vs Dense
-  - Dense vector
+  - ANN Search
+  - What are vector embeddings
+  - vector database tutorial
+  - how do vector databases work
   - zilliz
   - zilliz cloud
   - cloud
   - describe()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation describes the current collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 describe(timeout: float | None)
@@ -164,7 +164,7 @@ A dictionary that contains detailed information about the specified collection.
 
     This arises when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -218,7 +218,7 @@ collection.describe()
 # }
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 - [drop()](./Collection-drop)
 

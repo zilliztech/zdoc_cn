@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_database() | Python | ORM"
 slug: /python/python/db-drop_database
+sidebar_key: python/db-drop_database
 sidebar_label: "drop_database()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Y7pOdKR4MoqmvVxcS1TcjqUynMc
 sidebar_position: 2
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud
   - drop_database()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops a database using the provided database name.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop_database(
@@ -71,7 +71,7 @@ None
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, db
@@ -84,7 +84,7 @@ conn = connections.connect(
 db.drop_database(db_name="test")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop_database()`:
 

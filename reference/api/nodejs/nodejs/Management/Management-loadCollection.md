@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "loadCollection() | Node.js"
 slug: /node/node/Management-loadCollection
+sidebar_key: node/Management-loadCollection
 sidebar_label: "loadCollection()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LoNvdRK80oWllFxV0H6co0HrnBe
 sidebar_position: 17
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - zilliz
   - zilliz cloud
   - cloud
   - loadCollection()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation loads the data of a specific collection into memory.
 
 ```javascript
-loadCollection(data): Promise<ResStatus>
+await milvusClient.loadCollection(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.loadCollection({ 
+await milvusClient.loadCollection({ 
     db_name: string,
     collection_name: string,
     refresh?: boolean,
@@ -106,10 +106,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
  const resStatus = await milvusClient.loadCollection({ collection_name: 'my_collection' });
 ```
 

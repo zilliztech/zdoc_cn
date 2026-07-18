@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "has_partition() | Python | ORM"
 slug: /python/python/utility-has_partition
+sidebar_key: python/utility-has_partition
 sidebar_label: "has_partition()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: KsmadNcXRoElO2xJi5HcJO57nwb
 sidebar_position: 18
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
   - has_partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks whether a partition exists.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 has_partition(
@@ -81,12 +81,12 @@ A boolean value indicates whether the specified partition exists.
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get an existing collection
@@ -99,7 +99,7 @@ collection.has_partition(
 ) # True
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `has_partition()`:
 

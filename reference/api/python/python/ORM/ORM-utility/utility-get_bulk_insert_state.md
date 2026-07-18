@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_bulk_insert_state() | Python | ORM"
 slug: /python/python/utility-get_bulk_insert_state
+sidebar_key: python/utility-get_bulk_insert_state
 sidebar_label: "get_bulk_insert_state()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XzHhd3AdCo9DCsxawYycr69CnAb
 sidebar_position: 13
 keywords: 
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
   - get_bulk_insert_state()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 This operation returns the state of a specified bulk-insert task.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 get_bulk_insert_state(
@@ -77,10 +77,10 @@ res = utility.get_bulk_insert_state(task_id=task_id)
 
 RETURN TYPE:
 
-*BulkInsertState*
+*[BulkInsertState](./utility-BulkInsertState)*
 
 **RETURNS:**
-A **BulkInsertState** that contains information about the state of the specified bulk-insert task.
+A **[BulkInsertState](./utility-BulkInsertState)** that contains information about the state of the specified bulk-insert task.
 
 ```python
 ├── BulkInsertState
@@ -104,7 +104,7 @@ A **BulkInsertState** that contains information about the state of the specified
 │   └── collection_name
 ```
 
-A **BulkInsertState** object has the following fields
+A **[BulkInsertState](./utility-BulkInsertState)** object has the following fields
 
 - **task_id** (*int*)
 
@@ -162,11 +162,11 @@ A **BulkInsertState** object has the following fields
 
         The names of the files involved in the current bulk-insert task in a comma-separated string.
 
-    - **collection** (*str*)
+    - **[collection](./ORM-Collection)** (*str*)
 
         The name of the target collection.
 
-    - **partition** (*str*)
+    - **[partition](./ORM-Partition)** (*str*)
 
         The name of the target partition.
 
@@ -212,12 +212,12 @@ A **BulkInsertState** object has the following fields
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Bulk-insert data
@@ -239,7 +239,7 @@ res = utility.get_bulk_insert_state(task_id=task_id)
 # >
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_bulk_insert_state()`:
 

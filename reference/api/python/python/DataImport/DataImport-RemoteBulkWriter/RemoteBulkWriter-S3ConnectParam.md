@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "S3ConnectParam | Python"
 slug: /python/python/RemoteBulkWriter-S3ConnectParam
+sidebar_key: python/RemoteBulkWriter-S3ConnectParam
 sidebar_label: "S3ConnectParam"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CSpOd0XgWoVAhzx5xbVcpCVfnPg
 sidebar_position: 5
 keywords: 
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
-  - milvus lite
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
+  - vector similarity search
   - zilliz
   - zilliz cloud
   - cloud
   - S3ConnectParam
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,20 +31,21 @@ import Admonition from '@theme/Admonition';
 
 # S3ConnectParam
 
-An **S3ConnectParam** instance sets connection parameters for a **RemoteBulkWriter** instance.
+An **S3ConnectParam** instance sets connection parameters for a **[RemoteBulkWriter](./DataImport-RemoteBulkWriter)** instance.
 
 ```python
 class pymilvus.RemoteBulkWriter.S3ConnectParam
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an **S3ConnectParam** object by a set of parameters, such as **bucket_name**, **access_key**, **secret_key**, etc.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>An <strong>S3ConnectParam</strong> object defines the parameters necessary for Zilliz Cloud to connect to an AWS-S3-compatible bucket.</p>
-<p>You need to create this object before initializing a <strong>RemoteBulkWriter</strong> object.</p>
+An **S3ConnectParam** object defines the parameters necessary for Zilliz Cloud to connect to an AWS-S3-compatible bucket.
+
+You need to create this object before initializing a **[RemoteBulkWriter](./DataImport-RemoteBulkWriter)** object.
 
 </Admonition>
 
@@ -123,11 +124,11 @@ connect_param = RemoteBulkWriter.S3ConnectParam(
 
 **RETURN TYPE:**
 
-*RemoteBulkWriter*
+*[RemoteBulkWriter](./DataImport-RemoteBulkWriter)*
 
 **RETURNS:**
 
-A **RemoteBulkWriter** object.
+A **[RemoteBulkWriter](./DataImport-RemoteBulkWriter)** object.
 
 **EXCEPTIONS:**
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe-policy | Cloud"
 slug: /cli/cli/Backup-describepolicy
+sidebar_key: cli/Backup-describepolicy
 sidebar_label: "describe-policy"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation describes the backup policy for a cluster. | Cloud"
 type: docx
-token: L7cCdeeP2oszbnxQE5ccCpIJnGb
+token: WcQadTMuCo9voCxPT86cxFzFnkf
 sidebar_position: 4
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
   - zilliz
   - zilliz cloud
   - cloud
   - describe-policy
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation describes the backup policy for a cluster.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud allows you to enable **automatic backups** for your clusters, helping ensure data recovery in case of unexpected issues. Automatic backups apply to the **entire cluster**—backing up individual collections automatically is not supported.
 
@@ -41,11 +41,11 @@ You can run this command to learn about the settings of the current automatic ba
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This feature is available only to <strong>Dedicated</strong> clusters.</p>
+This feature is available only to **Dedicated** clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz backup describe-policy
@@ -55,7 +55,7 @@ zilliz backup describe-policy
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--cluster-id** (*string*) -
 
@@ -87,7 +87,7 @@ zilliz backup describe-policy
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz backup describe-policy --cluster-id in01-xxxxxxxxxxxx

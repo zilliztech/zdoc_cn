@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_connections() | Python | ORM"
 slug: /python/python/Connections-list_connections
+sidebar_key: python/Connections-list_connections
 sidebar_label: "list_connections()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DyPldeRNXo4nMqxQeE0cMnd2nEf
 sidebar_position: 7
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
+  - Agentic RAG
   - zilliz
   - zilliz cloud
   - cloud
   - list_connections()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation returns a list of all connection names and handler objects.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_connections()
@@ -55,7 +55,7 @@ A list of all connection names and handler objects.
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections
@@ -70,7 +70,7 @@ connections.list_connections()
 # [('default', <pymilvus.client.grpc_handler.GrpcHandler at 0x14713b940>)]
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_connections()`:
 

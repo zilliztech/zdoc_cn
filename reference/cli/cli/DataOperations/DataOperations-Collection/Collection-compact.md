@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "compact | Cloud"
 slug: /cli/cli/Collection-compact
+sidebar_key: cli/Collection-compact
 sidebar_label: "compact"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation compacts collection segments to optimize storage. | Cloud"
 type: docx
-token: KYOydyGRaoMchUxkS0ucd8VUnve
+token: PgZ0dL39ho6wLbxJKANcm0jyn9b
 sidebar_position: 1
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - Vector embeddings
+  - Vector store
+  - open source vector database
+  - Vector index
   - zilliz
   - zilliz cloud
   - cloud
   - compact
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation compacts collection segments to optimize storage.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud automatically compacts collection segments at intervals. In most cases, you do not need to run this command manually unless you need to optimize storage in the collection.
 
@@ -41,7 +41,7 @@ Clustering compaction is designed to improve search performance and reduce costs
 
 Running this command without any options triggers a set of interactive prompts to help you set it up.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection compact
@@ -53,7 +53,7 @@ zilliz collection compact
 [--clustering]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -83,7 +83,7 @@ zilliz collection compact
 
     Indicates whether to perform clustering compaction.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection compact --name my_collection

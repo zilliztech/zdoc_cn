@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to Zilliz CLI configurations | Cloud"
 type: folder
-token: FsZhfuntQlHRRQdBeXEcosCEnzf
+token: DGm8fFP8plvHz5d6sErcKcoLnRh
 sidebar_position: 2
 sidebar_label: "Configuration"
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - Configuration
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

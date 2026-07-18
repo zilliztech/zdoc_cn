@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_alias() | Python | ORM"
 slug: /python/python/utility-create_alias
+sidebar_key: python/utility-create_alias
 sidebar_label: "create_alias()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: DthMdlg8Lozw89xNz4TcBv1LnOe
 sidebar_position: 3
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - create_alias()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates an alias for an existing collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create_alias(
@@ -60,9 +60,11 @@ create_alias(
 
     <Admonition type="info" icon="📘" title="What is a collection alias?">
 
-    <p>A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. </p>
-    <p>In , a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.</p>
-    <p>Suppose there is one collection: <code>collection_1</code>. You can assign two different aliases (<code>bob</code> and <code>tom</code>) to this collection by calling <code>create_alias("collection_1", "bob")</code> and <code>create_alias("collection_1", "tom")</code>.</p>
+    A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
+
+    In , a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
+
+    Suppose there is one collection: `collection_1`. You can assign two different aliases (`bob` and `tom`) to this collection by calling `create_alias("collection_1", "bob")` and `create_alias("collection_1", "tom")`.
 
     </Admonition>
 
@@ -94,12 +96,12 @@ None
 
     This exception will be raised when this operation fails.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, Collection, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get an existing collection
@@ -118,7 +120,7 @@ utility.create_alias(collection_name="collection_1", alias="tom")
 utility.list_aliases(collection_name="collection_1") # ['bob', 'tom']
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `create_alias()`:
 

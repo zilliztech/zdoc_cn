@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "useDatabase() | Node.js"
 slug: /node/node/Database-useDatabase
+sidebar_key: node/Database-useDatabase
 sidebar_label: "useDatabase()"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: NDcldy9OLo62DLxw1a9cFSLsnYb
 sidebar_position: 6
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
+  - cosine distance
   - zilliz
   - zilliz cloud
   - cloud
   - useDatabase()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation sets the active database for the gRPC client.
 useDatabase(data?): Promise<ResStatus>
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
 milvusClient.useDatabase({
@@ -49,11 +49,11 @@ milvusClient.useDatabase({
 
 - **db_name** (*string*) -
 
-    The name of the database to use.
+    The name of the database to create.
 
-    There should be a database with the specified name. Otherwise, exceptions will occur.
+    There should be a database that has the specified name. Otherwise, exceptions will occur.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -79,7 +79,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
 const milvusClient = new milvusClient(MILUVS_ADDRESS);

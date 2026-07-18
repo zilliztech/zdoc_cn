@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "DataType | Java | v2"
 slug: /java/java/v2-Collections-DataType
+sidebar_key: java/v2-Collections-DataType
 sidebar_label: "DataType"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: RZ8idPxaho5yMoxJzGdc7QAcnNf
 sidebar_position: 10
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
   - DataType
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - None(0)
 
@@ -105,7 +105,7 @@ This is an enumeration that provides the following constants.
 
 - SparseFloatVector(104)
 
-      Sets the data type to **Sparse Vector**.
+    Sets the data type to **Sparse Vector**.
 
 - Inv8Vector(105)
 

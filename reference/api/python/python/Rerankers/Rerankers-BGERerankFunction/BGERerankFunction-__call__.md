@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
-title: "\_\_call\_\_() | Python"
+title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/BGERerankFunction-__call__
+sidebar_key: python/BGERerankFunction-__call__
 sidebar_label: "__call__()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: C2AbdIReZos7HwxiZXIcyW8nnm1
 sidebar_position: 2
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - \_\_call\_\_()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation in [BGERerankFunction](./Rerankers-BGERerankFunction) takes in a query and document strings and returns a list of `RerankResult` objects with the top k documents ranked by score.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 # Instance created
@@ -90,14 +90,14 @@ Each `RerankResult` object contains:
 
     This exception will be raised when the FlagEmbedding module is not installed.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.reranker import BGERerankFunction
 
 # Define the rerank function
 bge_rf = BGERerankFunction(
-    model_name="BAAI/bge-reranker-v2-m3",  # Specify the model name. Defaults to `BAAI/bge-reranker-v2-m3`.
+    model_name="BAAI/bge-reranker-v2-m3",  # Specify the model name. Defaults to \`BAAI/bge-reranker-v2-m3\`.
     device="cpu" # Specify the device to use, e.g., 'cpu' or 'cuda:0'
 )
 

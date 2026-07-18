@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "hasCollection() | Node.js"
 slug: /node/node/Collections-hasCollection
+sidebar_key: node/Collections-hasCollection
 sidebar_label: "hasCollection()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: FhbbdNrlNouBXJxHIdKctXVKnmf
 sidebar_position: 13
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
   - zilliz
   - zilliz cloud
   - cloud
   - hasCollection()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation checks whether a specific collection exists.
 
 ```javascript
-hasCollection(data): Promise<BoolResponse>
+await milvusClient.hasCollection(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.hasCollection({ 
+await milvusClient.hasCollection({ 
     db_name: string,
     collection_name: string,
     timeout?: number
@@ -65,24 +65,24 @@ milvusClient.hasCollection({
 
     Setting this to **None** indicates that this operation timeouts when any response returns or error occurs.
 
-**RETURNS** *Promise\<BoolResponse>*
+**RETURNS** *Promise&lt;BoolResponse&gt;*
 
 This method returns a promise that resolves to a **BoolResponse** object.
 
-```javascript
+```typescript
 {
     value: boolean,
-    status: object
+    status:  ResStatus
 }
 ```
 
 **PARAMETERS:**
 
-- **value** (*string*) - 
+- **value** (*boolean*) -
+A boolean that indicates whether the requested collection exists. It is **true** when the collection exists and **false** when it does not.
 
-    A boolean value indicating whether the specified collection exists.
-
-- **status** (*object*) -
+- **ResStatus**
+A **ResStatus** object.
 
     - **code** (*number*) -
 
@@ -90,16 +90,19 @@ This method returns a promise that resolves to a **BoolResponse** object.
 
     - **error_code** (*string* | *number*) -
 
-        An error code that indicates an occurred error. It remains **Success** if this operation succeeds. 
+        An error code that indicates an occurred error. It remains **Success** if this operation succeeds.
 
-    - **reason** (*string*) - 
+    - **reason** (*string*) -
 
         The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const res = await milvusClient.hasCollection({ collection_name: 'my_collection' });
 ```
 

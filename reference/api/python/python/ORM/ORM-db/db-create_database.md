@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_database() | Python | ORM"
 slug: /python/python/db-create_database
+sidebar_key: python/db-create_database
 sidebar_label: "create_database()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: G4Ftde3kxoHAJbxVNXncI7mpngb
 sidebar_position: 1
 keywords: 
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
-  - Serverless vector database
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - create_database()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a database using the provided database name.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create_database(
@@ -71,7 +71,7 @@ None
 
 None
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, db
@@ -84,7 +84,7 @@ conn = connections.connect(
 db.create_database(db_name="test")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `create_database()`:
 

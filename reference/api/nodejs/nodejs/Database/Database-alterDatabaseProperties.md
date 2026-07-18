@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "alterDatabaseProperties() | Node.js"
 slug: /node/node/Database-alterDatabaseProperties
+sidebar_key: node/Database-alterDatabaseProperties
 sidebar_label: "alterDatabaseProperties()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: NNWed9Vd1o7vDkxY4pncM4wYnaf
 sidebar_position: 7
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - alterDatabaseProperties()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,19 +34,19 @@ import Admonition from '@theme/Admonition';
 This operation modifies the properties of the specified database.
 
 ```javascript
-alterDatabaseProperties(data): Promise<ResStatus>
+await milvusClient.alterDatabaseProperties(data)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This method applies only to dedicated clusters.</p>
+This method applies only to dedicated clusters.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.alterDatabaseProperties({
+await milvusClient.alterDatabaseProperties({
     db_name: string,
     delete_keys: Object,
     properties: Record<string, string | number | boolean>
@@ -124,7 +124,7 @@ milvusClient.alterDatabaseProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
@@ -150,10 +150,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.alterDatabaseProperties({ 
     db_name: 'new_db',
     delete_properties: {'database.replica.number': 3} 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "get | Cloud"
 slug: /cli/cli/Vector-get
+sidebar_key: cli/Vector-get
 sidebar_label: "get"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets entities by primary key IDs. | Cloud"
 type: docx
-token: KwQLdb4UZo41g6xySjfcFtiCnl9
+token: Nez2dlNZloLWEPxBHOWcad2anLf
 sidebar_position: 2
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
   - get
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets entities by primary key IDs.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz vector get
@@ -45,7 +45,7 @@ zilliz vector get
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -89,7 +89,7 @@ zilliz vector get
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz vector get --collection my_col --id '[1, 2, 3]'

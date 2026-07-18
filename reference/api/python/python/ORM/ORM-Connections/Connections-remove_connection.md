@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "remove_connection() | Python | ORM"
 slug: /python/python/Connections-remove_connection
+sidebar_key: python/Connections-remove_connection
 sidebar_label: "remove_connection()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: L4KSdOVTEotaiyxjTddcVRDhn3E
 sidebar_position: 8
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - remove_connection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation removes the connection from the registry by the given alias and disconnects if connected.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 remove_connection(alias: str)
@@ -61,7 +61,7 @@ None
 
     This exception will be raised when the connection configuration is invalid.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections
@@ -69,7 +69,7 @@ from pymilvus import connections
 connections.remove_connection(alias="default")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `remove_connection()`:
 

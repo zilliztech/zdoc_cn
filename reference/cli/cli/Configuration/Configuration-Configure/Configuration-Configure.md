@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to configuration items management. | Cloud"
 type: folder
-token: Wqpcf6ygDlCZofdoUszcZNfxn5g
+token: LPAcfkgMhlSeEqdFJ7CcxeL3nCh
 sidebar_position: 4
 sidebar_label: "Configure"
 keywords: 
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
-  - Sparse vector
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
   - zilliz
   - zilliz cloud
   - cloud
   - Configure
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

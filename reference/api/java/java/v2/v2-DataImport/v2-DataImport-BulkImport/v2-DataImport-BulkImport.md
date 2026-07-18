@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "BulkImport | Java | v2"
 slug: /java/java/v2-DataImport-BulkImport
+sidebar_key: java/v2-DataImport-BulkImport
 sidebar_label: "BulkImport"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: NIm8dRx2Aozt4Qxv1Q6cAm3Fn97
 sidebar_position: 1
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - nearest neighbor search
+  - Agentic RAG
+  - rag llm architecture
+  - private llms
   - zilliz
   - zilliz cloud
   - cloud
   - BulkImport
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,11 +37,11 @@ A **BulkImport** instance provides methods for you to manipulate data import job
 io.milvus.bulkwriter.BulkImport
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 *None*
 
-## Public Methods
+## Public Methods\{#public-methods}
 
 A **BulkImport** instance provides the following public methods.
 

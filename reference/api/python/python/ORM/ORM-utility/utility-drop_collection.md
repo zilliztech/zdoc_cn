@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_collection() | Python | ORM"
 slug: /python/python/utility-drop_collection
+sidebar_key: python/utility-drop_collection
 sidebar_label: "drop_collection()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FHcYdN4apoI5TIx0LxScISvtn0f
 sidebar_position: 10
 keywords: 
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - drop_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops a specific collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 drop_collection(
@@ -73,12 +73,12 @@ None
 
 N/A
 
-### Examples
+### Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Drop a specific collection
@@ -87,7 +87,7 @@ utility.drop_collection(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to the `drop_collection()` method:
 

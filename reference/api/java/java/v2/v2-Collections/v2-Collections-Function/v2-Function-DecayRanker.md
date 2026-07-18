@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "DecayRanker | Java | v2"
 slug: /java/java/v2-Function-DecayRanker
+sidebar_key: java/v2-Function-DecayRanker
 sidebar_label: "DecayRanker"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QIpldgpB1oP5IYxNSSdcyRNcn1c
 sidebar_position: 2
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - DecayRanker
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ The **DecayRanker** class extends from the **Function** class and provides extra
 public class DecayRanker extends CreateCollectionReq.Function
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 This constructor initializes a new `DecayRanker` instance designed to create a decay ranker instance.
 
@@ -110,9 +110,9 @@ DecayRanker.builder()
 
 **RETURNS:**
 
- A decay ranker instance.
+A decay ranker instance.
 
-## Examples:
+## Examples:\{#examples}
 
 ```java
 import io.milvus.v2.service.collection.request.CreateCollectionReq.Function;

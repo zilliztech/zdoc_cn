@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropDatabase() | Java | v2"
 slug: /java/java/v2-Database-dropDatabase
+sidebar_key: java/v2-Database-dropDatabase
 sidebar_label: "dropDatabase()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LwqSdN6s5oZBhAxzQsxcnXswnah
 sidebar_position: 4
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - Context Window
+  - Natural language search
+  - Similarity Search
+  - multimodal RAG
   - zilliz
   - zilliz cloud
   - cloud
   - dropDatabase()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation drops a database with a name.
 public void dropDatabase(DropDatabaseReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropDatabase(DropDatabaseReq.builder()
@@ -62,7 +62,7 @@ dropDatabase(DropDatabaseReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "rename | Cloud"
 slug: /cli/cli/Collection-rename
+sidebar_key: cli/Collection-rename
 sidebar_label: "rename"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation renames a collection. | Cloud"
 type: docx
-token: Wa80d1UXco4S4jxSYKQcPzXjnVe
-sidebar_position: 12
+token: N1uadJS98ojQhixbOQacLOwknke
+sidebar_position: 13
 keywords: 
-  - Zilliz
-  - milvus vector database
-  - milvus db
-  - milvus vector db
+  - Vector search
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
   - zilliz
   - zilliz cloud
   - cloud
   - rename
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation renames a collection.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection rename
@@ -82,7 +82,7 @@ zilliz collection rename
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection rename --name old_collection --new-name new_collection

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Cluster-list
+sidebar_key: cli/Cluster-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all clusters. | Cloud"
 type: docx
-token: SGifd4eCmoxfMmxLohec5nFnn7g
+token: F2RtdzmQ0oQlWfxf7SYcT200nNf
 sidebar_position: 4
 keywords: 
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all clusters.
 
-## Description
+## Description\{#description}
 
 This command returns the following fields for each listed cluster:
 
@@ -53,7 +53,7 @@ This command returns the following fields for each listed cluster:
 
 - `status`
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz cluster list
@@ -65,7 +65,7 @@ zilliz cluster list
 [--all]
 ```
 
-## Options
+## Options\{#options}
 
 - **--page-size** (*integer*) -
 
@@ -101,7 +101,7 @@ zilliz cluster list
 
     Indicates whether to fetch all pages.
 
-## Example
+## Example\{#example}
 
 ```bash
 # List all clusters

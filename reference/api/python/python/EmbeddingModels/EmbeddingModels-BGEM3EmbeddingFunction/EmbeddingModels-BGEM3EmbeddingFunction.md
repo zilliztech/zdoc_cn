@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "BGEM3EmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-BGEM3EmbeddingFunction
+sidebar_key: python/EmbeddingModels-BGEM3EmbeddingFunction
 sidebar_label: "BGEM3EmbeddingFunction"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XYSVdCqCDoJ9Y5xqKEAceYkpnnh
 sidebar_position: 1
 keywords: 
-  - milvus vector database
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
+  - what is milvus
+  - milvus database
+  - milvus lite
+  - milvus benchmark
   - zilliz
   - zilliz cloud
   - cloud
   - BGEM3EmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.hybrid.BGEM3EmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a BGEM3EmbeddingFunction for common use cases.
 
@@ -93,15 +93,15 @@ BGEM3EmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [bge_m3](https://github.com/FlagOpen/FlagEmbedding/blob/master/FlagEmbedding/bge_m3.py).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model
 
 bge_m3_ef = model.hybrid.BGEM3EmbeddingFunction(
-    model_name='BAAI/bge-m3', # Specify t`he model name
+    model_name='BAAI/bge-m3', # Specify t\`he model name
     device='cpu', # Specify the device to use, e.g., 'cpu' or 'cuda:0'
-    use_fp16=False # Whether to use fp16. `False` for `device='cpu'`.
+    use_fp16=False # Whether to use fp16. \`False\` for \`device='cpu'\`.
 )
 ```
 

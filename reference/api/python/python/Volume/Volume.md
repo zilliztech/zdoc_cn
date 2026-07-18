@@ -6,27 +6,27 @@ notebook: false
 added_since: false
 last_modified: false
 deprecate_since: false
-description: "Classes and methods related to Zilliz Cloud's Stage service. | Python"
+description: "Classes and methods related to Zilliz Cloud's Volume service. | Python"
 type: folder
-token: UJtvfGYb4lKoF1dy7iicFwcAnWr
-sidebar_position: 6
+token: Ih8RfZaaqlEGsudD31DcOpwvn2b
+sidebar_position: 7
 sidebar_label: "Volume"
 keywords: 
-  - AI Hallucination
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
   - Volume
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 ---
 
 # Volume
 
-Classes and methods related to Zilliz Cloud's Stage service.
+Classes and methods related to Zilliz Cloud's Volume service.
 
 import DocCardList from '@theme/DocCardList';
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "MetricType | Node.js"
 slug: /node/node/Management-MetricType
+sidebar_key: node/Management-MetricType
 sidebar_label: "MetricType"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: KQDEdcccXozuKpxDg78cSmxYnQg
 sidebar_position: 21
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud
   - MetricType
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---

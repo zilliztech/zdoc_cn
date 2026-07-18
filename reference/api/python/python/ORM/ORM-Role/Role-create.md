@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create() | Python | ORM"
 slug: /python/python/Role-create
+sidebar_key: python/Role-create
 sidebar_label: "create()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: G3h4d3jx6oXFHBxFZlyc9jLKnTO
 sidebar_position: 2
 keywords: 
-  - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - create()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates the current role. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create()
@@ -57,7 +57,7 @@ N/A
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role, utility
@@ -78,7 +78,7 @@ roles = utility.list_roles(include_user_info=True)
 # - RoleItem: <role_name:test>, <users:()>
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `create()`:
 

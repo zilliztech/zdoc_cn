@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_user() | Python | MilvusClient"
 slug: /python/python/Authentication-drop_user
+sidebar_key: python/Authentication-drop_user
 sidebar_label: "drop_user()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WtyZdeFKMoSv5exaYRxcPLCSndg
 sidebar_position: 9
 keywords: 
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
-  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - drop_user()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops a user.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 drop_user(
@@ -74,7 +74,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -92,7 +92,7 @@ client.create_user(user_name="user_1", password="P@ssw0rd")
 client.drop_user(user_name="user_1")
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_user()](./Authentication-create_user)
 

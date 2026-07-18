@@ -9,18 +9,18 @@ deprecate_since: false
 description: "Methods related to the manipulation of the partitions in a collection. | Node.js"
 type: folder
 token: Hg5PfTIHll3FK4dbYdxcaURHn2n
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: "Partitions"
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Partitions
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 ---
 

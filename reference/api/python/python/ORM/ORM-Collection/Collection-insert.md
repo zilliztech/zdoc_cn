@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "insert() | Python | ORM"
 slug: /python/python/Collection-insert
+sidebar_key: python/Collection-insert
 sidebar_label: "insert()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CbCodEGY9o6pKuxowNdctUppn7d
 sidebar_position: 19
 keywords: 
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
-  - Faiss
+  - Image Search
+  - LLMs
+  - Machine Learning
+  - RAG
   - zilliz
   - zilliz cloud
   - cloud
   - insert()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation inserts data into the current collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 insert(
@@ -165,7 +165,7 @@ A **MutationResult** object that contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -228,7 +228,7 @@ res = collection.insert(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `insert()`:
 

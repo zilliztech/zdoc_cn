@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "invoices | Cloud"
 slug: /cli/cli/Billing-invoices
+sidebar_key: cli/Billing-invoices
 sidebar_label: "invoices"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists invoices or gets details of a specific invoice. | Cloud"
 type: docx
-token: D6R2dPsd4owSCAxnFdmcim4bneh
-sidebar_position: 2
+token: Pw8Xd2yoGolKYZxsg1ZcJ0Odnmb
+sidebar_position: 3
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - invoices
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists invoices or gets details of a specific invoice.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud charges at the organization level. To access invoices, you must have either **Organization Owner** or **Billing Admin** permissions.
 
@@ -41,11 +41,11 @@ Running this command without any options triggers a set of interactive prompts.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Taxes on the invoices are calculated based on the billing address you provide. For companies that require an entry of VAT or GST ID, please <a href="http://support.zilliz.com">contact us</a>.</p>
+Taxes on the invoices are calculated based on the billing address you provide. For companies that require an entry of VAT or GST ID, please [contact us](http://support.zilliz.com).
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz billing invoices
@@ -56,7 +56,7 @@ zilliz billing invoices
 [-all]
 ```
 
-## Options
+## Options\{#options}
 
 - **--invoice-id** (*string*) -
 
@@ -84,7 +84,7 @@ zilliz billing invoices
 
     - `text`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz billing invoices

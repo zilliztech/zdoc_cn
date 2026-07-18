@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_bulk_insert_tasks() | Python | ORM"
 slug: /python/python/utility-list_bulk_insert_tasks
+sidebar_key: python/utility-list_bulk_insert_tasks
 sidebar_label: "list_bulk_insert_tasks()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: T1CGdXeVkoG2yAxkualc1jVonRb
 sidebar_position: 23
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - list_bulk_insert_tasks()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all bulk-insert tasks.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 list_bulk_insert_tasks(
@@ -73,7 +73,7 @@ list_bulk_insert_tasks(
 *list*
 
 **RETURNS:**
-A list of **BulkInsertState** objects.
+A list of **[BulkInsertState](./utility-BulkInsertState)** objects.
 
 ```python
 ├── BulkInsertState
@@ -153,11 +153,11 @@ A list of **BulkInsertState** objects.
 
         The names of the files involved in the current bulk-insert task in a comma-separated string.
 
-    - **collection** (*str*)
+    - **[collection](./ORM-Collection)** (*str*)
 
         The name of the target collection.
 
-    - **partition** (*str*)
+    - **[partition](./ORM-Partition)** (*str*)
 
         The name of the target partition.
 
@@ -203,19 +203,19 @@ A list of **BulkInsertState** objects.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # List all bulk-insert tasks
 res = utility.list_bulk_insert_tasks()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_bulk_insert_state()`:
 

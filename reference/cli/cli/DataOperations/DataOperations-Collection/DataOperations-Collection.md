@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to collection management. | Cloud"
 type: folder
-token: OGWXfrqcVlYSC9da251c3WT9nXe
+token: ZiRWf2bJDlO6A3dWLW1cRKHLnAb
 sidebar_position: 2
 sidebar_label: "Collection"
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
+  - hnsw algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - Collection
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

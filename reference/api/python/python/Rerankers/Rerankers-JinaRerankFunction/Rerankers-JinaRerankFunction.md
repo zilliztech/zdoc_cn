@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "JinaRerankFunction | Python"
 slug: /python/python/Rerankers-JinaRerankFunction
+sidebar_key: python/Rerankers-JinaRerankFunction
 sidebar_label: "JinaRerankFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: E3opdXwZCoY8igxMjQ1cwsTbnzh
 sidebar_position: 1
 keywords: 
+  - llm eval
+  - Sparse vs Dense
+  - Dense vector
   - Hierarchical Navigable Small Worlds
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
   - zilliz
   - zilliz cloud
   - cloud
   - JinaRerankFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ JinaRerankFunction is a class in [milvus_model](https://github.com/milvus-io/mil
 pymilvus.model.reranker.JinaRerankFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a JinaRerankFunction for common use cases.
 
@@ -58,13 +58,13 @@ JinaRerankFunction(
 
     The API key for accessing the Jina AI API.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.reranker import JinaRerankFunction
 
 jina_rf = JinaRerankFunction(
-    model_name="jina-reranker-v2-base-multilingual", # Defaults to `jina-reranker-v2-base-multilingual`
+    model_name="jina-reranker-v2-base-multilingual", # Defaults to \`jina-reranker-v2-base-multilingual\`
     api_key="YOUR_JINAAI_API_KEY"
 )
 ```

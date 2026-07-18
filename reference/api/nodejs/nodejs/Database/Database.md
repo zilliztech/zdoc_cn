@@ -4,29 +4,29 @@ slug: /node/Database
 beta: false
 notebook: false
 added_since: v2.3.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
-description: "Methods for you to manage database. | Node.js"
+description: "Methods reMethods for you to manage database. | Node.js"
 type: folder
-token: CEYUfuKoYlVIfod63clcDaS9nxc
-sidebar_position: 4
+token: F0ZXfs6XSlspHxdg7DwcYb84nMf
+sidebar_position: 5
 sidebar_label: "Database"
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud
   - Database
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 ---
 
 # Database
 
-Methods for you to manage database.
+Methods reMethods for you to manage database.
 
 import DocCardList from '@theme/DocCardList';
 

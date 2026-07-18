@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to alias management. | Cloud"
 type: folder
-token: PNMKfl6RdlfEzzdg6zycDTQHnGw
+token: MwIofv5z3ljhiBdoZA4cEPdZnGg
 sidebar_position: 1
 sidebar_label: "Alias"
 keywords: 
-  - Vector store
-  - open source vector database
-  - Vector index
-  - vector database open source
+  - Serverless vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Alias
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

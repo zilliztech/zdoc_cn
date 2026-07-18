@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "getDescription() | Java | v2"
 slug: /java/java/v2-StructFieldSchema-getDescription
+sidebar_key: java/v2-StructFieldSchema-getDescription
 sidebar_label: "getDescription()"
 added_since: v2.6.x
 last_modified: false
@@ -11,17 +11,17 @@ notebook: false
 description: "This operation returns the description of an Array of Structs field. | Java | v2"
 type: docx
 token: QbfPdyw7EoXpGwxSkGgcytBBnAb
-sidebar_position: 2
+sidebar_position: 3
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
   - getDescription()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation returns the description of an Array of Structs field.
 public String getDescription()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 getDescription()
@@ -51,7 +51,7 @@ getDescription()
 
 The return value will be the description of the specified Array of Struct field.
 
-## Examples
+## Examples\{#examples}
 
 ```java
 // You can get an instance of StructFieldSchema by describing

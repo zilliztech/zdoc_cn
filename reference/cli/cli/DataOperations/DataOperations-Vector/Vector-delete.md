@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "delete | Cloud"
 slug: /cli/cli/Vector-delete
+sidebar_key: cli/Vector-delete
 sidebar_label: "delete"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation deletes entities by filter expression. | Cloud"
 type: docx
-token: OTx6dAm4wofwrIxq7w4cjHBIn9v
+token: NtaUdIxZBoupfkxG52lco4oZnzf
 sidebar_position: 1
 keywords: 
-  - AI Agent
-  - semantic search
-  - Anomaly Detection
-  - sentence transformers
+  - Similarity Search
+  - multimodal RAG
+  - llm hallucinations
+  - hybrid search
   - zilliz
   - zilliz cloud
   - cloud
   - delete
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,11 +33,11 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes entities by filter expression.
 
-## Description
+## Description\{#description}
 
 Zilliz Cloud provides a set of useful filtering operators to help you build filter expressions that meet your needs. For details, refer to [Filtering Overview](/docs/filtering-overview) and related pages.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz vector delete
@@ -51,7 +51,7 @@ zilliz vector delete
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -99,7 +99,7 @@ zilliz vector delete
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz vector delete --collection my_col --filter 'id in [1, 2, 3]'

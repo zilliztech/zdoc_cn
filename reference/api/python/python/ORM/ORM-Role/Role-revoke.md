@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "revoke() | Python | ORM"
 slug: /python/python/Role-revoke
+sidebar_key: python/Role-revoke
 sidebar_label: "revoke()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: UUJWdoEnjoXx69xahsScdMVSnzf
 sidebar_position: 10
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
+  - vector database
   - zilliz
   - zilliz cloud
   - cloud
   - revoke()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation revokes a privilege granted to the current role.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 revoke(
@@ -72,10 +72,9 @@ revoke(
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <ul>
-    <li><p>To grant all privileges to a kind of object, like <strong>Collection</strong>, <strong>Global</strong>, <strong>User</strong>, use <code>*</code> for privilege name.</p></li>
-    <li><p>When <code>object</code> is set to <code>Global</code>, setting <code>privilege</code> to <code>\*</code> is not equivalent to setting it to <code>All</code>. The <code>All</code> privilege includes all permissions, including any collection and user object.</p></li>
-    </ul>
+    - To grant all privileges to a kind of object, like **[Collection](./ORM-Collection)**, **Global**, **User**, use `*` for privilege name.
+
+    - When `object` is set to `Global`, setting `privilege` to `\*` is not equivalent to setting it to `All`. The `All` privilege includes all permissions, including any collection and user object.
 
     </Admonition>
 
@@ -97,7 +96,7 @@ revoke(
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Role
@@ -109,7 +108,7 @@ role = Role(role_name)
 role.revoke("Collection", collection_name, "Insert")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `revoke()`:
 

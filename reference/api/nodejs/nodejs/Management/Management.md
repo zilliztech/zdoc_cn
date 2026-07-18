@@ -8,19 +8,19 @@ last_modified: v2.6.x
 deprecate_since: false
 description: "Methods for you to index, load, and release a collection. | Node.js"
 type: folder
-token: UmOafcFDglyFe3dayhAcRA0RnEd
-sidebar_position: 5
+token: E5cpfv4EPlpWJ5dV0iJcPwo4nyf
+sidebar_position: 6
 sidebar_label: "Management"
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
   - Management
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 ---
 

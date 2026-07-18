@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "RemoteBulkWriter | Python"
 slug: /python/python/DataImport-RemoteBulkWriter
+sidebar_key: python/DataImport-RemoteBulkWriter
 sidebar_label: "RemoteBulkWriter"
 added_since: v2.3.x
 last_modified: v2.5.x
@@ -13,15 +13,15 @@ type: docx
 token: BDP4dew9to9tQoxNEMPcBR5xnZb
 sidebar_position: 4
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
   - zilliz
   - zilliz cloud
   - cloud
   - RemoteBulkWriter
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,13 +37,13 @@ A **RemoteBulkWriter** instance writes your raw data in a format that Zilliz Clo
 class pymilvus.RemoteBulkWriter
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a **RemoteBulkWriter** object with a set of parameters, such as **schema**, **remote_path**, **connect_param** etc.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A <strong>RemoteBulkWriter</strong> object intends to rewrite your raw data in a format that Zilliz Cloud understands into an AWS-S3-compatible bucket.</p>
+A **RemoteBulkWriter** object intends to rewrite your raw data in a format that Zilliz Cloud understands into an AWS-S3-compatible or a Microsoft Azure Blob Storage bucket.
 
 </Admonition>
 
@@ -88,8 +88,9 @@ writer = RemoteBulkWriter(
 
     <Admonition type="info" icon="📘" title="How does BulkWriter segment my data?">
 
-    <p>The way <strong>BulkWriter</strong> segments your data varies with the target file type.</p>
-    <p>If the generated file exceeds the specified segment size, <strong>BulkWriter</strong> creates multiple files and names them in sequence numbers, each no larger than the segment size.</p>
+    The way **BulkWriter** segments your data varies with the target file type.
+
+    If the generated file exceeds the specified segment size, **BulkWriter** creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>
 
@@ -98,27 +99,6 @@ writer = RemoteBulkWriter(
     The type of the output file.
 
     The value defaults to **BulkFileType.PARQUET**. 
-
-    Possible options are **BulkFileType.JSON**, **BulkFileType.PARQUET**, **BulkFileType.CSV**.
-
-- **config** (*dict*)
-
-    A dictionary specifying optional configurations for processing CSV files. This parameter is available only when **file_type** is set to **BulkFileType.CSV**. Example configuration:
-
-    ```python
-    config={
-        "sep": "\t",
-        "nullkey": "NULL"
-    }
-    ```
-
-    -  **sep** (*string*)
-
-        The delimiter of CSV file. The value must be a string of length 1, which defaults to `","`. The following strings are not allowed: `"\0"`, `"\n"`, `"\r"`, `"""`.
-
-    - **nullkey** (*string*)
-
-        Special string representing null value. The value defaults to empty string: `""`.
 
 **RETURN TYPE:**
 
@@ -134,7 +114,7 @@ A **RemoteBulkWriter** object.
 
     This exception will be raised when the provided schema is invalid.
 
-## Properties
+## Properties\{#properties}
 
 - **data_path** (*pathlib.PosixPath*) -
 
@@ -144,12 +124,12 @@ A **RemoteBulkWriter** object.
 
     A list of the generated file names.
 
-## Classes
+## Classes\{#classes}
 
 The following are the classes of the `RemoteBulkWriter` class:
 
 - ConnectParam
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the `RemoteBulkWriter` class:

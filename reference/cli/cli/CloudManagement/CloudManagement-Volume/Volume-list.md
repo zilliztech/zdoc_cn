@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "list | Cloud"
 slug: /cli/cli/Volume-list
+sidebar_key: cli/Volume-list
 sidebar_label: "list"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation lists all volumes in a project. | Cloud"
 type: docx
-token: FDjjdFVzxozhvhxU5tgc42utnZg
+token: OShTd6lMhoaxK2xDlExcmzXTnLd
 sidebar_position: 3
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
   - list
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all volumes in a project.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz volume list
@@ -44,7 +44,7 @@ zilliz volume list
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--project-id** (*string*) -
 
@@ -84,7 +84,7 @@ zilliz volume list
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz volume list --project-id proj-xxxxxxxxxxxx

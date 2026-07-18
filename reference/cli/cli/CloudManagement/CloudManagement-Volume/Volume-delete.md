@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "delete | Cloud"
 slug: /cli/cli/Volume-delete
+sidebar_key: cli/Volume-delete
 sidebar_label: "delete"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation deletes a volume. | Cloud"
 type: docx
-token: CNlid8lmAoX4Qtxqd6mc119gnjb
+token: CgVKdrm2YoAiM8xBvFacmxpWnrb
 sidebar_position: 2
 keywords: 
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - delete
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation deletes a volume.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz volume delete
@@ -43,7 +43,7 @@ zilliz volume delete
 [--no-header]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -73,7 +73,7 @@ zilliz volume delete
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz volume delete --name my-volume

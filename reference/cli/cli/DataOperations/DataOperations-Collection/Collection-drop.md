@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "drop | Cloud"
 slug: /cli/cli/Collection-drop
+sidebar_key: cli/Collection-drop
 sidebar_label: "drop"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation drops a collection. This action is irreversible. | Cloud"
 type: docx
-token: LnnEdA9w7opaYXx2vHOcxcxonMb
+token: IM2CdOqn5oKCTUxFVImcbDCRnFc
 sidebar_position: 4
 keywords: 
-  - Pinecone vector database
-  - Audio search
-  - what is semantic search
-  - Embedding model
+  - vector database example
+  - rag vector database
+  - what is vector db
+  - what are vector databases
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops a collection. This action is irreversible.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection drop
@@ -45,7 +45,7 @@ zilliz collection drop
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -85,7 +85,7 @@ zilliz collection drop
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection drop --name my_collection

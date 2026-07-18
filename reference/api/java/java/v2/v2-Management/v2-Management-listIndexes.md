@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listIndexes() | Java | v2"
 slug: /java/java/v2-Management-listIndexes
+sidebar_key: java/v2-Management-listIndexes
 sidebar_label: "listIndexes()"
 added_since: v2.4.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: LxwIdeFiGoYaRAxKS72cdjNkneh
 sidebar_position: 12
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - AI Hallucination
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
   - zilliz
   - zilliz cloud
   - cloud
   - listIndexes()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists the indexes of a field in a specific collection.
 public List<String> listIndexes(ListIndexesReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 listIndexes(ListIndexesReq.builder()
@@ -64,7 +64,7 @@ listIndexes(ListIndexesReq.builder()
 
 **RETURNS:**
 
-*List\<String>*
+*List&lt;String&gt;*
 
 **EXCEPTIONS:**
 
@@ -72,7 +72,7 @@ listIndexes(ListIndexesReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -87,7 +87,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// 2. List the indexes on the `varchar` field in the `test` collection
+// 2. List the indexes on the \`varchar\` field in the \`test\` collection
 ListIndexesReq listIndexesReq = ListIndexesReq.builder()
         .collectionName("test")
         .fieldName("varchar")

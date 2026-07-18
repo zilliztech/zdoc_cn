@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_user() | Python | MilvusClient"
 slug: /python/python/Authentication-create_user
+sidebar_key: python/Authentication-create_user
 sidebar_label: "create_user()"
 added_since: v2.3.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation creates a user. | Python | MilvusClient"
 type: docx
-token: BDupd28JqoNY9HxVOTfcv86enRe
+token: EglSdm1jkozDSlxq6SEc4CRonVe
 sidebar_position: 4
 keywords: 
-  - Zilliz Cloud
-  - what is milvus
-  - milvus database
-  - milvus lite
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
+  - dimension reduction
   - zilliz
   - zilliz cloud
   - cloud
   - create_user()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a user.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 create_user(
@@ -81,7 +81,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "query_iterator() | Python | ORM"
 slug: /python/python/Collection-query_iterator
+sidebar_key: python/Collection-query_iterator
 sidebar_label: "query_iterator()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: LffbdiHhzoHe08xivF9ccmoen5d
 sidebar_position: 23
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - NLP
+  - Neural Network
+  - Deep Learning
+  - Knowledge base
   - zilliz
   - zilliz cloud
   - cloud
   - query_iterator()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation returns a Python iterator for you to iterate over the query results. It is useful especially when the query result contains a large volume of data.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 query_iterator(
@@ -96,7 +96,7 @@ A **QueryIterator** for you to iterate over the query result.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -148,7 +148,7 @@ while True:
         break
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `query_iterator()`:
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "OnnxEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-OnnxEmbeddingFunction
+sidebar_key: python/EmbeddingModels-OnnxEmbeddingFunction
 sidebar_label: "OnnxEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: MVLRdU9nPonUeExs7ogctwZ1n4c
 sidebar_position: 3
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - OnnxEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ OnnxEmbeddingFunction is a class in pymilvus that handles encoding text into emb
 pymilvus.model.dense.OnnxEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an OnnxEmbeddingFunction for common use cases.
 
@@ -58,13 +58,13 @@ OnnxEmbeddingFunction(
 
     The repository ID on the Hugging Face Hub that contains the tokenizer configuration compatible with the specified ONNX model. In the provided code, it is set to `GPTCache/paraphrase-albert-small-v2` by default. The tokenizer handles text preprocessing, such as tokenization, padding, and encoding, ensuring compatibility with the ONNX model's input format. The tokenizer should be pre-trained and compatible with the ONNX model for the same task.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import OnnxEmbeddingFunction
 
 onnx_ef = OnnxEmbeddingFunction(
-    model_name="GPTCache/paraphrase-albert-onnx", # Defaults to `GPTCache/paraphrase-albert-onnx`
-    tokenizer_name="GPTCache/paraphrase-albert-small-v2" # Defaults to `GPTCache/paraphrase-albert-small-v2`
+    model_name="GPTCache/paraphrase-albert-onnx", # Defaults to \`GPTCache/paraphrase-albert-onnx\`
+    tokenizer_name="GPTCache/paraphrase-albert-small-v2" # Defaults to \`GPTCache/paraphrase-albert-small-v2\`
 )
 ```

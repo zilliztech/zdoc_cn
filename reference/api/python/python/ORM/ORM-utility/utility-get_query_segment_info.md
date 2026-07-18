@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_query_segment_info() | Python | ORM"
 slug: /python/python/utility-get_query_segment_info
+sidebar_key: python/utility-get_query_segment_info
 sidebar_label: "get_query_segment_info()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CB9edh2ySoJyWhxBoLcchPj9nxg
 sidebar_position: 14
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - private llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
   - zilliz
   - zilliz cloud
   - cloud
   - get_query_segment_info()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets information about the sealed and growing segments in the query cluster.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 get_query_segment_info(
@@ -73,12 +73,12 @@ A list of **QuerySegmentInfo** objects, each reporting the status of a segment.
 
 N/A
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, Collection, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get an existing collection
@@ -97,7 +97,7 @@ print(res)
 # nodeIds: 3
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 - [drop_collection()](./utility-drop_collection)
 

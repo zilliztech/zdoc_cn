@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "dropCollection() | Java | v2"
 slug: /java/java/v2-Collections-dropCollection
+sidebar_key: java/v2-Collections-dropCollection
 sidebar_label: "dropCollection()"
 added_since: v2.3.x
-last_modified: v2.5.x
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a collection. | Java | v2"
 type: docx
-token: DMh5d1uiGolDtLxSNpCcWx9On7c
+token: SW6Cdt9QeoY1J1x9SYQcZrc6nbg
 sidebar_position: 14
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - dropCollection()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,27 +37,35 @@ This operation drops a collection.
 public void dropCollection(DropCollectionReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 dropCollection(DropCollectionReq.builder()
+    .databaseName(String databaseName)
     .collectionName(String collectionName)
+    .async(Boolean async)
     .timeout(Long timeout)
     .build()
-)
+);
 ```
 
 **BUILDER METHODS:**
 
-- `collectionName(String collectionName)`
+- `databaseName(String databaseName)` -
 
-    The name of an existing collection.
+    The name of the database. Defaults to the current database if not specified.
 
-- `timeout(Long timeout)`
+- `collectionName(String collectionName)` -
 
-    The timeout duration of the process. The process terminates after the specified duration expires.
+    The name of the target collection.
 
-    The value defaults to `60000L`, indicating the timeout duration is **1** minute.
+- `async(Boolean async)` -
+
+    Whether to run the operation asynchronously.
+
+- `timeout(Long timeout)` -
+
+    The timeout duration in milliseconds.
 
 **RETURNS:**
 
@@ -65,11 +73,11 @@ dropCollection(DropCollectionReq.builder()
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+- **MilvusClientException**
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;
@@ -90,4 +98,3 @@ DropCollectionReq dropCollectionReq = DropCollectionReq.builder()
         .build();
 client.dropCollection(dropCollectionReq);
 ```
-

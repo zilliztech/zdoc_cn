@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "reset_password() | Python | ORM"
 slug: /python/python/utility-reset_password
+sidebar_key: python/utility-reset_password
 sidebar_label: "reset_password()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: K1Npdj5Ddod6UWxRN2ecf6K4nxf
 sidebar_position: 38
 keywords: 
-  - vector database
-  - IVF
-  - knn
-  - Image Search
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
+  - Video search
   - zilliz
   - zilliz cloud
   - cloud
   - reset_password()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation resets the password for a specific user.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This operation differs from <strong>update_password()</strong> in that this operation also resets the current connection using the newly set credentials.</p>
+This operation differs from **update_password()** in that this operation also resets the current connection using the newly set credentials.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 reset_password(
@@ -99,12 +99,12 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a user
@@ -119,7 +119,7 @@ reset_password(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `reset_password()`
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "drop | Cloud"
 slug: /cli/cli/Alias-drop
+sidebar_key: cli/Alias-drop
 sidebar_label: "drop"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation drops an alias. | Cloud"
 type: docx
-token: KjCMddr4IoRPU6xGhe6c4v7qnTd
+token: CucPdYRmsofWt8xkVj3cK7Vynjg
 sidebar_position: 4
 keywords: 
-  - Annoy vector search
-  - milvus
-  - Zilliz
-  - milvus vector database
+  - Faiss vector database
+  - Chroma vector database
+  - nlp search
+  - hallucinations llm
   - zilliz
   - zilliz cloud
   - cloud
   - drop
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops an alias.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz alias drop
@@ -45,7 +45,7 @@ zilliz alias drop
 [--yes]
 ```
 
-## Options
+## Options\{#options}
 
 - **--alias** (*string*) -
 
@@ -85,7 +85,7 @@ zilliz alias drop
 
     Indicates whether to skip the confirmation prompt.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz alias drop --alias my_alias

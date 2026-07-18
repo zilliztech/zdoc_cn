@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "commit() | Java | v2"
 slug: /java/java/v2-RemoteBulkWriter-commit
+sidebar_key: java/v2-RemoteBulkWriter-commit
 sidebar_label: "commit()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: SJ3ndk2d7oQbAOxP5iHcGtr1nrb
 sidebar_position: 3
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - commit()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation commits the appended data.
  public void commit(boolean async)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 remoteBulkWriter.commit(
@@ -55,7 +55,7 @@ remoteBulkWriter.commit(
 
 *void*
 
-## Examples
+## Examples\{#examples}
 
 ```java
 remoteBulkWriter.commit(false);

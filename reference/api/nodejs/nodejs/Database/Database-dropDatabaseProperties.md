@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "dropDatabaseProperties() | Node.js"
 slug: /node/node/Database-dropDatabaseProperties
+sidebar_key: node/Database-dropDatabaseProperties
 sidebar_label: "dropDatabaseProperties()"
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
 beta: false
 notebook: false
-description: "This operation drops the setting of the specified properties. | Node.js"
+description: "This operation resets the specified database properties to their defaults. | Node.js"
 type: docx
 token: GulFdOWMboEK9bxnzMSc8Uf8n8b
 sidebar_position: 4
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
+  - information retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - dropDatabaseProperties()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -31,24 +31,18 @@ import Admonition from '@theme/Admonition';
 
 # dropDatabaseProperties()
 
-This operation drops the setting of the specified properties.
+This operation resets the specified database properties to their defaults.
 
 ```javascript
 dropDatabaseProperties(data): Promise<ResStatus>
 ```
 
-<Admonition type="info" icon="📘" title="Notes">
-
-<p>This method applies only to dedicated clusters.</p>
-
-</Admonition>
-
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
 milvusClient.dropDatabaseProperties({
     db_name: string,
-    delete_properties: string[],
+    properties: string[]
     timeout?: number
 })
 ```
@@ -57,13 +51,13 @@ milvusClient.dropDatabaseProperties({
 
 - **db_name** (*string*) -
 
-    The name of the database whose properties are to be dropped.
+    The name of the database whose properties are to be modified.
 
-    There should be a database with the specified name. Otherwise, exceptions will occur.
+    There should be no database that has the specified name. Otherwise, exceptions will occur.
 
-- **delete_properties** (*string[]*) -
+- **properties** (*string[]*) -
 
-    Names of the properties to drop in an array. Possible database properties are as follows:
+    A list of the names of the database properties to reset. Possible values are as follows:
 
     - **database.replica.number** (*int*) -
 
@@ -95,13 +89,13 @@ milvusClient.dropDatabaseProperties({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-**RETURNS** *Promise |\<ResStatus>*
+**RETURNS** *Promise |&lt;ResStatus&gt;*
 
 This method returns a promise that resolves to a **ResStatus** object.
 
 ```javascript
 {
-    code: number
+    code: number,
     error_code: string | number,
     reason: string
 }
@@ -121,12 +115,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
 const milvusClient = new milvusClient(MILUVS_ADDRESS);
-const resStatus = await milvusClient.dropDatabaseProperties({ 
-    db_name: 'new_db',
-    delete_properties: ["database.replica.number"] 
+const resStatus = await milvusClient.dropDatabaseProperties({
+    db_name: 'my-db',
+    delete_properties: ["database.replica.number"]
 });
 ```
+

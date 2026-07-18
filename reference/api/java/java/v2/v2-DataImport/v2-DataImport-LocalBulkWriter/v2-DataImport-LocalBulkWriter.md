@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "LocalBulkWriter | Java | v2"
 slug: /java/java/v2-DataImport-LocalBulkWriter
+sidebar_key: java/v2-DataImport-LocalBulkWriter
 sidebar_label: "LocalBulkWriter"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: G7F9dQ8DwoZsaVxExdnc7K6an3g
 sidebar_position: 5
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
+  - Retrieval Augmented Generation
   - zilliz
   - zilliz cloud
   - cloud
   - LocalBulkWriter
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,13 +37,13 @@ A **LocalBulkWriter** instance rewrites your raw data locally in a format that M
 io.milvus.bulkwriter.LocalBulkWriter
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a **LocalBulkWriter** instance by schema, output path, segment size, and file type.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A <strong>LocalBulkWriter</strong> object intends to rewrite your raw data locally in a format that Milvus understands.</p>
+A **LocalBulkWriter** object intends to rewrite your raw data locally in a format that Milvus understands.
 
 </Admonition>
 
@@ -57,7 +57,7 @@ LocalBulkWriter(LocalBulkWriterParam bulkWriterParam)
 
     A [LocalBulkWriterParam](./v2-DataImport-LocalBulkWriter#localbulkwriterparam) instance.
 
-## LocalBulkWriterParam
+## LocalBulkWriterParam\{#localbulkwriterparam}
 
 **LocalBulkWriterParam** allows you to configure properties for your **LocalBulkWriter** instances in one place so that you can instantiate the **LocalBulkWriter** class.
 
@@ -75,7 +75,7 @@ LocalBulkWriterParam.newBuilder()
 
 - `withCollectionSchema(CreateCollectionReq.CollectionSchema collectionSchema)`
 
-    The schema of the target collection that is defined by instantiating **[CreateCollectionReq.CollectionSchema](./v2-Collections-CollectionSchema)**.
+    The schema of the target collection that is defined by instantiating **CreateCollectionReq.CollectionSchema**.
 
 - `withLocalPath(String localPath)`
 
@@ -89,8 +89,9 @@ LocalBulkWriterParam.newBuilder()
 
     <Admonition type="info" icon="📘" title="**How does BulkWriter segment my data?**">
 
-    <p>The way BulkWriter segments your data varies with the target file type.</p>
-    <p>If the generated file exceeds the specified segment size, BulkWriter creates multiple files and names them in sequence numbers, each no larger than the segment size.</p>
+    The way BulkWriter segments your data varies with the target file type.
+
+    If the generated file exceeds the specified segment size, BulkWriter creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>
 
@@ -110,7 +111,7 @@ LocalBulkWriterParam.newBuilder()
 
         Special string representing null value. The value defaults to empty string: `""`.
 
-## Example
+## Example\{#example}
 
 ```java
 import com.google.gson.JsonObject;

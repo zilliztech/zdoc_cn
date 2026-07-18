@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "has_partition() | Python | ORM"
 slug: /python/python/Collection-has_partition
+sidebar_key: python/Collection-has_partition
 sidebar_label: "has_partition()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: QsOsda2lRoJP32xNSLWcbgMOnKI
 sidebar_position: 16
 keywords: 
-  - Video similarity search
-  - Vector retrieval
-  - Audio similarity search
-  - Elastic vector database
+  - milvus open source
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
   - zilliz
   - zilliz cloud
   - cloud
   - has_partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks whether the specified partition exists in the current collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 has_partition(
@@ -66,7 +66,7 @@ A boolean value indicating whether the current collection has the specified part
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -95,7 +95,7 @@ collection.drop_partition("test_partition")
 collection.has_partition("test_partition") # False
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `has_collection()`:
 

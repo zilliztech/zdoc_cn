@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/Role-describe
+sidebar_key: cli/Role-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets details and privileges of a role. | Cloud"
 type: docx
-token: G7QddCl8goZgcvxQPChcHXibnKX
+token: Fj9Yd4SOPoppxTx7K8WcyMd7ncd
 sidebar_position: 2
 keywords: 
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation gets details and privileges of a role.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This command is available for Dedicated clusters only. You can run <code>zilliz context set</code> to switch among clusters.</p>
+This command is available for Dedicated clusters only. You can run `zilliz context set` to switch among clusters.
 
 </Admonition>
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz role describe
@@ -84,7 +84,7 @@ zilliz role describe
 
     Indicates a database name. The value defaults to `default`.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz role describe --role my_role

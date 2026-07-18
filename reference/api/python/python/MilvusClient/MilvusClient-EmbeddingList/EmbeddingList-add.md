@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add() | Python | MilvusClient"
 slug: /python/python/EmbeddingList-add
+sidebar_key: python/EmbeddingList-add
 sidebar_label: "add()"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: R0E9dLzIAoYGCcxRVj6cjJmWnPe
 sidebar_position: 1
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - knn
+  - Image Search
+  - LLMs
+  - Machine Learning
   - zilliz
   - zilliz cloud
   - cloud
   - add()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,9 +31,9 @@ import Admonition from '@theme/Admonition';
 
 # add()
 
-This operation adds a single vector embedding to the current **EmbeddingList** instance.
+This operation adds a single vector embedding to the current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 add(
@@ -46,15 +46,15 @@ add(
 
 - **embedding** (*np.ndarray, List[Any]*) - 
 
-    The vector embedding that is to be added to the current **EmbeddingList** instance.
+    The vector embedding that is to be added to the current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance.
 
 **RETURN TYPE:**
 
-*EmbeddingList*
+*[EmbeddingList](./MilvusClient-EmbeddingList)*
 
 **RETURNS:**
 
-The current **EmbeddingList** instance itself for method chaining
+The current **[EmbeddingList](./MilvusClient-EmbeddingList)** instance itself for method chaining
 
 **EXCEPTIONS:**
 
@@ -62,7 +62,7 @@ The current **EmbeddingList** instance itself for method chaining
 
     This exception will be raised if the provided vector embedding does not match the existing ones in dimensionality.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import EmbeddingList

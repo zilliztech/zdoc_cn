@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_aliases() | Python | ORM"
 slug: /python/python/utility-list_aliases
+sidebar_key: python/utility-list_aliases
 sidebar_label: "list_aliases()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XBwxdP96Go8ITyx7UuNcL7EonPd
 sidebar_position: 22
 keywords: 
-  - Recommender systems
-  - information retrieval
-  - dimension reduction
-  - hnsw algorithm
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - list_aliases()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all existing aliases for a specific collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_aliases(
@@ -79,12 +79,12 @@ A list of aliases for the specified collection. If the collection has no aliases
 
     This exception will be raised when this operation fails.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, Collection, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Get an existing collection
@@ -103,7 +103,7 @@ utility.create_alias(collection_name="collection_1", alias="tom")
 utility.list_aliases(collection_name="collection_1") # ['bob', 'tom']
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `drop_alias()`:
 

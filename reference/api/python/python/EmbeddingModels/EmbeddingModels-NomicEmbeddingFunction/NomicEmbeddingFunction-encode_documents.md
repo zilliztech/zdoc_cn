@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "encode_documents() | Python"
 slug: /python/python/NomicEmbeddingFunction-encode_documents
+sidebar_key: python/NomicEmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: H8ncdzr6roh9G6xQm8BcJFamnhf
 sidebar_position: 1
 keywords: 
-  - vector database example
-  - rag vector database
-  - what is vector db
-  - what are vector databases
+  - milvus database
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
   - zilliz
   - zilliz cloud
   - cloud
   - encode_documents()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation takes in documents and encodes them into vector embeddings.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 encode_documents(
@@ -61,13 +61,13 @@ A list where each element is a NumPy array.
 
     This exception will be raised when `api_key` is not provided and the `NOMIC_API_KEY` environment variable is also not set.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import NomicEmbeddingFunction
 
 ef = NomicEmbeddingFunction(
-    model_name="nomic-embed-text-v1.5", # Defaults to `mistral-embed`
+    model_name="nomic-embed-text-v1.5", # Defaults to \`mistral-embed\`
     api_key="NOMIC_API_KEY" # Provide your Nomic API key
 )
 

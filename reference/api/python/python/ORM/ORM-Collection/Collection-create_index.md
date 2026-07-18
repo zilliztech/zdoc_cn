@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_index() | Python | ORM"
 slug: /python/python/Collection-create_index
+sidebar_key: python/Collection-create_index
 sidebar_label: "create_index()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: J76vdPHNgoyp2wxAiTcceIVJnOe
 sidebar_position: 4
 keywords: 
-  - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
+  - Unstructured Data
+  - vector database
+  - IVF
+  - knn
   - zilliz
   - zilliz cloud
   - cloud
   - create_index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This creates a named index for a target field, which can either be a vector fiel
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>This operation is non-blocking. You can call <code>utility.wait_for_index_building_complete()</code> to block the current process.</p>
+This operation is non-blocking. You can call `utility.wait_for_index_building_complete()` to block the current process.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create_index(
@@ -95,7 +95,7 @@ A **Status** object indicating whether this operation succeeds.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -136,7 +136,7 @@ collection.create_index(
 collection.has_index() # True
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `create_index()`
 

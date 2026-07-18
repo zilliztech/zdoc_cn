@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to data import. | Cloud"
 type: folder
-token: DTaCf9lEKlW82HdbjMMcMTR0nYF
+token: SDTtfq1P5lBVV7d45b0cYrljnup
 sidebar_position: 4
 sidebar_label: "Import"
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - Import
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

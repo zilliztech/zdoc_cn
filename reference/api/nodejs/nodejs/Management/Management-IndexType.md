@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "IndexType | Node.js"
 slug: /node/node/Management-IndexType
+sidebar_key: node/Management-IndexType
 sidebar_label: "IndexType"
 added_since: v2.3.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: SI3Td00AroRtx8xXQcUce8i2nrb
 sidebar_position: 15
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
   - IndexType
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This is an enumeration that provides the following constants.
 
-## Constants
+## Constants\{#constants}
 
 - **ANNOY** = ANNOY
 Sets the index type to ANNOY.
@@ -99,3 +99,15 @@ Sets the index type to Trie.
 - **BITMAP** = 'BITMAP'
 
     Sets the index type to BITMAP.
+
+- **IVF_RABITQ** = 'IVF_RABITQ',
+
+    Sets the index type to IVF_RABITQ.
+
+- **MINHASH_LSH** = 'MINHASH_LSH'
+
+    Sets the index type to MINHASH_LSH.
+
+- **RTREE** = 'RTREE'
+
+    Sets the index type to RTREE.

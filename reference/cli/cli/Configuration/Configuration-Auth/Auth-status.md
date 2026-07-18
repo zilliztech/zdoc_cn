@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "status | Cloud"
 slug: /cli/cli/Auth-status
+sidebar_key: cli/Auth-status
 sidebar_label: "status"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation shows the current authentication status. | Cloud"
 type: docx
-token: YbzDdBwlSoO24Px9v2mcgkYCn3b
+token: CGY6dYpcfoZr3cxbXT5cis6UnZf
 sidebar_position: 3
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud
   - status
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,15 @@ import Admonition from '@theme/Admonition';
 
 This operation shows the current authentication status.
 
-## Synopsis
+**Note:** `zilliz auth status` is a deprecated alias kept for backwards compatibility. Use `zilliz whoami` (alias `zilliz info`) in new scripts.
+
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz auth status
 ```
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz auth status

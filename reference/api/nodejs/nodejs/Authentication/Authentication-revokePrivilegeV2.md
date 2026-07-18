@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "revokePrivilegeV2() | Node.js"
 slug: /node/node/Authentication-revokePrivilegeV2
+sidebar_key: node/Authentication-revokePrivilegeV2
 sidebar_label: "revokePrivilegeV2()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: UlAUdLNkCo1Mp8xFZYWclSL9n6b
 sidebar_position: 26
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - Deep Learning
+  - Knowledge base
+  - natural language processing
+  - AI chatbots
   - zilliz
   - zilliz cloud
   - cloud
   - revokePrivilegeV2()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation revokes a privilege already assigned to a role.
 
 ```javascript
-revokePrivilegeV2(data): Promise<ResStatus>
+await milvusClient.revokePrivilegeV2(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.revokePrivilege({
+await milvusClient.revokePrivilege({
    role: string,
    privilege: string,
    db_name: string,
@@ -109,7 +109,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
 await milvusClient.revokePrivilegeV2({

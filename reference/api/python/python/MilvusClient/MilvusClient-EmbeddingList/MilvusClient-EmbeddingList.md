@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "EmbeddingList | Python | MilvusClient"
 slug: /python/python/MilvusClient-EmbeddingList
+sidebar_key: python/MilvusClient-EmbeddingList
 sidebar_label: "EmbeddingList"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Ve2WdUAfwoz456xwBIJcGvltn6b
 sidebar_position: 4
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
   - IVF
+  - knn
+  - Image Search
+  - LLMs
   - zilliz
   - zilliz cloud
   - cloud
   - EmbeddingList
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ An **EmbeddingList** instance represents a list of vector embeddings. You can us
 class pymilvus.EmbeddingList
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an empty embedding list or a list of given vector embeddings.
 
@@ -73,7 +73,7 @@ EmbeddingList(
 
     - **string**, such as `'float32'`, `'float16'`, or `'uint8'`
 
-    - **DataType**, such as `DataType.FLOAT_VECTOR`, `DataType.FLOAT16_VECTOR`, `DataType.BFLOAT16_VECTOR`, `DataType.INT8_VECTOR`, or `DataType.BINARY_VECTOR`
+    - **[DataType](./Collections-DataType)**, such as `DataType.FLOAT_VECTOR`, `DataType.FLOAT16_VECTOR`, `DataType.BFLOAT16_VECTOR`, `DataType.INT8_VECTOR`, or `DataType.BINARY_VECTOR`
 
 **RETURN TYPE:**
 
@@ -83,7 +83,7 @@ EmbeddingList(
 
 An **EmbeddingList** instance.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import EmbeddingList

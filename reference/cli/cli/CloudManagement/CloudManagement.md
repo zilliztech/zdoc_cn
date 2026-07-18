@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to cloud management. | Cloud"
 type: folder
-token: XxzIf86n5lHZJPdaeTqcRm6Gnhe
+token: QMg2fBP94l5N7VdSwbucwMffnje
 sidebar_position: 1
 sidebar_label: "Cloud Management"
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
+  - milvus database
   - zilliz
   - zilliz cloud
   - cloud
   - Cloud Management
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

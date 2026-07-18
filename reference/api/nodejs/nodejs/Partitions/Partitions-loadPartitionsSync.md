@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "loadPartitionsSync() | Node.js"
 slug: /node/node/Partitions-loadPartitionsSync
+sidebar_key: node/Partitions-loadPartitionsSync
 sidebar_label: "loadPartitionsSync()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: VGofdSRi0o6EagxNkokc9Iinndf
 sidebar_position: 7
 keywords: 
-  - Audio similarity search
-  - Elastic vector database
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
+  - Zilliz
+  - milvus vector database
+  - milvus db
+  - milvus vector db
   - zilliz
   - zilliz cloud
   - cloud
   - loadPartitionsSync()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,13 +34,13 @@ import Admonition from '@theme/Admonition';
 This operation loads the data of specific partitions into memory. This is the synchronous function that helps to ensure that the specified partitions have been loaded.
 
 ```javascript
-loadPartitionsSync(data): Promise<ResStatus>
+await milvusClient.loadPartitionsSync(data)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.loadPartitionsSync({ 
+await milvusClient.loadPartitionsSync({ 
     db_name: string,
     collection_name: string,
     refresh?: boolean,
@@ -106,10 +106,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-new milvusClient(MILUVS_ADDRESS).loadPartitionsSync({
+new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+}).loadPartitionsSync({
     collection_name: 'my_collection',
     partition_names: ['my_partition'],
  });

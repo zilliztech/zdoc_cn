@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "listCollections() | Java | v2"
 slug: /java/java/v2-Collections-listCollections
+sidebar_key: java/v2-Collections-listCollections
 sidebar_label: "listCollections()"
 added_since: v2.4.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: Vv4NdWVa5o5BSrx11OZcNVnQnbh
 sidebar_position: 20
 keywords: 
-  - NLP
-  - Neural Network
-  - Deep Learning
-  - Knowledge base
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
   - listCollections()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation lists all existing collections.
 public ListCollectionsResp listCollections()
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 listCollections()
@@ -53,11 +53,11 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
 **PARAMETERS:**
 
-- **collectionNames** (*List\<String>*)
+- **collectionNames** (*List&lt;String&gt;*)
 
     A list of strings containing the names of all existing collections.
 
-- **collectionInfos** (*List\<CollectionInfo>*)
+- **collectionInfos** (*List&lt;CollectionInfo&gt;*)
 
     A list of **CollectionInfo** objects. A **CollectionInfo** object has the following fields:
 
@@ -75,7 +75,7 @@ A **ListCollectionsResp** object containing a list of collection names. If there
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

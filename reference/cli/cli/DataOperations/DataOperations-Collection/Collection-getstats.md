@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "get-stats | Cloud"
 slug: /cli/cli/Collection-getstats
+sidebar_key: cli/Collection-getstats
 sidebar_label: "get-stats"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets collection statistics (row count, etc.). | Cloud"
 type: docx
-token: TS6mdq8Clo4yLNxzZvpcJOkanid
+token: XTHTd7x3soBmeTx9ftwc369PnCe
 sidebar_position: 7
 keywords: 
-  - natural language processing database
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
+  - Vector index
+  - vector database open source
+  - open source vector db
+  - vector database example
   - zilliz
   - zilliz cloud
   - cloud
   - get-stats
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets collection statistics (row count, etc.).
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection get-stats
@@ -45,7 +45,7 @@ zilliz collection get-stats
 [--partition-names <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -81,7 +81,7 @@ zilliz collection get-stats
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection get-stats --name my_collection

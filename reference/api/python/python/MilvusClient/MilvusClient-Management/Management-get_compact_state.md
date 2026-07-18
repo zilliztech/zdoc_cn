@@ -1,11 +1,11 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_compact_state() | Python | MilvusClient"
 slug: /python/python/Management-get_compact_state
+sidebar_key: python/Management-get_compact_state
 sidebar_label: "get_compact_state()"
 added_since: v2.4.x
 last_modified: false
-deprecate_since: false
+deprecate_since: v2.6.x
 beta: false
 notebook: false
 description: "This operation returns the status of the specified compaction job. | Python | MilvusClient"
@@ -13,15 +13,15 @@ type: docx
 token: WEsjdspGLokueRxggM1cNFgknze
 sidebar_position: 7
 keywords: 
-  - Dense embedding
-  - Faiss vector database
-  - Chroma vector database
-  - nlp search
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - what is milvus
   - zilliz
   - zilliz cloud
   - cloud
   - get_compact_state()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation returns the status of the specified compaction job.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This method is deprecated. For the latest equivalent, refer to [get_compaction_state()](./Management-get_compaction_state).
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 get_compaction_state(
@@ -76,7 +82,7 @@ The state of the specified compaction job. Possible values are
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

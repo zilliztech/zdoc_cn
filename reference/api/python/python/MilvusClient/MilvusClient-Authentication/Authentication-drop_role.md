@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_role() | Python | MilvusClient"
 slug: /python/python/Authentication-drop_role
+sidebar_key: python/Authentication-drop_role
 sidebar_label: "drop_role()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
-description: "This operation drops a custom role. | Python | MilvusClient"
+description: "- forcedrop (bool) - | Python | MilvusClient"
 type: docx
-token: Vmxpd3MttodOE3x3V11cVTeunDh
+token: KUAXdm3o3opQPex8N69cMlPbnTh
 sidebar_position: 8
 keywords: 
-  - What are vector embeddings
-  - vector database tutorial
-  - how do vector databases work
-  - vector db comparison
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - drop_role()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -31,14 +31,20 @@ import Admonition from '@theme/Admonition';
 
 # drop_role()
 
+- **force_drop** (*bool*) -
+
+    Whether to forcefully drop the role even if it has privileges or users assigned. Defaults to **False**.
+
 This operation drops a custom role.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 drop_role(
     role_name: str,
-    timeout: Optional[float] = None
+    force_drop: bool = False,
+    timeout: Optional[float] = None,
+    **kwargs,
 ) -> None
 ```
 
@@ -50,7 +56,7 @@ drop_role(
 
     The name of the role to drop.
 
-- **timeout** (*float* | *None*)  
+- **timeout** (*float* | *None*) -
 
     The timeout duration for this operation. 
 
@@ -74,7 +80,7 @@ None
 
     This exception will be raised when this operation fails.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -90,4 +96,7 @@ client.create_role(role_name="read_only")
 
 # 3. Drop a role
 client.drop_role(role_name="read_only")
+
+# 4. Force drop a role with assigned privileges
+client.drop_role(role_name="custom_role", force_drop=True)
 ```

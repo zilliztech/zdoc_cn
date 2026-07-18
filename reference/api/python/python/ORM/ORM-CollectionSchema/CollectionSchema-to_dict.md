@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "to_dict() | Python | ORM"
 slug: /python/python/CollectionSchema-to_dict
+sidebar_key: python/CollectionSchema-to_dict
 sidebar_label: "to_dict()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: GfTadfqhAo64XDxc643ci4Zwnwb
 sidebar_position: 4
 keywords: 
-  - ANN Search
-  - What are vector embeddings
-  - vector database tutorial
   - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
   - to_dict()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation converts a CollectionSchema object to a dictionary representation.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 to_dict()
@@ -57,7 +57,7 @@ The dictionary representation of the collection schema.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import CollectionSchema, FieldSchema, DataType  

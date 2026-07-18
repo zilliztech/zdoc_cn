@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to partition management. | Cloud"
 type: folder
-token: Vh1yfsLKOliEvPdk4hzc9EdSncj
+token: Bzxxffu0ClU5hkdrkmlchrXenrb
 sidebar_position: 5
 sidebar_label: "Partition"
 keywords: 
-  - Pinecone vs Milvus
-  - Chroma vs Milvus
-  - Annoy vector search
-  - milvus
+  - how does milvus work
+  - Zilliz vector database
+  - Zilliz database
+  - Unstructured Data
   - zilliz
   - zilliz cloud
   - cloud
   - Partition
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

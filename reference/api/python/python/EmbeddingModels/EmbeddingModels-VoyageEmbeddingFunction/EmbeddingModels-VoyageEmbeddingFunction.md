@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "VoyageEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-VoyageEmbeddingFunction
+sidebar_key: python/EmbeddingModels-VoyageEmbeddingFunction
 sidebar_label: "VoyageEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HEyLd2lxzo3bl4xqVBOco8vWn1c
 sidebar_position: 3
 keywords: 
-  - AI chatbots
-  - cosine distance
-  - what is a vector database
-  - vectordb
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
+  - what is semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - VoyageEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.dense.VoyageEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs an VoyageEmbeddingFunction for common use cases.
 
@@ -63,13 +63,13 @@ VoyageEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [Python API](https://docs.voyageai.com/docs/embeddings#python-api).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.dense import VoyageEmbeddingFunction
 
 voyage_ef = VoyageEmbeddingFunction(
-    model_name="voyage-lite-02-instruct", # Defaults to `voyage-2`
+    model_name="voyage-lite-02-instruct", # Defaults to \`voyage-2\`
     api_key='YOUR_API_KEY' # Replace with your own Voyage API key
 )
 ```

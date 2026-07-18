@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "flush | Cloud"
 slug: /cli/cli/Collection-flush
+sidebar_key: cli/Collection-flush
 sidebar_label: "flush"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation flushes collection data to disk. | Cloud"
 type: docx
-token: R0FRdiaHuo4IElxDELmcyR90nLd
+token: DIVvdqJlOoneFwxqs0xcG313nmg
 sidebar_position: 5
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - flush
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation flushes collection data to disk.
 
-## Description
+## Description\{#description}
 
 Running this command seals the current growing segments and saves them to disk. Manually running this command can produce a large number of small segments, which may affect search performance. 
 
 You are advised to rely on Zilliz Cloud to flush data to disk rather than run this command manually.
 
-## Usage
+## Usage\{#usage}
 
 ```bash
 zilliz collection flush
@@ -86,7 +86,7 @@ zilliz collection flush
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection flush --name my_collection

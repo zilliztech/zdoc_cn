@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "Connections | Python | ORM"
 slug: /python/python/ORM-Connections
+sidebar_key: python/ORM-Connections
 sidebar_label: "Connections"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: A96udk9seoF5x5xywQZcLasanIe
 sidebar_position: 3
 keywords: 
-  - What is unstructured data
-  - Vector embeddings
-  - Vector store
-  - open source vector database
+  - vector similarity search
+  - approximate nearest neighbor search
+  - DiskANN
+  - Sparse vector
   - zilliz
   - zilliz cloud
   - cloud
   - Connections
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,17 +37,17 @@ A **Connections** instance represents a pool of connections to your Zilliz Cloud
 class pymilvus.Connections
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a singleton instance to manage all connections. 
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Instead of creating a new instance of this class on your own, import the existing singleton instance as shown in the following example.</p>
+Instead of creating a new instance of this class on your own, import the existing singleton instance as shown in the following example.
 
 </Admonition>
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections    
@@ -64,25 +64,24 @@ connections.connect(
 
 <Admonition type="info" icon="📘" title="How can I get the cluster endpoint and token?">
 
-<ul>
-<li><strong>Cluster endpoint</strong></li>
-</ul>
-<p>You can log into the <a href="https://cloud.zilliz.com">Zilliz Cloud</a> console and click <strong>Clusters</strong> in the left navigation pane. In the cluster list, click the name of the target cluster and copy its endpoint in the <strong>Connect</strong> area.</p>
-<ul>
-<li><strong>Access token</strong></li>
-</ul>
-<p>To connect to a Zilliz Cloud cluster, you can use either of the following</p>
-<ul>
-<li>An API key</li>
-</ul>
-<p>You can log into the <a href="https://cloud.zilliz.com">Zilliz Cloud</a> console and click <strong>API Keys</strong> in the left navigation pane.</p>
-<ul>
-<li>A pair of username and password to access the cluster, joined by a colon (<strong>:</strong>).</li>
-</ul>
-<p>You can use the cluster credentials specified when the cluster has been created on the Zilliz Cloud console, or those of any existing cluster users.</p>
+- **Cluster endpoint**
+
+    You can log into the [Zilliz Cloud](https://cloud.zilliz.com) console and click **Clusters** in the left navigation pane. In the cluster list, click the name of the target cluster and copy its endpoint in the **Connect** area.
+
+- **Access token**
+
+    To connect to a Zilliz Cloud cluster, you can use either of the following
+
+    - An API key
+
+        You can log into the [Zilliz Cloud](https://cloud.zilliz.com) console and click **API Keys** in the left navigation pane.
+
+    - A pair of username and password to access the cluster, joined by a colon (**:**).
+
+        You can use the cluster credentials specified when the cluster has been created on the Zilliz Cloud console, or those of any existing cluster users.
 
 </Admonition>
 
-## Methods
+## Methods\{#methods}
 
 The following are the methods of the `connections` singleton instance:

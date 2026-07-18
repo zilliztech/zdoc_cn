@@ -9,18 +9,18 @@ deprecate_since: false
 description: "Reranking models for a sophisticated evaluation and refinement on retrieved results. | Python"
 type: folder
 token: Ph7xfldrplFoihdiSAkciCuenyh
-sidebar_position: 5
+sidebar_position: 6
 sidebar_label: "Rerankers"
 keywords: 
-  - dimension reduction
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
+  - Recommender systems
   - zilliz
   - zilliz cloud
   - cloud
   - Rerankers
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 ---
 

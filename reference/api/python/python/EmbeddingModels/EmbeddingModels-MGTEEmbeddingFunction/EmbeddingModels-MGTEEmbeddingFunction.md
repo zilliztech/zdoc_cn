@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "MGTEEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-MGTEEmbeddingFunction
+sidebar_key: python/EmbeddingModels-MGTEEmbeddingFunction
 sidebar_label: "MGTEEmbeddingFunction"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: OF1mdh4tSo8ZQQxxVgEcdITRndb
 sidebar_position: 3
 keywords: 
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - zilliz
   - zilliz cloud
   - cloud
   - MGTEEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ MGTEEmbeddingFunction is a class in pymilvus that handles encoding text into emb
 pymilvus.model.hybrid.MGTEEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a MGTEEmbeddingFunction for common use cases.
 
@@ -93,7 +93,7 @@ MGTEEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus.model.hybrid import MGTEEmbeddingFunction

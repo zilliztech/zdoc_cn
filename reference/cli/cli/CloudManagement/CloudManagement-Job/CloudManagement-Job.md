@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to job management. | Cloud"
 type: folder
-token: BYCBfRYr4lcSD2dra3NcFxronVd
+token: VqTofXsTzlF4nbdugKMcbg0onWd
 sidebar_position: 5
 sidebar_label: "Job"
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - Annoy vector search
+  - milvus
+  - Zilliz
+  - milvus vector database
   - zilliz
   - zilliz cloud
   - cloud
   - Job
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

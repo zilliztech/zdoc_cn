@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "grantPrivilegeV2() | Java | v2"
 slug: /java/java/v2-Authentication-grantPrivilegeV2
+sidebar_key: java/v2-Authentication-grantPrivilegeV2
 sidebar_label: "grantPrivilegeV2()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: MFv3drbbXouqVxxE1OicBBl5ndf
 sidebar_position: 11
 keywords: 
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
-  - llm hallucinations
+  - vector database
+  - IVF
+  - knn
+  - Image Search
   - zilliz
   - zilliz cloud
   - cloud
   - grantPrivilegeV2()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation grants privileges or privilege groups to a specific role.
 public Void grantPrivilegeV2(GrantPrivilegeReqV2 request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 grantPrivilegeV2(GrantPrivilegeReqV2.builder()
@@ -77,7 +77,7 @@ grantPrivilegeV2(GrantPrivilegeReqV2.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

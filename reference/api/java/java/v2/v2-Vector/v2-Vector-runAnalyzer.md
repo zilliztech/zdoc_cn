@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: javaSidebar
 title: "runAnalyzer() | Java | v2"
 slug: /java/java/v2-Vector-runAnalyzer
+sidebar_key: java/v2-Vector-runAnalyzer
 sidebar_label: "runAnalyzer()"
 added_since: v2.6.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation processes the input data and generates tokenized output. | Java | v2"
 type: docx
-token: S2RfdHUQro7atExpfJBc6FPfnZe
+token: AXt2dvFmQoP04wx9zlVciuitnQf
 sidebar_position: 10
 keywords: 
-  - Vector embeddings
-  - Vector store
-  - open source vector database
-  - Vector index
+  - Faiss
+  - Video search
+  - AI Hallucination
+  - AI Agent
   - zilliz
   - zilliz cloud
   - cloud
   - runAnalyzer()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation processes the input data and generates tokenized output.
 public RunAnalyzerResp runAnalyzer(RunAnalyzerReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 runAnalyzer(RunAnalyzerReq.builder()
@@ -70,22 +70,6 @@ runAnalyzer(RunAnalyzerReq.builder()
 - `withHash(Boolean withHash)`
 
     An optional flag indicating whether to include hash-based processing.
-
-- `databaseName(String databaseName)`
-
-    The name of the target database. The value defaults to an empty string, indicating the default database.
-
-- `collectionName(String collectionName)`
-
-    The name of the target collection in the above-specified database.
-
-- `fieldName(String fieldName)`
-
-    The name of the target field in the above-specified collection.
-
-- `analyzerNames(List<String> analyzerNames)`
-
-    The names of the analyzers to be used.
 
 **RETURN TYPE:**
 
@@ -133,7 +117,7 @@ An **AnalyzerToken** has the following attributes:
 
     The hash value of the above token.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

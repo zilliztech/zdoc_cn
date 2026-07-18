@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "drop_collection() | Python | MilvusClient"
 slug: /python/python/Collections-drop_collection
+sidebar_key: python/Collections-drop_collection
 sidebar_label: "drop_collection()"
 added_since: v2.3.x
-last_modified: false
+last_modified: v2.6.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation drops a collection. | Python | MilvusClient"
 type: docx
-token: QNB4d2q2ZorIApxpnzqczW2HnL7
+token: HZByd7LqQoiorTxCgyrcu3VUnof
 sidebar_position: 11
 keywords: 
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
+  - Annoy vector search
   - milvus
-  - Zilliz
-  - milvus vector database
-  - milvus db
   - zilliz
   - zilliz cloud
   - cloud
   - drop_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation drops a collection.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 drop_collection(collection_name: str) -> None
@@ -47,7 +47,7 @@ drop_collection(collection_name: str) -> None
 
     The name of an existing collection.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
@@ -78,7 +78,7 @@ res = client.list_collections()
 # []
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_collection()](./Collections-create_collection)
 

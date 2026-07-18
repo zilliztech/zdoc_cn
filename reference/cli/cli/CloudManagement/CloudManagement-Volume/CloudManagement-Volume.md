@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "This chapter contains the commands related to volume management. | Cloud"
 type: folder
-token: WTZ1fyvHZlctXqdIbubcF8jCndf
-sidebar_position: 7
+token: WabafQZw0l0BDUdRbsZcK8SOnqc
+sidebar_position: 8
 sidebar_label: "Volume"
 keywords: 
-  - ANNS
-  - Vector search
-  - knn algorithm
-  - HNSW
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - Volume
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 ---
 

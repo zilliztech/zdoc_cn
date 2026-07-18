@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "get_server_version() | Python | ORM"
 slug: /python/python/utility-get_server_version
+sidebar_key: python/utility-get_server_version
 sidebar_label: "get_server_version()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: PoPkdkzSnofUihxzKLqcw7hYnrf
 sidebar_position: 16
 keywords: 
-  - vector db comparison
-  - openai vector db
-  - natural language processing database
-  - cheap vector database
+  - natural language processing
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
   - zilliz
   - zilliz cloud
   - cloud
   - get_server_version()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 This operation checks the version of the Zilliz Cloud cluster.
 
-## Request syntax
+## Request syntax\{#request-syntax}
 
 ```python
 get_server_version(
@@ -78,14 +78,14 @@ The server version.
 ```python
 from pymilvus import connections, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Check the server version
 server_version = utility.get_server_version()
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `get_server_version()`:
 

@@ -8,19 +8,19 @@ last_modified: false
 deprecate_since: false
 description: "Methods for you to manage collections. | Node.js"
 type: folder
-token: LOD4fz3qilpPyOdlfencoVEJnwd
+token: CsRZfOAHhly4fSd5kxvcAfkFnpf
 sidebar_position: 3
 sidebar_label: "Collections"
 keywords: 
-  - lexical search
-  - nearest neighbor search
-  - Agentic RAG
-  - rag llm architecture
+  - vector database tutorial
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
   - zilliz
   - zilliz cloud
   - cloud
   - Collections
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 ---
 

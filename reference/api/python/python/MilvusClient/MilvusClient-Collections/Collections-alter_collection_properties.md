@@ -1,27 +1,27 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "alter_collection_properties() | Python | MilvusClient"
 slug: /python/python/Collections-alter_collection_properties
+sidebar_key: python/Collections-alter_collection_properties
 sidebar_label: "alter_collection_properties()"
 added_since: v2.4.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 beta: false
 notebook: false
 description: "This operation alters the specified collection properties. | Python | MilvusClient"
 type: docx
-token: Pl7Fd8C3zocPaZx3VrAcl54Dnkd
+token: SJ1FdUQQnohtObxhNgpcHalMnUc
 sidebar_position: 3
 keywords: 
-  - Zilliz database
-  - Unstructured Data
-  - vector database
-  - IVF
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - alter_collection_properties()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation alters the specified collection properties.
 
-## Request Syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This does not apply to external collections.
+
+</Admonition>
+
+## Request Syntax\{#request-syntax}
 
 ```python
 alter_collection_properties(
@@ -58,6 +64,10 @@ alter_collection_properties(
     - **collection.ttl.seconds** (*int*) -
 
         The time-to-live (TTL) of a collection in seconds.
+
+    - **ttl_field** (*str*)
+
+        Name of the `TIMESTAMPTZ` field to use as the logical timestamp for entity-level TTL expiration.
 
     - **mmap.enabled** (*bool*) -
 
@@ -91,7 +101,7 @@ alter_collection_properties(
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient

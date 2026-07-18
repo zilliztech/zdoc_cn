@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "Function | Java | v2"
 slug: /java/java/v2-Collections-Function
+sidebar_key: java/v2-Collections-Function
 sidebar_label: "Function"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: CW06d3MZQo2AzuxIv2ycCFpsn4b
 sidebar_position: 3
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud
   - Function
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ A `Function` instance for generating vector embeddings from user-provided raw da
 io.milvus.v2.service.collection.request.CreateCollectionReq.Function
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 This constructor initializes a new `Function` instance designed to transform user's raw data into vector embeddings or configure rerankers for searches. This is achieved through an automated process that simplifies similarity search operations.
 
@@ -94,7 +94,7 @@ A `Function` object that can be registered with a Milvus collection, facilitatin
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.common.clientenum.FunctionType;

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_partition() | Python | ORM"
 slug: /python/python/Collection-create_partition
+sidebar_key: python/Collection-create_partition
 sidebar_label: "create_partition()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Sh7HdgJOIoJipXx5AoNcicjMnyd
 sidebar_position: 5
 keywords: 
-  - Anomaly Detection
-  - sentence transformers
-  - Recommender systems
-  - information retrieval
+  - knn algorithm
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - create_partition()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a partition in the target collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create_partition(
@@ -56,7 +56,7 @@ create_partition(
 
 **RETURN TYPE:**
 
-*Partition*
+*[Partition](./ORM-Partition)*
 
 **RETURNS:**
 
@@ -68,7 +68,7 @@ A partition object.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -91,7 +91,7 @@ partition = collection.create_partition(partition_name="test_partition")
 # {"name":"test_partition","collection_name":"test_collection","description":""}
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `create_partition()`:
 

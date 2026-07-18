@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "MilvusClientV2Pool | Java | v2"
 slug: /java/java/v2-Client-MilvusClientV2Pool
+sidebar_key: java/v2-Client-MilvusClientV2Pool
 sidebar_label: "MilvusClientV2Pool"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: UrjHd9KZKo1Rlfxfj8AcmXNinlg
 sidebar_position: 2
 keywords: 
-  - LLMs
-  - Machine Learning
-  - RAG
-  - NLP
+  - what is vector db
+  - what are vector databases
+  - vector databases comparison
+  - Faiss
   - zilliz
   - zilliz cloud
   - cloud
   - MilvusClientV2Pool
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ A **MilvusClientV2Pool** instance is a connection pool for MilvusClientV2 object
 io.milvus.pool.MilvusClientV2Pool
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a client pool for common use cases.
 
@@ -93,7 +93,7 @@ MilvusClientV2Pool(PoolConfig poolConfig, ConnectConfig connectConfig);
 
     Release/disconnect all clients of all key groups, and close the pool.
 
-## PoolConfig
+## PoolConfig\{#poolconfig}
 
 **PoolConfig** allows you to do specific configurations for the pool.
 
@@ -149,11 +149,11 @@ PoolConfig poolConfig = PoolConfig.builder()
 
     If this flag is set to true, the pool will check if the grpc connection of a client is terminated or closed each time the returnClient() is called.
 
-## ConnectConfig
+## [ConnectConfig](./v2-Client-ConnectConfig)\{#connectconfigv2-client-connectconfig}
 
-Read the description on the **[MilvusClientV2](./v2-Client-MilvusClientV2)** page.
+Read the description on the **[MilvusClientV2](./v2-Client-MilvusClientV2#connectconfigv2-client-connectconfig)** page.
 
-## Examples
+## Examples\{#examples}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

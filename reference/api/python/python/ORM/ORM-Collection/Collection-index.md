@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "index() | Python | ORM"
 slug: /python/python/Collection-index
+sidebar_key: python/Collection-index
 sidebar_label: "index()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: RkQ8dnWDHo3DiDxiCVRcP1xPnob
 sidebar_position: 18
 keywords: 
-  - Agentic RAG
-  - rag llm architecture
-  - private llms
-  - nn search
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - Faiss vector database
   - zilliz
   - zilliz cloud
   - cloud
   - index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets the specified index of the current collection.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 index(
@@ -71,7 +71,7 @@ An Index object of the current collection.
 
     This exception will be raised when multiple indexes exist but no index name has been specified. 
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection
@@ -115,7 +115,7 @@ collection.index(index_name="_default_idex_101")
 # <pymilvus.orm.index.Index at 0x1205b8690>
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `index()`
 

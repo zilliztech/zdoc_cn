@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "rename_collection() | Python | ORM"
 slug: /python/python/utility-rename_collection
+sidebar_key: python/utility-rename_collection
 sidebar_label: "rename_collection()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: M0qRdF1cLokrxvxyrXScJ64FnEe
 sidebar_position: 37
 keywords: 
-  - vectordb
-  - multimodal vector database retrieval
-  - Retrieval Augmented Generation
-  - Large language model
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
+  - Question answering system
   - zilliz
   - zilliz cloud
   - cloud
   - rename_collection()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -35,11 +35,11 @@ This operation renames an existing collection and optionally moves the collectio
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>Aliases created for the target collection remain intact after this operation.</p>
+Aliases created for the target collection remain intact after this operation.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 rename_collection(
@@ -100,12 +100,12 @@ None
 
     This exception will be raised when any error occurs during this operation, especially when the specified alias does not exist.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Renames a collection
@@ -122,7 +122,7 @@ utility.rename_collection(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `rename_collection()`:
 

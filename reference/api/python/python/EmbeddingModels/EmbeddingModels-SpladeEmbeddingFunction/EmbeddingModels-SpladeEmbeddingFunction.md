@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "SpladeEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-SpladeEmbeddingFunction
+sidebar_key: python/EmbeddingModels-SpladeEmbeddingFunction
 sidebar_label: "SpladeEmbeddingFunction"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: UdeRd0YVhoDBeVxrQaBcoikVnAI
 sidebar_position: 3
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - Retrieval Augmented Generation
+  - Large language model
+  - Vectorization
+  - k nearest neighbor algorithm
   - zilliz
   - zilliz cloud
   - cloud
   - SpladeEmbeddingFunction
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -37,7 +37,7 @@ import Admonition from '@theme/Admonition';
 pymilvus.model.sparse.SpladeEmbeddingFunction
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a SpladeEmbeddingFunction for common use cases.
 
@@ -88,7 +88,7 @@ SpladeEmbeddingFunction(
 
     Allows additional keyword arguments to be passed to the model initialization. For more information, refer to [AutoModelForMaskedLM](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForMaskedLM).
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import model

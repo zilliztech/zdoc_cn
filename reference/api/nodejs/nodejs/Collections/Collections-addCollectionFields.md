@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "addCollectionFields() | Node.js"
 slug: /node/node/Collections-addCollectionFields
+sidebar_key: node/Collections-addCollectionFields
 sidebar_label: "addCollectionFields()"
 added_since: v2.6.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FmG6dw3O1ouzgbxnl4jc5T7cnXf
 sidebar_position: 20
 keywords: 
-  - open source vector db
-  - vector database example
-  - rag vector database
-  - what is vector db
+  - Video similarity search
+  - Vector retrieval
+  - Audio similarity search
+  - Elastic vector database
   - zilliz
   - zilliz cloud
   - cloud
   - addCollectionFields()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -34,19 +34,19 @@ import Admonition from '@theme/Admonition';
 This operation adds a list of new scalar fields to an existing collection without recreating it. These fields become available almost immediately with minimal delay due to internal schema synchronization.
 
 ```javascript
-addCollectionFields(data: AddCollectionFieldReq): Promise<ResStatus>
+await milvusClient.addCollectionFields(data: AddCollectionFieldReq)
 ```
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>If the collection has the dynamic field enabled and you add a static field with the same name as an existing dynamic field key, the static field will mask the dynamic field key. The original dynamic values remain accessible via the <code>$meta['field_name']</code> syntax.</p>
+If the collection has the dynamic field enabled and you add a static field with the same name as an existing dynamic field key, the static field will mask the dynamic field key. The original dynamic values remain accessible via the `$meta['field_name']` syntax.
 
 </Admonition>
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.addCollectionFields({
+await milvusClient.addCollectionFields({
     collection_name: string,
     db_name?: string,
     field: FieldType,
@@ -215,7 +215,7 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```javascript
 const milvusClient = new MilvusClient(MILVUS_ADDRESS);

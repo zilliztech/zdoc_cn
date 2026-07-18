@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "list_resource_groups() | Python | ORM"
 slug: /python/python/utility-list_resource_groups
+sidebar_key: python/utility-list_resource_groups
 sidebar_label: "list_resource_groups()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: FXTZd5FgNo9ta0xvjaIclEM1nPf
 sidebar_position: 26
 keywords: 
-  - Sparse vs Dense
-  - Dense vector
-  - Hierarchical Navigable Small Worlds
-  - Dense embedding
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - list_resource_groups()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation lists all resource groups in the currently connected Zilliz Cloud cluster.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 list_resource_groups(
@@ -66,7 +66,7 @@ A list of all resource group names.
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a new resource group
@@ -87,7 +87,7 @@ utility.list_resource_groups(
 ) # ["__default_resource_group", "rg_01", "rg_02"]
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `list_resource_groups()`:
 

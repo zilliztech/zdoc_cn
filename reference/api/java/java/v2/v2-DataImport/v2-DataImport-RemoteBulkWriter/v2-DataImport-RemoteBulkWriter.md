@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "RemoteBulkWriter | Java | v2"
 slug: /java/java/v2-DataImport-RemoteBulkWriter
+sidebar_key: java/v2-DataImport-RemoteBulkWriter
 sidebar_label: "RemoteBulkWriter"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XAIndF6XWoQzvRxDvpLcgEE1nEb
 sidebar_position: 5
 keywords: 
-  - what is semantic search
-  - Embedding model
-  - image similarity search
-  - Context Window
+  - Zilliz database
+  - Unstructured Data
+  - vector database
+  - IVF
   - zilliz
   - zilliz cloud
   - cloud
   - RemoteBulkWriter
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,13 +37,13 @@ A **RemoteBulkWriter** instance writes your raw data in a format that Milvus und
 io.milvus.bulkwriter.RemoteBulkWriter
 ```
 
-## Constructor
+## Constructor\{#constructor}
 
 Constructs a **RemoteBulkWriter** instance with a set of parameters, such as **schema**, **remote_path**, **connect_param,** etc.
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A <strong>RemoteBulkWriter</strong> object intends to rewrite your raw data in a format that Milvus understands into an AWS-S3-compatible or a Microsoft Azure Blob Storage bucket.</p>
+A **RemoteBulkWriter** object intends to rewrite your raw data in a format that Milvus understands into an AWS-S3-compatible or a Microsoft Azure Blob Storage bucket.
 
 </Admonition>
 
@@ -57,7 +57,7 @@ public RemoteBulkWriter(RemoteBulkWriterParam bulkWriterParam)
 
     A [RemoteBulkWriterParam](./v2-DataImport-RemoteBulkWriter#remotebulkwriterparam) instance.
 
-## RemoteBulkWriterParam
+## RemoteBulkWriterParam\{#remotebulkwriterparam}
 
 **RemoteBulkWriterParam** allows you to configure properties for your **RemoteBulkWriter** instances in one place so that you can instantiate the **RemoteBulkWriter** class.
 
@@ -76,7 +76,7 @@ RemoteBulkWriterParam.newBuilder()
 
 - `withCollectionSchema(CreateCollectionReq.CollectionSchema collectionSchema)`
 
-    The schema of the target collection that is defined by instantiating [CreateCollectionReq.CollectionSchema](./v2-Collections-CollectionSchema).
+    The schema of the target collection that is defined by instantiating CreateCollectionReq.CollectionSchema.
 
 - `withConnectParam(StorageConnectParam connectParam)`
 
@@ -94,8 +94,9 @@ RemoteBulkWriterParam.newBuilder()
 
     <Admonition type="info" icon="📘" title="**How does BulkWriter segment my data?**">
 
-    <p>The way BulkWriter segments your data varies with the target file type.</p>
-    <p>If the generated file exceeds the specified segment size, BulkWriter creates multiple files and names them in sequence numbers, each no larger than the segment size.</p>
+    The way BulkWriter segments your data varies with the target file type.
+
+    If the generated file exceeds the specified segment size, BulkWriter creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>
 
@@ -115,11 +116,11 @@ RemoteBulkWriterParam.newBuilder()
 
         Special string representing null value. The value defaults to empty string: `""`.
 
-## StorageConnectParam
+## StorageConnectParam\{#storageconnectparam}
 
 **StorageConnectParam** is implemented in **AzureConnectParam** and **S3ConnectParam**.
 
-### AzureConnectParam
+### AzureConnectParam\{#azureconnectparam}
 
 **AzureConnectParam** prepares the parameters to connect to a Microsoft Azure Blob Storage container.
 
@@ -144,13 +145,13 @@ AzureConnectParam.newBuilder()
 
 - `withAccountUrl(String accountUrl)`
 
-    A string in format like `<i>http</i>s://<storage-account>.blob.core.windows.net`. Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) for more info.
+    A string in format like `https://<storage-account>.blob.core.windows.net`. Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) for more info.
 
 - `withCredential(TokenCrendtial credential)`
 
     Account access key for the account. Read [this link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys) for more info.
 
-### S3ConnectParam
+### S3ConnectParam\{#s3connectparam}
 
 S3ConnectParam prepares the parameters to connect to an S3-compatible object storage bucket
 
@@ -213,7 +214,7 @@ S3ConnectParam.newBuilder()
 
     Whether to use an OkHttp client to set up a secure (TLS) connection to the AWS S3 compatible service.
 
-## Example
+## Example\{#example}
 
 ```java
 import com.google.gson.JsonObject;

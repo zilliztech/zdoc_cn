@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: nodeSidebar
 title: "loadCollectionSync() | Node.js"
 slug: /node/node/Management-loadCollectionSync
+sidebar_key: node/Management-loadCollectionSync
 sidebar_label: "loadCollectionSync()"
 added_since: v2.4.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XXUAdI8T2oOmw2x7iITc8vJgnjm
 sidebar_position: 18
 keywords: 
-  - knn
-  - Image Search
-  - LLMs
-  - Machine Learning
+  - DiskANN
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
   - zilliz
   - zilliz cloud
   - cloud
   - loadCollectionSync()
-  - nodejs26
+  - nodejs30
 displayed_sidebar: nodeSidebar
 
 ---
@@ -37,10 +37,10 @@ This operation loads the data of a specific collection into memory. This is the 
 loadCollectionSync: ((data) => Promise<ResStatus>) = ...
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```javascript
-milvusClient.loadCollectionSync({ 
+await milvusClient.loadCollectionSync({ 
     db_name: string,
     collection_name: string,
     refresh?: boolean,
@@ -106,10 +106,13 @@ This method returns a promise that resolves to a **ResStatus** object.
 
     The reason that indicates the reason for the reported error. It remains an empty string if this operation succeeds.
 
-## Example
+## Example\{#example}
 
 ```java
-const milvusClient = new milvusClient(MILUVS_ADDRESS);
+const milvusClient = new MilvusClient({
+    address: 'YOUR_CLUSTER_ENDPOINT',
+    token: 'YOUR_CLUSTER_TOKEN',
+});
 const resStatus = await milvusClient.loadCollectionSync({ collection_name: 'my_collection' });
 ```
 

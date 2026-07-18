@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "describe | Cloud"
 slug: /cli/cli/Collection-describe
+sidebar_key: cli/Collection-describe
 sidebar_label: "describe"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation gets details of a collection. | Cloud"
 type: docx
-token: WlZmd3WDBod9ITxabYocPQuYn0e
+token: A2rOdHew3oMHWNx6ngFc4nAbnyg
 sidebar_position: 3
 keywords: 
-  - IVF
-  - knn
-  - Image Search
-  - LLMs
+  - image similarity search
+  - Context Window
+  - Natural language search
+  - Similarity Search
   - zilliz
   - zilliz cloud
   - cloud
   - describe
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation gets details of a collection.
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz collection describe
@@ -44,7 +44,7 @@ zilliz collection describe
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--name** (*string*) -
 
@@ -80,7 +80,7 @@ zilliz collection describe
 
     Indicates a JMESPath expression to filter output.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz collection describe --name my_collection

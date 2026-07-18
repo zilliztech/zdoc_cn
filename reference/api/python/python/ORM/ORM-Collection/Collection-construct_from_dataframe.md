@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "construct_from_dataframe() | Python | ORM"
 slug: /python/python/Collection-construct_from_dataframe
+sidebar_key: python/Collection-construct_from_dataframe
 sidebar_label: "construct_from_dataframe()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: ISZadjHwyopWr5xRdJ2cqxVanEg
 sidebar_position: 3
 keywords: 
-  - Retrieval Augmented Generation
-  - Large language model
-  - Vectorization
-  - k nearest neighbor algorithm
+  - Sparse vector
+  - Vector Dimension
+  - ANN Search
+  - What are vector embeddings
   - zilliz
   - zilliz cloud
   - cloud
   - construct_from_dataframe()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a collection with the specified dataframe. 
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 construct_from_dataframe(
@@ -130,7 +130,7 @@ A **MutationResult** object contains the following fields:
 
     This exception will be raised when the specified primary field is not valid.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 import pandas as pd
@@ -152,7 +152,7 @@ collection, results = Collection.construct_from_dataframe(
 )
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `construct_from_dataframe()`:
 

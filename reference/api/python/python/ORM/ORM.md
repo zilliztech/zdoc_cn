@@ -9,18 +9,18 @@ deprecate_since: false
 description: "PyMilvus ORM modules, classes, and methods | Python | ORM"
 type: folder
 token: QYo4fSeVFlex8ZdeGZ4cAlmcnof
-sidebar_position: 4
+sidebar_position: 5
 sidebar_label: "ORM"
 keywords: 
-  - DiskANN
-  - Sparse vector
-  - Vector Dimension
-  - ANN Search
+  - Vector store
+  - open source vector database
+  - Vector index
+  - vector database open source
   - zilliz
   - zilliz cloud
   - cloud
   - ORM
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 ---
 

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "query_iterator() | Python | MilvusClient"
 slug: /python/python/Vector-query_iterator
+sidebar_key: python/Vector-query_iterator
 sidebar_label: "query_iterator()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: L6i8dmvsBogcmIxtORsc1Mu0nhg
 sidebar_position: 5
 keywords: 
-  - Context Window
-  - Natural language search
-  - Similarity Search
-  - multimodal RAG
+  - RAG
+  - NLP
+  - Neural Network
+  - Deep Learning
   - zilliz
   - zilliz cloud
   - cloud
   - query_iterator()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation conducts a scalar filtering with a specified boolean expression in an iterative manner.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+External collections do not support this operation.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 query_iterator(
@@ -80,10 +86,9 @@ query_iterator(
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <ul>
-    <li><p>Setting this as <code>output_fields=["\*"]</code> outputs all fields.</p></li>
-    <li><p>Setting this as <code>output_fields=["count(\*)"]</code> outputs the loaded entities that match the conditions specified in the <strong>filter</strong> argument. </p></li>
-    </ul>
+    - Setting this as `output_fields=["\*"]` outputs all fields.
+
+    - Setting this as `output_fields=["count(\*)"]` outputs the loaded entities that match the conditions specified in the **filter** argument. 
 
     </Admonition>
 
@@ -107,9 +112,11 @@ query_iterator(
 
         <Admonition type="info" icon="📘" title="What is the consistency level?">
 
-        <p>Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.</p>
-        <p>Zilliz Cloud provides three consistency levels: <strong>Strong</strong>, <strong>Bounded Staleness</strong>, and <strong>Eventually</strong>, with <strong>Bounded Staleness</strong> set as the default.</p>
-        <p>You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.</p>
+        Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
+
+        Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
+
+        You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
 
         </Admonition>
 
@@ -121,7 +128,7 @@ query_iterator(
 
         <Admonition type="info" icon="📘" title="Notes">
 
-        <p>This parameter is valid when the default consistency level applies.</p>
+        This parameter is valid when the default consistency level applies.
 
         </Admonition>
 
@@ -133,7 +140,7 @@ query_iterator(
 
         <Admonition type="info" icon="📘" title="Notes">
 
-        <p>This parameter is valid when a consistency level other than the default one applies.</p>
+        This parameter is valid when a consistency level other than the default one applies.
 
         </Admonition>
 
@@ -171,7 +178,7 @@ A **QueryIterator** instance that provides the following methods:
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>If the number of returned entities is less than expected, duplicate entities may exist in your collection.</p>
+If the number of returned entities is less than expected, duplicate entities may exist in your collection.
 
 </Admonition>
 
@@ -185,7 +192,7 @@ A **QueryIterator** instance that provides the following methods:
 
     This exception will be raised when a parameter value doesn't match the required data type.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient

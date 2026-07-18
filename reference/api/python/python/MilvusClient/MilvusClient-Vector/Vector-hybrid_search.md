@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "hybrid_search() | Python | MilvusClient"
 slug: /python/python/Vector-hybrid_search
+sidebar_key: python/Vector-hybrid_search
 sidebar_label: "hybrid_search()"
 added_since: v2.5.x
 last_modified: v2.6.x
@@ -13,15 +13,15 @@ type: docx
 token: Iv1PdIVxYoDOMax47xDcLnbEnXb
 sidebar_position: 9
 keywords: 
-  - llm hallucinations
-  - hybrid search
-  - lexical search
-  - nearest neighbor search
+  - HNSW
+  - What is unstructured data
+  - Vector embeddings
+  - Vector store
   - zilliz
   - zilliz cloud
   - cloud
   - hybrid_search()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,13 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation performs multi-vector search on a collection and returns search results after reranking.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 hybrid_search(
     collection_name: str,
     reqs: List[AnnSearchRequest],
-    ranker: Union[BaseRanker, Function],
+    ranker: BaseRanker,
     limit: int = 10,   
     output_fields: Optional[List[str]] = None,
     timeout: Optional[float] = None,
@@ -83,11 +83,13 @@ hybrid_search(
 
             If you choose to use placeholders in `expr` as stated in [Filtering Templating](/docs/filtering-templating), then you can specify the actual values for these placeholders as key-value pairs as the value of this parameter.
 
-- **ranker** (*Union[BaseRanker, Function]*) -
+- **ranker** (*BaseRanker*) -
 
-    The reranking strategy to use for hybrid search.
+    The reranking strategy to use for hybrid search. Valid values: `WeightedRanker` and `RRFRanker`.
 
-    For details, refer to [Weighted Ranker](/docs/reranking-weighted-reranker), [RRF Ranker](/docs/reranking-rrf) and .
+    - `WeightedRanker`: The Average Weighted Scoring reranking strategy, which prioritizes vectors based on relevance, averaging their significance.
+
+    - `RRFRanker`: The RRF reranking strategy, which merges results from multiple searches, favoring items that consistently appear.
 
 - **limit** (*int*) -
 
@@ -143,8 +145,9 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
     <Admonition type="info" icon="📘" title="Notes">
 
-    <p>A <strong>SearchResult</strong> object contains a list of <strong>Hits</strong> objects, each corresponding to a query vector in the search request. </p>
-    <p>A <strong>Hits</strong> object contains a list of <strong>Hit</strong> objects, each corresponding to an entity hit by the search.</p>
+    A **SearchResult** object contains a list of **Hits** objects, each corresponding to a query vector in the search request. 
+
+    A **Hits** object contains a list of **Hit** objects, each corresponding to an entity hit by the search.
 
     </Admonition>
 
@@ -201,7 +204,7 @@ A **SearchResult** object that contains a list of **Hits** objects.
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import AnnSearchRequest, MilvusClient, WeightedRanker

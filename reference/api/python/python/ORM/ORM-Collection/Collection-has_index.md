@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "has_index() | Python | ORM"
 slug: /python/python/Collection-has_index
+sidebar_key: python/Collection-has_index
 sidebar_label: "has_index()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: WDk4dXY8IoV3SJxp9e7c3aq1nBh
 sidebar_position: 15
 keywords: 
-  - vector databases comparison
-  - Faiss
-  - Video search
-  - AI Hallucination
+  - cosine distance
+  - what is a vector database
+  - vectordb
+  - multimodal vector database retrieval
   - zilliz
   - zilliz cloud
   - cloud
   - has_index()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation checks whether the current collection has a built index.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 has_index(timeout: float | None)
@@ -59,7 +59,7 @@ A boolean value indicating whether the current collection has a built index or n
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import Collection, CollectionSchema, FieldSchema, DataType
@@ -101,7 +101,7 @@ collection.drop_index()
 collection.has_index() # False
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `has_index()`:
 

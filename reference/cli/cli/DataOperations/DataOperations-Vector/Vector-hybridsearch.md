@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: cliSidebar
 title: "hybrid-search | Cloud"
 slug: /cli/cli/Vector-hybridsearch
+sidebar_key: cli/Vector-hybridsearch
 sidebar_label: "hybrid-search"
 added_since: v0.1.x
 last_modified: false
@@ -10,18 +10,18 @@ beta: false
 notebook: false
 description: "This operation performs hybrid search with multiple vectors and reranking. | Cloud"
 type: docx
-token: YVendfgHUotdoxxNTkcc8XUMnxf
+token: EiCXdUuf2oTB3HxiL20clnSPn8g
 sidebar_position: 3
 keywords: 
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
-  - Video similarity search
+  - nlp search
+  - hallucinations llm
+  - Multimodal search
+  - vector search algorithms
   - zilliz
   - zilliz cloud
   - cloud
   - hybrid-search
-  - cliv01
+  - cliv14
 displayed_sidebar: cliSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation performs hybrid search with multiple vectors and reranking.
 
-## Description
+## Description\{#description}
 
 In many applications, an object can be searched by a rich set of information, such as title and description, or with multiple modalities, such as text, images, and audio. Zilliz Cloud supports this by allowing searches across multiple vector fields and conducting several Approximate Nearest Neighbor (ANN) searches simultaneously. Multi-vector hybrid search is particularly useful if you want to search both text and images, multiple text fields that describe the same object, or dense and sparse vectors to improve search quality.
 
@@ -45,7 +45,7 @@ There are two major hybrid searches, and they are:
 
 For details, refer to [Multi-Vector Hybrid Search](/docs/hybrid-search).
 
-## Synopsis
+## Synopsis\{#synopsis}
 
 ```bash
 zilliz vector hybrid-search
@@ -62,7 +62,7 @@ zilliz vector hybrid-search
 [--query <value>]
 ```
 
-## Options
+## Options\{#options}
 
 - **--collection** (*string*) -
 
@@ -188,7 +188,7 @@ zilliz vector hybrid-search
                 "properties": {
                     "k": {
                         "type": "integer",
-                        "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to `rrf`."
+                        "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to \`rrf\`."
                     }
                 },
                 "description": "A set of parameters related to the specified strategy",
@@ -358,7 +358,7 @@ zilliz vector hybrid-search
                         "properties": {
                             "k": {
                                 "type": "integer",
-                                "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to `rrf`."
+                                "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to \`rrf\`."
                             }
                         },
                         "description": "A set of parameters related to the specified strategy",
@@ -378,11 +378,11 @@ zilliz vector hybrid-search
             },
             "groupSize": {
                 "type": "integer",
-                "description": "The number of entities to return for each group. This parameter is only valid when `groupingField` is specified."
+                "description": "The number of entities to return for each group. This parameter is only valid when \`groupingField\` is specified."
             },
             "strictGroupSize": {
                 "type": "boolean",
-                "description": "Whether to return only the top k entities for each group. This parameter is only valid when `groupingField` is specified."
+                "description": "Whether to return only the top k entities for each group. This parameter is only valid when \`groupingField\` is specified."
             },
             "outputFields": {
                 "type": "array",
@@ -467,7 +467,7 @@ zilliz vector hybrid-search
 
     The product of this value and `limit` should be less than **16,384**.
 
-## Example
+## Example\{#example}
 
 ```bash
 zilliz vector hybrid-search --collection my_col --body file://hybrid-search.json

@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "release_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-release_partitions
+sidebar_key: python/Partitions-release_partitions
 sidebar_label: "release_partitions()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: VblKdUEU4o4t31xcFiicIGtjn9g
 sidebar_position: 7
 keywords: 
-  - milvus database
-  - milvus lite
-  - milvus benchmark
-  - managed milvus
+  - AI chatbots
+  - cosine distance
+  - what is a vector database
+  - vectordb
   - zilliz
   - zilliz cloud
   - cloud
   - release_partitions()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,13 @@ import Admonition from '@theme/Admonition';
 
 This operation releases the partitions in a specified collection from memory.
 
-## Request syntax
+<Admonition type="info" icon="📘" title="Notes">
+
+This only applies to managed collections.
+
+</Admonition>
+
+## Request syntax\{#request-syntax}
 
 ```python
 release_partitions(
@@ -73,7 +79,7 @@ None
 
 <Admonition type="info" icon="📘" title="Notes">
 
-<p>A collection is in the loaded state only if any or all of its partitions are loaded.</p>
+A collection is in the loaded state only if any or all of its partitions are loaded.
 
 </Admonition>
 
@@ -83,7 +89,7 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```python
 from pymilvus import MilvusClient
@@ -144,7 +150,7 @@ res = client.get_load_state(
 # {'state': <LoadState: Loaded>}
 ```
 
-## Related methods
+## Related methods\{#related-methods}
 
 - [create_partition()](./Partitions-create_partition)
 

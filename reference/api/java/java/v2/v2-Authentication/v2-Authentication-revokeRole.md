@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: javaSidebar
 title: "revokeRole() | Java | v2"
 slug: /java/java/v2-Authentication-revokeRole
+sidebar_key: java/v2-Authentication-revokeRole
 sidebar_label: "revokeRole()"
 added_since: v2.3.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: Znb7dcNoeobIkkxGLGfcpVfUnIX
 sidebar_position: 19
 keywords: 
-  - hnsw algorithm
-  - vector similarity search
-  - approximate nearest neighbor search
-  - DiskANN
+  - Video search
+  - AI Hallucination
+  - AI Agent
+  - semantic search
   - zilliz
   - zilliz cloud
   - cloud
   - revokeRole()
-  - javaV226
+  - javaV230
 displayed_sidebar: javaSidebar
 
 ---
@@ -37,7 +37,7 @@ This operation revokes the role assigned to a user.
 public void revokeRole(RevokeRoleReq request)
 ```
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```java
 revokeRole(RevokeRoleReq.builder()
@@ -67,7 +67,7 @@ revokeRole(RevokeRoleReq.builder()
 
     This exception will be raised when any error occurs during this operation.
 
-## Example
+## Example\{#example}
 
 ```java
 import io.milvus.v2.client.ConnectConfig;

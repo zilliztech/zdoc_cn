@@ -1,10 +1,10 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "create_user() | Python | ORM"
 slug: /python/python/utility-create_user
+sidebar_key: python/utility-create_user
 sidebar_label: "create_user()"
 added_since: Inherit
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 beta: NEAR DEPRECATE
 notebook: false
@@ -13,15 +13,15 @@ type: docx
 token: N44ndTSrgoEBx7xCID5cXRS7n1c
 sidebar_position: 5
 keywords: 
-  - rag vector database
-  - what is vector db
-  - what are vector databases
-  - vector databases comparison
+  - llm hallucinations
+  - hybrid search
+  - lexical search
+  - nearest neighbor search
   - zilliz
   - zilliz cloud
   - cloud
   - create_user()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 This operation creates a new user with a corresponding password.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 create_user(
@@ -96,19 +96,19 @@ None
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connection to localhost:19530
+# Connection to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a user
 user = utility.create_user(user="admin", password="123456")
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `create_user()`
 

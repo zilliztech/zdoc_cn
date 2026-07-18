@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "add_function() | Python | MilvusClient"
 slug: /python/python/Function-add_function
+sidebar_key: python/Function-add_function
 sidebar_label: "add_function()"
 added_since: v2.5.x
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: XhcVd1JXvoAgUfxSEpQcL2H6nVg
 sidebar_position: 1
 keywords: 
-  - rag llm architecture
-  - private llms
-  - nn search
-  - llm eval
+  - natural language processing database
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
   - zilliz
   - zilliz cloud
   - cloud
   - add_function()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation adds a function to convert raw data into vector representations.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 add_function(
@@ -51,7 +51,7 @@ add_function(
 
 **RETURN TYPE:**
 
-*CollectionSchema*
+*[CollectionSchema](./MilvusClient-CollectionSchema)*
 
 **RETURNS:**
 
@@ -63,7 +63,7 @@ A `CollectionSchema` object
 
     This exception will be raised when the `function` parameter is of the incorrect type.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient, Function, FunctionType

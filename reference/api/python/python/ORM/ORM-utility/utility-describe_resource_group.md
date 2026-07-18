@@ -1,7 +1,7 @@
 ---
-displayed_sidbar: pythonSidebar
 title: "describe_resource_group() | Python | ORM"
 slug: /python/python/utility-describe_resource_group
+sidebar_key: python/utility-describe_resource_group
 sidebar_label: "describe_resource_group()"
 added_since: Inherit
 last_modified: false
@@ -13,15 +13,15 @@ type: docx
 token: HScCdxLNJotPCcxb4AZcxsNJn9c
 sidebar_position: 7
 keywords: 
-  - Image Search
-  - LLMs
-  - Machine Learning
-  - RAG
+  - milvus lite
+  - milvus benchmark
+  - managed milvus
+  - Serverless vector database
   - zilliz
   - zilliz cloud
   - cloud
   - describe_resource_group()
-  - pymilvus26
+  - pymilvus30
 displayed_sidebar: pythonSidebar
 
 ---
@@ -33,7 +33,7 @@ import Admonition from '@theme/Admonition';
 
 This operation describes the details of a specific resource group.
 
-## Request Syntax
+## Request Syntax\{#request-syntax}
 
 ```python
 describe_resource_group(
@@ -149,12 +149,12 @@ A **ResourceGroupInfo** object contains the following fields:
 
     This exception will be raised when any error occurs during this operation.
 
-## Examples
+## Examples\{#examples}
 
 ```python
 from pymilvus import connections, utility
 
-# Connect to localhost:19530
+# Connect to YOUR_CLUSTER_ENDPOINT
 connections.connect()
 
 # Create a resource group
@@ -179,7 +179,7 @@ except Exception:
     
 # Succeeded in creating resource group rg.
 
-# Describe the details of the created resource group `rg`
+# Describe the details of the created resource group \`rg\`
 
 info = utility.describe_resource_group(name='rg')
 
@@ -206,7 +206,7 @@ print(f"Resource group rg description: {info}")
 # <hostname:doc-test1-axjfu-milvus-querynode-776bb5768-v2dqh>]>
 ```
 
-## Related operations
+## Related operations\{#related-operations}
 
 The following operations are related to `describe_resource_group()`:
 
