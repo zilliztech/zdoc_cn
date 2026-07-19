@@ -123,7 +123,7 @@ async function translateRestSpecs({ sourceSpecs, locale, callModel, systemPrompt
     translated.push(...parseTranslationEntries(response, batch))
   }
   const localized = applyLocaleEntries(sourceSpecs, translated, locale)
-  assert.deepEqual(removeLocale(localized, locale), sourceSpecs, 'Localized REST specs changed non-locale data')
+  assert.deepEqual(removeLocale(localized, locale), removeLocale(sourceSpecs, locale), 'Localized REST specs changed non-locale data')
   return { localized, translatedCount: translated.length }
 }
 

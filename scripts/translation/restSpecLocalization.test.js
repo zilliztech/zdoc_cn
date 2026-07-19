@@ -29,7 +29,7 @@ test('adds Chinese locale data without changing the source specification', async
   assert.equal(localized['x-i18n']['zh-CN'].summary, 'JA:Search')
   assert.equal(localized.properties.limit['x-i18n']['zh-CN'].description, 'JA:Maximum results.')
   assert.deepEqual(localized.example, sourceSpecs.example)
-  assert.deepEqual(removeLocale(localized, 'zh-CN'), sourceSpecs)
+  assert.deepEqual(removeLocale(localized, 'zh-CN'), removeLocale(sourceSpecs, 'zh-CN'))
 })
 
 test('parses and assembles a REST endpoint document with Chinese RestSpecs language', () => {
