@@ -238,28 +238,21 @@ test('CN docs production runs only on explicit manual dispatch during migration'
   assert.doesNotMatch(workflow, /Global Docs(?: Artifact-Only)? Build/)
 })
 
-test('content producers and source publishers form explicit queues', () => {
+test('content producers follow upstream-parallel source graph and serialized publishers', () => {
   const workflowPath = path.join(process.cwd(), '.github/workflows/fetch-docs.yml')
   const workflow = yaml.load(fs.readFileSync(workflowPath, 'utf8'))
   const groups = ['guides', 'python', 'java', 'node', 'go', 'cli', 'rest']
-  const producerNeeds = {
-    guides: ['prepare', 'produce_guides_sources', 'render_guides_tables'],
-    python: ['prepare', 'produce_guides_sources'],
-    java: ['prepare', 'produce_python'],
-    node: ['prepare', 'produce_java'],
-    go: ['prepare', 'produce_node'],
-    cli: ['prepare', 'produce_go'],
-    rest: ['prepare', 'produce_cli'],
-  }
   const publicationOrder = ['java', 'node', 'go', 'cli', 'rest', 'python', 'guides']
 
   for (const group of groups) {
-    assert.deepEqual(workflow.jobs[`produce_${group}`].needs, producerNeeds[group])
+    const expectedProducerNeeds = group === 'guides'
+      ? ['prepare', 'produce_guides_sources', 'render_guides_tables']
+      : 'prepare'
+    assert.deepEqual(workflow.jobs[`produce_${group}`].needs, expectedProducerNeeds)
     const producerCondition = workflow.jobs[`produce_${group}`].if || ''
-    assert.match(producerCondition, /!cancelled\(\)/, `${group} producer must tolerate skipped serialization dependencies without ignoring run cancellation`)
     assert.match(producerCondition, new RegExp(`needs\\.prepare\\.outputs\\.selected_group == '${group}'`), `${group} producer must support single-group dispatch`)
     const condition = workflow.jobs[`publish_${group}`].if
-    assert.match(condition, /always\(\)/, `${group} publisher must tolerate skipped serialization dependencies`)
+    assert.match(condition, /always\(\)/, `${group} publisher must tolerate skipped dependencies`)
     assert.match(condition, /needs\.prepare\.outputs\.publish == 'true'/, `${group} publisher must require publish mode`)
     assert.match(condition, new RegExp(`needs\\.prepare\\.outputs\\.selected_group == '${group}'`), `${group} publisher must require group selection`)
     assert.match(condition, new RegExp(`needs\\.produce_${group}\\.outputs\\.status == 'artifact_ready'`), `${group} publisher must require an artifact-ready producer`)

@@ -101,7 +101,11 @@ jobs:
   writeFile(upstream, '.github/workflows/_translate-content-group.yml', 'name: translate ja-JP content group\n');
   writeFile(upstream, '.github/workflows/_translate-publish-batch.yml', 'name: translate publish Japanese batch\n');
   writeFile(upstream, '.github/workflows/_verify-docs.yml', 'name: verify docs\n');
-  writeFile(upstream, '.github/workflows/translate-codex.yml', 'name: translate codex ja-JP\n');
+  writeFile(upstream, '.github/workflows/translate-codex.yml', `name: translate codex ja-JP
+concurrency:
+  group: docs-production-dev
+  cancel-in-progress: false
+`);
   writeFile(upstream, 'scripts/docs-workflow/example.js', "module.exports = 'i18n/ja-JP Japanese';\n");
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
   writeFile(upstream, 'scripts/update-lark-doc-snapshot.js', "console.log('snapshot');\n");
@@ -142,6 +146,11 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(fetchDocs, /npm ci/);
     assert.doesNotMatch(fetchDocs, /cache: pnpm/);
     assert.doesNotMatch(fetchDocs, /pnpm install --frozen-lockfile/);
+
+    const translateCodex = readFile(fixture.root, '.github/workflows/translate-codex.yml');
+    assert.match(translateCodex, /translate codex zh-CN/);
+    assert.match(translateCodex, /group: cn-docs-production-dev/);
+    assert.doesNotMatch(translateCodex, /^  group: docs-production-dev$/m);
 
     const contentGroup = readFile(fixture.root, '.github/workflows/_fetch-content-group.yml');
     assert.match(contentGroup, /OSS_ACCESS_KEY_ID/);

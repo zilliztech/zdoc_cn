@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: docs-production-dev
+  group: cn-docs-production-dev
   cancel-in-progress: false
 
 jobs:

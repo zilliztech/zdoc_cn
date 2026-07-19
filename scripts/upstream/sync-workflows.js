@@ -120,8 +120,11 @@ function applyFetchDocsPatch(content) {
   next = next.replace(/default: true/g, 'default: false');
   next = next.replace(/Global Docs Artifact-Only Build/g, 'CN Docs Artifact-Only Build');
   next = next.replace(/Global Docs Build/g, 'CN Docs Build');
-  next = next.replace(/group: docs-production-dev/g, 'group: cn-docs-production-dev');
   return applyOssPatch(next);
+}
+
+function applyCnWorkflowPatch(content) {
+  return content.replace(/group: docs-production-dev/g, 'group: cn-docs-production-dev');
 }
 
 function applyPackageManagerPatch(content) {
@@ -145,7 +148,10 @@ function transform(relativePath, content) {
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);
   }
-  if (relativePath.startsWith('.github/workflows/')) next = applyPackageManagerPatch(next);
+  if (relativePath.startsWith('.github/workflows/')) {
+    next = applyCnWorkflowPatch(next);
+    next = applyPackageManagerPatch(next);
+  }
   return next;
 }
 
@@ -232,6 +238,7 @@ if (require.main === module) {
 
 module.exports = {
   COPIED_PATHS,
+  applyCnWorkflowPatch,
   applyFetchDocsPatch,
   applyOssPatch,
   applyPackageManagerPatch,
