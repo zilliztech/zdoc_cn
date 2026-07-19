@@ -36,6 +36,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20', cache: npm }
       - run: npm ci
+      - name: Materialize locked upstream
+        run: node scripts/upstream/materialize.js
+      - name: Assemble locked upstream
+        run: npm run assemble
+      - name: Install assembled dependencies
+        run: pnpm --dir .zdoc-assembled install --frozen-lockfile
       - name: Prepare immutable baseline
         run: |
           git fetch --no-tags origin "${{ inputs.dev_baseline_sha }}"
@@ -47,9 +53,9 @@ jobs:
         run: |
           tar -tf "$RUNNER_TEMP/download/guides-source.tar" | node -e 'const fs=require("fs");for(const p of fs.readFileSync(0,"utf8").trim().split("\n"))if(p!=="guides-source"&&!p.startsWith("guides-source/"))throw Error("unsafe archive path")'
           tar -xf "$RUNNER_TEMP/download/guides-source.tar" -C "$RUNNER_TEMP"
-          node scripts/docs-workflow/guides-stage-artifact.js --operation restore --stage source --artifact "$RUNNER_TEMP/guides-source" --target "$GITHUB_WORKSPACE" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}"
+          node scripts/docs-workflow/guides-stage-artifact.js --operation restore --stage source --artifact "$RUNNER_TEMP/guides-source" --target "$GITHUB_WORKSPACE/.zdoc-assembled" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}"
       - name: Render Guides table offline
-        run: node scripts/docs-workflow/render-guides-table.js --workspace "$GITHUB_WORKSPACE" --entry "$ENTRY_JSON"
+        run: node .zdoc-assembled/scripts/docs-workflow/render-guides-table.js --workspace "$GITHUB_WORKSPACE/.zdoc-assembled" --entry "$ENTRY_JSON"
         env:
           ENTRY_JSON: ${{ toJSON(inputs) }}
           IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
@@ -57,7 +63,7 @@ jobs:
       - name: Create table artifact
         run: |
           source_sha=$(sha256sum "$RUNNER_TEMP/guides-source/manifest.json" | cut -d' ' -f1)
-          node scripts/docs-workflow/guides-table-artifact.js --operation create --workspace "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/guides-table" --entry "$ENTRY_JSON" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}" --source-artifact-sha256 "$source_sha"
+          node scripts/docs-workflow/guides-table-artifact.js --operation create --workspace "$GITHUB_WORKSPACE/.zdoc-assembled" --output "$RUNNER_TEMP/guides-table" --entry "$ENTRY_JSON" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}" --source-artifact-sha256 "$source_sha"
           tar -cf "$RUNNER_TEMP/guides-table-${{ inputs.target_name }}-${{ inputs.table_slug }}.tar" -C "$RUNNER_TEMP" guides-table
         env:
           ENTRY_JSON: ${{ toJSON(inputs) }}

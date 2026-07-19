@@ -104,7 +104,24 @@ jobs:
   writeFile(upstream, '.github/workflows/_prepare-translation-batches.yml', 'name: prepare translation batches\n');
   writeFile(upstream, '.github/workflows/_publish-content-group.yml', 'name: publish content group\n');
   writeFile(upstream, '.github/workflows/_publish-translation-batches.yml', 'name: publish translation batches\n');
-  writeFile(upstream, '.github/workflows/_render-guides-table.yml', 'name: render guides table\n');
+  writeFile(upstream, '.github/workflows/_render-guides-table.yml', `name: render guides table
+jobs:
+  render:
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: '\${{ inputs.master_sha }}', fetch-depth: 0 }
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: Restore validated shared sources
+        run: node scripts/docs-workflow/guides-stage-artifact.js --operation restore --target "$GITHUB_WORKSPACE"
+      - name: Render Guides table offline
+        run: node scripts/docs-workflow/render-guides-table.js --workspace "$GITHUB_WORKSPACE" --entry "$ENTRY_JSON"
+      - name: Create table artifact
+        run: node scripts/docs-workflow/guides-table-artifact.js --operation create --workspace "$GITHUB_WORKSPACE"
+`);
   writeFile(upstream, '.github/workflows/_translate-content-group.yml', 'name: translate ja-JP content group\n');
   writeFile(upstream, '.github/workflows/_translate-publish-batch.yml', 'name: translate publish Japanese batch\n');
   writeFile(upstream, '.github/workflows/_verify-docs.yml', 'name: verify docs\n');
@@ -198,6 +215,17 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(guidesSources, /FEISHU_RETRY_ATTEMPTS: '9'/);
     assert.match(guidesSources, /FEISHU_RETRY_DELAY_MS: '5000'/);
     assert.match(guidesSources, /FEISHU_RATE_LIMIT_FALLBACK_MS: '120000'/);
+
+    const renderGuidesTable = readFile(fixture.root, '.github/workflows/_render-guides-table.yml');
+    assert.match(renderGuidesTable, /name: Materialize locked upstream/);
+    assert.match(renderGuidesTable, /node scripts\/upstream\/materialize\.js/);
+    assert.match(renderGuidesTable, /name: Assemble locked upstream/);
+    assert.match(renderGuidesTable, /npm run assemble/);
+    assert.match(renderGuidesTable, /name: Install assembled dependencies/);
+    assert.match(renderGuidesTable, /pnpm --dir \.zdoc-assembled install --frozen-lockfile/);
+    assert.match(renderGuidesTable, /--target "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(renderGuidesTable, /node \.zdoc-assembled\/scripts\/docs-workflow\/render-guides-table\.js --workspace "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(renderGuidesTable, /--workspace "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
 
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/monitor-docs-progress.js'), "module.exports = 'CN Docs Build / CN Docs Artifact-Only Build';\n");

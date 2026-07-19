@@ -206,6 +206,35 @@ function applyFetchContentGroupPatch(content) {
   );
 }
 
+function applyRenderGuidesTableAssembledUpstreamPatch(content) {
+  let next = content;
+  if (!next.includes('name: Materialize locked upstream')) {
+    next = next.replace(
+      /(\n\s+- run: (?:npm ci|pnpm install --frozen-lockfile)\n)/,
+      `$1      - name: Materialize locked upstream
+        run: node scripts/upstream/materialize.js
+      - name: Assemble locked upstream
+        run: npm run assemble
+      - name: Install assembled dependencies
+        run: pnpm --dir .zdoc-assembled install --frozen-lockfile
+`,
+    );
+  }
+  next = next.replace(
+    /--target "\$GITHUB_WORKSPACE"/g,
+    '--target "$GITHUB_WORKSPACE/.zdoc-assembled"',
+  );
+  next = next.replace(
+    /node scripts\/docs-workflow\/render-guides-table\.js --workspace "\$GITHUB_WORKSPACE"/g,
+    'node .zdoc-assembled/scripts/docs-workflow/render-guides-table.js --workspace "$GITHUB_WORKSPACE/.zdoc-assembled"',
+  );
+  next = next.replace(
+    /node scripts\/docs-workflow\/guides-table-artifact\.js --operation create --workspace "\$GITHUB_WORKSPACE"/g,
+    'node scripts/docs-workflow/guides-table-artifact.js --operation create --workspace "$GITHUB_WORKSPACE/.zdoc-assembled"',
+  );
+  return next;
+}
+
 function applyTranslatePatch(content) {
   return content
     .replace(/ja-JP/g, 'zh-CN')
@@ -227,6 +256,7 @@ function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_
   if (relativePath === '.github/workflows/fetch-docs.yml') next = applyFetchDocsPatch(next);
   if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyFetchContentGroupPatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyCnGuidesFetchThrottlePatch(applyOssPatch(next));
+  if (relativePath === '.github/workflows/_render-guides-table.yml') next = applyRenderGuidesTableAssembledUpstreamPatch(next);
   if (relativePath === 'scripts/docs-workflow/guides-tables.js') next = applyCnGuidesTableSlugPatch(next);
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);

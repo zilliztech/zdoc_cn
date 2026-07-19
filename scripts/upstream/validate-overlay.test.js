@@ -40,6 +40,7 @@ function validManifest(overrides = {}) {
     copy: [
       { from: 'site-profile', to: 'site-profile/zh-CN', optional: true },
       { from: 'content-config', to: 'content-config/zh-CN', optional: true },
+      { from: 'config/lark-docs.config.ts', to: 'config/lark-docs.config.ts' },
       { from: 'config/cn-publish-replacements.js', to: 'config/cn-publish-replacements.js' },
       { from: 'plugins/cn-publish-normalizer', to: 'plugins/cn-publish-normalizer' },
       { from: 'plugins/adapters/aliyun-oss', to: 'plugins/adapters/aliyun-oss', optional: true },
@@ -58,6 +59,7 @@ test('accepts the declared CN overlay entries', () => {
   assert.deepEqual(manifest.copy.map((entry) => entry.to), [
     'site-profile/zh-CN',
     'content-config/zh-CN',
+    'config/lark-docs.config.ts',
     'config/cn-publish-replacements.js',
     'plugins/cn-publish-normalizer',
     'plugins/adapters/aliyun-oss',

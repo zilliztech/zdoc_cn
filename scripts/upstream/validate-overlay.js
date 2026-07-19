@@ -19,6 +19,7 @@ const BLOCKED_FILES = new Set([
 const ALLOWED_COPY_TARGETS = new Map([
   ['site-profile', 'site-profile/zh-CN'],
   ['content-config', 'content-config/zh-CN'],
+  ['config/lark-docs.config.ts', 'config/lark-docs.config.ts'],
   ['config/cn-publish-replacements.js', 'config/cn-publish-replacements.js'],
   ['plugins/cn-publish-normalizer', 'plugins/cn-publish-normalizer'],
   ['plugins/adapters/aliyun-oss', 'plugins/adapters/aliyun-oss'],
