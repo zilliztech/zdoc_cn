@@ -388,7 +388,7 @@ async function main() {
     : github.downloadFinalReport
   const monitor = createDocsProgressMonitor({
     ...config,
-    title: config.publishEnabled ? 'Global Docs Build' : 'Global Docs Artifact-Only Build',
+    title: config.publishEnabled ? 'CN Docs Build' : 'CN Docs Artifact-Only Build',
     listJobs: github.listJobs,
     downloadProgressMetadata: github.downloadProgressMetadata,
     downloadFinalReport: reportFromFile,

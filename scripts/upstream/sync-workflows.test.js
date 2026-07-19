@@ -67,10 +67,12 @@ on:
 jobs:
   fetch:
     steps:
-      - run: bash scripts/update-sdk-reference-snapshots.sh "$GROUP"
+      - name: Fetch content group
+        run: bash scripts/update-sdk-reference-snapshots.sh "$GROUP"
         env:
           AWS_BUCKET: \${{ vars.AWS_BUCKET }}
           AWS_REGION: \${{ vars.AWS_REGION }}
+          IMAGE_BED_URL: \${{ vars.IMAGE_BED_URL }}
           AWS_ACCESS_KEY_ID: \${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: \${{ secrets.AWS_SECRET_ACCESS_KEY }}
 `);
@@ -107,6 +109,7 @@ concurrency:
   cancel-in-progress: false
 `);
   writeFile(upstream, 'scripts/collect-build-card-notes.js', "console.log('card notes');\n");
+  writeFile(upstream, 'scripts/docs-workflow/monitor-docs-progress.js', "module.exports = 'Global Docs Build / Global Docs Artifact-Only Build';\n");
   writeFile(upstream, 'scripts/docs-workflow/example.js', "module.exports = 'i18n/ja-JP Japanese';\n");
   writeFile(upstream, 'scripts/docs-workflow/example.test.js', "assert.throws(() => createBatchInput(selectedManifest({ locale: 'zh-CN' })), /ja-JP|locale/i)\n");
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
@@ -160,10 +163,13 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(contentGroup, /OSS_BUCKET/);
     assert.match(contentGroup, /OSS_REGION/);
     assert.match(contentGroup, /OSS_ENDPOINT/);
+    assert.match(contentGroup, /name: Restore preserved landing pages after generation/);
+    assert.match(contentGroup, /if: \$\{\{ env\.GROUP != 'rest' \}\}/);
     assert.doesNotMatch(contentGroup, /AWS_ACCESS_KEY_ID/);
     assert.doesNotMatch(contentGroup, /AWS_SECRET_ACCESS_KEY/);
 
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
+    assert.equal(readFile(fixture.root, 'scripts/docs-workflow/monitor-docs-progress.js'), "module.exports = 'CN Docs Build / CN Docs Artifact-Only Build';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.test.js'), "assert.throws(() => createBatchInput(selectedManifest({ locale: 'en-US' })), /zh-CN|locale/i)\n");
     assert.equal(readFile(fixture.root, 'scripts/collect-build-card-notes.js'), "console.log('card notes');\n");
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");

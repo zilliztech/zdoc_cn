@@ -119,9 +119,15 @@ function applyFetchDocsPatch(content) {
   next = next.replace(/^name: .+$/m, 'name: fetch CN docs');
   next = removeScheduleBlock(next);
   next = next.replace(/default: true/g, 'default: false');
+  next = applyDocsBrandPatch(next);
+  return applyOssPatch(next);
+}
+
+function applyDocsBrandPatch(content) {
+  let next = content;
   next = next.replace(/Global Docs Artifact-Only Build/g, 'CN Docs Artifact-Only Build');
   next = next.replace(/Global Docs Build/g, 'CN Docs Build');
-  return applyOssPatch(next);
+  return next;
 }
 
 function applyCnWorkflowPatch(content) {
@@ -132,6 +138,18 @@ function applyPackageManagerPatch(content) {
   return content
     .replace(/cache: pnpm/g, 'cache: npm')
     .replace(/pnpm install --frozen-lockfile/g, 'npm ci');
+}
+
+function applyFetchContentGroupPatch(content) {
+  if (content.includes('name: Restore preserved landing pages after generation')) return content;
+  return content.replace(
+    /(\n      - name: Fetch content group\n(?:        .+\n)+?          OSS_ACCESS_KEY_SECRET: \$\{\{ secrets\.OSS_ACCESS_KEY_SECRET \}\}\n)/,
+    `$1
+      - name: Restore preserved landing pages after generation
+        if: \${{ env.GROUP != 'rest' }}
+        run: node scripts/docs-workflow/prepare-content-group-workspace.js "$GROUP"
+`,
+  );
 }
 
 function applyTranslatePatch(content) {
@@ -148,10 +166,11 @@ function applyCnTestFixturePatch(content) {
 function transform(relativePath, content) {
   let next = content;
   if (relativePath === '.github/workflows/fetch-docs.yml') next = applyFetchDocsPatch(next);
-  if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyOssPatch(next);
+  if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyFetchContentGroupPatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyOssPatch(next);
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);
+    next = applyDocsBrandPatch(next);
   }
   if (relativePath.startsWith('scripts/docs-workflow/') && relativePath.endsWith('.test.js')) {
     next = applyCnTestFixturePatch(next);
