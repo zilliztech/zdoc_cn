@@ -100,3 +100,21 @@ test('rejects a missing SDK or CLI landing page', () => {
     /missing preserved landing pages.*python\.md/is,
   )
 })
+
+test('checks only selected preserved landing pages for partial producer workspaces', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'preserved-landing-pages-group-'))
+  try {
+    write(path.join(root, 'reference/api/go/go/go.md'), '# landing\n')
+
+    assert.deepEqual(validatePreservedEnglishFiles({ cwd: root, groups: 'go' }), {
+      checked: 1,
+      missing: [],
+    })
+    assert.throws(
+      () => validatePreservedEnglishFiles({ cwd: root, groups: 'cli' }),
+      /missing preserved landing pages.*Overview\.md/is,
+    )
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true })
+  }
+})

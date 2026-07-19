@@ -102,13 +102,21 @@ function validateReferenceSidebarTargets({ directory, outputDir }) {
   return results
 }
 
-function validatePreservedEnglishFiles({ cwd = process.cwd() } = {}) {
-  const missing = ['python', 'java', 'node', 'go', 'cli']
+function normalizePreservedEnglishGroups(groups) {
+  if (groups === undefined) return ['python', 'java', 'node', 'go', 'cli']
+  const selected = Array.isArray(groups) ? groups : [groups]
+  for (const group of selected) getGroupPaths(group)
+  return selected
+}
+
+function validatePreservedEnglishFiles({ cwd = process.cwd(), groups } = {}) {
+  const expected = normalizePreservedEnglishGroups(groups)
     .flatMap(group => getGroupPaths(group).preservedEnglish)
+  const missing = expected
     .filter(relativePath => !fs.existsSync(path.join(cwd, ...relativePath.split('/'))))
     .sort()
   if (missing.length) throw new Error(`Missing preserved landing pages:\n- ${missing.join('\n- ')}`)
-  return { checked: 5, missing }
+  return { checked: expected.length, missing }
 }
 
 function main() {
@@ -121,7 +129,7 @@ function main() {
   })) {
     console.log(`[sidebar-validation] ${result.sidebar}: ${result.checked} doc target(s) checked`)
   }
-  const preserved = validatePreservedEnglishFiles()
+  const preserved = validatePreservedEnglishFiles({ groups: process.env.GROUP || undefined })
   console.log(`[sidebar-validation] ${preserved.checked} preserved landing page(s) checked`)
   const candidate = path.join(process.cwd(), 'plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json')
   if (fs.existsSync(candidate)) {

@@ -106,6 +106,7 @@ concurrency:
   group: docs-production-dev
   cancel-in-progress: false
 `);
+  writeFile(upstream, 'scripts/collect-build-card-notes.js', "console.log('card notes');\n");
   writeFile(upstream, 'scripts/docs-workflow/example.js', "module.exports = 'i18n/ja-JP Japanese';\n");
   writeFile(upstream, 'scripts/docs-workflow/example.test.js', "assert.throws(() => createBatchInput(selectedManifest({ locale: 'zh-CN' })), /ja-JP|locale/i)\n");
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
@@ -164,6 +165,7 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
 
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.test.js'), "assert.throws(() => createBatchInput(selectedManifest({ locale: 'en-US' })), /zh-CN|locale/i)\n");
+    assert.equal(readFile(fixture.root, 'scripts/collect-build-card-notes.js'), "console.log('card notes');\n");
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");
   } finally {
     fs.rmSync(fixture.directory, { recursive: true, force: true });
