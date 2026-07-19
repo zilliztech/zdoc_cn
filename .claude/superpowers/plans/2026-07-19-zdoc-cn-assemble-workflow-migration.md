@@ -1110,3 +1110,34 @@ Verification snapshot:
 
 Remaining known blocker:
 - Fix Feishu Base permissions or secret configuration for `produce_guides_sources`; rerun the full workflow after this commit reaches `master`.
+
+## 2026-07-19 Full Workflow Breakpoint Update
+
+Observed remote run `29670406526` after the generated-sidebar and Linux `jieba` fixes:
+- `produce_rest / produce` completed successfully through fetch, build, checkpoint validation, and artifact upload. REST is no longer blocked by missing generated sidebars or Linux native packages.
+- `produce_java`, `produce_python`, `produce_node`, `produce_go`, and `produce_cli` failed during Feishu fetches with repeated `retryable response 503: {}` after the default short retry window. This is a Feishu service/load breakpoint in the source-fetch phase, amplified by the all-groups producer fan-out.
+- `produce_guides_sources / fetch` still failed with `91403 Forbidden` while listing Base tables for `I6YUb1M0JajHrqsJGcLcZNh7neP`. This remains an external app/table permission or secret-scope blocker.
+- The translation workflow already covers Guides, SDK references, CLI, and REST. REST spec localization preserves existing `x-i18n.zh-CN` entries and only sends missing prose fields for translation.
+
+Implemented migration changes from this breakpoint:
+- Serialized source producers in `fetch-docs.yml` for all-groups runs: Guides sources, Python, Java, Node, Go, CLI, then REST. Single-group dispatch still works through cancellation-aware `!cancelled()` producer conditions.
+- Increased Feishu retry/backoff defaults in `_fetch-content-group.yml` and `_fetch-guides-sources.yml`: `FEISHU_RETRY_ATTEMPTS=8`, `FEISHU_RETRY_DELAY_MS=3000`, `FEISHU_MIN_TIME_MS=800`, and `FEISHU_WIKI_NODE_MIN_TIME_MS=1500`.
+- Preserved zdoc_cn Ali OSS environment names in all producer workflows: `OSS_BUCKET`, `OSS_REGION`, `OSS_ENDPOINT`, `IMAGE_BED_URL`, `OSS_ACCESS_KEY_ID`, and `OSS_ACCESS_KEY_SECRET`.
+- Updated workflow policy tests so source producer serialization is an explicit invariant, not an accidental implementation detail.
+
+Fresh verification:
+- `node --test scripts/validate-workflow-policy.test.js scripts/translation/restSpecLocalization.test.js`: pass
+- `node --test scripts/validate-generated-sidebars.test.js scripts/translation/sidebarKeys.test.js scripts/docs-workflow/rest-reconciliation.test.js`: pass
+
+Next remote verification:
+- Push the source producer serialization/backoff patch to `master`.
+- Run artifact-only all-groups workflow again:
+
+```bash
+gh workflow run fetch-docs.yml --repo zilliztech/zdoc_cn --ref master -f group=all -f artifact_retention_days=3 -f target_branch=dev -f publish=false -f tooling_ref=master
+```
+
+Expected:
+- REST should remain artifact-ready.
+- SDK/CLI producers should no longer fail from short Feishu `503` bursts under all-groups load.
+- Guides will still fail until the Feishu Base permission for `I6YUb1M0JajHrqsJGcLcZNh7neP` is corrected.
