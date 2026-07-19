@@ -1,6 +1,9 @@
 interface TargetConfig {
     outputDir: string;
     imageDir: string;
+    sidebarPath?: string;
+    overridePath?: string;
+    preserveOutput?: boolean;
 }
 
 interface Targets { [key: string]: TargetConfig | { [key: string]: TargetConfig } }
@@ -15,16 +18,22 @@ interface Manual {
     docSourceDir: string;
     fallbackSourceDir?: string;
     targets: Targets;
+    sidebarPath?: string;
+    overridePath?: string;
+    contentRoot?: string;
 }
 
 // guides ==============================
 
 const guides: Manual = {
     root: 'XyeFwdx6kiK9A6kq3yIcLNdEnDd',
-    base: 'MQI8b662gabapmsTl7ZcnTExnSc',
+    base: 'I6YUb1M0JajHrqsJGcLcZNh7neP:*',
     sourceType: 'wiki',
     displayedSidebar: 'default',
     docSourceDir: './plugins/lark-docs/meta/sources/guides',
+    sidebarPath: './config/generated/guides.sidebar.js',
+    overridePath: './config/sidebar-overrides/guides.json',
+    contentRoot: 'docs',
     targets: {
         zilliz: {
             saas: {
@@ -32,13 +41,11 @@ const guides: Manual = {
                 imageDir: 'static/img',
             },
             paas: {
-                outputDir: 'versioned_docs/version-byoc/tutorials',
+                outputDir: 'docs-byoc/tutorials',
                 imageDir: 'static/img',
+                sidebarPath: './config/generated/guides-byoc.sidebar.js',
+                overridePath: './config/sidebar-overrides/guides-byoc.json',
             }
-        },
-        milvus: {
-            outputDir: 'milvus/guides/docs',
-            imageDir: 'milvus/guides/images'
         }
     }
 }
