@@ -117,6 +117,17 @@ concurrency:
   writeFile(upstream, 'scripts/docs-workflow/monitor-docs-progress.js', "module.exports = 'Global Docs Build / Global Docs Artifact-Only Build';\n");
   writeFile(upstream, 'scripts/docs-workflow/example.js', "module.exports = 'i18n/ja-JP Japanese';\n");
   writeFile(upstream, 'scripts/docs-workflow/example.test.js', "assert.throws(() => createBatchInput(selectedManifest({ locale: 'zh-CN' })), /ja-JP|locale/i)\n");
+  writeFile(upstream, 'scripts/docs-workflow/guides-tables.js', `const fs = require('node:fs')
+const slugify = require('slugify')
+const TARGETS = ['zilliz.paas', 'zilliz.saas']
+module.exports = {
+  entry(tableId, tableName) {
+    return {
+      table_slug: slugify(tableName, { lower: true, strict: true }),
+    }
+  }
+}
+`);
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
   writeFile(upstream, 'scripts/update-lark-doc-snapshot.js', "console.log('snapshot');\n");
 
@@ -191,6 +202,10 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/monitor-docs-progress.js'), "module.exports = 'CN Docs Build / CN Docs Artifact-Only Build';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.test.js'), "assert.throws(() => createBatchInput(selectedManifest({ locale: 'en-US' })), /zh-CN|locale/i)\n");
+    const guidesTables = readFile(fixture.root, 'scripts/docs-workflow/guides-tables.js');
+    assert.match(guidesTables, /loadCnGuidesTableSlugOverrides/);
+    assert.match(guidesTables, /config', 'guides-table-slugs\.json'/);
+    assert.match(guidesTables, /TABLE_SLUG_OVERRIDES\[tableId\]/);
     assert.equal(readFile(fixture.root, 'scripts/collect-build-card-notes.js'), "console.log('card notes');\n");
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");
   } finally {

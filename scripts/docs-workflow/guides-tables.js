@@ -2,9 +2,21 @@
 'use strict'
 
 const fs = require('node:fs')
+const path = require('node:path')
 const slugify = require('slugify')
 const { guidesCanonicalIsPublishable, guidesRecordPublishTargets } = require('../../plugins/lark-docs/guidesBaseRecordSemantics')
 
+function loadCnGuidesTableSlugOverrides() {
+  const file = path.join(process.cwd(), 'config', 'guides-table-slugs.json')
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf8'))
+  } catch (error) {
+    if (error.code === 'ENOENT') return {}
+    throw error
+  }
+}
+
+const TABLE_SLUG_OVERRIDES = loadCnGuidesTableSlugOverrides()
 const TARGETS = ['zilliz.paas', 'zilliz.saas']
 
 function normalizeTarget(target) {
@@ -52,7 +64,7 @@ function buildGuidesTableMatrix({ plan, snapshot }) {
       entries.push({
         table_id: tableId,
         table_name: tableName,
-        table_slug: slugify(tableName, { lower: true, strict: true }),
+        table_slug: TABLE_SLUG_OVERRIDES[tableId] || slugify(tableName, { lower: true, strict: true }),
         target: normalizedTarget,
         target_name: targetName(normalizedTarget),
         cleanup: !currentTargets.has(normalizedTarget),

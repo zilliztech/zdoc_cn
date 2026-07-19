@@ -136,6 +136,34 @@ function applyCnGuidesFetchThrottlePatch(content) {
   );
 }
 
+function applyCnGuidesTableSlugPatch(content) {
+  if (content.includes('loadCnGuidesTableSlugOverrides')) return content;
+
+  let next = content.replace(
+    "const fs = require('node:fs')\nconst slugify = require('slugify')",
+    "const fs = require('node:fs')\nconst path = require('node:path')\nconst slugify = require('slugify')",
+  );
+  next = next.replace(
+    "const TARGETS = ['zilliz.paas', 'zilliz.saas']",
+    `function loadCnGuidesTableSlugOverrides() {
+  const file = path.join(process.cwd(), 'config', 'guides-table-slugs.json')
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf8'))
+  } catch (error) {
+    if (error.code === 'ENOENT') return {}
+    throw error
+  }
+}
+
+const TABLE_SLUG_OVERRIDES = loadCnGuidesTableSlugOverrides()
+const TARGETS = ['zilliz.paas', 'zilliz.saas']`,
+  );
+  return next.replace(
+    "table_slug: slugify(tableName, { lower: true, strict: true }),",
+    "table_slug: TABLE_SLUG_OVERRIDES[tableId] || slugify(tableName, { lower: true, strict: true }),",
+  );
+}
+
 function removeScheduleBlock(content) {
   return content.replace(/\n\s+schedule:\n(?:\s+- cron: .*?\n)+/m, '\n');
 }
@@ -199,6 +227,7 @@ function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_
   if (relativePath === '.github/workflows/fetch-docs.yml') next = applyFetchDocsPatch(next);
   if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyFetchContentGroupPatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyCnGuidesFetchThrottlePatch(applyOssPatch(next));
+  if (relativePath === 'scripts/docs-workflow/guides-tables.js') next = applyCnGuidesTableSlugPatch(next);
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);
     next = applyDocsBrandPatch(next);
