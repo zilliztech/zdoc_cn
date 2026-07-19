@@ -140,6 +140,10 @@ function applyTranslatePatch(content) {
     .replace(/japanese/g, 'chinese');
 }
 
+function applyCnTestFixturePatch(content) {
+  return content.replace(/selectedManifest\(\{ locale: 'zh-CN' \}\)/g, "selectedManifest({ locale: 'en-US' })");
+}
+
 function transform(relativePath, content) {
   let next = content;
   if (relativePath === '.github/workflows/fetch-docs.yml') next = applyFetchDocsPatch(next);
@@ -147,6 +151,9 @@ function transform(relativePath, content) {
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyOssPatch(next);
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);
+  }
+  if (relativePath.startsWith('scripts/docs-workflow/') && relativePath.endsWith('.test.js')) {
+    next = applyCnTestFixturePatch(next);
   }
   if (relativePath.startsWith('.github/workflows/')) {
     next = applyCnWorkflowPatch(next);
@@ -239,6 +246,7 @@ if (require.main === module) {
 module.exports = {
   COPIED_PATHS,
   applyCnWorkflowPatch,
+  applyCnTestFixturePatch,
   applyFetchDocsPatch,
   applyOssPatch,
   applyPackageManagerPatch,

@@ -318,7 +318,7 @@ test('canonical validation rejects non-deterministic array ordering', () => {
 
 test('rejects non-Guides manifests and unauthorized source-delta shapes', () => {
   assert.throws(() => createBatchInput(selectedManifest({ group: 'java' })), /guides|group/i)
-  assert.throws(() => createBatchInput(selectedManifest({ locale: 'zh-CN' })), /zh-CN|locale/i)
+  assert.throws(() => createBatchInput(selectedManifest({ locale: 'en-US' })), /zh-CN|locale/i)
   assert.throws(() => createBatchInput(selectedManifest({ source_delta: { changedEnglish: [], deleted_i18n: [], renamed: [] } })), /key|source.delta|schema/i)
 })
 
