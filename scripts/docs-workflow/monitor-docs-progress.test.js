@@ -63,7 +63,7 @@ function createMonitor(overrides = {}) {
     publishEnabled: false,
     startedAt: '2026-07-16T10:00:00.000Z',
     targetBranch: 'test/docs-card',
-    title: 'Global Docs Artifact-Only Build',
+    title: 'CN Docs Artifact-Only Build',
     pollIntervalMs: 60_000,
     listJobs: async () => TERMINAL,
     downloadFinalReport: async () => finalReport(),

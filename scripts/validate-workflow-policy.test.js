@@ -232,6 +232,10 @@ test('CN docs production runs only on explicit manual dispatch during migration'
   assert.doesNotMatch(triggerBlock, /^\s+schedule:/m)
   assert.match(triggerBlock, /publish:[\s\S]*default: false/)
   assert.doesNotMatch(triggerBlock, /\n\s+push:/)
+  const workflow = fs.readFileSync(workflowPath, 'utf8')
+  assert.match(workflow, /CN Docs Build/)
+  assert.match(workflow, /CN Docs Artifact-Only Build/)
+  assert.doesNotMatch(workflow, /Global Docs(?: Artifact-Only)? Build/)
 })
 
 test('content producers and source publishers form explicit queues', () => {

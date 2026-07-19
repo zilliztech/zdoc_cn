@@ -115,7 +115,7 @@ jobs:
         run: npx docusaurus report-to-lark --card-create --title "$CARD_TITLE" --stages "$CARD_STAGES" --target-branch "$TARGET_BRANCH"
         env:
           CARD_STAGES: ${{ steps.refs.outputs.card_stages }}
-          CARD_TITLE: ${{ steps.refs.outputs.publish == 'true' && 'Global Docs Build' || 'Global Docs Artifact-Only Build' }}
+          CARD_TITLE: ${{ steps.refs.outputs.publish == 'true' && 'CN Docs Build' || 'CN Docs Artifact-Only Build' }}
           TARGET_BRANCH: ${{ steps.refs.outputs.target_branch }}
           APP_ID: ${{ secrets.APP_ID }}
           APP_SECRET: ${{ secrets.APP_SECRET }}
