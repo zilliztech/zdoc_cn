@@ -82,9 +82,9 @@ jobs:
       - uses: pnpm/action-setup@v4
         with: { version: 9 }
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: pnpm }
+        with: { node-version: '20', cache: npm }
       - name: Install current master tooling
-        run: pnpm install --frozen-lockfile
+        run: npm ci
       - name: Materialize source checkpoint and baseline
         if: ${{ inputs.should_translate }}
         run: |

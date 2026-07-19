@@ -108,8 +108,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         with: { version: 9 }
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: pnpm }
-      - run: pnpm install --frozen-lockfile
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
       - id: card
         name: Create progress card
         run: npx docusaurus report-to-lark --card-create --title "$CARD_TITLE" --stages "$CARD_STAGES" --target-branch "$TARGET_BRANCH"
@@ -656,8 +656,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         with: { version: 9 }
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: pnpm }
-      - run: pnpm install --frozen-lockfile
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
       - id: aggregate
         name: Aggregate terminal results
         env:
@@ -811,8 +811,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         with: { version: 9 }
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: pnpm }
-      - run: pnpm install --frozen-lockfile
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
       - uses: actions/download-artifact@v4
         continue-on-error: true
         with:

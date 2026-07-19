@@ -605,7 +605,8 @@ test('reusable content producer is immutable, read-only, and publishes a validat
   assert.doesNotMatch(jobEnv, /secrets\./, 'producer secrets must be scoped to individual steps')
   const sourceUpload = workflow.slice(workflow.indexOf('name: Upload source checkpoint artifact'), workflow.indexOf('name: Upload content group reports'))
   assert.doesNotMatch(sourceUpload, /^        env:/m, 'artifact upload must not receive credentials')
-  assert.match(workflow, /name: Install dependencies\n        id: install\n        run: pnpm install --frozen-lockfile/)
+  assert.match(workflow, /cache: npm/)
+  assert.match(workflow, /name: Install dependencies\n        id: install\n        run: npm ci/)
   assert.doesNotMatch(workflow, /report-live-card|card_id|card_started_at|card_stages|card_mode/)
 })
 

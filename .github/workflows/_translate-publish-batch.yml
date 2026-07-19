@@ -107,10 +107,10 @@ jobs:
         with: { version: 9 }
 
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: pnpm }
+        with: { node-version: '20', cache: npm }
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Download translation checkpoint
         uses: actions/download-artifact@v4

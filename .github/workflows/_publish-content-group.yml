@@ -116,11 +116,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: pnpm
+          cache: npm
 
       - name: Install dependencies
         if: ${{ inputs.should_publish }}
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Download checkpoint artifact
         if: ${{ inputs.should_publish }}

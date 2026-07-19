@@ -34,8 +34,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         with: { version: 9 }
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: pnpm }
-      - run: pnpm install --frozen-lockfile
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
       - name: Prepare immutable baseline
         run: |
           git fetch --no-tags origin "${{ inputs.dev_baseline_sha }}"
