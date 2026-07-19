@@ -1,5 +1,37 @@
 const CHANGELOGS_DOC_ID = 'tutorials/get-started/release-notes/changelogs';
 
+function stableHash(value) {
+    let hash = 0;
+    for (const char of String(value || '')) {
+        hash = ((hash << 5) - hash + char.codePointAt(0)) | 0;
+    }
+    return Math.abs(hash).toString(36);
+}
+
+function slugKeyPart(value) {
+    const raw = String(value || 'item');
+    const slug = raw
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    return slug || `u-${stableHash(raw)}`;
+}
+
+function addStableSidebarKeys(items, trail = []) {
+    return items.map((item, index) => {
+        if (!item || typeof item !== 'object') return item;
+        const keySource = item.id || item.href || item.label || item.type || `item-${index}`;
+        const nextTrail = [...trail, slugKeyPart(keySource)];
+        const keyed = { ...item };
+        if (!keyed.key && (keyed.type === 'category' || keyed.type === 'html' || keyed.type === 'link')) {
+            keyed.key = nextTrail.join('/');
+        }
+        if (Array.isArray(keyed.items)) keyed.items = addStableSidebarKeys(keyed.items, nextTrail);
+        return keyed;
+    });
+}
+
 function isReleaseNotesCategory(item) {
     return item.type === 'category' && (
         item.key === 'release-notes' ||
@@ -165,7 +197,7 @@ export async function referenceItemsGenerator ({
     return item;
     })
 
-    return sidebarItems;
+    return addStableSidebarKeys(sidebarItems);
 }
 
 export async function tutorialsItemsGenerator ({
@@ -248,7 +280,7 @@ export async function tutorialsItemsGenerator ({
               return item;
             })
 
-            return sidebarItems;
+            return addStableSidebarKeys(sidebarItems);
           }
 
 export async function agentsItemsGenerator ({
@@ -264,5 +296,5 @@ export async function agentsItemsGenerator ({
         return item;
     })
 
-    return sidebarItems;
+    return addStableSidebarKeys(sidebarItems);
 }

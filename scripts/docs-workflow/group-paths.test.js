@@ -58,7 +58,7 @@ test('SDK and CLI groups declare master-owned landing pages to preserve', () => 
   assert.deepEqual(getGroupPaths('java').preservedEnglish, ['reference/api/java/java/java.md']);
   assert.deepEqual(getGroupPaths('node').preservedEnglish, ['reference/api/nodejs/nodejs/nodejs.md']);
   assert.deepEqual(getGroupPaths('go').preservedEnglish, ['reference/api/go/go/go.md']);
-  assert.deepEqual(getGroupPaths('cli').preservedEnglish, ['reference/cli/cli/Overview.md']);
+  assert.deepEqual(getGroupPaths('cli').preservedEnglish, ['reference/cli/cli/zilliz-cli.md']);
   assert.deepEqual(getGroupPaths('guides').preservedEnglish, []);
   assert.deepEqual(getGroupPaths('rest').preservedEnglish, []);
 });

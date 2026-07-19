@@ -10,7 +10,7 @@ const PRESERVED_ENGLISH = Object.freeze({
   java: Object.freeze(['reference/api/java/java/java.md']),
   node: Object.freeze(['reference/api/nodejs/nodejs/nodejs.md']),
   go: Object.freeze(['reference/api/go/go/go.md']),
-  cli: Object.freeze(['reference/cli/cli/Overview.md']),
+  cli: Object.freeze(['reference/cli/cli/zilliz-cli.md']),
   rest: Object.freeze([]),
 });
 

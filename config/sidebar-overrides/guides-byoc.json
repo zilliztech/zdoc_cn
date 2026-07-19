@@ -1,1 +1,16 @@
-{}
+{
+  "overrideCategories": {
+    "Deployment": { "customProps": { "icon": "deploy-byoc" }, "collapsed": true },
+    "Quickstarts": { "customProps": { "icon": "quickstarts" }, "collapsed": true },
+    "Search & Query": { "customProps": { "icon": "search" } },
+    "Collection": { "customProps": { "icon": "collection" } },
+    "Schema": { "customProps": { "icon": "schema" } },
+    "Vector Index": { "customProps": { "icon": "vector-ref" } },
+    "Scalar Index": { "customProps": { "icon": "indexes" } },
+    "Function": { "customProps": { "icon": "client-code" } },
+    "Analyzer": { "customProps": { "icon": "analyzer" } },
+    "Migrations": { "customProps": { "icon": "rest-migrate" } },
+    "Backup & Restore": { "customProps": { "icon": "rest-backup" } },
+    "Metrics & Alerts": { "customProps": { "icon": "rest-metrics" } }
+  }
+}

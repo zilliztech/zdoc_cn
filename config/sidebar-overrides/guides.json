@@ -1,1 +1,28 @@
-{}
+{
+  "overrideCategories": {
+    "Quickstarts": { "customProps": { "icon": "quickstarts" }, "collapsed": true },
+    "Search & Query": { "customProps": { "icon": "search" } },
+    "Collection": { "customProps": { "icon": "collection" } },
+    "Schema": { "customProps": { "icon": "schema" } },
+    "Vector Index": { "customProps": { "icon": "vector-ref" } },
+    "Scalar Index": { "customProps": { "icon": "indexes" } },
+    "Function": { "customProps": { "icon": "client-code" } },
+    "Analyzer": { "customProps": { "icon": "analyzer" } },
+    "Snapshots": { "customProps": { "icon": "snapshots" } },
+    "Migrations": { "customProps": { "icon": "rest-migrate" } },
+    "Backup & Restore": { "customProps": { "icon": "rest-backup" } },
+    "Metrics & Alerts": { "customProps": { "icon": "rest-metrics" } }
+  },
+  "hideCategoriesDeep": ["Release notes"],
+  "inject": [
+    {
+      "into": "Get Started",
+      "afterSibling": "tutorials/get-started/cloud-providers-and-regions",
+      "item": {
+        "type": "link",
+        "label": "Release Notes",
+        "href": "/docs/changelogs"
+      }
+    }
+  ]
+}

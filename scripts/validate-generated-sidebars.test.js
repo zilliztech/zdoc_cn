@@ -90,7 +90,7 @@ test('rejects a missing SDK or CLI landing page', () => {
     'reference/api/java/java/java.md',
     'reference/api/nodejs/nodejs/nodejs.md',
     'reference/api/go/go/go.md',
-    'reference/cli/cli/Overview.md',
+    'reference/cli/cli/zilliz-cli.md',
   ]
   for (const relativePath of landingPages) write(path.join(root, relativePath), '# landing\n')
   fs.rmSync(path.join(root, landingPages[0]))
