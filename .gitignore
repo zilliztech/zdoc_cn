@@ -22,6 +22,7 @@ scripts/docs
 .zdoc-upstream/
 .zdoc-assembled/
 .zdoc-cache/
+tmp/
 .claude/settings.local.json
 .claude/worktrees/
 .playwright*
