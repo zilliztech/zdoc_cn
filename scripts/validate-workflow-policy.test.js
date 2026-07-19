@@ -707,6 +707,7 @@ test('guides workflows bootstrap full sources and persist only verified caches',
   assert.match(source, /cache_state=invalid/)
   assert.match(source, /steps\.source_cache_check\.outputs\.source_valid[\s\S]*args\+=\(--force-full-fetch\)/)
   assert.doesNotMatch(source, /media_valid[^\n]*[\s\S]{0,180}args\+=\(--force-full-fetch\)/)
+  assert.match(source, /name: Fetch shared guides sources[\s\S]*FEISHU_MAX_CONCURRENT: '1'[\s\S]*FEISHU_MIN_TIME_MS: '1500'[\s\S]*FEISHU_WIKI_NODE_MIN_TIME_MS: '1500'[\s\S]*FEISHU_RETRY_ATTEMPTS: '9'[\s\S]*FEISHU_RETRY_DELAY_MS: '5000'[\s\S]*FEISHU_RATE_LIMIT_FALLBACK_MS: '120000'/)
   assert.match(caller, /produce_guides:[\s\S]*cache_version: \$\{\{ needs\.produce_guides_sources\.outputs\.cache_version \}\}[\s\S]*cache_save_required: \$\{\{ needs\.produce_guides_sources\.outputs\.cache_save_required \}\}/)
   assert.match(assemble, /cache_version: \{ required: true, type: string \}/)
   assert.match(assemble, /cache_save_required: \{ required: true, type: string \}/)

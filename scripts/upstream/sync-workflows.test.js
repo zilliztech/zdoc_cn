@@ -86,6 +86,10 @@ on:
 jobs:
   sources:
     steps:
+      - name: Fetch shared guides sources
+        run: node scripts/docs-workflow/run-content-group.js --group guides --stage source
+        env:
+          FEISHU_HOST: \${{ vars.FEISHU_HOST }}
       - run: node scripts/docs-workflow/guides-source-cache.js create --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth
       - run: node scripts/docs-workflow/guides-media-prefetch.js
         env:
@@ -177,6 +181,12 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     const guidesSources = readFile(fixture.root, '.github/workflows/_fetch-guides-sources.yml');
     assert.match(guidesSources, /--root-token cn-guides-root-token/);
     assert.doesNotMatch(guidesSources, /Tg6mwbRGDitPQ3kLUQzc44I7nth/);
+    assert.match(guidesSources, /FEISHU_MAX_CONCURRENT: '1'/);
+    assert.match(guidesSources, /FEISHU_MIN_TIME_MS: '1500'/);
+    assert.match(guidesSources, /FEISHU_WIKI_NODE_MIN_TIME_MS: '1500'/);
+    assert.match(guidesSources, /FEISHU_RETRY_ATTEMPTS: '9'/);
+    assert.match(guidesSources, /FEISHU_RETRY_DELAY_MS: '5000'/);
+    assert.match(guidesSources, /FEISHU_RATE_LIMIT_FALLBACK_MS: '120000'/);
 
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/monitor-docs-progress.js'), "module.exports = 'CN Docs Build / CN Docs Artifact-Only Build';\n");

@@ -306,6 +306,12 @@ jobs:
           APP_ID: ${{ secrets.APP_ID }}
           APP_SECRET: ${{ secrets.APP_SECRET }}
           FEISHU_HOST: ${{ vars.FEISHU_HOST }}
+          FEISHU_MAX_CONCURRENT: '1'
+          FEISHU_MIN_TIME_MS: '1500'
+          FEISHU_WIKI_NODE_MIN_TIME_MS: '1500'
+          FEISHU_RETRY_ATTEMPTS: '9'
+          FEISHU_RETRY_DELAY_MS: '5000'
+          FEISHU_RATE_LIMIT_FALLBACK_MS: '120000'
           SPACE_ID: ${{ secrets.SPACE_ID }}
           FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
           MODEL_API_BASE_URL: ${{ vars.MODEL_API_BASE_URL }}

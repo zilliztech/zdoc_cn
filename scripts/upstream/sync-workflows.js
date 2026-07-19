@@ -121,6 +121,21 @@ function applyOssPatch(content) {
   return next;
 }
 
+function applyCnGuidesFetchThrottlePatch(content) {
+  if (/FEISHU_RETRY_ATTEMPTS:\s*['"]?9['"]?/.test(content)) return content;
+
+  return content.replace(
+    /(\n\s+FEISHU_HOST: \$\{\{ vars\.FEISHU_HOST \}\}\n)/,
+    `$1          FEISHU_MAX_CONCURRENT: '1'
+          FEISHU_MIN_TIME_MS: '1500'
+          FEISHU_WIKI_NODE_MIN_TIME_MS: '1500'
+          FEISHU_RETRY_ATTEMPTS: '9'
+          FEISHU_RETRY_DELAY_MS: '5000'
+          FEISHU_RATE_LIMIT_FALLBACK_MS: '120000'
+`,
+  );
+}
+
 function removeScheduleBlock(content) {
   return content.replace(/\n\s+schedule:\n(?:\s+- cron: .*?\n)+/m, '\n');
 }
@@ -183,7 +198,7 @@ function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_
   let next = content;
   if (relativePath === '.github/workflows/fetch-docs.yml') next = applyFetchDocsPatch(next);
   if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyFetchContentGroupPatch(applyOssPatch(next));
-  if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyOssPatch(next);
+  if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyCnGuidesFetchThrottlePatch(applyOssPatch(next));
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);
     next = applyDocsBrandPatch(next);
