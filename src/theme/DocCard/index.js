@@ -27,18 +27,24 @@ import styles from './styles.module.css';
 //     );
 // }
 
-function findCategoryDocId(item, level=0) {
-  var docId;
-  if (item.type === 'category') {
-    level -= 1;
-    if (item.items[0].type === 'link') {
-      docId = item.items[0].docId.split('/').slice(0, level).join('/') + '/' + item.items[0].docId.split('/').slice(0, level).pop();
-    } else {
-      docId = findCategoryDocId(item.items[0], level);
+function findCategoryDocId(item) {
+  if (item.link?.type === 'doc') return item.link.id;
+  for (const child of item.items || []) {
+    if (child.type === 'link' && child.docId) return child.docId;
+    if (child.type === 'category') {
+      const docId = findCategoryDocId(child);
+      if (docId) return docId;
     }
   }
+  return undefined;
+}
 
-  return docId;
+function useOptionalDocById(docId) {
+  try {
+    return useDocById(docId ?? undefined);
+  } catch {
+    return undefined;
+  }
 }
 
 
@@ -79,7 +85,7 @@ function CardCategory({item}) {
     return null;
   }
 
-  var docId = findCategoryDocId(item);
+  const doc = useOptionalDocById(findCategoryDocId(item));
 
   return (
     <CardLayout
@@ -87,13 +93,13 @@ function CardCategory({item}) {
       icon="🗃️"
       title={item.label}
       //description={item.description ?? categoryItemsPlural(item.items.length)}
-      description={ item.description ?? useDocById(docId ?? undefined) ?.description }
+      description={item.description ?? doc?.description}
     />
   );
 }
 function CardLink({item}) {
   const icon = isInternalUrl(item.href) ? '📄️' : '🔗';
-  const doc = useDocById(item.docId ?? undefined);
+  const doc = useOptionalDocById(item.docId);
   return (
     <CardLayout
       href={item.href}
