@@ -85,7 +85,7 @@ test('rejects blocked upstream-owned destinations', () => {
   }
 });
 
-test('production docs workflows stay first-class in zdoc_cn', () => {
+test('production docs workflows are synced separately from overlay copy rules', () => {
   const blocked = [
     ['.github/workflows/_assemble-guides.yml', '.github/workflows/_assemble-guides.yml'],
     ['scripts/docs-workflow', 'scripts/docs-workflow'],

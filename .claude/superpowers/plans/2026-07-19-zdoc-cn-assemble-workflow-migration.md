@@ -1159,3 +1159,7 @@ Fresh follow-up verification:
 - `node --check scripts/update-lark-doc-snapshot.js`: pass
 - `bash -n scripts/update-sdk-reference-snapshots.sh`: pass
 - `git diff --check`: pass
+
+## Workflow Sync Supersedes Temporary Producer Serialization
+
+The temporary CN-only serialization and retry/backoff changes were useful for identifying Feishu source-fetch pressure, but they are not the long-term workflow policy. `zdoc_cn` now keeps production docs workflows generated from upstream `zdoc` plus a small CN patch layer. The source producer graph should match upstream unless upstream changes it; Feishu service failures should be handled by upstream-compatible retry/runtime fixes or external Feishu permission/rate-limit remediation.
