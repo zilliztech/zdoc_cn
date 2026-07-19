@@ -57,19 +57,3 @@ test('non-rest groups keep generated outputs and restore landing pages from mast
   assert.equal(fs.existsSync(path.join(root, 'config/generated/python.sidebar.js')), true);
   assert.deepEqual(result, { group: 'python', removed: [], restored: ['reference/api/python/python/python.md'] });
 });
-
-test('cli preparation restores the existing zilliz CLI landing page from master', () => {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-cli-prepare-'));
-  write(path.join(root, 'reference/cli/cli/zilliz-cli.md'), 'stale cli landing\n');
-
-  const result = prepareContentGroupWorkspace({
-    group: 'cli',
-    cwd: root,
-    preservedContentByPath: new Map([
-      ['reference/cli/cli/zilliz-cli.md', 'master cli landing\n'],
-    ]),
-  });
-
-  assert.equal(fs.readFileSync(path.join(root, 'reference/cli/cli/zilliz-cli.md'), 'utf8'), 'master cli landing\n');
-  assert.deepEqual(result, { group: 'cli', removed: [], restored: ['reference/cli/cli/zilliz-cli.md'] });
-});

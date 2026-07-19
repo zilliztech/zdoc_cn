@@ -175,7 +175,7 @@ jobs:
 
   produce_guides:
     needs: [prepare, produce_guides_sources, render_guides_tables]
-    if: ${{ !cancelled() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'guides') && needs.produce_guides_sources.outputs.status == 'artifact_ready' && (needs.render_guides_tables.result == 'success' || needs.render_guides_tables.result == 'skipped') }}
+    if: ${{ always() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'guides') && needs.produce_guides_sources.outputs.status == 'artifact_ready' && (needs.render_guides_tables.result == 'success' || needs.render_guides_tables.result == 'skipped') }}
     uses: ./.github/workflows/_assemble-guides.yml
     with:
       source_artifact_name: ${{ needs.produce_guides_sources.outputs.artifact_name || 'unavailable' }}
@@ -189,8 +189,8 @@ jobs:
       assembly_decision_sha256: ${{ needs.produce_guides_sources.outputs.assembly_decision_sha256 }}
       artifact_retention_days: ${{ fromJSON(needs.prepare.outputs.retention_days) }}
   produce_python:
-    needs: [prepare, produce_guides_sources]
-    if: ${{ !cancelled() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'python') }}
+    needs: prepare
+    if: ${{ needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'python' }}
     uses: ./.github/workflows/_fetch-content-group.yml
     with:
       group: python
@@ -208,8 +208,8 @@ jobs:
       OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
   produce_java:
-    needs: [prepare, produce_python]
-    if: ${{ !cancelled() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'java') }}
+    needs: prepare
+    if: ${{ needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'java' }}
     uses: ./.github/workflows/_fetch-content-group.yml
     with:
       group: java
@@ -227,8 +227,8 @@ jobs:
       OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
   produce_node:
-    needs: [prepare, produce_java]
-    if: ${{ !cancelled() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'node') }}
+    needs: prepare
+    if: ${{ needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'node' }}
     uses: ./.github/workflows/_fetch-content-group.yml
     with:
       group: node
@@ -246,8 +246,8 @@ jobs:
       OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
   produce_go:
-    needs: [prepare, produce_node]
-    if: ${{ !cancelled() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'go') }}
+    needs: prepare
+    if: ${{ needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'go' }}
     uses: ./.github/workflows/_fetch-content-group.yml
     with:
       group: go
@@ -265,8 +265,8 @@ jobs:
       OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
   produce_cli:
-    needs: [prepare, produce_go]
-    if: ${{ !cancelled() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'cli') }}
+    needs: prepare
+    if: ${{ needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'cli' }}
     uses: ./.github/workflows/_fetch-content-group.yml
     with:
       group: cli
@@ -284,8 +284,8 @@ jobs:
       OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
   produce_rest:
-    needs: [prepare, produce_cli]
-    if: ${{ !cancelled() && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'rest') }}
+    needs: prepare
+    if: ${{ needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'rest' }}
     uses: ./.github/workflows/_fetch-content-group.yml
     with:
       group: rest

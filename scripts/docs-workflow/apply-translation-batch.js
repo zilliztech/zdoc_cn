@@ -10,16 +10,7 @@ const { mergeCache } = require('./apply-checkpoint-artifact')
 const { normalizedBaselineIdentity } = require('./translation-batch-set')
 const { validateTranslationBatch } = require('./validate-translation-batch')
 
-function assertSupportedLocale(locale = process.env.TRANSLATION_LOCALE || 'zh-CN') {
-  if (locale !== 'zh-CN') throw new Error(`Unsupported translation locale: ${locale}`)
-  return locale
-}
-
-function cachePathForLocale(locale = assertSupportedLocale()) {
-  return `.translation-cache/${locale}.json`
-}
-
-const CACHE_PATH = cachePathForLocale()
+const CACHE_PATH = '.translation-cache/zh-CN.json'
 const DEFAULT_CACHE = Buffer.from('{"files":{}}\n')
 const TRANSLATION_ROOTS = Object.freeze([
   'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials',

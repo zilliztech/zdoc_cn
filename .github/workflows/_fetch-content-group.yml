@@ -126,10 +126,6 @@ jobs:
           MODEL_API_BASE_URL: ${{ vars.MODEL_API_BASE_URL }}
           MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
           MODEL_ID: ${{ vars.MODEL_ID }}
-          FEISHU_RETRY_ATTEMPTS: 8
-          FEISHU_RETRY_DELAY_MS: 3000
-          FEISHU_MIN_TIME_MS: 800
-          FEISHU_WIKI_NODE_MIN_TIME_MS: 1500
           OSS_BUCKET: ${{ vars.OSS_BUCKET }}
           OSS_REGION: ${{ vars.OSS_REGION }}
           OSS_ENDPOINT: ${{ vars.OSS_ENDPOINT }}

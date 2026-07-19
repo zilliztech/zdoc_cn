@@ -62,6 +62,21 @@ function copyPath(from, to) {
   fs.cpSync(from, to, { recursive: true, dereference: false, preserveTimestamps: false });
 }
 
+function listFiles(root, relativePath = '') {
+  const directory = path.join(root, relativePath);
+  const entries = fs.readdirSync(directory, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const child = path.posix.join(relativePath, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...listFiles(root, child));
+    } else if (entry.isFile()) {
+      files.push(child);
+    }
+  }
+  return files;
+}
+
 function writeText(root, relativePath, content) {
   const filePath = path.join(root, relativePath);
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
@@ -109,6 +124,12 @@ function applyFetchDocsPatch(content) {
   return applyOssPatch(next);
 }
 
+function applyPackageManagerPatch(content) {
+  return content
+    .replace(/cache: pnpm/g, 'cache: npm')
+    .replace(/pnpm install --frozen-lockfile/g, 'npm ci');
+}
+
 function applyTranslatePatch(content) {
   return content
     .replace(/ja-JP/g, 'zh-CN')
@@ -117,14 +138,15 @@ function applyTranslatePatch(content) {
 }
 
 function transform(relativePath, content) {
-  if (relativePath === '.github/workflows/fetch-docs.yml') return applyFetchDocsPatch(content);
-  if (relativePath === '.github/workflows/_fetch-content-group.yml') return applyOssPatch(content);
-  if (relativePath === '.github/workflows/_fetch-guides-sources.yml') return applyOssPatch(content);
-  if (relativePath === '.github/workflows/_translate-content-group.yml') return applyTranslatePatch(content);
-  if (relativePath === '.github/workflows/_translate-publish-batch.yml') return applyTranslatePatch(content);
-  if (relativePath === '.github/workflows/_publish-translation-batches.yml') return applyTranslatePatch(content);
-  if (relativePath === '.github/workflows/translate-codex.yml') return applyTranslatePatch(content);
-  return content;
+  let next = content;
+  if (relativePath === '.github/workflows/fetch-docs.yml') next = applyFetchDocsPatch(next);
+  if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyOssPatch(next);
+  if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyOssPatch(next);
+  if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
+    next = applyTranslatePatch(next);
+  }
+  if (relativePath.startsWith('.github/workflows/')) next = applyPackageManagerPatch(next);
+  return next;
 }
 
 function syncInto(root, upstream) {
@@ -135,7 +157,15 @@ function syncInto(root, upstream) {
 
     const stat = fs.statSync(source);
     if (stat.isDirectory()) {
-      copyPath(source, target);
+      fs.rmSync(target, { recursive: true, force: true });
+      for (const child of listFiles(source)) {
+        const childSource = path.join(source, child);
+        const childRelativePath = path.posix.join(relativePath, child);
+        const content = transform(childRelativePath, fs.readFileSync(childSource, 'utf8'));
+        writeText(root, childRelativePath, content);
+        const childStat = fs.statSync(childSource);
+        if (childStat.mode & 0o111) fs.chmodSync(path.join(root, childRelativePath), childStat.mode);
+      }
       continue;
     }
 
@@ -204,7 +234,9 @@ module.exports = {
   COPIED_PATHS,
   applyFetchDocsPatch,
   applyOssPatch,
+  applyPackageManagerPatch,
   applyTranslatePatch,
+  listFiles,
   parseArgs,
   syncInto,
   transform,

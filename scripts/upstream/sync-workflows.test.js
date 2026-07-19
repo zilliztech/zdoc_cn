@@ -39,6 +39,9 @@ jobs:
   prepare:
     steps:
       - run: echo Global Docs Build
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: pnpm }
+      - run: pnpm install --frozen-lockfile
   produce_python:
     needs: prepare
   produce_java:
@@ -99,7 +102,7 @@ jobs:
   writeFile(upstream, '.github/workflows/_translate-publish-batch.yml', 'name: translate publish Japanese batch\n');
   writeFile(upstream, '.github/workflows/_verify-docs.yml', 'name: verify docs\n');
   writeFile(upstream, '.github/workflows/translate-codex.yml', 'name: translate codex ja-JP\n');
-  writeFile(upstream, 'scripts/docs-workflow/example.js', "module.exports = 'upstream';\n");
+  writeFile(upstream, 'scripts/docs-workflow/example.js', "module.exports = 'i18n/ja-JP Japanese';\n");
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
   writeFile(upstream, 'scripts/update-lark-doc-snapshot.js', "console.log('snapshot');\n");
 
@@ -135,6 +138,10 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(fetchDocs, /produce_python:\n    needs: prepare/);
     assert.match(fetchDocs, /produce_rest:\n    needs: prepare/);
     assert.doesNotMatch(fetchDocs, /produce_java:\n    needs: \[prepare, produce_python\]/);
+    assert.match(fetchDocs, /cache: npm/);
+    assert.match(fetchDocs, /npm ci/);
+    assert.doesNotMatch(fetchDocs, /cache: pnpm/);
+    assert.doesNotMatch(fetchDocs, /pnpm install --frozen-lockfile/);
 
     const contentGroup = readFile(fixture.root, '.github/workflows/_fetch-content-group.yml');
     assert.match(contentGroup, /OSS_ACCESS_KEY_ID/);
@@ -145,7 +152,7 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.doesNotMatch(contentGroup, /AWS_ACCESS_KEY_ID/);
     assert.doesNotMatch(contentGroup, /AWS_SECRET_ACCESS_KEY/);
 
-    assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'upstream';\n");
+    assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");
   } finally {
     fs.rmSync(fixture.directory, { recursive: true, force: true });
