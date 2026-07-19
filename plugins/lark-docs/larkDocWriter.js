@@ -1,18 +1,32 @@
 const larkTokenFetcher = require('./larkTokenFetcher.js')
-const { removeTabsHallucinations, unescapeKnownJsxTags, normalizeCodeTagContent, normalizeEscapedGenericTypes, escapeNonHtmlTags } = require('../mdx-parse/mdxPatcher')
+const {
+    removeTabsHallucinations,
+    unescapeKnownJsxTags,
+    escapeMathBraces,
+    escapeHtmlElementBraces,
+    normalizeNestedPlaintextFences,
+    normalizeCodeTagContent,
+    convertHtmlCommentsToMdx,
+    escapeNonHtmlTags,
+    createFenceTracker,
+    getFencedCodeRanges,
+    createFencedCodeBlock,
+} = require('../mdx-parse/mdxPatcher')
 const Downloader = require('./larkImageDownloader.js')
 const slugify = require('slugify')
 const fs = require('node:fs')
 const { URL } = require('node:url')
-const fetch = require('node-fetch')
-const { fetchFeishuJsonWithRetry } = require('./feishuFetch.js')
 const node_path = require('node:path')
 const cheerio = require('cheerio')
 const showdown = require('showdown')
 const _ = require('lodash')
+const yaml = require('js-yaml')
+const { fetchFeishuJsonWithRetry, fetchTextWithRetry } = require('./feishuFetch.js')
+const { canonicalizeInternalDocLink } = require('./internalDocLink')
 // MDX compilation will be loaded dynamically as it's an ES module
 
-const IMAGE_BED_URL = process.env.IMAGE_BED_URL || 'https://zdoc-imges.oss-cn-hangzhou.aliyuncs.com'
+const IMAGE_BED_URL = process.env.IMAGE_BED_URL || 'https://zdoc-images.s3.us-west-2.amazonaws.com'
+const { guidesPlacementType, guidesRecordPublishTargets, guidesCanonicalIsPublishable } = require('./guidesBaseRecordSemantics')
 
 // Known JSX block components that the MDX patcher must never escape.
 // Shared by __escape_non_html_tags (safeUppercaseTags seed) and __mdx_patches
@@ -21,28 +35,33 @@ const KNOWN_JSX_TAGS = new Set([
     'Admonition', 'Tabs', 'TabItem', 'DocCard', 'DocCardList',
     'Details', 'CodeBlock', 'ThemedImage', 'TOCInline', 'Highlight',
     'Banner', 'Bars', 'Blocks', 'Cards', 'Grid', 'Hero', 'Procedures',
-    'RestSpecs', 'Stories', 'Supademo',
+    'RestSpecs', 'Stories', 'Supademo', 'FeatureNote', 'FeatureCardGrid', 'FeatureCard',
 ]);
 
 class larkDocWriter {
     constructor(
-        root_token, 
-        base_token, 
+        root_token,
+        base_token,
         displayedSidebar,
-        robots,
         docSourceDir='plugins/lark-docs/meta/sources',
-        imageDir='static/img', 
-        targets='zilliz.saas', 
+        imageDir='static/img',
+        targets='zilliz.saas',
         skip_image_download=false,
-        upload_to_oss=false
+        upload_to_s3=false,
+        linkReplacementShimPath=null,
+        mediaResolver=null,
+        sourceIndex=null
     ) {
         this.root_token = root_token
-        this.base_token = base_token
+        const baseParts = base_token.split(':')
+        this.base_app_token = baseParts[0]
+        this.base_table_id = baseParts.length > 1 ? baseParts[1] : null
+        this.use_all_base_tables = this.base_table_id === '*'
+        this.base_tables = null
         this.displayedSidebar = displayedSidebar
         this.docSourceDir = docSourceDir
         this.page_blocks = []
         this.blocks = []
-        this.robots = robots
         this.targets = targets
         this.skip_image_download = skip_image_download
         this.imageDir = imageDir
@@ -51,11 +70,382 @@ class larkDocWriter {
         this.code_langs = this.__code_langs()
         this.tokenFetcher = new larkTokenFetcher()
         this.downloader = new Downloader({}, imageDir)
-        this.upload_to_oss = upload_to_oss
-        this.api_compose_block_type_id = process.env.API_COMPOSE_BLOCK_TYPE_ID || 'blk_682093ba9580c002300d1ea7'
+        this.upload_to_s3 = upload_to_s3
+        this.linkReplacementShimPath = linkReplacementShimPath
+        this.linkReplacementShim = this.__load_link_replacement_shim(linkReplacementShimPath)
+        this.mediaResolver = mediaResolver
+        this.sourceIndex = sourceIndex
+    }
+
+    destroy() {
+        this.downloader.destroy()
+    }
+
+    categorize_node(source) {
+        const RICH_TYPES = new Set([9, 11, 17, 22, 23, 27])
+        const allBlocks = (source.blocks?.items ?? []).filter(b => b.block_type !== 1)
+        if (allBlocks.length === 0) return 'meaningless'
+
+        // Apply include/exclude filtering at block level, mirroring __filter_content logic
+        const targetParts = (this.targets || '').split('.')
+        const contentBlocks = []
+        let skipDepth = 0
+        for (const block of allBlocks) {
+            const blockText = (block.text?.elements ?? []).map(e => e.text_run?.content ?? '').join('').trim()
+            const includeMatch = blockText.match(/^<include target="(.+?)">$/)
+            const excludeMatch = blockText.match(/^<exclude target="(.+?)">$/)
+            const closeMatch = blockText.match(/^<\/(include|exclude)>$/)
+            if (includeMatch) {
+                if (!targetParts.includes(includeMatch[1].trim())) skipDepth++
+                continue
+            }
+            if (excludeMatch) {
+                if (targetParts.includes(excludeMatch[1].trim())) skipDepth++
+                continue
+            }
+            if (closeMatch) {
+                if (skipDepth > 0) skipDepth--
+                continue
+            }
+            if (skipDepth === 0) contentBlocks.push(block)
+        }
+
+        if (contentBlocks.length === 0) return 'meaningless'
+        if (contentBlocks.some(b => RICH_TYPES.has(b.block_type))) return 'meaningful'
+        const wordCount = contentBlocks
+            .flatMap(b => b.text?.elements ?? [])
+            .map(e => e.text_run?.content ?? '')
+            .join(' ')
+            .split(/\s+/)
+            .filter(Boolean).length
+        const nonEmptyBlocks = contentBlocks.filter(b =>
+            b.text?.elements?.some(e => e.text_run?.content?.trim())
+        )
+        return (nonEmptyBlocks.length >= 2 || wordCount >= 60) ? 'meaningful' : 'meaningless'
+    }
+
+    __category_has_landing_page(source) {
+        if (source?.base_placement_type === 'section') return false
+        if (source?.base_placement_type === 'canonical') return source.slug !== 'faqs'
+        return this.categorize_node(source) === 'meaningful'
+    }
+
+    __faq_sidebar_items(currentPath, contentRoot) {
+        if (!fs.existsSync(currentPath)) return []
+        return fs.readdirSync(currentPath, { withFileTypes: true })
+            .filter(entry => entry.isFile() && /\.mdx?$/.test(entry.name) && !/^faqs\.mdx?$/.test(entry.name))
+            .map(entry => {
+                const contents = fs.readFileSync(node_path.join(currentPath, entry.name), 'utf8')
+                const match = contents.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)
+                const frontmatter = match ? yaml.load(match[1]) || {} : {}
+                const slug = entry.name.replace(/\.mdx?$/, '')
+                const id = node_path.join(currentPath, slug)
+                    .replace(/\\/g, '/')
+                    .replace(new RegExp(`^${contentRoot}/`), '')
+                return {
+                    position: Number(frontmatter.sidebar_position) || Number.MAX_SAFE_INTEGER,
+                    item: {
+                        type: 'doc',
+                        id,
+                        label: frontmatter.sidebar_label || frontmatter.title || slug,
+                        key: this.__sidebar_key('doc', currentPath, contentRoot, slug, frontmatter.sidebar_label || frontmatter.title || slug),
+                    },
+                }
+            })
+            .sort((left, right) => left.position - right.position || left.item.id.localeCompare(right.item.id))
+            .map(entry => entry.item)
+    }
+
+    async generate_sidebar(outputDir, contentRoot) {
+        this.sidebarOutputDir = outputDir
+        this.sidebarContentRoot = contentRoot
+        return this.__sidebar_items(outputDir, contentRoot, this.root_token)
+    }
+
+    __sidebar_key(type, currentPath, contentRoot, slug, fallback='') {
+        const rawSlug = slug || fallback || 'item'
+        const safeSlug = slugify(String(rawSlug), { lower: true, strict: true }) || 'item'
+        const keyPath = node_path.join(currentPath, safeSlug)
+            .replace(/\\/g, '/')
+            .replace(new RegExp(`^${contentRoot}/`), '')
+            .replace(/^\/+/, '')
+        return `${type}:${keyPath}`
+    }
+
+    __has_renderable_page(source) {
+        const page = source?.blocks?.items?.find(block => block.block_type === 1)
+        return !!(page?.children && page.children.length > 0)
+    }
+
+    async __sidebar_items(currentPath, contentRoot, token) {
+        let node
+        try { node = this.__fetch_doc_source('node_token', token) } catch (e) {
+            if (this.sourceIndex) throw e
+            return []
+        }
+        if (!node.has_child) return []
+
+        const children = (node.children || []).filter(c => c.obj_type !== 'bitable' && c != null)
+        const items = []
+        const seenChildTokens = new Map()
+
+        for (let i = 0; i < children.length; i++) {
+            const child = children[i]
+            const childToken = child.node_token || child.token
+            if (childToken && seenChildTokens.has(childToken)) {
+                console.warn(`[sidebar] Skipping duplicate child token ${childToken} under ${token}: "${child.title || child.name}" duplicates "${seenChildTokens.get(childToken)}"`)
+                continue
+            }
+            if (childToken) seenChildTokens.set(childToken, child.title || child.name || child.slug || childToken)
+            let childSource = null
+            try { childSource = this.__fetch_doc_source('node_token', child.node_token, child.slug) } catch (e) {
+                if (this.sourceIndex) throw e
+            }
+
+            if (childSource?.base_placement_type === 'section') {
+                if (!this.__base_source_is_publishable(childSource)) continue
+                const label = this.__plain_value(childSource.base_labels) || childSource.title || child.title
+                const slug = child.slug || slugify(label, { lower: true, strict: true })
+                const childItems = child.has_child
+                    ? await this.__sidebar_items(`${currentPath}/${slug}`, contentRoot, child.node_token)
+                    : []
+                items.push({
+                    type: 'category',
+                    label,
+                    key: this.__sidebar_key('category', currentPath, contentRoot, slug, label),
+                    items: childItems,
+                })
+                continue
+            }
+
+            if (childSource?.base_placement_type === 'canonical' && child.slug === 'faqs') {
+                const meta = await this.__is_to_publish(child.title, child.slug, child.node_token)
+                if (!meta.publish) continue
+                const faqPath = node_path.join(currentPath, child.slug)
+                items.push({
+                    type: 'category',
+                    label: meta.labels || child.title,
+                    key: this.__sidebar_key('category', currentPath, contentRoot, child.slug, child.title),
+                    items: this.__faq_sidebar_items(faqPath, contentRoot),
+                })
+                continue
+            }
+
+            if (childSource?.base_nav_link) {
+                const meta = await this.__is_to_publish(child.title, child.slug, child.node_token)
+                if (!meta.publish) continue
+                const href = this.__canonicalize_internal_link(childSource.base_nav_link_href)
+                if (!href) {
+                    console.warn(`[sidebar] Cannot resolve link target for "${child.title}" (${childSource.node_token})`)
+                    continue
+                }
+                items.push({
+                    type: 'link',
+                    href,
+                    label: meta.labels || child.title,
+                    key: this.__sidebar_key('link', currentPath, contentRoot, child.slug, child.title),
+                })
+                continue
+            }
+
+            if (childSource?.base_nav_ref) {
+                const meta = await this.__is_to_publish(child.title, child.slug, child.node_token)
+                if (!meta.publish) continue
+                const targetSource = this.__fetch_doc_source_by_any_token(childSource.base_nav_ref_target_token)
+                if (!targetSource) {
+                    console.warn(`[sidebar] Cannot resolve ref target for "${child.title}" (${childSource.node_token})`)
+                    continue
+                }
+                const targetMeta = await this.__is_to_publish(
+                    targetSource.title || targetSource.name,
+                    targetSource.slug,
+                    targetSource.node_token || targetSource.origin_node_token || targetSource.token,
+                )
+                if (!targetMeta.publish) continue
+                const refId = this.__doc_id_for_token(childSource.base_nav_ref_target_token, contentRoot)
+                if (!refId) {
+                    console.warn(`[sidebar] Cannot resolve ref target for "${child.title}" (${childSource.node_token})`)
+                    continue
+                }
+                items.push({
+                    type: 'doc',
+                    id: refId,
+                    label: meta.labels || child.title,
+                    key: this.__sidebar_key('ref', currentPath, contentRoot, child.slug, child.title),
+                })
+                continue
+            }
+
+            const meta = await this.__is_to_publish(child.title, child.slug, child.node_token)
+            if (!meta.publish) continue
+
+            const slug = child.slug
+            const label = meta.labels || child.title
+
+            if (child.has_child) {
+                const categoryHasLandingPage = childSource ? this.__category_has_landing_page(childSource) : true
+                const childItems = await this.__sidebar_items(`${currentPath}/${slug}`, contentRoot, child.node_token)
+
+                if (categoryHasLandingPage) {
+                    const docId = node_path.join(currentPath, slug, slug)
+                        .replace(/\\/g, '/')
+                        .replace(new RegExp(`^${contentRoot}/`), '')
+                    items.push({
+                        type: 'category',
+                        label,
+                        key: this.__sidebar_key('category', currentPath, contentRoot, slug, label),
+                        link: { type: 'doc', id: docId },
+                        items: childItems,
+                    })
+                } else if (childItems.length > 0) {
+                    items.push({
+                        type: 'category',
+                        label,
+                        key: this.__sidebar_key('category', currentPath, contentRoot, slug, label),
+                        items: childItems,
+                    })
+                }
+            } else if (child.slug !== 'faqs') {
+                let childSource = null
+                try { childSource = this.__fetch_doc_source('node_token', child.node_token, child.slug) } catch (e) {
+                    if (this.sourceIndex) throw e
+                }
+                if (childSource && !this.__has_renderable_page(childSource)) continue
+                const docId = node_path.join(currentPath, slug)
+                    .replace(/\\/g, '/')
+                    .replace(new RegExp(`^${contentRoot}/`), '')
+                items.push({
+                    type: 'doc',
+                    id: docId,
+                    label,
+                    key: this.__sidebar_key('doc', currentPath, contentRoot, slug, label),
+                })
+            }
+        }
+
+        return items
+    }
+
+    __base_source_is_publishable(source) {
+        const placement = guidesPlacementType(source)
+        if (placement) {
+            const targets = guidesRecordPublishTargets(source)
+            const targetMatches = targets.length === 0 || targets.includes(this.targets.toLowerCase())
+            if (placement !== 'canonical') return targetMatches
+            return targetMatches && guidesCanonicalIsPublishable(source)
+        }
+        const targetsField = source.base_targets
+        const status = this.__plain_value(source.base_status)
+        const isPublishable = ['Draft', 'Approved', 'Published', 'Publish', 'Reviewed'].includes(status)
+        if (!targetsField) return isPublishable
+
+        const targets = (targetsField instanceof Array ? targetsField : [targetsField])
+            .map(item => this.__plain_value(item)?.trim().toLowerCase())
+            .filter(Boolean)
+
+        return isPublishable && targets.includes(this.targets.toLowerCase())
+    }
+
+    __base_source_has_publish_constraints(source) {
+        const status = this.__plain_value(source.base_status)
+        const targetsField = source.base_targets
+        const targets = (targetsField instanceof Array ? targetsField : [targetsField])
+            .map(item => this.__plain_value(item)?.trim())
+            .filter(Boolean)
+
+        return !!status || targets.length > 0
+    }
+
+    __base_nav_source_is_publishable(source) {
+        if (!this.__base_source_has_publish_constraints(source)) return true
+        return this.__base_source_is_publishable(source)
+    }
+
+    __fetch_base_source_meta(title, slug, token=null) {
+        if (this.sourceIndex) return this.sourceIndex.findBaseSourceMeta({ title, slug, token })
+        if (!slug || !fs.existsSync(this.docSourceDir)) return null
+        const files = fs.readdirSync(this.docSourceDir).filter(file => file.endsWith('.json'))
+        const sources = files.map(file => JSON.parse(fs.readFileSync(`${this.docSourceDir}/${file}`, 'utf8')))
+        if (token) {
+            const tokenMatch = sources.find(source =>
+                (source.base_record_id || source.base_nav_virtual) &&
+                (source.node_token === token || source.origin_node_token === token || source.token === token)
+            )
+            if (tokenMatch) return tokenMatch
+        }
+        for (const source of sources) {
+            if (
+                (source.base_record_id || source.base_nav_virtual) &&
+                source.slug === slug &&
+                (source.title === title || source.name === title)
+            ) {
+                return source
+            }
+        }
+        return null
+    }
+
+    __fetch_doc_source_by_any_token(token) {
+        if (this.sourceIndex) return this.sourceIndex.findAnyToken(token)
+        const tokenKeys = ['node_token', 'origin_node_token', 'obj_token', 'token']
+        const files = fs.readdirSync(this.docSourceDir).filter(file => file.endsWith('.json'))
+        for (const file of files) {
+            const source = JSON.parse(fs.readFileSync(`${this.docSourceDir}/${file}`, {encoding: 'utf-8', flag: 'r'}))
+            if (tokenKeys.some(key => source[key] === token)) {
+                return source
+            }
+        }
+        return null
+    }
+
+    __has_base_publish_meta(source) {
+        return source && (
+            Object.prototype.hasOwnProperty.call(source, 'base_placement_type') ||
+            Object.prototype.hasOwnProperty.call(source, 'base_status') ||
+            Object.prototype.hasOwnProperty.call(source, 'base_targets')
+        )
+    }
+
+    __doc_id_for_token(token, contentRoot) {
+        if (!token) return null
+        const source = this.__fetch_doc_source_by_any_token(token)
+        if (!source) return null
+        if (source.base_nav_ref && source.base_nav_ref_target_token) {
+            return this.__doc_id_for_token(source.base_nav_ref_target_token, contentRoot)
+        }
+        if (!source.slug) return null
+
+        const segments = []
+        let current = source
+        const seen = new Set()
+        while (current && current.slug && !seen.has(current.node_token || current.origin_node_token || current.token)) {
+            seen.add(current.node_token || current.origin_node_token || current.token)
+            segments.unshift(current.slug)
+            const parentToken = current.parent_node_token
+            if (!parentToken || parentToken === this.root_token) break
+            try {
+                current = this.__fetch_doc_source('node_token', parentToken)
+            } catch (error) {
+                if (this.sourceIndex) throw error
+                break
+            }
+        }
+
+        if (source.has_child && this.__category_has_landing_page(source)) {
+            segments.push(source.slug)
+        }
+
+        return node_path.join(this.sidebarOutputDir || contentRoot, ...segments)
+            .replace(/\\/g, '/')
+            .replace(new RegExp(`^${contentRoot}/`), '')
     }
 
     __fetch_doc_source (type, value, slug="") {
+        if (this.sourceIndex) {
+            const source = this.sourceIndex.find(type, value, { slug })
+            if (!source) throw new Error(`Cannot find ${value} in ${this.docSourceDir}`)
+            return source
+        }
         const file = fs.readdirSync(this.docSourceDir).filter(file => {
             const page = JSON.parse(fs.readFileSync(`${this.docSourceDir}/${file}`, {encoding: 'utf-8', flag: 'r'}))
             
@@ -81,7 +471,100 @@ class larkDocWriter {
         }
     }
 
+    __safe_url(value) {
+        try {
+            return new URL(value)
+        } catch (_) {
+            return null
+        }
+    }
+
+    __link_token(value) {
+        if (!value) return null
+        const url = this.__safe_url(value)
+        if (url) return url.pathname.split('/').filter(Boolean).pop()
+        return String(value).split('#')[0].trim() || null
+    }
+
+    __normalize_link_replacement_url(replacement) {
+        const replacementUrl = replacement.replacement_url || replacement.target_url || replacement.url || replacement.doc_link
+        if (replacementUrl) return replacementUrl
+        const token = replacement.replacement_token || replacement.target_token || replacement.doc_token
+        return token ? `https://zilliverse.feishu.cn/wiki/${token}` : null
+    }
+
+    __shim_replacement_is_approved(replacement) {
+        return replacement.approved === true ||
+            replacement.enabled === true ||
+            String(replacement.status || '').toLowerCase() === 'approved'
+    }
+
+    __load_link_replacement_shim(shimPath) {
+        const shim = { byToken: new Map(), byUrl: new Map() }
+        if (!shimPath) return shim
+        if (!fs.existsSync(shimPath)) {
+            console.warn(`[link-shim] Shim file not found: ${shimPath}`)
+            return shim
+        }
+
+        const data = JSON.parse(fs.readFileSync(shimPath, 'utf8'))
+        const replacements = Array.isArray(data)
+            ? data
+            : Array.isArray(data.replacements)
+                ? data.replacements
+                : Object.entries(data).map(([source, target]) => ({
+                    approved: true,
+                    source_token: this.__link_token(source),
+                    source_url: source.startsWith('http') ? source : null,
+                    replacement_url: target,
+                }))
+
+        let active = 0
+        for (const replacement of replacements) {
+            if (!this.__shim_replacement_is_approved(replacement)) continue
+            const replacementUrl = this.__normalize_link_replacement_url(replacement)
+            if (!replacementUrl) continue
+
+            const normalized = {
+                ...replacement,
+                replacement_url: replacementUrl,
+            }
+            const sourceToken = replacement.source_token ||
+                replacement.old_token ||
+                replacement.token ||
+                this.__link_token(replacement.source_url || replacement.source)
+            if (sourceToken) {
+                shim.byToken.set(sourceToken, normalized)
+                active++
+            }
+            if (replacement.source_url) {
+                shim.byUrl.set(String(replacement.source_url).split('#')[0], normalized)
+            }
+        }
+
+        console.log(`[link-shim] Loaded ${active} approved replacement(s) from ${shimPath}`)
+        return shim
+    }
+
+    __apply_link_replacement_shim(rawUrl) {
+        if (!this.linkReplacementShim || !rawUrl) return rawUrl
+        const original = this.__safe_url(rawUrl)
+        if (!original) return rawUrl
+
+        const replacement = this.linkReplacementShim.byToken.get(this.__link_token(rawUrl)) ||
+            this.linkReplacementShim.byUrl.get(`${original.origin}${original.pathname}`)
+        if (!replacement) return rawUrl
+
+        const replacementUrl = this.__safe_url(replacement.replacement_url)
+        if (!replacementUrl) return replacement.replacement_url
+        if (replacement.preserve_anchor === true && original.hash && !replacementUrl.hash) {
+            replacementUrl.hash = original.hash
+        }
+        return replacementUrl.toString()
+    }
+
     async write_docs(path, token) {
+        if (!this.outputRoot) this.outputRoot = path
         const forEachAsync = async (array, callback) => {
             for (let index = 0; index < array.length; index++) {
                 await callback(array[index], index, array);
@@ -95,7 +578,7 @@ class larkDocWriter {
             const children = node.children.filter(child => child.obj_type != 'bitable' && child != undefined)
             await forEachAsync(children, async (child, index) => {
                 if (child.has_child) {
-                    const meta = await this.__is_to_publish(child.title, child.slug) 
+                    const meta = await this.__is_to_publish(child.title, child.slug, child.node_token)
                     if (meta['publish']) {
                         const token = child.node_token
                         const type = child.node_type
@@ -107,34 +590,44 @@ class larkDocWriter {
                         const deprecateSince = meta['deprecateSince']
                         const labels = meta['labels']
                         const keywords = meta['keywords']
-                        console.log(`${current_path}/${slug}/${slug}.md`)
 
                         if (!fs.existsSync(`${current_path}/${slug}`)) {
                             fs.mkdirSync(`${current_path}/${slug}`)
                         }
 
-                        await this.write_doc({
-                            path: `${current_path}/${slug}`,
-                            page_title: child.title,
-                            page_slug: slug,
-                            page_beta: beta,
-                            notebook: notebook,
-                            addedSince: addedSince,
-                            lastModified: lastModified,
-                            deprecateSince: deprecateSince,
-                            page_type: type,
-                            page_token: child.node_token,
-                            sidebar_position: index+1,
-                            sidebar_label: labels,
-                            keywords: keywords,
-                            doc_card_list: true,
-                            page_tag: meta['tag'],
-                        })
+                        let childSource
+                        try { childSource = this.__fetch_doc_source('node_token', child.node_token) } catch (e) { childSource = null }
+                        const categoryHasLandingPage = childSource ? this.__category_has_landing_page(childSource) : true
+
+                        if (categoryHasLandingPage) {
+                            console.log(`${current_path}/${slug}/${slug}.md`)
+                            await this.write_doc({
+                                path: `${current_path}/${slug}`,
+                                page_title: child.title,
+                                page_slug: slug,
+                                page_beta: beta,
+                                notebook: notebook,
+                                addedSince: addedSince,
+                                lastModified: lastModified,
+                                deprecateSince: deprecateSince,
+                                page_type: type,
+                                page_token: child.node_token,
+                                sidebar_position: index+1,
+                                sidebar_label: labels,
+                                keywords: keywords,
+                                doc_card_list: true,
+                            })
+                        } else {
+                            console.log(`${current_path}/${slug}/ [meaningless category — no index page generated]`)
+                        }
 
                         await this.write_docs(`${current_path}/${slug}`, token)
                     }
                 } else {
-                    const meta = await this.__is_to_publish(child.title, child.slug)
+                    if (child.base_nav_ref || child.base_nav_link) {
+                        return
+                    }
+                    const meta = await this.__is_to_publish(child.title, child.slug, child.node_token)
                     switch (child.slug) {
                         case 'faqs':
                             if (meta['publish']) {
@@ -173,7 +666,6 @@ class larkDocWriter {
                                     sidebar_label: labels,
                                     keywords: keywords,
                                     doc_card_list: false,
-                                    page_tag: meta['tag'],
                                 })
                             }
                             break;
@@ -183,9 +675,112 @@ class larkDocWriter {
         }
     }
 
+    /**
+     * Write a subtree starting from a specific node token.
+     * Computes the correct nested output path by walking up parent_node_token
+     * chains, then delegates to write_docs().
+     */
+    async write_subtree(outputDir, token) {
+        if (!this.outputRoot) this.outputRoot = outputDir
+        const node = this.__fetch_doc_source('node_token', token)
+
+        if (token === this.root_token) {
+            await this.write_docs(outputDir, token)
+            return
+        }
+
+        let relPath = ''
+        let current = node
+
+        while (current && current.parent_node_token && current.parent_node_token !== this.root_token) {
+            try {
+                const parent = this.__fetch_doc_source('node_token', current.parent_node_token)
+                relPath = parent.slug + '/' + relPath
+                current = parent
+            } catch {
+                // Parent not in cache — stop walking and write to the nearest known path
+                break
+            }
+        }
+
+        const parentPath = `${outputDir}/${relPath}`.replace(/\/+/g, '/')
+        if (!fs.existsSync(parentPath)) {
+            fs.mkdirSync(parentPath, { recursive: true })
+        }
+
+        const meta = await this.__is_to_publish(node.title, node.slug, node.node_token)
+        if (!meta.publish) return
+
+        const writeCurrentPage = async (pagePath, docCardList) => {
+            console.log(`${pagePath}/${node.slug}.md`.replace(/\/+/g, '/'))
+            await this.write_doc({
+                path: pagePath,
+                page_title: node.title,
+                page_slug: node.slug,
+                page_beta: meta.beta,
+                notebook: meta.notebook,
+                addedSince: meta.addSince,
+                lastModified: meta.lastModified,
+                deprecateSince: meta.deprecateSince,
+                page_type: node.node_type,
+                page_token: node.node_token,
+                sidebar_position: 1,
+                sidebar_label: meta.labels,
+                keywords: meta.keywords,
+                doc_card_list: docCardList,
+            })
+        }
+
+        if (node.has_child) {
+            const nodePath = `${parentPath}/${node.slug}`.replace(/\/+/g, '/')
+            if (!fs.existsSync(nodePath)) {
+                fs.mkdirSync(nodePath, { recursive: true })
+            }
+            if (this.__category_has_landing_page(node)) {
+                await writeCurrentPage(nodePath, true)
+            } else {
+                console.log(`${nodePath}/ [meaningless category — no index page generated]`)
+            }
+            await this.write_docs(nodePath, token)
+        } else {
+            await writeCurrentPage(parentPath, false)
+        }
+    }
+
+    __remove_stale_token_files(token, nextFilePath) {
+        if (!token) return
+        const scanRoot = this.outputRoot || node_path.dirname(nextFilePath)
+        if (!scanRoot || !fs.existsSync(scanRoot)) return
+
+        const resolvedNext = node_path.resolve(nextFilePath)
+        const stack = [scanRoot]
+
+        while (stack.length) {
+            const dir = stack.pop()
+            if (!fs.existsSync(dir)) continue
+
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+                const entryPath = node_path.join(dir, entry.name)
+                if (entry.isDirectory()) {
+                    stack.push(entryPath)
+                    continue
+                }
+                if (!entry.isFile() || !entry.name.endsWith('.md')) continue
+                if (node_path.resolve(entryPath) === resolvedNext) continue
+
+                const content = fs.readFileSync(entryPath, 'utf8')
+                const match = content.match(/^token:\s*['"]?([^'"\r\n]+)['"]?\s*$/m)
+                if (match?.[1] !== token) continue
+
+                fs.rmSync(entryPath, { force: true })
+                console.log(`[write_doc] Removed stale generated doc for token ${token}: ${entryPath}`)
+            }
+        }
+    }
+
     async write_doc ({
-        path,
-        page_title,
+        path,  
+        page_title, 
         page_slug,
         page_beta,
         notebook,
@@ -197,21 +792,25 @@ class larkDocWriter {
         sidebar_position,
         sidebar_label,
         keywords,
-        doc_card_list,
-        page_tag
+        doc_card_list
     }) {
         let obj;
         let blocks;
         if (page_token) {
             obj = this.__fetch_doc_source('node_token', page_token, page_slug)
             if (obj) {
-                blocks = obj.blocks.items
+                blocks = obj.blocks?.items
             }
         } else if (page_title) {
             obj = this.__fetch_doc_source('title', page_title, page_slug)
             if (obj) {
-                blocks = obj.blocks.items
+                blocks = obj.blocks?.items
             }
+        }
+
+        if (!blocks) {
+            console.warn(`[write_doc] Skipping ${page_slug || page_title}: source has no blocks`)
+            return
         }
 
         if (blocks) {
@@ -224,41 +823,23 @@ class larkDocWriter {
             this.blocks = page.children.map(child => {
                 return this.__retrieve_block_by_id(child)
             })
-
-            // Detect ApiCompose add-on block
-            const apiComposeBlock = this.__find_api_compose_block(this.blocks)
-            if (apiComposeBlock) {
-                await this.__write_api_page({
-                    title: page_title,
-                    slug: page_slug,
-                    beta: page_beta,
-                    path: path,
-                    type: page_type,
-                    token: page_token,
-                    sidebar_position: sidebar_position,
-                    sidebar_label: sidebar_label,
-                    keywords: keywords,
-                    apiComposeBlock: apiComposeBlock,
-                })
-            } else {
-                await this.__write_page({
-                    title: page_title,
-                    suffix: this.__title_suffix(path),
-                    slug: page_slug,
-                    beta: page_beta,
-                    notebook: notebook,
-                    addedSince: addedSince,
-                    lastModified: lastModified,
-                    deprecateSince: deprecateSince,
-                    path: path,
-                    type: page_type,
-                    token: page_token,
-                    sidebar_position: sidebar_position,
-                    sidebar_label: sidebar_label,
-                    keywords: keywords,
-                    doc_card_list: doc_card_list,
-                })
-            }
+            await this.__write_page({
+                title: page_title,
+                suffix: this.__title_suffix(path),
+                slug: page_slug,
+                beta: page_beta,
+                notebook: notebook,
+                addedSince: addedSince,
+                lastModified: lastModified,
+                deprecateSince: deprecateSince,
+                path: path, 
+                type: page_type,
+                token: page_token,
+                sidebar_position: sidebar_position,
+                sidebar_label: sidebar_label,
+                keywords: keywords,
+                doc_card_list: doc_card_list,
+            })
         }
     }
 
@@ -301,25 +882,21 @@ class larkDocWriter {
             suffix = 'RESTful | Data Plane'
         } else if (path.includes('restful')) {
             suffix = 'RESTful'
-        } else if (path.includes('onpremise')) {
-            suffix = 'On-Premise'
         }
 
         return suffix
     }
 
     async write_faqs (path) {
-        let source
-        try {
-            source = this.__fetch_doc_source('title', '常见问题')
-        } catch {
-            source = this.__fetch_doc_source('slug', 'faqs')
-        }
-
+        const source = this.__fetch_doc_source('slug', 'faqs')
         const title = source.title
         const blocks = source.blocks.items
         const suffix = path.includes('byoc') ? 'BYOC' : 'CLOUD'
-        const isChineseFaq = title === '常见问题'
+
+        for (const extension of ['md', 'mdx']) {
+            const landingPage = `${path}/faqs.${extension}`
+            if (fs.existsSync(landingPage)) fs.rmSync(landingPage)
+        }
 
         if (blocks) {
             this.page_blocks = blocks
@@ -349,42 +926,20 @@ class larkDocWriter {
                 sub_pages.push(sub_page)
             }
 
-            // Write FAQs root page
-            let slug = 'faqs'
-            const rootTitle = isChineseFaq ? 'FAQs' : title
-            const rootHeading = isChineseFaq ? '常见问题' : title
-            let front_matter = this.__front_matters(rootTitle, suffix, slug, null, null, source.node_type, source.node_token, 999, "", "", this.displayedSidebar, "Frequently asked questions")
-            const markdown = `${front_matter}\n\n# ${rootHeading}` + "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
-            fs.writeFileSync(`${path}/${slug}.md`, markdown)
-
-            sub_pages.forEach((sub_page, index) => {
+            for (let index = 0; index < sub_pages.length; index++) {
+                let sub_page = sub_pages[index]
                 let title = sub_page[0].indexOf('{/') > 0 ? sub_page[0].split('{/')[0].split('## ')[1] : sub_page[0].replace(/^## /g, '').replace(/{#[\w-]+}/g, '').trim()
                 let short_description = sub_page.filter(line => line.length > 0)[1]
-                let slugMatch = /{\/([\w-]+)}/.exec(sub_page[0])
-                let slug = isChineseFaq
-                    ? (slugMatch ? slugMatch[1] : null)
-                    : (slugMatch ? slugMatch[1] : slugify(title, {lower: true, strict: true}))
-
-                if (!slug) {
-                    return
-                }
-
+                let slug = sub_page[0].indexOf('{/') > 0 ? /{\/([\w-]+)}/.exec(sub_page[0])[1] : slugify(title, {lower: true, strict: true})
                 let front_matter = this.__front_matters(title, suffix, slug, null, null, source.node_type, source.node_token, index+1, "", "", this.displayedSidebar, short_description)
                 let links = []
 
                 sub_page = sub_page.map(line => {
                     if (line.startsWith('**')) {
-                        if (isChineseFaq && line.includes('{#')) {
-                            let qtext = line.split('{#')[0].split('**')[1]
-                            let qslug = line.split('{#')[1].split('}')[0]
-                            line = `### ${qtext} \\{#${qslug}}`
-                            links.push(`- [${qtext}](#${qslug})`)
-                        } else if (!isChineseFaq) {
-                            let qtext = line.indexOf('{#') > 0 ? line.split('{#')[0].split('**')[1] : line.replace(/\*/g, '').trim()
-                            let qslug = line.indexOf('{#') > 0 ? line.split('{#')[1]?.split('}')[0] : slugify(qtext, {lower: true, strict: true})
-                            line = `### ${qtext}{#${qslug}}`
-                            links.push(`- [${qtext}](#${qslug})`)
-                        }
+                        let qtext = line.indexOf('{#') > 0 ? line.split('{#')[0].split('**')[1] : line.replace(/\*/g, '').trim()
+                        let qslug = line.indexOf('{#') > 0 ? line.split('{#')[1]?.split('}')[0] : slugify(qtext, {lower: true, strict: true})
+                        line = `### ${qtext}{#${qslug}}`
+                        links.push(`- [${qtext}](#${qslug})`)
                     }
 
                     if (line == short_description) {
@@ -394,45 +949,208 @@ class larkDocWriter {
                     return line
                 })
 
-                const tocHeading = isChineseFaq ? '目录' : 'Contents'
-                const faqHeading = isChineseFaq ? '问答' : 'FAQs'
-                const markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## ${tocHeading}\n\n${links.join('\n')}\n\n## ${faqHeading}\n\n${sub_page.slice(1).join('\n')}`
+                let markdown = `${front_matter}\n\n# ${title}\n\n${short_description}\n\n## Contents\n\n${links.join('\n')}\n\n## FAQs\n\n${sub_page.slice(1).join('\n')}`
+                markdown = await this.__mdx_patches(markdown)
                 fs.writeFileSync(`${path}/${slug}.md`, markdown)
-            })
+            }
         }
+    }
+
+    __plain_value(value) {
+        if (value === null || value === undefined) return null
+        if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value)
+        if (value instanceof Array) {
+            return value.map(item => this.__plain_value(item)).filter(Boolean).join(', ')
+        }
+        if (typeof value === 'object') {
+            if (value.text) return value.text
+            if (value.name) return value.name
+            if (value.link) return value.link
+            if (value.id) return value.id
+            const typedKey = value.type && value[value.type] ? value.type : null
+            if (typedKey) return this.__plain_value(value[typedKey])
+        }
+        return null
+    }
+
+    __doc_field(fields) {
+        return fields.Doc || fields.Docs
+    }
+
+    __doc_link(docField) {
+        if (!docField) return null
+        if (typeof docField === 'string') {
+            const markdownMatch = docField.match(/\[[^\]]+\]\(([^)]+)\)/)
+            return markdownMatch ? markdownMatch[1] : docField
+        }
+        if (docField.link) return docField.link
+        if (docField.url) return docField.url
+        if (docField instanceof Array) return this.__doc_link(docField[0])
+        return null
+    }
+
+    __doc_title(docField) {
+        if (!docField) return null
+        if (typeof docField === 'string') {
+            const markdownMatch = docField.match(/\[([^\]]+)\]\([^)]+\)/)
+            return markdownMatch ? markdownMatch[1] : docField
+        }
+        return docField.text || docField.name || this.__plain_value(docField)
+    }
+
+    async __base_tables(token) {
+        if (this.base_tables) return this.base_tables
+        if (this.base_table_id && !this.use_all_base_tables) {
+            this.base_tables = [{ table_id: this.base_table_id, name: this.base_table_id, index: 0 }]
+            return this.base_tables
+        }
+
+        const tables = []
+        let pageToken = null
+        do {
+            const pageTokenExpr = pageToken ? `&page_token=${pageToken}` : ''
+            const url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_app_token}/tables?page_size=100${pageTokenExpr}`
+            const jres = await fetchFeishuJsonWithRetry(url, {
+                method: "get",
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            }, `writer list bitable tables ${this.base_app_token}`)
+            if (jres.code !== 0) {
+                throw new Error(`[base] Failed to list tables for ${this.base_app_token}: ${JSON.stringify(jres)}`)
+            }
+            const items = jres.data?.items || []
+            if (!Array.isArray(items)) {
+                throw new Error(`[base] Unexpected tables payload for ${this.base_app_token}: ${JSON.stringify(jres)}`)
+            }
+            tables.push(...items)
+            pageToken = jres.data?.has_more ? jres.data.page_token : null
+        } while (pageToken)
+
+        const selectedTables = this.use_all_base_tables ? tables : tables.slice(0, 1)
+        this.base_tables = selectedTables.map((table, index) => ({
+            ...table,
+            table_id: table.table_id || table.id,
+            name: table.name || table.table_name || table.table_id || table.id,
+            index,
+        }))
+        return this.base_tables
+    }
+
+    async __base_records(token, table) {
+        const records = []
+        let pageToken = null
+        do {
+            const pageTokenExpr = pageToken ? `&page_token=${pageToken}` : ''
+            const url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_app_token}/tables/${table.table_id}/records?page_size=500${pageTokenExpr}`
+            const jres = await fetchFeishuJsonWithRetry(url, {
+                method: "get",
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            }, `writer list bitable records ${table.name || table.table_id}`)
+            if (jres.code !== 0) {
+                throw new Error(`[base] Failed to list records for ${table.name || table.table_id}: ${JSON.stringify(jres)}`)
+            }
+            const items = jres.data?.items || []
+            if (!Array.isArray(items)) {
+                throw new Error(`[base] Unexpected records payload for ${table.name || table.table_id}: ${JSON.stringify(jres)}`)
+            }
+            records.push(...items)
+            pageToken = jres.data?.has_more ? jres.data.page_token : null
+        } while (pageToken)
+        return records
     }
 
     async __listed_docs() {
         const token = await this.tokenFetcher.token()
-        let url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_token}/tables`
-        const table_id = (await fetchFeishuJsonWithRetry(url, {
-            method: "get",
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        }, 'writer list bitable tables')).data.items[0].table_id
-
-        url = `${process.env.FEISHU_HOST}/open-apis/bitable/v1/apps/${this.base_token}/tables/${table_id}/records?page_size=500`
-        this.records = (await fetchFeishuJsonWithRetry(url, {
-            method: "get",
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        }, 'writer list bitable records')).data.items
+        const tables = await this.__base_tables(token)
+        const records = []
+        for (const table of tables) {
+            records.push(...await this.__base_records(token, table))
+        }
+        this.records = records
     }
 
     async __is_to_publish (title, slug, token=null) {
+        if (slug && fs.existsSync(this.docSourceDir)) {
+            const baseSource = this.__fetch_base_source_meta(title, slug, token)
+            if (baseSource) {
+                if (baseSource.base_placement_type === 'section') {
+                    return {
+                        publish: this.__base_source_is_publishable(baseSource),
+                        title: baseSource.title || title,
+                        slug,
+                        beta: null,
+                        labels: baseSource.title || title,
+                    }
+                }
+                if (baseSource.base_nav_ref) {
+                    return {
+                        publish: this.__base_nav_source_is_publishable(baseSource),
+                        title: baseSource.title || title,
+                        slug,
+                        beta: this.__plain_value(baseSource.base_beta) || null,
+                        labels: this.__plain_value(baseSource.base_labels) || baseSource.title || title,
+                    }
+                }
+                if (baseSource.base_nav_link) {
+                    return {
+                        publish: this.__base_nav_source_is_publishable(baseSource),
+                        title: baseSource.title || title,
+                        slug,
+                        beta: this.__plain_value(baseSource.base_beta) || null,
+                        labels: this.__plain_value(baseSource.base_labels) || baseSource.title || title,
+                    }
+                }
+                if (baseSource.base_nav_virtual) {
+                    return {
+                        publish: baseSource.base_placement_type
+                            ? (this.__base_nav_source_is_publishable(baseSource) && !!baseSource.has_child)
+                            : !!baseSource.has_child,
+                        title: baseSource.title || title,
+                        slug,
+                        beta: this.__plain_value(baseSource.base_beta) || null,
+                        labels: this.__plain_value(baseSource.base_labels) || baseSource.title || title,
+                    }
+                }
+                if (this.__has_base_publish_meta(baseSource)) {
+                    return {
+                        publish: this.__base_source_is_publishable(baseSource),
+                        title: baseSource.title || title,
+                        slug,
+                        beta: this.__plain_value(baseSource.base_beta) || null,
+                        labels: this.__plain_value(baseSource.base_labels) || baseSource.title || title,
+                    }
+                }
+            }
+        }
+
+        if (this.mediaResolver) {
+            const error = new Error(`Offline render metadata is missing for ${token || slug || title}`)
+            error.code = 'OFFLINE_METADATA_MISS'
+            throw error
+        }
+
         if (!this.records) {
             await this.__listed_docs()
         }
 
         const result = this.records.filter(record => {
-            const record_slug = record["fields"]["Slug"] instanceof Array ? record["fields"]["Slug"][0].text : record["fields"]["Slug"]
+            const docField = this.__doc_field(record.fields)
+            if (!docField) return false
 
-            if (((record["fields"]["Docs"] && record["fields"]["Docs"]["text"] === title && record_slug == slug) || record["fields"]["Docs"]["link"].endsWith(token)) && record["fields"]["Targets"] && record["fields"]["Progress"] && (record["fields"]["Progress"] === "初稿" || record["fields"]["Progress"] === "发布" || record["fields"]["Progress"] === "Draft" || record["fields"]["Progress"] === "Published" || record["fields"]["Progress"] === "Publish")) {
+            const record_slug = this.__plain_value(record["fields"]["Slug"])
+            const targetField = record.fields['Publish Targets'] || record.fields.Targets
 
-                const targets = record["fields"]["Targets"].map(item => item.trim().toLowerCase())
+            // Check publish eligibility via Status (new) or Progress (old)
+            const status = this.__plain_value(record.fields.Status || record.fields.Progress)
+            const isPublishable = ['Draft', 'Approved', 'Published', 'Publish', 'Reviewed'].includes(status)
 
+            const docLink = this.__doc_link(docField) || ''
+            const docTitle = this.__doc_title(docField)
+            if (((docTitle === title && record_slug == slug) || (token && docLink.endsWith(token))) && targetField && isPublishable) {
+                const targets = (targetField instanceof Array ? targetField : [targetField]).map(item => this.__plain_value(item)?.trim().toLowerCase())
                 if (targets.includes(this.targets.toLowerCase())) {
                     return record
                 }
@@ -440,26 +1158,28 @@ class larkDocWriter {
         })
 
         if (result.length > 0) {
+            const fields = result[0].fields
+            const docField = this.__doc_field(fields)
             return {
                 publish: true,
-                title: result[0]["fields"]["Docs"].text,
-                slug: result[0]["fields"]["Slug"],
-                beta: result[0]["fields"]["Beta"],
-                notebook: result[0]["fields"]["Notebook"],
-                labels: result[0]["fields"]["Labels"],
-                keywords: result[0]["fields"]["Keywords"],
-                description: result[0]["fields"]["Description"],
-                tag: result[0]["fields"]["Tag"],
-                addSince: result[0]["fields"]["Added Since"],
-                lastModified: result[0]["fields"]["Last Modified At"],
-                deprecateSince: result[0]["fields"]["Deprecate Since"],
+                title: this.__doc_title(docField),
+                slug: fields.Slug,
+                beta: fields.Beta || null,
+                notebook: fields.Notebook || null,
+                labels: fields.Labels || null,
+                keywords: fields.Keywords || null,
+                description: fields.Description || null,
+                tag: fields.Tag || null,
+                addSince: fields['Added Since'] || null,
+                lastModified: fields['Last Modified At'] || null,
+                deprecateSince: fields['Deprecated Since'] || fields['Deprecate Since'] || null,
             }
         } else {
             return {
                 publish: false,
             }
         }
-        
+
     }
 
     __filter_content (markdown, targets) {
@@ -535,14 +1255,32 @@ class larkDocWriter {
 
     __extract_description(markdown) {
         const content = markdown.split('\n')
-        const title = content.filter(line => line.startsWith('# '))
-        var description = "(placeholder)"
+        const titleIndex = content.findIndex(line => line.startsWith('# '))
+        if (titleIndex === -1) return "(placeholder)"
 
-        if (title.length > 0) {
-            description = content[content.indexOf(title[0])+2] ? content[content.indexOf(title[0])+2].trim() : "(placeholder)"
+        let jsxDepth = 0
+        for (let i = titleIndex + 1; i < content.length; i++) {
+            const line = content[i].trim()
+            if (!line) continue
+            if (/^import\s/.test(line)) continue
+            if (/^<([A-Z][A-Za-z0-9]*)\b[^>]*\/>$/.test(line)) continue
+
+            const open = line.match(/^<([A-Z][A-Za-z0-9]*)\b[^>]*>$/)
+            if (open) {
+                if (!line.includes(`</${open[1]}>`)) jsxDepth++
+                continue
+            }
+            if (jsxDepth > 0) {
+                if (/^<\/[A-Z][A-Za-z0-9]*>$/.test(line)) jsxDepth--
+                continue
+            }
+            if (/^<\/?[A-Z][A-Za-z0-9]*\b/.test(line)) continue
+            if (/^#+\s/.test(line)) break
+
+            return line
         }
 
-        return description
+        return "(placeholder)"
     }
 
     async __write_page({title, suffix, slug, beta, notebook, addedSince, lastModified, deprecateSince, path, type, token, sidebar_position, sidebar_label, keywords, doc_card_list}) {
@@ -552,22 +1290,21 @@ class larkDocWriter {
         markdown = markdown.replace(/^[\||\s][\s|\||<br\/>]*\|\n/gm, '')
         markdown = markdown.replace(/\s*<tr>\n(\s*<td>(<br\/>)*<\/td>\n)*\s*<\/tr>/g, '')
         markdown = this.__example_http_urls(markdown)
-        markdown = await this.__mdx_patches(markdown)  
+        markdown = await this.__mdx_patches(markdown)
 
         const description = this.__extract_description(markdown)
 
-        let front_matter = this.__front_matters(title, suffix, slug, beta, notebook, type, token, sidebar_position, sidebar_label, keywords, this.displayedSidebar, description)
+        // Auto-detect release notes and assign them to the releases sidebar
+        const isReleaseNote = String(path || '').includes('release-notes') || String(slug || '').includes('release-notes')
+        const displayedSidebar = isReleaseNote ? 'releasesSidebar' : this.displayedSidebar
+
+        let front_matter = this.__front_matters(title, suffix, slug, beta, notebook, type, token, sidebar_position, sidebar_label, keywords, displayedSidebar, description)
 
         let tabs = markdown.split('\n').filter(line => {
             return line.trim().startsWith("<Tab")
         }).length
 
         let imports = this.__imports(tabs > 0)
-
-        // add sidebar_key attribute to doc frontmatter
-        front_matter = front_matter.split('\n')
-        front_matter.splice(3, 0, `sidebar_key: ${slug}`)
-        front_matter = front_matter.join('\n')
 
         if (doc_card_list) {
             markdown += "\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList />"
@@ -615,6 +1352,10 @@ class larkDocWriter {
             imports = imports + "\n\nimport Grid from '@site/src/components/Grid';"
         }
 
+        if (markdown.match(/\<FeatureCardGrid/g)) {
+            imports = imports + "\n\nimport FeatureCardGrid, { FeatureCard } from '@site/src/components/FeatureCardGrid';"
+        }
+
         if (markdown.match(/\<Procedures/g)) {
             imports = imports + "\n\nimport Procedures from '@site/src/components/Procedures';"
         }
@@ -626,6 +1367,7 @@ class larkDocWriter {
             front_matter.splice(7, 0, `deprecate_since: ${deprecateSince ? deprecateSince : 'FALSE'}`)
             front_matter = front_matter.join('\n')
 
+            this.__remove_stale_token_files(token, file_path)
             fs.writeFileSync(file_path, front_matter + '\n\n' + imports + '\n\n' + markdown)
         } else {
             return {
@@ -636,82 +1378,21 @@ class larkDocWriter {
         }
     }
 
-    __find_api_compose_block(blocks) {
-        for (const block of blocks) {
-            if (this.block_types[block['block_type']-1] === 'add_ons') {
-                if (block['add_ons'] && block['add_ons']['component_type_id'] === this.api_compose_block_type_id) {
-                    return block['add_ons']
-                }
-            }
-            // Recursively check children if any
-            if (block['children'] && block['children'].length > 0) {
-                const children = block['children'].map(child => this.__retrieve_block_by_id(child))
-                const found = this.__find_api_compose_block(children)
-                if (found) return found
-            }
-        }
-        return null
-    }
-
-    async __write_api_page({title, slug, beta, path, type, token, sidebar_position, sidebar_label, keywords, apiComposeBlock}) {
-        let recordData
-        try {
-            recordData = JSON.parse(apiComposeBlock['record'] || '{}')
-        } catch (e) {
-            console.error(`Failed to parse ApiCompose record for ${slug}: ${e.message}`)
-            return
-        }
-
-        const specs = recordData
-        const method = (specs.method || 'get').toLowerCase()
-        const endpoint = specs.endpoint || ''
-        const description = specs.summary || title || ''
-
-        const frontMatter = `---
-displayed_sidebar: restfulSidebar
-sidebar_position: ${sidebar_position || 1}
-slug: /restful/${slug}
-beta: ${beta ? 'TRUE' : 'FALSE'}
-title: ${this.__yaml_string(`${title || specs.summary || 'API'} | RESTful`)}
-description: ${this.__yaml_string(`${description} | RESTful`)}
-hide_table_of_contents: true
-sidebar_label: ${this.__yaml_string(sidebar_label || title || specs.summary || 'API')}
-sidebar_custom_props: { badges: ['${method}'] }
-${keywords ? 'keywords: \n  - ' + keywords.split(',').map(k => k.trim()).join('\n  - ') + '\n' : ''}---`
-
-        const specsJson = JSON.stringify(specs, null, 2)
-        const mdxBody = `# ${title || specs.summary || 'API'}
-
-import RestSpecs from '@site/src/components/RestSpecs';
-
-<RestSpecs specs={specs} endpoint={endpoint} method={method} target="${this.targets}" lang="en-US" />
-
-export const specs = ${specsJson}
-export const endpoint = "${endpoint}"
-export const method = "${method}"`
-
-        const file_path = `${path}/${slug}.mdx`
-        fs.writeFileSync(file_path, frontMatter + '\n\n' + mdxBody)
-        console.log(`Generated API doc: ${file_path}`)
-    }
-
-    __yaml_string(value) {
-        return JSON.stringify(String(value ?? '').replace(/\r?\n/g, '|'))
-    }
-
     __front_matters (title, suffix, slug, beta, notebook, type, token, sidebar_position=undefined, sidebar_label="", keywords="", displayed_sidebar=this.displayedSidebar, description="") {
-        let meta = '';
         let hide_title = '';
         let hide_toc = '';
-        
-        if (keywords !== "") {
+
+        if (keywords) {
             // keywords = keywords + ',' + this.keyword_picker().join(',')
             keywords = "keywords: \n  - " + keywords.split(',').map(item => item.trim()).join('\n  - ') + '\n'
+        } else {
+            keywords = ''
         }
 
         if (displayed_sidebar === 'default') {
-            displayed_sidebar = ''
-        } else if (displayed_sidebar === 'agentsSidebar' || displayed_sidebar === 'onPremiseSidebar') {
+            displayed_sidebar = `displayed_sidebar: ${displayed_sidebar}\n`
+        } else if (displayed_sidebar === 'releasesSidebar') {
+            // Release notes use a dedicated sidebar but keep their original slug
             displayed_sidebar = `displayed_sidebar: ${displayed_sidebar}\n`
         } else {
             slug = `${displayed_sidebar.replace('Sidebar', '').trim()}/${slug}`
@@ -726,21 +1407,15 @@ export const method = "${method}"`
             }
         }
 
-        if (this.robots === 'noindex') {
-            meta = '\n\n<head>\n' +
-            '  <meta name="robots" content="noindex" />\n' +
-            '</head>\n'
-        }
-
         if (slug === 'home') {
             hide_title = "hide_title: true";
             hide_toc = "hide_table_of_contents: true";
         }
 
-        let front_matter = '---\n' +
+        let front_matter = '---\n' + 
         `title: ${this.__yaml_string(`${title} | ${suffix}`)}` + '\n' +
         `slug: /${slug}` + '\n' +
-        `sidebar_label: ${this.__yaml_string(sidebar_label !== "" ? sidebar_label : title)}` + '\n' +
+        `sidebar_label: ${this.__yaml_string(sidebar_label ? sidebar_label : title)}` + '\n' +
         `beta: ${beta ? beta : 'FALSE'}` + '\n' +
         `notebook: ${notebook ? notebook : 'FALSE'}` + '\n' +
         `description: ${this.__yaml_string(`${description} | ${suffix}`)}` + '\n' +
@@ -751,9 +1426,13 @@ export const method = "${method}"`
         displayed_sidebar + '\n' +
         `${hide_title ? hide_title  + '\n' : ''}` +
         `${hide_toc ? hide_toc  + '\n' : ''}` +
-        '---' + meta
+        '---'
 
         return front_matter
+    }
+
+    __yaml_string(value) {
+        return JSON.stringify(String(value ?? '').replace(/\r?\n/g, '|'))
     }
 
     __imports (cond=null) {
@@ -772,6 +1451,7 @@ export const method = "${method}"`
     async __markdown(blocks=null, indent=0) {
         const markdown = [];
         const idt = " ".repeat(indent);
+        let nextGridFeatureCardConfig = null;
         if (blocks === null) {
             blocks = this.blocks;
             markdown.push(await this.__page(this.page_blocks[0]['page']));
@@ -783,12 +1463,14 @@ export const method = "${method}"`
                 continue;
             }
             console.log(block['block_id'], this.block_types[block['block_type']-1], block['block_type']);
+            const blockType = this.block_types[block['block_type'] - 1];
             const prev_block = idx > 0 ? blocks[idx-1] : null;
             const next_block = idx < blocks.length-1 ? blocks[idx+1] : null;
 
-            if (this.block_types[block['block_type']-1] === undefined) {
+            if (blockType === undefined) {
+                nextGridFeatureCardConfig = null;
                 markdown.push('[Unsupported block type]');
-            } else if (this.block_types[block['block_type']-1] === 'text') {
+            } else if (blockType === 'text') {
                 let content = await this.__text(block['text']);
                 if (content.trim().indexOf('\n') > 0) {
                     content = content.split('\n').map(line => idt + line).join('\n');
@@ -796,45 +1478,71 @@ export const method = "${method}"`
                     content = idt + content;
                 }
 
+                const featureCardGridMarker = this.__parse_feature_card_grid_marker(content);
+                if (featureCardGridMarker) {
+                    nextGridFeatureCardConfig = featureCardGridMarker;
+                    continue;
+                }
+
+                if (content.trim() !== '') {
+                    nextGridFeatureCardConfig = null;
+                }
+
                 markdown.push(content);
-            } else if (this.block_types[block['block_type']-1].includes('heading')) {
-                const level = parseInt(this.block_types[block['block_type']-1].slice(-1));
+            } else if (blockType.includes('heading')) {
+                nextGridFeatureCardConfig = null;
+                const level = parseInt(blockType.slice(-1));
                 markdown.push(idt + await this.__heading(block[`heading${level}`], level));
-            } else if (this.block_types[block['block_type']-1] === 'bullet') {
+            } else if (blockType === 'bullet') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__bullet(block, indent));
-            } else if (this.block_types[block['block_type']-1] === 'ordered') {
+            } else if (blockType === 'ordered') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__ordered(block, indent));
-            } else if (this.block_types[block['block_type']-1] === 'code') {
+            } else if (blockType === 'code') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__code(block['code'], indent, prev_block, next_block, blocks));
-            } else if (this.block_types[block['block_type']-1] === 'quote_container') {
+            } else if (blockType === 'quote_container') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__quote(block, indent));
-            } else if (this.block_types[block['block_type']-1] === 'image') {
+            } else if (blockType === 'image') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(idt + (await this.__image(block['image'])));
-            } else if (this.block_types[block['block_type']-1] === 'iframe') {
+            } else if (blockType === 'iframe') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(idt + (await this.__iframe(block)));
-            } else if (this.block_types[block['block_type']-1] === 'table') {
+            } else if (blockType === 'table') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__table(block['table'], indent));
-            } else if (this.block_types[block['block_type']-1] === 'sheet') {
+            } else if (blockType === 'sheet') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__sheet(block['sheet'], indent));
-            } else if (this.block_types[block['block_type']-1] === 'callout') {
+            } else if (blockType === 'callout') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__callout(block, indent));
-            } else if (this.block_types[block['block_type']-1] === 'board') {
+            } else if (blockType === 'board') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__board(block['board'], indent));
-            } else if (this.block_types[block['block_type']-1] === 'grid') {
-                markdown.push(await this.__grid(block, indent));
-            } else if (this.block_types[block['block_type']-1] === 'add_ons') {
+            } else if (blockType === 'grid') {
+                markdown.push(await this.__grid(block, indent, nextGridFeatureCardConfig));
+                nextGridFeatureCardConfig = null;
+            } else if (blockType === 'add_ons') {
+                nextGridFeatureCardConfig = null;
                 // supademo add-ons
                 if (block['add_ons']['component_type_id'] === 'blk_682093ba9580c002363b9dc3') {
                     markdown.push(await this.__supademo(block['add_ons'], indent));
                 }
-            } else if (this.block_types[block['block_type']-1] === 'source_synced') {
+            } else if (blockType === 'source_synced') {
+                nextGridFeatureCardConfig = null;
                 markdown.push(await this.__source_synced(block, indent));
             } else if (block['block_type'] === 999 && block['children']) {
+                nextGridFeatureCardConfig = null;
                 const children = block['children'].map(child => {
                     return this.__retrieve_block_by_id(child)
                 })
                 markdown.push(await this.__markdown(children, indent));
             } else {
+                nextGridFeatureCardConfig = null;
                 console.log(`Unprocessed: ${block['block_id']}`);
             }
         }
@@ -848,17 +1556,19 @@ export const method = "${method}"`
     }
 
     __example_http_urls(content) {
-        // Find all fenced code blocks and mark their ranges
-        const codeBlockRegex = /```[\s\S]*?```/g;
-        let codeBlocks = [];
-        let match;
-        while ((match = codeBlockRegex.exec(content)) !== null) {
-            codeBlocks.push({ start: match.index, end: match.index + match[0].length });
-        }
+        const codeBlocks = getFencedCodeRanges(content);
 
         // Helper to check if a position is inside any code block
         function isInCodeBlock(pos) {
             return codeBlocks.some(block => pos >= block.start && pos < block.end);
+        }
+
+        const codeSpanRegex = /`[^`\n]+`/g;
+        let match;
+        while ((match = codeSpanRegex.exec(content)) !== null) {
+            if (!isInCodeBlock(match.index)) {
+                codeBlocks.push({ start: match.index, end: match.index + match[0].length });
+            }
         }
 
         // Match URLs, including those containing <, >, [, ], {, }
@@ -896,16 +1606,13 @@ export const method = "${method}"`
         // inline code spans, to prevent remark-math/KaTeX from treating them as math
         // delimiters (which causes unicodeTextInMathMode warnings and broken rendering).
         const lines = content.split('\n');
-        let inCodeBlock = false;
+        const fence = createFenceTracker();
         const result = [];
 
         for (let line of lines) {
-            const stripped = line.trim();
-            if (stripped.startsWith('```') || stripped.startsWith('~~~')) {
-                inCodeBlock = !inCodeBlock;
-            }
+            fence.update(line);
 
-            if (!inCodeBlock) {
+            if (!fence.inCodeBlock) {
                 // Split by inline code spans; odd-indexed segments are inside backticks
                 const parts = line.split(/(`+[^`]+`+)/);
                 line = parts.map((part, i) => {
@@ -980,24 +1687,20 @@ export const method = "${method}"`
         }
 
         const lines = content.split('\n');
-        let inCodeBlock = false;
+        const fence = createFenceTracker();
         const result = [];
 
         for (let line of lines) {
-            const stripped = line.trim();
-            if (stripped.startsWith('```') || stripped.startsWith('~~~')) {
-                inCodeBlock = !inCodeBlock;
-            }
+            fence.update(line);
 
-            if (!inCodeBlock) {
+            if (!fence.inCodeBlock) {
                 // Split by inline code spans; odd-indexed segments are inside backticks
                 const parts = line.split(/(`+[^`]+`+)/);
                 line = parts.map((part, i) => {
                     if (i % 2 === 0) {
                         // Escape non-HTML lowercase placeholder tags (e.g. <bucket_name>, <region-code>).
-                        // Backslash-escaped placeholders (\<bucket_name>) are normalized too because
-                        // downstream MDX loaders may still parse them as JSX in HTML contexts.
-                        part = part.replace(/\\?<\/?([a-z][a-z0-9]*(?:[_-][a-z0-9]+)*)\s*\/?>/g, (match, tagName) => {
+                        // Tags with attributes won't match because the regex only allows \s*\/?>
+                        part = part.replace(/(?<!\\)<\/?([a-z][a-z0-9]*(?:[_-][a-z0-9]+)*)\s*\/?>/g, (match, tagName) => {
                             if (KNOWN_TAGS.has(tagName)) return match;
                             return match.replace(/^\\/, '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
                         });
@@ -1033,12 +1736,15 @@ export const method = "${method}"`
             const remarkMath = (await import('remark-math')).default;
 
             // Pre-process: fix translation/editor artefacts, then escape problem characters
-            let patchedContent = removeTabsHallucinations(content);
+            let patchedContent = normalizeNestedPlaintextFences(content);
+            patchedContent = removeTabsHallucinations(patchedContent);
             patchedContent = unescapeKnownJsxTags(patchedContent);
             patchedContent = normalizeCodeTagContent(patchedContent);
-            patchedContent = normalizeEscapedGenericTypes(patchedContent);
+            patchedContent = convertHtmlCommentsToMdx(patchedContent);
             patchedContent = this.__escape_currency_dollars(patchedContent);
             patchedContent = escapeNonHtmlTags(patchedContent);
+            patchedContent = escapeMathBraces(patchedContent);
+            patchedContent = escapeHtmlElementBraces(patchedContent);
             let maxIterations = 50; // Prevent infinite loops
             let iteration = 0;
             const seenHashes = new Set();
@@ -1200,20 +1906,6 @@ export const method = "${method}"`
                                     }
                                 }
                             } else if (
-                                (error.message.includes('U+007C') || error.message.includes('U+0026')) &&
-                                offset !== undefined && offset > 0
-                            ) {
-                                // `|` (union types like `<number | string>`) or `&` (HTML entities like `&lt;`
-                                // inside angle brackets like `<SearchResults&lt;T&gt;>`) unexpected in JSX tag.
-                                // Walk backward to find `<` and replace with `&lt;`.
-                                for (let i = offset - 1; i >= Math.max(0, offset - 30); i--) {
-                                    if (patchedContent[i] === '<') {
-                                        patchedContent = patchedContent.slice(0, i) + '&lt;' + patchedContent.slice(i + 1);
-                                        madeChanges = true;
-                                        break;
-                                    }
-                                }
-                            } else if (
                                 (error.message.includes('U+002C') || error.message.includes('U+002A') || error.message.includes('U+3001')) &&
                                 offset !== undefined && offset > 0 && offset < patchedContent.length
                             ) {
@@ -1267,7 +1959,7 @@ export const method = "${method}"`
         if (content.length > 0) {
             
             if (content.indexOf('{#') < 0) {
-                let slug = slugify(content.split('|')[0].trim(), {lower: true, strict: true})
+                let slug = this.__heading_slug(content)
                 return '#'.repeat(level) + ' ' + content + '{#'+slug+'}';
             } else {
                 return '#'.repeat(level) + ' ' + content;
@@ -1286,6 +1978,19 @@ export const method = "${method}"`
         content = content.trim()
 
         return content
+    }
+
+    __clean_heading_title_for_slug(content) {
+        return String(content || '')
+            .replace(/\\?\{#[^}]+}/g, '')
+            .replace(/\s*\|\s*(PRIVATE|ONDEMAND|BYOC|CLOUD)\s*$/i, '')
+            .trim()
+    }
+
+    __heading_slug(content) {
+        const customId = String(content || '').match(/\{#([^}]+)}/)
+        if (customId) return customId[1]
+        return slugify(this.__clean_heading_title_for_slug(content), { lower: true, strict: true })
     }
 
     async __bullet(block, indent) {
@@ -1340,10 +2045,104 @@ export const method = "${method}"`
                 lang = langMatch ? langMatch[1] : (classAttr.split(/\s+/)[0] || '');
             }
             const decoded = code.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
-            return '\n```' + lang + '\n' + decoded.replace(/^\n|\n$/g, '') + '\n```\n';
+            return '\n' + createFencedCodeBlock(decoded, lang, 0);
         });
 
         return html;
+    }
+
+    __escapeJsxAttribute(value) {
+        return String(value ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+    }
+
+    __normalizeAdmonitionBody(lines) {
+        let body = Array.isArray(lines) ? lines.join('\n') : String(lines ?? '')
+        let bodyLines = body.split('\n')
+
+        while (bodyLines.length && bodyLines[0].trim() === '') bodyLines.shift()
+        while (bodyLines.length && bodyLines[bodyLines.length - 1].trim() === '') bodyLines.pop()
+
+        const indents = bodyLines
+            .filter(line => line.trim() !== '')
+            .map(line => line.match(/^ */)[0].length)
+        const commonIndent = indents.length ? Math.min(...indents) : 0
+
+        if (commonIndent > 0) {
+            bodyLines = bodyLines.map(line => line.startsWith(' '.repeat(commonIndent)) ? line.slice(commonIndent) : line)
+        }
+
+        return bodyLines.join('\n')
+    }
+
+    __admonitionMarkdown({ type, icon, title, bodyLines, indent }) {
+        const pad = ' '.repeat(indent)
+        const body = this.__normalizeAdmonitionBody(bodyLines)
+        const bodyWithIndent = body ? body.split('\n').map(line => pad + line).join('\n') : ''
+        const titleAttr = this.__escapeJsxAttribute(title || 'Notes')
+        const iconAttr = this.__escapeJsxAttribute(icon)
+
+        return [
+            `${pad}<Admonition type="${type}" icon="${iconAttr}" title="${titleAttr}">`,
+            '',
+            bodyWithIndent,
+            '',
+            `${pad}</Admonition>`,
+        ].join('\n').replace(/(\s*\n){3,}/g, `\n${pad}\n`)
+    }
+
+    __normalize_admonition_title(rawTitle, bodyLines) {
+        const title = String(rawTitle || '').trim();
+        const body = Array.isArray(bodyLines) ? [...bodyLines] : [];
+        const titleLooksLikeSentence = title.length > 72 || /[.!?]$/.test(title) || /\[[^\]]+\]\([^)]+\)/.test(title) || /`/.test(title);
+
+        if (titleLooksLikeSentence) {
+            return {
+                title: '',
+                body: [title, ...body].filter(line => line !== undefined && line !== null),
+            };
+        }
+
+        return { title, body };
+    }
+
+    __is_destructive_admonition(text) {
+        return /cannot be undone|removed immediately|drop .*database|delete .*volume/i.test(String(text || ''));
+    }
+
+    __admonition_meta({ emoji, rawTitle, bodyLines }) {
+        const normalized = this.__normalize_admonition_title(rawTitle, bodyLines);
+        const titleText = normalized.title;
+        const combinedText = [titleText, ...normalized.body].join(' ');
+        const lowerTitle = titleText.toLowerCase();
+
+        if (this.__is_destructive_admonition(combinedText)) {
+            return {
+                type: 'danger',
+                icon: '🚧',
+                title: titleText && !['warning', 'warn', 'caution'].includes(lowerTitle) ? titleText : 'Danger',
+                body: normalized.body,
+            };
+        }
+
+        if (emoji === 'construction' || ['warning', 'warn', 'caution', '警告'].includes(lowerTitle)) {
+            return {
+                type: 'warning',
+                icon: '🚧',
+                title: titleText && !['warn'].includes(lowerTitle) ? titleText : 'Warning',
+                body: normalized.body,
+            };
+        }
+
+        return {
+            type: 'info',
+            icon: '📘',
+            title: titleText || 'Note',
+            body: normalized.body,
+        };
     }
 
     async __callout(block, indent) {
@@ -1359,51 +2158,73 @@ export const method = "${method}"`
         }
 
         let emoji = block['callout']['emoji_id']
-        let type;
 
-        switch (emoji) {
-            case 'blue_book':
-                type = `<Admonition type="info" icon="📘" title="${children[0].trim()}">`
-                break;
-            case 'construction':
-                type = `<Admonition type="danger" icon="🚧" title="${children[0].trim()}">`
-                break;
-            default:
-                type = `<Admonition type="info" icon="📘" title="${children[0].trim()}">`
-                break;
+        const meta = this.__admonition_meta({
+            emoji,
+            rawTitle: children[0],
+            bodyLines: children.slice(1),
+        });
+
+        return this.__admonitionMarkdown({
+            indent,
+            type: meta.type,
+            icon: meta.icon,
+            title: meta.title,
+            bodyLines: meta.body,
+        })
+    }
+
+    __infer_code_language(elements) {
+        const text = String(elements || '').trim();
+        if (!text) return null;
+
+        if (/^(?:from\s+pymilvus\s+import|import\s+pymilvus\b|collections\s*=|print\()/m.test(text)) {
+            return 'Python';
+        }
+        if (/^(?:import\s+io\.milvus\.|import\s+java\.|String\s+[A-Z_]+\s*=|[A-Za-z0-9_<>]+\s+\w+\s*=\s*\w+\.builder\(\))/m.test(text)) {
+            return 'Java';
+        }
+        if (/^(?:import\s+"github\.com\/milvus-io\/milvus|client,\s*err\s*:=|.*:=\s*milvusclient\.New\()/m.test(text)) {
+            return 'Go';
+        }
+        if (/^(?:const\s+\{\s*MilvusClient\s*\}\s*=\s*require\(|import\s+\{?\s*MilvusClient\b|const\s+\w+\s*=)/m.test(text)) {
+            return 'JavaScript';
+        }
+        if (/^(?:curl\s+|zilliz\s+|export\s+[A-Z_]+=)/m.test(text)) {
+            return 'Bash';
         }
 
-        let body = children.slice(1)
-        while (body.length && body[0].trim() === '') body.shift()
-        while (body.length && body[body.length - 1].trim() === '') body.pop()
-        body = body.join('\n')
+        return null;
+    }
 
-        const raw = ' '.repeat(indent) + type + '\n\n' + body + '\n\n' + ' '.repeat(indent) + '</Admonition>';
-        return raw.replace(/(\s*\n){3,}/g, `\n${' '.repeat(indent)}\n`);
+    __code_plain_text(code) {
+        return (code?.elements || [])
+            .map(element => element.text_run?.content || '')
+            .join('')
+            .replaceAll('&#36;', '$')
+    }
+
+    __code_language(code, renderedElements=null) {
+        const explicit = code?.style?.language ? this.code_langs[code.style.language] : null
+        return explicit || this.__infer_code_language(renderedElements ?? this.__code_plain_text(code))
     }
 
     async __code(code, indent, prev, next, blocks) {
         const valid_langs = ['Python', 'JavaScript', 'Java', 'Go', 'C++', 'Bash', 'Shell']
-        let lang = code.style.language ? this.code_langs[code['style']['language']] : 'plaintext'
         let elements = (await Promise.all(code['elements'].map( async x => {
             let content = await this.__text_run(x, code['elements'], true)
             content = content.replaceAll('&#36;', '$')
             return content
-        }))).join('')
+        }))).join('') 
+        let lang = this.__code_language(code, elements) || 'plaintext'
 
-        elements = elements.replace(/zilliz.com(["|'])/g, 'zilliz.com.cn$1')
-            .replace(/gcp-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
-            .replace(/aws-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
-            .replace(/azure-.*.zillizcloud.com/g, 'ali-cn-hangzhou.zillizcloud.com')
-            .replace(/gcp-us-.*(["|'])/g, 'ali-cn-hangzhou$1')
-            .replace(/aws-us-.*(["|'])/g, 'ali-cn-hangzhou$1')
-            .replace(/azure-.*(["|'])/g, 'ali-cn-hangzhou$1')
+        // if (lang === 'C++') return; // to be removed once c++ is supported
 
         if (valid_langs.includes(lang)) {
             const prev_type = prev ? this.block_types[prev['block_type']-1] : null;
             const next_type = next ? this.block_types[next['block_type']-1] : null;
-            const prev_lang = prev && prev_type === 'code' && prev['code']['style']['language'] ? this.code_langs[prev['code']['style']['language']] : null;
-            const next_lang = next && next_type === 'code' && next['code']['style']['language'] ? this.code_langs[next['code']['style']['language']] : null;
+            const prev_lang = prev && prev_type === 'code' ? this.__code_language(prev.code) : null;
+            const next_lang = next && next_type === 'code' ? this.__code_language(next.code) : null;
 
             // first block
             if ((!prev || (prev && prev_type !== 'code') || 
@@ -1412,7 +2233,6 @@ export const method = "${method}"`
             ) {
                 console.log('first block')
                 const values = this.__code_tabs(code, prev, next, blocks)
-                    .filter(tab => tab.value !== 'c++'); // to be removed once c++ is supported
 
                 return this.__code_block_split(elements, indent, lang, 'first', values);
             }
@@ -1426,7 +2246,7 @@ export const method = "${method}"`
             }
             
             // middle block
-            if (prev && prev_type === 'code' && valid_langs.includes(next_lang) && prev_lang !== lang && next && next_type === 'code' && valid_langs.includes(next_lang) && next_lang !== code['style']['language']) {
+            if (prev && prev_type === 'code' && valid_langs.includes(prev_lang) && prev_lang !== lang && next && next_type === 'code' && valid_langs.includes(next_lang) && next_lang !== lang) {
                 console.log('middle block')
                 return this.__code_block_split(elements, indent, lang, 'middle');
             } 
@@ -1447,15 +2267,16 @@ export const method = "${method}"`
     }
 
     __code_block_split(elements, indent, lang, position, values=null) {
-        elements = elements.split('\n').map(line => line.replaceAll('`', '\\`'));
+        elements = elements.split('\n');
         var divider = elements.indexOf(elements.filter(x => x.match(/^[#\/]\/* ==*/))[0]);
         var tab_item_start = `${' '.repeat(indent)}<TabItem value='${lang.toLowerCase()}'>\n`;
         var tab_item_end = `${' '.repeat(indent)}</TabItem>`
         var tabs_end = `${' '.repeat(indent)}</Tabs>`
         if (divider === -1) {
-            elements = `${' '.repeat(indent)}\`\`\`${lang.toLowerCase()}\n${' '.repeat(indent) + elements.join('\n' + ' '.repeat(indent))}\n${' '.repeat(indent)}\`\`\`\n`
+            elements = createFencedCodeBlock(elements.join('\n'), lang.toLowerCase(), indent)
             switch (position) {
                 case 'first':
+                    values = values && values.length > 0 ? values : [{ label: lang, value: lang.toLowerCase() }]
                     var tabs_start = `${' '.repeat(indent)}<Tabs groupId="code" defaultValue='${values[0].value}' values={${JSON.stringify(values)}}>`;
                     return [tabs_start, tab_item_start, elements, tab_item_end].join('\n');
                 case 'last':
@@ -1484,8 +2305,8 @@ export const method = "${method}"`
             var inner_tab_item_end = `${' '.repeat(indent)}</TabItem>`
             var inner_tabs_end = `${' '.repeat(indent)}</Tabs>`
             
-            half_1 = `${' '.repeat(indent)}\`\`\`${lang.toLowerCase()}\n${' '.repeat(indent) + half_1.slice(1).join('\n' + ' '.repeat(indent))}\n${' '.repeat(indent)}\`\`\`\n`
-            half_2 = `${' '.repeat(indent)}\`\`\`${lang.toLowerCase()}\n${' '.repeat(indent) + half_2.slice(3).join('\n' + ' '.repeat(indent))}\n${' '.repeat(indent)}\`\`\`\n`
+            half_1 = createFencedCodeBlock(half_1.slice(1).join('\n'), lang.toLowerCase(), indent)
+            half_2 = createFencedCodeBlock(half_2.slice(3).join('\n'), lang.toLowerCase(), indent)
 
             switch (position) {
                 case 'first':
@@ -1503,22 +2324,22 @@ export const method = "${method}"`
 
     __code_tabs(code, prev, next, blocks) {
         let values = [];
-        let lang = code.style.language ? this.code_langs[code.style.language] : 'plaintext'
+        let lang = this.__code_language(code) || 'plaintext'
         
         if ((!prev || (prev && this.block_types[prev['block_type']-1] !== 'code')) && next && this.block_types[next['block_type']-1] === 'code') {
 
             values.push({ label: get_label(lang), value: lang.toLowerCase() });
 
-            has_next_code(next, this.block_types, this.code_langs);
+            has_next_code.call(this, next, this.block_types);
             
-            function has_next_code(next, block_types, code_langs) {
-                const next_lang = code_langs[next['code']['style']['language']];
+            function has_next_code(next, block_types) {
+                const next_lang = this.__code_language(next.code);
 
                 values.push({ label: get_label(next_lang), value: next_lang.toLowerCase() });
                 try {
                     next = blocks[blocks.indexOf(next) + 1];
                 if (next && block_types[next['block_type']-1] === 'code') {
-                    has_next_code(next, block_types, code_langs);
+                    has_next_code.call(this, next, block_types);
                 }
                 } catch {
                 // do nothing
@@ -1555,47 +2376,54 @@ export const method = "${method}"`
         });
         let res = (await this.__markdown(quotes, indent)).split('\n');
 
-        let type = 'info Notes';
-        let possible_titles = ['Notes', 'Note', '说明', 'ノート', 'Warning', 'Warn', '警告']
-        let title = possible_titles.find((x, i) => res[0].includes(x));
+        const meta = this.__admonition_meta({
+            emoji: '',
+            rawTitle: res[0],
+            bodyLines: res.slice(1),
+        });
 
-
-        if (title && ['Warning', 'Warn', '警告'].indexOf(title) == -1) {
-            type = `info 📘 ${title}`;
-        } else {
-            type = `caution 🚧 ${title}`;
-        }
-
-        type = `<Admonition type="${type.split(' ')[0]}" icon="${type.split(' ')[1]}" title="${type.split(' ')[2]}">`;
-
-        let body = res.slice(1)
-        while (body.length && body[0].trim() === '') body.shift()
-        while (body.length && body[body.length - 1].trim() === '') body.pop()
-        body = body.join('\n')
-
-        const raw = ' '.repeat(indent) + type + '\n\n' + body + '\n\n' + ' '.repeat(indent) + '</Admonition>';
-        return raw.replace(/(\s*\n){3,}/g, '\n\n');
+        return this.__admonitionMarkdown({
+            indent,
+            type: meta.type,
+            icon: meta.icon,
+            title: meta.title,
+            bodyLines: meta.body,
+        })
     }
-    
+
     async __image(image) {
-        const root = this.upload_to_oss ? IMAGE_BED_URL : `/${this.imageDir.replace(/^static\//g, '')}`
+        const root = this.upload_to_s3 ? IMAGE_BED_URL : `/${this.imageDir.replace(/^static\//g, '')}`
         const caption = image.caption?.content ? image.caption.content.trim() : image.token;
-        const key = image.token
-        const imageUrl = this.__markdown_image_url(`${root}/${key}.png`);
+        const slug = slugify(caption, {lower: true, strict: true})
+        if (this.mediaResolver) {
+            const resolved = this.mediaResolver.resolveFeishuImage(image.token)
+            return `![${caption}](${this.__markdown_image_url(resolved.url)} "${caption}")`;
+        }
+        const imageUrl = this.__markdown_image_url(`${root}/${slug}.png`);
 
         if (this.skip_image_download) {
             return `![${caption}](${imageUrl} "${caption}")`;
         }
 
         try {
-            const { buffer } = await this.downloader.__downloadImage(image.token)
-            if (this.upload_to_oss) {
-                await this.downloader.__uploadToOSS(buffer, `${key}.png`);
+            console.log(`[image] downloading ${image.token} → ${slug}.png`)
+            const buffer = await this.downloader.__downloadImage(image.token)
+            console.log(`[image] buffer ready (${buffer.length} bytes) for ${image.token}`)
+            if (this.upload_to_s3) {
+                console.log(`[image] uploading ${slug}.png to S3`)
+                await this.downloader.__uploadToS3(buffer, `${slug}.png`);
+                console.log(`[image] S3 upload done for ${slug}.png`)
             } else {
-                fs.writeFileSync(`${this.downloader.target_path}/${key}.png`, buffer);
+                fs.writeFileSync(`${this.downloader.target_path}/${slug}.png`, buffer);
+                console.log(`[image] written to disk: ${slug}.png`)
             }
         } catch (error) {
-            console.error(`Image ${image.token} error [${error.constructor.name}]: ${error.message}`)
+            if (error.code === 'MEDIA_PREFETCH_MISS') throw error
+            console.error(`[image] ERROR for token ${image.token}:`, error.message ?? error)
+            console.log("-------------- A retry is needed -----------------");
+            console.log("Sleeping for 5 seconds")
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            return await this.__image(image)
         }
 
         return `![${caption}](${imageUrl} "${caption}")`;
@@ -1631,29 +2459,28 @@ export const method = "${method}"`
     }
 
     async __board(board, indent) {
-        const root = this.upload_to_oss ? IMAGE_BED_URL : `/${ this.imageDir.replace(/^static\//g, '')}`
-        const boardUrl = this.__markdown_image_url(`${root}/${board["token"]}.png`);
+        const root = this.upload_to_s3 ? IMAGE_BED_URL : `/${ this.imageDir.replace(/^static\//g, '')}`
+        if (this.mediaResolver) {
+            const resolved = this.mediaResolver.resolveBoard(board.token)
+            return ' '.repeat(indent) + `![${board.token}](${this.__markdown_image_url(resolved.url)})`;
+        }
+        const boardUrl = this.__markdown_image_url(`${root}/${board.token}.png`);
 
         if (this.skip_image_download) {
             return ' '.repeat(indent) + `![${board.token}](${boardUrl})`;
         }
 
-        try {
-            const result = await this.downloader.__downloadBoardPreview(board.token)
-            if (!result.ok) {
-                console.error(`Board ${board.token} download failed: HTTP ${result.status} ${result.statusText}`)
-            } else {
-                const buffer = await result.buffer()
-                console.log(`Board ${board.token} buffer size: ${buffer.length} bytes`)
-                const trimmedBuffer = await this.__trim_white_borders(buffer);
-                if (this.upload_to_oss) {
-                    await this.downloader.__uploadToOSS(trimmedBuffer, `${board["token"]}.png`);
-                } else {
-                    fs.writeFileSync(`${this.downloader.target_path}/${board["token"]}.png`, trimmedBuffer);
-                }
-            }
-        } catch (error) {
-            console.error(`Board ${board.token} error [${error.constructor.name}]: ${error.message}`)
+        console.log(`[board] downloading preview for ${board.token}`)
+        const buffer = await this.downloader.__downloadBoardPreview(board.token)
+        console.log(`[board] buffer ready (${buffer.length} bytes) for ${board.token}`)
+        const trimmedBuffer = await this.__trim_white_borders(buffer);
+        if (this.upload_to_s3) {
+            console.log(`[board] uploading ${board.token}.png to S3`)
+            await this.downloader.__uploadToS3(trimmedBuffer, `${board["token"]}.png`);
+            console.log(`[board] S3 upload done for ${board.token}.png`)
+        } else {
+            fs.writeFileSync(`${this.downloader.target_path}/${board["token"]}.png`, trimmedBuffer);
+            console.log(`[board] written to disk: ${board.token}.png`)
         }
 
         return ' '.repeat(indent) + `![${board.token}](${boardUrl})`;
@@ -1662,19 +2489,15 @@ export const method = "${method}"`
     async __trim_white_borders(image) {
         const sharp = require('sharp');
 
-        const timeout = new Promise((_, reject) =>
-            setTimeout(() => reject(new Error('sharp toBuffer() timed out after 30s')), 30000)
-        );
-
         try {
-            console.log(`sharp trim: input ${image.length} bytes, magic ${image.slice(0,4).toString('hex')}`)
+            // Let Sharp auto-detect background from top-left pixel (likely white)
             const trimmedImage = await sharp(image)
                 .trim({
                   background: { r: 255, g: 255, b: 255 },
-                  threshold: 10
+                  threshold: 10                    
                 }).png()
 
-            console.log(`sharp trim: pipeline built, calling toBuffer()`)
+            // Add a 10-pixel white border around the trimmed image
             const borderedImage = trimmedImage.extend({
                 top: 20,
                 bottom: 20,
@@ -1683,8 +2506,7 @@ export const method = "${method}"`
                 background: { r: 255, g: 255, b: 255 }
             });
 
-            const buffer = await Promise.race([borderedImage.toBuffer(), timeout]);
-            console.log(`sharp trim: output ${buffer.length} bytes`)
+            const buffer = await borderedImage.toBuffer();
             return buffer;
 
         } catch (error) {
@@ -1693,20 +2515,29 @@ export const method = "${method}"`
     }
 
     async __iframe(block) {
-        const root = this.upload_to_oss ? IMAGE_BED_URL : `/${ this.imageDir.replace(/^static\//g, '')}`
+        const root = this.upload_to_s3 ? IMAGE_BED_URL : `/${ this.imageDir.replace(/^static\//g, '')}`
         const block_id = block['block_id'];
         const iframe = block['iframe'];
         const existing_iframe = this.iframes.find(x => x.block_id === block_id)
         if (existing_iframe) {
-            return `![${existing_iframe.caption}](${this.__markdown_image_url(`${root}/${existing_iframe.caption}.png`)} "${existing_iframe.caption}")`;
+            const existingUrl = existing_iframe.url || `${root}/${existing_iframe.caption}.png`
+            return `![${existing_iframe.caption}](${this.__markdown_image_url(existingUrl)} "${existing_iframe.caption}")`;
         }
 
         if (iframe['component']['iframe_type'] !== 8) {
             return '';
-        } else if (this.skip_image_download) {
-            const url = new URL(decodeURIComponent(iframe.component.url))
-            const key = url.pathname.split('/')[2]
-            const node = url.searchParams.get('node-id').split('-').join(":") 
+        }
+
+        const url = new URL(decodeURIComponent(iframe.component.url))
+        const key = url.pathname.split('/')[2]
+        const node = url.searchParams.get('node-id').split('-').join(":")
+        if (this.mediaResolver) {
+            const resolved = this.mediaResolver.resolveFigma(key, node)
+            this.iframes.push({ block_id, caption: resolved.caption, url: resolved.url })
+            return `![${resolved.caption}](${this.__markdown_image_url(resolved.url)} "${resolved.caption}")`;
+        }
+
+        if (this.skip_image_download) {
             const caption = (await this.downloader.__fetchCaption(key, node)).nodes[node].document.name;
             this.iframes.push({
                 block_id,
@@ -1715,16 +2546,12 @@ export const method = "${method}"`
             return `![${caption}](${this.__markdown_image_url(`${root}/${caption}.png`)} "${caption}")`;
         } else {
             try {
-                const url = new URL(decodeURIComponent(iframe.component.url))
-                const key = url.pathname.split('/')[2]
-                const node = url.searchParams.get('node-id').split('-').join(":") 
                 const caption = (await this.downloader.__fetchCaption(key, node)).nodes[node].document.name;
-                const result = await this.downloader.__downloadIframe(key, node);
-                const buffer = await result.buffer();
-                if (this.upload_to_oss) {
-                    await this.downloader.__uploadToOSS(buffer, `${caption}.png`);
+                const buffer = await this.downloader.__downloadIframe(key, node);
+                if (this.upload_to_s3) {
+                    await this.downloader.__uploadToS3(buffer, `${caption}.png`);
                 } else if (!fs.existsSync(`${this.downloader.target_path}/${caption}.png`)) {
-                    result.body.pipe(fs.createWriteStream(`${this.downloader.target_path}/${caption}.png`));
+                    fs.writeFileSync(`${this.downloader.target_path}/${caption}.png`, buffer);
 
                     this.iframes.push({
                         block_id,
@@ -1734,6 +2561,7 @@ export const method = "${method}"`
 
                 return `![${caption}](${this.__markdown_image_url(`${root}/${caption}.png`)} "${caption}")`;
             } catch (error) {
+                if (error.code === 'MEDIA_PREFETCH_MISS') throw error
                 console.log(error)
                 console.log("-------------- A retry is needed -----------------");
                 console.log("Sleeping for a minute")
@@ -1741,6 +2569,98 @@ export const method = "${method}"`
                 this.__iframe(block)
             }
         }
+    }
+
+    __tableMergeInfoHasMerges(mergeInfo) {
+        return Array.isArray(mergeInfo) && mergeInfo.some(merge => {
+            return !merge || merge.col_span > 1 || merge.row_span > 1
+        })
+    }
+
+    __sheetHasMerges(merges) {
+        return Array.isArray(merges) && merges.length > 0
+    }
+
+    __isMarkdownTableSafeCell(cell) {
+        const content = String(cell ?? '').trim()
+
+        if (!content) return true
+
+        return ![
+            /^```/m,
+            /^\s*[-*+]\s+/m,
+            /^\s*\d+\.\s+/m,
+            /<\/?(Admonition|Tabs|TabItem|table|tr|td|th|ul|ol|li|pre|div)\b/,
+        ].some(pattern => pattern.test(content))
+    }
+
+    __markdownTableCell(cell) {
+        return String(cell ?? '')
+            .trim()
+            .split(/\r?\n+/)
+            .map(line => line.trim())
+            .join('<br/>')
+            .replace(/^\n/, '')
+            .replace(/(?<!~)~(?!~)/g, '&#126;')
+            .replace(/\|/g, '\\|')
+    }
+
+    __markdownTable(rows, indent) {
+        if (!rows.length) return ''
+
+        const columnSize = Math.max(...rows.map(row => row.length))
+        const pad = ' '.repeat(indent)
+        const normalizedRows = rows.map(row => {
+            return Array.from({ length: columnSize }, (_, idx) => this.__markdownTableCell(row[idx]))
+        })
+        const header = normalizedRows[0]
+        const body = normalizedRows.slice(1)
+        const separator = Array.from({ length: columnSize }, () => '---')
+        const renderRow = row => `${pad}| ${row.join(' | ')} |`
+
+        return [
+            renderRow(header),
+            renderRow(separator),
+            ...body.map(renderRow),
+        ].join('\n') + '\n'
+    }
+
+    __htmlTableCellMarkdown(cell) {
+        return String(cell ?? '')
+            .trim()
+            .replace(/^\n/, '')
+            .replace(/<br\/>/g, '\n\n')
+            .replace(/(?<!~)~(?!~)/g, '&#126;')
+    }
+
+    __htmlTableCellContent(cell, converter) {
+        let cellText = this.__htmlTableCellMarkdown(cell)
+
+        // Protect Admonition JSX from showdown's <p> wrapping
+        var admonitions = [];
+        cellText = cellText.replace(
+            /<Admonition[^>]*>[\s\S]*?<\/Admonition>/g,
+            (match) => {
+                admonitions.push(match);
+                return `%%ADMONITION_${admonitions.length - 1}%%`;
+            }
+        );
+
+        admonitions = admonitions.map(admonition => admonition.replace(/\n/g, ''));
+
+        cellText = converter.makeHtml(cellText)
+            .replace(/\n/g, '')
+            .replace(/&amp;/g, '&')
+            .replace(/\*/g, '&ast;');
+
+        // Restore Admonition components (strip <p> wrapper showdown added)
+        cellText = cellText.replace(
+            /<p>%%ADMONITION_(\d+)%%<\/p>/g,
+            (_, idx) => admonitions[parseInt(idx)]
+        );
+
+        // escape { and } for MDX
+        return cellText.replace(/\{/g, '\\{').replace(/\}/g, '\\}');
     }
 
     async __table(table, indent) {
@@ -1751,27 +2671,17 @@ export const method = "${method}"`
         });
         const cell_texts = await Promise.all(cell_blocks.map(async (cell) => {
             let blocks = cell.map(block => this.__retrieve_block_by_id(block));
-            return (await this.__markdown(blocks, 1)).replace(/\n/g, '<br/>');
+            return this.__filter_content(await this.__markdown(blocks, 1), this.targets).trim();
         }));
 
         const row_size = table['property']['row_size'];
         const column_size = table['property']['column_size'];
-        var merge_info = table['property']['merge_info'];
-        
-        merge_info = merge_info.map((merge, idx) => {
-            if (merge) {
-                for (var i = 1; i < merge.col_span; i++) {
-                    merge_info[idx+i] = null;
-                }
-    
-                for (var j = 1; j < merge.row_span; j++) {
-                    merge_info[idx+j*column_size] = null;
-                }
-            }
-            return merge
-        })      
-
+        var merge_info = Array.isArray(table['property']['merge_info'])
+            ? table['property']['merge_info']
+            : Array.from({ length: row_size * column_size }, () => ({ col_span: 1, row_span: 1 }));
+        const hasMerges = this.__tableMergeInfoHasMerges(merge_info);
         const empty_columns = new Set();
+
         for (var col = 0; col < column_size; col++) {
             var is_empty_column = true;
             for (var row = 0; row < row_size; row++) {
@@ -1787,6 +2697,38 @@ export const method = "${method}"`
             }
         }
 
+        if (!hasMerges && cell_texts.every(cell => this.__isMarkdownTableSafeCell(cell))) {
+            const rows = [];
+            for (var rowIdx = 0; rowIdx < row_size; rowIdx++) {
+                const row = [];
+                for (var colIdx = 0; colIdx < column_size; colIdx++) {
+                    if (!empty_columns.has(colIdx)) {
+                        row.push(cell_texts[rowIdx * column_size + colIdx]);
+                    }
+                }
+                rows.push(row);
+            }
+
+            return this.__markdownTable(rows, indent);
+        }
+
+        cell_texts.forEach((cell, idx) => {
+            cell_texts[idx] = cell.replace(/\n/g, '<br/>');
+        })
+        
+        merge_info = merge_info.map((merge, idx) => {
+            if (merge) {
+                for (var i = 1; i < merge.col_span; i++) {
+                    merge_info[idx+i] = null;
+                }
+    
+                for (var j = 1; j < merge.row_span; j++) {
+                    merge_info[idx+j*column_size] = null;
+                }
+            }
+            return merge
+        })      
+
         var html = ' '.repeat(indent) + '<table>\n';
         for (var i = 0; i < row_size; i++) {
             html += ' '.repeat(indent) +'   <tr>\n';
@@ -1800,40 +2742,7 @@ export const method = "${method}"`
                 if (merge) {
                     const colspan = merge.col_span > 1 ? ` colspan="${merge.col_span}"` : "";
                     const rowspan = merge.row_span > 1 ? ` rowspan="${merge.row_span}"` : "";
-                    let cell_text = this.__filter_content(cell_texts[cell_idx], this.targets).trim()
-                        .replace(/^\n/, '')
-                        .replace(/<br\/>/g, '\n\n');
-
-                    // Escape solitary tildes to prevent MDX strikethrough parsing
-                    cell_text = cell_text.replace(/(?<!~)~(?!~)/g, '&#126;');
-
-                    // Protect Admonition JSX from showdown's <p> wrapping
-                    var admonitions = [];
-                    cell_text = cell_text.replace(
-                        /<Admonition[^>]*>[\s\S]*?<\/Admonition>/g,
-                        (match) => {
-                            admonitions.push(match);
-                            return `%%ADMONITION_${admonitions.length - 1}%%`;
-                        }
-                    );
-
-                    admonitions = admonitions.map(admonition => admonition.replace(/\n/g, ''));
-
-                    cell_text = converter.makeHtml(cell_text)
-                        .replace(/\n/g, '')
-                        .replace(/&amp;/g, '&')
-                        .replace(/\*/g, '&ast;');
-
-                    admonitions = admonitions.map(admonition => admonition.replace(/\n/g, ''));
-
-                    // Restore Admonition components (strip <p> wrapper showdown added)
-                    cell_text = cell_text.replace(
-                        /<p>%%ADMONITION_(\d+)%%<\/p>/g,
-                        (_, idx) => admonitions[parseInt(idx)]
-                    );
-
-                    // escape { and } for MDX
-                    cell_text = cell_text.replace(/\{/g, '\\{').replace(/\}/g, '\\}');
+                    let cell_text = this.__htmlTableCellContent(cell_texts[cell_idx], converter);
 
                     if (i === 0) {
                         html += ` ${' '.repeat(indent)}    <th${colspan}${rowspan}>${cell_text}</th>\n`;
@@ -1853,11 +2762,26 @@ export const method = "${method}"`
         const converter = new showdown.Converter({ underline: true })
         const merges = sheet.meta?.data.sheet.merges;
         const values = sheet.values.data.valueRange.values;
+        const markdownRows = await Promise.all(values.map(async row => {
+            return Promise.all(row.map(async cell => {
+                if (cell && typeof cell === 'object') {
+                    return this.__sheet_cell(cell, { markdown: true })
+                }
+
+                return String(cell ?? '')
+            }))
+        }))
+
+        if (!this.__sheetHasMerges(merges) && markdownRows.every(row => row.every(cell => this.__isMarkdownTableSafeCell(cell)))) {
+            return this.__markdownTable(markdownRows, indent);
+        }
+
         var result = ' '.repeat(indent) + "<table>" + "\n";
 
-        values.forEach((row, ridx) => {
+        for (const [ridx, row] of values.entries()) {
             result += ' '.repeat(indent) + '    ' + "<tr>" + "\n";
-            row.forEach((cell, cidx) => {
+            for (const [cidx, rawCell] of row.entries()) {
+                let cell = rawCell
                 var colspan = "";
                 var rowspan = "";
                 if (merges) {
@@ -1872,8 +2796,8 @@ export const method = "${method}"`
                     cell = cell.replace(/\n/g, '<br/>')
                 }
 
-                if (typeof cell === 'object') {
-                    cell = this.__sheet_cell(cell)
+                if (cell && typeof cell === 'object') {
+                    cell = await this.__sheet_cell(cell)
                 } 
 
                 if (typeof cell === 'number') {
@@ -1887,26 +2811,33 @@ export const method = "${method}"`
                 } else {
                     result += `${' '.repeat(indent) + '    '.repeat(2)}<td${colspan ? " " + colspan : ""}${rowspan ? " " + rowspan : ""}>${converter.makeHtml(cell).replace(/\n/g, '')}</td>\n`
                 }
-            })
+            }
             result += ' '.repeat(indent) + '    ' + "</tr>" + "\n"
-        });
+        }
 
         result += ' '.repeat(indent) + "</table>" + "\n";
 
         return result.replace('"{', '"\\{');
     }    
 
-    __sheet_cell(cell) {
+    async __sheet_cell(cell, options={}) {
         if (cell instanceof Array) {
-            return cell.map(block => {
+            const blocks = await Promise.all(cell.map(async block => {
                 if (block['type'] === 'text') {
                     return block['text']
                 }
     
                 if (block['type'] === 'url') {
-                    return `<a href="${block['link']}">${block['text']}</a>`
+                    const link = await this.__convert_link(block['link'])
+                    const href = link || block['link']
+                    if (options.markdown) {
+                        return `[${String(block['text']).replace(/\]/g, '\\]')}](${href})`
+                    }
+
+                    return `<a href="${href}">${block['text']}</a>`
                 }
-            }).join('')
+            }))
+            return blocks.join('')
         } else {
             console.log(cell)
             return ''
@@ -1920,10 +2851,106 @@ export const method = "${method}"`
         return ' '.repeat(indent) + `<Supademo id="${record['id']}" title="" ${record['isShowcase'] ? 'isShowcase' : ''} />`;
     }
 
-    async __grid(block, indent) {
+    __feature_card_icon_names() {
+        return new Set(['AlertTriangle', 'Archive', 'BadgeCheck', 'Scale', 'Sparkles', 'Workflow'])
+    }
+
+    __parse_feature_card_grid_marker(markdown) {
+        const text = String(markdown || '').trim()
+        const markerMatch = text.match(/^<!--\s*zdoc:feature-card-grid(?:\s+(.*?))?\s*-->$/)
+        if (!markerMatch) return null
+
+        const match = String(markerMatch[1] || '').match(/^icons=(.*?)$/)
+        if (!match) return { valid: false, pairs: [] }
+
+        if (!match[1].trim()) return { valid: false, pairs: [] }
+
+        const pairs = match[1].split(',').map(pair => {
+            const trimmed = pair.trim()
+            const separator = trimmed.lastIndexOf(':')
+            if (separator <= 0 || separator === trimmed.length - 1) return null
+            return {
+                title: trimmed.slice(0, separator).trim(),
+                icon: trimmed.slice(separator + 1).trim(),
+            }
+        })
+
+        if (pairs.length === 0 || pairs.some(pair => !pair)) return { valid: false, pairs: [] }
+        return { valid: true, pairs }
+    }
+
+    __is_heading_block(block) {
+        const type = this.block_types[block?.block_type - 1]
+        return typeof type === 'string' && type.startsWith('heading')
+    }
+
+    async __feature_card_title(titleBlock) {
+        const level = Number(this.block_types[titleBlock.block_type - 1].replace('heading', ''))
+        const rawTitle = await this.__heading(titleBlock[`heading${level}`], level)
+        return rawTitle.replace(/\\?\{#[^}]+\}/g, '').replace(/^#+\s*/, '').trim()
+    }
+
+    async __feature_card_grid_cards(columns, markerConfig) {
+        if (!Array.isArray(columns) || columns.length < 2 || columns.length > 4) return false
+        if (!markerConfig?.valid || !Array.isArray(markerConfig.pairs) || markerConfig.pairs.length !== columns.length) return false
+
+        const allowedIcons = this.__feature_card_icon_names()
+        const cards = []
+
+        for (let idx = 0; idx < columns.length; idx++) {
+            const column = columns[idx]
+            const children = (column.children || []).map(child => this.__retrieve_block_by_id(child)).filter(Boolean)
+            if (children.length < 2 || !this.__is_heading_block(children[0])) return false
+
+            const title = await this.__feature_card_title(children[0])
+            const pair = markerConfig.pairs[idx]
+            if (pair.title !== title || !allowedIcons.has(pair.icon)) return false
+
+            cards.push({
+                title,
+                icon: pair.icon,
+                bodyBlocks: children.slice(1),
+            })
+        }
+
+        return cards
+    }
+
+    async __feature_card_grid(cardsConfig, columnSize, indent) {
+        const pad = ' '.repeat(indent)
+        const cards = await Promise.all(cardsConfig.map(async card => {
+            let body = await this.__markdown(card.bodyBlocks, indent + 4)
+            body = body.replace(/({#[0-9a-z-]+})/g, "\\$1").trim()
+
+            return [
+                `${pad}  <FeatureCard icon="${card.icon}" title="${this.__escapeJsxAttribute(card.title)}">`,
+                '',
+                body ? body.split('\n').map(line => `${pad}    ${line}`).join('\n') : '',
+                '',
+                `${pad}  </FeatureCard>`,
+            ].join('\n')
+        }))
+
+        return [
+            `${pad}<FeatureCardGrid columns={${columnSize}}>`,
+            cards.join('\n\n'),
+            `${pad}</FeatureCardGrid>`,
+        ].join('\n')
+    }
+
+    async __grid(block, indent, featureCardGridConfig=null) {
         const grid_columns = block.children.map(child => this.__retrieve_block_by_id(child));
         const column_size = block.grid.column_size;
         const width_ratios = grid_columns.map(column => column.grid_column.width_ratio);
+
+        if (featureCardGridConfig) {
+            const cardsConfig = await this.__feature_card_grid_cards(grid_columns, featureCardGridConfig)
+            if (cardsConfig) {
+                return this.__feature_card_grid(cardsConfig, column_size, indent)
+            }
+
+            console.warn('[feature-card-grid] Marker found before grid, but grid columns, titles, or icons do not match the feature-card contract. Falling back to generic Grid.')
+        }
 
         // Await all columns' children markdown
         const columnsContent = await Promise.all(
@@ -2007,8 +3034,6 @@ export const method = "${method}"`
             }
 
             if ('link' in style) {
-                const url = await this.__convert_link(decodeURIComponent(style['link']['url']))
-
                 var prefix = [...content.matchAll(/(^\*\*|^\*|^~~)/g)]
                 var suffix = [...content.matchAll(/(\*\*$|\*$|~~$)/g)]
 
@@ -2024,8 +3049,11 @@ export const method = "${method}"`
                     suffix = ''
                 }
 
+                const linkText = content.replace(prefix, '').replace(suffix, '')
+                const url = await this.__convert_link(decodeURIComponent(style['link']['url']), linkText)
+
                 if (url) {
-                    content = `${prefix}[${content.replace(prefix, '').replace(suffix, '')}](${url})${suffix}`;
+                    content = `${prefix}[${linkText}](${url})${suffix}`;
                 }
             }
         }
@@ -2074,7 +3102,7 @@ export const method = "${method}"`
 
     async __mention_doc(element) {
         let title = element['mention_doc']['title'];
-        let url = await this.__convert_link(decodeURIComponent(element['mention_doc']['url']));
+        let url = await this.__convert_link(decodeURIComponent(element['mention_doc']['url']), title);
         if (url) {
             return `[${title}](${url})`;
         } else {
@@ -2085,19 +3113,36 @@ export const method = "${method}"`
     }
 
     async __convert_link(url) {
+        url = this.__apply_link_replacement_shim(url)
         if (url.includes('zilliverse')) {
             url = new URL(url);
             const token = url.pathname.split('/').pop();
             const header = url.hash.slice(1);
-            const key = url.pathname.split('/')[1] === 'wiki' ? 'origin_node_token' : ['token', 'obj_token']; // TODO
+            const isWikiUrl = url.pathname.split('/')[1] === 'wiki';
             var page;
 
-            try {
-                page = key === 'origin_node_token' || typeof this.__fetch_link_doc_source !== 'function'
-                    ? this.__fetch_doc_source(key, token)
-                    : this.__fetch_link_doc_source(token);
-            } catch (error) {
-                page = null;
+            if (isWikiUrl) {
+                try {
+                    page = this.__fetch_doc_source('node_token', token);
+                } catch (error) {
+                    page = null;
+                }
+
+                if (!page) {
+                    try {
+                        page = this.__fetch_doc_source('origin_node_token', token);
+                    } catch (error) {
+                        page = null;
+                    }
+                }
+            } else {
+                try {
+                    page = typeof this.__fetch_link_doc_source === 'function'
+                        ? this.__fetch_link_doc_source(token)
+                        : this.__fetch_doc_source(['token', 'obj_token'], token);
+                } catch (error) {
+                    page = null;
+                }
             }
 
             if (page) {
@@ -2109,7 +3154,7 @@ export const method = "${method}"`
                 let newUrl = `./${slug}`;
 
                 if (header) {
-                    const headerBlock = page['blocks']['items'].filter(x => x['block_id'] === header)[0];
+                    const headerBlock = page['blocks']?.['items']?.filter(x => x['block_id'] === header)[0];
 
                     if (headerBlock) {
                         const blockType = this.block_types[headerBlock['block_type'] - 1];
@@ -2117,8 +3162,8 @@ export const method = "${method}"`
                             var content = await this.__text_elements(headerBlock[blockType]['elements']);
                             content = this.__filter_content(content, this.targets)
                             content = this.__clean_headings(content)
-                            const slug = content.includes('{#') ? content.split('{#')[1].replace(/}$/, '') : slugify(content, {strict: true, lower: true});
-                            newUrl += `#${slug}`;
+                            const headingSlug = this.__heading_slug(content);
+                            if (headingSlug) newUrl += `#${headingSlug}`;
                         }
                     }
                 }
@@ -2132,15 +3177,15 @@ export const method = "${method}"`
         }
 
 
-        if (url?.startsWith('https://docs.zilliz.com.cn/')) {
-            url = url.replace('https://docs.zilliz.com.cn/', '/');
-        }
-
         if (url?.startsWith('https://docs.zilliz.com/')) {
             url = url.replace('https://docs.zilliz.com/', '/');
         }
 
-        return url;
+        return this.__canonicalize_internal_link(url);
+    }
+
+    __canonicalize_internal_link(url) {
+        return canonicalizeInternalDocLink(url)
     }
 
     async __text_elements(elements) {
@@ -2183,8 +3228,8 @@ export const method = "${method}"`
 
         for (let key in sdks) {
             if (sdks[key]) {
-                const res = await fetch(sdks[key])
-                const $ = cheerio.load(await res.text())
+                const html = await fetchTextWithRetry(sdks[key], {}, `fetch SDK releases ${key}`)
+                const $ = cheerio.load(html)
                 const version = $('section > h2').first().text().match(/\d+\.\d+\.\d+/)[0]
                 const released = $('section').first().find('relative-time').attr('datetime')
                 sdks[key] = {

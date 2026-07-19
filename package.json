@@ -16,6 +16,8 @@
     "assemble": "node scripts/upstream/assemble.js",
     "build:assembled": "npm run assemble && pnpm --dir .zdoc-assembled run build",
     "test:cn-publish-normalizer": "node plugins/cn-publish-normalizer/normalizeCnContent.test.js && node plugins/cn-publish-normalizer/remarkCnPublishNormalizer.test.js && node scripts/verify-cn-publish-artifacts.test.js",
+    "test:workflow-policy": "node --test scripts/validate-workflow-policy.test.js",
+    "test:docs-workflow": "node --test scripts/docs-workflow/*.test.js",
     "verify:cn-publish": "npm run test:cn-publish-normalizer && npm run build:cn-publish",
     "build:cn-publish": "npm run build && node scripts/verify-cn-publish-artifacts.js",
     "prepare": "husky"

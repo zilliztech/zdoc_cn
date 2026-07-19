@@ -20,10 +20,13 @@ class larkTokenFetcher {
             body: JSON.stringify({
                 "app_id": APP_ID,
                 "app_secret": APP_SECRET
-            })
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         }
 
-        let res = await fetchFeishuJsonWithRetry(
+        const res = await fetchFeishuJsonWithRetry(
             `${FEISHU_HOST}/open-apis/auth/v3/tenant_access_token/internal/`,
             req,
             'fetch tenant access token'
