@@ -157,3 +157,8 @@ test('locked upstream workflow watches every declared overlay source', () => {
     }
   }
 });
+
+test('locked upstream workflow checks generated workflow drift', () => {
+  const workflow = fs.readFileSync(path.join(ROOT_DIR, '.github/workflows/locked-upstream-overlay.yml'), 'utf8');
+  assert.match(workflow, /node scripts\/upstream\/sync-workflows\.js --check --upstream \.zdoc-ci-upstream/);
+});

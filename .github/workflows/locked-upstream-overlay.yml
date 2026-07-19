@@ -99,6 +99,9 @@ jobs:
           npm run test:cn-publish-normalizer
           git diff --check
 
+      - name: Check workflow sync drift
+        run: node scripts/upstream/sync-workflows.js --check --upstream .zdoc-ci-upstream
+
       - name: Materialize locked upstream
         env:
           ZDOC_UPSTREAM_SOURCE: .zdoc-ci-upstream
