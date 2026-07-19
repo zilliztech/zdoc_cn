@@ -15,6 +15,7 @@ on:
       pending_count: { required: false, type: number, default: 0 }
       pending_set_sha256: { required: false, type: string, default: '' }
       artifact_retention_days: { required: false, type: number, default: 3 }
+      translation_locale: { required: false, type: string, default: zh-CN }
     outputs:
       status: { value: '${{ jobs.translate.outputs.status }}' }
       artifact_name: { value: '${{ jobs.translate.outputs.artifact_name }}' }
@@ -45,6 +46,7 @@ jobs:
       GROUP: ${{ inputs.group }}
       SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
       MASTER_SHA: ${{ inputs.master_sha }}
+      TRANSLATION_LOCALE: ${{ inputs.translation_locale }}
     steps:
       - name: Initialize temporary paths
         shell: bash
@@ -60,7 +62,18 @@ jobs:
           echo "ARTIFACT_SUFFIX=$suffix" >> "$GITHUB_ENV"
 
       - name: Validate immutable inputs
-        run: node -e 'for(const [n,v] of Object.entries({master_sha:process.env.MASTER_SHA,source_commit_sha:process.env.SOURCE_COMMIT_SHA}))if(!/^[0-9a-f]{40}$/.test(v))throw new Error(`${n} must be a lowercase 40-character Git SHA`)'
+        run: |
+          node - <<'NODE'
+          for (const [name, value] of Object.entries({
+            master_sha: process.env.MASTER_SHA,
+            source_commit_sha: process.env.SOURCE_COMMIT_SHA,
+          })) {
+            if (!/^[0-9a-f]{40}$/.test(value)) throw new Error(`${name} must be a lowercase 40-character Git SHA`)
+          }
+          if (process.env.TRANSLATION_LOCALE !== 'zh-CN') {
+            throw new Error(`Unsupported translation locale: ${process.env.TRANSLATION_LOCALE}`)
+          }
+          NODE
       - name: Check out immutable master tooling
         uses: actions/checkout@v4
         with:
@@ -81,8 +94,8 @@ jobs:
           git cat-file -e "$SOURCE_COMMIT_SHA^" 2>/dev/null || git fetch --no-tags --depth=2 origin "$SOURCE_COMMIT_SHA"
           git cat-file -e "$SOURCE_COMMIT_SHA^"
           mkdir -p .translation-cache "$BASELINE_DIR/.translation-cache"
-          test -f .translation-cache/ja-JP.json || printf '{"files":{}}\n' > .translation-cache/ja-JP.json
-          test -f "$BASELINE_DIR/.translation-cache/ja-JP.json" || cp .translation-cache/ja-JP.json "$BASELINE_DIR/.translation-cache/ja-JP.json"
+          test -f ".translation-cache/$TRANSLATION_LOCALE.json" || printf '{"files":{}}\n' > ".translation-cache/$TRANSLATION_LOCALE.json"
+          test -f "$BASELINE_DIR/.translation-cache/$TRANSLATION_LOCALE.json" || cp ".translation-cache/$TRANSLATION_LOCALE.json" "$BASELINE_DIR/.translation-cache/$TRANSLATION_LOCALE.json"
       - name: Apply source translation delta
         id: source_delta
         if: ${{ inputs.should_translate }}
@@ -101,7 +114,7 @@ jobs:
           if (( ${{ inputs.batch_number }} > 0 )); then
             batch_args=(--batch-index "${{ inputs.batch_index }}" --batch-size "${{ inputs.batch_size }}" --expected-pending-set-sha256 "${{ inputs.pending_set_sha256 }}")
           fi
-          node scripts/translation/manifest.js --locale ja-JP --output tmp/translation-manifest.json --max-files "${{ inputs.max_files }}" --group "$GROUP" --source-checkpoint-sha "$SOURCE_COMMIT_SHA" --source-delta tmp/source-delta.json "${batch_args[@]}"
+          node scripts/translation/manifest.js --locale "$TRANSLATION_LOCALE" --output tmp/translation-manifest.json --max-files "${{ inputs.max_files }}" --group "$GROUP" --source-checkpoint-sha "$SOURCE_COMMIT_SHA" --source-delta tmp/source-delta.json "${batch_args[@]}"
           echo "count=$(node -p "require('./tmp/translation-manifest.json').items.length")" >> "$GITHUB_OUTPUT"
           if (( ${{ inputs.batch_number }} > 0 )) && [[ "$GROUP" == guides ]]; then
             node scripts/docs-workflow/translation-batch-input.js create \
@@ -124,10 +137,10 @@ jobs:
         if: ${{ inputs.should_translate && inputs.batch_number == 0 && ((steps.agents.outputs.translated_count || '0') != '0' || (steps.agents.outputs.failed_count || '0') != '0' || steps.source_delta.outputs.has_mutation == 'true') }}
         run: |
           case "$GROUP" in
-            guides) for d in i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials; do test ! -d "$d" || npx docusaurus mdx-parse -d "$d"; done ;;
-            *) test ! -d i18n/ja-JP/docusaurus-plugin-content-docs-reference/current || npx docusaurus mdx-parse -d i18n/ja-JP/docusaurus-plugin-content-docs-reference/current ;;
+            guides) for d in "i18n/$TRANSLATION_LOCALE/docusaurus-plugin-content-docs/current/tutorials" "i18n/$TRANSLATION_LOCALE/docusaurus-plugin-content-docs-byoc/current/tutorials"; do test ! -d "$d" || npx docusaurus mdx-parse -d "$d"; done ;;
+            *) test ! -d "i18n/$TRANSLATION_LOCALE/docusaurus-plugin-content-docs-reference/current" || npx docusaurus mdx-parse -d "i18n/$TRANSLATION_LOCALE/docusaurus-plugin-content-docs-reference/current" ;;
           esac
-          node scripts/validate-translated-coverage.js --group "$GROUP"
+          node scripts/validate-translated-coverage.js --group "$GROUP" --locale "$TRANSLATION_LOCALE"
           pnpm run build
       - name: Validate translated batch outputs
         if: ${{ inputs.should_translate && inputs.group == 'guides' && inputs.batch_number > 0 && ((steps.agents.outputs.translated_count || '0') != '0' || (steps.agents.outputs.failed_count || '0') != '0' || steps.source_delta.outputs.has_mutation == 'true') }}

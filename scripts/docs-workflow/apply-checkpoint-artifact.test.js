@@ -10,7 +10,7 @@ const test = require('node:test');
 
 const { applyCheckpointArtifact } = require('./apply-checkpoint-artifact');
 const ROOT = 'reference/api/python/python';
-const CACHE = '.translation-cache/ja-JP.json';
+const CACHE = '.translation-cache/zh-CN.json';
 
 async function fixture({ files = {}, deletions = [], cache, baselineCache, targetCache } = {}) {
   const root = await mkdtemp(path.join(os.tmpdir(), 'checkpoint-apply-'));

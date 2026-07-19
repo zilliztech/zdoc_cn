@@ -19,7 +19,7 @@ test('rest reconciliation removes stale restored output before full generation',
   const baseline = path.join(root, 'baseline')
   const workspace = path.join(root, 'workspace')
   const staleEnglish = 'reference/api/restful/restful/v2/control-plane/cluster-operations-v2/create-on-demand-cluster-v2.mdx'
-  const staleI18n = 'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/create-on-demand-cluster-v2.mdx'
+  const staleI18n = 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/create-on-demand-cluster-v2.mdx'
   write(baseline, staleEnglish)
   write(baseline, 'reference/api/restful/restful/versioning.md', '# Versioning\n')
   write(baseline, 'config/generated/restful.sidebar.js', 'module.exports = ["stale"]\n')

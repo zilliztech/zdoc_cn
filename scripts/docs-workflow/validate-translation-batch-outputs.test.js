@@ -12,14 +12,14 @@ const { parseArgs, validateTranslationBatchOutputs } = require('./validate-trans
 const SOURCE_SHA = 'a'.repeat(40)
 const SOURCE_HASH = 'b'.repeat(64)
 const PENDING_HASH = 'c'.repeat(64)
-const TARGET = 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md'
+const TARGET = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md'
 
 function candidate() {
   return {
     sourcePath: 'docs/tutorials/a.md',
     targetPath: TARGET,
     sourceHash: SOURCE_HASH,
-    locale: 'ja-JP',
+    locale: 'zh-CN',
     type: 'docs',
     reason: 'current_delta',
   }
@@ -27,7 +27,7 @@ function candidate() {
 
 function manifest(overrides = {}) {
   return {
-    locale: 'ja-JP',
+    locale: 'zh-CN',
     group: 'guides',
     sourceCheckpointSha: SOURCE_SHA,
     generatedAt: '2026-07-18T00:00:00.000Z',
@@ -47,7 +47,7 @@ function manifest(overrides = {}) {
 
 function report(overrides = {}) {
   return {
-    locale: 'ja-JP',
+    locale: 'zh-CN',
     results: [{ ...candidate(), status: 'translated', review: { pass: true, issues: [] }, validationErrors: [], chunks: { total: 1 } }],
     checkpoint: {
       processed: 1,
@@ -138,7 +138,7 @@ test('rejects report identity, reviewer, validation, count, and cardinality defe
   const second = {
     ...candidate(),
     sourcePath: 'docs/tutorials/b.md',
-    targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/b.md',
+    targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/b.md',
     sourceHash: 'd'.repeat(64),
   }
   const duplicateManifest = manifest({
@@ -271,7 +271,7 @@ test('accepts reconciliation-only batches only with skipped agents, zero counts,
   const reconciliationManifest = manifest({
     items: [],
     source_delta: {
-      deleted_i18n: ['i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/old.md'],
+      deleted_i18n: ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/old.md'],
       renamed: [],
     },
     batch: {
@@ -303,7 +303,7 @@ test('accepts reconciliation-only batches only with skipped agents, zero counts,
 
   const contradictoryReport = fixture({
     manifest: reconciliationManifest,
-    report: { locale: 'ja-JP', results: [], checkpoint: { processed: 0, translated: 0, failed: 0, remaining: 0 } },
+    report: { locale: 'zh-CN', results: [], checkpoint: { processed: 0, translated: 0, failed: 0, remaining: 0 } },
   })
   try {
     assert.throws(() => validate(contradictoryReport, {

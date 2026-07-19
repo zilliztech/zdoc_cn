@@ -1,0 +1,116 @@
+'use strict'
+
+const assert = require('node:assert/strict')
+const fs = require('node:fs')
+const os = require('node:os')
+const path = require('node:path')
+const test = require('node:test')
+
+const { applySourceDelta } = require('./applySourceDelta')
+
+function write(file, text) {
+  fs.mkdirSync(path.dirname(file), { recursive: true })
+  fs.writeFileSync(file, text)
+}
+
+test('removes deleted i18n files and source-keyed translation cache entries', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-i18n-delta-'))
+  const source = 'reference/api/restful/restful/old.mdx'
+  const deleted = 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/old.mdx'
+  write(path.join(root, deleted), '# old\n')
+  write(path.join(root, '.translation-cache/zh-CN.json'), JSON.stringify({
+    files: {
+      [source]: { sourceHash: 'old', targetPath: deleted },
+      [deleted]: { sourceHash: 'legacy-target-key' },
+      keep: { sourceHash: 'keep' },
+    },
+  }, null, 2))
+
+  const result = applySourceDelta({
+    cwd: root,
+    delta: { deletedI18n: [deleted], renamed: [], changedEnglish: [] },
+  })
+
+  assert.equal(fs.existsSync(path.join(root, deleted)), false)
+  const cache = JSON.parse(fs.readFileSync(path.join(root, '.translation-cache/zh-CN.json'), 'utf8'))
+  assert.equal(cache.files[source], undefined)
+  assert.equal(cache.files[deleted], undefined)
+  assert.deepEqual(cache.files.keep, { sourceHash: 'keep' })
+  assert.deepEqual(result.deletedI18n, [deleted])
+  assert.deepEqual(result.removedCacheKeys, [deleted, source].sort())
+  assert.equal(result.hasTranslationMutation, true)
+})
+
+test('removes the old source cache key for renamed docs and leaves the new path pending', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-i18n-rename-'))
+  const oldPath = 'docs/tutorials/old.md'
+  const newPath = 'docs/tutorials/new.md'
+  const oldI18nPath = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/old.md'
+  const newI18nPath = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/new.md'
+  write(path.join(root, oldI18nPath), '# old\n')
+  write(path.join(root, '.translation-cache/zh-CN.json'), JSON.stringify({
+    files: { [oldPath]: { sourceHash: 'same', targetPath: oldI18nPath } },
+  }))
+
+  applySourceDelta({
+    cwd: root,
+    delta: {
+      deletedI18n: [oldI18nPath],
+      changedEnglish: [newPath],
+      renamed: [{ oldPath, newPath, oldI18nPath, newI18nPath }],
+    },
+  })
+
+  const cache = JSON.parse(fs.readFileSync(path.join(root, '.translation-cache/zh-CN.json'), 'utf8'))
+  assert.equal(cache.files[oldPath], undefined)
+  assert.equal(cache.files[newPath], undefined)
+})
+
+test('reconciles orphan translations left by an earlier failed publication', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-i18n-orphan-reconcile-'))
+  const currentSource = 'reference/api/restful/restful/current.mdx'
+  const currentTarget = 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/current.mdx'
+  const orphanSource = 'reference/api/restful/restful/old.mdx'
+  const orphanTarget = 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/old.mdx'
+  write(path.join(root, currentSource), '# current\n')
+  write(path.join(root, currentTarget), '# current ja\n')
+  write(path.join(root, orphanTarget), '# orphan ja\n')
+  write(path.join(root, '.translation-cache/zh-CN.json'), JSON.stringify({
+    files: {
+      [currentSource]: { sourceHash: 'current', targetPath: currentTarget },
+      [orphanSource]: { sourceHash: 'old', targetPath: orphanTarget },
+    },
+  }))
+
+  const result = applySourceDelta({
+    cwd: root,
+    delta: { group: 'rest', deletedI18n: [], renamed: [], changedEnglish: [] },
+  })
+
+  assert.equal(fs.existsSync(path.join(root, currentTarget)), true)
+  assert.equal(fs.existsSync(path.join(root, orphanTarget)), false)
+  assert.deepEqual(result.deletedI18n, [orphanTarget])
+  assert.deepEqual(result.removedCacheKeys, [orphanSource])
+  assert.equal(result.hasTranslationMutation, true)
+})
+
+test('rejects deletion paths outside zh-CN i18n and symlink ancestors', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-i18n-safe-'))
+  write(path.join(root, '.translation-cache/zh-CN.json'), '{"files":{}}')
+  assert.throws(() => applySourceDelta({
+    cwd: root,
+    delta: { deletedI18n: ['../outside.md'], renamed: [], changedEnglish: [] },
+  }), /unsafe|zh-CN/i)
+
+  const outside = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-i18n-outside-'))
+  fs.mkdirSync(path.join(root, 'i18n'), { recursive: true })
+  fs.symlinkSync(outside, path.join(root, 'i18n/zh-CN'))
+  assert.throws(() => applySourceDelta({
+    cwd: root,
+    delta: {
+      deletedI18n: ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md'],
+      renamed: [],
+      changedEnglish: [],
+    },
+  }), /symlink/i)
+})

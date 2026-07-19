@@ -20,9 +20,9 @@ const {
 
 const MASTER_SHA = 'a'.repeat(40)
 const DEFAULT_CACHE = Buffer.from('{"files":{}}\n')
-const SAAS_ROOT = 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials'
-const BYOC_ROOT = 'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials'
-const CACHE_PATH = '.translation-cache/ja-JP.json'
+const SAAS_ROOT = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials'
+const BYOC_ROOT = 'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials'
+const CACHE_PATH = '.translation-cache/zh-CN.json'
 const SCRIPT = path.join(__dirname, 'translation-batch-set.js')
 
 function git(cwd, ...args) {
@@ -526,7 +526,7 @@ test('rejects different cache final entries and update-removal overlaps across b
   await assert.rejects(planFor(fixture, [first, second]), /cache.*conflict|update.*removal|removal.*update/i)
 })
 
-test('authorizes the old Japanese path deletion from a validated rename', async () => {
+test('authorizes the old Chinese path deletion from a validated rename', async () => {
   const fixture = await repositoryFixture()
   const oldI18nPath = `${SAAS_ROOT}/old.md`
   const newI18nPath = `${SAAS_ROOT}/a.md`

@@ -170,10 +170,10 @@ test('SIGTERM cleans the active temporary worktree', async () => {
 });
 
 test('publishes translation cache through baseline three-way merge', () => {
-  const s = setup(); mkdirSync(path.join(s.seed, '.translation-cache')); writeFileSync(path.join(s.seed, '.translation-cache/ja-JP.json'), '{"base":"v1","remote":"v1"}\n'); git(s.seed, 'add', '.translation-cache'); git(s.seed, 'commit', '-m', 'cache'); git(s.seed, 'push', 'origin', 'dev');
-  const base = path.join(s.root, 'base'), work = path.join(s.root, 'work'); execFileSync('cp', ['-R', s.seed, base]); execFileSync('cp', ['-R', s.seed, work]); writeFileSync(path.join(work, '.translation-cache/ja-JP.json'), '{"base":"v2","remote":"v1"}\n');
-  writeFileSync(path.join(s.seed, '.translation-cache/ja-JP.json'), '{"base":"v1","remote":"v2"}\n'); git(s.seed, 'add', '.translation-cache'); git(s.seed, 'commit', '-m', 'remote cache'); git(s.seed, 'push', 'origin', 'dev');
-  const a = artifact(s.root, base, work, ['--include-translation-cache']), pa = args(a); pa.push('--baseline-dir', base); const r = publish(s.seed, pa); assert.equal(r.status, 0, r.stderr); git(s.seed, 'fetch', 'origin', 'dev'); assert.deepEqual(JSON.parse(git(s.seed, 'show', 'origin/dev:.translation-cache/ja-JP.json')), { base: 'v2', remote: 'v2' });
+  const s = setup(); mkdirSync(path.join(s.seed, '.translation-cache')); writeFileSync(path.join(s.seed, '.translation-cache/zh-CN.json'), '{"base":"v1","remote":"v1"}\n'); git(s.seed, 'add', '.translation-cache'); git(s.seed, 'commit', '-m', 'cache'); git(s.seed, 'push', 'origin', 'dev');
+  const base = path.join(s.root, 'base'), work = path.join(s.root, 'work'); execFileSync('cp', ['-R', s.seed, base]); execFileSync('cp', ['-R', s.seed, work]); writeFileSync(path.join(work, '.translation-cache/zh-CN.json'), '{"base":"v2","remote":"v1"}\n');
+  writeFileSync(path.join(s.seed, '.translation-cache/zh-CN.json'), '{"base":"v1","remote":"v2"}\n'); git(s.seed, 'add', '.translation-cache'); git(s.seed, 'commit', '-m', 'remote cache'); git(s.seed, 'push', 'origin', 'dev');
+  const a = artifact(s.root, base, work, ['--include-translation-cache']), pa = args(a); pa.push('--baseline-dir', base); const r = publish(s.seed, pa); assert.equal(r.status, 0, r.stderr); git(s.seed, 'fetch', 'origin', 'dev'); assert.deepEqual(JSON.parse(git(s.seed, 'show', 'origin/dev:.translation-cache/zh-CN.json')), { base: 'v2', remote: 'v2' });
 });
 
 test('retries a non-fast-forward race and preserves the remote move', () => {

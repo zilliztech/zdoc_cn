@@ -21,12 +21,12 @@ const CACHE_ENTRY_KEYS = ['sourceHash', 'targetPath', 'translatedAt']
 const GUIDES_MAPPINGS = Object.freeze([
   {
     sourceRoot: 'docs/tutorials',
-    targetRoot: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials',
+    targetRoot: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials',
     type: 'docs',
   },
   {
     sourceRoot: 'docs-byoc/tutorials',
-    targetRoot: 'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials',
+    targetRoot: 'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials',
     type: 'byoc',
   },
 ])
@@ -112,7 +112,7 @@ function assertCandidate(candidate, manifestShape = false) {
   const mapping = assertGuidePair(candidate.sourcePath, candidate.targetPath, manifestShape ? 'manifest item' : 'candidate')
   if (!SHA256.test(candidate.sourceHash || '')) throw new Error('candidate source hash must be 64 lowercase hexadecimal characters')
   if (manifestShape) {
-    if (candidate.locale !== 'ja-JP') throw new Error('manifest item locale must be ja-JP')
+    if (candidate.locale !== 'zh-CN') throw new Error('manifest item locale must be zh-CN')
     if (candidate.type !== mapping.type) throw new Error('manifest item type does not match its Guides root')
     if (!REASONS.has(candidate.reason)) throw new Error('manifest item reason is not authorized')
   }
@@ -153,7 +153,7 @@ function validateCrossRelationships(input) {
   assertNoDuplicates(deletions, 'deleted i18n path')
   for (const field of RENAME_KEYS) assertNoDuplicates(renames.map(item => item[field]), `rename ${field}`)
   assertNoDuplicates(renames.flatMap(item => [item.oldPath, item.newPath]), 'rename English path overlap')
-  assertNoDuplicates(renames.flatMap(item => [item.oldI18nPath, item.newI18nPath]), 'rename Japanese path overlap')
+  assertNoDuplicates(renames.flatMap(item => [item.oldI18nPath, item.newI18nPath]), 'rename Chinese path overlap')
 
   assertCanonicalOrder(candidates, (a, b) => compareText(a.sourcePath, b.sourcePath) || compareText(a.targetPath, b.targetPath), 'candidates')
   assertCanonicalOrder(deletions, compareText, 'deleted i18n paths')
@@ -186,7 +186,7 @@ function validateCrossRelationships(input) {
     ...candidates.map(item => item.targetPath),
     ...deletions,
     ...renames.flatMap(item => [item.oldI18nPath, item.newI18nPath]),
-  ], 'Japanese paths')
+  ], 'Chinese paths')
 }
 
 function validateBatchInput(input) {
@@ -212,7 +212,7 @@ function validateBatchInput(input) {
 
 function assertSelectedManifest(manifest) {
   assertExactKeys(manifest, MANIFEST_KEYS, 'selected translation manifest')
-  if (manifest.locale !== 'ja-JP') throw new Error('selected manifest locale must be ja-JP')
+  if (manifest.locale !== 'zh-CN') throw new Error('selected manifest locale must be zh-CN')
   if (manifest.group !== 'guides') throw new Error('selected manifest group must be guides')
   if (!SHA1.test(manifest.sourceCheckpointSha || '')) throw new Error('selected manifest source checkpoint SHA is invalid')
   assertTimestamp(manifest.generatedAt, 'selected manifest generatedAt')
@@ -249,7 +249,7 @@ function cacheTargetForSource(sourcePath) {
   }
   assertSafeRelativePath(sourcePath, 'cache source path')
   if (!sourcePath.startsWith('reference/') || !MARKDOWN.test(sourcePath)) throw new Error('cache source path is outside known translation roots')
-  return `i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/${sourcePath.slice('reference/'.length)}`
+  return `i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/${sourcePath.slice('reference/'.length)}`
 }
 
 function validateCache(cache, label) {

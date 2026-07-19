@@ -8,6 +8,7 @@ const workflowDirectory = path.join(process.cwd(), '.github', 'workflows')
 const publishingWorkflows = new Set([
   'fetch-docs.yml',
   'translate-codex.yml',
+  'translate-reference-docs.yml',
   '_publish-content-group.yml',
   '_publish-translation-batches.yml',
   '_translate-publish-batch.yml',
@@ -406,7 +407,7 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
       if (/contents: write|git push/.test(source)) errors.push(`${file}: final verification must remain read-only and must not publish`)
     }
 
-    if (file === 'translate-codex.yml') {
+    if (file === 'translate-codex.yml' || file === 'translate-reference-docs.yml') {
       const requiredPatterns = [
         [/TARGET_BRANCH_INPUT: \$\{\{ inputs\.target_branch \}\}/, 'must pass the branch input through the step environment'],
         [/git check-ref-format --branch "\$target_branch"/, 'must validate the target branch before fetching'],
@@ -417,6 +418,18 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
       const resolver = source.slice(source.indexOf('- id: refs'), source.indexOf('  translate:'))
       if (/run: \|[\s\S]*\$\{\{ inputs\.target_branch \}\}/.test(resolver)) errors.push(`${file}: target branch input must not be interpolated into shell source`)
       if (/secrets: inherit/.test(source)) errors.push(`${file}: reusable translation must receive an explicit secret allowlist`)
+    }
+
+    if (file === 'translate-reference-docs.yml') {
+      const groupInput = workflow?.on?.workflow_dispatch?.inputs?.group
+      const options = groupInput?.options || []
+      if (workflow?.name !== 'translate reference docs to Chinese') errors.push(`${file}: must be named for Chinese reference translation`)
+      if (groupInput?.default !== 'python') errors.push(`${file}: default reference translation group must be python`)
+      if (options.join(',') !== 'python,java,node,go,cli,rest') errors.push(`${file}: manual reference translation groups must exclude guides`)
+      if (workflow?.on?.workflow_dispatch?.inputs?.include_reference) errors.push(`${file}: must not expose legacy include_reference input`)
+      if (workflow?.on?.workflow_dispatch?.inputs?.locale?.default !== 'zh-CN') errors.push(`${file}: locale input must default to zh-CN`)
+      if (!/translation_locale: \$\{\{ inputs\.locale \}\}/.test(source)) errors.push(`${file}: must pass locale to reusable translation workflow`)
+      if (!/validate-translated-coverage\.js" --group "\$\{\{ inputs\.group \}\}" --locale "\$\{\{ inputs\.locale \}\}"/.test(source)) errors.push(`${file}: publish validation must validate the requested locale`)
     }
   }
 

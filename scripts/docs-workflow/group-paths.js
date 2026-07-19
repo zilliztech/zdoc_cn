@@ -2,7 +2,7 @@
 
 const { getContentGroup } = require('./content-groups');
 
-const TRANSLATION_ROOT = 'i18n/ja-JP';
+const TRANSLATION_ROOT = 'i18n/zh-CN';
 const REFERENCE_I18N_ROOT = `${TRANSLATION_ROOT}/docusaurus-plugin-content-docs-reference/current`;
 const PRESERVED_ENGLISH = Object.freeze({
   guides: Object.freeze([]),

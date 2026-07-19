@@ -16,9 +16,9 @@ const { applyTranslationBatch } = require('./apply-translation-batch')
 const MASTER_SHA = 'a'.repeat(40)
 const PENDING_SHA = 'c'.repeat(64)
 const DEFAULT_CACHE = Buffer.from('{"files":{}}\n')
-const SAAS_ROOT = 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials'
-const BYOC_ROOT = 'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials'
-const CACHE_PATH = '.translation-cache/ja-JP.json'
+const SAAS_ROOT = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials'
+const BYOC_ROOT = 'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials'
+const CACHE_PATH = '.translation-cache/zh-CN.json'
 
 function git(cwd, ...args) {
   return execFileSync('git', args, { cwd, encoding: 'utf8' }).trim()
@@ -573,7 +573,7 @@ test('guards a newly created cache parent against a during-write swap', async ()
   const parked = `${cacheDir}.parked`
   const outside = path.join(state.fixture.root, 'outside-cache')
   fs.mkdirSync(outside)
-  write(outside, 'ja-JP.json', 'outside cache sentinel\n')
+  write(outside, 'zh-CN.json', 'outside cache sentinel\n')
   await assert.rejects(applyTranslationBatch({
     plan: state.plan,
     batchNumber: 1,
@@ -587,7 +587,7 @@ test('guards a newly created cache parent against a during-write swap', async ()
       },
     },
   }), /ancestor identity changed|rollback failed/i)
-  assert.equal(fs.readFileSync(path.join(outside, 'ja-JP.json'), 'utf8'), 'outside cache sentinel\n')
+  assert.equal(fs.readFileSync(path.join(outside, 'zh-CN.json'), 'utf8'), 'outside cache sentinel\n')
 })
 
 test('detects target file replacement between lstat and no-follow open before mutation', async () => {

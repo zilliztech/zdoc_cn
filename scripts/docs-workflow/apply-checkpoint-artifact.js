@@ -6,7 +6,7 @@ const { cp, lstat, mkdir, mkdtemp, open, realpath, rename, rm, rmdir, statfs } =
 const path = require('node:path');
 const { validateCheckpointArtifact } = require('./validate-checkpoint-artifact');
 
-const CACHE = '.translation-cache/ja-JP.json';
+const CACHE = '.translation-cache/zh-CN.json';
 function insideOrEqual(parent, child) { const rel = path.relative(parent, child); return rel === '' || (!rel.startsWith('..') && !path.isAbsolute(rel)); }
 function conflicts(a, b) { return a === b || a.startsWith(`${b}/`) || b.startsWith(`${a}/`); }
 async function maybeLstat(file) { try { return await lstat(file); } catch (error) { if (error.code === 'ENOENT' || error.code === 'ENOTDIR') return null; throw error; } }

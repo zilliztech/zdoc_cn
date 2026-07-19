@@ -66,7 +66,7 @@ function aggregateResults(input) {
   const overallStatus = success ? 'success' : 'failure';
   const summaryText = success ? 'Documentation workflow succeeded.' : 'Documentation workflow failed.';
   const candidateSummary = input.groups.guides?.translationCandidates;
-  const candidateLines = candidateSummary ? [`Guides translation candidates: ${candidateSummary.total} total — ${candidateSummary.current_delta} current English changes, ${candidateSummary.missing_target} missing Japanese targets, ${candidateSummary.stale_source} stale translations.`, ''] : [];
+  const candidateLines = candidateSummary ? [`Guides translation candidates: ${candidateSummary.total} total — ${candidateSummary.current_delta} current English changes, ${candidateSummary.missing_target} missing Chinese targets, ${candidateSummary.stale_source} stale translations.`, ''] : [];
   const markdown = ['# Documentation workflow summary', '', `Mode: ${mode}`, '', '| Group | Source | Translation | Source commit | Translation commit |', '| --- | --- | --- | --- | --- |', ...rows, '', ...candidateLines, `Final verification: ${input.finalVerification}`, '', `Overall status: ${overallStatus}`, ''].join('\n');
   return Object.freeze({ overallStatus, summaryText, markdown });
 }

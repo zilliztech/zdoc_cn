@@ -12,7 +12,7 @@ const { validateTranslationBatch } = require('./validate-translation-batch')
 
 const MASTER_SHA = 'a'.repeat(40)
 const DEV_SHA = 'b'.repeat(40)
-const CACHE_PATH = '.translation-cache/ja-JP.json'
+const CACHE_PATH = '.translation-cache/zh-CN.json'
 const PENDING_SHA = 'c'.repeat(64)
 
 function batchMetadata(overrides = {}) {
@@ -28,11 +28,11 @@ function batchInput(batch = batchMetadata(), overrides = {}) {
     batch,
     candidates: reconciliationOnly ? [] : [{
       sourcePath: 'docs/tutorials/new.md',
-      targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/new.md',
+      targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/new.md',
       sourceHash: 'd'.repeat(64),
     }],
     sourceDelta: reconciliationOnly ? {
-      deletedI18n: ['i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/old.md'],
+      deletedI18n: ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/old.md'],
       renamed: [],
     } : { deletedI18n: [], renamed: [] },
     ...overrides,
@@ -42,7 +42,7 @@ function batchInput(batch = batchMetadata(), overrides = {}) {
 function cacheEntry(sourceHash = 'd'.repeat(64)) {
   return {
     sourceHash,
-    targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/new.md',
+    targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/new.md',
     translatedAt: '2026-07-18T00:00:00.000Z',
   }
 }
@@ -147,7 +147,7 @@ test('requires byte-identical batch inputs and complete checkpoint identity', as
   const differentDocument = batchInput(batchMetadata(), {
     candidates: [{
       sourcePath: 'docs/tutorials/other.md',
-      targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/other.md',
+      targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/other.md',
       sourceHash: 'e'.repeat(64),
     }],
   })
@@ -170,7 +170,7 @@ test('requires byte-identical batch inputs and complete checkpoint identity', as
 test('enforces authorized translation cache changes from the shared batch input', async () => {
   const stable = {
     sourceHash: 'e'.repeat(64),
-    targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/stable.md',
+    targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/stable.md',
     translatedAt: '2026-07-18T00:00:00.000Z',
   }
   const changedStable = { ...stable, sourceHash: 'f'.repeat(64) }
@@ -200,7 +200,7 @@ test('authorizes from authenticated cache buffers even if result cache path is r
             'docs/tutorials/new.md': cacheEntry(),
             'docs/tutorials/unauthorized.md': {
               sourceHash: 'e'.repeat(64),
-              targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/unauthorized.md',
+              targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/unauthorized.md',
               translatedAt: '2026-07-18T00:00:00.000Z',
             },
           },

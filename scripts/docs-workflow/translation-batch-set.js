@@ -9,10 +9,10 @@ const { validateTranslationBatch } = require('./validate-translation-batch')
 
 const SHA = /^[0-9a-f]{40}$/
 const DEFAULT_CACHE = Buffer.from('{"files":{}}\n')
-const CACHE_PATH = '.translation-cache/ja-JP.json'
+const CACHE_PATH = '.translation-cache/zh-CN.json'
 const MUTABLE_ROOTS = Object.freeze([
-  'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials',
-  'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials',
+  'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials',
+  'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials',
   CACHE_PATH,
 ])
 const TRANSLATION_ROOTS = MUTABLE_ROOTS.slice(0, 2)

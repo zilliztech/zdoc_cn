@@ -6,10 +6,10 @@ const { execFileSync } = require('node:child_process')
 
 const STAGING_PREFIX = 'refs/heads/docs-translation-staging/guides/'
 const TRANSLATION_ROOTS = Object.freeze([
-  'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials',
-  'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials',
+  'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials',
+  'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials',
 ])
-const CACHE_PATH = '.translation-cache/ja-JP.json'
+const CACHE_PATH = '.translation-cache/zh-CN.json'
 const BOT_NAME = 'Zilliz Docs Translation Bot'
 const BOT_EMAIL = 'docs@zilliz.com'
 const BOT_DATE = '2000-01-01T00:00:00+0000'

@@ -145,7 +145,7 @@ test('exact restore carries the Guides descriptor and translation checkpoints do
     const restoredDescriptor = fs.readFileSync(path.join(fixture.work, descriptor))
     for (const root of [baselineDir, workspace]) {
       write(root, descriptor, restoredDescriptor)
-      write(root, '.translation-cache/ja-JP.json', '{"files":{}}')
+      write(root, '.translation-cache/zh-CN.json', '{"files":{}}')
     }
     const manifest = await createCheckpointArtifact({
       group: 'guides', masterSha: 'a'.repeat(40), devBaselineSha: sourceSha,

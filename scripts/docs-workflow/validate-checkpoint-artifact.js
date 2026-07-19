@@ -30,12 +30,12 @@ function validPath(value) {
 function ownershipIsFile(owned) { return /\.[A-Za-z0-9]+$/.test(owned); }
 function isOwned(rel, ownedPaths, translationArtifact = false) {
   const translationPaths = translationArtifact ? ownedPaths.flatMap((owned) => {
-    if (owned === 'docs') return ['i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials'];
-    if (owned === 'docs-byoc') return ['i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials'];
-    if (owned.startsWith('reference/')) return [`i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/${owned.slice('reference/'.length)}`];
+    if (owned === 'docs') return ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials'];
+    if (owned === 'docs-byoc') return ['i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials'];
+    if (owned.startsWith('reference/')) return [`i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/${owned.slice('reference/'.length)}`];
     return [];
   }) : [];
-  return (translationArtifact && rel === '.translation-cache/ja-JP.json') || [...ownedPaths, ...translationPaths].some((owned) => rel === owned || (!ownershipIsFile(owned) && rel.startsWith(`${owned}/`)));
+  return (translationArtifact && rel === '.translation-cache/zh-CN.json') || [...ownedPaths, ...translationPaths].some((owned) => rel === owned || (!ownershipIsFile(owned) && rel.startsWith(`${owned}/`)));
 }
 function sorted(values) { return values.every((value, i) => i === 0 || values[i - 1] < value); }
 function pathsConflict(one, two) { return one === two || one.startsWith(`${two}/`) || two.startsWith(`${one}/`); }
@@ -145,7 +145,7 @@ async function validateCheckpointArtifact(artifactDir, expected = {}) {
     if (!Array.isArray(manifest.validation.commands) || !manifest.validation.commands.every((x) => typeof x === 'string') || manifest.validation.passed !== true) throw new Error('Invalid validation');
   }
   if (!Array.isArray(manifest.files) || !Array.isArray(manifest.deletions)) throw new Error('files and deletions must be arrays');
-  const cachePath = '.translation-cache/ja-JP.json';
+  const cachePath = '.translation-cache/zh-CN.json';
   const cacheFileCount = manifest.files.filter((entry) => entry?.path === cachePath).length;
   const cacheDeletionCount = manifest.deletions.filter((rel) => rel === cachePath).length;
   if (manifest.stage === 'translation' && cacheDeletionCount) throw new Error('Translation stage must not list translation cache deletion');

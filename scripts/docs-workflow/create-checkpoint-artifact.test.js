@@ -28,11 +28,11 @@ function canonicalBatchInput(batch = numberedBatch(), overrides = {}) {
     batch,
     candidates: reconciliationOnly ? [] : [{
       sourcePath: 'docs/tutorials/new.md',
-      targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/new.md',
+      targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/new.md',
       sourceHash: 'd'.repeat(64),
     }],
     sourceDelta: reconciliationOnly ? {
-      deletedI18n: ['i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/old.md'],
+      deletedI18n: ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/old.md'],
       renamed: [],
     } : { deletedI18n: [], renamed: [] },
     ...overrides,
@@ -49,8 +49,8 @@ async function writeCanonicalBatchInput(f, batch = numberedBatch(), overrides = 
 async function prepareGuidesTranslation(f) {
   await mkdir(path.join(f.baselineDir, '.translation-cache'), { recursive: true });
   await mkdir(path.join(f.workspace, '.translation-cache'), { recursive: true });
-  await writeFile(path.join(f.baselineDir, '.translation-cache/ja-JP.json'), '{"files":{}}\n');
-  await writeFile(path.join(f.workspace, '.translation-cache/ja-JP.json'), '{"files":{}}\n');
+  await writeFile(path.join(f.baselineDir, '.translation-cache/zh-CN.json'), '{"files":{}}\n');
+  await writeFile(path.join(f.workspace, '.translation-cache/zh-CN.json'), '{"files":{}}\n');
 }
 
 async function fixture() {
@@ -97,21 +97,21 @@ test('keeps unbatched translation artifacts on schema 1 and applies their cache 
   await mkdir(path.join(f.baselineDir, '.translation-cache'), { recursive: true });
   await mkdir(path.join(f.workspace, '.translation-cache'), { recursive: true });
   await mkdir(path.join(target, '.translation-cache'), { recursive: true });
-  await writeFile(path.join(f.baselineDir, '.translation-cache/ja-JP.json'), '{"doc":{"old":1},"targetOnly":0}');
-  await writeFile(path.join(f.workspace, '.translation-cache/ja-JP.json'), '{"doc":{"new":2},"targetOnly":0}');
-  await writeFile(path.join(target, '.translation-cache/ja-JP.json'), '{"doc":{"old":1},"targetOnly":9}');
-  const translated = 'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/python/python/topic.md';
+  await writeFile(path.join(f.baselineDir, '.translation-cache/zh-CN.json'), '{"doc":{"old":1},"targetOnly":0}');
+  await writeFile(path.join(f.workspace, '.translation-cache/zh-CN.json'), '{"doc":{"new":2},"targetOnly":0}');
+  await writeFile(path.join(target, '.translation-cache/zh-CN.json'), '{"doc":{"old":1},"targetOnly":9}');
+  const translated = 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/python/python/topic.md';
   await mkdir(path.dirname(path.join(f.workspace, translated)), { recursive: true });
   await writeFile(path.join(f.workspace, translated), '# translated');
   const manifest = await createCheckpointArtifact({ group: 'python', masterSha: SHA_A, devBaselineSha: SHA_B, ...f, includeTranslationCache: true });
-  assert.equal(manifest.stage, 'translation'); assert.equal(manifest.files.some((entry) => entry.path === '.translation-cache/ja-JP.json'), true);
+  assert.equal(manifest.stage, 'translation'); assert.equal(manifest.files.some((entry) => entry.path === '.translation-cache/zh-CN.json'), true);
   assert.equal(manifest.schemaVersion, 1);
   assert.equal(manifest.batch, undefined);
   assert.deepEqual(manifest.validation, { commands: [], passed: true });
   assert.equal(manifest.files.some((entry) => entry.path === translated), true);
   await assert.doesNotReject(validateCheckpointArtifact(f.output));
   await applyCheckpointArtifact({ artifactDir: f.output, targetDir: target, baselineDir: f.baselineDir });
-  assert.equal(await readFile(path.join(target, '.translation-cache/ja-JP.json'), 'utf8'), '{\n  "doc": {\n    "new": 2\n  },\n  "targetOnly": 9\n}\n');
+  assert.equal(await readFile(path.join(target, '.translation-cache/zh-CN.json'), 'utf8'), '{\n  "doc": {\n    "new": 2\n  },\n  "targetOnly": 9\n}\n');
 });
 
 test('allows a reconciliation-only translation batch with zero pending model files', async () => {
@@ -205,8 +205,8 @@ test('numbered schema 2 creation is Guides-only and cannot claim build validatio
   let f = await fixture();
   await mkdir(path.join(f.baselineDir, '.translation-cache'), { recursive: true });
   await mkdir(path.join(f.workspace, '.translation-cache'), { recursive: true });
-  await writeFile(path.join(f.baselineDir, '.translation-cache/ja-JP.json'), '{"files":{}}\n');
-  await writeFile(path.join(f.workspace, '.translation-cache/ja-JP.json'), '{"files":{}}\n');
+  await writeFile(path.join(f.baselineDir, '.translation-cache/zh-CN.json'), '{"files":{}}\n');
+  await writeFile(path.join(f.workspace, '.translation-cache/zh-CN.json'), '{"files":{}}\n');
   const batch = numberedBatch();
   let input = await writeCanonicalBatchInput(f, batch);
   await assert.rejects(
@@ -231,7 +231,7 @@ test('translation cache option is strict and source artifacts cannot smuggle cac
   const f = await fixture();
   await assert.rejects(createCheckpointArtifact({ group: 'python', masterSha: SHA_A, devBaselineSha: SHA_B, ...f, includeTranslationCache: 'yes' }), /includeTranslationCache.*boolean/i);
   const manifest = await createCheckpointArtifact({ group: 'python', masterSha: SHA_A, devBaselineSha: SHA_B, ...f });
-  const version = await require('node:fs/promises').realpath(f.output); manifest.files.push({ path: '.translation-cache/ja-JP.json', sha256: '0'.repeat(64), size: 0 });
+  const version = await require('node:fs/promises').realpath(f.output); manifest.files.push({ path: '.translation-cache/zh-CN.json', sha256: '0'.repeat(64), size: 0 });
   await writeFile(path.join(version, 'manifest.json'), JSON.stringify(manifest));
   await assert.rejects(validateCheckpointArtifact(version), /translation.*stage|source stage.*translation|not owned/i);
 });
@@ -239,10 +239,10 @@ test('translation cache option is strict and source artifacts cannot smuggle cac
 test('translation artifact creation fails when workspace cache is absent and leaves divergent target untouched', async () => {
   const f = await fixture(); const target = path.join(path.dirname(f.output), 'target');
   await mkdir(path.join(f.baselineDir, '.translation-cache'), { recursive: true }); await mkdir(path.join(target, '.translation-cache'), { recursive: true });
-  await writeFile(path.join(f.baselineDir, '.translation-cache/ja-JP.json'), '{"doc":{"baseline":1}}');
-  await writeFile(path.join(target, '.translation-cache/ja-JP.json'), '{"doc":{"target":2}}');
+  await writeFile(path.join(f.baselineDir, '.translation-cache/zh-CN.json'), '{"doc":{"baseline":1}}');
+  await writeFile(path.join(target, '.translation-cache/zh-CN.json'), '{"doc":{"target":2}}');
   await assert.rejects(createCheckpointArtifact({ group: 'python', masterSha: SHA_A, devBaselineSha: SHA_B, ...f, includeTranslationCache: true }), /workspace translation cache.*required|missing.*translation cache/i);
-  assert.equal(await readFile(path.join(target, '.translation-cache/ja-JP.json'), 'utf8'), '{"doc":{"target":2}}');
+  assert.equal(await readFile(path.join(target, '.translation-cache/zh-CN.json'), 'utf8'), '{"doc":{"target":2}}');
 });
 
 test('represents a baseline file changed into a directory', async () => {

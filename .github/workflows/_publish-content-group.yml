@@ -194,7 +194,7 @@ jobs:
           const { validateCheckpointArtifact } = require('./scripts/docs-workflow/validate-checkpoint-artifact.js')
           validateCheckpointArtifact(process.env.BASELINE_DIR).then(async manifest => {
             const baselineDir = path.join(manifest.resolvedDir, 'payload')
-            const cache = path.join(baselineDir, '.translation-cache/ja-JP.json')
+            const cache = path.join(baselineDir, '.translation-cache/zh-CN.json')
             const stat = await fs.lstat(cache)
             if (!stat.isFile() || stat.isSymbolicLink()) throw new Error('Baseline translation cache must be a regular file')
             await fs.appendFile(process.env.GITHUB_OUTPUT, `baseline_dir=${baselineDir}\n`)

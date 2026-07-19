@@ -25,11 +25,11 @@ function batchInputDocument(batch = batchMetadata(), overrides = {}) {
     batch,
     candidates: reconciliationOnly ? [] : [{
       sourcePath: 'docs/tutorials/new.md',
-      targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/new.md',
+      targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/new.md',
       sourceHash: 'd'.repeat(64),
     }],
     sourceDelta: reconciliationOnly ? {
-      deletedI18n: ['i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/old.md'],
+      deletedI18n: ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/old.md'],
       renamed: [],
     } : { deletedI18n: [], renamed: [] },
     ...overrides,
@@ -39,7 +39,7 @@ function batchInputDocument(batch = batchMetadata(), overrides = {}) {
 async function schema2Artifact(options = {}) {
   const dir = await mkdtemp(path.join(os.tmpdir(), 'checkpoint-schema2-'));
   const payload = path.join(dir, 'payload');
-  const cachePath = '.translation-cache/ja-JP.json';
+  const cachePath = '.translation-cache/zh-CN.json';
   const cache = Buffer.from('{"files":{}}\n');
   const batch = options.batch || batchMetadata();
   const document = options.document || batchInputDocument(batch);
@@ -208,8 +208,8 @@ test('schema versions are stage- and batching-specific after migration', async (
   const cache = Buffer.from('{"files":{}}\n');
   await require('node:fs/promises').rm(path.join(f.payload, 'reference'), { recursive: true });
   await mkdir(path.join(f.payload, '.translation-cache'), { recursive: true });
-  await writeFile(path.join(f.payload, '.translation-cache/ja-JP.json'), cache);
-  f.manifest.files = [{ path: '.translation-cache/ja-JP.json', sha256: crypto.createHash('sha256').update(cache).digest('hex'), size: cache.length }];
+  await writeFile(path.join(f.payload, '.translation-cache/zh-CN.json'), cache);
+  f.manifest.files = [{ path: '.translation-cache/zh-CN.json', sha256: crypto.createHash('sha256').update(cache).digest('hex'), size: cache.length }];
   await writeFile(path.join(f.dir, 'manifest.json'), JSON.stringify(f.manifest));
   await assert.rejects(validateCheckpointArtifact(f.dir), /schema 1.*numbered|migration|batch/i);
 
@@ -219,8 +219,8 @@ test('schema versions are stage- and batching-specific after migration', async (
   const unbatched = await artifact({ stage: 'translation', group: 'guides', snapshotManual: 'guides' });
   await require('node:fs/promises').rm(path.join(unbatched.payload, 'reference'), { recursive: true });
   await mkdir(path.join(unbatched.payload, '.translation-cache'), { recursive: true });
-  await writeFile(path.join(unbatched.payload, '.translation-cache/ja-JP.json'), cache);
-  unbatched.manifest.files = [{ path: '.translation-cache/ja-JP.json', sha256: crypto.createHash('sha256').update(cache).digest('hex'), size: cache.length }];
+  await writeFile(path.join(unbatched.payload, '.translation-cache/zh-CN.json'), cache);
+  unbatched.manifest.files = [{ path: '.translation-cache/zh-CN.json', sha256: crypto.createHash('sha256').update(cache).digest('hex'), size: cache.length }];
   await writeFile(path.join(unbatched.dir, 'manifest.json'), JSON.stringify(unbatched.manifest));
   const unbatchedResult = await validateCheckpointArtifact(unbatched.dir);
   assert.deepEqual(unbatchedResult.translationCacheBytes, cache);
@@ -407,7 +407,7 @@ test('rejects malformed types, SHAs, timestamps, and validation values', async (
 test('translation stage requires exactly one cache payload and never a cache deletion', async () => {
   let f = await artifact({ stage: 'translation' });
   await assert.rejects(validateCheckpointArtifact(f.dir), /translation.*cache.*required|exactly one/i);
-  f = await artifact({ stage: 'translation', deletions: ['.translation-cache/ja-JP.json'] });
+  f = await artifact({ stage: 'translation', deletions: ['.translation-cache/zh-CN.json'] });
   await assert.rejects(validateCheckpointArtifact(f.dir), /translation.*cache|deletion/i);
 });
 

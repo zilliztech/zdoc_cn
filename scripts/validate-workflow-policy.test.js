@@ -834,7 +834,7 @@ test('reusable content publisher safely downloads, validates, and publishes chec
   assert.match(workflow, /tar -tf "\$archive"[\s\S]*tar -tvf "\$archive"[\s\S]*checkpoint-group\.tar/)
   assert.match(workflow, /validate-checkpoint-artifact\.js[\s\S]*--group "\$GROUP"[\s\S]*--master-sha "\$MASTER_SHA"/)
   assert.match(workflow, /publish-checkpoint\.sh[\s\S]*--artifact "\$ARTIFACT_DIR"[\s\S]*--branch "\$TARGET_BRANCH"[\s\S]*--message "\$COMMIT_MESSAGE"[\s\S]*--max-attempts 10[\s\S]*--validate-command "\$VALIDATE_COMMAND"/)
-  assert.match(workflow, /id: baseline_validation[\s\S]*validateCheckpointArtifact[\s\S]*manifest\.resolvedDir[\s\S]*payload[\s\S]*\.translation-cache\/ja-JP\.json[\s\S]*baseline_dir=/)
+  assert.match(workflow, /id: baseline_validation[\s\S]*validateCheckpointArtifact[\s\S]*manifest\.resolvedDir[\s\S]*payload[\s\S]*\.translation-cache\/zh-CN\.json[\s\S]*baseline_dir=/)
   assert.match(workflow, /BASELINE_PAYLOAD_DIR: \$\{\{ steps\.baseline_validation\.outputs\.baseline_dir \}\}[\s\S]*baseline_args=\(\)[\s\S]*baseline_args=\(--baseline-dir "\$BASELINE_PAYLOAD_DIR"\)[\s\S]*"\$\{baseline_args\[@\]\}"/)
   assert.match(workflow, /id: result[\s\S]*if: \$\{\{ always\(\) \}\}[\s\S]*status=failed[\s\S]*status=skipped[\s\S]*published[\s\S]*no_changes/)
   assert.match(workflow, /commit_sha=/)
@@ -1214,4 +1214,14 @@ test('manual translation wrapper calls reusable translation then publisher witho
   assert.match(resolver, /git rev-parse "refs\/remotes\/origin\/\$target_branch"/)
   assert.doesNotMatch(resolver, /inputs\.target_branch|\$\{\{[^\n]*target_branch/)
   assert.match(resolver, /\*\$'\\n'\*|\*\$'\\r'\*/)
+})
+
+test('manual Chinese reference translation wrapper is scoped to reference groups', () => {
+  const workflow = fs.readFileSync(path.join(process.cwd(), '.github/workflows/translate-reference-docs.yml'), 'utf8')
+  assert.match(workflow, /^name: translate reference docs to Chinese$/m)
+  assert.match(workflow, /options: \[python, java, node, go, cli, rest\]/)
+  assert.doesNotMatch(workflow, /include_reference|options: \[guides/)
+  assert.match(workflow, /locale: \{ description: Translation locale, required: false, default: zh-CN \}/)
+  assert.match(workflow, /translation_locale: \$\{\{ inputs\.locale \}\}/)
+  assert.match(workflow, /validate-translated-coverage\.js" --group "\$\{\{ inputs\.group \}\}" --locale "\$\{\{ inputs\.locale \}\}"/)
 })

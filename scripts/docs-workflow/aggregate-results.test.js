@@ -38,7 +38,7 @@ test('aggregates final terminal results and ignores earlier failed attempts', ()
   assert.equal(result.overallStatus, 'success');
   assert.equal(result.summaryText, 'Documentation workflow succeeded.');
   assert.match(result.markdown, /\| guides \| source_published \| translation_published \| a{40} \| b{40} \|/);
-  assert.match(result.markdown, /Guides translation candidates: 163 total — 15 current English changes, 18 missing Japanese targets, 130 stale translations\./);
+  assert.match(result.markdown, /Guides translation candidates: 163 total — 15 current English changes, 18 missing Chinese targets, 130 stale translations\./);
   assert.ok(result.markdown.indexOf('Guides translation candidates:') < result.markdown.indexOf('Final verification:'));
   assert.match(result.markdown, /Final verification: passed/);
   assert.match(result.markdown, /Overall status: success/);

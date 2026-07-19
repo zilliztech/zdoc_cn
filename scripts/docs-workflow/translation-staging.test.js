@@ -17,7 +17,7 @@ const {
 } = require('./translation-staging')
 
 const SHA256 = '0123456789abcdef'.repeat(4)
-const TRANSLATION = 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md'
+const TRANSLATION = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md'
 const GIT_ENV = {
   ...process.env,
   GIT_AUTHOR_NAME: 'Test Author',

@@ -13,7 +13,7 @@ test('rest group paths include English outputs and translated reference root', (
     'config/generated/restful.sidebar.js',
   ]);
   assert.deepEqual(paths.translationOutputs, [
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/restful/restful',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful',
   ]);
   assert.deepEqual(paths.sidebars, ['config/generated/restful.sidebar.js']);
   assert.equal(paths.snapshot, null);
@@ -27,29 +27,29 @@ test('guides group paths include SaaS, BYOC, and translated docs roots', () => {
   assert.ok(paths.englishOutputs.includes('config/generated/guides.sidebar.js'));
   assert.ok(paths.englishOutputs.includes('config/generated/guides-byoc.sidebar.js'));
   assert.deepEqual(paths.translationOutputs, [
-    'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials',
-    'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials',
+    'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials',
   ]);
   assert.equal(paths.snapshot, 'plugins/lark-docs/meta/snapshots/guides-uat-last-success.json');
 });
 
 test('reference groups map reference outputs into docs-reference i18n', () => {
   assert.deepEqual(getGroupPaths('python').translationOutputs, [
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/python/python',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/python/python',
   ]);
   assert.deepEqual(getGroupPaths('java').translationOutputs, [
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/java/java/v2',
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/java/java/java.md',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/java.md',
   ]);
   assert.deepEqual(getGroupPaths('node').translationOutputs, [
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/nodejs/nodejs',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/nodejs/nodejs',
   ]);
   assert.deepEqual(getGroupPaths('go').translationOutputs, [
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/go/go/v2',
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/go/go/go.md',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/go/go/v2',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/go/go/go.md',
   ]);
   assert.deepEqual(getGroupPaths('cli').translationOutputs, [
-    'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/cli/cli',
+    'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/cli/cli',
   ]);
 });
 

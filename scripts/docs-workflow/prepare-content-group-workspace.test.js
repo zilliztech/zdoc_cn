@@ -18,7 +18,7 @@ test('rest preparation removes restored English REST outputs and preserves i18n'
   write(path.join(root, 'reference/api/restful/restful/v2/control-plane/cluster-operations-v2/create-on-demand-cluster-v2.mdx'));
   write(path.join(root, 'reference/api/restful/restful/versioning.md'), '# Versioning\n');
   write(path.join(root, 'config/generated/restful.sidebar.js'), 'module.exports=["stale"]\n');
-  write(path.join(root, 'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/old.md'));
+  write(path.join(root, 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/old.md'));
 
   const result = prepareContentGroupWorkspace({
     group: 'rest',
@@ -30,7 +30,7 @@ test('rest preparation removes restored English REST outputs and preserves i18n'
   assert.equal(fs.existsSync(path.join(root, 'reference/api/restful/restful/v2/control-plane/cluster-operations-v2/create-on-demand-cluster-v2.mdx')), false);
   assert.equal(fs.readFileSync(path.join(root, 'reference/api/restful/restful/versioning.md'), 'utf8'), '# Versioning\n');
   assert.equal(fs.readFileSync(path.join(root, 'config/generated/restful.sidebar.js'), 'utf8'), 'module.exports=["master"]\n');
-  assert.equal(fs.existsSync(path.join(root, 'i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/old.md')), true);
+  assert.equal(fs.existsSync(path.join(root, 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/old.md')), true);
   assert.deepEqual(result.removed.sort(), [
     'config/generated/restful.sidebar.js',
     'reference/api/restful/restful',

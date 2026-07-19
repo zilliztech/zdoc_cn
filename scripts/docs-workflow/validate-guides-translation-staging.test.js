@@ -9,14 +9,14 @@ const { execFileSync, spawnSync } = require('node:child_process')
 
 const { runGuidesTranslationValidation, writeValidationResult, VALIDATION_COMMANDS, RESTORE_PATHS } = require('./validate-guides-translation-staging')
 
-const ROOT = 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials'
+const ROOT = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials'
 const ENV = { ...process.env, GIT_AUTHOR_NAME: 'Test', GIT_AUTHOR_EMAIL: 'test@example.com', GIT_COMMITTER_NAME: 'Test', GIT_COMMITTER_EMAIL: 'test@example.com' }
 function git(cwd, ...args) { return execFileSync('git', args, { cwd, encoding: 'utf8', env: ENV }).trim() }
 
 function fixture() {
   const repository = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'validate-guides-staging-')))
   git(repository, 'init')
-  const seeds = ['docs/index.md', 'docs-byoc/index.md', 'reference/index.md', 'reference/keep.md', `${ROOT}/a.md`, 'i18n/ja-JP/other.md', '.translation-cache/ja-JP.json', 'config/generated/guides.sidebar.js', 'plugins/lark-docs/meta/snapshots/guides.json', 'plugins/lark-docs/meta/assembly/guides.json']
+  const seeds = ['docs/index.md', 'docs-byoc/index.md', 'reference/index.md', 'reference/keep.md', `${ROOT}/a.md`, 'i18n/zh-CN/other.md', '.translation-cache/zh-CN.json', 'config/generated/guides.sidebar.js', 'plugins/lark-docs/meta/snapshots/guides.json', 'plugins/lark-docs/meta/assembly/guides.json']
   for (const relative of seeds) { fs.mkdirSync(path.dirname(path.join(repository, relative)), { recursive: true }); fs.writeFileSync(path.join(repository, relative), `${relative}\n`) }
   fs.writeFileSync(path.join(repository, 'tooling.js'), 'tooling\n')
   git(repository, 'add', '.')
@@ -121,7 +121,7 @@ test('rejects untracked generated files, index contamination, and symlinked stag
 })
 
 test('rejects hybrid authoritative roots and executable-mode drift', () => {
-  for (const relative of ['docs/extra.md', 'docs-byoc/extra.md', 'reference/extra.md', 'i18n/ja-JP/extra.md', '.translation-cache/extra.json', 'config/generated/extra.js', 'plugins/lark-docs/meta/snapshots/extra.json', 'plugins/lark-docs/meta/assembly/extra.json']) {
+  for (const relative of ['docs/extra.md', 'docs-byoc/extra.md', 'reference/extra.md', 'i18n/zh-CN/extra.md', '.translation-cache/extra.json', 'config/generated/extra.js', 'plugins/lark-docs/meta/snapshots/extra.json', 'plugins/lark-docs/meta/assembly/extra.json']) {
     const state = fixture()
     git(state.repository, 'switch', 'staged'); fs.writeFileSync(path.join(state.repository, relative), 'staged only\n'); git(state.repository, 'add', relative); git(state.repository, 'commit', '-m', `change ${relative}`); state.stagedSha = git(state.repository, 'rev-parse', 'HEAD')
     git(state.repository, 'switch', '--detach', state.masterSha); git(state.repository, 'checkout', state.stagedSha, '--', ROOT)

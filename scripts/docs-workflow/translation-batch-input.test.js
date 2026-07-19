@@ -36,9 +36,9 @@ function candidate(name = 'a.md', hash = HASH_A, root = 'docs') {
   const plugin = root === 'docs' ? 'docs' : 'docs-byoc'
   return {
     sourcePath: `${root}/tutorials/${name}`,
-    targetPath: `i18n/ja-JP/docusaurus-plugin-content-${plugin}/current/tutorials/${name}`,
+    targetPath: `i18n/zh-CN/docusaurus-plugin-content-${plugin}/current/tutorials/${name}`,
     sourceHash: hash,
-    locale: 'ja-JP',
+    locale: 'zh-CN',
     type: root === 'docs' ? 'docs' : 'byoc',
     reason: 'current_delta',
   }
@@ -50,15 +50,15 @@ function rename(oldName = 'old.md', newName = 'new.md', oldRoot = 'docs', newRoo
   return {
     oldPath: `${oldRoot}/tutorials/${oldName}`,
     newPath: `${newRoot}/tutorials/${newName}`,
-    oldI18nPath: `i18n/ja-JP/docusaurus-plugin-content-${oldPlugin}/current/tutorials/${oldName}`,
-    newI18nPath: `i18n/ja-JP/docusaurus-plugin-content-${newPlugin}/current/tutorials/${newName}`,
+    oldI18nPath: `i18n/zh-CN/docusaurus-plugin-content-${oldPlugin}/current/tutorials/${oldName}`,
+    newI18nPath: `i18n/zh-CN/docusaurus-plugin-content-${newPlugin}/current/tutorials/${newName}`,
   }
 }
 
 function selectedManifest(overrides = {}) {
   const renamed = rename()
   return {
-    locale: 'ja-JP',
+    locale: 'zh-CN',
     group: 'guides',
     sourceCheckpointSha: SHA,
     generatedAt: '2026-07-18T00:00:00.000Z',
@@ -188,7 +188,7 @@ test('enforces selected item metadata and reconciliation batch arithmetic', () =
     candidates: [],
     batch: { ...selectedManifest().batch, pendingCount: 0 },
     sourceDelta: {
-      deletedI18n: ['i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/deleted.md'],
+      deletedI18n: ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/deleted.md'],
       renamed: [],
     },
   })
@@ -205,10 +205,10 @@ test('rejects unsafe paths, wrong roots, suffix mismatches, and invalid extensio
     assert.throws(() => validateBatchInput(input), /path|safe|relative/i)
   }
   const mismatches = [
-    ['docs/other/a.md', 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md'],
-    ['docs/tutorials/a.txt', 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.txt'],
-    ['docs/tutorials/a.md', 'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials/a.md'],
-    ['docs/tutorials/a.md', 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/b.md'],
+    ['docs/other/a.md', 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md'],
+    ['docs/tutorials/a.txt', 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.txt'],
+    ['docs/tutorials/a.md', 'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/a.md'],
+    ['docs/tutorials/a.md', 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/b.md'],
   ]
   for (const [sourcePath, targetPath] of mismatches) {
     const input = structuredClone(batchInput())
@@ -220,7 +220,7 @@ test('rejects unsafe paths, wrong roots, suffix mismatches, and invalid extensio
   const ambiguous = batchInput({
     candidates: [{
       sourcePath: decomposed,
-      targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/cafe\u0301.md',
+      targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/cafe\u0301.md',
       sourceHash: HASH_A,
     }],
     sourceDelta: { deletedI18n: [], renamed: [] },
@@ -248,8 +248,8 @@ test('rejects duplicate entries, unrelated overlaps, and ancestor conflicts', ()
 
   const ancestor = batchInput({
     candidates: [
-      { sourcePath: 'docs/tutorials/a.md', targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md', sourceHash: HASH_A },
-      { sourcePath: 'docs/tutorials/a.md/b.md', targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md/b.md', sourceHash: HASH_B },
+      { sourcePath: 'docs/tutorials/a.md', targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md', sourceHash: HASH_A },
+      { sourcePath: 'docs/tutorials/a.md/b.md', targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md/b.md', sourceHash: HASH_B },
     ],
     sourceDelta: { deletedI18n: [], renamed: [] },
   })
@@ -257,9 +257,9 @@ test('rejects duplicate entries, unrelated overlaps, and ancestor conflicts', ()
 
   const nonAdjacentAncestor = batchInput({
     candidates: [
-      { sourcePath: 'docs/tutorials/a.md', targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md', sourceHash: HASH_A },
-      { sourcePath: 'docs/tutorials/a.md-b.md', targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md-b.md', sourceHash: HASH_B },
-      { sourcePath: 'docs/tutorials/a.md/b.md', targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md/b.md', sourceHash: 'c'.repeat(64) },
+      { sourcePath: 'docs/tutorials/a.md', targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md', sourceHash: HASH_A },
+      { sourcePath: 'docs/tutorials/a.md-b.md', targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md-b.md', sourceHash: HASH_B },
+      { sourcePath: 'docs/tutorials/a.md/b.md', targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md/b.md', sourceHash: 'c'.repeat(64) },
     ],
     batch: { ...selectedManifest().batch, pendingCount: 3 },
     sourceDelta: { deletedI18n: [], renamed: [] },
@@ -280,7 +280,7 @@ test('accepts only exact intrinsic rename overlaps and rejects near misses', () 
   assert.throws(() => validateBatchInput(candidateAtOld), /overlap|rename|conflict/i)
 
   const mismatchedRename = batchInput()
-  mismatchedRename.sourceDelta.renamed[0].newI18nPath = 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/other.md'
+  mismatchedRename.sourceDelta.renamed[0].newI18nPath = 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/other.md'
   assert.throws(() => validateBatchInput(mismatchedRename), /mapping|suffix|rename/i)
 
   const twoRenamesOneDeletion = batchInput()
@@ -307,8 +307,8 @@ test('accepts only exact intrinsic rename overlaps and rejects near misses', () 
 test('canonical validation rejects non-deterministic array ordering', () => {
   const input = batchInput({
     candidates: [
-      { sourcePath: 'docs/tutorials/z.md', targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/z.md', sourceHash: HASH_A },
-      { sourcePath: 'docs/tutorials/a.md', targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/a.md', sourceHash: HASH_B },
+      { sourcePath: 'docs/tutorials/z.md', targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/z.md', sourceHash: HASH_A },
+      { sourcePath: 'docs/tutorials/a.md', targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/a.md', sourceHash: HASH_B },
     ],
     batch: { ...selectedManifest().batch, pendingCount: 2 },
     sourceDelta: { deletedI18n: [], renamed: [] },
@@ -318,18 +318,18 @@ test('canonical validation rejects non-deterministic array ordering', () => {
 
 test('rejects non-Guides manifests and unauthorized source-delta shapes', () => {
   assert.throws(() => createBatchInput(selectedManifest({ group: 'java' })), /guides|group/i)
-  assert.throws(() => createBatchInput(selectedManifest({ locale: 'zh-CN' })), /ja-JP|locale/i)
+  assert.throws(() => createBatchInput(selectedManifest({ locale: 'ja-JP' })), /zh-CN|locale/i)
   assert.throws(() => createBatchInput(selectedManifest({ source_delta: { changedEnglish: [], deleted_i18n: [], renamed: [] } })), /key|source.delta|schema/i)
 })
 
 function cacheEntry(sourcePath, hash = HASH_A) {
   let targetPath
   if (sourcePath.startsWith('docs/tutorials/')) {
-    targetPath = `i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/${sourcePath.slice('docs/tutorials/'.length)}`
+    targetPath = `i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/${sourcePath.slice('docs/tutorials/'.length)}`
   } else if (sourcePath.startsWith('docs-byoc/tutorials/')) {
-    targetPath = `i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials/${sourcePath.slice('docs-byoc/tutorials/'.length)}`
+    targetPath = `i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials/${sourcePath.slice('docs-byoc/tutorials/'.length)}`
   } else {
-    targetPath = `i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/${sourcePath.slice('reference/'.length)}`
+    targetPath = `i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/${sourcePath.slice('reference/'.length)}`
   }
   return { sourceHash: hash, targetPath, translatedAt: '2026-07-18T00:00:00.000Z' }
 }
@@ -342,7 +342,7 @@ test('authorizes only candidate, rename, and deletion-derived cache changes', ()
     'docs/tutorials/deleted.md': cacheEntry('docs/tutorials/deleted.md'),
     'docs/tutorials/stable.md': cacheEntry('docs/tutorials/stable.md'),
   } }
-  input.sourceDelta.deletedI18n.push('i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/deleted.md')
+  input.sourceDelta.deletedI18n.push('i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/deleted.md')
   input.sourceDelta.deletedI18n.sort()
   const after = structuredClone(before)
   delete after.files['docs/tutorials/old.md']
@@ -384,7 +384,7 @@ test('binds candidate cache additions and changes to exact batch values', () => 
 
   for (const result of [
     { ...exact, sourceHash: HASH_B },
-    { ...exact, targetPath: 'i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/wrong.md' },
+    { ...exact, targetPath: 'i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/wrong.md' },
     { ...exact, translatedAt: 'today' },
   ]) {
     assert.throws(
@@ -411,7 +411,7 @@ test('allows deletion and rename-old cache identities to be removed only', () =>
   const input = batchInput()
   const renameOld = input.sourceDelta.renamed[0].oldPath
   const deletionKey = 'docs/tutorials/deleted.md'
-  input.sourceDelta.deletedI18n.push('i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials/deleted.md')
+  input.sourceDelta.deletedI18n.push('i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials/deleted.md')
   input.sourceDelta.deletedI18n.sort()
 
   for (const key of [renameOld, deletionKey]) {

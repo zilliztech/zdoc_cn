@@ -172,7 +172,7 @@ jobs:
               if (manifest.batch?.batchNumber !== number || manifest.batch?.batchCount !== count) throw new Error('checkpoint translation batch identity mismatch')
             }
             const baselineDir = path.join(baseline.resolvedDir, 'payload')
-            const cache = path.join(baselineDir, '.translation-cache/ja-JP.json')
+            const cache = path.join(baselineDir, '.translation-cache/zh-CN.json')
             const stat = await fs.lstat(cache)
             if (!stat.isFile() || stat.isSymbolicLink()) throw new Error('Baseline translation cache must be a regular file')
             await fs.appendFile(process.env.GITHUB_OUTPUT, `payload_dir=${baselineDir}\n`)

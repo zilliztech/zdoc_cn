@@ -160,11 +160,11 @@ async function createCheckpointArtifact(options) {
   const initialSafety = await safeOutputLocation(requestedOutput, workspace, baselineDir);
   const output = initialSafety.canonicalOutput;
   const translationPaths = groupName === 'guides'
-    ? ['i18n/ja-JP/docusaurus-plugin-content-docs/current/tutorials', 'i18n/ja-JP/docusaurus-plugin-content-docs-byoc/current/tutorials']
-    : group.ownedPaths.filter((owned) => owned.startsWith('reference/')).map((owned) => `i18n/ja-JP/docusaurus-plugin-content-docs-reference/current/${owned.slice('reference/'.length)}`);
-  const ownedPaths = options.includeTranslationCache ? [...group.ownedPaths, ...translationPaths, '.translation-cache/ja-JP.json'] : group.ownedPaths;
+    ? ['i18n/zh-CN/docusaurus-plugin-content-docs/current/tutorials', 'i18n/zh-CN/docusaurus-plugin-content-docs-byoc/current/tutorials']
+    : group.ownedPaths.filter((owned) => owned.startsWith('reference/')).map((owned) => `i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/${owned.slice('reference/'.length)}`);
+  const ownedPaths = options.includeTranslationCache ? [...group.ownedPaths, ...translationPaths, '.translation-cache/zh-CN.json'] : group.ownedPaths;
   const [baseline, current] = await Promise.all([collect(baselineDir, ownedPaths), collect(workspace, ownedPaths)]);
-  if (options.includeTranslationCache && !current.has('.translation-cache/ja-JP.json')) throw new Error('Workspace translation cache is required for translation artifacts');
+  if (options.includeTranslationCache && !current.has('.translation-cache/zh-CN.json')) throw new Error('Workspace translation cache is required for translation artifacts');
   const filePaths = [...current.keys()].sort();
   const deletions = [...baseline.keys()].filter((rel) => !current.has(rel)).sort();
   const parent = path.dirname(output);
