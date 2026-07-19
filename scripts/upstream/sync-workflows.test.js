@@ -86,6 +86,7 @@ on:
 jobs:
   sources:
     steps:
+      - run: node scripts/docs-workflow/guides-source-cache.js create --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth
       - run: node scripts/docs-workflow/guides-media-prefetch.js
         env:
           AWS_BUCKET: \${{ vars.AWS_BUCKET }}
@@ -116,6 +117,11 @@ concurrency:
   writeFile(upstream, 'scripts/update-lark-doc-snapshot.js', "console.log('snapshot');\n");
 
   fs.mkdirSync(root, { recursive: true });
+  writeFile(root, 'config/lark-docs.config.ts', `
+const guides: Manual = {
+    root: 'cn-guides-root-token',
+}
+`);
   return { directory, upstream, root };
 }
 
@@ -167,6 +173,10 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(contentGroup, /if: \$\{\{ env\.GROUP != 'rest' \}\}/);
     assert.doesNotMatch(contentGroup, /AWS_ACCESS_KEY_ID/);
     assert.doesNotMatch(contentGroup, /AWS_SECRET_ACCESS_KEY/);
+
+    const guidesSources = readFile(fixture.root, '.github/workflows/_fetch-guides-sources.yml');
+    assert.match(guidesSources, /--root-token cn-guides-root-token/);
+    assert.doesNotMatch(guidesSources, /Tg6mwbRGDitPQ3kLUQzc44I7nth/);
 
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/monitor-docs-progress.js'), "module.exports = 'CN Docs Build / CN Docs Artifact-Only Build';\n");

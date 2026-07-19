@@ -105,23 +105,23 @@ jobs:
             rm -rf tmp/guides-source-cache-v4
             if node scripts/docs-workflow/guides-source-cache-source-promotion.js validate \
               --payload "$staged" --snapshot "$snapshot" \
-              --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth; then
+              --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd; then
               if node scripts/docs-workflow/guides-source-cache.js validate-media \
                 --source-dir "$staged/sources" --snapshot "$snapshot" \
                 --manifest "$staged/source-manifest.json" \
                 --media-manifest "$staged/media-manifest.json"; then
                 if node scripts/docs-workflow/guides-source-cache-generation.js validate \
-                  --payload "$staged" --snapshot "$snapshot" --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth; then
+                  --payload "$staged" --snapshot "$snapshot" --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd; then
                   node scripts/docs-workflow/guides-source-cache-generation.js promote \
                   --payload "$staged" --workspace "$GITHUB_WORKSPACE" \
-                  --snapshot "$snapshot" --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth
+                  --snapshot "$snapshot" --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd
                   source_valid=true
                   media_valid=true
                 fi
               else
                 node scripts/docs-workflow/guides-source-cache-source-promotion.js promote \
                   --payload "$staged" --workspace "$GITHUB_WORKSPACE" \
-                  --snapshot "$snapshot" --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth
+                  --snapshot "$snapshot" --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd
                 source_valid=true
               fi
             fi
@@ -160,7 +160,7 @@ jobs:
                -e "$manifest" || -L "$manifest" || -e "$media" || -L "$media" ]] && candidate_present=true
             if [[ -f "$snapshot" ]] && node scripts/docs-workflow/guides-source-cache-source-promotion.js validate-live-source \
               --workspace "$GITHUB_WORKSPACE" --snapshot "$snapshot" \
-              --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth --schemas 2; then
+              --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd --schemas 2; then
               source_valid=true
               if node scripts/docs-workflow/guides-source-cache-source-promotion.js validate-live-media \
                 --workspace "$GITHUB_WORKSPACE" --snapshot "$snapshot"; then
@@ -204,7 +204,7 @@ jobs:
                -e "$manifest" || -L "$manifest" || -e "$media" || -L "$media" ]] && candidate_present=true
             if [[ -f "$snapshot" ]] && node scripts/docs-workflow/guides-source-cache-source-promotion.js validate-live-source \
               --workspace "$GITHUB_WORKSPACE" --snapshot "$snapshot" \
-              --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth --schemas 2; then
+              --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd --schemas 2; then
               source_valid=true
               if node scripts/docs-workflow/guides-source-cache-source-promotion.js validate-live-media \
                 --workspace "$GITHUB_WORKSPACE" --snapshot "$snapshot"; then
@@ -246,7 +246,7 @@ jobs:
                -e "$manifest" || -L "$manifest" ]] && candidate_present=true
             if [[ -f "$snapshot" ]] && node scripts/docs-workflow/guides-source-cache-source-promotion.js validate-live-source \
               --workspace "$GITHUB_WORKSPACE" --snapshot "$snapshot" \
-              --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth --schemas 1,2; then
+              --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd --schemas 1,2; then
               source_valid=true
             fi
             if [[ "$source_valid" != true ]]; then
@@ -419,8 +419,8 @@ jobs:
           if-no-files-found: ignore
       - name: Create shared source artifact
         run: |
-          node scripts/docs-workflow/guides-source-cache.js create --source-dir plugins/lark-docs/meta/sources/guides --snapshot plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json --output "$RUNNER_TEMP/guides-source-manifest.json" --media-manifest plugins/lark-docs/meta/media-cache/guides.json --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth
-          node scripts/docs-workflow/guides-stage-artifact.js --operation create --stage source --workspace "$GITHUB_WORKSPACE" --baseline-dir "$RUNNER_TEMP/baseline" --output "$RUNNER_TEMP/guides-source" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}" --snapshot-candidate plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json --root-token Tg6mwbRGDitPQ3kLUQzc44I7nth
+          node scripts/docs-workflow/guides-source-cache.js create --source-dir plugins/lark-docs/meta/sources/guides --snapshot plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json --output "$RUNNER_TEMP/guides-source-manifest.json" --media-manifest plugins/lark-docs/meta/media-cache/guides.json --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd
+          node scripts/docs-workflow/guides-stage-artifact.js --operation create --stage source --workspace "$GITHUB_WORKSPACE" --baseline-dir "$RUNNER_TEMP/baseline" --output "$RUNNER_TEMP/guides-source" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}" --snapshot-candidate plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd
           tar -cf "$RUNNER_TEMP/guides-source.tar" -C "$RUNNER_TEMP" guides-source
       - id: upload
         uses: actions/upload-artifact@v4

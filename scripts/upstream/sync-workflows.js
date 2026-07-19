@@ -28,6 +28,17 @@ const COPIED_PATHS = [
   'scripts/update-sdk-reference-snapshots.sh',
 ];
 
+const UPSTREAM_GUIDES_ROOT_TOKEN = 'Tg6mwbRGDitPQ3kLUQzc44I7nth';
+
+function readGuidesRootToken(root) {
+  const configPath = path.join(root, 'config', 'lark-docs.config.ts');
+  const content = fs.readFileSync(configPath, 'utf8');
+  const guidesBlock = content.match(/const\s+guides\s*:\s*Manual\s*=\s*\{[\s\S]*?\n\}/);
+  const rootMatch = guidesBlock?.[0].match(/\broot:\s*['"]([^'"\r\n]+)['"]/);
+  if (!rootMatch) throw new Error(`Unable to read guides root token from ${path.relative(root, configPath)}`);
+  return rootMatch[1];
+}
+
 function parseArgs(argv) {
   const options = {
     mode: 'check',
@@ -163,7 +174,12 @@ function applyCnTestFixturePatch(content) {
   return content.replace(/selectedManifest\(\{ locale: 'zh-CN' \}\)/g, "selectedManifest({ locale: 'en-US' })");
 }
 
-function transform(relativePath, content) {
+function applyGuidesRootTokenPatch(content, context) {
+  if (!content.includes(UPSTREAM_GUIDES_ROOT_TOKEN)) return content;
+  return content.split(UPSTREAM_GUIDES_ROOT_TOKEN).join(context.guidesRootToken);
+}
+
+function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_GUIDES_ROOT_TOKEN }) {
   let next = content;
   if (relativePath === '.github/workflows/fetch-docs.yml') next = applyFetchDocsPatch(next);
   if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyFetchContentGroupPatch(applyOssPatch(next));
@@ -178,11 +194,13 @@ function transform(relativePath, content) {
   if (relativePath.startsWith('.github/workflows/')) {
     next = applyCnWorkflowPatch(next);
     next = applyPackageManagerPatch(next);
+    next = applyGuidesRootTokenPatch(next, context);
   }
   return next;
 }
 
-function syncInto(root, upstream) {
+function syncInto(root, upstream, contextRoot = root) {
+  const context = { guidesRootToken: readGuidesRootToken(contextRoot) };
   for (const relativePath of COPIED_PATHS) {
     const source = path.join(upstream, relativePath);
     const target = path.join(root, relativePath);
@@ -194,7 +212,7 @@ function syncInto(root, upstream) {
       for (const child of listFiles(source)) {
         const childSource = path.join(source, child);
         const childRelativePath = path.posix.join(relativePath, child);
-        const content = transform(childRelativePath, fs.readFileSync(childSource, 'utf8'));
+        const content = transform(childRelativePath, fs.readFileSync(childSource, 'utf8'), context);
         writeText(root, childRelativePath, content);
         const childStat = fs.statSync(childSource);
         if (childStat.mode & 0o111) fs.chmodSync(path.join(root, childRelativePath), childStat.mode);
@@ -202,7 +220,7 @@ function syncInto(root, upstream) {
       continue;
     }
 
-    const content = transform(relativePath, fs.readFileSync(source, 'utf8'));
+    const content = transform(relativePath, fs.readFileSync(source, 'utf8'), context);
     writeText(root, relativePath, content);
     if (stat.mode & 0o111) fs.chmodSync(target, stat.mode);
   }
@@ -220,7 +238,7 @@ function diffDirectories(expected, actual) {
 function check(root, upstream) {
   const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'zdoc-cn-workflow-sync-'));
   try {
-    syncInto(tempRoot, upstream);
+    syncInto(tempRoot, upstream, root);
     const drift = [];
     for (const relativePath of COPIED_PATHS) {
       const expected = path.join(tempRoot, relativePath);
