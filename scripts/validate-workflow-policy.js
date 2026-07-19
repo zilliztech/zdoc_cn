@@ -85,8 +85,8 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
     }
 
     if (publishingWorkflows.has(file)) {
-      if (!['_publish-content-group.yml', '_publish-translation-batches.yml', '_translate-publish-batch.yml'].includes(file) && !/^concurrency:\n  group: docs-production-dev\n  cancel-in-progress: false$/m.test(source)) {
-        errors.push(`${file}: serialize dev publication through docs-production-dev`)
+      if (!['_publish-content-group.yml', '_publish-translation-batches.yml', '_translate-publish-batch.yml'].includes(file) && !/^concurrency:\n  group: cn-docs-production-dev\n  cancel-in-progress: false$/m.test(source)) {
+        errors.push(`${file}: serialize dev publication through cn-docs-production-dev`)
       }
       if (!/^  contents: write$/m.test(source)) {
         errors.push(`${file}: publishing workflow requires explicit contents: write`)
@@ -265,7 +265,7 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
         [/NO_UPDATE_NOTIFIER: '1'/, 'must disable update notifier network checks'],
       ]
       for (const [pattern, message] of requiredPatterns) if (!pattern.test(source)) errors.push(`${file}: ${message}`)
-      if (/secrets:|APP_ID|APP_SECRET|SPACE_ID|FIGMA_API_KEY|AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY|MODEL_API_KEY/.test(source)) {
+      if (/secrets:|APP_ID|APP_SECRET|SPACE_ID|FIGMA_API_KEY|OSS_ACCESS_KEY_ID|OSS_ACCESS_KEY_SECRET|MODEL_API_KEY/.test(source)) {
         errors.push(`${file}: offline table render must not receive third-party credentials`)
       }
     }
@@ -620,7 +620,7 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
   const monitorSource = readWorkflow('_monitor-docs-progress.yml')
   if (monitorSource) {
     if (!/^permissions:\n  actions: read\n  contents: read$/m.test(monitorSource)) errors.push('_monitor-docs-progress.yml: monitor permissions must be actions: read and contents: read')
-    if (/contents: write|actions: write|SPACE_ID|FIGMA_API_KEY|MODEL_API_KEY|AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY/.test(monitorSource)) errors.push('_monitor-docs-progress.yml: monitor must not receive write or source-production credentials')
+    if (/contents: write|actions: write|SPACE_ID|FIGMA_API_KEY|MODEL_API_KEY|OSS_ACCESS_KEY_ID|OSS_ACCESS_KEY_SECRET/.test(monitorSource)) errors.push('_monitor-docs-progress.yml: monitor must not receive write or source-production credentials')
   } else if (callerSource) {
     errors.push('_monitor-docs-progress.yml: central monitor workflow is required')
   }

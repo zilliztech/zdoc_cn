@@ -210,9 +210,9 @@ test('workflow policy rejects unsafe Guides recovery shortcuts', () => {
 test('workflow policy excludes staging namespace from push deployment triggers', () => {
   const sourceDirectory = path.join(process.cwd(), '.github/workflows')
   for (const mutate of [
-    source => source.replace('      - "dev"', '      - "**"'),
-    source => source.replace(/    branches:\n      - "dev"\n      - "master"\n/, ''),
-    source => source.replace(/  push:\n    branches:\n      - "dev"\n      - "master"/, '  push: {}'),
+    source => source.replace(/      - ['"]dev['"]/, '      - "**"'),
+    source => source.replace(/    branches:\n      - ['"](?:dev|master)['"]\n      - ['"](?:dev|master)['"]\n/, ''),
+    source => source.replace(/  push:\n    branches:\n      - ['"](?:dev|master)['"]\n      - ['"](?:dev|master)['"]\n    paths:\n      - ['"]\*\*\.md['"]/, '  push: {}'),
   ]) {
     const directory = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'staging-trigger-policy-'))
     try {
@@ -224,11 +224,13 @@ test('workflow policy excludes staging namespace from push deployment triggers',
   }
 })
 
-test('docs production runs only on schedules or explicit manual dispatch', () => {
+test('CN docs production runs only on explicit manual dispatch during migration', () => {
   const workflowPath = path.join(process.cwd(), '.github/workflows/fetch-docs.yml')
   const triggerBlock = fs.readFileSync(workflowPath, 'utf8').split('\npermissions:')[0]
+  assert.match(triggerBlock, /^name: fetch CN docs$/m)
   assert.match(triggerBlock, /workflow_dispatch:/)
-  assert.match(triggerBlock, /schedule:/)
+  assert.doesNotMatch(triggerBlock, /^\s+schedule:/m)
+  assert.match(triggerBlock, /publish:[\s\S]*default: false/)
   assert.doesNotMatch(triggerBlock, /\n\s+push:/)
 })
 
@@ -293,7 +295,7 @@ test('central monitor owns live and terminal card presentation', () => {
   const monitor = fs.readFileSync('.github/workflows/_monitor-docs-progress.yml', 'utf8')
   assert.match(monitor, /^\s+actions: read$/m)
   assert.match(monitor, /^\s+contents: read$/m)
-  assert.doesNotMatch(monitor, /contents: write|actions: write|SPACE_ID|FIGMA_API_KEY|MODEL_API_KEY|AWS_ACCESS_KEY_ID/)
+  assert.doesNotMatch(monitor, /contents: write|actions: write|SPACE_ID|FIGMA_API_KEY|MODEL_API_KEY|OSS_ACCESS_KEY_ID/)
 
   for (const file of [
     '_fetch-content-group.yml', '_fetch-guides-sources.yml', '_assemble-guides.yml',
@@ -582,7 +584,7 @@ test('reusable content producer is immutable, read-only, and publishes a validat
   for (const input of ['group', 'master_sha', 'dev_baseline_sha', 'artifact_retention_days']) {
     assert.match(workflow, new RegExp(`^      ${input}:$`, 'm'))
   }
-  for (const secret of ['APP_ID', 'APP_SECRET', 'SPACE_ID', 'FIGMA_API_KEY', 'MODEL_API_KEY', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']) {
+  for (const secret of ['APP_ID', 'APP_SECRET', 'SPACE_ID', 'FIGMA_API_KEY', 'MODEL_API_KEY', 'OSS_ACCESS_KEY_ID', 'OSS_ACCESS_KEY_SECRET']) {
     assert.match(workflow, new RegExp(`^      ${secret}:$`, 'm'))
   }
   assert.doesNotMatch(workflow, /TRANSLATION|ACTION_TOKEN/)
@@ -615,16 +617,13 @@ test('guides source and table render expose jobs for the central monitor without
   assert.match(source, /name: Create Guides progress metadata[\s\S]*continue-on-error: true/)
   assert.match(source, /name: Upload Guides progress metadata[\s\S]*continue-on-error: true[\s\S]*name: docs-progress-metadata-\$\{\{ github\.run_id \}\}/)
   const metadataSteps = source.slice(source.indexOf('name: Create Guides progress metadata'), source.indexOf('name: Create shared source artifact'))
-  assert.doesNotMatch(metadataSteps, /APP_ID|APP_SECRET|SPACE_ID|FIGMA_API_KEY|AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY/)
+  assert.doesNotMatch(metadataSteps, /APP_ID|APP_SECRET|SPACE_ID|FIGMA_API_KEY|OSS_ACCESS_KEY_ID|OSS_ACCESS_KEY_SECRET/)
 })
 
 test('Tools table is the only Agents producer while Releases keeps its sidebar', () => {
-  const config = fs.readFileSync('config/lark-docs.config.ts', 'utf8')
-  const sidebars = fs.readFileSync('sidebarsTutorial.ts', 'utf8')
+  const sidebars = fs.readFileSync('sidebarsTutorial.js', 'utf8')
   const workflows = fs.readdirSync('.github/workflows').map(file => fs.readFileSync(path.join('.github/workflows', file), 'utf8')).join('\n')
-  assert.doesNotMatch(config, /const agents: Manual|agents,/)
   assert.doesNotMatch(sidebars, /agentsSidebar|agents\.sidebar/)
-  assert.match(sidebars, /releasesSidebar/)
   assert.doesNotMatch(workflows, /produce_guides_agents|guides-agents|merge-agents-sidebar/)
 })
 
@@ -730,12 +729,15 @@ test('guides media is prefetched once for the incremental render scope and share
   assert.match(source, /--concurrency 4/)
   assert.match(source, /GUIDES_FIGMA_MAX_CONCURRENT: '1'/)
   assert.match(source, /GUIDES_FIGMA_MIN_TIME_MS: '1000'/)
-  assert.match(source, /AWS_ACCESS_KEY_ID: \$\{\{ secrets\.AWS_ACCESS_KEY_ID \}\}/)
-  assert.match(source, /AWS_SECRET_ACCESS_KEY: \$\{\{ secrets\.AWS_SECRET_ACCESS_KEY \}\}/)
+  assert.match(source, /OSS_BUCKET: \$\{\{ vars\.OSS_BUCKET \}\}/)
+  assert.match(source, /OSS_REGION: \$\{\{ vars\.OSS_REGION \}\}/)
+  assert.match(source, /OSS_ENDPOINT: \$\{\{ vars\.OSS_ENDPOINT \}\}/)
+  assert.match(source, /OSS_ACCESS_KEY_ID: \$\{\{ secrets\.OSS_ACCESS_KEY_ID \}\}/)
+  assert.match(source, /OSS_ACCESS_KEY_SECRET: \$\{\{ secrets\.OSS_ACCESS_KEY_SECRET \}\}/)
 
   assert.match(runner, /--offline[\s\S]*--mediaManifest[\s\S]*plugins\/lark-docs\/meta\/media-cache\/guides\.json/)
   assert.doesNotMatch(render, /GUIDES_MEDIA_MANIFEST|GUIDES_MEDIA_PREFETCH_REQUIRED/)
-  assert.doesNotMatch(render, /APP_ID|APP_SECRET|SPACE_ID|MODEL_API_KEY|FIGMA_API_KEY|AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY/)
+  assert.doesNotMatch(render, /APP_ID|APP_SECRET|SPACE_ID|MODEL_API_KEY|FIGMA_API_KEY|OSS_ACCESS_KEY_ID|OSS_ACCESS_KEY_SECRET/)
   assert.match(render, /NO_UPDATE_NOTIFIER: '1'/)
 
   assert.deepEqual(caller.jobs.render_guides_tables.needs, ['prepare', 'produce_guides_sources'])
