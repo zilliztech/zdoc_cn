@@ -15,6 +15,8 @@
     "upstream:materialize": "node scripts/upstream/materialize.js",
     "assemble": "node scripts/upstream/assemble.js",
     "build:assembled": "npm run assemble && pnpm --dir .zdoc-assembled run build",
+    "upstream:sync-workflows": "node scripts/upstream/sync-workflows.js --write",
+    "upstream:check-workflows": "node scripts/upstream/sync-workflows.js --check",
     "test:cn-publish-normalizer": "node plugins/cn-publish-normalizer/normalizeCnContent.test.js && node plugins/cn-publish-normalizer/remarkCnPublishNormalizer.test.js && node scripts/verify-cn-publish-artifacts.test.js",
     "test:workflow-policy": "node --test scripts/validate-workflow-policy.test.js",
     "test:docs-workflow": "node --test scripts/docs-workflow/*.test.js",

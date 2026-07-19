@@ -166,3 +166,9 @@ test('check mode fails when committed generated files drift', () => {
     fs.rmSync(fixture.directory, { recursive: true, force: true });
   }
 });
+
+test('package scripts expose workflow sync commands', () => {
+  const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'package.json'), 'utf8'));
+  assert.equal(packageJson.scripts['upstream:sync-workflows'], 'node scripts/upstream/sync-workflows.js --write');
+  assert.equal(packageJson.scripts['upstream:check-workflows'], 'node scripts/upstream/sync-workflows.js --check');
+});
