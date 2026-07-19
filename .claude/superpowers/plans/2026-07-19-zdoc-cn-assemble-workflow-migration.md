@@ -1141,3 +1141,21 @@ Expected:
 - REST should remain artifact-ready.
 - SDK/CLI producers should no longer fail from short Feishu `503` bursts under all-groups load.
 - Guides will still fail until the Feishu Base permission for `I6YUb1M0JajHrqsJGcLcZNh7neP` is corrected.
+
+## 2026-07-19 Follow-Up Breakpoint Update
+
+Observed remote run `29670862544` after producer serialization:
+- The source producer queue worked: after `prepare`, only `produce_guides_sources` ran; after its known `91403 Forbidden` failure, `produce_python` started by itself.
+- `produce_python` passed Feishu fetch, generated-doc validation/build, and link checks. This confirms the earlier short Feishu `503` failure was addressed for Python by serialization/backoff.
+- `produce_python` then failed in `Update content snapshots` because `_fetch-content-group.yml` referenced missing `scripts/update-sdk-reference-snapshots.sh`; that wrapper also depends on missing `scripts/update-lark-doc-snapshot.js`.
+
+Implemented follow-up fix:
+- Ported upstream `scripts/update-sdk-reference-snapshots.sh`.
+- Ported upstream `scripts/update-lark-doc-snapshot.js`.
+- Added workflow policy regression coverage requiring both files when `_fetch-content-group.yml` references SDK snapshot updates.
+
+Fresh follow-up verification:
+- `npm run test:workflow-policy`: pass
+- `node --check scripts/update-lark-doc-snapshot.js`: pass
+- `bash -n scripts/update-sdk-reference-snapshots.sh`: pass
+- `git diff --check`: pass
