@@ -85,6 +85,21 @@ test('rejects blocked upstream-owned destinations', () => {
   }
 });
 
+test('production docs workflows stay first-class in zdoc_cn', () => {
+  const blocked = [
+    ['.github/workflows/_assemble-guides.yml', '.github/workflows/_assemble-guides.yml'],
+    ['scripts/docs-workflow', 'scripts/docs-workflow'],
+  ];
+
+  for (const [from, to] of blocked) {
+    assert.throws(
+      () => validateOverlayManifest({ compatibility: 1, copy: [{ from, to }], patches: [] }),
+      /blocked|not allowlisted/,
+      `${from} must not be introduced through overlay-manifest.json`,
+    );
+  }
+});
+
 test('rejects destinations outside the positive allowlist', () => {
   for (const destination of [
     'docs',
