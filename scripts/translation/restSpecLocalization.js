@@ -15,7 +15,22 @@ function parseRestDocument(content) {
   return { prefix: content.slice(0, start), sourceSpecs, suffix: content.slice(suffixStart) }
 }
 
-function collectLocalizableEntries(root) {
+function hasLocaleTranslation(value, locale, key) {
+  return Boolean(
+    locale
+    && value
+    && typeof value === 'object'
+    && value['x-i18n']
+    && typeof value['x-i18n'] === 'object'
+    && value['x-i18n'][locale]
+    && typeof value['x-i18n'][locale] === 'object'
+    && typeof value['x-i18n'][locale][key] === 'string'
+    && value['x-i18n'][locale][key].trim()
+  )
+}
+
+function collectLocalizableEntries(root, options = {}) {
+  const { locale } = options
   const entries = []
   function visit(value, path = []) {
     if (!value || typeof value !== 'object') return
@@ -25,7 +40,7 @@ function collectLocalizableEntries(root) {
     }
     for (const [key, child] of Object.entries(value)) {
       if (key === 'x-i18n') continue
-      if (LOCALIZABLE_KEYS.has(key) && typeof child === 'string' && child.trim()) {
+      if (LOCALIZABLE_KEYS.has(key) && typeof child === 'string' && child.trim() && !hasLocaleTranslation(value, locale, key)) {
         entries.push({ id: JSON.stringify([...path, key]), text: child, objectPath: path, key })
       }
       if (!PRESERVED_SUBTREES.has(key)) visit(child, [...path, key])
@@ -110,7 +125,7 @@ function batchEntries(entries, maxChars = 12000) {
 }
 
 async function translateRestSpecs({ sourceSpecs, locale, callModel, systemPrompt }) {
-  const entries = collectLocalizableEntries(sourceSpecs)
+  const entries = collectLocalizableEntries(sourceSpecs, { locale })
   const translated = []
   for (const batch of batchEntries(entries)) {
     const response = await callModel({

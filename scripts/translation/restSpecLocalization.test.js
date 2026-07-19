@@ -18,16 +18,30 @@ test('extracts supported prose without examples or existing locale data', () => 
   assert.deepEqual(entries.map(entry => entry.key), ['summary', 'description', 'description'])
   assert.ok(entries.every(entry => !entry.id.includes('example')))
   assert.ok(entries.every(entry => !entry.id.includes('x-i18n')))
+
+  const untranslated = collectLocalizableEntries(sourceSpecs, { locale: 'zh-CN' })
+  assert.deepEqual(untranslated.map(entry => entry.id), [
+    '["description"]',
+    '["properties","limit","description"]',
+  ])
 })
 
 test('adds Chinese locale data without changing the source specification', async () => {
   const { localized, translatedCount } = await translateRestSpecs({
     sourceSpecs, locale: 'zh-CN', systemPrompt: 'prompt',
-    callModel: async ({ messages }) => JSON.stringify(JSON.parse(messages[1].content.split('\n\n')[1]).map(entry => ({ ...entry, text: `JA:${entry.text}` }))),
+    callModel: async ({ messages }) => {
+      const entries = JSON.parse(messages[1].content.split('\n\n')[1])
+      assert.deepEqual(entries.map(entry => entry.id), [
+        '["description"]',
+        '["properties","limit","description"]',
+      ])
+      return JSON.stringify(entries.map(entry => ({ ...entry, text: `ZH:${entry.text}` })))
+    },
   })
-  assert.equal(translatedCount, 3)
-  assert.equal(localized['x-i18n']['zh-CN'].summary, 'JA:Search')
-  assert.equal(localized.properties.limit['x-i18n']['zh-CN'].description, 'JA:Maximum results.')
+  assert.equal(translatedCount, 2)
+  assert.equal(localized['x-i18n']['zh-CN'].summary, '搜索')
+  assert.equal(localized['x-i18n']['zh-CN'].description, 'ZH:Search a collection.')
+  assert.equal(localized.properties.limit['x-i18n']['zh-CN'].description, 'ZH:Maximum results.')
   assert.deepEqual(localized.example, sourceSpecs.example)
   assert.deepEqual(removeLocale(localized, 'zh-CN'), removeLocale(sourceSpecs, 'zh-CN'))
 })
