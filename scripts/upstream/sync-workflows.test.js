@@ -145,6 +145,35 @@ module.exports = {
   }
 }
 `);
+  writeFile(upstream, 'scripts/docs-workflow/render-guides-table.js', `const fs = require('node:fs')
+const path = require('node:path')
+
+function tableOutputPath(entry) {
+  return \`docs/tutorials/\${entry.table_slug}\`
+}
+
+function renderGuidesTable(options) {
+  const { workspace, spawnSync } = options
+  const outputPath = tableOutputPath(options)
+  const absoluteOutput = path.join(workspace, outputPath)
+  fs.rmSync(absoluteOutput, { recursive: true, force: true })
+  if (options.cleanup) return { outputPath, cleanup: true }
+  const result = spawnSync('npx', [], { cwd: workspace })
+  if (result.status !== 0) throw new Error(\`Guides table render failed with status \${result.status}\`)
+  return { outputPath, cleanup: false }
+}
+`);
+  writeFile(upstream, 'scripts/docs-workflow/render-guides-table.test.js', `const assert = require('node:assert/strict')
+const fs = require('node:fs')
+const os = require('node:os')
+const path = require('node:path')
+const test = require('node:test')
+const { renderGuidesTable } = require('./render-guides-table')
+
+test('cleanup render removes the owned directory without invoking Docusaurus', () => {
+  assert.equal(typeof renderGuidesTable, 'function')
+})
+`);
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
   writeFile(upstream, 'scripts/update-lark-doc-snapshot.js', "console.log('snapshot');\n");
 
@@ -234,6 +263,13 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(guidesTables, /loadCnGuidesTableSlugOverrides/);
     assert.match(guidesTables, /config', 'guides-table-slugs\.json'/);
     assert.match(guidesTables, /TABLE_SLUG_OVERRIDES\[tableId\]/);
+    const renderGuidesTableScript = readFile(fixture.root, 'scripts/docs-workflow/render-guides-table.js');
+    assert.match(renderGuidesTableScript, /normalizeRenderedTableOutput/);
+    assert.match(renderGuidesTableScript, /const beforeChildren = snapshotChildren\(path\.dirname\(absoluteOutput\)\)/);
+    assert.match(renderGuidesTableScript, /normalizeRenderedTableOutput\(workspace, outputPath, beforeChildren\)/);
+    const renderGuidesTableTest = readFile(fixture.root, 'scripts/docs-workflow/render-guides-table.test.js');
+    assert.match(renderGuidesTableTest, /localized renderer output/);
+    assert.match(renderGuidesTableTest, /table_slug: 'ai-models'/);
     assert.equal(readFile(fixture.root, 'scripts/collect-build-card-notes.js'), "console.log('card notes');\n");
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");
   } finally {

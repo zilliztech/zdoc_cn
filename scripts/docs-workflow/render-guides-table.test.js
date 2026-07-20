@@ -44,6 +44,33 @@ test('table render clears only its directory and renders the Base table subtree'
   assert.equal(command.includes('--mediaManifest'), true)
 })
 
+test('table render normalizes localized renderer output into the configured table slug directory', () => {
+  const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'render-guides-table-'))
+  const expected = path.join(workspace, 'docs/tutorials/ai-models')
+  const localized = path.join(workspace, 'docs/tutorials/ai')
+  const other = path.join(workspace, 'docs/tutorials/management')
+  fs.mkdirSync(expected, { recursive: true })
+  fs.writeFileSync(path.join(expected, 'stale.md'), 'stale')
+  fs.mkdirSync(other, { recursive: true })
+  fs.writeFileSync(path.join(other, 'keep.md'), 'keep')
+
+  const spawnSync = () => {
+    fs.mkdirSync(localized, { recursive: true })
+    fs.writeFileSync(path.join(localized, 'integrate-with-model-providers.md'), 'canonical')
+    return { status: 0 }
+  }
+
+  const result = renderGuidesTable({
+    workspace, table_id: 'tbl-ai', table_name: 'AI 模型', table_slug: 'ai-models', target: 'zilliz.saas', cleanup: false, spawnSync,
+  })
+
+  assert.equal(result.outputPath, 'docs/tutorials/ai-models')
+  assert.equal(fs.existsSync(path.join(expected, 'stale.md')), false)
+  assert.equal(fs.readFileSync(path.join(expected, 'integrate-with-model-providers.md'), 'utf8'), 'canonical')
+  assert.equal(fs.existsSync(localized), false)
+  assert.equal(fs.readFileSync(path.join(other, 'keep.md'), 'utf8'), 'keep')
+})
+
 test('cleanup render removes the owned directory without invoking Docusaurus', () => {
   const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'render-guides-table-'))
   const owned = path.join(workspace, 'docs-byoc/tutorials/tools')

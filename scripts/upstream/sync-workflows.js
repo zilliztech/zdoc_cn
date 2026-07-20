@@ -164,6 +164,122 @@ const TARGETS = ['zilliz.paas', 'zilliz.saas']`,
   );
 }
 
+function applyCnRenderGuidesTableSlugNormalizationPatch(content) {
+  if (content.includes('normalizeRenderedTableOutput')) return content;
+
+  let next = content.replace(
+    '\nfunction renderGuidesTable(options) {',
+    `
+function hasFiles(directory) {
+  let entries
+  try { entries = fs.readdirSync(directory, { withFileTypes: true }) } catch (error) {
+    if (error.code === 'ENOENT') return false
+    throw error
+  }
+  for (const entry of entries) {
+    const full = path.join(directory, entry.name)
+    if (entry.isDirectory() && hasFiles(full)) return true
+    if (entry.isFile()) return true
+  }
+  return false
+}
+
+function snapshotChildren(directory) {
+  const snapshot = new Map()
+  let entries
+  try { entries = fs.readdirSync(directory, { withFileTypes: true }) } catch (error) {
+    if (error.code === 'ENOENT') return snapshot
+    throw error
+  }
+  for (const entry of entries) {
+    const full = path.join(directory, entry.name)
+    if (entry.isDirectory()) snapshot.set(entry.name, fs.statSync(full).mtimeMs)
+  }
+  return snapshot
+}
+
+function normalizeRenderedTableOutput(workspace, outputPath, beforeChildren) {
+  const absoluteOutput = path.join(workspace, outputPath)
+  if (hasFiles(absoluteOutput)) return
+
+  const relativeRoot = path.posix.dirname(outputPath)
+  const expectedName = path.posix.basename(outputPath)
+  const absoluteRoot = path.join(workspace, relativeRoot)
+  let entries
+  try { entries = fs.readdirSync(absoluteRoot, { withFileTypes: true }) } catch (error) {
+    if (error.code === 'ENOENT') return
+    throw error
+  }
+
+  const candidates = entries
+    .filter(entry => entry.isDirectory() && entry.name !== expectedName)
+    .filter(entry => {
+      const full = path.join(absoluteRoot, entry.name)
+      const beforeMtime = beforeChildren.get(entry.name)
+      const changed = beforeMtime == null || fs.statSync(full).mtimeMs > beforeMtime
+      return changed && hasFiles(full)
+    })
+
+  if (candidates.length === 0) return
+  if (candidates.length > 1) {
+    throw new Error(\`Cannot normalize Guides table output for \${outputPath}; multiple rendered directories: \${candidates.map(entry => entry.name).join(', ')}\`)
+  }
+
+  fs.rmSync(absoluteOutput, { recursive: true, force: true })
+  fs.mkdirSync(path.dirname(absoluteOutput), { recursive: true })
+  fs.renameSync(path.join(absoluteRoot, candidates[0].name), absoluteOutput)
+}
+
+function renderGuidesTable(options) {`,
+  );
+  next = next.replace(
+    '  fs.rmSync(absoluteOutput, { recursive: true, force: true })\n  if (options.cleanup) return { outputPath, cleanup: true }',
+    '  fs.rmSync(absoluteOutput, { recursive: true, force: true })\n  const beforeChildren = snapshotChildren(path.dirname(absoluteOutput))\n  if (options.cleanup) return { outputPath, cleanup: true }',
+  );
+  next = next.replace(
+    '  if (result.status !== 0) throw new Error(`Guides table render failed with status ${result.status}`)\n  return { outputPath, cleanup: false }',
+    '  if (result.status !== 0) throw new Error(`Guides table render failed with status ${result.status}`)\n  normalizeRenderedTableOutput(workspace, outputPath, beforeChildren)\n  return { outputPath, cleanup: false }',
+  );
+  return next;
+}
+
+function applyCnRenderGuidesTableSlugNormalizationTestPatch(content) {
+  if (content.includes('localized renderer output')) return content;
+
+  return content.replace(
+    "\ntest('cleanup render removes the owned directory without invoking Docusaurus', () => {",
+    `
+test('table render normalizes localized renderer output into the configured table slug directory', () => {
+  const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'render-guides-table-'))
+  const expected = path.join(workspace, 'docs/tutorials/ai-models')
+  const localized = path.join(workspace, 'docs/tutorials/ai')
+  const other = path.join(workspace, 'docs/tutorials/management')
+  fs.mkdirSync(expected, { recursive: true })
+  fs.writeFileSync(path.join(expected, 'stale.md'), 'stale')
+  fs.mkdirSync(other, { recursive: true })
+  fs.writeFileSync(path.join(other, 'keep.md'), 'keep')
+
+  const spawnSync = () => {
+    fs.mkdirSync(localized, { recursive: true })
+    fs.writeFileSync(path.join(localized, 'integrate-with-model-providers.md'), 'canonical')
+    return { status: 0 }
+  }
+
+  const result = renderGuidesTable({
+    workspace, table_id: 'tbl-ai', table_name: 'AI 模型', table_slug: 'ai-models', target: 'zilliz.saas', cleanup: false, spawnSync,
+  })
+
+  assert.equal(result.outputPath, 'docs/tutorials/ai-models')
+  assert.equal(fs.existsSync(path.join(expected, 'stale.md')), false)
+  assert.equal(fs.readFileSync(path.join(expected, 'integrate-with-model-providers.md'), 'utf8'), 'canonical')
+  assert.equal(fs.existsSync(localized), false)
+  assert.equal(fs.readFileSync(path.join(other, 'keep.md'), 'utf8'), 'keep')
+})
+
+test('cleanup render removes the owned directory without invoking Docusaurus', () => {`,
+  );
+}
+
 function removeScheduleBlock(content) {
   return content.replace(/\n\s+schedule:\n(?:\s+- cron: .*?\n)+/m, '\n');
 }
@@ -258,6 +374,8 @@ function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyCnGuidesFetchThrottlePatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_render-guides-table.yml') next = applyRenderGuidesTableAssembledUpstreamPatch(next);
   if (relativePath === 'scripts/docs-workflow/guides-tables.js') next = applyCnGuidesTableSlugPatch(next);
+  if (relativePath === 'scripts/docs-workflow/render-guides-table.js') next = applyCnRenderGuidesTableSlugNormalizationPatch(next);
+  if (relativePath === 'scripts/docs-workflow/render-guides-table.test.js') next = applyCnRenderGuidesTableSlugNormalizationTestPatch(next);
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);
     next = applyDocsBrandPatch(next);

@@ -16,12 +16,73 @@ function tableOutputPath(entry) {
   return `${root}/${entry.table_slug}`
 }
 
+function hasFiles(directory) {
+  let entries
+  try { entries = fs.readdirSync(directory, { withFileTypes: true }) } catch (error) {
+    if (error.code === 'ENOENT') return false
+    throw error
+  }
+  for (const entry of entries) {
+    const full = path.join(directory, entry.name)
+    if (entry.isDirectory() && hasFiles(full)) return true
+    if (entry.isFile()) return true
+  }
+  return false
+}
+
+function snapshotChildren(directory) {
+  const snapshot = new Map()
+  let entries
+  try { entries = fs.readdirSync(directory, { withFileTypes: true }) } catch (error) {
+    if (error.code === 'ENOENT') return snapshot
+    throw error
+  }
+  for (const entry of entries) {
+    const full = path.join(directory, entry.name)
+    if (entry.isDirectory()) snapshot.set(entry.name, fs.statSync(full).mtimeMs)
+  }
+  return snapshot
+}
+
+function normalizeRenderedTableOutput(workspace, outputPath, beforeChildren) {
+  const absoluteOutput = path.join(workspace, outputPath)
+  if (hasFiles(absoluteOutput)) return
+
+  const relativeRoot = path.posix.dirname(outputPath)
+  const expectedName = path.posix.basename(outputPath)
+  const absoluteRoot = path.join(workspace, relativeRoot)
+  let entries
+  try { entries = fs.readdirSync(absoluteRoot, { withFileTypes: true }) } catch (error) {
+    if (error.code === 'ENOENT') return
+    throw error
+  }
+
+  const candidates = entries
+    .filter(entry => entry.isDirectory() && entry.name !== expectedName)
+    .filter(entry => {
+      const full = path.join(absoluteRoot, entry.name)
+      const beforeMtime = beforeChildren.get(entry.name)
+      const changed = beforeMtime == null || fs.statSync(full).mtimeMs > beforeMtime
+      return changed && hasFiles(full)
+    })
+
+  if (candidates.length === 0) return
+  if (candidates.length > 1) {
+    throw new Error(`Cannot normalize Guides table output for ${outputPath}; multiple rendered directories: ${candidates.map(entry => entry.name).join(', ')}`)
+  }
+
+  fs.rmSync(absoluteOutput, { recursive: true, force: true })
+  fs.mkdirSync(path.dirname(absoluteOutput), { recursive: true })
+  fs.renameSync(path.join(absoluteRoot, candidates[0].name), absoluteOutput)
+}
+
 function renderGuidesTable(options) {
   const { workspace, spawnSync = defaultSpawnSync } = options
   if (!workspace || !options.table_id) throw new Error('workspace and table_id are required')
   const outputPath = tableOutputPath(options)
   const absoluteOutput = path.join(workspace, outputPath)
   fs.rmSync(absoluteOutput, { recursive: true, force: true })
+  const beforeChildren = snapshotChildren(path.dirname(absoluteOutput))
   if (options.cleanup) return { outputPath, cleanup: true }
 
   const args = [
@@ -33,6 +94,7 @@ function renderGuidesTable(options) {
   const result = spawnSync('npx', args, { cwd: workspace, stdio: 'inherit', env: process.env })
   if (result.error) throw new Error(`Guides table render could not start: ${result.error.message}`)
   if (result.status !== 0) throw new Error(`Guides table render failed with status ${result.status}`)
+  normalizeRenderedTableOutput(workspace, outputPath, beforeChildren)
   return { outputPath, cleanup: false }
 }
 

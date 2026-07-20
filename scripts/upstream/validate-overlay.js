@@ -21,6 +21,7 @@ const ALLOWED_COPY_TARGETS = new Map([
   ['content-config', 'content-config/zh-CN'],
   ['config/lark-docs.config.ts', 'config/lark-docs.config.ts'],
   ['config/cn-publish-replacements.js', 'config/cn-publish-replacements.js'],
+  ['scripts/docs-workflow/render-guides-table.js', 'scripts/docs-workflow/render-guides-table.js'],
   ['plugins/cn-publish-normalizer', 'plugins/cn-publish-normalizer'],
   ['plugins/adapters/aliyun-oss', 'plugins/adapters/aliyun-oss'],
   ['rest-overrides/zh-CN', 'rest-overrides/zh-CN'],
@@ -47,6 +48,7 @@ function normalizeRelativePath(input, label) {
 }
 
 function isBlockedDestination(toPath) {
+  if (toPath === 'scripts/docs-workflow/render-guides-table.js') return false;
   if (BLOCKED_FILES.has(toPath)) return true;
   if (/^\.github\/workflows\/_[^/]+\.ya?ml$/.test(toPath)) return true;
   return BLOCKED_PREFIXES.some((blocked) => toPath === blocked || toPath.startsWith(`${blocked}/`));
