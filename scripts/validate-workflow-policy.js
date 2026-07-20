@@ -302,7 +302,7 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
       const decisionStep = steps[decisionIndex]
       if (!/validate-decision[\s\S]*decision-sha[\s\S]*inputs\.assembly_decision_sha256/.test(decisionStep?.run || '')) errors.push(`${file}: assembly must validate the restored decision against the plumbed canonical hash`)
       const generatorStep = steps[generateIndex]
-      if (generatorStep?.if || generatorStep?.run !== 'node scripts/docs-workflow/generate-guides-sidebars.js --media-manifest plugins/lark-docs/meta/media-cache/guides.json') errors.push(`${file}: observe-only assembly generator must always run the fixed two-target wrapper once`)
+      if (generatorStep?.if || generatorStep?.run !== 'cd .zdoc-assembled && node scripts/docs-workflow/generate-guides-sidebars.js --media-manifest plugins/lark-docs/meta/media-cache/guides.json') errors.push(`${file}: observe-only assembly generator must always run the fixed two-target wrapper once`)
       const validationStep = steps[validateIndex]
       if (!/validate-generated-sidebars\.js[\s\S]*run-doc-build-stage\.js --build "pnpm run build"/.test(validationStep?.run || '')) errors.push(`${file}: combined sidebar and full build validation must run before descriptor promotion`)
       const finalizeStep = steps[finalizeIndex]
@@ -319,7 +319,7 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
         errors.push(`${file}: v4 generation payload must be created, keyed, and revalidated from the exact promoted snapshot only when save is required`)
       }
       const save = stepById.get('save_guides_v4_generation')
-      if (save?.if !== "${{ inputs.cache_save_required == 'true' && steps.guides_v4_generation.outcome == 'success' }}" || save?.['continue-on-error'] !== true || save?.uses !== 'actions/cache/save@v4' || save?.with?.path !== 'tmp/guides-source-cache-v4' || save?.with?.key !== '${{ steps.guides_v4_generation.outputs.key }}') {
+      if (save?.if !== "${{ inputs.cache_save_required == 'true' && steps.guides_v4_generation.outcome == 'success' }}" || save?.['continue-on-error'] !== true || save?.uses !== 'actions/cache/save@v4' || save?.with?.path !== '.zdoc-assembled/tmp/guides-source-cache-v4' || save?.with?.key !== '${{ steps.guides_v4_generation.outputs.key }}') {
         errors.push(`${file}: Guides v4 cache save must be conditional, nonfatal, and use the promoted snapshot generation key`)
       }
       const report = steps.find(step => step.name === 'Record Guides cache generation persistence')
