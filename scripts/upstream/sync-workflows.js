@@ -421,6 +421,14 @@ function applyAssembleGuidesAssembledUpstreamPatch(content) {
     /--repository-root "\$GITHUB_WORKSPACE"/g,
     '--repository-root "$GITHUB_WORKSPACE/.zdoc-assembled"',
   );
+  if (!next.includes('name: Normalize CN Guides refs')) {
+    next = next.replace(
+      /(\n      - name: Restore validated Guides source\n        run: \|\n(?:          .+\n)+?          node scripts\/docs-workflow\/guides-stage-artifact\.js .+\n)/,
+      `$1      - name: Normalize CN Guides refs
+        run: node scripts/normalize-cn-guides-source.js --source-dir "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/sources/guides" --output "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/reports/cn-guides-ref-normalization.json"
+`,
+    );
+  }
   next = next.replace(
     /node scripts\/docs-workflow\/restore-guides-table-artifacts\.js/g,
     'node .zdoc-assembled/scripts/docs-workflow/restore-guides-table-artifacts.js',

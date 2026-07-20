@@ -111,7 +111,9 @@ jobs:
         with: { node-version: '20', cache: pnpm }
       - run: pnpm install --frozen-lockfile
       - name: Restore validated Guides source
-        run: node scripts/docs-workflow/guides-stage-artifact.js --operation restore --target "$GITHUB_WORKSPACE"
+        run: |
+          tar -xf "$RUNNER_TEMP/source-download/guides-source.tar" -C "$RUNNER_TEMP/source-download"
+          node scripts/docs-workflow/guides-stage-artifact.js --operation restore --target "$GITHUB_WORKSPACE"
       - name: Restore validated Guides table artifacts
         run: node scripts/docs-workflow/restore-guides-table-artifacts.js --target "$GITHUB_WORKSPACE"
       - id: assembly_decision
@@ -338,6 +340,9 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(assembleGuides, /name: Install assembled dependencies/);
     assert.match(assembleGuides, /pnpm --dir \.zdoc-assembled install --frozen-lockfile/);
     assert.match(assembleGuides, /--target "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(assembleGuides, /name: Normalize CN Guides refs/);
+    assert.match(assembleGuides, /node scripts\/normalize-cn-guides-source\.js --source-dir "\$GITHUB_WORKSPACE\/\.zdoc-assembled\/plugins\/lark-docs\/meta\/sources\/guides"/);
+    assert.match(assembleGuides, /cn-guides-ref-normalization\.json/);
     assert.match(assembleGuides, /node \.zdoc-assembled\/scripts\/docs-workflow\/restore-guides-table-artifacts\.js/);
     assert.match(assembleGuides, /--repository-root "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
     assert.match(assembleGuides, /"\$GITHUB_WORKSPACE\/\.zdoc-assembled\/\$decision"/);
