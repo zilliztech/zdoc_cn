@@ -3,7 +3,6 @@
 
 const fs = require('node:fs')
 const path = require('node:path')
-const slugify = require('slugify')
 const { guidesCanonicalIsPublishable, guidesRecordPublishTargets } = require('../../plugins/lark-docs/guidesBaseRecordSemantics')
 
 function loadCnGuidesTableSlugOverrides() {
@@ -28,6 +27,15 @@ function normalizeTarget(target) {
 
 function targetName(target) {
   return target === 'zilliz.paas' ? 'byoc' : 'saas'
+}
+
+function strictSlug(value) {
+  return String(value || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 function currentOwnership(snapshot) {
@@ -64,7 +72,7 @@ function buildGuidesTableMatrix({ plan, snapshot }) {
       entries.push({
         table_id: tableId,
         table_name: tableName,
-        table_slug: TABLE_SLUG_OVERRIDES[tableId] || slugify(tableName, { lower: true, strict: true }),
+        table_slug: TABLE_SLUG_OVERRIDES[tableId] || strictSlug(tableName),
         target: normalizedTarget,
         target_name: targetName(normalizedTarget),
         cleanup: !currentTargets.has(normalizedTarget),
@@ -100,4 +108,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { buildGuidesTableMatrix, normalizeTarget }
+module.exports = { buildGuidesTableMatrix, normalizeTarget, strictSlug }

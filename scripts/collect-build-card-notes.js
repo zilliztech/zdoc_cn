@@ -324,9 +324,60 @@ function incrementalPlanNote() {
   ].filter(Boolean).join('\n')
 }
 
+function cnGuidesEmptyRefsNote() {
+  const reportsDir = 'plugins/lark-docs/meta/reports'
+  let files = []
+  try {
+    files = fs.readdirSync(reportsDir)
+      .filter(file => /^cn-guides-ref-normalization(?:-.+)?\.json$/.test(file))
+      .map(file => path.posix.join(reportsDir, file))
+      .sort()
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error
+    return null
+  }
+
+  const skipped = new Map()
+  const blockers = []
+  const usedFiles = []
+  for (const file of files) {
+    const report = readJsonIfExists(file)
+    if (!report || !Array.isArray(report.disabled)) continue
+    usedFiles.push(file)
+    for (const item of report.disabled) {
+      if (item?.reason !== 'empty-target') continue
+      const key = item.node_token || `${item.source_file || ''}:${item.title || ''}:${item.ref_target_token || ''}`
+      if (!skipped.has(key)) skipped.set(key, item)
+    }
+    if (Array.isArray(report.blockers)) blockers.push(...report.blockers)
+  }
+  if (skipped.size === 0) return null
+
+  const examples = [...skipped.values()].slice(0, 8).map(item => {
+    const title = item.title || item.node_token || '(untitled ref)'
+    const target = item.target_title || item.ref_target_token || '(unknown target)'
+    return `- ${title} -> ${target}`
+  })
+  return [
+    '# CN Guides empty docs',
+    '',
+    `- Skipped empty ref docs: ${skipped.size}`,
+    `- Missing ref target blockers: ${blockers.length}`,
+    '',
+    '## Examples',
+    ...examples,
+    skipped.size > examples.length ? `- ...and ${skipped.size - examples.length} more skipped empty refs` : null,
+    '',
+    '## Reports',
+    ...reportFileLines(usedFiles.slice(0, 6)),
+    usedFiles.length > 6 ? `- ...and ${usedFiles.length - 6} more normalization report files` : null,
+  ].filter(Boolean).join('\n')
+}
+
 const GUIDES_REPORTS = Object.freeze([
   { key: 'media-prefetch', title: 'Guides media prefetch report', collect: mediaPrefetchNote },
   { key: 'cache-generation', title: 'Guides cache persistence report', collect: cacheGenerationNote },
+  { key: 'cn-empty-refs', title: 'CN Guides empty docs report', collect: cnGuidesEmptyRefsNote },
   { key: 'content-links', title: 'Canonical content links audit', collect: brokenContentLinksNote },
   { key: 'canonical-links', title: 'Canonical link audit', collect: canonicalLinkNote },
   { key: 'incremental-plan', title: 'Incremental fetch plan', collect: incrementalPlanNote },
@@ -423,6 +474,7 @@ module.exports = {
   brokenContentLinksNote,
   cacheGenerationNote,
   canonicalLinkNote,
+  cnGuidesEmptyRefsNote,
   collectCardNotes,
   collectNotes,
   compactMarkdown,

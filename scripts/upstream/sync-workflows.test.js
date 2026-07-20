@@ -250,6 +250,65 @@ test('cleanup render removes the owned directory without invoking Docusaurus', (
   assert.equal(typeof renderGuidesTable, 'function')
 })
 `);
+  writeFile(upstream, 'scripts/docs-workflow/restore-guides-table-artifacts.js', `const fs = require('node:fs/promises')
+const path = require('node:path')
+const { artifactId, validateGuidesTableArtifact } = require('./guides-table-artifact')
+
+async function restoreGuidesTableArtifacts({ matrix, artifactDirs, target, sourceArtifactSha256 = null }) {
+  if (!Array.isArray(matrix) || !Array.isArray(artifactDirs)) throw new Error('matrix and artifactDirs must be arrays')
+  const expected = new Map()
+  for (const entry of matrix) {
+    const id = artifactId(entry)
+    if (expected.has(id)) throw new Error(\`Duplicate Guides table matrix entry: \${id}\`)
+    expected.set(id, entry)
+  }
+  const artifacts = new Map()
+  for (const directory of artifactDirs) {
+    const manifest = await validateGuidesTableArtifact(directory)
+    if (sourceArtifactSha256 && manifest.sourceArtifactSha256 !== sourceArtifactSha256) throw new Error(\`Guides table source artifact mismatch: \${manifest.id}\`)
+    if (artifacts.has(manifest.id)) throw new Error(\`Duplicate Guides table artifact: \${manifest.id}\`)
+    artifacts.set(manifest.id, { directory, manifest })
+  }
+  for (const id of expected.keys()) if (!artifacts.has(id)) throw new Error(\`Missing Guides table artifact: \${id}\`)
+  for (const id of artifacts.keys()) if (!expected.has(id)) throw new Error(\`Extra Guides table artifact: \${id}\`)
+
+  const restored = []
+  for (const [id, entry] of expected) {
+    const { directory, manifest } = artifacts.get(id)
+    await validateGuidesTableArtifact(directory, entry)
+    await fs.rm(path.join(target, manifest.ownedPath), { recursive: true, force: true })
+    for (const file of manifest.files) {
+      const destination = path.join(target, file.path)
+      await fs.mkdir(path.dirname(destination), { recursive: true })
+      await fs.copyFile(path.join(directory, 'payload', file.path), destination)
+    }
+    restored.push(manifest)
+  }
+  return restored
+}
+
+module.exports = { restoreGuidesTableArtifacts }
+`);
+  writeFile(upstream, 'scripts/docs-workflow/restore-guides-table-artifacts.test.js', `test('restores exactly one artifact for every matrix entry', async () => {})
+test('rejects missing, extra, and duplicate table artifacts', async () => {})
+`);
+  writeFile(upstream, 'scripts/docs-workflow/finalize-translation-batches.js', `function finalizeTranslationBatches(options) {
+  const preparationResult = options.preparationResult
+  const batchResult = options.batchResult
+  const publisherResult = options.publisherResult
+  const batchCount = options.batchCount
+  if (!options.publish) {
+    if (preparationResult !== 'skipped' || batchResult !== 'skipped' || publisherResult !== 'skipped' || batchCount !== 0) throw new Error('disabled publication requires skipped preparation, translation, and publisher results with zero batches')
+  }
+}
+module.exports = { finalizeTranslationBatches }
+`);
+  writeFile(upstream, 'scripts/docs-workflow/finalize-translation-batches.test.js', `test('reports publication disabled as skipped', () => {})
+test('disabled publication requires every downstream result to be skipped', () => {
+  for (const input of []) assert.throws(() => finalizeTranslationBatches(input), /disabled|skipped/i)
+})
+test('validates publisher status and status-dependent SHA invariants', () => {})
+`);
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
   writeFile(upstream, 'scripts/update-lark-doc-snapshot.js', "console.log('snapshot');\n");
 
@@ -329,6 +388,9 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(renderGuidesTable, /name: Install assembled dependencies/);
     assert.match(renderGuidesTable, /pnpm --dir \.zdoc-assembled install --frozen-lockfile/);
     assert.match(renderGuidesTable, /--target "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(renderGuidesTable, /name: Normalize CN Guides source/);
+    assert.match(renderGuidesTable, /--matrix-file "\$RUNNER_TEMP\/guides-table-matrix\.json"/);
+    assert.match(renderGuidesTable, /ENTRY_JSON: \$\{\{ toJSON\(inputs\) \}\}/);
     assert.match(renderGuidesTable, /node \.zdoc-assembled\/scripts\/docs-workflow\/render-guides-table\.js --workspace "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
     assert.match(renderGuidesTable, /--workspace "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
 
@@ -341,7 +403,9 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(assembleGuides, /pnpm --dir \.zdoc-assembled install --frozen-lockfile/);
     assert.match(assembleGuides, /--target "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
     assert.match(assembleGuides, /name: Normalize CN Guides refs/);
+    assert.match(assembleGuides, /MATRIX_JSON: \$\{\{ inputs\.table_matrix \}\}/);
     assert.match(assembleGuides, /node scripts\/normalize-cn-guides-source\.js --source-dir "\$GITHUB_WORKSPACE\/\.zdoc-assembled\/plugins\/lark-docs\/meta\/sources\/guides"/);
+    assert.match(assembleGuides, /--matrix-file "\$RUNNER_TEMP\/guides-table-matrix\.json"/);
     assert.match(assembleGuides, /cn-guides-ref-normalization\.json/);
     assert.match(assembleGuides, /node \.zdoc-assembled\/scripts\/docs-workflow\/restore-guides-table-artifacts\.js/);
     assert.match(assembleGuides, /--repository-root "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
@@ -360,6 +424,8 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(guidesTables, /loadCnGuidesTableSlugOverrides/);
     assert.match(guidesTables, /config', 'guides-table-slugs\.json'/);
     assert.match(guidesTables, /TABLE_SLUG_OVERRIDES\[tableId\]/);
+    assert.match(guidesTables, /function strictSlug\(value\)/);
+    assert.doesNotMatch(guidesTables, /require\('slugify'\)/);
     const renderGuidesTableScript = readFile(fixture.root, 'scripts/docs-workflow/render-guides-table.js');
     assert.match(renderGuidesTableScript, /normalizeRenderedTableOutput/);
     assert.match(renderGuidesTableScript, /const beforeChildren = snapshotChildren\(path\.dirname\(absoluteOutput\)\)/);
@@ -369,6 +435,18 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(renderGuidesTableTest, /table_slug: 'ai-models'/);
     assert.match(renderGuidesTableTest, /localized table slug is empty/);
     assert.match(renderGuidesTableTest, /table_slug: 'client-libraries'/);
+    const restoreGuidesTableArtifacts = readFile(fixture.root, 'scripts/docs-workflow/restore-guides-table-artifacts.js');
+    assert.match(restoreGuidesTableArtifacts, /staleOwnedPathsFromSnapshot/);
+    assert.match(restoreGuidesTableArtifacts, /expectedOwnedPaths\.add\(tableOutputPath\(entry\)\)/);
+    const restoreGuidesTableArtifactsTest = readFile(fixture.root, 'scripts/docs-workflow/restore-guides-table-artifacts.test.js');
+    assert.match(restoreGuidesTableArtifactsTest, /absent from the current matrix/);
+    assert.match(restoreGuidesTableArtifactsTest, /architecture/);
+    const finalizeTranslation = readFile(fixture.root, 'scripts/docs-workflow/finalize-translation-batches.js');
+    assert.match(finalizeTranslation, /downstreamDidNotRun/);
+    assert.match(finalizeTranslation, /result === 'skipped' \|\| result === 'cancelled'/);
+    const finalizeTranslationTest = readFile(fixture.root, 'scripts/docs-workflow/finalize-translation-batches.test.js');
+    assert.match(finalizeTranslationTest, /downstream matrix jobs are cancelled/);
+    assert.match(finalizeTranslationTest, /disabled\|preparation\|completed/);
     assert.equal(readFile(fixture.root, 'scripts/collect-build-card-notes.js'), "console.log('card notes');\n");
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");
   } finally {

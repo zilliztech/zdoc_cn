@@ -30,6 +30,27 @@ test('restores exactly one artifact for every matrix entry', async () => {
   await assert.rejects(() => fs.access(path.join(target, 'docs/tutorials/tools/stale.md')))
 })
 
+test('removes stale baseline table directories that are absent from the current matrix', async () => {
+  const f = await artifactFixture()
+  const target = path.join(f.root, 'target')
+  await fs.mkdir(path.join(target, 'docs/tutorials/tools'), { recursive: true })
+  await fs.writeFile(path.join(target, 'docs/tutorials/tools/stale.md'), 'stale')
+  await fs.mkdir(path.join(target, 'docs/tutorials/architecture'), { recursive: true })
+  await fs.writeFile(path.join(target, 'docs/tutorials/architecture/data-security.md'), 'old')
+  await fs.mkdir(path.join(target, 'plugins/lark-docs/meta/snapshots'), { recursive: true })
+  await fs.writeFile(path.join(target, 'plugins/lark-docs/meta/snapshots/guides-uat-last-success.json'), `${JSON.stringify({
+    records: [
+      { table_name: 'Tools', slug: 'page' },
+      { table_name: 'Architecture', slug: 'data-security' },
+    ],
+  })}\n`)
+
+  await restoreGuidesTableArtifacts({ matrix: [entry], artifactDirs: [f.artifact], target })
+
+  assert.equal(await fs.readFile(path.join(target, 'docs/tutorials/tools/page.md'), 'utf8'), 'new')
+  await assert.rejects(() => fs.access(path.join(target, 'docs/tutorials/architecture/data-security.md')))
+})
+
 test('rejects missing, extra, and duplicate table artifacts', async () => {
   const f = await artifactFixture()
   await assert.rejects(() => restoreGuidesTableArtifacts({ matrix: [entry], artifactDirs: [], target: path.join(f.root, 'target') }), /missing/i)

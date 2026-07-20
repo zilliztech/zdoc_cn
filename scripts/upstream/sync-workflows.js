@@ -137,15 +137,17 @@ function applyCnGuidesFetchThrottlePatch(content) {
 }
 
 function applyCnGuidesTableSlugPatch(content) {
-  if (content.includes('loadCnGuidesTableSlugOverrides')) return content;
-
-  let next = content.replace(
-    "const fs = require('node:fs')\nconst slugify = require('slugify')",
-    "const fs = require('node:fs')\nconst path = require('node:path')\nconst slugify = require('slugify')",
-  );
-  next = next.replace(
-    "const TARGETS = ['zilliz.paas', 'zilliz.saas']",
-    `function loadCnGuidesTableSlugOverrides() {
+  let next = content.replace("\nconst slugify = require('slugify')", '');
+  if (!next.includes("const path = require('node:path')")) {
+    next = next.replace(
+      "const fs = require('node:fs')",
+      "const fs = require('node:fs')\nconst path = require('node:path')",
+    );
+  }
+  if (!next.includes('loadCnGuidesTableSlugOverrides')) {
+    next = next.replace(
+      "const TARGETS = ['zilliz.paas', 'zilliz.saas']",
+      `function loadCnGuidesTableSlugOverrides() {
   const file = path.join(process.cwd(), 'config', 'guides-table-slugs.json')
   try {
     return JSON.parse(fs.readFileSync(file, 'utf8'))
@@ -157,10 +159,37 @@ function applyCnGuidesTableSlugPatch(content) {
 
 const TABLE_SLUG_OVERRIDES = loadCnGuidesTableSlugOverrides()
 const TARGETS = ['zilliz.paas', 'zilliz.saas']`,
+    );
+  }
+  if (!next.includes('function strictSlug(value)')) {
+    const strictSlugFunction = `function strictSlug(value) {
+  return String(value || '')
+    .normalize('NFKD')
+    .replace(/[\\u0300-\\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}`;
+    if (next.includes('\nfunction currentOwnership(snapshot) {')) {
+      next = next.replace(
+        '\nfunction currentOwnership(snapshot) {',
+        `\n${strictSlugFunction}\n\nfunction currentOwnership(snapshot) {`,
+      );
+    } else {
+      next = next.replace('\nmodule.exports = {', `\n${strictSlugFunction}\n\nmodule.exports = {`);
+    }
+  }
+  next = next.replace(
+    "table_slug: slugify(tableName, { lower: true, strict: true }),",
+    "table_slug: TABLE_SLUG_OVERRIDES[tableId] || strictSlug(tableName),",
+  );
+  next = next.replace(
+    "table_slug: TABLE_SLUG_OVERRIDES[tableId] || slugify(tableName, { lower: true, strict: true }),",
+    "table_slug: TABLE_SLUG_OVERRIDES[tableId] || strictSlug(tableName),",
   );
   return next.replace(
-    "table_slug: slugify(tableName, { lower: true, strict: true }),",
-    "table_slug: TABLE_SLUG_OVERRIDES[tableId] || slugify(tableName, { lower: true, strict: true }),",
+    'module.exports = { buildGuidesTableMatrix, normalizeTarget }',
+    'module.exports = { buildGuidesTableMatrix, normalizeTarget, strictSlug }',
   );
 }
 
@@ -328,6 +357,210 @@ test('cleanup render removes the owned directory without invoking Docusaurus', (
   );
 }
 
+function applyCnRestoreGuidesTableArtifactsPatch(content) {
+  if (content.includes('staleOwnedPathsFromSnapshot')) return content;
+
+  let next = content.replace(
+    "const { artifactId, validateGuidesTableArtifact } = require('./guides-table-artifact')",
+    "const { artifactId, validateGuidesTableArtifact } = require('./guides-table-artifact')\nconst { tableOutputPath } = require('./render-guides-table')",
+  );
+  next = next.replace(
+    '\nasync function restoreGuidesTableArtifacts({ matrix, artifactDirs, target, sourceArtifactSha256 = null }) {',
+    `
+const GUIDE_OUTPUT_ROOTS = Object.freeze(['docs/tutorials', 'docs-byoc/tutorials'])
+
+function snapshotPath(target) {
+  return path.join(target, 'plugins/lark-docs/meta/snapshots/guides-uat-last-success.json')
+}
+
+function tableSlugFromRecord(record) {
+  if (!record || typeof record !== 'object') return null
+  const value = record.table_name || record.table_slug
+  if (typeof value !== 'string') return null
+  const slug = value
+    .normalize('NFKD')
+    .replace(/[\\u0300-\\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) ? slug : null
+}
+
+async function staleOwnedPathsFromSnapshot(target, expectedOwnedPaths) {
+  let snapshot
+  try {
+    snapshot = JSON.parse(await fs.readFile(snapshotPath(target), 'utf8'))
+  } catch (error) {
+    if (error.code === 'ENOENT') return []
+    throw error
+  }
+  const records = Array.isArray(snapshot.navigation_records)
+    ? snapshot.navigation_records
+    : Array.isArray(snapshot.records)
+      ? snapshot.records
+      : []
+  const stale = new Set()
+  for (const record of records) {
+    const slug = tableSlugFromRecord(record)
+    if (!slug) continue
+    for (const root of GUIDE_OUTPUT_ROOTS) {
+      const ownedPath = \`\${root}/\${slug}\`
+      if (!expectedOwnedPaths.has(ownedPath)) stale.add(ownedPath)
+    }
+  }
+  return [...stale].sort()
+}
+
+async function restoreGuidesTableArtifacts({ matrix, artifactDirs, target, sourceArtifactSha256 = null }) {`,
+  );
+  next = next.replace(
+    '  const expected = new Map()\n  for (const entry of matrix) {',
+    '  const expected = new Map()\n  const expectedOwnedPaths = new Set()\n  for (const entry of matrix) {',
+  );
+  next = next.replace(
+    '    expected.set(id, entry)\n  }',
+    '    expected.set(id, entry)\n    expectedOwnedPaths.add(tableOutputPath(entry))\n  }',
+  );
+  next = next.replace(
+    '  for (const id of expected.keys()) if (!artifacts.has(id)) throw new Error(`Missing Guides table artifact: ${id}`)\n  for (const id of artifacts.keys()) if (!expected.has(id)) throw new Error(`Extra Guides table artifact: ${id}`)\n\n  const restored = []',
+    '  for (const id of expected.keys()) if (!artifacts.has(id)) throw new Error(`Missing Guides table artifact: ${id}`)\n  for (const id of artifacts.keys()) if (!expected.has(id)) throw new Error(`Extra Guides table artifact: ${id}`)\n\n  for (const ownedPath of await staleOwnedPathsFromSnapshot(target, expectedOwnedPaths)) {\n    await fs.rm(path.join(target, ownedPath), { recursive: true, force: true })\n  }\n\n  const restored = []',
+  );
+  return next;
+}
+
+function applyCnRestoreGuidesTableArtifactsTestPatch(content) {
+  if (content.includes('absent from the current matrix')) return content;
+  return content.replace(
+    "\ntest('rejects missing, extra, and duplicate table artifacts'",
+    `
+test('removes stale baseline table directories that are absent from the current matrix', async () => {
+  const f = await artifactFixture()
+  const target = path.join(f.root, 'target')
+  await fs.mkdir(path.join(target, 'docs/tutorials/tools'), { recursive: true })
+  await fs.writeFile(path.join(target, 'docs/tutorials/tools/stale.md'), 'stale')
+  await fs.mkdir(path.join(target, 'docs/tutorials/architecture'), { recursive: true })
+  await fs.writeFile(path.join(target, 'docs/tutorials/architecture/data-security.md'), 'old')
+  await fs.mkdir(path.join(target, 'plugins/lark-docs/meta/snapshots'), { recursive: true })
+  await fs.writeFile(path.join(target, 'plugins/lark-docs/meta/snapshots/guides-uat-last-success.json'), \`\${JSON.stringify({
+    records: [
+      { table_name: 'Tools', slug: 'page' },
+      { table_name: 'Architecture', slug: 'data-security' },
+    ],
+  })}\\n\`)
+
+  await restoreGuidesTableArtifacts({ matrix: [entry], artifactDirs: [f.artifact], target })
+
+  assert.equal(await fs.readFile(path.join(target, 'docs/tutorials/tools/page.md'), 'utf8'), 'new')
+  await assert.rejects(() => fs.access(path.join(target, 'docs/tutorials/architecture/data-security.md')))
+})
+
+test('rejects missing, extra, and duplicate table artifacts'`,
+  );
+}
+
+function applyCnFinalizeCancelledDisabledTranslationPatch(content) {
+  if (content.includes('downstreamDidNotRun')) return content;
+  let next = content.replace(
+    "    if (preparationResult !== 'skipped' || batchResult !== 'skipped' || publisherResult !== 'skipped' || batchCount !== 0) throw new Error('disabled publication requires skipped preparation, translation, and publisher results with zero batches')",
+    "    const downstreamDidNotRun = result => result === 'skipped' || result === 'cancelled'\n    if (preparationResult !== 'skipped' || !downstreamDidNotRun(batchResult) || !downstreamDidNotRun(publisherResult) || batchCount !== 0) throw new Error('disabled publication requires skipped preparation and no completed translation or publisher jobs with zero batches')",
+  );
+  next = next.replace(
+    "  ]) assert.throws(() => finalizeTranslationBatches(input), /disabled|skipped/i)",
+    "  ]) assert.throws(() => finalizeTranslationBatches(input), /disabled|preparation|completed/i)",
+  );
+  next = next.replace(/\/disabled\|skipped\/i/g, '/disabled|preparation|completed/i');
+  if (next.includes("test('reports publication disabled as skipped'") && !next.includes('reports disabled publication as skipped when downstream matrix jobs are cancelled')) {
+    next = next.replace(
+      "test('validates publisher status and status-dependent SHA invariants'",
+      `test('reports disabled publication as skipped when downstream matrix jobs are cancelled', () => {
+  assert.deepEqual(finalizeTranslationBatches(values({
+    publish: false,
+    preparationResult: 'skipped',
+    batchCount: 0,
+    batchResult: 'cancelled',
+    publisherResult: 'skipped',
+    publisherStatus: '',
+    publisherCommitSha: '',
+  })), {
+    translatorStatus: 'skipped',
+    publisherStatus: 'skipped',
+    commitSha: '',
+  })
+})
+
+test('validates publisher status and status-dependent SHA invariants'`,
+    );
+  }
+  return next;
+}
+
+function applyCnCollectBuildCardNotesPatch(content) {
+  if (content.includes('cnGuidesEmptyRefsNote')) return content;
+  let next = content.replace(
+    '\nconst GUIDES_REPORTS = Object.freeze([',
+    `
+function cnGuidesEmptyRefsNote() {
+  const reportsDir = 'plugins/lark-docs/meta/reports'
+  let files = []
+  try {
+    files = fs.readdirSync(reportsDir)
+      .filter(file => /^cn-guides-ref-normalization(?:-.+)?\\.json$/.test(file))
+      .map(file => path.posix.join(reportsDir, file))
+      .sort()
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error
+    return null
+  }
+
+  const skipped = new Map()
+  const blockers = []
+  const usedFiles = []
+  for (const file of files) {
+    const report = readJsonIfExists(file)
+    if (!report || !Array.isArray(report.disabled)) continue
+    usedFiles.push(file)
+    for (const item of report.disabled) {
+      if (item?.reason !== 'empty-target') continue
+      const key = item.node_token || \`\${item.source_file || ''}:\${item.title || ''}:\${item.ref_target_token || ''}\`
+      if (!skipped.has(key)) skipped.set(key, item)
+    }
+    if (Array.isArray(report.blockers)) blockers.push(...report.blockers)
+  }
+  if (skipped.size === 0) return null
+
+  const examples = [...skipped.values()].slice(0, 8).map(item => {
+    const title = item.title || item.node_token || '(untitled ref)'
+    const target = item.target_title || item.ref_target_token || '(unknown target)'
+    return \`- \${title} -> \${target}\`
+  })
+  return [
+    '# CN Guides empty docs',
+    '',
+    \`- Skipped empty ref docs: \${skipped.size}\`,
+    \`- Missing ref target blockers: \${blockers.length}\`,
+    '',
+    '## Examples',
+    ...examples,
+    skipped.size > examples.length ? \`- ...and \${skipped.size - examples.length} more skipped empty refs\` : null,
+    '',
+    '## Reports',
+    ...reportFileLines(usedFiles.slice(0, 6)),
+    usedFiles.length > 6 ? \`- ...and \${usedFiles.length - 6} more normalization report files\` : null,
+  ].filter(Boolean).join('\\n')
+}
+
+const GUIDES_REPORTS = Object.freeze([`,
+  );
+  next = next.replace(
+    "  { key: 'cache-generation', title: 'Guides cache persistence report', collect: cacheGenerationNote },",
+    "  { key: 'cache-generation', title: 'Guides cache persistence report', collect: cacheGenerationNote },\n  { key: 'cn-empty-refs', title: 'CN Guides empty docs report', collect: cnGuidesEmptyRefsNote },",
+  );
+  return next.replace(
+    '  canonicalLinkNote,\n',
+    '  canonicalLinkNote,\n  cnGuidesEmptyRefsNote,\n',
+  );
+}
+
 function removeScheduleBlock(content) {
   return content.replace(/\n\s+schedule:\n(?:\s+- cron: .*?\n)+/m, '\n');
 }
@@ -388,6 +621,19 @@ function applyRenderGuidesTableAssembledUpstreamPatch(content) {
     /--target "\$GITHUB_WORKSPACE"/g,
     '--target "$GITHUB_WORKSPACE/.zdoc-assembled"',
   );
+  if (!next.includes('name: Normalize CN Guides source')) {
+    next = next.replace(
+      /(\n      - name: Render Guides table offline\n)/,
+      `
+      - name: Normalize CN Guides source
+        run: |
+          node -e 'const fs=require("fs");const entry=JSON.parse(process.env.ENTRY_JSON);fs.writeFileSync(process.argv[1], JSON.stringify({include:[entry]}) + "\\n")' "$RUNNER_TEMP/guides-table-matrix.json"
+          node scripts/normalize-cn-guides-source.js --source-dir "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/sources/guides" --matrix-file "$RUNNER_TEMP/guides-table-matrix.json" --output "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/reports/cn-guides-ref-normalization-\${{ inputs.target_name }}-\${{ inputs.table_slug }}.json"
+        env:
+          ENTRY_JSON: \${{ toJSON(inputs) }}
+$1`,
+    );
+  }
   next = next.replace(
     /node scripts\/docs-workflow\/render-guides-table\.js --workspace "\$GITHUB_WORKSPACE"/g,
     'node .zdoc-assembled/scripts/docs-workflow/render-guides-table.js --workspace "$GITHUB_WORKSPACE/.zdoc-assembled"',
@@ -425,7 +671,11 @@ function applyAssembleGuidesAssembledUpstreamPatch(content) {
     next = next.replace(
       /(\n      - name: Restore validated Guides source\n        run: \|\n(?:          .+\n)+?          node scripts\/docs-workflow\/guides-stage-artifact\.js .+\n)/,
       `$1      - name: Normalize CN Guides refs
-        run: node scripts/normalize-cn-guides-source.js --source-dir "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/sources/guides" --output "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/reports/cn-guides-ref-normalization.json"
+        run: |
+          node -e 'require("fs").writeFileSync(process.argv[1], process.env.MATRIX_JSON)' "$RUNNER_TEMP/guides-table-matrix.json"
+          node scripts/normalize-cn-guides-source.js --source-dir "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/sources/guides" --matrix-file "$RUNNER_TEMP/guides-table-matrix.json" --output "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/reports/cn-guides-ref-normalization.json"
+        env:
+          MATRIX_JSON: \${{ inputs.table_matrix }}
 `,
     );
   }
@@ -531,9 +781,13 @@ function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyCnGuidesFetchThrottlePatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_render-guides-table.yml') next = applyRenderGuidesTableAssembledUpstreamPatch(next);
   if (relativePath === '.github/workflows/_assemble-guides.yml') next = applyAssembleGuidesAssembledUpstreamPatch(next);
+  if (relativePath === 'scripts/collect-build-card-notes.js') next = applyCnCollectBuildCardNotesPatch(next);
   if (relativePath === 'scripts/docs-workflow/guides-tables.js') next = applyCnGuidesTableSlugPatch(next);
   if (relativePath === 'scripts/docs-workflow/render-guides-table.js') next = applyCnRenderGuidesTableSlugNormalizationPatch(next);
   if (relativePath === 'scripts/docs-workflow/render-guides-table.test.js') next = applyCnRenderGuidesTableSlugNormalizationTestPatch(next);
+  if (relativePath === 'scripts/docs-workflow/restore-guides-table-artifacts.js') next = applyCnRestoreGuidesTableArtifactsPatch(next);
+  if (relativePath === 'scripts/docs-workflow/restore-guides-table-artifacts.test.js') next = applyCnRestoreGuidesTableArtifactsTestPatch(next);
+  if (relativePath === 'scripts/docs-workflow/finalize-translation-batches.js' || relativePath === 'scripts/docs-workflow/finalize-translation-batches.test.js') next = applyCnFinalizeCancelledDisabledTranslationPatch(next);
   if (relativePath.startsWith('.github/workflows/') || relativePath.startsWith('scripts/docs-workflow/')) {
     next = applyTranslatePatch(next);
     next = applyDocsBrandPatch(next);

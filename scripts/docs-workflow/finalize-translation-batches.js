@@ -24,7 +24,8 @@ function finalizeTranslationBatches(options) {
   if (typeof options.publisherStatus !== 'string' || typeof options.publisherCommitSha !== 'string') throw new Error('publisher status and commit SHA must be strings')
 
   if (!publish) {
-    if (preparationResult !== 'skipped' || batchResult !== 'skipped' || publisherResult !== 'skipped' || batchCount !== 0) throw new Error('disabled publication requires skipped preparation, translation, and publisher results with zero batches')
+    const downstreamDidNotRun = result => result === 'skipped' || result === 'cancelled'
+    if (preparationResult !== 'skipped' || !downstreamDidNotRun(batchResult) || !downstreamDidNotRun(publisherResult) || batchCount !== 0) throw new Error('disabled publication requires skipped preparation and no completed translation or publisher jobs with zero batches')
     assertNoPublisherClaim(publisherStatus, publisherCommitSha, 'disabled publication')
     return statuses('skipped', 'skipped')
   }

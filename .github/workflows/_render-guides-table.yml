@@ -54,6 +54,13 @@ jobs:
           tar -tf "$RUNNER_TEMP/download/guides-source.tar" | node -e 'const fs=require("fs");for(const p of fs.readFileSync(0,"utf8").trim().split("\n"))if(p!=="guides-source"&&!p.startsWith("guides-source/"))throw Error("unsafe archive path")'
           tar -xf "$RUNNER_TEMP/download/guides-source.tar" -C "$RUNNER_TEMP"
           node scripts/docs-workflow/guides-stage-artifact.js --operation restore --stage source --artifact "$RUNNER_TEMP/guides-source" --target "$GITHUB_WORKSPACE/.zdoc-assembled" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}"
+      - name: Normalize CN Guides source
+        run: |
+          node -e 'const fs=require("fs");const entry=JSON.parse(process.env.ENTRY_JSON);fs.writeFileSync(process.argv[1], JSON.stringify({include:[entry]}) + "\n")' "$RUNNER_TEMP/guides-table-matrix.json"
+          node scripts/normalize-cn-guides-source.js --source-dir "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/sources/guides" --matrix-file "$RUNNER_TEMP/guides-table-matrix.json" --output "$GITHUB_WORKSPACE/.zdoc-assembled/plugins/lark-docs/meta/reports/cn-guides-ref-normalization-${{ inputs.target_name }}-${{ inputs.table_slug }}.json"
+        env:
+          ENTRY_JSON: ${{ toJSON(inputs) }}
+
       - name: Render Guides table offline
         run: node .zdoc-assembled/scripts/docs-workflow/render-guides-table.js --workspace "$GITHUB_WORKSPACE/.zdoc-assembled" --entry "$ENTRY_JSON"
         env:

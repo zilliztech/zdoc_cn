@@ -117,6 +117,22 @@ test('reports publication disabled as skipped', () => {
   })
 })
 
+test('reports disabled publication as skipped when downstream matrix jobs are cancelled', () => {
+  assert.deepEqual(finalizeTranslationBatches(values({
+    publish: false,
+    preparationResult: 'skipped',
+    batchCount: 0,
+    batchResult: 'cancelled',
+    publisherResult: 'skipped',
+    publisherStatus: '',
+    publisherCommitSha: '',
+  })), {
+    translatorStatus: 'skipped',
+    publisherStatus: 'skipped',
+    commitSha: '',
+  })
+})
+
 test('validates publisher status and status-dependent SHA invariants', () => {
   const invalid = [
     values({ publisherStatus: 'unknown' }),
@@ -154,7 +170,7 @@ test('disabled publication requires every downstream result to be skipped', () =
     values({ publish: false, preparationResult: 'success', batchCount: 0, batchResult: 'skipped', publisherResult: 'skipped', publisherStatus: '', publisherCommitSha: '' }),
     values({ publish: false, preparationResult: 'skipped', batchCount: 0, batchResult: 'success', publisherResult: 'skipped', publisherStatus: '', publisherCommitSha: '' }),
     values({ publish: false, preparationResult: 'skipped', batchCount: 0, batchResult: 'skipped', publisherResult: 'success', publisherStatus: '', publisherCommitSha: '' }),
-  ]) assert.throws(() => finalizeTranslationBatches(input), /disabled|skipped/i)
+  ]) assert.throws(() => finalizeTranslationBatches(input), /disabled|preparation|completed/i)
 })
 
 test('environment parsing fails closed on missing or malformed authoritative values', () => {
