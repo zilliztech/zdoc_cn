@@ -39,9 +39,18 @@ function snapshotChildren(directory) {
   }
   for (const entry of entries) {
     const full = path.join(directory, entry.name)
-    if (entry.isDirectory()) snapshot.set(entry.name, fs.statSync(full).mtimeMs)
+    if (entry.isDirectory() || entry.isFile()) snapshot.set(entry.name, fs.statSync(full).mtimeMs)
   }
   return snapshot
+}
+
+function changedRootFiles(absoluteRoot, entries, beforeChildren) {
+  return entries
+    .filter(entry => entry.isFile())
+    .filter(entry => {
+      const beforeMtime = beforeChildren.get(entry.name)
+      return beforeMtime == null || fs.statSync(path.join(absoluteRoot, entry.name)).mtimeMs > beforeMtime
+    })
 }
 
 function normalizeRenderedTableOutput(workspace, outputPath, beforeChildren) {
@@ -66,14 +75,19 @@ function normalizeRenderedTableOutput(workspace, outputPath, beforeChildren) {
       return changed && hasFiles(full)
     })
 
-  if (candidates.length === 0) return
-  if (candidates.length > 1) {
-    throw new Error(`Cannot normalize Guides table output for ${outputPath}; multiple rendered directories: ${candidates.map(entry => entry.name).join(', ')}`)
-  }
+  const rootFiles = changedRootFiles(absoluteRoot, entries, beforeChildren)
+  if (candidates.length === 0 && rootFiles.length === 0) return
 
   fs.rmSync(absoluteOutput, { recursive: true, force: true })
   fs.mkdirSync(path.dirname(absoluteOutput), { recursive: true })
-  fs.renameSync(path.join(absoluteRoot, candidates[0].name), absoluteOutput)
+  if (candidates.length === 1 && rootFiles.length === 0) {
+    fs.renameSync(path.join(absoluteRoot, candidates[0].name), absoluteOutput)
+    return
+  }
+
+  fs.mkdirSync(absoluteOutput, { recursive: true })
+  for (const entry of candidates) fs.renameSync(path.join(absoluteRoot, entry.name), path.join(absoluteOutput, entry.name))
+  for (const entry of rootFiles) fs.renameSync(path.join(absoluteRoot, entry.name), path.join(absoluteOutput, entry.name))
 }
 
 function renderGuidesTable(options) {

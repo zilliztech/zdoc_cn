@@ -71,6 +71,40 @@ test('table render normalizes localized renderer output into the configured tabl
   assert.equal(fs.readFileSync(path.join(other, 'keep.md'), 'utf8'), 'keep')
 })
 
+test('table render normalizes root-level output when localized table slug is empty', () => {
+  const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'render-guides-table-'))
+  const root = path.join(workspace, 'docs-byoc/tutorials')
+  const expected = path.join(root, 'client-libraries')
+  const other = path.join(root, 'management')
+  fs.mkdirSync(expected, { recursive: true })
+  fs.writeFileSync(path.join(expected, 'stale.md'), 'stale')
+  fs.mkdirSync(other, { recursive: true })
+  fs.writeFileSync(path.join(other, 'keep.md'), 'keep')
+
+  const spawnSync = () => {
+    fs.mkdirSync(root, { recursive: true })
+    fs.writeFileSync(path.join(root, 'install-sdks.md'), 'canonical')
+    fs.mkdirSync(path.join(root, 'analyzer'), { recursive: true })
+    fs.writeFileSync(path.join(root, 'analyzer/overview.md'), 'analyzer')
+    fs.mkdirSync(path.join(root, 'collection'), { recursive: true })
+    fs.writeFileSync(path.join(root, 'collection/manage.md'), 'collection')
+    return { status: 0 }
+  }
+
+  const result = renderGuidesTable({
+    workspace, table_id: 'tbl-client', table_name: '客户端参考', table_slug: 'client-libraries', target: 'zilliz.paas', cleanup: false, spawnSync,
+  })
+
+  assert.equal(result.outputPath, 'docs-byoc/tutorials/client-libraries')
+  assert.equal(fs.existsSync(path.join(expected, 'stale.md')), false)
+  assert.equal(fs.readFileSync(path.join(expected, 'install-sdks.md'), 'utf8'), 'canonical')
+  assert.equal(fs.readFileSync(path.join(expected, 'analyzer/overview.md'), 'utf8'), 'analyzer')
+  assert.equal(fs.readFileSync(path.join(expected, 'collection/manage.md'), 'utf8'), 'collection')
+  assert.equal(fs.existsSync(path.join(root, 'install-sdks.md')), false)
+  assert.equal(fs.existsSync(path.join(root, 'analyzer')), false)
+  assert.equal(fs.readFileSync(path.join(other, 'keep.md'), 'utf8'), 'keep')
+})
+
 test('cleanup render removes the owned directory without invoking Docusaurus', () => {
   const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'render-guides-table-'))
   const owned = path.join(workspace, 'docs-byoc/tutorials/tools')

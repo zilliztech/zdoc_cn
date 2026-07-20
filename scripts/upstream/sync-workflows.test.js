@@ -270,6 +270,8 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     const renderGuidesTableTest = readFile(fixture.root, 'scripts/docs-workflow/render-guides-table.test.js');
     assert.match(renderGuidesTableTest, /localized renderer output/);
     assert.match(renderGuidesTableTest, /table_slug: 'ai-models'/);
+    assert.match(renderGuidesTableTest, /localized table slug is empty/);
+    assert.match(renderGuidesTableTest, /table_slug: 'client-libraries'/);
     assert.equal(readFile(fixture.root, 'scripts/collect-build-card-notes.js'), "console.log('card notes');\n");
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");
   } finally {
