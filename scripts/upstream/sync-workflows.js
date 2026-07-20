@@ -399,6 +399,107 @@ function applyRenderGuidesTableAssembledUpstreamPatch(content) {
   return next;
 }
 
+function applyAssembleGuidesAssembledUpstreamPatch(content) {
+  let next = content;
+  if (!next.includes('name: Materialize locked upstream')) {
+    next = next.replace(
+      /(\n\s+- run: (?:npm ci|pnpm install --frozen-lockfile)\n)/,
+      `$1      - name: Materialize locked upstream
+        run: node scripts/upstream/materialize.js
+      - name: Assemble locked upstream
+        run: npm run assemble
+      - name: Install assembled dependencies
+        run: pnpm --dir .zdoc-assembled install --frozen-lockfile
+`,
+    );
+  }
+  next = next.replace(
+    /--target "\$GITHUB_WORKSPACE"/g,
+    '--target "$GITHUB_WORKSPACE/.zdoc-assembled"',
+  );
+  next = next.replace(
+    /--repository-root "\$GITHUB_WORKSPACE"/g,
+    '--repository-root "$GITHUB_WORKSPACE/.zdoc-assembled"',
+  );
+  next = next.replace(
+    /node scripts\/docs-workflow\/restore-guides-table-artifacts\.js/g,
+    'node .zdoc-assembled/scripts/docs-workflow/restore-guides-table-artifacts.js',
+  );
+  next = next.replace(
+    /node scripts\/docs-workflow\/guides-assembly-identity\.js/g,
+    'node .zdoc-assembled/scripts/docs-workflow/guides-assembly-identity.js',
+  );
+  next = next.replace(
+    /run: node scripts\/docs-workflow\/generate-guides-sidebars\.js --media-manifest plugins\/lark-docs\/meta\/media-cache\/guides\.json/g,
+    'run: cd .zdoc-assembled && node scripts/docs-workflow/generate-guides-sidebars.js --media-manifest plugins/lark-docs/meta/media-cache/guides.json',
+  );
+  next = next.replace(
+    /          node scripts\/validate-generated-sidebars\.js\n          node scripts\/run-doc-build-stage\.js --build "pnpm run build" --skipLinkChecks --skipCardReporting/g,
+    '          cd .zdoc-assembled\n          node scripts/validate-generated-sidebars.js\n          node scripts/run-doc-build-stage.js --build "pnpm run build" --skipLinkChecks --skipCardReporting',
+  );
+  next = next.replace(
+    /decision=plugins\/lark-docs\/meta\/reports\/guides-assembly-decision\.json\n          descriptor=plugins\/lark-docs\/meta\/assembly\/guides\.json\n          saas=config\/generated\/guides\.sidebar\.js\n          byoc=config\/generated\/guides-byoc\.sidebar\.js/g,
+    'workspace="$GITHUB_WORKSPACE/.zdoc-assembled"\n          decision=plugins/lark-docs/meta/reports/guides-assembly-decision.json\n          descriptor=plugins/lark-docs/meta/assembly/guides.json\n          saas=config/generated/guides.sidebar.js\n          byoc=config/generated/guides-byoc.sidebar.js',
+  );
+  next = next.replace(
+    /cmp -s "\$RUNNER_TEMP\/baseline\/\$saas" "\$saas"/g,
+    'cmp -s "$RUNNER_TEMP/baseline/$saas" "$workspace/$saas"',
+  );
+  next = next.replace(
+    /cmp -s "\$RUNNER_TEMP\/baseline\/\$byoc" "\$byoc"/g,
+    'cmp -s "$RUNNER_TEMP/baseline/$byoc" "$workspace/$byoc"',
+  );
+  next = next.replace(
+    /--saas-sidebar "\$saas" --byoc-sidebar "\$byoc" --output "\$descriptor"/g,
+    '--saas-sidebar "$saas" --byoc-sidebar "$byoc" --output "$descriptor"',
+  );
+  next = next.replace(
+    /mode=\$\(node -e 'const d=require\("\.\/"\+process\.argv\[1\]\);process\.stdout\.write\(d\.mode\)' "\$decision"\)/g,
+    'mode=$(node -e \'const d=require(process.argv[1]);process.stdout.write(d.mode)\' "$GITHUB_WORKSPACE/.zdoc-assembled/$decision")',
+  );
+  next = next.replace(
+    /node - "\$decision" "\$RUNNER_TEMP\/baseline" <<'NODE'/g,
+    'node - "$GITHUB_WORKSPACE/.zdoc-assembled/$decision" "$RUNNER_TEMP/baseline" <<\'NODE\'',
+  );
+  next = next.replace(
+    /candidate=plugins\/lark-docs\/meta\/reports\/guides-source-snapshot-candidate\.json\n          snapshot=plugins\/lark-docs\/meta\/snapshots\/guides-uat-last-success\.json/g,
+    'cd .zdoc-assembled\n          candidate=plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json\n          snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json',
+  );
+  next = next.replace(
+    /mkdir -p plugins\/lark-docs\/meta\/source-cache\n          snapshot=plugins\/lark-docs\/meta\/snapshots\/guides-uat-last-success\.json/g,
+    'cd .zdoc-assembled\n          mkdir -p plugins/lark-docs/meta/source-cache\n          snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json',
+  );
+  next = next.replace(
+    /snapshot=plugins\/lark-docs\/meta\/snapshots\/guides-uat-last-success\.json\n          generation=/g,
+    'cd .zdoc-assembled\n          snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json\n          generation=',
+  );
+  next = next.replace(
+    /--workspace "\$GITHUB_WORKSPACE" --output tmp\/guides-source-cache-v4/g,
+    '--workspace "$GITHUB_WORKSPACE/.zdoc-assembled" --output tmp/guides-source-cache-v4',
+  );
+  next = next.replace(
+    /path: tmp\/guides-source-cache-v4/g,
+    'path: .zdoc-assembled/tmp/guides-source-cache-v4',
+  );
+  next = next.replace(
+    /node scripts\/docs-workflow\/guides-cache-generation-lifecycle\.js report \\/g,
+    'node .zdoc-assembled/scripts/docs-workflow/guides-cache-generation-lifecycle.js report \\',
+  );
+  next = next.replace(
+    /--output plugins\/lark-docs\/meta\/reports\/guides-cache-generation\.json/g,
+    '--output .zdoc-assembled/plugins/lark-docs/meta/reports/guides-cache-generation.json',
+  );
+  next = next.replace(
+    /node scripts\/docs-workflow\/create-checkpoint-artifact\.js --group guides --master-sha "\$\{\{ inputs\.master_sha \}\}" --dev-baseline-sha "\$\{\{ inputs\.dev_baseline_sha \}\}" --baseline-dir "\$RUNNER_TEMP\/baseline" --workspace "\$GITHUB_WORKSPACE"/g,
+    'node .zdoc-assembled/scripts/docs-workflow/create-checkpoint-artifact.js --group guides --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}" --baseline-dir "$RUNNER_TEMP/baseline" --workspace "$GITHUB_WORKSPACE/.zdoc-assembled"',
+  );
+  next = next.replace(
+    /path: plugins\/lark-docs\/meta\/reports\//g,
+    'path: .zdoc-assembled/plugins/lark-docs/meta/reports/',
+  );
+  return next;
+}
+
 function applyTranslatePatch(content) {
   return content
     .replace(/ja-JP/g, 'zh-CN')
@@ -421,6 +522,7 @@ function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_
   if (relativePath === '.github/workflows/_fetch-content-group.yml') next = applyFetchContentGroupPatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyCnGuidesFetchThrottlePatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_render-guides-table.yml') next = applyRenderGuidesTableAssembledUpstreamPatch(next);
+  if (relativePath === '.github/workflows/_assemble-guides.yml') next = applyAssembleGuidesAssembledUpstreamPatch(next);
   if (relativePath === 'scripts/docs-workflow/guides-tables.js') next = applyCnGuidesTableSlugPatch(next);
   if (relativePath === 'scripts/docs-workflow/render-guides-table.js') next = applyCnRenderGuidesTableSlugNormalizationPatch(next);
   if (relativePath === 'scripts/docs-workflow/render-guides-table.test.js') next = applyCnRenderGuidesTableSlugNormalizationTestPatch(next);

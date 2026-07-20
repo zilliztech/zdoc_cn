@@ -35,6 +35,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20', cache: npm }
       - run: npm ci
+      - name: Materialize locked upstream
+        run: node scripts/upstream/materialize.js
+      - name: Assemble locked upstream
+        run: npm run assemble
+      - name: Install assembled dependencies
+        run: pnpm --dir .zdoc-assembled install --frozen-lockfile
       - name: Prepare immutable baseline
         run: |
           git fetch --no-tags origin "${{ inputs.dev_baseline_sha }}"
@@ -51,7 +57,7 @@ jobs:
       - name: Restore validated Guides source
         run: |
           tar -xf "$RUNNER_TEMP/source-download/guides-source.tar" -C "$RUNNER_TEMP/source-download"
-          node scripts/docs-workflow/guides-stage-artifact.js --operation restore --stage source --artifact "$RUNNER_TEMP/source-download/guides-source" --target "$GITHUB_WORKSPACE" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}"
+          node scripts/docs-workflow/guides-stage-artifact.js --operation restore --stage source --artifact "$RUNNER_TEMP/source-download/guides-source" --target "$GITHUB_WORKSPACE/.zdoc-assembled" --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}"
       - name: Restore validated Guides table artifacts
         if: ${{ inputs.table_count != '0' }}
         run: |
@@ -65,30 +71,30 @@ jobs:
           done
           node -e 'require("fs").writeFileSync(process.argv[1], process.env.MATRIX_JSON)' "$RUNNER_TEMP/guides-table-matrix.json"
           source_sha=$(sha256sum "$RUNNER_TEMP/source-download/guides-source/manifest.json" | cut -d' ' -f1)
-          node scripts/docs-workflow/restore-guides-table-artifacts.js --matrix-file "$RUNNER_TEMP/guides-table-matrix.json" --artifacts-root "$RUNNER_TEMP/table-artifacts" --target "$GITHUB_WORKSPACE" --source-artifact-sha256 "$source_sha"
+          node .zdoc-assembled/scripts/docs-workflow/restore-guides-table-artifacts.js --matrix-file "$RUNNER_TEMP/guides-table-matrix.json" --artifacts-root "$RUNNER_TEMP/table-artifacts" --target "$GITHUB_WORKSPACE/.zdoc-assembled" --source-artifact-sha256 "$source_sha"
         env:
           MATRIX_JSON: ${{ inputs.table_matrix }}
       - id: assembly_decision
         name: Validate Guides assembly decision
         run: |
           decision=plugins/lark-docs/meta/reports/guides-assembly-decision.json
-          node scripts/docs-workflow/guides-assembly-identity.js validate-decision \
-            --repository-root "$GITHUB_WORKSPACE" --input "$decision" \
+          node .zdoc-assembled/scripts/docs-workflow/guides-assembly-identity.js validate-decision \
+            --repository-root "$GITHUB_WORKSPACE/.zdoc-assembled" --input "$decision" \
             --expected-master-sha "${{ inputs.master_sha }}" \
             --expected-dev-baseline-sha "${{ inputs.dev_baseline_sha }}"
-          observed_sha=$(node scripts/docs-workflow/guides-assembly-identity.js decision-sha \
-            --repository-root "$GITHUB_WORKSPACE" --input "$decision" \
+          observed_sha=$(node .zdoc-assembled/scripts/docs-workflow/guides-assembly-identity.js decision-sha \
+            --repository-root "$GITHUB_WORKSPACE/.zdoc-assembled" --input "$decision" \
             --expected-master-sha "${{ inputs.master_sha }}" \
             --expected-dev-baseline-sha "${{ inputs.dev_baseline_sha }}")
           [[ "$observed_sha" == "${{ inputs.assembly_decision_sha256 }}" ]] || { echo 'Guides assembly decision SHA mismatch' >&2; exit 1; }
-          mode=$(node -e 'const d=require("./"+process.argv[1]);process.stdout.write(d.mode)' "$decision")
+          mode=$(node -e 'const d=require(process.argv[1]);process.stdout.write(d.mode)' "$GITHUB_WORKSPACE/.zdoc-assembled/$decision")
           if [[ "$mode" == reuse ]]; then
-            node scripts/docs-workflow/guides-assembly-identity.js verify-descriptor \
+            node .zdoc-assembled/scripts/docs-workflow/guides-assembly-identity.js verify-descriptor \
               --repository-root "$RUNNER_TEMP/baseline" \
               --descriptor plugins/lark-docs/meta/assembly/guides.json \
               --saas-sidebar config/generated/guides.sidebar.js \
               --byoc-sidebar config/generated/guides-byoc.sidebar.js
-            node - "$decision" "$RUNNER_TEMP/baseline" <<'NODE'
+            node - "$GITHUB_WORKSPACE/.zdoc-assembled/$decision" "$RUNNER_TEMP/baseline" <<'NODE'
           const crypto = require('node:crypto')
           const fs = require('node:fs')
           const path = require('node:path')
@@ -107,17 +113,19 @@ jobs:
           fi
           printf 'mode=%s\nstarted_milliseconds=%s\n' "$mode" "$(node -e 'process.stdout.write(String(Date.now()))')" >> "$GITHUB_OUTPUT"
       - name: Generate combined Guides sidebars offline
-        run: node scripts/docs-workflow/generate-guides-sidebars.js --media-manifest plugins/lark-docs/meta/media-cache/guides.json
+        run: cd .zdoc-assembled && node scripts/docs-workflow/generate-guides-sidebars.js --media-manifest plugins/lark-docs/meta/media-cache/guides.json
         env:
           DOCS_BUILD_ENV: uat
           IMAGE_BED_URL: ${{ vars.IMAGE_BED_URL }}
           NO_UPDATE_NOTIFIER: '1'
       - name: Validate combined guides output
         run: |
+          cd .zdoc-assembled
           node scripts/validate-generated-sidebars.js
           node scripts/run-doc-build-stage.js --build "pnpm run build" --skipLinkChecks --skipCardReporting
       - name: Finalize Guides assembly identity
         run: |
+          workspace="$GITHUB_WORKSPACE/.zdoc-assembled"
           decision=plugins/lark-docs/meta/reports/guides-assembly-decision.json
           descriptor=plugins/lark-docs/meta/assembly/guides.json
           saas=config/generated/guides.sidebar.js
@@ -125,24 +133,24 @@ jobs:
           saas_equal=null
           byoc_equal=null
           if [[ "${{ steps.assembly_decision.outputs.mode }}" == reuse ]]; then
-            cmp -s "$RUNNER_TEMP/baseline/$saas" "$saas" || { echo 'Observe-only SaaS sidebar divergence from exact baseline' >&2; exit 1; }
-            cmp -s "$RUNNER_TEMP/baseline/$byoc" "$byoc" || { echo 'Observe-only BYOC sidebar divergence from exact baseline' >&2; exit 1; }
+            cmp -s "$RUNNER_TEMP/baseline/$saas" "$workspace/$saas" || { echo 'Observe-only SaaS sidebar divergence from exact baseline' >&2; exit 1; }
+            cmp -s "$RUNNER_TEMP/baseline/$byoc" "$workspace/$byoc" || { echo 'Observe-only BYOC sidebar divergence from exact baseline' >&2; exit 1; }
             saas_equal=true
             byoc_equal=true
           fi
-          node scripts/docs-workflow/guides-assembly-identity.js write-descriptor \
-            --repository-root "$GITHUB_WORKSPACE" --decision "$decision" \
+          node .zdoc-assembled/scripts/docs-workflow/guides-assembly-identity.js write-descriptor \
+            --repository-root "$GITHUB_WORKSPACE/.zdoc-assembled" --decision "$decision" \
             --expected-master-sha "${{ inputs.master_sha }}" \
             --expected-dev-baseline-sha "${{ inputs.dev_baseline_sha }}" \
             --expected-decision-sha256 "${{ inputs.assembly_decision_sha256 }}" \
             --saas-sidebar "$saas" --byoc-sidebar "$byoc" --output "$descriptor"
-          node scripts/docs-workflow/guides-assembly-identity.js verify-descriptor \
-            --repository-root "$GITHUB_WORKSPACE" --descriptor "$descriptor" \
+          node .zdoc-assembled/scripts/docs-workflow/guides-assembly-identity.js verify-descriptor \
+            --repository-root "$GITHUB_WORKSPACE/.zdoc-assembled" --descriptor "$descriptor" \
             --saas-sidebar "$saas" --byoc-sidebar "$byoc"
           finished_milliseconds=$(node -e 'process.stdout.write(String(Date.now()))')
           elapsed_milliseconds=$((finished_milliseconds - ${{ steps.assembly_decision.outputs.started_milliseconds }}))
-          node scripts/docs-workflow/guides-assembly-identity.js write-result \
-            --repository-root "$GITHUB_WORKSPACE" --decision "$decision" \
+          node .zdoc-assembled/scripts/docs-workflow/guides-assembly-identity.js write-result \
+            --repository-root "$GITHUB_WORKSPACE/.zdoc-assembled" --decision "$decision" \
             --expected-master-sha "${{ inputs.master_sha }}" \
             --expected-dev-baseline-sha "${{ inputs.dev_baseline_sha }}" \
             --expected-decision-sha256 "${{ inputs.assembly_decision_sha256 }}" \
@@ -153,6 +161,7 @@ jobs:
       - id: promoted_snapshot
         name: Select promoted Guides source snapshot
         run: |
+          cd .zdoc-assembled
           candidate=plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json
           snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json
           selection=$(node scripts/docs-workflow/guides-cache-generation-lifecycle.js select \
@@ -178,6 +187,7 @@ jobs:
       - id: promoted_source_manifest
         name: Prepare promoted Guides source manifest
         run: |
+          cd .zdoc-assembled
           mkdir -p plugins/lark-docs/meta/source-cache
           snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json
           manifest=plugins/lark-docs/meta/source-cache/guides-manifest.json
@@ -186,12 +196,13 @@ jobs:
         name: Create Guides v4 generation payload
         if: ${{ inputs.cache_save_required == 'true' }}
         run: |
+          cd .zdoc-assembled
           snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json
           generation=$(node scripts/docs-workflow/guides-source-cache-generation.js keys \
             --snapshot "$snapshot" --run-id "${{ github.run_id }}" --run-attempt "${{ github.run_attempt }}")
           key=$(node -e 'process.stdout.write(JSON.parse(process.argv[1]).saveKey)' "$generation")
           node scripts/docs-workflow/guides-source-cache-generation.js create \
-            --workspace "$GITHUB_WORKSPACE" --output tmp/guides-source-cache-v4 \
+            --workspace "$GITHUB_WORKSPACE/.zdoc-assembled" --output tmp/guides-source-cache-v4 \
             --snapshot "$snapshot" --root-token XyeFwdx6kiK9A6kq3yIcLNdEnDd
           node scripts/docs-workflow/guides-source-cache-generation.js validate \
             --payload tmp/guides-source-cache-v4 --snapshot "$snapshot" \
@@ -203,12 +214,12 @@ jobs:
         continue-on-error: true
         uses: actions/cache/save@v4
         with:
-          path: tmp/guides-source-cache-v4
+          path: .zdoc-assembled/tmp/guides-source-cache-v4
           key: ${{ steps.guides_v4_generation.outputs.key }}
       - name: Record Guides cache generation persistence
         if: ${{ always() }}
         run: |
-          node scripts/docs-workflow/guides-cache-generation-lifecycle.js report \
+          node .zdoc-assembled/scripts/docs-workflow/guides-cache-generation-lifecycle.js report \
             --cache-version "${{ inputs.cache_version }}" \
             --save-required "${{ inputs.cache_save_required }}" \
             --selection-outcome "${{ steps.promoted_snapshot.outcome }}" \
@@ -216,10 +227,10 @@ jobs:
             --preparation-outcome "${{ steps.guides_v4_generation.outcome }}" \
             --save-outcome "${{ steps.save_guides_v4_generation.outcome }}" \
             --save-key "${{ steps.guides_v4_generation.outputs.key }}" \
-            --output plugins/lark-docs/meta/reports/guides-cache-generation.json
+            --output .zdoc-assembled/plugins/lark-docs/meta/reports/guides-cache-generation.json
       - name: Create combined guides checkpoint
         run: |
-          node scripts/docs-workflow/create-checkpoint-artifact.js --group guides --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}" --baseline-dir "$RUNNER_TEMP/baseline" --workspace "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/checkpoint-group" --validation-command "node scripts/validate-generated-sidebars.js" --validation-command 'node scripts/run-doc-build-stage.js --build "pnpm run build" --skipLinkChecks --skipCardReporting'
+          node .zdoc-assembled/scripts/docs-workflow/create-checkpoint-artifact.js --group guides --master-sha "${{ inputs.master_sha }}" --dev-baseline-sha "${{ inputs.dev_baseline_sha }}" --baseline-dir "$RUNNER_TEMP/baseline" --workspace "$GITHUB_WORKSPACE/.zdoc-assembled" --output "$RUNNER_TEMP/checkpoint-group" --validation-command "node scripts/validate-generated-sidebars.js" --validation-command 'node scripts/run-doc-build-stage.js --build "pnpm run build" --skipLinkChecks --skipCardReporting'
           tar --dereference -cf "$RUNNER_TEMP/checkpoint-group.tar" -C "$RUNNER_TEMP" checkpoint-group
       - id: upload
         uses: actions/upload-artifact@v4
@@ -233,7 +244,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: docs-checkpoint-guides-${{ github.run_id }}-reports
-          path: plugins/lark-docs/meta/reports/
+          path: .zdoc-assembled/plugins/lark-docs/meta/reports/
           retention-days: ${{ inputs.artifact_retention_days }}
           if-no-files-found: ignore
       - id: result

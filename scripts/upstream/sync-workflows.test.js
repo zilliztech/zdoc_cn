@@ -99,7 +99,81 @@ jobs:
           AWS_SECRET_ACCESS_KEY: \${{ secrets.AWS_SECRET_ACCESS_KEY }}
 `);
 
-  writeFile(upstream, '.github/workflows/_assemble-guides.yml', 'name: assemble guides\n');
+  writeFile(upstream, '.github/workflows/_assemble-guides.yml', `name: assemble guides
+jobs:
+  assemble:
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: '\${{ inputs.master_sha }}', fetch-depth: 0 }
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: Restore validated Guides source
+        run: node scripts/docs-workflow/guides-stage-artifact.js --operation restore --target "$GITHUB_WORKSPACE"
+      - name: Restore validated Guides table artifacts
+        run: node scripts/docs-workflow/restore-guides-table-artifacts.js --target "$GITHUB_WORKSPACE"
+      - id: assembly_decision
+        name: Validate Guides assembly decision
+        run: |
+          decision=plugins/lark-docs/meta/reports/guides-assembly-decision.json
+          node scripts/docs-workflow/guides-assembly-identity.js validate-decision --repository-root "$GITHUB_WORKSPACE" --input "$decision"
+          observed_sha=$(node scripts/docs-workflow/guides-assembly-identity.js decision-sha --repository-root "$GITHUB_WORKSPACE" --input "$decision")
+          mode=$(node -e 'const d=require("./"+process.argv[1]);process.stdout.write(d.mode)' "$decision")
+          if [[ "$mode" == reuse ]]; then
+            node scripts/docs-workflow/guides-assembly-identity.js verify-descriptor --repository-root "$RUNNER_TEMP/baseline"
+            node - "$decision" "$RUNNER_TEMP/baseline" <<'NODE'
+          console.log(process.argv[2])
+          NODE
+          fi
+      - name: Generate combined Guides sidebars offline
+        run: node scripts/docs-workflow/generate-guides-sidebars.js --media-manifest plugins/lark-docs/meta/media-cache/guides.json
+      - name: Validate combined guides output
+        run: |
+          node scripts/validate-generated-sidebars.js
+          node scripts/run-doc-build-stage.js --build "pnpm run build" --skipLinkChecks --skipCardReporting
+      - name: Finalize Guides assembly identity
+        run: |
+          decision=plugins/lark-docs/meta/reports/guides-assembly-decision.json
+          descriptor=plugins/lark-docs/meta/assembly/guides.json
+          saas=config/generated/guides.sidebar.js
+          byoc=config/generated/guides-byoc.sidebar.js
+          cmp -s "$RUNNER_TEMP/baseline/$saas" "$saas"
+          cmp -s "$RUNNER_TEMP/baseline/$byoc" "$byoc"
+          node scripts/docs-workflow/guides-assembly-identity.js write-descriptor --repository-root "$GITHUB_WORKSPACE" --decision "$decision" --saas-sidebar "$saas" --byoc-sidebar "$byoc" --output "$descriptor"
+          node scripts/docs-workflow/guides-assembly-identity.js verify-descriptor --repository-root "$GITHUB_WORKSPACE" --descriptor "$descriptor" --saas-sidebar "$saas" --byoc-sidebar "$byoc"
+          node scripts/docs-workflow/guides-assembly-identity.js write-result --repository-root "$GITHUB_WORKSPACE" --decision "$decision"
+      - id: promoted_snapshot
+        name: Select promoted Guides source snapshot
+        run: |
+          candidate=plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json
+          snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json
+      - id: promoted_source_manifest
+        name: Prepare promoted Guides source manifest
+        run: |
+          mkdir -p plugins/lark-docs/meta/source-cache
+          snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json
+      - id: guides_v4_generation
+        name: Create Guides v4 generation payload
+        run: |
+          snapshot=plugins/lark-docs/meta/snapshots/guides-uat-last-success.json
+          generation={}
+          node scripts/docs-workflow/guides-source-cache-generation.js create --workspace "$GITHUB_WORKSPACE" --output tmp/guides-source-cache-v4
+      - id: save_guides_v4_generation
+        uses: actions/cache/save@v4
+        with:
+          path: tmp/guides-source-cache-v4
+      - name: Record Guides cache generation persistence
+        run: |
+          node scripts/docs-workflow/guides-cache-generation-lifecycle.js report \\
+            --output plugins/lark-docs/meta/reports/guides-cache-generation.json
+      - name: Create combined guides checkpoint
+        run: node scripts/docs-workflow/create-checkpoint-artifact.js --group guides --master-sha "\${{ inputs.master_sha }}" --dev-baseline-sha "\${{ inputs.dev_baseline_sha }}" --baseline-dir "$RUNNER_TEMP/baseline" --workspace "$GITHUB_WORKSPACE"
+      - name: Upload guides reports
+        with:
+          path: plugins/lark-docs/meta/reports/
+`);
   writeFile(upstream, '.github/workflows/_monitor-docs-progress.yml', 'name: monitor docs progress\n');
   writeFile(upstream, '.github/workflows/_prepare-translation-batches.yml', 'name: prepare translation batches\n');
   writeFile(upstream, '.github/workflows/_publish-content-group.yml', 'name: publish content group\n');
@@ -255,6 +329,24 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(renderGuidesTable, /--target "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
     assert.match(renderGuidesTable, /node \.zdoc-assembled\/scripts\/docs-workflow\/render-guides-table\.js --workspace "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
     assert.match(renderGuidesTable, /--workspace "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+
+    const assembleGuides = readFile(fixture.root, '.github/workflows/_assemble-guides.yml');
+    assert.match(assembleGuides, /name: Materialize locked upstream/);
+    assert.match(assembleGuides, /node scripts\/upstream\/materialize\.js/);
+    assert.match(assembleGuides, /name: Assemble locked upstream/);
+    assert.match(assembleGuides, /npm run assemble/);
+    assert.match(assembleGuides, /name: Install assembled dependencies/);
+    assert.match(assembleGuides, /pnpm --dir \.zdoc-assembled install --frozen-lockfile/);
+    assert.match(assembleGuides, /--target "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(assembleGuides, /node \.zdoc-assembled\/scripts\/docs-workflow\/restore-guides-table-artifacts\.js/);
+    assert.match(assembleGuides, /--repository-root "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(assembleGuides, /"\$GITHUB_WORKSPACE\/\.zdoc-assembled\/\$decision"/);
+    assert.match(assembleGuides, /cd \.zdoc-assembled && node scripts\/docs-workflow\/generate-guides-sidebars\.js/);
+    assert.match(assembleGuides, /cd \.zdoc-assembled\n\s+node scripts\/validate-generated-sidebars\.js/);
+    assert.match(assembleGuides, /workspace="\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(assembleGuides, /--workspace "\$GITHUB_WORKSPACE\/\.zdoc-assembled"/);
+    assert.match(assembleGuides, /path: \.zdoc-assembled\/tmp\/guides-source-cache-v4/);
+    assert.match(assembleGuides, /path: \.zdoc-assembled\/plugins\/lark-docs\/meta\/reports\//);
 
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/example.js'), "module.exports = 'i18n/zh-CN Chinese';\n");
     assert.equal(readFile(fixture.root, 'scripts/docs-workflow/monitor-docs-progress.js'), "module.exports = 'CN Docs Build / CN Docs Artifact-Only Build';\n");
