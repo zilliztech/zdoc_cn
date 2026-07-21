@@ -30,6 +30,8 @@ keywords:
 import Admonition from '@theme/Admonition';
 
 
+import Supademo from '@site/src/components/Supademo';
+
 import Procedures from '@site/src/components/Procedures';
 
 # 项目管理
@@ -42,7 +44,7 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 添加项目地域\{#add-project-regions}
 
-如果您需要使用[全球集群](/docs/global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
+如果您需要使用[全球集群](./global-cluster-explained)功能，你必须创建多地域项目。您可以[联系我们](http://support.zilliz.com.cn)开通多地域项目的功能。
 
 - **通过 RESTful API**
 
@@ -63,12 +65,12 @@ import Procedures from '@site/src/components/Procedures';
 
     以下为返回结果示例。
 
-    ```json
+    ```bash
     {
       "code": 0,
       "data": {
         "projectId": "proj-a0195d6acacaf2bb985173",
-        "regions": ["ali-cn-hangzhou", "ali-cn-beijing"]
+        "regions": ["ali-cn-hangzhou"]
       }
     }
     
@@ -92,10 +94,6 @@ import Procedures from '@site/src/components/Procedures';
 
 您可以查看在您的权限范围内的所有项目的列表。
 
-- **通过 Web 控制台**
-
-    ![zh-view-projects-saas](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-view-projects-saas.png "zh-view-projects-saas")
-
 - **通过 RESTful API**
 
     以下示例查看当前组织下的全部项目。详情请参考[查看项目列表](/reference/restful/list-projects-v2)。
@@ -112,29 +110,33 @@ import Procedures from '@site/src/components/Procedures';
 
     以下为输出结果。
 
-    ```json
+    ```bash
     {
         "code": 0,
         "data": [
             {
                 "projectName": "Default Project",
                 "projectId": "proj-xxxxxxxxxxxxxxxxxxxxxxx",
+                "regionIds": [
+                    "ali-cn-hangzhou"
+                ],
                 "instanceCount": 2,
-                "createTime": "2023-08-16T07:34:06Z"
+                "createTime": "2023-08-16T07:34:06Z",
+                "plan": "Enterprise",
+                "orgType": "SAAS",
+                "description": "A project for organizing clusters and resources."
             }
         ]
     }
     ```
 
+- **通过 Web 控制台**
+
+    ![XJTIwuEapharu1bRUmCcICTsnEo](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/XJTIwuEapharu1bRUmCcICTsnEo.png)
+
 ## 查看项目详情\{#view-project-details}
 
 您还可以查看某个项目的具体详情。
-
-- **通过 Web 控制台**
-
-    您可以在项目列表页查看项目名称、版本、集群数量、创建时间。您还可以点击某个项目，查看项目下的集群信息。
-
-    ![C2ItbMdsMoH2FWxmmHncejKVn0e](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/C2ItbMdsMoH2FWxmmHncejKVn0e.png "C2ItbMdsMoH2FWxmmHncejKVn0e")
 
 - **通过 RESTful API**
 
@@ -142,42 +144,45 @@ import Procedures from '@site/src/components/Procedures';
 
     ```bash
     export TOKEN="YOUR_API_KEY"
-    export PROJECT_ID="proj-xxxxxxxxxxxxxxx"
+    export projectId="proj-xx"
     
     curl --request GET \
-         --url "https://${BASE_URL}/v2/projects/${PROJECT_ID}" \
-         --header "Authorization: Bearer ${API_KEY}"   \
-         --header "accept: application/json"
+    --url "${BASE_URL}/v2/projects/${projectId}" \
+    --header "Authorization: Bearer ${TOKEN}" \
+    --header "Content-Type: application/json"
     ```
 
     以下为输出结果。
 
     ```json
     {
-      "code": 0,
-      "data": [
-        {
-          "projectName": "project1",
-          "projectId": "proj-xxxxxxxxxxxxxxx",
-          "instanceCount": 3,
-          "createTime": "2023-12-07T03:21:32Z",
-          "plan": "Enterprise"
+        "code": 0,
+        "data": {
+            "projectId": "proj-x",
+            "projectName": "My Project",
+            "regionIds": [
+                "ali-cn-hangzhou"
+            ],
+            "instanceCount": 2,
+            "createTime": "2023-08-16T07:34:06Z",
+            "plan": "Enterprise",
+            "orgType": "SAAS",
+            "description": "A project for organizing clusters and resources."
         }
-      ]
     }
     ```
 
-## 重命名项目\{#rename-a-project}
+- **通过 Web 控制台**
 
-要重命名项目，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台对项目进行重命名。
+    您可以在项目列表页查看项目名称、版本、集群数量、创建时间。您还可以点击某个项目，查看项目下的集群信息。
 
-<Admonition type="info" icon="📘" title="说明">
+    ![LT20bwZ0lolQiqxAUC3cyc5dnAg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/LT20bwZ0lolQiqxAUC3cyc5dnAg.png "LT20bwZ0lolQiqxAUC3cyc5dnAg")
 
-每个组织中都有一个默认项目。
+## 编辑项目详情\{#edit-project-details}
 
-</Admonition>
+要重命名项目或者修改项目描述，您必须是[组织管理员](./organization-users)。您可以通过 Web 控制台编辑项目详情。
 
-![rename-project-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/rename-project-zh.png "rename-project-zh")
+<Supademo id="cmhiwsw4r607mfati5u089sae" title=""  />
 
 ## 删除项目\{#delete-a-project}
 

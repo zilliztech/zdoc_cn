@@ -19,7 +19,8 @@
       "job",
       "alert",
       "etl",
-      "stage"
+      "stage",
+      "storage-integration"
     ],
     "milvus": []
   }

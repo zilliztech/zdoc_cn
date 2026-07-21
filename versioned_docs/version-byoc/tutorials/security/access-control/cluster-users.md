@@ -43,11 +43,13 @@ import Admonition from '@theme/Admonition';
 
 - 输入用户的用户名
 
+- （可选）输入用户的描述
+
 - 授予该用户内置角色或自定义角色。有关角色的详细信息，请参考[管理集群角色（控制台）](./cluster-roles)。
 
 - 为该用户设置[鉴权](./cluster-credentials)时使用的密码。
 
-![add-cluster-user-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/add-cluster-user-cn.png "add-cluster-user-cn")
+![VpSHbBL9qoIU2txgK5QckGcfnqb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/VpSHbBL9qoIU2txgK5QckGcfnqb.png "VpSHbBL9qoIU2txgK5QckGcfnqb")
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -57,7 +59,7 @@ import Admonition from '@theme/Admonition';
 
 ## 编辑集群用户角色\{#edit-the-role-of-a-cluster-user}
 
-![dit-cluster-user-role-zh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/dit-cluster-user-role-zh.png "dit-cluster-user-role-zh")
+![JXGGbWgyKoWB9bxlgBOcE6ZgnOb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/JXGGbWgyKoWB9bxlgBOcE6ZgnOb.png "JXGGbWgyKoWB9bxlgBOcE6ZgnOb")
 
 ## 删除集群用户\{#drop-a-cluster-user}
 

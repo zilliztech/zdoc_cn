@@ -53,7 +53,7 @@ client = MilvusClient(
     token="YOUR_CLUSTER_TOKEN"
 )
 
-client.create_user(user_name="user_1", password="P@ssw0rd")
+client.create_user(user_name="user_1", password="P@ssw0rd", description="a new user in the developers team")
 ```
 
 </TabItem>
@@ -75,6 +75,7 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 CreateUserReq createUserReq = CreateUserReq.builder()
         .userName("user_1")
         .password("P@ssw0rd")
+        .description("a new user in the developers team")
         .build();
         
 client.createUser(createUserReq);
@@ -112,6 +113,7 @@ curl --request POST \
 -d '{
     "userName": "user_1",
     "password": "P@ssw0rd"
+    "description": "a new user in the developers team"
 }'
 ```
 
@@ -311,7 +313,7 @@ curl --request POST \
 结果如下所示：
 
 ```bash
-{'user_name': 'user_1', 'roles': 'role_a'}
+{'user_name': 'user_1', 'description':'a new user in the developers team', 'roles': 'role_a'}
 ```
 
 ## 撤销角色\{#revoke-a-role}

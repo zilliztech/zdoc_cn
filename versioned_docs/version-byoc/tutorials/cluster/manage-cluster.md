@@ -27,15 +27,43 @@ import TabItem from '@theme/TabItem';
 
 import Supademo from '@site/src/components/Supademo';
 
+import Procedures from '@site/src/components/Procedures';
+
 # 管理集群
 
 本文介绍如了集群的生命周期，以便您能够充分利用 Zilliz Cloud 控制台来管理集群。
 
 ## 重命名集群\{#rename-cluster}
 
-前往目标集群的**集群详情**页并跟随以下指南对集群进行重命名。
+<Procedures>
 
-<Supademo id="cm9uqn1k801p1wbbizszfx673" title=""  />
+1. 前往目标集群的**集群详情**页。
+
+1. 点击**操作**并选择**重命名**。
+
+    ![PGmQbV5RFom1emxTc0Kct0sQnAb](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/PGmQbV5RFom1emxTc0Kct0sQnAb.png "PGmQbV5RFom1emxTc0Kct0sQnAb")
+
+1. 输入集群的新名称并点击**保存**。
+
+    ![XGqrbaHUKoTJ1rx6vifcdnYqnmg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/XGqrbaHUKoTJ1rx6vifcdnYqnmg.png "XGqrbaHUKoTJ1rx6vifcdnYqnmg")
+
+</Procedures>
+
+## 修改集群描述\{#edit-description}
+
+<Procedures>
+
+1. 前往目标集群的**集群详情**页。
+
+1. 鼠标移动到集群描述上，点击**编辑**按钮。
+
+    ![NZTpbPC9NoEdDlxE0ndcmaSmn1b](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/NZTpbPC9NoEdDlxE0ndcmaSmn1b.png "NZTpbPC9NoEdDlxE0ndcmaSmn1b")
+
+1. 输入集群的新描述并点击**保存**。
+
+    ![Ot7Vb8HN7oufPoxnMQPc6vItnXg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Ot7Vb8HN7oufPoxnMQPc6vItnXg.png "Ot7Vb8HN7oufPoxnMQPc6vItnXg")
+
+</Procedures>
 
 ## 挂起集群\{#suspend-cluster}
 
@@ -150,6 +178,12 @@ curl --request POST \
 </Tabs>
 
 集群恢复运行请求成功后，会生成一条任务记录。您可以前往[任务中心](./job-center)查看任务进度。
+
+## 转换为全球集群\{#convert-to-a-global-cluster}
+
+如果您需要将现有的 Dedicated 集群转换为[全球集群](./global-cluster-explained)，请参考以下 Demo。
+
+<Supademo id="cmm5p53sh3hogdtfhemesjhv0" title=""  />
 
 ## 删除集群\{#drop-cluster}
 

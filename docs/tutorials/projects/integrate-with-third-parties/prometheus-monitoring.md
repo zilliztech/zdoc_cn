@@ -33,6 +33,8 @@ import Procedures from '@site/src/components/Procedures';
 
 通过将 Zilliz Cloud 与 Prometheus 集成，您可以收集并监控与 Zilliz Cloud 集群相关的指标。
 
+Prometheus 集成仅导出 Serving 集群指标，不导出按需计算 Database 指标。
+
 <Admonition type="info" icon="📘" title="说明">
 
 此功能仅限**企业版**项目使用。

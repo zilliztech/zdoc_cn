@@ -68,6 +68,12 @@ import Admonition from '@theme/Admonition';
 
 以下指标用于描述单个集群中的资源使用情况、性能表现和数据状态。带有 ✦ 标记的指标同样支持在 Collection 级别查看。你可以在控制台的 Collection 详情页、通过 [Prometheus 监控](./prometheus-monitoring)，或通过 RESTful API 获取 Collection 级别指标。
 
+<Admonition type="info" icon="📘" title="说明">
+
+在按需计算 Database 中，当前仅支持部分 Collection 级别监控指标。支持的指标包括：**读请求 QPS**、**每秒 Search NQ**、**读请求延时**、**读请求失败率**、**Entity 数量**。这些指标可在控制台中查看。本版本暂不支持通过 Prometheus 导出按需计算 Database 指标。
+
+</Admonition>
+
 ### Pod 和容器资源\{#pod-container-resources}
 
 <table>
@@ -80,7 +86,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p>CPU 用量</p></td>
      <td><p>Pod 已使用的 CPU 核心数。</p></td>
-     <td><p>Track trends; investigate sustained growth or spikes.</p><p>跟踪趋势、调查持续增长或快速增长的原因。</p></td>
+     <td><p>跟踪趋势、调查持续增长或快速增长的原因。</p></td>
      <td><p>BYOC</p></td>
    </tr>
    <tr>
@@ -125,13 +131,13 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Query CU 计算资源</p></td>
-     <td><p>相对于 CU 总计算能力的已使用计算能力的度量。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
-     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
+     <td><p>衡量查询执行对 CPU 资源的使用程度。该指标根据 QueryNode 的 CPU 使用量相对于其 CPU limit 计算得出。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>如果该指标持续处于高位，说明查询执行受 CPU 资源限制。可以考虑<a href="./manage-replica">扩展 replica</a>，以提升并行查询处理能力。</p></td>
    </tr>
    <tr>
      <td><p>Query CU 加载容量</p></td>
-     <td><p>相对于 CU 总容量的已使用容量的度量。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
-     <td><p><strong>70%-80%</strong>：检查服务状态并准备<a href="./manage-cluster">扩容</a>。 </p><p><strong>> 90%</strong>：立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p><p><strong>100%</strong>：当 CU 加载容量达到 100% 时，您将无法向集群写入数据。请立即<a href="./manage-cluster">扩容</a>，以避免服务中断。</p></td>
+     <td><p>衡量当前 Query CU 距离容量上限的接近程度。该指标取两个信号中的较高值：已加载数据占用的内存，以及已存储数据量相对于集群存储配额的比例。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
+     <td><p>如果该指标持续处于高位，说明当前 Query CU 规格可能没有足够容量。可以考虑扩容 Query CU，以提供更多容量。</p></td>
    </tr>
    <tr>
      <td><p>Query CU 总数</p></td>
@@ -160,7 +166,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>读请求 QPS ✦</p></td>
-     <td><p>每秒读取请求（vector search, hybrid search and query）的数量。</p></td>
+     <td><p>每秒读取请求（vector search, hybrid search and query）的数量。</p><p>该指标同样适用于按需计算 Database 中的 Managed Collection 和 External Collection。</p></td>
      <td><p>有关系统性能监控，请参阅<a href="https://zilliz.com.cn/vector-database-benchmark-tool?database=ZillizCloud,Milvus,PgVector,ElasticCloud,Pinecone,QdrantCloud,WeaviateCloud&dataset=medium&filter=none,low,high">向量数据库性能测试工具</a>。</p></td>
    </tr>
    <tr>
@@ -170,7 +176,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>每秒 Search NQ ✦</p></td>
-     <td><p>每秒搜索请求中携带的查询向量数量。</p></td>
+     <td><p>每秒搜索请求中携带的查询向量数量。</p><p>该指标同样适用于按需计算 Database 中的 Managed Collection 和 External Collection。</p></td>
      <td></td>
    </tr>
    <tr>
@@ -180,7 +186,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>读请求延时（Latency）✦</p></td>
-     <td><p>客户端向服务器发起读请求（search 和 query）到客户端收到响应之间的时间差。</p><p>在右侧扩展的下拉菜单中选择<strong>平均值</strong>或 <strong>P99</strong> 将显示对应的平均延时或 P99 延时。</p></td>
+     <td><p>客户端向服务器发起读请求（search 和 query）到客户端收到响应之间的时间差。</p><p>该指标同样适用于按需计算 Database 中的 Managed Collection 和 External Collection。</p><p>在右侧扩展的下拉菜单中选择<strong>平均值</strong>或 <strong>P99</strong> 将显示对应的平均延时或 P99 延时。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
@@ -190,7 +196,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>读请求失败率 ✦</p></td>
-     <td><p>失败读请求（search 和 query）在每秒所有读请求中所占的百分比。</p></td>
+     <td><p>失败读请求（search 和 query）在每秒所有读请求中所占的百分比。</p><p>该指标同样适用于按需计算 Database 中的 Managed Collection 和 External Collection。</p></td>
      <td><p><a href="./manage-project-alerts">配置告警</a>以监控读请求失败率。</p></td>
    </tr>
    <tr>
@@ -199,7 +205,7 @@ import Admonition from '@theme/Admonition';
      <td><p><a href="./manage-project-alerts">配置告警</a>以监控写请求失败率。</p></td>
    </tr>
    <tr>
-     <td><p>慢查询数量</p></td>
+     <td><p>慢查询数量 ✦</p></td>
      <td><p>统计慢查询数量，包括 search 和 query 请求数。默认情况下，查询延时超过 5 秒的查询被视为慢查询。</p><p>有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>通过适当调整集群配置，可以识别存在问题的查询并优化性能。</p></td>
    </tr>
@@ -235,7 +241,7 @@ import Admonition from '@theme/Admonition';
    </tr>
    <tr>
      <td><p>Entity 数量 ✦</p></td>
-     <td><p>集群或 Collection 中通过 Insert 和 Bulk Insert 操作插入的 Entity 总数。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已插入的 entity 数量。</p></td>
+     <td><p>集群或 Collection 中通过 Insert 和 Bulk Insert 操作插入的 Entity 总数。</p><p>该指标同样适用于按需计算 Database 中的 Managed Collection 和 External Collection。</p><p>在右侧扩展的下拉菜单中选择指定的 collection，将显示该 collection 中已插入的 entity 数量。</p></td>
      <td><p>-</p></td>
    </tr>
    <tr>
@@ -247,6 +253,36 @@ import Admonition from '@theme/Admonition';
      <td><p>未加载的 Collection 数量</p></td>
      <td><p>统计集群中未加载的 collection 数量。</p><p>该指标仅适用于 <strong>Dedicated 企业版</strong> 或 <strong>BYOC</strong>。有关更多集群类型信息，请参阅 <a href="./select-zilliz-cloud-service-plans">Zilliz Cloud 版本对比</a>。</p></td>
      <td><p>可凭借该指标判断是否需要清理数据或继续加载 collection。</p></td>
+   </tr>
+</table>
+
+### 其他\{#others}
+
+<table>
+   <tr>
+     <th><p>指标名称</p></th>
+     <th><p>描述</p></th>
+     <th><p>推荐操作</p></th>
+   </tr>
+   <tr>
+     <td><p>集群状态异常</p></td>
+     <td><p>目标集群状态异常。</p></td>
+     <td><p>检查集群状态，并根据具体情况采取相应措施。</p></td>
+   </tr>
+   <tr>
+     <td><p>集群禁止写入</p></td>
+     <td><p>由于错误或保护机制，目标集群的写入被禁用。</p></td>
+     <td><p>检查集群状态、最近的配置或维护操作，以及相关告警，排查并解决根本原因后恢复写入能力。</p></td>
+   </tr>
+   <tr>
+     <td><p>访问日志转发异常</p></td>
+     <td><p>访问日志无法正常转发到已配置的存储集成。</p></td>
+     <td><p>检查日志转发配置、目标服务状态、网络连通性，以及相关凭证或权限，解决问题后确认日志转发已恢复。</p></td>
+   </tr>
+   <tr>
+     <td><p>审计日志转发异常</p></td>
+     <td><p>当审计日志无法正常转发到已配置的存储集成。</p></td>
+     <td><p>检查日志转发配置、目标服务状态、网络连通性，以及相关凭证或权限，解决问题后确认日志转发已恢复。</p></td>
    </tr>
 </table>
 

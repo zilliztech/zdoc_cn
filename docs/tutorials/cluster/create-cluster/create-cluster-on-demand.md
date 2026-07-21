@@ -254,7 +254,7 @@ curl --request POST \
 
 - `clusterType`：集群的类型。可选的参数值包含：**Performance-optimized**（性能型）和 **Capacity-optimized**（容量型）。
 
-- `cuSize`：集群的 Query CU 数量。参数值为 1-256 之间的整数。对于使用个人邮箱创建的组织，即使已配置支付方式，Dedicated 集群的 Query CU 最大也只能设置为 32。
+- `cuSize`：集群的 Query CU 数量。参数值为 1-2,048 之间的整数。对于使用个人邮箱创建的组织，即使已配置支付方式，Dedicated 集群的 Query CU 最大也只能设置为 32。
 
 - `description` (可选): 集群的描述。
 

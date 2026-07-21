@@ -45,7 +45,7 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 使用限制\{#limitations}
 
-- 如需管理 On-demand 集群，您需要具备**项目管理员**权限。
+- 如需管理 On-demand 集群，您需要具备**项目管理员**权限。如需了解角色权限，请参考[项目用户](./project-users#project-role-and-access-comparison)。
 
 - 每个项目中最多只能创建 20 个 On-demand 集群。
 
@@ -269,7 +269,7 @@ import Procedures from '@site/src/components/Procedures';
 
 - **通过 RESTful API**
 
-    以下示例展示如何修改集群名称。详情请参考[更新按需集群信息](/reference/restful/update-on-demand-cluster-info-v2)。
+    以下示例展示如何修改集群名称。详情请参考[更新按需集群信息](/reference/restful/update-on-demand-cluster-v2)。
 
     ```bash
     curl --request PATCH \
@@ -314,7 +314,7 @@ import Procedures from '@site/src/components/Procedures';
 
 - **通过 RESTful API**
 
-    以下示例展示如何修改集群名称。详情请参考[更新按需集群信息](/reference/restful/update-on-demand-cluster-info-v2)。
+    以下示例展示如何修改集群名称。详情请参考[更新按需集群信息](/reference/restful/update-on-demand-cluster-v2)。
 
     ```bash
     curl --request PATCH \
