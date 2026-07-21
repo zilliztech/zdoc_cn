@@ -6,7 +6,7 @@ include
 lib
 .DS_Store
 pyvenv.cfg
-```
+.pnpm-store/
 node_modules
 build
 .docusaurus
@@ -21,3 +21,7 @@ scripts/docs
 .claude
 .playwright*
 .qwen
+.worktrees
+.zdoc-assembled
+.zdoc-upstream
+tmp
