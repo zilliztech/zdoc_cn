@@ -179,12 +179,6 @@ curl --request POST \
 
 集群恢复运行请求成功后，会生成一条任务记录。您可以前往[任务中心](./job-center)查看任务进度。
 
-## 转换为全球集群\{#convert-to-a-global-cluster}
-
-如果您需要将现有的 Dedicated 集群转换为[全球集群](./global-cluster-explained)，请参考以下 Demo。
-
-<Supademo id="cmm5p53sh3hogdtfhemesjhv0" title=""  />
-
 ## 删除集群\{#drop-cluster}
 
 您可以删除不再需要的集群。您可以通过 Web 控制台或使用 RESTful API 和 SDK 删除集群。
