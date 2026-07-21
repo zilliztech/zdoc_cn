@@ -8,7 +8,7 @@ last_modified: FALSE
 deprecate_since: FALSE
 beta: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 6 月 24 日 | Cloud"
+description: "最近更新：2026 年 7 月 21 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 1
@@ -28,7 +28,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 6 月 24 日
+**最近更新**：2026 年 7 月 21 日
 
 <Grid columnSize="2" widthRatios="24,75">
 
@@ -52,7 +52,29 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
-        **[2026 年 6 月 24 日](./release-notes-2606)**
+        **[2026 年 7 月 21 日](./release-notes-2607#byoc-volume)**
+
+    </div>
+
+    <div>
+
+        - 💾 [存储集成](./integrate-with-storage-bucket)及[外部 Volume](./external-volume) 在 BYOC 项目中可用。
+
+        - 📈 按需计算支持 [Collection 级监控指标](./metrics-alerts-reference)。
+
+        - 💳 按需计算和外部 Volume 开始计费。关于费用相关说明，可以参考[按需计算费用](./on-demand-compute-cost)及[存储费用](./storage-cost)。
+
+        - 💻 [可编程第三方存储集成](/reference/restful/storage-integration-operations-v2)支持通过 RESTful 接口进行创建。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="24,75">
+
+    <div>
+
+        **[2026 年 6 月 24 日](./release-notes-2606#enhancements)**
 
     </div>
 
@@ -811,3 +833,4 @@ import Grid from '@site/src/components/Grid';
     </div>
 
 </Grid>
+
