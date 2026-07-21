@@ -309,6 +309,8 @@ test('disabled publication requires every downstream result to be skipped', () =
 })
 test('validates publisher status and status-dependent SHA invariants', () => {})
 `);
+  writeFile(upstream, 'scripts/restore-generated-state.sh', '#!/usr/bin/env bash\nset -euo pipefail\necho restored\n');
+  fs.chmodSync(path.join(upstream, 'scripts/restore-generated-state.sh'), 0o755);
   writeFile(upstream, 'scripts/update-sdk-reference-snapshots.sh', '#!/usr/bin/env bash\n');
   writeFile(upstream, 'scripts/update-lark-doc-snapshot.js', "console.log('snapshot');\n");
 
@@ -448,6 +450,11 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(finalizeTranslationTest, /downstream matrix jobs are cancelled/);
     assert.match(finalizeTranslationTest, /disabled\|preparation\|completed/);
     assert.equal(readFile(fixture.root, 'scripts/collect-build-card-notes.js'), "console.log('card notes');\n");
+    assert.equal(readFile(fixture.root, 'scripts/restore-generated-state.sh'), '#!/usr/bin/env bash\nset -euo pipefail\necho restored\n');
+    assert.equal(
+      fs.statSync(path.join(fixture.root, 'scripts/restore-generated-state.sh')).mode & 0o777,
+      fs.statSync(path.join(fixture.upstream, 'scripts/restore-generated-state.sh')).mode & 0o777,
+    );
     assert.equal(readFile(fixture.root, 'scripts/update-lark-doc-snapshot.js'), "console.log('snapshot');\n");
   } finally {
     fs.rmSync(fixture.directory, { recursive: true, force: true });
@@ -464,6 +471,45 @@ test('check mode fails when committed generated files drift', () => {
     assert.notEqual(result.status, 0);
     assert.match(result.stderr, /Workflow sync drift detected/);
     assert.match(result.stderr, /\.github\/workflows\/fetch-docs\.yml/);
+  } finally {
+    fs.rmSync(fixture.directory, { recursive: true, force: true });
+  }
+});
+
+test('check mode reports drift in the generated-state restore helper', () => {
+  const fixture = makeFixture();
+  try {
+    assert.equal(runSync(['--write'], fixture).status, 0);
+    writeFile(fixture.root, 'scripts/restore-generated-state.sh', '#!/usr/bin/env bash\necho hand-edited\n');
+
+    const result = runSync(['--check'], fixture);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /Workflow sync drift detected/);
+    assert.match(result.stderr, /scripts\/restore-generated-state\.sh/);
+  } finally {
+    fs.rmSync(fixture.directory, { recursive: true, force: true });
+  }
+});
+
+test('write mode repairs executable-bit drift on non-executable synchronized files', () => {
+  const fixture = makeFixture();
+  try {
+    assert.equal(runSync(['--write'], fixture).status, 0);
+    const relativePath = 'scripts/collect-build-card-notes.js';
+    const source = path.join(fixture.upstream, relativePath);
+    const target = path.join(fixture.root, relativePath);
+    const sourceMode = fs.statSync(source).mode & 0o777;
+    assert.equal(sourceMode & 0o111, 0);
+
+    fs.chmodSync(target, sourceMode | 0o111);
+    assert.notEqual(runSync(['--check'], fixture).status, 0);
+
+    const repaired = runSync(['--write'], fixture);
+    assert.equal(repaired.status, 0, repaired.stderr || repaired.stdout);
+    assert.equal(fs.statSync(target).mode & 0o777, sourceMode);
+
+    const checked = runSync(['--check'], fixture);
+    assert.equal(checked.status, 0, checked.stderr || checked.stdout);
   } finally {
     fs.rmSync(fixture.directory, { recursive: true, force: true });
   }

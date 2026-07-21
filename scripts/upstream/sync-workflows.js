@@ -24,6 +24,7 @@ const COPIED_PATHS = [
   '.github/workflows/translate-codex.yml',
   'scripts/collect-build-card-notes.js',
   'scripts/docs-workflow',
+  'scripts/restore-generated-state.sh',
   'scripts/update-lark-doc-snapshot.js',
   'scripts/update-sdk-reference-snapshots.sh',
 ];
@@ -819,14 +820,14 @@ function syncInto(root, upstream, contextRoot = root) {
         const content = transform(childRelativePath, fs.readFileSync(childSource, 'utf8'), context);
         writeText(root, childRelativePath, content);
         const childStat = fs.statSync(childSource);
-        if (childStat.mode & 0o111) fs.chmodSync(path.join(root, childRelativePath), childStat.mode);
+        fs.chmodSync(path.join(root, childRelativePath), childStat.mode & 0o777);
       }
       continue;
     }
 
     const content = transform(relativePath, fs.readFileSync(source, 'utf8'), context);
     writeText(root, relativePath, content);
-    if (stat.mode & 0o111) fs.chmodSync(target, stat.mode);
+    fs.chmodSync(target, stat.mode & 0o777);
   }
 }
 
