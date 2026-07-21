@@ -491,6 +491,30 @@ test('check mode reports drift in the generated-state restore helper', () => {
   }
 });
 
+test('write mode repairs executable-bit drift on non-executable synchronized files', () => {
+  const fixture = makeFixture();
+  try {
+    assert.equal(runSync(['--write'], fixture).status, 0);
+    const relativePath = 'scripts/collect-build-card-notes.js';
+    const source = path.join(fixture.upstream, relativePath);
+    const target = path.join(fixture.root, relativePath);
+    const sourceMode = fs.statSync(source).mode & 0o777;
+    assert.equal(sourceMode & 0o111, 0);
+
+    fs.chmodSync(target, sourceMode | 0o111);
+    assert.notEqual(runSync(['--check'], fixture).status, 0);
+
+    const repaired = runSync(['--write'], fixture);
+    assert.equal(repaired.status, 0, repaired.stderr || repaired.stdout);
+    assert.equal(fs.statSync(target).mode & 0o777, sourceMode);
+
+    const checked = runSync(['--check'], fixture);
+    assert.equal(checked.status, 0, checked.stderr || checked.stdout);
+  } finally {
+    fs.rmSync(fixture.directory, { recursive: true, force: true });
+  }
+});
+
 test('package scripts expose workflow sync commands', () => {
   const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'package.json'), 'utf8'));
   assert.equal(packageJson.scripts['upstream:sync-workflows'], 'node scripts/upstream/sync-workflows.js --write');
