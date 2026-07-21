@@ -21,3 +21,9 @@ scripts/docs
 .claude
 .playwright*
 .qwen
+tmp
+.pnpm-store
+.zdoc-assembled
+.worktrees
+.codegraph
+.zdoc-upstream

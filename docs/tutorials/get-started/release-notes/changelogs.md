@@ -112,25 +112,25 @@ import Grid from '@site/src/components/Grid';
 
             - [外部数据湖搜索](./external-collection)
 
-        - 🐦 Milvus v3.0.x 在 Zilliz Cloud 进入公测（Public Review），主要功能包括：    
+        - 🐦 Milvus v3.0.x 在 Zilliz Cloud 针对按需计算能力进入公测（Public Review），主要功能包括：    
 
             - [外部集合](./external-collection)与回填
 
-            - [可空向量](./nullable-fields)，
+            - [可空向量](./nullable-fields)
 
-            - Embedding 列表检索与过滤（Embedding list searches and filtering），
+            - Embedding 列表检索与过滤（Embedding list searches and filtering）
 
             - [MinHash Function](./minhash-function)
 
-            - [搜索](./single-vector-search#sort-search-results-by-scalar-fields)与[查询](./get-and-scalar-query#aggregate-query-results)的 Order by，
+            - [搜索](./single-vector-search#sort-search-results-by-scalar-fields)与[查询](./get-and-scalar-query#aggregate-query-results)的 Order by
 
-            - [快照](./snapshots)（Snapshots），
+            - [快照](./snapshots)（Snapshots）
 
-            - [Entity](./set-collection-ttl#set-entity-ttl)[ TTL](./set-collection-ttl#set-entity-ttl)，
+            - [Entity](./set-collection-ttl#set-entity-ttl)[ TTL](./set-collection-ttl#set-entity-ttl)
 
-            - Force merge，
+            - Force merge
 
-            - 自定义词典与分词器，以及
+            - 自定义词典与分词器
 
             - Spark 语义去重与异常检测
 
