@@ -24,6 +24,7 @@ const COPIED_PATHS = [
   '.github/workflows/translate-codex.yml',
   'scripts/collect-build-card-notes.js',
   'scripts/docs-workflow',
+  'scripts/restore-generated-state.sh',
   'scripts/update-lark-doc-snapshot.js',
   'scripts/update-sdk-reference-snapshots.sh',
 ];
