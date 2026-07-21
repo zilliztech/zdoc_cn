@@ -112,7 +112,7 @@ import Grid from '@site/src/components/Grid';
 
             - [外部数据湖搜索](./external-collection)
 
-        - 🐦 Milvus v3.0.x 在 Zilliz Cloud 进入公测（Public Review），主要功能包括：    
+        - 🐦 Milvus v3.0.x 在 Zilliz Cloud 针对按需计算进入公测（Public Review），主要功能包括：    
 
             - [外部集合](./external-collection)与回填
 
