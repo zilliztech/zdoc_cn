@@ -99,6 +99,15 @@ test('three-way merges translation cache changes and writes deterministic JSON',
   }
 });
 
+test('initializes a missing target translation cache from the baseline', async () => {
+  const baselineCache = { files: { old: { sourceHash: 'a' } } };
+  const cache = { files: { old: { sourceHash: 'a' }, next: { sourceHash: 'b' } } };
+  const f = await fixture({ cache, baselineCache });
+  const result = await applyCheckpointArtifact({ artifactDir: f.artifactDir, targetDir: f.targetDir, baselineDir: f.baselineDir });
+  assert.deepEqual(JSON.parse(await readFile(path.join(f.targetDir, CACHE), 'utf8')), cache);
+  assert.equal(result.translationCacheMerged, true);
+});
+
 test('translation merge conflicts and invalid inputs leave target unchanged', async () => {
   for (const values of [
     [{ a: 1 }, { a: 2 }, { a: 3 }],

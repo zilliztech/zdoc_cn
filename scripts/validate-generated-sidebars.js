@@ -120,6 +120,10 @@ function validatePreservedEnglishFiles({ cwd = process.cwd(), groups } = {}) {
   return { checked: expected.length, missing }
 }
 
+function shouldValidateRestSidebarKeys(group) {
+  return !group || group === 'rest'
+}
+
 function main() {
   const directory = path.join(process.cwd(), 'config/generated')
   const count = validateAllGeneratedSidebars(directory)
@@ -133,7 +137,7 @@ function main() {
   const preserved = validatePreservedEnglishFiles({ groups: process.env.GROUP || undefined })
   console.log(`[sidebar-validation] ${preserved.checked} preserved landing page(s) checked`)
   const restRoot = path.join(process.cwd(), 'reference/api/restful/restful')
-  if (fs.existsSync(restRoot)) {
+  if (shouldValidateRestSidebarKeys(process.env.GROUP) && fs.existsSync(restRoot)) {
     const rest = validateRestSidebarKeys()
     console.log(`[sidebar-validation] ${rest.checked} REST category sidebar key(s) checked`)
   }
@@ -163,6 +167,7 @@ if (require.main === module) main()
 module.exports = {
   collectSidebarDocIds,
   referenceSidebarTargets,
+  shouldValidateRestSidebarKeys,
   validateAllGeneratedSidebars,
   validatePreservedEnglishFiles,
   validateReferenceSidebarTargets,
