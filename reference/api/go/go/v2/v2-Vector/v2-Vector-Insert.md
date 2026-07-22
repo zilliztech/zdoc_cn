@@ -1,12 +1,11 @@
 ---
 title: "Insert() | Go | v2"
-slug: /go/v2-Vector-Insert
-sidebar_key: v2-Vector-Insert
+slug: /go/go/v2-Vector-Insert
 sidebar_label: "Insert()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation inserts one or more entities into a collection. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

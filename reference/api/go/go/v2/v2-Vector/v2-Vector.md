@@ -1,12 +1,11 @@
 ---
 title: "Vector | Go | v2"
-slug: /go/v2-Vector
-sidebar_key: v2-Vector
+slug: /go/go/v2-Vector
 sidebar_label: "Vector"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "Interface for vector data. Implementations include FloatVector, BinaryVector, Float16Vector, BFloat16Vector, Int8Vector, and Text. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

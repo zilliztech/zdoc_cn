@@ -1,12 +1,11 @@
 ---
 title: "GetImportProgress() | Go | v2"
-slug: /go/v2-DataImport-GetImportProgress
-sidebar_key: v2-DataImport-GetImportProgress
+slug: /go/go/v2-DataImport-GetImportProgress
 sidebar_label: "GetImportProgress()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This function retrieves detailed progress for a single bulk import job via the RESTful API. Use it to poll a job submitted by `BulkImport()` until its `State` reaches `Completed` or `Failed`. The response includes overall progress, total imported/expected rows, file size, and per-file progress details. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

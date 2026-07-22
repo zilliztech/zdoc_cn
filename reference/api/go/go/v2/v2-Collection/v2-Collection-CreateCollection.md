@@ -1,12 +1,11 @@
 ---
 title: "CreateCollection() | Go | v2"
-slug: /go/v2-Collection-CreateCollection
-sidebar_key: v2-Collection-CreateCollection
+slug: /go/go/v2-Collection-CreateCollection
 sidebar_label: "CreateCollection()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a new collection with the specified schema and options. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -147,7 +147,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-collectionName := \`customized_setup_1\`
+collectionName := `customized_setup_1`
 
 cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
 	Address: milvusAddr,

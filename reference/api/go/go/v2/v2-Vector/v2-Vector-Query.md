@@ -1,12 +1,11 @@
 ---
 title: "Query() | Go | v2"
-slug: /go/v2-Vector-Query
-sidebar_key: v2-Vector-Query
+slug: /go/go/v2-Vector-Query
 sidebar_label: "Query()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation retrieves entities that match a boolean filter expression. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "ListImportJobs() | Go | v2"
-slug: /go/v2-DataImport-ListImportJobs
-sidebar_key: v2-DataImport-ListImportJobs
+slug: /go/go/v2-DataImport-ListImportJobs
 sidebar_label: "ListImportJobs()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This function lists bulk import jobs for a given collection via the RESTful API. Use it to monitor outstanding and completed import jobs, paginate through job history, or filter by collection name. Each record in the response includes the job ID, current state, progress percentage, and any failure reason. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

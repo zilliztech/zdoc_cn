@@ -1,12 +1,11 @@
 ---
 title: "DescribeSnapshot() | Go | v2"
-slug: /go/v2-Snapshot-DescribeSnapshot
-sidebar_key: v2-Snapshot-DescribeSnapshot
+slug: /go/go/v2-Snapshot-DescribeSnapshot
 sidebar_label: "DescribeSnapshot()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation retrieves detailed metadata about a specific snapshot, including the source collection, partition names, creation timestamp, and storage location. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

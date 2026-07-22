@@ -1,12 +1,11 @@
 ---
 title: "HasCollection() | Go | v2"
-slug: /go/v2-Collection-HasCollection
-sidebar_key: v2-Collection-HasCollection
+slug: /go/go/v2-Collection-HasCollection
 sidebar_label: "HasCollection()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation checks whether a collection exists in the current database. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

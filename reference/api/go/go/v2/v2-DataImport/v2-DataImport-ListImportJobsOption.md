@@ -1,12 +1,11 @@
 ---
 title: "ListImportJobsOption | Go | v2"
-slug: /go/v2-DataImport-ListImportJobsOption
-sidebar_key: v2-DataImport-ListImportJobsOption
+slug: /go/go/v2-DataImport-ListImportJobsOption
 sidebar_label: "ListImportJobsOption"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This type configures a request to list bulk import jobs for a collection via the RESTful API. Construct it with `NewListImportJobsOption()`, which defaults to `CurrentPage 1, PageSize: 10`. Chain `With` builder methods to change pagination, add API keys, or override defaults. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

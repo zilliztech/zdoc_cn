@@ -1,12 +1,11 @@
 ---
 title: "Database | Go | v2"
-slug: /go/v2-Database
-sidebar_key: v2-Database
+slug: /go/go/v2-Database
 sidebar_label: "Database"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "Represents a database description returned by DescribeDatabase, including custom properties. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

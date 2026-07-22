@@ -1,12 +1,11 @@
 ---
 title: "ListDatabase() | Go | v2"
-slug: /go/v2-Database-ListDatabase
-sidebar_key: v2-Database-ListDatabase
+slug: /go/go/v2-Database-ListDatabase
 sidebar_label: "ListDatabase()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all databases in the Milvus instance. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

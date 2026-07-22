@@ -1,12 +1,11 @@
 ---
 title: "RefreshExternalCollectionState | Go | v2"
-slug: /go/v2-Collection-RefreshExternalCollectionState
-sidebar_key: v2-Collection-RefreshExternalCollectionState
+slug: /go/go/v2-Collection-RefreshExternalCollectionState
 sidebar_label: "RefreshExternalCollectionState"
+beta: false
 added_since: v3.0.0
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This type represents the state of a refresh external collection job. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

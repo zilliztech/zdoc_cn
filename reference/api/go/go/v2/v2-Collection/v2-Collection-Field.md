@@ -1,12 +1,11 @@
 ---
 title: "Field | Go | v2"
-slug: /go/v2-Collection-Field
-sidebar_key: v2-Collection-Field
+slug: /go/go/v2-Collection-Field
 sidebar_label: "Field"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.0
 deprecate_since: false
-beta: false
 notebook: false
 description: "Defines a field in a collection schema, including its data type, constraints, and indexing properties. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

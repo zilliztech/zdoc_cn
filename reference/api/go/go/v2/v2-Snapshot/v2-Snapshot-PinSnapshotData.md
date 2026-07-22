@@ -1,12 +1,11 @@
 ---
 title: "PinSnapshotData() | Go | v2"
-slug: /go/v2-Snapshot-PinSnapshotData
-sidebar_key: v2-Snapshot-PinSnapshotData
+slug: /go/go/v2-Snapshot-PinSnapshotData
 sidebar_label: "PinSnapshotData()"
+beta: false
 added_since: v3.0.0
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation pins snapshot data for a collection, preventing it from being garbage collected. Returns a pin ID that can be used to unpin the data later. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

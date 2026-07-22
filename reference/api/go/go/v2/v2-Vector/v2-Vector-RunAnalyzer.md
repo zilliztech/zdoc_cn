@@ -1,12 +1,11 @@
 ---
 title: "RunAnalyzer() | Go | v2"
-slug: /go/v2-Vector-RunAnalyzer
-sidebar_key: v2-Vector-RunAnalyzer
+slug: /go/go/v2-Vector-RunAnalyzer
 sidebar_label: "RunAnalyzer()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation runs a text analyzer on input text and returns the tokenized output. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "DropCollectionProperties() | Go | v2"
-slug: /go/v2-Collection-DropCollectionProperties
-sidebar_key: v2-Collection-DropCollectionProperties
+slug: /go/go/v2-Collection-DropCollectionProperties
 sidebar_label: "DropCollectionProperties()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes specified properties from a collection. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

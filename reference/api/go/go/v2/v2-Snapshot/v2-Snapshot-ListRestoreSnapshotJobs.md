@@ -1,12 +1,11 @@
 ---
 title: "ListRestoreSnapshotJobs() | Go | v2"
-slug: /go/v2-Snapshot-ListRestoreSnapshotJobs
-sidebar_key: v2-Snapshot-ListRestoreSnapshotJobs
+slug: /go/go/v2-Snapshot-ListRestoreSnapshotJobs
 sidebar_label: "ListRestoreSnapshotJobs()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all restore snapshot jobs. Optionally filter by collection name or database name. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

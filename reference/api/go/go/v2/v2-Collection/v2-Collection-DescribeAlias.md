@@ -1,12 +1,11 @@
 ---
 title: "DescribeAlias() | Go | v2"
-slug: /go/v2-Collection-DescribeAlias
-sidebar_key: v2-Collection-DescribeAlias
+slug: /go/go/v2-Collection-DescribeAlias
 sidebar_label: "DescribeAlias()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns the details of a collection alias, including the collection it references. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

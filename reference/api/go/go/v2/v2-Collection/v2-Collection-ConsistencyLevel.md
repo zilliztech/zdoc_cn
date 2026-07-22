@@ -1,12 +1,11 @@
 ---
 title: "ConsistencyLevel | Go | v2"
-slug: /go/v2-Collection-ConsistencyLevel
-sidebar_key: v2-Collection-ConsistencyLevel
+slug: /go/go/v2-Collection-ConsistencyLevel
 sidebar_label: "ConsistencyLevel"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "Specifies the consistency guarantee level for read operations on a collection. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

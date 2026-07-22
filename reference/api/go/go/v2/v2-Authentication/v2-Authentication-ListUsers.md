@@ -1,12 +1,11 @@
 ---
 title: "ListUsers() | Go | v2"
-slug: /go/v2-Authentication-ListUsers
-sidebar_key: v2-Authentication-ListUsers
+slug: /go/go/v2-Authentication-ListUsers
 sidebar_label: "ListUsers()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all users in the Milvus instance. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

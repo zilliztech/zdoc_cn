@@ -1,12 +1,11 @@
 ---
 title: "GetRefreshExternalCollectionProgress() | Go | v2"
-slug: /go/v2-Collection-GetRefreshExternalCollectionProgress
-sidebar_key: v2-Collection-GetRefreshExternalCollectionProgress
+slug: /go/go/v2-Collection-GetRefreshExternalCollectionProgress
 sidebar_label: "GetRefreshExternalCollectionProgress()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns the progress of a specified external collection refresh job. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

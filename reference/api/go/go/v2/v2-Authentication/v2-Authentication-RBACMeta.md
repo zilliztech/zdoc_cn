@@ -1,12 +1,11 @@
 ---
 title: "RBACMeta | Go | v2"
-slug: /go/v2-Authentication-RBACMeta
-sidebar_key: v2-Authentication-RBACMeta
+slug: /go/go/v2-Authentication-RBACMeta
 sidebar_label: "RBACMeta"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A full snapshot of RBAC metadata including users, roles, grants, and privilege groups. Used with BackupRBAC/RestoreRBAC. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "DropDatabaseProperties() | Go | v2"
-slug: /go/v2-Database-DropDatabaseProperties
-sidebar_key: v2-Database-DropDatabaseProperties
+slug: /go/go/v2-Database-DropDatabaseProperties
 sidebar_label: "DropDatabaseProperties()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes specified properties from a database. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

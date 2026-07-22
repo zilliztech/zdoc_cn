@@ -1,12 +1,11 @@
 ---
 title: "Get() | Go | v2"
-slug: /go/v2-Vector-Get
-sidebar_key: v2-Vector-Get
+slug: /go/go/v2-Vector-Get
 sidebar_label: "Get()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation retrieves entities by their primary key values. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

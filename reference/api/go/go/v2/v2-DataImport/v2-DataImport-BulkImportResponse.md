@@ -1,12 +1,11 @@
 ---
 title: "BulkImportResponse | Go | v2"
-slug: /go/v2-DataImport-BulkImportResponse
-sidebar_key: v2-DataImport-BulkImportResponse
+slug: /go/go/v2-DataImport-BulkImportResponse
 sidebar_label: "BulkImportResponse"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This class represents the response returned by the `BulkImport()` package function. It embeds `ResponseBase` for the common `Status` and `Message` fields, and exposes the assigned import job ID under `Data.JobID`. Use the embedded `CheckStatus()` method to verify the call succeeded before reading `Data`. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -37,8 +37,8 @@ This class represents the response returned by the `BulkImport()` package functi
 type BulkImportResponse struct {
     ResponseBase
     Data struct {
-        JobID string \`json:"jobId"\`
-    } \`json:"data"\`
+        JobID string `json:"jobId"`
+    } `json:"data"`
 }
 ```
 

@@ -1,12 +1,11 @@
 ---
 title: "DescribeDatabase() | Go | v2"
-slug: /go/v2-Database-DescribeDatabase
-sidebar_key: v2-Database-DescribeDatabase
+slug: /go/go/v2-Database-DescribeDatabase
 sidebar_label: "DescribeDatabase()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns detailed information about a database, including its properties. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -78,7 +78,7 @@ import (
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 
-dbName := \`test_db\`
+dbName := `test_db`
 cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
 	Address: milvusAddr,
 })

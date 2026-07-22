@@ -1,12 +1,11 @@
 ---
 title: "QueryIterator() | Go | v2"
-slug: /go/v2-Vector-QueryIterator
-sidebar_key: v2-Vector-QueryIterator
+slug: /go/go/v2-Vector-QueryIterator
 sidebar_label: "QueryIterator()"
+beta: false
 added_since: v2.6.x
 last_modified: v2.6.2
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a query iterator that retrieves matching entities from a collection in batches. Use this for large result sets that should not be loaded into memory all at once. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

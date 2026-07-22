@@ -1,12 +1,11 @@
 ---
 title: "AnnParam | Go | v2"
-slug: /go/v2-Vector-AnnParam
-sidebar_key: v2-Vector-AnnParam
+slug: /go/go/v2-Vector-AnnParam
 sidebar_label: "AnnParam"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "Interface for approximate nearest neighbor search parameters. Use NewCustomAnnParam() to create a configurable instance. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

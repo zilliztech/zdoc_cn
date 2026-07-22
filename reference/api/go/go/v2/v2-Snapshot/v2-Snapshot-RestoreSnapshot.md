@@ -1,12 +1,11 @@
 ---
 title: "RestoreSnapshot() | Go | v2"
-slug: /go/v2-Snapshot-RestoreSnapshot
-sidebar_key: v2-Snapshot-RestoreSnapshot
+slug: /go/go/v2-Snapshot-RestoreSnapshot
 sidebar_label: "RestoreSnapshot()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation restores a snapshot to a target collection. The restore runs asynchronously — use `GetRestoreSnapshotState()` to monitor progress. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

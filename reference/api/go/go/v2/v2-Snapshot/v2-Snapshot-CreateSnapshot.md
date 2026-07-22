@@ -1,12 +1,11 @@
 ---
 title: "CreateSnapshot() | Go | v2"
-slug: /go/v2-Snapshot-CreateSnapshot
-sidebar_key: v2-Snapshot-CreateSnapshot
+slug: /go/go/v2-Snapshot-CreateSnapshot
 sidebar_label: "CreateSnapshot()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a point-in-time snapshot of a collection. Use snapshots to back up collection data and metadata for disaster recovery or migration. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

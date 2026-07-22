@@ -1,12 +1,11 @@
 ---
 title: "UnpinSnapshotData() | Go | v2"
-slug: /go/v2-Snapshot-UnpinSnapshotData
-sidebar_key: v2-Snapshot-UnpinSnapshotData
+slug: /go/go/v2-Snapshot-UnpinSnapshotData
 sidebar_label: "UnpinSnapshotData()"
+beta: false
 added_since: v3.0.0
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation unpins previously pinned snapshot data, allowing it to be garbage collected. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

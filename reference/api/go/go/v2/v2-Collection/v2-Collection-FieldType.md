@@ -1,12 +1,11 @@
 ---
 title: "FieldType | Go | v2"
-slug: /go/v2-Collection-FieldType
-sidebar_key: v2-Collection-FieldType
+slug: /go/go/v2-Collection-FieldType
 sidebar_label: "FieldType"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "Enumerates the supported data types for collection fields. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

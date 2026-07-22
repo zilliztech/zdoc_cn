@@ -1,12 +1,11 @@
 ---
 title: "GrantRole() | Go | v2"
-slug: /go/v2-Authentication-GrantRole
-sidebar_key: v2-Authentication-GrantRole
+slug: /go/go/v2-Authentication-GrantRole
 sidebar_label: "GrantRole()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation assigns a role to a user. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

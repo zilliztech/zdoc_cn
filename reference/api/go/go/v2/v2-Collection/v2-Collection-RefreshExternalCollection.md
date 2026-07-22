@@ -1,12 +1,11 @@
 ---
 title: "RefreshExternalCollection() | Go | v2"
-slug: /go/v2-Collection-RefreshExternalCollection
-sidebar_key: v2-Collection-RefreshExternalCollection
+slug: /go/go/v2-Collection-RefreshExternalCollection
 sidebar_label: "RefreshExternalCollection()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation scans the data files in the schema-defined external storage and generates metadata files that record their mapping relationship to those data files. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "BulkImport() | Go | v2"
-slug: /go/v2-DataImport-BulkImport
-sidebar_key: v2-DataImport-BulkImport
+slug: /go/go/v2-DataImport-BulkImport
 sidebar_label: "BulkImport()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This function submits a bulk import job to a Milvus or Zilliz Cloud cluster via the RESTful import API. Use this when you need to load large datasets that have already been staged in object storage or are accessible by file path lists. The call returns immediately with a job ID; track the job's progress with `GetImportProgress()` and list outstanding jobs with `ListImportJobs()`. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

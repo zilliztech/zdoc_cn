@@ -1,12 +1,11 @@
 ---
 title: "TruncateCollection() | Go | v2"
-slug: /go/v2-Collection-TruncateCollection
-sidebar_key: v2-Collection-TruncateCollection
+slug: /go/go/v2-Collection-TruncateCollection
 sidebar_label: "TruncateCollection()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes all data from a collection but retains the collection schema and structure | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

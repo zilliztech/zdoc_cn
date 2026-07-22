@@ -1,12 +1,11 @@
 ---
 title: "RevokePrivilegeV2() | Go | v2"
-slug: /go/v2-Authentication-RevokePrivilegeV2
-sidebar_key: v2-Authentication-RevokePrivilegeV2
+slug: /go/go/v2-Authentication-RevokePrivilegeV2
 sidebar_label: "RevokePrivilegeV2()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation revokes a privilege from a role using the v2 API. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

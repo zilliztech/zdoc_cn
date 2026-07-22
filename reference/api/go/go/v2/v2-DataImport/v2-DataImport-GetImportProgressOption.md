@@ -1,12 +1,11 @@
 ---
 title: "GetImportProgressOption | Go | v2"
-slug: /go/v2-DataImport-GetImportProgressOption
-sidebar_key: v2-DataImport-GetImportProgressOption
+slug: /go/go/v2-DataImport-GetImportProgressOption
 sidebar_label: "GetImportProgressOption"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This type configures a request to retrieve progress for a single bulk import job via the RESTful API. Construct it with `NewGetImportProgressOption()` for self-hosted Milvus, or `NewCloudGetImportProgressOption()` for Zilliz Cloud. Chain `WithAPIKey()` to add an authorization token. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

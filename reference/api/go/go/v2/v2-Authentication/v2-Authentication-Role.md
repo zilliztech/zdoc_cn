@@ -1,12 +1,11 @@
 ---
 title: "Role | Go | v2"
-slug: /go/v2-Authentication-Role
-sidebar_key: v2-Authentication-Role
+slug: /go/go/v2-Authentication-Role
 sidebar_label: "Role"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "Represents a role with its granted privileges, returned by DescribeRole. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';

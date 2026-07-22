@@ -1,12 +1,11 @@
 ---
 title: "ListImportJobsResponse | Go | v2"
-slug: /go/v2-DataImport-ListImportJobsResponse
-sidebar_key: v2-DataImport-ListImportJobsResponse
+slug: /go/go/v2-DataImport-ListImportJobsResponse
 sidebar_label: "ListImportJobsResponse"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This class represents the response returned by the `ListImportJobs()` package function. It embeds `ResponseBase` for status fields and exposes the paginated job list through a nested `ListImportJobData` struct. Each entry in `Data.Records` is an `ImportJobRecord` describing one bulk import job. | Go | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - gov230
 displayed_sidebar: goSidebar
 
+displayed_sidbar: goSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -36,19 +36,19 @@ This class represents the response returned by the `ListImportJobs()` package fu
 ```go
 type ListImportJobsResponse struct {
     ResponseBase
-    Data *ListImportJobData \`json:"data"\`
+    Data *ListImportJobData `json:"data"`
 }
 
 type ListImportJobData struct {
-    Records []*ImportJobRecord \`json:"records"\`
+    Records []*ImportJobRecord `json:"records"`
 }
 
 type ImportJobRecord struct {
-    JobID          string \`json:"jobId"\`
-    CollectionName string \`json:"collectionName"\`
-    State          string \`json:"state"\`
-    Progress       int64  \`json:"progress"\`
-    Reason         string \`json:"reason"\`
+    JobID          string `json:"jobId"`
+    CollectionName string `json:"collectionName"`
+    State          string `json:"state"`
+    Progress       int64  `json:"progress"`
+    Reason         string `json:"reason"`
 }
 ```
 
