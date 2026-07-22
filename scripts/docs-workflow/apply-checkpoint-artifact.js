@@ -120,9 +120,12 @@ async function verifyGuard(identities) {
 function minimalPaths(paths) { return [...new Set(paths)].sort((a, b) => a.split('/').length - b.split('/').length || a.localeCompare(b)).filter((rel, i, all) => !all.slice(0, i).some((parent) => rel.startsWith(`${parent}/`))); }
 async function pathSize(full) { const stat = await maybeLstat(full); if (!stat) return 0; if (stat.isSymbolicLink()) throw new Error(`Symlink cannot be journaled: ${full}`); if (stat.isFile()) return stat.size; let total = 0; for (const name of await require('node:fs/promises').readdir(full)) total += await pathSize(path.join(full, name)); return total; }
 
-async function readCacheNoFollow(root, kind, hooks) {
+async function readCacheNoFollow(root, kind, hooks, allowMissing = false) {
   await assertSafeAncestors(root, CACHE);
-  return readNoFollow(path.join(root, CACHE), undefined, () => hooks?.afterCacheLstat?.({ kind, file: path.join(root, CACHE) }));
+  const file = path.join(root, CACHE);
+  const stat = await maybeLstat(file);
+  if (!stat && allowMissing) return null;
+  return readNoFollow(file, stat || undefined, () => hooks?.afterCacheLstat?.({ kind, file }));
 }
 
 async function applyCheckpointArtifact(options = {}) {
@@ -146,9 +149,10 @@ async function applyCheckpointArtifact(options = {}) {
     const [a, b, t] = await Promise.all([
       readNoFollow(path.join(payload, CACHE), payloadStats.get(CACHE), () => hooks?.afterCacheLstat?.({ kind: 'artifact', file: path.join(payload, CACHE) })),
       readCacheNoFollow(baseline, 'baseline', hooks),
-      readCacheNoFollow(target, 'target', hooks),
+      readCacheNoFollow(target, 'target', hooks, true),
     ]);
-    mergedCache = mergeCache(parseObject(b, 'Baseline translation cache'), parseObject(a, 'Artifact translation cache'), parseObject(t, 'Target translation cache'));
+    const baselineCache = parseObject(b, 'Baseline translation cache');
+    mergedCache = mergeCache(baselineCache, parseObject(a, 'Artifact translation cache'), t === null ? baselineCache : parseObject(t, 'Target translation cache'));
   }
 
   const mutationPaths = minimalPaths([...manifest.deletions, ...manifest.files.map((entry) => entry.path)]);

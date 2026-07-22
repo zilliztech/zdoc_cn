@@ -103,6 +103,15 @@ jobs:
       - name: Install immutable master tooling
         run: npm ci
 
+      - name: Restore immutable master tooling checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$(git rev-parse HEAD)" == "$MASTER_SHA" ]]
+          git restore --source="$MASTER_SHA" --worktree -- .
+          git diff --cached --quiet --no-ext-diff "$MASTER_SHA" --
+          git diff --quiet --no-ext-diff "$MASTER_SHA" --
+
       - name: Download Guides translation checkpoints
         uses: actions/download-artifact@v4
         with:

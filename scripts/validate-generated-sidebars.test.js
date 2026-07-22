@@ -7,6 +7,7 @@ const path = require('node:path')
 const test = require('node:test')
 const {
   referenceSidebarTargets,
+  shouldValidateRestSidebarKeys,
   validateAllGeneratedSidebars,
   validatePreservedEnglishFiles,
   validateReferenceSidebarTargets,
@@ -116,5 +117,14 @@ test('checks only selected preserved landing pages for partial producer workspac
     )
   } finally {
     fs.rmSync(root, { recursive: true, force: true })
+  }
+})
+
+test('validates REST sidebar keys only for the REST producer or a full validation', () => {
+  assert.equal(typeof shouldValidateRestSidebarKeys, 'function')
+  assert.equal(shouldValidateRestSidebarKeys('rest'), true)
+  assert.equal(shouldValidateRestSidebarKeys(undefined), true)
+  for (const group of ['python', 'java', 'node', 'go', 'cli', 'guides']) {
+    assert.equal(shouldValidateRestSidebarKeys(group), false, group)
   }
 })
