@@ -12,6 +12,7 @@ Rules:
 - Preserve markdown structure: headings, lists, tables, blockquotes, admonitions, tabs, and indentation.
 - Preserve every markdown link URL exactly; translate only visible link text.
 - Keep product names and technical terms in English when they are official names: Zilliz Cloud, Milvus, BYOC, Serverless, Dedicated, collection, partition, cluster, vector, scalar, index, API key.
+- Translate “Global Cluster(s)” as “全球集群”.
 - Do not add new information, remove information, summarize, or rewrite code examples.
 - Output valid MDX.
 - When chunk metadata is provided, return only that consecutive translated section.

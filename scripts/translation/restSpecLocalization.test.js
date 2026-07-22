@@ -46,6 +46,37 @@ test('adds Chinese locale data without changing the source specification', async
   assert.deepEqual(removeLocale(localized, 'zh-CN'), removeLocale(sourceSpecs, 'zh-CN'))
 })
 
+test('canonicalizes an unambiguous legacy scalar locale translation without calling the model', async () => {
+  const legacy = {
+    type: 'string',
+    description: 'The project ID.',
+    'x-i18n': { 'zh-CN': '项目 ID。' },
+  }
+  const { localized, translatedCount } = await translateRestSpecs({
+    sourceSpecs: legacy,
+    locale: 'zh-CN',
+    systemPrompt: 'prompt',
+    callModel: async () => { throw new Error('model must not be called') },
+  })
+
+  assert.equal(translatedCount, 0)
+  assert.deepEqual(localized['x-i18n']['zh-CN'], { description: '项目 ID。' })
+  assert.deepEqual(removeLocale(localized, 'zh-CN'), removeLocale(legacy, 'zh-CN'))
+})
+
+test('rejects an ambiguous legacy scalar locale translation with its object path', async () => {
+  await assert.rejects(translateRestSpecs({
+    sourceSpecs: {
+      title: 'Project',
+      description: 'Project details.',
+      'x-i18n': { 'zh-CN': '项目' },
+    },
+    locale: 'zh-CN',
+    systemPrompt: 'prompt',
+    callModel: async () => { throw new Error('model must not be called') },
+  }), /ambiguous legacy locale translation.*\$.*title.*description/i)
+})
+
 test('parses and assembles a REST endpoint document with Chinese RestSpecs language', () => {
   const content = '# Search\n<RestSpecs specs={specs} lang="en-US" />\n\nexport const specs = {"summary":"Search"}\nexport const endpoint = "/v1/search"\nexport const method = "post"\n'
   const parsed = parseRestDocument(content)

@@ -85,6 +85,41 @@ function parseTranslationEntries(text, expected) {
 
 function clone(value) { return JSON.parse(JSON.stringify(value)) }
 
+function formatObjectPath(path) {
+  return path.reduce((result, segment) => (
+    typeof segment === 'number'
+      ? `${result}[${segment}]`
+      : `${result}.${segment}`
+  ), '$')
+}
+
+function normalizeLegacyLocaleTranslations(sourceSpecs, locale) {
+  const normalized = clone(sourceSpecs)
+  function visit(value, objectPath = []) {
+    if (!value || typeof value !== 'object') return
+    if (Array.isArray(value)) {
+      value.forEach((child, index) => visit(child, [...objectPath, index]))
+      return
+    }
+    const localeData = value['x-i18n']?.[locale]
+    if (typeof localeData === 'string' && localeData.trim()) {
+      const keys = Object.entries(value)
+        .filter(([key, child]) => LOCALIZABLE_KEYS.has(key) && typeof child === 'string' && child.trim())
+        .map(([key]) => key)
+      if (keys.length !== 1) {
+        const detail = keys.length ? keys.join(', ') : 'no localizable fields'
+        throw new Error(`Ambiguous legacy locale translation at ${formatObjectPath(objectPath)}: ${detail}`)
+      }
+      value['x-i18n'][locale] = { [keys[0]]: localeData }
+    }
+    for (const [key, child] of Object.entries(value)) {
+      if (key !== 'x-i18n' && !PRESERVED_SUBTREES.has(key)) visit(child, [...objectPath, key])
+    }
+  }
+  visit(normalized)
+  return normalized
+}
+
 function applyLocaleEntries(sourceSpecs, entries, locale) {
   const localized = clone(sourceSpecs)
   for (const entry of entries) {
@@ -125,7 +160,8 @@ function batchEntries(entries, maxChars = 12000) {
 }
 
 async function translateRestSpecs({ sourceSpecs, locale, callModel, systemPrompt }) {
-  const entries = collectLocalizableEntries(sourceSpecs, { locale })
+  const normalizedSpecs = normalizeLegacyLocaleTranslations(sourceSpecs, locale)
+  const entries = collectLocalizableEntries(normalizedSpecs, { locale })
   const translated = []
   for (const batch of batchEntries(entries)) {
     const response = await callModel({
@@ -137,7 +173,7 @@ async function translateRestSpecs({ sourceSpecs, locale, callModel, systemPrompt
     })
     translated.push(...parseTranslationEntries(response, batch))
   }
-  const localized = applyLocaleEntries(sourceSpecs, translated, locale)
+  const localized = applyLocaleEntries(normalizedSpecs, translated, locale)
   assert.deepEqual(removeLocale(localized, locale), removeLocale(sourceSpecs, locale), 'Localized REST specs changed non-locale data')
   return { localized, translatedCount: translated.length }
 }
@@ -147,4 +183,4 @@ function assembleRestDocument({ translatedPrefix, localizedSpecs, suffix, locale
   return `${prefix}export const specs = ${JSON.stringify(localizedSpecs)}${suffix}`
 }
 
-module.exports = { applyLocaleEntries, assembleRestDocument, batchEntries, collectLocalizableEntries, parseRestDocument, parseTranslationEntries, removeLocale, translateRestSpecs }
+module.exports = { applyLocaleEntries, assembleRestDocument, batchEntries, collectLocalizableEntries, normalizeLegacyLocaleTranslations, parseRestDocument, parseTranslationEntries, removeLocale, translateRestSpecs }

@@ -7,6 +7,7 @@ const { applyMdxPatches, validateMdxStructure } = require('../../plugins/mdx-par
 const { chunkDocument, DEFAULT_MAX_CHARS, DEFAULT_TARGET_CHARS } = require('./chunker')
 const { readCache, writeCache, writeJsonAtomic } = require('./manifest')
 const { assembleRestDocument, parseRestDocument, translateRestSpecs } = require('./restSpecLocalization')
+const { upsertRestSidebarKey } = require('./restSidebarKeys')
 
 const DEFAULT_MANIFEST = 'tmp/translation-manifest.json'
 const DEFAULT_PROVIDER_RETRIES = 3
@@ -371,7 +372,7 @@ async function processManifestItem({
       systemPrompt: loadPrompt('codex-rest-spec-translation-agent.md'),
     })
     const translatedContent = stabilizeBareUrlFormatting(assembleRestDocument({
-      translatedPrefix: shell.translatedContent,
+      translatedPrefix: upsertRestSidebarKey(shell.translatedContent, item.sourcePath),
       localizedSpecs: specResult.localized,
       suffix: restDocument.suffix,
       locale: item.locale,
@@ -419,9 +420,9 @@ async function processManifestItem({
     previousTranslatedHeading = extractFirstHeading(unit.translatedContent) || previousTranslatedHeading
   }
 
-  const translatedContent = await applyMdxPatches(stabilizeBareUrlFormatting(
+  const translatedContent = upsertRestSidebarKey(await applyMdxPatches(stabilizeBareUrlFormatting(
     restoreEsmStatements(sourceContent, translatedChunks.join('')),
-  ))
+  )), item.sourcePath)
 
   const validationErrors = [
     ...validateHeadingAnchorIdentity(sourceContent, translatedContent),

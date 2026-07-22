@@ -64,6 +64,26 @@ test('publishes a fast-forward checkpoint with the prior tip as parent', () => {
   assert.equal(git(s.seed, 'rev-parse', `${tip}^`), prior); assert.equal(git(s.seed, 'show', `${tip}:docs/a.md`), 'new');
 });
 
+test('publishes a manifest-authorized file even when the repository ignores it', () => {
+  const s = setup();
+  writeFileSync(path.join(s.seed, '.gitignore'), 'docs/generated-snapshot.json\n');
+  git(s.seed, 'add', '.gitignore');
+  git(s.seed, 'commit', '-m', 'ignore generated snapshot');
+  git(s.seed, 'push', 'origin', 'dev');
+  const work = path.join(s.root, 'work');
+  execFileSync('cp', ['-R', s.seed, work]);
+  writeFileSync(path.join(work, 'docs/generated-snapshot.json'), '{"version":1}\n');
+  const publishArgs = args(artifact(s.root, s.seed, work));
+  publishArgs[publishArgs.indexOf('test -f docs/a.md')] = 'test -f docs/generated-snapshot.json';
+
+  const result = publish(s.seed, publishArgs);
+
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+  assert.match(result.stdout, /status=published/);
+  git(s.seed, 'fetch', 'origin', 'dev');
+  assert.equal(git(s.seed, 'show', 'origin/dev:docs/generated-snapshot.json'), '{"version":1}');
+});
+
 test('strictly rejects invalid arguments and contains no force push', () => {
   for (const bad of [[], ['--artifact','x','--artifact','y'], args('x').flatMap(x => x === 'dev' ? ['--branch','-bad'] : [x]), [...args('x'),'extra'], [...args('x'),'--max-attempts','0'], [...args('x'),'--max-attempts','11'], [...args('x'),'--max-attempts','x'], [...args('x'),'--remote','--upload-pack'], ['--help','x']]) assert.notEqual(publish(process.cwd(), bad).status, 0);
   const help = publish(process.cwd(), ['--help']); assert.equal(help.status, 0); assert.match(help.stdout, /Usage:/);

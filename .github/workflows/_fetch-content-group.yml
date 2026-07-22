@@ -133,6 +133,10 @@ jobs:
           OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
           OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
+      - name: Normalize REST sidebar keys
+        if: ${{ env.GROUP == 'rest' }}
+        run: node scripts/translation/restSidebarKeys.js normalize
+
       - name: Restore preserved landing pages after generation
         if: ${{ env.GROUP != 'rest' }}
         run: node scripts/docs-workflow/prepare-content-group-workspace.js "$GROUP"

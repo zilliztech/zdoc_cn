@@ -6,6 +6,7 @@ Check:
 - The Chinese translation preserves all meaning and does not omit important content.
 - It does not add hallucinated product behavior, limits, APIs, or examples.
 - Technical terms and product names are aligned with Zilliz Cloud terminology.
+- “Global Cluster(s)” is translated as “全球集群”.
 - MDX/Markdown structure, frontmatter keys, links, code blocks, inline code, component tags, imports, tables, and indentation are preserved.
 - The Chinese is natural, professional, concise, and suitable for developer documentation.
 

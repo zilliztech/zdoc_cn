@@ -105,6 +105,30 @@ async function testRestSpecsUseStructuredLocaleTranslation() {
   })
 }
 
+async function testRestCategoryTranslationRestoresDeterministicSidebarKey() {
+  await withTempDir(async siteDir => {
+    const sourcePath = 'reference/api/restful/restful/v2/control-plane/control-plane.mdx'
+    const targetPath = 'i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/control-plane.mdx'
+    write(path.join(siteDir, sourcePath), '---\ntitle: Control Plane\nsidebar_key: restful-v2-control-plane\n---\n\n# Control Plane\n')
+    const callModel = async ({ agent }) => agent === 'translation'
+      ? '---\ntitle: 控制平面\nsidebar_key: translated-key\n---\n\n# 控制平面\n'
+      : '{"pass":true,"issues":[]}'
+
+    const result = await processManifestItem({
+      siteDir,
+      item: { sourcePath, targetPath, sourceHash: 'rest-category', locale: 'zh-CN', type: 'reference' },
+      callModel,
+      maxReviewRounds: 0,
+      validate: async () => [],
+    })
+
+    assert.equal(result.status, 'translated')
+    const output = fs.readFileSync(path.join(siteDir, targetPath), 'utf8')
+    assert.match(output, /sidebar_key: restful-v2-control-plane/)
+    assert.doesNotMatch(output, /translated-key/)
+  })
+}
+
 async function testProviderCallRetriesTransientFailures() {
   const originalFetch = global.fetch
   let calls = 0
@@ -258,6 +282,26 @@ function testChunkMessagesContainContinuityContext() {
     sourceContent: '# Complete\n',
     locale: 'zh-CN',
   }).at(-1).content, /Translate this complete MDX\/Markdown file/)
+}
+
+function testTranslationAndCorrectionPromptsShareGlobalClusterTerminology() {
+  const translation = buildTranslationMessages({
+    sourcePath: 'reference/api/restful/restful/v2/global-clusters.mdx',
+    sourceContent: '# Global Clusters\n',
+    locale: 'zh-CN',
+    chunkContext: null,
+  })
+  const correction = buildCorrectionMessages({
+    sourcePath: 'reference/api/restful/restful/v2/global-clusters.mdx',
+    sourceContent: '# Global Clusters\n',
+    translatedContent: '# Global Clusters\n',
+    review: { pass: false, issues: [{ comment: 'translate the product term' }] },
+    locale: 'zh-CN',
+    chunkContext: null,
+  })
+
+  assert.match(translation[0].content, /Global Cluster\(s\).*全球集群/)
+  assert.match(correction[0].content, /Global Cluster\(s\).*全球集群/)
 }
 
 function testStabilizesBoldBareUrlsBeforeChinesePunctuation() {
@@ -560,6 +604,7 @@ async function testProgressCoordinatorCheckpointsCacheAndReport() {
 async function run() {
   await testCorrectionRunsWhenReviewFails()
   await testRestSpecsUseStructuredLocaleTranslation()
+  await testRestCategoryTranslationRestoresDeterministicSidebarKey()
   await testProviderCallRetriesTransientFailures()
   await testProviderCallTimesOutHungRequests()
   await testFileTimeoutRejectsSlowWork()
@@ -569,6 +614,7 @@ async function run() {
   testStripCodeFencePreservesDocumentClosingFence()
   testStripCodeFenceRemovesResponseWrapper()
   testChunkMessagesContainContinuityContext()
+  testTranslationAndCorrectionPromptsShareGlobalClusterTerminology()
   testStabilizesBoldBareUrlsBeforeChinesePunctuation()
   await testLongDocumentTranslatesChunksSequentially()
   testProtectsEsmBeforeModelTranslation()
