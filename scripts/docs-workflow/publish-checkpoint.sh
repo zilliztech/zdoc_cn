@@ -65,7 +65,7 @@ while (( attempt <= max_attempts )); do
     --worktree "$active_worktree" \
     --output "$stage_paths_file"
   if [[ -s "$stage_paths_file" ]]; then
-    git -C "$active_worktree" add --all \
+    git -C "$active_worktree" add --force --all \
       --pathspec-from-file="$stage_paths_file" \
       --pathspec-file-nul
   fi

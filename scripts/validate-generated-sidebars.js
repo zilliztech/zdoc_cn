@@ -3,6 +3,7 @@
 const fs = require('node:fs')
 const path = require('node:path')
 const { getGroupPaths } = require('./docs-workflow/group-paths')
+const { validateRestSidebarKeys } = require('./translation/restSidebarKeys')
 
 const referenceSidebarTargets = Object.freeze([
   { sidebar: 'python.sidebar.js', idPrefix: 'api/python/python' },
@@ -131,6 +132,11 @@ function main() {
   }
   const preserved = validatePreservedEnglishFiles({ groups: process.env.GROUP || undefined })
   console.log(`[sidebar-validation] ${preserved.checked} preserved landing page(s) checked`)
+  const restRoot = path.join(process.cwd(), 'reference/api/restful/restful')
+  if (fs.existsSync(restRoot)) {
+    const rest = validateRestSidebarKeys()
+    console.log(`[sidebar-validation] ${rest.checked} REST category sidebar key(s) checked`)
+  }
   const candidate = path.join(process.cwd(), 'plugins/lark-docs/meta/reports/guides-source-snapshot-candidate.json')
   if (fs.existsSync(candidate)) {
     const applyOverrides = require('../config/applyOverrides')
