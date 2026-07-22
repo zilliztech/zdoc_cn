@@ -1,12 +1,11 @@
 ---
 title: "FunctionType | Node.js"
 slug: /node/node/Collections-FunctionType
-sidebar_key: node/Collections-FunctionType
 sidebar_label: "FunctionType"
+beta: false
 added_since: v2.5.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

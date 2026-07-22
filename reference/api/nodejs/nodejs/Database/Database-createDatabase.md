@@ -1,12 +1,11 @@
 ---
 title: "createDatabase() | Node.js"
 slug: /node/node/Database-createDatabase
-sidebar_key: node/Database-createDatabase
 sidebar_label: "createDatabase()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a database. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

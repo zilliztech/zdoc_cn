@@ -1,12 +1,11 @@
 ---
 title: "getPkFieldType() | Node.js"
 slug: /node/node/Collections-getPkFieldType
-sidebar_key: node/Collections-getPkFieldType
 sidebar_label: "getPkFieldType()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns the primary key field's data type for a collection. This is a convenient method that describes the collection and extracts the primary key field type. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

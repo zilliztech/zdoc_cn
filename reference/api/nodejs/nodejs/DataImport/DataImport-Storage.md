@@ -1,12 +1,11 @@
 ---
 title: "Storage | Node.js"
 slug: /node/node/DataImport-Storage
-sidebar_key: node/DataImport-Storage
 sidebar_label: "Storage"
+beta: false
 added_since: v2.6.12
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This interface stores files produced by `BulkWriter`. Use it to upload generated files to object storage or another remote location before calling `bulkInsert()`. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -49,7 +49,7 @@ interface Storage
 class S3Storage {
     async write(localPath, remotePath) {
         await uploadToS3(localPath, remotePath);
-        return \`s3://bucket/${remotePath}\`;
+        return `s3://bucket/${remotePath}`;
     }
 }
 ```

@@ -1,12 +1,11 @@
 ---
 title: "bulkInsert() | Node.js"
 slug: /node/node/DataImport-bulkInsert
-sidebar_key: node/DataImport-bulkInsert
 sidebar_label: "bulkInsert()"
+beta: false
 added_since: inherit
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation imports the data from a specified data file into Milvus. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -76,7 +76,7 @@ await milvusClient.bulkInsert({
 
     Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
 
-- **options** (*KeyValuePair\<string, string | number>[]*) -   
+- **options** (*KeyValuePair&lt;string, string | number&gt;[]*) -   
 
     Extra options for the current operation in key-value pairs.
 

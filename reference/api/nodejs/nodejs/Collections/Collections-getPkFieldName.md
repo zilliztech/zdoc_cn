@@ -1,12 +1,11 @@
 ---
 title: "getPkFieldName() | Node.js"
 slug: /node/node/Collections-getPkFieldName
-sidebar_key: node/Collections-getPkFieldName
 sidebar_label: "getPkFieldName()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets the primary key field name of a collection. This is a convenient method that describes the collection and extracts the primary key field name. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -60,7 +60,7 @@ getPkFieldName({
 
 **RETURNS:**
 
-*Promise&lt;string&gt;*
+*Promise\<string\>*
 
 The name of the primary key field.
 

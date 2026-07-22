@@ -1,12 +1,11 @@
 ---
 title: "createSnapshot() | Node.js"
 slug: /node/node/Snapshot-createSnapshot
-sidebar_key: node/Snapshot-createSnapshot
 sidebar_label: "createSnapshot()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a snapshot for a collection. A snapshot captures the current state of a collection and its data. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

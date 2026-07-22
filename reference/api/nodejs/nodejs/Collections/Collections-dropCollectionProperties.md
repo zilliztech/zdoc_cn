@@ -1,12 +1,11 @@
 ---
 title: "dropCollectionProperties() | Node.js"
 slug: /node/node/Collections-dropCollectionProperties
-sidebar_key: node/Collections-dropCollectionProperties
 sidebar_label: "dropCollectionProperties()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation resets the properties of a specific collection to their default values. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

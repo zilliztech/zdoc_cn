@@ -1,12 +1,11 @@
 ---
 title: "session() | Node.js"
 slug: /node/node/Client-session
-sidebar_key: node/Client-session
 sidebar_label: "session()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a lightweight DQL session bound to a target cluster ID. The session injects `clusterid` into search/query/get requests. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "Formatter | Node.js"
 slug: /node/node/DataImport-Formatter
-sidebar_key: node/DataImport-Formatter
 sidebar_label: "Formatter"
+beta: false
 added_since: v2.6.12
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This interface serializes buffered `BulkWriter` columns into one or more files. The SDK provides JSON and Parquet formatter implementations. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

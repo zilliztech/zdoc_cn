@@ -1,12 +1,11 @@
 ---
 title: "hasCollection() | Node.js"
 slug: /node/node/Collections-hasCollection
-sidebar_key: node/Collections-hasCollection
 sidebar_label: "hasCollection()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation checks whether a specific collection exists. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

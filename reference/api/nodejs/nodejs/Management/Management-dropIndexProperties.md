@@ -1,12 +1,11 @@
 ---
 title: "dropIndexProperties() | Node.js"
 slug: /node/node/Management-dropIndexProperties
-sidebar_key: node/Management-dropIndexProperties
 sidebar_label: "dropIndexProperties()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation resets the index properties to their default values. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

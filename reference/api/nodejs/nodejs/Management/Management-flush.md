@@ -1,12 +1,11 @@
 ---
 title: "flush() | Node.js"
 slug: /node/node/Management-flush
-sidebar_key: node/Management-flush
 sidebar_label: "flush()"
+beta: false
 added_since: v2.4.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation manually seals a segment and persists the data on disk. It is recommended that this operation be called after all the data has been inserted into a collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -84,7 +84,7 @@ This method returns a promise that resolves to a **FlushResult** object.
 
 **PARAMETERS:**
 
-- **coll_segIDs** (*Record\<string, \{ data: number[] }>*) -
+- **coll_segIDs** (*Record&lt;string, \{ data: number[] }&gt;*) -
 A mapping from collection name to the segment IDs that were sealed by this flush. Use the returned IDs with `getFlushState()` to confirm persistence.
 
 - **ResStatus**

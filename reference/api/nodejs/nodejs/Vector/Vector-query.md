@@ -1,12 +1,11 @@
 ---
 title: "query() | Node.js"
 slug: /node/node/Vector-query
-sidebar_key: node/Vector-query
 sidebar_label: "query()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation conducts a scalar filtering with a specified boolean expression. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -108,13 +108,15 @@ await milvusClient.query(data)
 
     The value defaults to the one specified when you create the current collection, with options of **Strong** (**0**), **Bounded** (**1**), **Session** (**2**), and **Eventually** (**3**).
 
-    <Admonition type="info" icon="📘" title="What is the consistency level?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
-
-    Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
-
-    You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
+    What is the consistency level?
+    
+        Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
+    
+        Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
+    
+        You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
 
     </Admonition>
 
@@ -143,7 +145,7 @@ This method returns a promise that resolves to a **QueryResults** object.
 
 **PARAMETERS:**
 
-- **data** (*Record\<string, any>[]*) -
+- **data** (*Record&lt;string, any&gt;[]*) -
 The matched rows. Each entry is keyed by field name and carries the value for every requested **output_fields** entry plus the primary key. When **enable_dynamic_field** is **true** on the collection, dynamic-field values appear inline alongside declared fields.
 
 - **ResStatus**

@@ -1,12 +1,11 @@
 ---
 title: "count() | Node.js"
 slug: /node/node/Vector-count
-sidebar_key: node/Vector-count
 sidebar_label: "count()"
+beta: false
 added_since: v2.4.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation counts the number of entities that match the specified filtering expression. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

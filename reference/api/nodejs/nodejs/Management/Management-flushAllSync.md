@@ -1,12 +1,11 @@
 ---
 title: "flushAllSync() | Node.js"
 slug: /node/node/Management-flushAllSync
-sidebar_key: node/Management-flushAllSync
 sidebar_label: "flushAllSync()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation flushes all collections and waits until the flush operation is completed. It internally calls flushAll followed by polling getFlushAllState until the flush is complete. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

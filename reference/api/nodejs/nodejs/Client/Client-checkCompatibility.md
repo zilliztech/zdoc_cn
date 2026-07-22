@@ -1,12 +1,11 @@
 ---
 title: "checkCompatibility() | Node.js"
 slug: /node/node/Client-checkCompatibility
-sidebar_key: node/Client-checkCompatibility
 sidebar_label: "checkCompatibility()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation checks the compatibility of the SDK with the Milvus server. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

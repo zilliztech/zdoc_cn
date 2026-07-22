@@ -1,12 +1,11 @@
 ---
 title: "getVersion() | Node.js"
 slug: /node/node/Client-getVersion
-sidebar_key: node/Client-getVersion
 sidebar_label: "getVersion()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns version information for the Milvus server. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

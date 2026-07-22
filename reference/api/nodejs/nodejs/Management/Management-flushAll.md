@@ -1,12 +1,11 @@
 ---
 title: "flushAll() | Node.js"
 slug: /node/node/Management-flushAll
-sidebar_key: node/Management-flushAll
 sidebar_label: "flushAll()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation flushes all collections, sealing all segments and persisting data on disk. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -77,10 +77,10 @@ This method returns a promise that resolves to a **FlushAllResponse** object.
 - **flush_all_ts** (*number*) -
 A single hybrid timestamp identifying the flush. Deprecated; prefer **flush_all_tss** for multi-cluster deployments.
 
-- **flush_all_tss** (*Record\<string, number>*) -
+- **flush_all_tss** (*Record&lt;string, number&gt;*) -
 A mapping from cluster ID to the hybrid timestamp at which the flush completed in that cluster.
 
-- **flush_all_msgs** (*Record\<string, any>*) -
+- **flush_all_msgs** (*Record&lt;string, any&gt;*) -
 A mapping from physical channel name to flush metadata used by the storage layer.
 
 - **cluster_info** (*FlushClusterInfo*) -

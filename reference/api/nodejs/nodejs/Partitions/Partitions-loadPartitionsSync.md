@@ -1,12 +1,11 @@
 ---
 title: "loadPartitionsSync() | Node.js"
 slug: /node/node/Partitions-loadPartitionsSync
-sidebar_key: node/Partitions-loadPartitionsSync
 sidebar_label: "loadPartitionsSync()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation loads the data of specific partitions into memory. This is the synchronous function that helps to ensure that the specified partitions have been loaded. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

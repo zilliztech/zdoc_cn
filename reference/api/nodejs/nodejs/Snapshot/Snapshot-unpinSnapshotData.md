@@ -1,12 +1,11 @@
 ---
 title: "unpinSnapshotData() | Node.js"
 slug: /node/node/Snapshot-unpinSnapshotData
-sidebar_key: node/Snapshot-unpinSnapshotData
 sidebar_label: "unpinSnapshotData()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation unpins snapshot data, allowing it to be garbage collected when no longer needed. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

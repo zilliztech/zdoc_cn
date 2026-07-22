@@ -1,12 +1,11 @@
 ---
 title: "revokePrivilegeV2() | Node.js"
 slug: /node/node/Authentication-revokePrivilegeV2
-sidebar_key: node/Authentication-revokePrivilegeV2
 sidebar_label: "revokePrivilegeV2()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation revokes a privilege already assigned to a role. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

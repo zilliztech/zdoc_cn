@@ -1,12 +1,11 @@
 ---
 title: "pinSnapshotData() | Node.js"
 slug: /node/node/Snapshot-pinSnapshotData
-sidebar_key: node/Snapshot-pinSnapshotData
 sidebar_label: "pinSnapshotData()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation pins snapshot data to prevent it from being garbage collected. Use this to ensure a snapshot remains available for restoration. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "connect() | Node.js"
 slug: /node/node/Client-connect
-sidebar_key: node/Client-connect
 sidebar_label: "connect()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This method connects to the Zilliz Cloud cluster using the optionally specified SDK version. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

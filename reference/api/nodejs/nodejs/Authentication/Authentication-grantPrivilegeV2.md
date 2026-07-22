@@ -1,12 +1,11 @@
 ---
 title: "grantPrivilegeV2() | Node.js"
 slug: /node/node/Authentication-grantPrivilegeV2
-sidebar_key: node/Authentication-grantPrivilegeV2
 sidebar_label: "grantPrivilegeV2()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation assigns a privilege or a privilege group to a role. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

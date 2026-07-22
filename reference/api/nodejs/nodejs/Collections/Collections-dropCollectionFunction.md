@@ -1,12 +1,11 @@
 ---
 title: "dropCollectionFunction() | Node.js"
 slug: /node/node/Collections-dropCollectionFunction
-sidebar_key: node/Collections-dropCollectionFunction
 sidebar_label: "dropCollectionFunction()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes a custom function from an existing collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -72,7 +72,7 @@ dropCollectionFunction({
 
 **RETURNS:**
 
-*Promise&lt;ResStatus&gt;*
+*Promise\<ResStatus\>*
 
 **EXCEPTIONS:**
 

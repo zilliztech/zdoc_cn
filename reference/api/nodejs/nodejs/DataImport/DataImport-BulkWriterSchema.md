@@ -1,12 +1,11 @@
 ---
 title: "BulkWriterSchema | Node.js"
 slug: /node/node/DataImport-BulkWriterSchema
-sidebar_key: node/DataImport-BulkWriterSchema
 sidebar_label: "BulkWriterSchema"
+beta: false
 added_since: v2.6.12
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This interface describes the collection schema used by `BulkWriter` to validate rows and generate JSON or Parquet files that Milvus can import. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

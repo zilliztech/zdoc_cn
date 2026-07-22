@@ -1,12 +1,11 @@
 ---
 title: "getCollectionStatistics() | Node.js"
 slug: /node/node/Collections-getCollectionStatistics
-sidebar_key: node/Collections-getCollectionStatistics
 sidebar_label: "getCollectionStatistics()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists the statistics collected on a specific collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -82,7 +82,7 @@ This method returns a promise that resolves to a **StatisticsResponse** object.
 - **stats** (*KeyValuePair[]*) -
 The raw statistics list returned by Milvus. Each entry has a **key** (for example, **row_count**) and a **value** as a string.
 
-- **data** (*Record\<string, any>*) -
+- **data** (*Record&lt;string, any&gt;*) -
 A flattened, key-indexed view of **stats** for convenience. For example, `data.row_count` returns the row count as a string.
 
 - **ResStatus**

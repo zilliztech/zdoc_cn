@@ -1,12 +1,11 @@
 ---
 title: "listImportJobs() | Node.js"
 slug: /node/node/DataImport-listImportJobs
-sidebar_key: node/DataImport-listImportJobs
 sidebar_label: "listImportJobs()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists import jobs submitted through the HTTP import job API. Use it to review job IDs, collection names, progress, and state. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "getRefreshExternalCollectionProgress() | Node.js"
 slug: /node/node/Collections-getRefreshExternalCollectionProgress
-sidebar_key: node/Collections-getRefreshExternalCollectionProgress
 sidebar_label: "getRefreshExternalCollectionProgress()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation checks the progress of a refresh job for an external collection. Use the jobid returned by refreshExternalCollection(). | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

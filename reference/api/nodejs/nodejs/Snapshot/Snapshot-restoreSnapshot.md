@@ -1,12 +1,11 @@
 ---
 title: "restoreSnapshot() | Node.js"
 slug: /node/node/Snapshot-restoreSnapshot
-sidebar_key: node/Snapshot-restoreSnapshot
 sidebar_label: "restoreSnapshot()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation restores a collection from a snapshot to a new or existing collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

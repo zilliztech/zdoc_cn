@@ -1,12 +1,11 @@
 ---
 title: "addUserToRole() | Node.js"
 slug: /node/node/Authentication-addUserToRole
-sidebar_key: node/Authentication-addUserToRole
 sidebar_label: "addUserToRole()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a user to a specific role. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

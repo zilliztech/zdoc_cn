@@ -1,12 +1,11 @@
 ---
 title: "alterIndexProperties() | Node.js"
 slug: /node/node/Management-alterIndexProperties
-sidebar_key: node/Management-alterIndexProperties
 sidebar_label: "alterIndexProperties()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation modifies the settings of specific index properties. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

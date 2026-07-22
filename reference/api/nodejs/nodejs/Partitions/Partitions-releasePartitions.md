@@ -1,12 +1,11 @@
 ---
 title: "releasePartitions() | Node.js"
 slug: /node/node/Partitions-releasePartitions
-sidebar_key: node/Partitions-releasePartitions
 sidebar_label: "releasePartitions()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

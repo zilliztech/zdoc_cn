@@ -1,12 +1,11 @@
 ---
 title: "dropDatabase() | Node.js"
 slug: /node/node/Database-dropDatabase
-sidebar_key: node/Database-dropDatabase
 sidebar_label: "dropDatabase()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation drops a database. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

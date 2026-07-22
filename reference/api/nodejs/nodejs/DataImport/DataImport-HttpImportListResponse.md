@@ -1,12 +1,11 @@
 ---
 title: "HttpImportListResponse | Node.js"
 slug: /node/node/DataImport-HttpImportListResponse
-sidebar_key: node/DataImport-HttpImportListResponse
 sidebar_label: "HttpImportListResponse"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This interface describes the response returned by `listImportJobs()`. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

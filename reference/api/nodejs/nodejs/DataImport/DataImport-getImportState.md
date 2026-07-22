@@ -1,12 +1,11 @@
 ---
 title: "getImportState() | Node.js"
 slug: /node/node/DataImport-getImportState
-sidebar_key: node/DataImport-getImportState
 sidebar_label: "getImportState()"
+beta: false
 added_since: v2.6.12
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation retrieves the current state and metadata of a specific import task. Use this to poll for completion after calling `bulkInsert()`. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "HttpImportProgressResponse | Node.js"
 slug: /node/node/DataImport-HttpImportProgressResponse
-sidebar_key: node/DataImport-HttpImportProgressResponse
 sidebar_label: "HttpImportProgressResponse"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This interface describes the response returned by `getImportJobProgress()`. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

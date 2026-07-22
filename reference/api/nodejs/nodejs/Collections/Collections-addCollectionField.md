@@ -1,12 +1,11 @@
 ---
 title: "addCollectionField() | Node.js"
 slug: /node/node/Collections-addCollectionField
-sidebar_key: node/Collections-addCollectionField
 sidebar_label: "addCollectionField()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a new scalar field to an existing collection without recreating it. The field becomes available almost immediately with minimal delay due to internal schema synchronization. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

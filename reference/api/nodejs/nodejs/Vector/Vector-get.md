@@ -1,12 +1,11 @@
 ---
 title: "get() | Node.js"
 slug: /node/node/Vector-get
-sidebar_key: node/Vector-get
 sidebar_label: "get()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -120,7 +120,7 @@ This method returns a promise that resolves to a **QueryResults** object.
 
 **PARAMETERS:**
 
-- **data** (*Record\<string, any>[]*) -
+- **data** (*Record&lt;string, any&gt;[]*) -
 The rows whose primary keys match the supplied **ids**. Each entry is keyed by field name and carries the value for every requested **output_fields** entry plus the primary key.
 
 - **ResStatus**

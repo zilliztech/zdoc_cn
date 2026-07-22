@@ -1,12 +1,11 @@
 ---
 title: "getPkField() | Node.js"
 slug: /node/node/Collections-getPkField
-sidebar_key: node/Collections-getPkField
 sidebar_label: "getPkField()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets the complete primary field schema of a collection. This is a convenient method that describes the collection and extracts the primary key field. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -60,7 +60,7 @@ getPkField({
 
 **RETURNS:**
 
-*Promise&lt;FieldSchema&gt;*
+*Promise\<FieldSchema\>*
 
 The complete field schema object for the primary key, including name, data type, field ID, and other properties.
 

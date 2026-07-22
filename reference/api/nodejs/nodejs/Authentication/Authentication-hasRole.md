@@ -1,12 +1,11 @@
 ---
 title: "hasRole() | Node.js"
 slug: /node/node/Authentication-hasRole
-sidebar_key: node/Authentication-hasRole
 sidebar_label: "hasRole()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation checks if a role exists in the Milvus cluster. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

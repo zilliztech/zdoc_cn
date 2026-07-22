@@ -1,12 +1,11 @@
 ---
 title: "refreshExternalCollection() | Node.js"
 slug: /node/node/Collections-refreshExternalCollection
-sidebar_key: node/Collections-refreshExternalCollection
 sidebar_label: "refreshExternalCollection()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation triggers a data refresh for an external collection. Use this when the external data source has been updated and you want Milvus to reload the data. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

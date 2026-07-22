@@ -1,12 +1,11 @@
 ---
 title: "use() | Node.js"
 slug: /node/node/Client-use
-sidebar_key: node/Client-use
 sidebar_label: "use()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation sets the active database for the gRPC client. After calling this method, all subsequent operations will target the specified database. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -53,7 +53,7 @@ await milvusClient.use({
 
 **RETURNS:**
 
-*Promise&lt;ResStatus&gt;*
+*Promise\<ResStatus\>*
 
 **EXCEPTIONS:**
 

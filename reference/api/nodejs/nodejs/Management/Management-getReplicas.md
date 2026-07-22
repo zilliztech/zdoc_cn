@@ -1,12 +1,11 @@
 ---
 title: "getReplicas() | Node.js"
 slug: /node/node/Management-getReplicas
-sidebar_key: node/Management-getReplicas
 sidebar_label: "getReplicas()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets replicas of a collection, returning information about each replica including its ID, node assignments, and shard details. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -135,7 +135,7 @@ A list of replicas currently serving the requested collection.
 
         The resource group that owns this replica's nodes.
 
-    - **num_outbound_node** (*Record\<string, number>*) -
+    - **num_outbound_node** (*Record&lt;string, number&gt;*) -
 
         The count of outbound nodes per resource group, used during rebalancing.
 

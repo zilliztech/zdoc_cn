@@ -1,12 +1,11 @@
 ---
 title: "createIndex() | Node.js"
 slug: /node/node/Management-createIndex
-sidebar_key: node/Management-createIndex
 sidebar_label: "createIndex()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

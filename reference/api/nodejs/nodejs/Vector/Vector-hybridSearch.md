@@ -1,12 +1,11 @@
 ---
 title: "hybridSearch() | Node.js"
 slug: /node/node/Vector-hybridSearch
-sidebar_key: node/Vector-hybridSearch
 sidebar_label: "hybridSearch()"
+beta: false
 added_since: v2.4.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation conducts a hybrid search across multiple vector fields with an optional scalar filtering expression and returns the merged, reranked results. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -146,7 +146,7 @@ await milvusClient.hybridSearch({
 
 **RETURNS:**
 
-*Promise&lt;SearchResults&gt;*
+*Promise\<SearchResults\>*
 
 This method returns a promise that resolves to a `SearchResults` object.
 

@@ -1,12 +1,11 @@
 ---
 title: "flushSync() | Node.js"
 slug: /node/node/Management-flushSync
-sidebar_key: node/Management-flushSync
 sidebar_label: "flushSync()"
+beta: false
 added_since: v2.4.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation manually seals a segment and persists the data on disk. It is recommended that this operation be called after all the data has been inserted into a collection. This is the synchronous function that ensures the flush operation is complete before the function returns. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

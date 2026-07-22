@@ -1,12 +1,11 @@
 ---
 title: "removeUserFromRole() | Node.js"
 slug: /node/node/Authentication-removeUserFromRole
-sidebar_key: node/Authentication-removeUserFromRole
 sidebar_label: "removeUserFromRole()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes a user from a specific role. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

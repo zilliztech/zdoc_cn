@@ -1,12 +1,11 @@
 ---
 title: "alterDatabaseProperties() | Node.js"
 slug: /node/node/Database-alterDatabaseProperties
-sidebar_key: node/Database-alterDatabaseProperties
 sidebar_label: "alterDatabaseProperties()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation modifies the properties of the specified database. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -90,7 +90,7 @@ await milvusClient.alterDatabaseProperties({
 
         Whether to deny all read operations in the database.
 
-- **properties** (*Record\<string, string | number | boolean>*) -
+- **properties** (*Record&lt;string, string | number | boolean&gt;*) -
 
     Properties and their values in key-value pairs.
 

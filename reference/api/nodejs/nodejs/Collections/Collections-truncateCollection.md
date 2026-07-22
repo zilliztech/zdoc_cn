@@ -1,12 +1,11 @@
 ---
 title: "truncateCollection() | Node.js"
 slug: /node/node/Collections-truncateCollection
-sidebar_key: node/Collections-truncateCollection
 sidebar_label: "truncateCollection()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes all data from a collection but retains the collection schema and structure. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -77,7 +77,7 @@ truncateCollection({
 
 **RETURNS:**
 
-*Promise&lt;ResStatus&gt;*
+*Promise\<ResStatus\>*
 
 This method returns a promise that resolves to a **ResStatus** object.
 

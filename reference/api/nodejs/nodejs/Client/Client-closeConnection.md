@@ -1,12 +1,11 @@
 ---
 title: "closeConnection() | Node.js"
 slug: /node/node/Client-closeConnection
-sidebar_key: node/Client-closeConnection
 sidebar_label: "closeConnection()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation closes the current connection to the Milvus server. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

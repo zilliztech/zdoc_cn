@@ -1,12 +1,11 @@
 ---
 title: "addCollectionFunction() | Node.js"
 slug: /node/node/Collections-addCollectionFunction
-sidebar_key: node/Collections-addCollectionFunction
 sidebar_label: "addCollectionFunction()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a custom function to an existing collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -72,7 +72,7 @@ await milvusClient.addCollectionFunction({
 
 **RETURNS:**
 
-*Promise&lt;ResStatus&gt;*
+*Promise\<ResStatus\>*
 
 **EXCEPTIONS:**
 

@@ -1,12 +1,11 @@
 ---
 title: "describeDatabase() | Node.js"
 slug: /node/node/Database-describeDatabase
-sidebar_key: node/Database-describeDatabase
 sidebar_label: "describeDatabase()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation describes a database, returning details such as the database name, ID, creation timestamp, and properties. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

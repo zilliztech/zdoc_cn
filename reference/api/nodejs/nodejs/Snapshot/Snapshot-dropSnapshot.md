@@ -1,12 +1,11 @@
 ---
 title: "dropSnapshot() | Node.js"
 slug: /node/node/Snapshot-dropSnapshot
-sidebar_key: node/Snapshot-dropSnapshot
 sidebar_label: "dropSnapshot()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation deletes a snapshot for a collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

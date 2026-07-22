@@ -1,12 +1,11 @@
 ---
 title: "refreshLoad() | Node.js"
 slug: /node/node/Management-refreshLoad
-sidebar_key: node/Management-refreshLoad
 sidebar_label: "refreshLoad()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation refreshes the loading status of a specific collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

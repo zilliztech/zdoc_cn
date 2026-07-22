@@ -1,12 +1,11 @@
 ---
 title: "HttpImportCreateResponse | Node.js"
 slug: /node/node/DataImport-HttpImportCreateResponse
-sidebar_key: node/DataImport-HttpImportCreateResponse
 sidebar_label: "HttpImportCreateResponse"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This interface describes the response returned by `createImportJobs()`. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "revokeRole() | Node.js"
 slug: /node/node/Authentication-revokeRole
-sidebar_key: node/Authentication-revokeRole
 sidebar_label: "revokeRole()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation revokes the role assigned to a user. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

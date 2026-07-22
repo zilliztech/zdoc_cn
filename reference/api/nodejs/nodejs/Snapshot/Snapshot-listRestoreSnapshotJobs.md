@@ -1,12 +1,11 @@
 ---
 title: "listRestoreSnapshotJobs() | Node.js"
 slug: /node/node/Snapshot-listRestoreSnapshotJobs
-sidebar_key: node/Snapshot-listRestoreSnapshotJobs
 sidebar_label: "listRestoreSnapshotJobs()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all snapshot restore jobs. You can filter by target collection name and database name. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

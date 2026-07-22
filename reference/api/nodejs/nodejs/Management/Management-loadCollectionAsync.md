@@ -1,12 +1,11 @@
 ---
 title: "loadCollectionAsync() | Node.js"
 slug: /node/node/Management-loadCollectionAsync
-sidebar_key: node/Management-loadCollectionAsync
 sidebar_label: "loadCollectionAsync()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation loads collection data into query nodes, then you can do vector search on this collection. This is an async function — use `getLoadState()` or `getLoadingProgress()` to check loading status. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -90,7 +90,7 @@ await milvusClient.loadCollectionAsync({
 
 **RETURNS:**
 
-*Promise&lt;ResStatus&gt;*
+*Promise\<ResStatus\>*
 
 **EXCEPTIONS:**
 

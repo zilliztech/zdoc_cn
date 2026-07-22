@@ -1,12 +1,11 @@
 ---
 title: "runAnalyzer() | Node.js"
 slug: /node/node/Collections-runAnalyzer
-sidebar_key: node/Collections-runAnalyzer
 sidebar_label: "runAnalyzer()"
+beta: false
 added_since: v2.5.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation runs an analyzer on the provided text for test purposes. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -50,7 +50,7 @@ milvusClient({
 
 **PARAMETERS:**
 
-- **analyzer_params** (*Record\<string, any>*) -
+- **analyzer_params** (*Record&lt;string, any&gt;*) -
 
     The parameter for the analyzer.
 

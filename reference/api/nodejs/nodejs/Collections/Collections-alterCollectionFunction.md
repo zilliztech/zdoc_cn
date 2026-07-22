@@ -1,12 +1,11 @@
 ---
 title: "alterCollectionFunction() | Node.js"
 slug: /node/node/Collections-alterCollectionFunction
-sidebar_key: node/Collections-alterCollectionFunction
 sidebar_label: "alterCollectionFunction()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation modifies a custom function in an existing collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -79,7 +79,7 @@ await milvusClient.alterCollectionFunction({
 
 **RETURNS:**
 
-*Promise&lt;ResStatus&gt;*
+*Promise\<ResStatus\>*
 
 **EXCEPTIONS:**
 

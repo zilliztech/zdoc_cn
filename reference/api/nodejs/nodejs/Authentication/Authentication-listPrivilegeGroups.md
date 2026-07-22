@@ -1,12 +1,11 @@
 ---
 title: "listPrivilegeGroups() | Node.js"
 slug: /node/node/Authentication-listPrivilegeGroups
-sidebar_key: node/Authentication-listPrivilegeGroups
 sidebar_label: "listPrivilegeGroups()"
+beta: false
 added_since: v2.4.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all privilege groups. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

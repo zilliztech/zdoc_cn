@@ -1,12 +1,11 @@
 ---
 title: "getRestoreSnapshotState() | Node.js"
 slug: /node/node/Snapshot-getRestoreSnapshotState
-sidebar_key: node/Snapshot-getRestoreSnapshotState
 sidebar_label: "getRestoreSnapshotState()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation checks the state of a snapshot restore job. Use the jobid returned by restoreSnapshot(). | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

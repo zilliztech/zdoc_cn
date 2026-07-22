@@ -1,12 +1,11 @@
 ---
 title: "dropIndex() | Node.js"
 slug: /node/node/Management-dropIndex
-sidebar_key: node/Management-dropIndex
 sidebar_label: "dropIndex()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation drops an index from a specific collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

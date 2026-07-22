@@ -1,12 +1,11 @@
 ---
 title: "alterDatabase() | Node.js"
 slug: /node/node/Database-alterDatabase
-sidebar_key: node/Database-alterDatabase
 sidebar_label: "alterDatabase()"
+beta: false
 added_since: v2.6.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation modifies database properties, such as setting or deleting configuration key-value pairs. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -77,7 +77,7 @@ await milvusClient.alterDatabase({
 
 **RETURNS:**
 
-*Promise&lt;ResStatus&gt;*
+*Promise\<ResStatus\>*
 
 **EXCEPTIONS:**
 

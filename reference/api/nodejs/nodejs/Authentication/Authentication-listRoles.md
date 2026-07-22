@@ -1,12 +1,11 @@
 ---
 title: "listRoles() | Node.js"
 slug: /node/node/Authentication-listRoles
-sidebar_key: node/Authentication-listRoles
 sidebar_label: "listRoles()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all custom roles. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

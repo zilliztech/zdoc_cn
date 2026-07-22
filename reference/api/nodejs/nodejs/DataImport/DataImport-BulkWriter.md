@@ -1,12 +1,11 @@
 ---
 title: "BulkWriter | Node.js"
 slug: /node/node/DataImport-BulkWriter
-sidebar_key: node/DataImport-BulkWriter
 sidebar_label: "BulkWriter"
+beta: false
 added_since: v2.6.12
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This class generates Milvus-compatible JSON or Parquet files for offline bulk import workflows. Use it when a dataset is too large for normal row-by-row insert operations and should be staged as files before calling `bulkInsert()`. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "close() | Node.js"
 slug: /node/node/Client-close
-sidebar_key: node/Client-close
 sidebar_label: "close()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation closes a `MilvusClientSession` instance and prevents further session requests. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

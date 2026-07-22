@@ -1,12 +1,11 @@
 ---
 title: "searchIterator() | Node.js"
 slug: /node/node/Vector-searchIterator
-sidebar_key: node/Vector-searchIterator
 sidebar_label: "searchIterator()"
+beta: false
 added_since: v2.5.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation conducts a scalar filtering query iteratively and returns results in batches. Use this instead of a single query() call when you need to process large result sets incrementally or when the total result count exceeds what a single query can return. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -130,6 +130,6 @@ const iterator = await milvusClient.queryIterator({
 });
 
 for await (const batch of iterator) {
-    console.log(\`Batch of ${batch.length} entities:\`, batch);
+    console.log(`Batch of ${batch.length} entities:`, batch);
 }
 ```

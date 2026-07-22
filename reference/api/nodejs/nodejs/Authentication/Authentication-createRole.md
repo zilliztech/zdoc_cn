@@ -1,12 +1,11 @@
 ---
 title: "createRole() | Node.js"
 slug: /node/node/Authentication-createRole
-sidebar_key: node/Authentication-createRole
 sidebar_label: "createRole()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a custom role. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

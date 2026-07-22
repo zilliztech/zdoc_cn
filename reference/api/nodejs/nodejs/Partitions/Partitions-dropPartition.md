@@ -1,12 +1,11 @@
 ---
 title: "dropPartition() | Node.js"
 slug: /node/node/Partitions-dropPartition
-sidebar_key: node/Partitions-dropPartition
 sidebar_label: "dropPartition()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation drops a specified partition from the current collection. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

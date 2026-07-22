@@ -1,12 +1,11 @@
 ---
 title: "batchDescribeCollections() | Node.js"
 slug: /node/node/Collections-batchDescribeCollections
-sidebar_key: node/Collections-batchDescribeCollections
 sidebar_label: "batchDescribeCollections()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation retrieves schema and metadata for multiple collections in a single call. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

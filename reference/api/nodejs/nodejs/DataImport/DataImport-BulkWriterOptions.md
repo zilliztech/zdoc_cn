@@ -1,12 +1,11 @@
 ---
 title: "BulkWriterOptions | Node.js"
 slug: /node/node/DataImport-BulkWriterOptions
-sidebar_key: node/DataImport-BulkWriterOptions
 sidebar_label: "BulkWriterOptions"
+beta: false
 added_since: v2.6.12
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This interface configures a `BulkWriter` instance, including schema validation, storage behavior, file format, chunk size, and local output path. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

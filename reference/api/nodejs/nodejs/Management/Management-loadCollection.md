@@ -1,12 +1,11 @@
 ---
 title: "loadCollection() | Node.js"
 slug: /node/node/Management-loadCollection
-sidebar_key: node/Management-loadCollection
 sidebar_label: "loadCollection()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation loads the data of a specific collection into memory. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "getPartitionStatistics() | Node.js"
 slug: /node/node/Partitions-getPartitionStatistics
-sidebar_key: node/Partitions-getPartitionStatistics
 sidebar_label: "getPartitionStatistics()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation displays the statistics collected on a specific partition. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -89,7 +89,7 @@ This method returns a promise that resolves to a **StatisticsResponse** object.
 - **stats** (*KeyValuePair[]*) -
 The raw statistics list returned by Milvus. Each entry has a **key** (for example, **row_count**) and a **value** as a string.
 
-- **data** (*Record\<string, any>*) -
+- **data** (*Record&lt;string, any&gt;*) -
 A flattened, key-indexed view of **stats** for convenience. For example, `data.row_count` returns the partition row count as a string.
 
 - **ResStatus**

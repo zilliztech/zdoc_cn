@@ -1,12 +1,11 @@
 ---
 title: "listImportTasks() | Node.js"
 slug: /node/node/DataImport-listImportTasks
-sidebar_key: node/DataImport-listImportTasks
 sidebar_label: "listImportTasks()"
+beta: false
 added_since: inherit
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "List import tasks for a collection, showing the status and details of bulk import operations. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';

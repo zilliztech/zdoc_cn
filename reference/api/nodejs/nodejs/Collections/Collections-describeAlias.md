@@ -1,12 +1,11 @@
 ---
 title: "describeAlias() | Node.js"
 slug: /node/node/Collections-describeAlias
-sidebar_key: node/Collections-describeAlias
 sidebar_label: "describeAlias()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation describes a specific alias. | Node.js"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - nodejs30
 displayed_sidebar: nodeSidebar
 
+displayed_sidbar: nodeSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -59,25 +59,27 @@ await milvusClient.describeAlias({
 
     The alias of a collection. Note that the alias should exist beforehand.
 
-    <Admonition type="info" icon="📘" title="What is a collection alias?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
-
-    On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
-
-    Below is an example of reassigning the alias of one collection to another:
-
-    Suppose there are two collections: `collection_1` and `collection_2`. There is also a collection alias named `bob`, which was originally assigned to `collection_1`:
-
-    - `collection_1`'s alias = ["bob"]
-
-    - `collection_2`'s alias = []
-
-    After calling `alter_alias("collection_2", "bob")`:
-
-    - `collection_1`'s alias = []
-
-    - `collection_2`'s alias = ["bob"]
+    What is a collection alias?
+    
+        A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
+    
+        On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
+    
+        Below is an example of reassigning the alias of one collection to another:
+    
+        Suppose there are two collections: `collection_1` and `collection_2`. There is also a collection alias named `bob`, which was originally assigned to `collection_1`:
+    
+        - `collection_1`'s alias = ["bob"]
+    
+        - `collection_2`'s alias = []
+    
+        After calling `alter_alias("collection_2", "bob")`:
+    
+        - `collection_1`'s alias = []
+    
+        - `collection_2`'s alias = ["bob"]
 
     </Admonition>
 
