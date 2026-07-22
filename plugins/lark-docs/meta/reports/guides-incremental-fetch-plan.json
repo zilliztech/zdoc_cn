@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T03:31:40.184Z",
+  "generated_at": "2026-07-22T06:59:31.483Z",
   "manual": "guides",
   "build_env": "uat",
   "mode": "full",
@@ -330,8 +330,39 @@
     "tblsw6S3J0ekcgNB": "从这里开始",
     "tblYpqCgevikMomb": "开发指南"
   },
-  "previous_table_targets": {},
-  "previous_table_names": {},
+  "previous_table_targets": {
+    "tblMuHkoG4qMugeX": [
+      "zilliz.paas",
+      "zilliz.saas"
+    ],
+    "tbloC4PVprwYo0P0": [
+      "zilliz.paas",
+      "zilliz.saas"
+    ],
+    "tblr7Zec2ReTfRmw": [
+      "zilliz.saas"
+    ],
+    "tblRaa3JnIhllHb9": [
+      "zilliz.paas",
+      "zilliz.saas"
+    ],
+    "tblsw6S3J0ekcgNB": [
+      "zilliz.paas",
+      "zilliz.saas"
+    ],
+    "tblYpqCgevikMomb": [
+      "zilliz.paas",
+      "zilliz.saas"
+    ]
+  },
+  "previous_table_names": {
+    "tblMuHkoG4qMugeX": "management",
+    "tbloC4PVprwYo0P0": "client-libraries",
+    "tblr7Zec2ReTfRmw": "ai-models",
+    "tblRaa3JnIhllHb9": "tools",
+    "tblsw6S3J0ekcgNB": "get-started",
+    "tblYpqCgevikMomb": "development"
+  },
   "snapshot_basis": null,
   "source_scope": "full"
 }
