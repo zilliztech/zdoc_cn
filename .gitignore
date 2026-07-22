@@ -28,3 +28,4 @@ tmp/
 .playwright*
 .qwen
 .worktrees/
+.codegraph

@@ -72,7 +72,7 @@ const config = {
           path: 'docs',
           exclude: ['**/get-started/release-notes/release-notes.md'],
           breadcrumbs: true,
-          sidebarPath: require.resolve('./sidebarsTutorial.js'),
+          sidebarPath: require.resolve('./sidebarsTutorial.mjs'),
           routeBasePath: 'docs',
           remarkPlugins: [remarkMath, remarkCnPublishNormalizer],
           rehypePlugins: [rehypeKatex],
