@@ -1,24 +1,17 @@
 ---
 title: "注册账号 | Cloud"
 slug: /register-with-zilliz-cloud
-sidebar_key: register-with-zilliz-cloud
 sidebar_label: "注册账号"
+beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: FALSE
 notebook: FALSE
 description: "本教程将介绍如何创建 Zilliz Cloud 账号以便使用 Zilliz Cloud 云服务。 | Cloud"
 type: origin
 token: CCVpw6BVti8P8LkfcdJcdRH1nHg
 sidebar_position: 2
-keywords: 
-  - 向量数据库
-  - zilliz
-  - milvus
-  - 大模型向量数据库
-  - 注册
-  - 账号
+displayed_sidebar: default
 
 ---
 
@@ -73,7 +66,7 @@ import Procedures from '@site/src/components/Procedures';
 
 </Procedures>
 
-<Admonition type="info" icon="📘" title="说明">
+<Admonition type="info" icon="📘" title="📘 说明">
 
 在使用邮箱和密码首次登录后，请您完成问卷调查。我们希望了解您的数据规模及用例，从而更有效地为您提供服务。
 

@@ -1,23 +1,24 @@
 ---
-title: "首页 | Cloud"
+title: "Home | Cloud"
 slug: /home
-sidebar_key: home
-sidebar_label: "首页"
+sidebar_label: "Home"
+beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: FALSE
 notebook: FALSE
-description: "此页为 Zilliz Cloud 开发者中心的首页。 | Cloud"
+description: "This is the home page for the Zilliz Cloud Developer Hub. | Cloud"
 type: origin
-token: I5PAwH8MFi67Myky6EYcAxuVnNe
+token: KXgEwDH8yifWxukkXXFctMdLnpg
 sidebar_position: 1
+displayed_sidebar: default
 keywords: 
-  - 向量数据库
   - zilliz
-  - milvus
-  - 大模型向量数据库
-  - 首页
+  - vector database
+  - get started
+  - developer hub
+  - home page
+  - home
 
 hide_title: true
 hide_table_of_contents: true
@@ -48,13 +49,13 @@ import Banner from '@site/src/components/Banner';
 
 <Hero>
 
-# 从容构建、为您的 AI 应用注入强劲动力\{#ai}
+# Build with confidence and supercharge your AI applications\{#build-with-confidence-and-supercharge-your-ai-applications}
 
-Zilliz Cloud 提供完全托管的 Milvus 服务，简化您的向量检索应用的部署和扩缩容流程，并提供相应的安全保障，将您从复杂运维流程中解放出来。
+Zilliz Cloud provides a fully managed Milvus service, simplifying the deployment and scaling of vector search applications with security in mind.
 
 ## Basic Vector Search\{#basic-vector-search}
 
-执行相似最近邻（ANN）搜索，找出与您提供的查询微量最接近的候选向量。[了解更多](./single-vector-search)。
+Perform approximate nearest neighbor (ANN) searches to find the most similar vectors to your query vector. [Learn more](./single-vector-search).
 
 ```json
 // Dataset: 3 items with vectors and color metadata
@@ -183,7 +184,7 @@ curl --request POST \
 
 ## Filtered Search\{#filtered-search}
 
-在向量搜索前使用元数据过滤缩小搜索范围，从而提升搜索结果的相关性。[了解更多](./filtered-search)。
+Narrow your search by applying metadata filters before vector search to improve result relevance. [Learn more](./filtered-search).
 
 ```json
 // Dataset: 3 items with vectors and color metadata
@@ -273,7 +274,7 @@ curl --request POST \
 
 ## Grouping Search\{#grouping-search}
 
-按指定字段为搜索结果分组，从而在更高维度上整合搜索结果，提升搜索结果的多样性。[了解更多](./grouping-search)。
+Group search results by a field to aggregate data at a higher level and improve result diversity. [Learn more](./grouping-search).
 
 ```json
 // Dataset: 3 items from different documents (docId)
@@ -361,7 +362,7 @@ curl --request POST \
 
 ## Hybrid Search\{#hybrid-search}
 
-结合多向量列，实现跨文本、图像及更多非结构化数据的相似性搜索。[了解更多](./hybrid-search)。
+Combine multiple vector fields for multi-modal search across text, images, and more. [Learn more](./hybrid-search).
 
 ```json
 // Dataset: 3 items with text and image embeddings
@@ -493,7 +494,7 @@ curl --request POST \
 
 ## Full Text Search\{#full-text-search}
 
-通过 BM25 相似性得分实现搜索关键词的精确匹配。[了解更多](./full-text-search)。
+Search text using keyword matching with BM25 relevance scoring for precise term retrieval. [Learn more](./full-text-search).
 
 ```json
 // Dataset: 3 text documents with BM25 sparse embeddings
@@ -586,7 +587,7 @@ curl --request POST \
 
 ## Search Iterator\{#search-iterator}
 
-突破 16,384 的召回上限，实现大规模搜索结果的分页迭代。[了解更多](./with-iterators)。
+Retrieve large-scale search results beyond the 16,384 limit using paginated iteration. [Learn more](./with-iterators).
 
 ```json
 // Dataset: First 3 items with vectors
@@ -697,7 +698,7 @@ curl --request POST \
 
 ## Query\{#query}
 
-通过元数据或主键过滤来获取相关 Entity。[了解更多](./get-and-scalar-query)。
+Retrieve entities by filtering on scalar fields or primary keys without vector search. [Learn more](./get-and-scalar-query).
 
 ```json
 // Dataset: 3 items with vectors and color metadata
@@ -777,123 +778,149 @@ curl --request POST \
 
 <Bars>
 
-Zilliz Cloud 提供如下集群部署方式：
+Select a project [plan](./select-zilliz-cloud-service-plans) and create clusters of different deployment options in the project.
 
-- [Free](./create-cluster-on-demand#set-up-a-free-cluster)
+- [Free](./create-cluster#create-a-free-cluster)
 
-- [Serverless](./create-cluster-on-demand#create-a-serverless-cluster)
+- [Serverless](./create-cluster#create-a-serverless-cluster)
 
-- [Dedicated](./create-cluster-on-demand#create-a-dedicated-cluster)
+- [Dedicated](./create-cluster#create-a-dedicated-cluster)
 
-[不清楚如何选择合适的部署方式？](https://zilliz.com.cn/pricing)
+ [Not sure which deployment option to choose?](https://zilliz.com/pricing)
 
 </Bars>
 
 <Stories>
 
-# 在 Zilliz Cloud 上使用您的数据\{#zilliz-cloud}
+# Work with Your Data in Zilliz Cloud\{#work-with-your-data-in-zilliz-cloud}
 
-## 使用自带向量数据\{#}
+## Bring Compute Resources to Your Data\{#bring-compute-resources-to-your-data}
 
-1. 创建并连接您的 Zilliz Cloud 集群。
+1. Set up a storage integration.
 
-    您需要[创建一个集群](./create-cluster)，并为您分配合适的计算和存储资源，然后[连接这个集群](./connect-to-cluster)。
+    Integrate an AWS S3 bucket, a Google Cloud Storage bucket, or a Microsoft Azure blob storage container with Zilliz Cloud.
 
-1. 创建 Collection。
+1. Create an [external volume](./external-volumes).
 
-    Collection 是一个二维数据表，拥有固定的列数和可变行数。您需要在集群中[创建一个 Collection](./manage-collections-sdks) 来存放您的数据。
+    Use a path or the entire external storage as an external volume, which is a read-only reference to a bucket or path in the integrated storage, allowing Zilliz Cloud to access your data in-place without copying or moving it. 
 
-1. 导入数据。
+1. [Create a database](./create-database#create-database-in-on-demand-compute-or-public).
 
-    您可以选择从本地文件或您的对象存储桶中[导入数据](./import-data)。
+    Create a database in on-demand compute. The database is a project-level resource shared by all on-demand clusters in the project. 
 
-1. 执行向量相似性搜索。
+1. Create an external collection in the database.
 
-    [向量相似性搜索](./single-vector-search)可以帮助您发现与您的查询向量最相似的搜索结果。
+    Map the collection columns to your Parquet files, a Lance table, an Iceberg table, or Vortex files as of 0.56.0.
 
-## 集成 Embedding 模型\{#embedding}
+1. Create indexes and refresh the collection.
 
-1. 创建并连接您的 Zilliz Cloud 集群。
+    Index all vector fields and optional scalar fields, then refresh the collection so that Zilliz Cloud creates metadata and index files for the collection. A refresh usually completes in sub-seconds.
 
-    您需要[创建一个集群](./create-cluster)，并为您分配合适的计算和存储资源，然后[连接这个集群](./connect-to-cluster)。
+1. Start explorations in your data.
 
-1. 设置模型供应商集成或部署托管模型。
+    Then you can start vector searches and scalar filtering with on-demand compute resources in your data stored in external storage.
 
-    [添加集成](./integrate-with-model-providers)，存储访问模型供应商所需的认证信息。或[部署](./hosted-models)托管模型。
+## Bring Your Own Vectors\{#bring-your-own-vectors}
 
-1. 创建 Collection 并设置 Embedding Function。
+1. Create and connect to your cluster.
 
-    [创建一个 Collection](./manage-collections-sdks) 来存放您的数据。您的 Collection 中至少需要包含 1 个向量字段和 1 个 VARCHAR 字段。您还需要再创建时定义 Embedding Function。
+    [Create a cluster](./create-cluster) with your desired compute and storage resources and then [connect](./how-to-connect) to it.
 
-1. 插入原始文本数据。
+1. Create a collection.
 
-    [插入](./insert-entities)原始数据。Zilliz Cloud 会在数据 Ingest 过程中自动生成向量。
+    A collection is a two-dimensional table with fixed columns and variable rows. You can create an external collection to bring computation to your data and create a managed collection to enjoy a high-performance vector search service.
 
-1. 使用原始文本进行搜索。
+1. Import data.
 
-    提供原始查询文本。Zilliz Cloud 会将其转化为向量，与已存储的向量进行相似度比对，并[返回](./single-vector-search)最相关的结果。
+    [Import data](./data-import-export) from a local file or an object storage bucket.
 
-## 从其它数据源迁移数据\{#}
+1. Conduct a vector similarity search.
 
-1. 连接到您的数据源
+    A [basic vector similarity search](./single-vector-search) helps you find the most similar results.
 
-    Zilliz Cloud 支持为数众多的数据源。您可以选择从 Pinecone, Qdrant, Elasticsearch, PostgreSQL 等数据源[迁移您的数据到 Zilliz Cloud](./migrations)。
+## Integrated Embedding\{#integrated-embedding}
 
-1. 配置数据源及目标集群。
+1. Create and connect to your cluster.
 
-    检查您的数据源信息，并指定迁移的目标集群。
+    [Create a cluster](./create-cluster) with your desired compute and storage resources and then [connect](./how-to-connect) to it.
 
-1. 检查字段映射关系。
+1. Set up a model provider integration or deploy a hosted model.
 
-    设置并检查数据源表字段和目标 Collection 字段间的映射关系。
+    Create an AWS, GCP, or Azure storage integration to store credentials for your third-party model provider. Or you can [deploy](./hosted-models) a hosted model.
 
-## 备份与恢复\{#}
+1. Create a collection and configure the embedding function.
 
-1. 为您的集群或 Collection 创建备份。
+    Create a managed collection with at least one vector field and one VARCHAR field, and define a text embedding function.
 
-    备份为目标集群或 Collection 在某个时点的数据拷贝。您可以[手动创建备份](./create-snapshot)，也可以[设置定时自动备份](./schedule-automatic-backups)。此外，您还可以进行[跨地域备份](./backup-to-other-regions)以提升容灾能力。
+1. Insert raw text data.
 
-1. （可选）导出备份到您的对象存储。
+    [Insert](./insert-entities) raw data. Zilliz Cloud automatically generates vector embeddings during ingestion.
 
-    您可以将您备份好的数据导入到阿里云对象存储。
+1. Use raw text to conduct a search.
 
-1. 恢复数据。
+    Provide a raw query text. Zilliz Cloud embeds the query, compares it to stored vectors, and [returns](./single-vector-search) the most relevant results.
 
-    您可以在系统错误或数据丢失时选择相应的备份[恢复您的数据](./restore-from-snapshot)。
+## Migrate From Other Data Infra\{#migrate-from-other-data-infra}
+
+1. Connect to your data source.
+
+    Zilliz Cloud supports various data sources, including Pinecone, MongoDB, Qdrant, PostgreSQL, etc. See [Migration ](./migrations)[g](./migrations)[uides](./migrations).
+
+1. Configure the migration source and target.
+
+    Review the data source information and configure your migration target.
+
+1. Review mappings.
+
+    Set and review the mappings between the schema of the source and target data.
+
+## Backup & Restore\{#backup-and-restore}
+
+1. Create a backup for your cluster or collection.
+
+    Backups are point-in-time copies of a cluster or collection. You can create backups [manually](./create-backup) or [set backup policy](./schedule-automatic-backups) for scheduled backups. You can also [copy backup to other regions](/docs/backup-to-other-regions) for improved disaster recovery capabilities.
+
+1. (Optional) Export backups to object storage services.
+
+    You can [export the backup files](./export-backup-files) you have created to AWS S3 or Azure Blob Storage.
+
+1. Restore data.
+
+    [Restore your data](./restore-from-backup-files) in the event of unexpected system failure or data loss.
 
 </Stories>
 
 <Cards>
 
-# 深入了解 Zilliz Cloud\{#zilliz-cloud}
+# Go Further with Zilliz Cloud\{#go-further-with-zilliz-cloud}
 
-- [监控与告警 (Monitoring & Alerts)](./metrics-and-alerts)
+- [Monitoring & Alerts](./metrics-and-alerts)
 
-    监控您的集群并及时获得相关告警。
+    Monitor your clusters and get alerts on time.
 
-- [访问控制 (Access Control)](./access-control)
+- Access Control
 
-    细粒度的访问控制，保护您的数据安全。
+    Secure your data with fine-grained access control.
 
-- [私网连接 (Private Networking)](./setup-a-private-link)
+- [Private Networking](./setup-a-private-link)
 
-    使用私网连接连接您的集群，提升数据安全。
+    Connect your clusters to your private network.
 
 - break
 
-- [支付与账单 (Billing)](./payment-billing)
+- [Billing](./payment-billing)
 
-    提供多样的计费模式：按量付费或包年包月。
+    Pay only for what you use, with no upfront costs.
 
-- [第三方集成 (Integrations)](https://zilliz.com/learn/milvus-notebooks)
+- Integrations
 
-    在您现有的技术栈和工作流中集成 Zilliz Cloud。
+    Integrate with your existing tools and workflows.
 
 </Cards>
 
 <Blocks>
 
-# 使用您熟悉的编程语言\{#}
+# Start Building with Your Preferred Language\{#start-building-with-your-preferred-language}
 
 - [Python](/reference/python)
 
@@ -907,4 +934,4 @@ Zilliz Cloud 提供如下集群部署方式：
 
 </Blocks>
 
-<Banner bannerText="仍旧无法找到您需要的信息？" bannerLinkText="试试 Ask AI" />
+<Banner bannerText="Can't find what you're looking for?" bannerLinkText="Try Ask AI" />

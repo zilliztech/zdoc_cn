@@ -1,24 +1,17 @@
 ---
 title: "免费试用 Zilliz Cloud | Cloud"
 slug: /free-trials
-sidebar_key: free-trials
 sidebar_label: "免费试用 Zilliz Cloud"
+beta: FALSE
 added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
-beta: FALSE
 notebook: FALSE
 description: "为帮助您测试 Zilliz Cloud 向量数据库特性和评估使用成本，Zilliz Cloud 提供 Free 集群和免费试用。您仅需注册账号即可，无需绑定支付方式。 | Cloud"
 type: origin
 token: WWlIwejMNiAEmmkce5fcZu4UnMd
-sidebar_position: 8
-keywords: 
-  - 向量数据库
-  - zilliz
-  - milvus
-  - 大模型向量数据库
-  - 免费
-  - 试用
+sidebar_position: 3
+displayed_sidebar: default
 
 ---
 
@@ -67,7 +60,7 @@ Zilliz Cloud 提供 Serverless 和按量计费的 Dedicated 集群的免费试�
 
 ![view-credit-balance-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/view-credit-balance-cn.png "view-credit-balance-cn")
 
-<Admonition type="info" icon="📘" title="说明">
+<Admonition type="info" icon="📘" title="📘 说明">
 
 为节省优惠券，我们建议您手动挂起未使用的集群。
 
@@ -93,11 +86,11 @@ Zilliz Cloud 提供 Serverless 和按量计费的 Dedicated 集群的免费试�
 
 ## 文档推荐\{#related-topics}
 
-- [连接集群](./connect-to-cluster)
+- [连接集群](./connect-to-clusters)
 
 - [创建 Collection](./manage-collections-sdks)
 
-- [插入与删除](./insert-update-delete)
+- [插入与删除](./undefined)
 
-- [搜索与重排](./search-query-get)
+- [搜索与重排](./zilliz-search-prompts)
 
