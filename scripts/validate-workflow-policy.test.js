@@ -224,12 +224,12 @@ test('workflow policy excludes staging namespace from push deployment triggers',
   }
 })
 
-test('CN docs production runs only on explicit manual dispatch during migration', () => {
+test('CN docs production supports manual dispatch and the approved schedule', () => {
   const workflowPath = path.join(process.cwd(), '.github/workflows/fetch-docs.yml')
   const triggerBlock = fs.readFileSync(workflowPath, 'utf8').split('\npermissions:')[0]
   assert.match(triggerBlock, /^name: fetch CN docs$/m)
   assert.match(triggerBlock, /workflow_dispatch:/)
-  assert.doesNotMatch(triggerBlock, /^\s+schedule:/m)
+  assert.match(triggerBlock, /^  schedule:\n    - cron: "0 6,14,22 \* \* \*"$/m)
   assert.match(triggerBlock, /publish:[\s\S]*default: false/)
   assert.doesNotMatch(triggerBlock, /\n\s+push:/)
   const workflow = fs.readFileSync(workflowPath, 'utf8')
