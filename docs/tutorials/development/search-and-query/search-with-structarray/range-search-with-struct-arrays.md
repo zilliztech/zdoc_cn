@@ -114,7 +114,7 @@ for hits in results:
 
 可以将 Element-level Range Search 与 StructArray 标量过滤结合使用。父 Entity Field 使用顶层谓词；需要限制哪些 Struct 元素参与向量 Range Search 时，使用 `element_filter`。
 
-```plaintext
+```python
 filter_expr = (
     'category == "search" && '
     'element_filter(chunks, '

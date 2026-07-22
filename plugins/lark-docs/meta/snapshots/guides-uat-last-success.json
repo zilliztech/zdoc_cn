@@ -9,7 +9,7 @@
   "source_branch": "dev",
   "publish_url": "https://docs.cloud-uat3.zilliz.com",
   "link_check_remote": "https://docs.zilliz.com",
-  "generated_at": "2026-07-22T07:31:27.710Z",
+  "generated_at": "2026-07-22T15:19:59.176Z",
   "source_dir": "./plugins/lark-docs/meta/sources/guides",
   "base_app_token": "I6YUb1M0JajHrqsJGcLcZNh7neP",
   "records": [
@@ -1527,7 +1527,7 @@
       "doc_token": "MI8Ewfb9NiYf7lkT5mscb6REnCd",
       "doc_link": "https://zilliverse.feishu.cn/wiki/MI8Ewfb9NiYf7lkT5mscb6REnCd",
       "source_file": "MI8Ewfb9NiYf7lkT5mscb6REnCd.json",
-      "source_hash": "3d46e12371ba46ac1a26045a4525d484079d0b187f61658b7b12d88318a28f96",
+      "source_hash": "0147f0e10c786d01da9b5bf6ed33c99a98b500d91c159719d7f0c87f46cd64c4",
       "node_metadata": {
         "requested_token": "MI8Ewfb9NiYf7lkT5mscb6REnCd",
         "requested_node_token": "MI8Ewfb9NiYf7lkT5mscb6REnCd",
@@ -9636,7 +9636,7 @@
       "doc_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
       "doc_link": "https://zilliverse.feishu.cn/wiki/XEvpwUMfFirFkNkQZofcwUTcnvd",
       "source_file": "XEvpwUMfFirFkNkQZofcwUTcnvd.json",
-      "source_hash": "c2ac31e6f4b44622067fb4f44606fd0642c5ed16ac173e7d58798457227a6aee",
+      "source_hash": "e545b06d197bdf3ccb3fe775fbe4bdc716745b4b16117b51abd8a4bd30ee3736",
       "node_metadata": {
         "requested_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
         "requested_node_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
@@ -9650,14 +9650,14 @@
         "parent_node_token": "AePpwfzfrifSRPkj9xvcq1XvnVg",
         "node_create_time": "1778139582",
         "obj_create_time": "1778139582",
-        "obj_edit_time": "1780625291",
+        "obj_edit_time": "1784726774",
         "revision_id": null
       },
       "node_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
       "origin_node_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
       "obj_token": "YniQd20B8o6RkkxfpU8c8Uu1nMg",
       "obj_type": "docx",
-      "obj_edit_time": "1780625291",
+      "obj_edit_time": "1784726774",
       "revision_id": null,
       "outgoing_tokens": [
         "ABQMwN4HLiCUJGkEipvcipinnZc",
