@@ -1,12 +1,11 @@
 ---
 title: "quickstart | Cloud"
 slug: /cli/cli/Quickstart-quickstart
-sidebar_key: cli/Quickstart-quickstart
 sidebar_label: "quickstart"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation walks first-time users through sign-in, organization selection, cluster context, and a short menu of common operations (list clusters, set context, list collections, view billing). When stdout is not a TTY or `--non-interactive` is set, only the cheatsheet is printed. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

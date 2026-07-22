@@ -1,12 +1,11 @@
 ---
 title: "version | Cloud"
 slug: /cli/cli/Global-version
-sidebar_key: cli/Global-version
 sidebar_label: "version"
+beta: false
 added_since: v0.1.x
 last_modified: v1.4.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation shows the version of the installed Zilliz CLI. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -64,7 +64,7 @@ zilliz version -o json
 # }
 
 # If a newer CLI is available, upgrade guidance is written to stderr:
-# Tips: A new version of zilliz (1.4.2) is available. Run \`zilliz upgrade\` to update.
+# Tips: A new version of zilliz (1.4.2) is available. Run `zilliz upgrade` to update.
 ```
 
 ## Shell completion\{#shell-completion}

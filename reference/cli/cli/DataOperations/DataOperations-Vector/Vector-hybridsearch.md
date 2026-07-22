@@ -1,12 +1,11 @@
 ---
 title: "hybrid-search | Cloud"
 slug: /cli/cli/Vector-hybridsearch
-sidebar_key: cli/Vector-hybridsearch
 sidebar_label: "hybrid-search"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation performs hybrid search with multiple vectors and reranking. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -188,7 +188,7 @@ zilliz vector hybrid-search
                 "properties": {
                     "k": {
                         "type": "integer",
-                        "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to \`rrf\`."
+                        "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to `rrf`."
                     }
                 },
                 "description": "A set of parameters related to the specified strategy",
@@ -358,7 +358,7 @@ zilliz vector hybrid-search
                         "properties": {
                             "k": {
                                 "type": "integer",
-                                "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to \`rrf\`."
+                                "description": "A tunable constant in the RRF algorithm. This applies only when the strategy is set to `rrf`."
                             }
                         },
                         "description": "A set of parameters related to the specified strategy",
@@ -378,11 +378,11 @@ zilliz vector hybrid-search
             },
             "groupSize": {
                 "type": "integer",
-                "description": "The number of entities to return for each group. This parameter is only valid when \`groupingField\` is specified."
+                "description": "The number of entities to return for each group. This parameter is only valid when `groupingField` is specified."
             },
             "strictGroupSize": {
                 "type": "boolean",
-                "description": "Whether to return only the top k entities for each group. This parameter is only valid when \`groupingField\` is specified."
+                "description": "Whether to return only the top k entities for each group. This parameter is only valid when `groupingField` is specified."
             },
             "outputFields": {
                 "type": "array",

@@ -1,12 +1,11 @@
 ---
 title: "list | Cloud"
 slug: /cli/cli/OnDemandCluster-list
-sidebar_key: cli/OnDemandCluster-list
 sidebar_label: "list"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists on-demand clusters in a project/region. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -74,7 +74,7 @@ zilliz -o json on-demand-cluster list --project-id proj-xxxx --region-id aws-us-
 #       "status": "RUNNING",
 #       "cuSize": 8,
 #       "projectId": "proj-xxxx",
-#       "regionId": "ali-cn-hangzhou"
+#       "regionId": "aws-us-west-2"
 #     },
 #     {
 #       "clusterId": "in07-yyyyyyyyyyyyyyy",
@@ -82,7 +82,7 @@ zilliz -o json on-demand-cluster list --project-id proj-xxxx --region-id aws-us-
 #       "status": "SUSPENDED",
 #       "cuSize": 8,
 #       "projectId": "proj-xxxx",
-#       "regionId": "ali-cn-hangzhou"
+#       "regionId": "aws-us-west-2"
 #     }
 #   ]
 # }

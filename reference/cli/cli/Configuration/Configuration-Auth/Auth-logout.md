@@ -1,12 +1,11 @@
 ---
 title: "logout | Go"
 slug: /cli/cli/Auth-logout
-sidebar_key: cli/Auth-logout
 sidebar_label: "logout"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation logs you out of Zilliz Cloud and clears stored credentials. | Go"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

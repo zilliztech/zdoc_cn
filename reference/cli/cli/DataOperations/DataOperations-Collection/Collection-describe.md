@@ -1,12 +1,11 @@
 ---
 title: "describe | Cloud"
 slug: /cli/cli/Collection-describe
-sidebar_key: cli/Collection-describe
 sidebar_label: "describe"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets details of a collection. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

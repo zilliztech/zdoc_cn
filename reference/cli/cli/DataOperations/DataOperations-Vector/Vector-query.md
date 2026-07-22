@@ -1,12 +1,11 @@
 ---
 title: "query | Cloud"
 slug: /cli/cli/Vector-query
-sidebar_key: cli/Vector-query
 sidebar_label: "query"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation queries entities by scalar filter expression. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

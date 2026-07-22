@@ -1,12 +1,11 @@
 ---
 title: "list | Cloud"
 slug: /cli/cli/PrivateLink-list
-sidebar_key: cli/PrivateLink-list
 sidebar_label: "list"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists PrivateLink endpoints for a project. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

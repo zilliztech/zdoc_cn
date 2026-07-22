@@ -1,12 +1,11 @@
 ---
 title: "revoke-privilege | Cloud"
 slug: /cli/cli/Role-revokeprivilege
-sidebar_key: cli/Role-revokeprivilege
 sidebar_label: "revoke-privilege"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation revokes a privilege from a role. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

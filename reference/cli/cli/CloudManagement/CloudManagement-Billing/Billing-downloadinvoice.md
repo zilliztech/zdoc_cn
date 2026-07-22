@@ -1,12 +1,11 @@
 ---
 title: "download-invoice | Cloud"
 slug: /cli/cli/Billing-downloadinvoice
-sidebar_key: cli/Billing-downloadinvoice
 sidebar_label: "download-invoice"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation downloads an invoice as PDF. Use `zilliz billing invoices` to list available invoice IDs first. The PDF is saved as `./.pdf` if neither `--output-file` nor `--dir` is supplied. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

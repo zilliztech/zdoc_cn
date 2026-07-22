@@ -1,12 +1,11 @@
 ---
 title: "get | Cloud"
 slug: /cli/cli/Vector-get
-sidebar_key: cli/Vector-get
 sidebar_label: "get"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets entities by primary key IDs. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "delete | Cloud"
 slug: /cli/cli/PrivateLink-delete
-sidebar_key: cli/PrivateLink-delete
 sidebar_label: "delete"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation deletes a PrivateLink endpoint. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "create | Cloud"
 slug: /cli/cli/Project-create
-sidebar_key: cli/Project-create
 sidebar_label: "create"
+beta: false
 added_since: v0.1.x
 last_modified: v1.4.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a new project. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

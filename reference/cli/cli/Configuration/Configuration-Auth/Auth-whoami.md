@@ -1,12 +1,11 @@
 ---
 title: "whoami | Cloud"
 slug: /cli/cli/Auth-whoami
-sidebar_key: cli/Auth-whoami
 sidebar_label: "whoami"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation shows the currently signed-in identity, the resolved control-plane endpoint, and the list of organizations available to switch into. Alias `zilliz info`. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

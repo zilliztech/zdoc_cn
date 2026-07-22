@@ -1,12 +1,11 @@
 ---
 title: "upgrade | Cloud"
 slug: /cli/cli/Global-upgrade
-sidebar_key: cli/Global-upgrade
 sidebar_label: "upgrade"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation self-updates the CLI by checking the latest GitHub release and delegating to the official installer script for the host platform. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

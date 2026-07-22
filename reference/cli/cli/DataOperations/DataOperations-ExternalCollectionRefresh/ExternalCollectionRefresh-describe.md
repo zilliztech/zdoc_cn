@@ -1,12 +1,11 @@
 ---
 title: "describe | Cloud"
 slug: /cli/cli/ExternalCollectionRefresh-describe
-sidebar_key: cli/ExternalCollectionRefresh-describe
 sidebar_label: "describe"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets the status of a single external-collection refresh job. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

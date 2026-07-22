@@ -1,12 +1,11 @@
 ---
 title: "create | Cloud"
 slug: /cli/cli/Database-create
-sidebar_key: cli/Database-create
 sidebar_label: "create"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a new database. (Dedicated only) | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

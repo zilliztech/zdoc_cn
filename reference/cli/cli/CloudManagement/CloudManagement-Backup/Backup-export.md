@@ -1,12 +1,11 @@
 ---
 title: "export | Cloud"
 slug: /cli/cli/Backup-export
-sidebar_key: cli/Backup-export
 sidebar_label: "export"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation exports a backup to external storage. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

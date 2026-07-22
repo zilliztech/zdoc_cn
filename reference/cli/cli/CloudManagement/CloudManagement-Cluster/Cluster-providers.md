@@ -1,12 +1,11 @@
 ---
 title: "providers | Cloud"
 slug: /cli/cli/Cluster-providers
-sidebar_key: cli/Cluster-providers
 sidebar_label: "providers"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all applicable cloud providers. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

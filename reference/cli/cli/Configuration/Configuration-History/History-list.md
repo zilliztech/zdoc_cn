@@ -1,12 +1,11 @@
 ---
 title: "list | Cloud"
 slug: /cli/cli/History-list
-sidebar_key: cli/History-list
 sidebar_label: "list"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists recent commands recorded in the local history log, ordered newest first. Each entry includes the timestamp, command line, command type, and success flag. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

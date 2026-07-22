@@ -1,12 +1,11 @@
 ---
 title: "describe | Cloud"
 slug: /cli/cli/OnDemandCluster-describe
-sidebar_key: cli/OnDemandCluster-describe
 sidebar_label: "describe"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets details of an on-demand cluster. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -65,6 +65,6 @@ zilliz -o json on-demand-cluster describe --cluster-id in-xxxxxxxxxxxx
 #   "status": "RUNNING",
 #   "cuSize": 8,
 #   "projectId": "proj-xxxx",
-#   "regionId": "ali-cn-hangzhou"
+#   "regionId": "aws-us-west-2"
 # }
 ```

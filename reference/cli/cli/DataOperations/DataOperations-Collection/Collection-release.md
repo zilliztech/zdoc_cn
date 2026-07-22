@@ -1,12 +1,11 @@
 ---
 title: "release | Cloud"
 slug: /cli/cli/Collection-release
-sidebar_key: cli/Collection-release
 sidebar_label: "release"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation releases a collection from memory. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

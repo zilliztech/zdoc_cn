@@ -1,12 +1,11 @@
 ---
 title: "clear | Cloud"
 slug: /cli/cli/Context-clear
-sidebar_key: cli/Context-clear
 sidebar_label: "clear"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes the active cluster context. Cluster ID, endpoint, database, and plan are all cleared. Use this before switching organizations or when troubleshooting stale context state. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

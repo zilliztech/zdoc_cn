@@ -1,12 +1,11 @@
 ---
 title: "suspend | Cloud"
 slug: /cli/cli/Cluster-suspend
-sidebar_key: cli/Cluster-suspend
 sidebar_label: "suspend"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation suspends a running cluster. Suspending stops compute charges. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

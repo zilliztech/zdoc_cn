@@ -1,12 +1,11 @@
 ---
 title: "login | Cloud"
 slug: /cli/cli/Auth-login
-sidebar_key: cli/Auth-login
 sidebar_label: "login"
+beta: false
 added_since: v0.1.x
 last_modified: v1.4.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation authenticates the CLI with Zilliz Cloud and saves the login state for later commands. Use browser login for interactive local use, API-key login for scripts or headless environments, and `--cn` with `--api-key` when logging in to the Zilliz Cloud China site. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

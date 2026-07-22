@@ -1,12 +1,11 @@
 ---
 title: "clear | Cloud"
 slug: /cli/cli/History-clear
-sidebar_key: cli/History-clear
 sidebar_label: "clear"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation truncates the local command history file. The script holds an exclusive lock during the truncate-then-remove sequence so concurrent CLI invocations cannot lose appended records. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

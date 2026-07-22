@@ -1,12 +1,11 @@
 ---
 title: "describe | Cloud"
 slug: /cli/cli/Alias-describe
-sidebar_key: cli/Alias-describe
 sidebar_label: "describe"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets details of an alias. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

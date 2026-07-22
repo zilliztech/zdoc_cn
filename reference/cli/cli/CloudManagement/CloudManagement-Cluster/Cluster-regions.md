@@ -1,12 +1,11 @@
 ---
 title: "regions | Cloud"
 slug: /cli/cli/Cluster-regions
-sidebar_key: cli/Cluster-regions
 sidebar_label: "regions"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all available regions for a cloud provider. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

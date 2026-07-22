@@ -1,12 +1,11 @@
 ---
 title: "search | Cloud"
 slug: /cli/cli/History-search
-sidebar_key: cli/History-search
 sidebar_label: "search"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation filters command history to entries whose command line contains the given keyword (case-insensitive substring match), ordered newest first. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -51,7 +51,7 @@ zilliz history search
 ## Example\{#example}
 
 ```bash
-# Find every recorded \`cluster create\` invocation
+# Find every recorded `cluster create` invocation
 zilliz history search --keyword "cluster create"
 
 # Find any command that mentioned a specific cluster ID

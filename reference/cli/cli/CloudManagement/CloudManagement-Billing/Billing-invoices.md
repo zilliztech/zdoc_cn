@@ -1,12 +1,11 @@
 ---
 title: "invoices | Cloud"
 slug: /cli/cli/Billing-invoices
-sidebar_key: cli/Billing-invoices
 sidebar_label: "invoices"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists invoices or gets details of a specific invoice. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "set | Cloud"
 slug: /cli/cli/Context-set
-sidebar_key: cli/Context-set
 sidebar_label: "set"
+beta: false
 added_since: v0.1.x
 last_modified: v1.4.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation selects the default cluster endpoint and database that later data-plane commands use. Set a context before running collection, vector, index, partition, user, role, or alias commands. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

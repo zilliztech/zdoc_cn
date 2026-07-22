@@ -1,12 +1,11 @@
 ---
 title: "list | Cloud"
 slug: /cli/cli/Cluster-list
-sidebar_key: cli/Cluster-list
 sidebar_label: "list"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all clusters. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

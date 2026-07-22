@@ -1,12 +1,11 @@
 ---
 title: "validate | Cloud"
 slug: /cli/cli/StorageIntegration-validate
-sidebar_key: cli/StorageIntegration-validate
 sidebar_label: "validate"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation validates an external storage integration configuration before or after creating the integration. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

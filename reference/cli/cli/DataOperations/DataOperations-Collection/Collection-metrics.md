@@ -1,12 +1,11 @@
 ---
 title: "metrics | Cloud"
 slug: /cli/cli/Collection-metrics
-sidebar_key: cli/Collection-metrics
 sidebar_label: "metrics"
+beta: false
 added_since: v1.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation fetches per-collection metrics (QPS, latency, VPS, failure rate, entity counts) for the given metric names over the requested time window. By default the result is rendered as an inline Braille chart; pass `-o table` for a pivot table or `-o json` / `-o yaml` / `-o csv` / `--query` for raw data. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "generate-auth-materials | Cloud"
 slug: /cli/cli/StorageIntegration-generateauthmaterials
-sidebar_key: cli/StorageIntegration-generateauthmaterials
 sidebar_label: "generate-auth-materials"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation generates authorization materials for a storage integration. Use it to obtain the cloud-side credential material required before finalizing external storage access. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

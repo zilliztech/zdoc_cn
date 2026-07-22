@@ -1,12 +1,11 @@
 ---
 title: "describe-policy | Cloud"
 slug: /cli/cli/Backup-describepolicy
-sidebar_key: cli/Backup-describepolicy
 sidebar_label: "describe-policy"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation describes the backup policy for a cluster. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

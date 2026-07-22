@@ -1,12 +1,11 @@
 ---
 title: "add-regions | Cloud"
 slug: /cli/cli/Project-addregions
-sidebar_key: cli/Project-addregions
 sidebar_label: "add-regions"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation binds additional regions to an existing project. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "create | Cloud"
 slug: /cli/cli/Index-create
-sidebar_key: cli/Index-create
 sidebar_label: "create"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates an index on a collection field. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -120,7 +120,7 @@ zilliz index create
                             "description": "The name of the index to create. The value defaults to the target field name. The value should be a string of no more than 255 characters, starting with an underscore (_) or a letter."
                         },
                         "params": {
-                            "description": "The index type and related settings. In Zilliz Cloud, the value should always be \`AUTOINDEX\`.",
+                            "description": "The index type and related settings. In Zilliz Cloud, the value should always be `AUTOINDEX`.",
                             "type": "object",
                             "properties": {
                                 "index_type": {

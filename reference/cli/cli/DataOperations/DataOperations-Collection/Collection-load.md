@@ -1,12 +1,11 @@
 ---
 title: "load | Cloud"
 slug: /cli/cli/Collection-load
-sidebar_key: cli/Collection-load
 sidebar_label: "load"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation loads a collection into memory for search. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "switch | Cloud"
 slug: /cli/cli/Auth-switch
-sidebar_key: cli/Auth-switch
 sidebar_label: "switch"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation switches to a different organization. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

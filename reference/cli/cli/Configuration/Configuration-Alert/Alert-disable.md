@@ -1,12 +1,11 @@
 ---
 title: "disable | Cloud"
 slug: /cli/cli/Alert-disable
-sidebar_key: cli/Alert-disable
 sidebar_label: "disable"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation disables an alert rule. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "list | Cloud"
 slug: /cli/cli/StorageIntegration-list
-sidebar_key: cli/StorageIntegration-list
 sidebar_label: "list"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists external storage integrations so you can review integration IDs, names, status, regions, buckets, and server messages before using them with import or external collection workflows. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

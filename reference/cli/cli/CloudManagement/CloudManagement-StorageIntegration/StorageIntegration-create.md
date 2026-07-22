@@ -1,12 +1,11 @@
 ---
 title: "create | Cloud"
 slug: /cli/cli/StorageIntegration-create
-sidebar_key: cli/StorageIntegration-create
 sidebar_label: "create"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates an external storage integration. Use it to register bucket credentials for AWS, Azure, or GCP so Zilliz Cloud can access external data sources. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

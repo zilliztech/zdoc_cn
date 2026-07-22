@@ -1,12 +1,11 @@
 ---
 title: "update-password | Cloud"
 slug: /cli/cli/User-updatepassword
-sidebar_key: cli/User-updatepassword
 sidebar_label: "update-password"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation updates the user password. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

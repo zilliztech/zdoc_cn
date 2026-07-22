@@ -1,12 +1,11 @@
 ---
 title: "flush | Cloud"
 slug: /cli/cli/Collection-flush
-sidebar_key: cli/Collection-flush
 sidebar_label: "flush"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation flushes collection data to disk. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

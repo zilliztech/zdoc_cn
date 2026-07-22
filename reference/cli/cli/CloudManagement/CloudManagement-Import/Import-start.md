@@ -1,12 +1,11 @@
 ---
 title: "start | Cloud"
 slug: /cli/cli/Import-start
-sidebar_key: cli/Import-start
 sidebar_label: "start"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation starts a data import job. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

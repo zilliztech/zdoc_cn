@@ -1,12 +1,11 @@
 ---
 title: "list-services | Cloud"
 slug: /cli/cli/PrivateLink-listservices
-sidebar_key: cli/PrivateLink-listservices
 sidebar_label: "list-services"
+beta: false
 added_since: v1.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists available PrivateLink endpoint services. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';

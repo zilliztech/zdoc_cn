@@ -1,12 +1,11 @@
 ---
 title: "bind-card | Cloud"
 slug: /cli/cli/Billing-bindcard
-sidebar_key: cli/Billing-bindcard
 sidebar_label: "bind-card"
+beta: false
 added_since: v0.1.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation binds a credit card to your account. | Cloud"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - cliv14
 displayed_sidebar: cliSidebar
 
+displayed_sidbar: cliSidebar
 ---
 
 import Admonition from '@theme/Admonition';
