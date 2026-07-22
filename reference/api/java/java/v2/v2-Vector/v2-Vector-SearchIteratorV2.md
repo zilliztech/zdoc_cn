@@ -1,12 +1,11 @@
 ---
 title: "SearchIteratorV2() | Java | v2"
 slug: /java/java/v2-Vector-SearchIteratorV2
-sidebar_key: java/v2-Vector-SearchIteratorV2
 sidebar_label: "SearchIteratorV2()"
+beta: false
 added_since: v2.5.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates an iterator for you to iterate over the search results. It is useful, especially when the search result contains a large volume of data. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

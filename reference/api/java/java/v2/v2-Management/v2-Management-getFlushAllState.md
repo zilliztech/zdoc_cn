@@ -1,12 +1,11 @@
 ---
 title: "getFlushAllState() | Java | v2"
 slug: /java/java/v2-Management-getFlushAllState
-sidebar_key: java/v2-Management-getFlushAllState
 sidebar_label: "getFlushAllState()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation checks whether a previous flush-all action has finished. Use it when you call `flushAll` asynchronously and need to poll for completion. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -37,7 +37,7 @@ This operation checks whether a previous flush-all action has finished. Use it w
 public GetFlushAllStateResp getFlushAllState(GetFlushAllStateReq request)
 ```
 
-## Request Syntax{#request-syntax}
+## Request Syntax\{#request-syntax}
 
 ```java
 getFlushAllState(GetFlushAllStateReq.builder()
@@ -66,7 +66,7 @@ getFlushAllState(GetFlushAllStateReq.builder()
 
     This exception will be raised when validation fails or the server returns an error for this operation.
 
-## Example{#example}
+## Example\{#example}
 
 ```java
 MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
@@ -84,4 +84,4 @@ GetFlushAllStateResp state = client.getFlushAllState(GetFlushAllStateReq.builder
 System.out.println(state.getFlushed());
 ```
 
-<!-- category: Management; action: CREATE; addedSince: v3.0.x -->
+{/* category: Management; action: CREATE; addedSince: v3.0.x */}

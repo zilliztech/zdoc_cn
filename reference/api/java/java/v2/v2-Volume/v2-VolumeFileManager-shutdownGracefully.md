@@ -1,12 +1,11 @@
 ---
 title: "shutdownGracefully() | Java | v2"
 slug: /java/java/v2-VolumeFileManager-shutdownGracefully
-sidebar_key: java/v2-VolumeFileManager-shutdownGracefully
 sidebar_label: "shutdownGracefully()"
+beta: false
 added_since: false
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gracefully shuts down the internal executor service of the VolumeFileManager, allowing pending upload tasks to complete before termination. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -58,7 +58,7 @@ import io.milvus.bulkwriter.request.volume.UploadFilesRequest;
 
 // Initialize VolumeFileManager
 VolumeFileManagerParam param = VolumeFileManagerParam.newBuilder()
-        .withCloudEndpoint("https://api.cloud.zilliz.com.cn")
+        .withCloudEndpoint("https://api.cloud.zilliz.com")
         .withApiKey("your_api_key")
         .withVolumeName("your_volume_name")
         .withConnectType(ConnectType.AUTO)

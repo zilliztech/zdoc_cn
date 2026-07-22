@@ -1,12 +1,11 @@
 ---
 title: "dropAlias() | Java | v2"
 slug: /java/java/v2-Collections-dropAlias
-sidebar_key: java/v2-Collections-dropAlias
 sidebar_label: "dropAlias()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation drops a specified collection alias. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -41,12 +41,17 @@ public void dropAlias(DropAliasReq request)
 
 ```java
 dropAlias(DropAliasReq.builder()
+    .databaseName(String databaseName)
     .alias(String alias)
     .build()
 )
 ```
 
 **BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    The name of the database to which the target alias belongs.
 
 - `alias(String alias)`
 
@@ -81,6 +86,8 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 2. Drop alias "test_alias"
 DropAliasReq dropAliasReq = DropAliasReq.builder()
+        .databaseName("my_database")
+        .collectionName("my_collection")
         .alias("test_alias")
         .build();
 client.dropAlias(dropAliasReq);

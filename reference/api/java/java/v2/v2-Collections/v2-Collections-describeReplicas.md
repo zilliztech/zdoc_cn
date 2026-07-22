@@ -1,12 +1,11 @@
 ---
 title: "describeReplicas() | Java | v2"
 slug: /java/java/v2-Collections-describeReplicas
-sidebar_key: java/v2-Collections-describeReplicas
 sidebar_label: "describeReplicas()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns information about the replicas of a specific collection. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -111,7 +111,7 @@ A DescribeReplicasResp that contains detailed information about the replicas in 
 
         The name of the resource group associated with the current replica.
 
-    - **numOutboundNode** (*Map\<String, Integer>*) -
+    - **numOutboundNode** (*Map&lt;String, Integer&gt;*) -
 
         The number of outbound query nodes.
 
@@ -138,7 +138,7 @@ ConnectConfig connectConfig = ConnectConfig.builder()
         
 MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
-// describe the replicas of a collection named \`test\`
+// describe the replicas of a collection named `test`
 DescribeReplicasReq describeReplicasReq = DescribeReplicasReq.builder()
         .collectionName("test")
         .build();

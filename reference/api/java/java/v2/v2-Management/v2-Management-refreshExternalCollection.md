@@ -1,12 +1,11 @@
 ---
 title: "refreshExternalCollection() | Java | v2"
 slug: /java/java/v2-Management-refreshExternalCollection
-sidebar_key: java/v2-Management-refreshExternalCollection
 sidebar_label: "refreshExternalCollection()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation triggers a refresh job that pulls data from an external source into a Milvus collection. Returns a job ID that can be passed to `getRefreshExternalCollectionProgress()` to track progress. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

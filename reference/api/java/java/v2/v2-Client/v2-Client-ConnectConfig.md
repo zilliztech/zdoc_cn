@@ -1,12 +1,11 @@
 ---
 title: "ConnectConfig | Java | v2"
 slug: /java/java/v2-Client-ConnectConfig
-sidebar_key: java/v2-Client-ConnectConfig
 sidebar_label: "ConnectConfig"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "A ConnectConfig builder holds the connection configuration used when creating a `MilvusClientV2` instance. Use the builder pattern to configure all connection parameters, including authentication, TLS, timeouts, and keepalive settings. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -155,7 +155,7 @@ ConnectConfig config = ConnectConfig.builder()
 
 // Connect to Zilliz Cloud with an API key
 // ConnectConfig config = ConnectConfig.builder()
-//     .uri("https://your-instance.zilliz.com.cn")
+//     .uri("https://your-instance.zilliz.com")
 //     .token("your-api-key")
 //     .build();
 

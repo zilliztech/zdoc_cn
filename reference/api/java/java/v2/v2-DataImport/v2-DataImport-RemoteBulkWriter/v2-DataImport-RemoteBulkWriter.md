@@ -1,12 +1,11 @@
 ---
 title: "RemoteBulkWriter | Java | v2"
 slug: /java/java/v2-DataImport-RemoteBulkWriter
-sidebar_key: java/v2-DataImport-RemoteBulkWriter
 sidebar_label: "RemoteBulkWriter"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A RemoteBulkWriter instance writes your raw data in a format that Milvus understands into an AWS-S3-compatible bucket. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -95,7 +95,7 @@ RemoteBulkWriterParam.newBuilder()
     <Admonition type="info" icon="📘" title="**How does BulkWriter segment my data?**">
 
     The way BulkWriter segments your data varies with the target file type.
-
+    
     If the generated file exceeds the specified segment size, BulkWriter creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>

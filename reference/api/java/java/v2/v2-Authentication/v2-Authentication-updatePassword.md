@@ -1,12 +1,11 @@
 ---
 title: "updatePassword() | Java | v2"
 slug: /java/java/v2-Authentication-updatePassword
-sidebar_key: java/v2-Authentication-updatePassword
 sidebar_label: "updatePassword()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation updates a user password and can also update the user description. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

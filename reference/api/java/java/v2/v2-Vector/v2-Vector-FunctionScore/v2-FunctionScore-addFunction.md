@@ -1,12 +1,11 @@
 ---
 title: "addFunction() | Java | v2"
 slug: /java/java/v2-FunctionScore-addFunction
-sidebar_key: java/v2-FunctionScore-addFunction
 sidebar_label: "addFunction()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a function to the `FunctionScore` instance. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -53,7 +53,7 @@ addFunction(
 
 **RETURN TYPE:**
 
-*B extends FunctionScore.FunctionScoreBuilder\<C, B>*
+*B extends FunctionScore.FunctionScoreBuilder&lt;C, B&gt;*
 
 **RETURNS**
 

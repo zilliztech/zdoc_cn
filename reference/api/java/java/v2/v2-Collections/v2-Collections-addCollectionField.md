@@ -1,12 +1,11 @@
 ---
 title: "addCollectionField() | Java | v2"
-slug: /java/java/v2-Collections-addCollectionField
-sidebar_key: java/v2-Collections-addCollectionField
+slug: /java/java/v2-Collections/v2-Collections-addCollectionField
 sidebar_label: "addCollectionField()"
+beta: false
 added_since: v2.6.x
 last_modified: v3.0.1
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a new scalar or vector field to an existing collection without recreating the collection. Existing rows do not have values for the new field, so added vector fields must be nullable. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

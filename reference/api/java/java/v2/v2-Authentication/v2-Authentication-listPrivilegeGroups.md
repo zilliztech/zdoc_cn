@@ -1,12 +1,11 @@
 ---
 title: "listPrivilegeGroups() | Java | v2"
 slug: /java/java/v2-Authentication-listPrivilegeGroups
-sidebar_key: java/v2-Authentication-listPrivilegeGroups
 sidebar_label: "listPrivilegeGroups()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all privilege groups. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

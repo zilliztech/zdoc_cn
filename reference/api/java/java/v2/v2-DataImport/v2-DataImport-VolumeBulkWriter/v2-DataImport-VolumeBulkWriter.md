@@ -1,12 +1,11 @@
 ---
 title: "VolumeBulkWriter | Java | v2"
 slug: /java/java/v2-DataImport-VolumeBulkWriter
-sidebar_key: java/v2-DataImport-VolumeBulkWriter
 sidebar_label: "VolumeBulkWriter"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A VolumeBulkWriter instance rewrites your raw data to a Zilliz Cloud Volume in a format that Milvus understands. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -93,7 +93,7 @@ VolumeBulkWriterParam.newBuilder()
     <Admonition type="info" icon="📘" title="**How does BulkWriter segment my data?**">
 
     The way BulkWriter segments your data varies with the target file type.
-
+    
     If the generated file exceeds the specified segment size, BulkWriter creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>
@@ -141,7 +141,7 @@ private static void volumeWriter(CreateCollectionReq.CollectionSchema collection
             .withRemotePath("/tmp/bulk_writer")
             .withFileType(BulkFileType.PARQUET)
             .withChunkSize(128 * 1024 * 1024)
-            .withCloudEndpoint("https://api.cloud.zilliz.com.cn")
+            .withCloudEndpoint("https://api.cloud.zilliz.com")
             .withApiKey("YOUR_API_KEY")
             .withVolumeName("my_volume")
             .build();

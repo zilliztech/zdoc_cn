@@ -1,12 +1,11 @@
 ---
 title: "describeAlias() | Java | v2"
 slug: /java/java/v2-Collections-describeAlias
-sidebar_key: java/v2-Collections-describeAlias
 sidebar_label: "describeAlias()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation displays the details of an alias. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -41,30 +41,31 @@ public DescribeAliasResp describeAlias(DescribeAliasReq request)
 
 ```java
 describeAlias(DescribeAliasReq.builder()
+    .databaseName(String databaseName)
     .alias(String alias)
     .build()
-)
+);
 ```
 
 **BUILDER METHODS:**
 
-- `alias(String alias)`
+- `databaseName(String databaseName)` -
 
-    The alias of a collection. 
+    The name of the database. Defaults to the current database if not specified.
 
-    Before this operation, ensure that the alias exists. Otherwise, exceptions will occur.
+- `alias(String alias)` -
 
-**RETURN TYPE:**
-
-*DescribeAliasResp*
+    The alias name.
 
 **RETURNS:**
+
+*DescribeAliasResp*
 
 A **DescribeAliasResp** object containing the alias details.
 
 **EXCEPTIONS:**
 
-- **MilvusClientExceptions**
+- **MilvusClientException**
 
     This exception will be raised when any error occurs during this operation.
 
@@ -86,8 +87,9 @@ MilvusClientV2 client = new MilvusClientV2(connectConfig);
 
 // 2. Describe alias
 DescribeAliasReq describeAliasReq = DescribeAliasReq.builder()
+        .databaseName("my_database")
+        .collectionName("my_collection")
         .alias("test_alias")
         .build();
 DescribeAliasResp describeAliasResp = client.describeAlias(describeAliasReq);
 ```
-

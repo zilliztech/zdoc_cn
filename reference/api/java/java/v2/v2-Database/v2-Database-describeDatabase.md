@@ -1,12 +1,11 @@
 ---
 title: "describeDatabase() | Java | v2"
 slug: /java/java/v2-Database-describeDatabase
-sidebar_key: java/v2-Database-describeDatabase
 sidebar_label: "describeDatabase()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets detailed information about a specific database. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

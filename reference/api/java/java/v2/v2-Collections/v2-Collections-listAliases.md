@@ -1,12 +1,11 @@
 ---
 title: "listAliases() | Java | v2"
 slug: /java/java/v2-Collections-listAliases
-sidebar_key: java/v2-Collections-listAliases
 sidebar_label: "listAliases()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all existing aliases for a specific collection. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -67,7 +67,7 @@ A **ListAliasResp** object containing a list of aliases for the specified collec
 
 **PARAMETERS:**
 
-- **alias** (*List&lt;String&gt;*)
+- **alias** (*List\<String\>*)
 
     A list of strings containing the aliases.
 

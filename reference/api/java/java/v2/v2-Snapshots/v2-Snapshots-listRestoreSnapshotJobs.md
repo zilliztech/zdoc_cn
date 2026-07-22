@@ -1,12 +1,11 @@
 ---
 title: "listRestoreSnapshotJobs() | Java | v2"
 slug: /java/java/v2-Snapshots-listRestoreSnapshotJobs
-sidebar_key: java/v2-Snapshots-listRestoreSnapshotJobs
 sidebar_label: "listRestoreSnapshotJobs()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists restore snapshot jobs, optionally scoped to a database and collection. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

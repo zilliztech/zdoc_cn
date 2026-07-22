@@ -1,12 +1,11 @@
 ---
 title: "useDatabase() | Java | v2"
 slug: /java/java/v2-Database-useDatabase
-sidebar_key: java/v2-Database-useDatabase
 sidebar_label: "useDatabase()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation changes the database in use. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

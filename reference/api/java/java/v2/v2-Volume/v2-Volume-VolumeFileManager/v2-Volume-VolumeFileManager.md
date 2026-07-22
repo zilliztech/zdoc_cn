@@ -1,12 +1,11 @@
 ---
 title: "VolumeFileManager | Java | v2"
 slug: /java/java/v2-Volume-VolumeFileManager
-sidebar_key: java/v2-Volume-VolumeFileManager
 sidebar_label: "VolumeFileManager"
+beta: false
 added_since: false
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A `VolumeFileManager` instance maintains a connection to a specific volume on Zilliz Cloud's Volume service. Before uploading data files to a volume, you need to initiate a `VolumeFileManager` instance. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -92,7 +92,7 @@ import io.milvus.bulkwriter.VolumeFileManager;
 import io.milvus.bulkwriter.VolumeFileManagerParam;
 
 VolumeFileManagerParam volumeFileManagerParam = VolumeFileManagerParam.newBuilder()
-    .withCloudEndpoint("https://api.cloud.zilliz.com.cn")
+    .withCloudEndpoint("https://api.cloud.zilliz.com")
     .withApiKey("YOUR_API_KEY")
     .withVolumeName("my_volume")
     .build();

@@ -1,12 +1,11 @@
 ---
 title: "createIndex() | Java | v2"
 slug: /java/java/v2-Management-createIndex
-sidebar_key: java/v2-Management-createIndex
 sidebar_label: "createIndex()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates an index for a specific collection. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

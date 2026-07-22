@@ -1,12 +1,11 @@
 ---
 title: "getRefreshExternalCollectionProgress() | Java | v2"
 slug: /java/java/v2-Management-getRefreshExternalCollectionProgress
-sidebar_key: java/v2-Management-getRefreshExternalCollectionProgress
 sidebar_label: "getRefreshExternalCollectionProgress()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns the progress and current state of a previously started external collection refresh job. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

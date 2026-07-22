@@ -1,12 +1,11 @@
 ---
 title: "addCollectionStructField() | Java | v2"
 slug: /java/java/v2-Collections-addCollectionStructField
-sidebar_key: java/v2-Collections-addCollectionStructField
 sidebar_label: "addCollectionStructField()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a struct field to an existing collection. Use it to extend a collection schema with a structured array field after the collection has already been created. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -37,7 +37,7 @@ This operation adds a struct field to an existing collection. Use it to extend a
 public void addCollectionStructField(AddCollectionStructFieldReq request)
 ```
 
-## Request Syntax{#request-syntax}
+## Request Syntax\{#request-syntax}
 
 ```java
 addCollectionStructField(AddCollectionStructFieldReq.builder()
@@ -96,7 +96,7 @@ addCollectionStructField(AddCollectionStructFieldReq.builder()
 
     This exception will be raised when validation fails or the server returns an error for this operation.
 
-## Example{#example}
+## Example\{#example}
 
 ```java
 MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
@@ -118,4 +118,4 @@ client.addCollectionStructField(AddCollectionStructFieldReq.builder()
     .build());
 ```
 
-<!-- category: Collections; action: CREATE; addedSince: v3.0.x -->
+{/* category: Collections; action: CREATE; addedSince: v3.0.x */}

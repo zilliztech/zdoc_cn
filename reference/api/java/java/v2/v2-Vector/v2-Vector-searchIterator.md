@@ -1,14 +1,13 @@
 ---
 title: "searchIterator() | Java | v2"
 slug: /java/java/v2-Vector-searchIterator
-sidebar_key: java/v2-Vector-searchIterator
 sidebar_label: "searchIterator()"
+beta: false
 added_since: v2.4.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
-description: "# searchIterator()\\{#searchiterator} | Java | v2"
+description: "(placeholder) | Java | v2"
 type: docx
 token: X7Ybdk6yRoVRPZxeHklct1i2n8c
 sidebar_position: 8
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

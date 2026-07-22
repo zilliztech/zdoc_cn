@@ -1,12 +1,11 @@
 ---
 title: "StructFieldSchema | Java | v2"
 slug: /java/java/v2-Collections-StructFieldSchema
-sidebar_key: java/v2-Collections-StructFieldSchema
 sidebar_label: "StructFieldSchema"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A StructFieldSchema instance represents the schema of the Struct elements in an Array of Structs field. A schema sketches the structure of its Struct elements. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

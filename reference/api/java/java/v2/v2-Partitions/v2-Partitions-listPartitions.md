@@ -1,12 +1,11 @@
 ---
 title: "listPartitions() | Java | v2"
 slug: /java/java/v2-Partitions-listPartitions
-sidebar_key: java/v2-Partitions-listPartitions
 sidebar_label: "listPartitions()"
+beta: false
 added_since: v2.3.x
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists the partitions in a specified collection. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -59,7 +59,7 @@ listPartitions(ListPartitionsReq.builder()
 
 **RETURN TYPE:**
 
-*List&lt;String&gt;*
+*List\<String\>*
 
 **RETURNS:**
 

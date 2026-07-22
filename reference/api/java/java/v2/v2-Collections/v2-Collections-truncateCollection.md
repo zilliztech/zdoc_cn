@@ -1,12 +1,11 @@
 ---
 title: "truncateCollection() | Java | v2"
 slug: /java/java/v2-Collections-truncateCollection
-sidebar_key: java/v2-Collections-truncateCollection
 sidebar_label: "truncateCollection()"
+beta: false
 added_since: v2.6.16
 last_modified: v2.6.16
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation removes all data from a collection while preserving the collection schema, indexes, and aliases. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

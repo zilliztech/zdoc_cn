@@ -1,12 +1,11 @@
 ---
 title: "createSnapshot() | Java | v2"
 slug: /java/java/v2-Snapshots-createSnapshot
-sidebar_key: java/v2-Snapshots-createSnapshot
 sidebar_label: "createSnapshot()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a snapshot for a collection. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

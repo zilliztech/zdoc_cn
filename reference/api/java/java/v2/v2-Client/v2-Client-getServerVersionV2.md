@@ -1,12 +1,11 @@
 ---
 title: "getServerVersionV2() | Java | v2"
 slug: /java/java/v2-Client-getServerVersionV2
-sidebar_key: java/v2-Client-getServerVersionV2
 sidebar_label: "getServerVersionV2()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets server version information. Use `detail(true)` when you need build time, Git commit, Go version, and deploy mode in addition to the version string. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -37,7 +37,7 @@ This operation gets server version information. Use `detail(true)` when you need
 public GetServerVersionResp getServerVersionV2(GetServerVersionReq request)
 ```
 
-## Request Syntax{#request-syntax}
+## Request Syntax\{#request-syntax}
 
 ```java
 getServerVersionV2(GetServerVersionReq.builder()
@@ -61,7 +61,7 @@ getServerVersionV2(GetServerVersionReq.builder()
 
     This exception will be raised when validation fails or the server returns an error for this operation.
 
-## Example{#example}
+## Example\{#example}
 
 ```java
 MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
@@ -76,4 +76,4 @@ System.out.println(version.getVersion());
 System.out.println(version.getGitCommit());
 ```
 
-<!-- category: Client; action: CREATE; addedSince: v3.0.x -->
+{/* category: Client; action: CREATE; addedSince: v3.0.x */}

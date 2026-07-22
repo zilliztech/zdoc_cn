@@ -1,12 +1,11 @@
 ---
 title: "listUsers() | Java | v2"
 slug: /java/java/v2-Authentication-listUsers
-sidebar_key: java/v2-Authentication-listUsers
 sidebar_label: "listUsers()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists the names of all existing users. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -45,7 +45,7 @@ listUsers();
 
 **RETURN TYPE:**
 
-*List&lt;String&gt;*
+*List\<String\>*
 
 **RETURNS:**
 

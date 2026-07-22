@@ -1,12 +1,11 @@
 ---
 title: "getRestoreSnapshotState() | Java | v2"
 slug: /java/java/v2-Snapshots-getRestoreSnapshotState
-sidebar_key: java/v2-Snapshots-getRestoreSnapshotState
 sidebar_label: "getRestoreSnapshotState()"
+beta: false
 added_since: v3.0.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets the state and progress of a restore snapshot job. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

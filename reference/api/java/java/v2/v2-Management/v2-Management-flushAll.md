@@ -1,12 +1,11 @@
 ---
 title: "flushAll() | Java | v2"
 slug: /java/java/v2-Management-flushAll
-sidebar_key: java/v2-Management-flushAll
 sidebar_label: "flushAll()"
+beta: false
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation flushes insert buffers for all collections in a database. Use it before backup, verification, or workflows that require all recent writes to be persisted. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -37,7 +37,7 @@ This operation flushes insert buffers for all collections in a database. Use it 
 public FlushAllResp flushAll(FlushAllReq request)
 ```
 
-## Request Syntax{#request-syntax}
+## Request Syntax\{#request-syntax}
 
 ```java
 flushAll(FlushAllReq.builder()
@@ -66,7 +66,7 @@ flushAll(FlushAllReq.builder()
 
     This exception will be raised when validation fails or the server returns an error for this operation.
 
-## Example{#example}
+## Example\{#example}
 
 ```java
 MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
@@ -81,4 +81,4 @@ FlushAllResp resp = client.flushAll(FlushAllReq.builder()
 System.out.println(resp.getFlushAllTs());
 ```
 
-<!-- category: Management; action: CREATE; addedSince: v3.0.x -->
+{/* category: Management; action: CREATE; addedSince: v3.0.x */}

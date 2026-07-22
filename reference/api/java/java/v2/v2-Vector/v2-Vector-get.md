@@ -1,12 +1,11 @@
 ---
 title: "get() | Java | v2"
 slug: /java/java/v2-Vector-get
-sidebar_key: java/v2-Vector-get
 sidebar_label: "get()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation gets specific entities by their IDs. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -87,11 +87,11 @@ A **GetResp** object representing one or more queried entities.
 
 **PARAMETERS:**
 
-- **getResults** (*List&lt;QueryResp.QueryResult&gt;*)
+- **getResults** (*List\\\&lt;QueryResp.QueryResult\\\&gt;*)
 
     A list of **QueryResp.QueryResult** objects.
 
-- **fields** (*Map&lt;String,Object&gt;*)
+- **fields** (*Map\\\&lt;String,Object\\\&gt;*)
 
     A map that contains key-value pairs of field names and their values.
 

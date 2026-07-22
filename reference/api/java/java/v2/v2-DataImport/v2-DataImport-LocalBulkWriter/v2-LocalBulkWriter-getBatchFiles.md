@@ -1,12 +1,11 @@
 ---
 title: "getBatchFiles() | Java | v2"
 slug: /java/java/v2-LocalBulkWriter-getBatchFiles
-sidebar_key: java/v2-LocalBulkWriter-getBatchFiles
 sidebar_label: "getBatchFiles()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns a list of files passed to the current LocalBulkWriter instance. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

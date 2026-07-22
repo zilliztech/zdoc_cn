@@ -1,12 +1,11 @@
 ---
 title: "EmbeddingList | Java | v2"
 slug: /java/java/v2-Collections-EmbeddingList
-sidebar_key: java/v2-Collections-EmbeddingList
 sidebar_label: "EmbeddingList"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "An EmbeddingList instance represents a list of vector embeddings. You can use an EmbeddingList instance to build the query vectors in a search against a vector field in an Array of Structs field. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';

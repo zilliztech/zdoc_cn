@@ -1,12 +1,11 @@
 ---
 title: "MilvusClientV2 | Java | v2"
 slug: /java/java/v2-Client-MilvusClientV2
-sidebar_key: java/v2-Client-MilvusClientV2
 sidebar_label: "MilvusClientV2"
+beta: false
 added_since: v2.3.x
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "A MilvusClientV2 instance represents a Java client that connects to a specific Zilliz Cloud cluster. | Java | v2"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - javaV230
 displayed_sidebar: javaSidebar
 
+displayed_sidbar: javaSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -88,7 +88,7 @@ ConnectConfig.builder()
     The URI of the Zilliz Cloud cluster. For example:
 
     ```plaintext
-    https://inxx-xxxxxxxxxxxxxxxxx.ali-cn-hangzhou.zillizcloud.com:19540
+    https://inxx-xxxxxxxxxxxxxxxxx.aws-us-west-2.vectordb-uat3.zillizcloud.com:19540
     ```
 
 - `token(String token)`
@@ -220,7 +220,7 @@ import io.milvus.v2.client.ConnectConfig;
 import io.milvus.v2.client.MilvusClientV2;
 
 ConnectConfig connectConfig = ConnectConfig.builder()
-        .uri("https://in01-******.ali-cn-hangzhou.zillizcloud.com:19531")
+        .uri("https://in01-******.aws-us-west-2.vectordb.zillizcloud.com:19531")
         .token("user:password") // replace this with your token
         .build();
         
