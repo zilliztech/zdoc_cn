@@ -1,12 +1,11 @@
 ---
 title: "release_partitions() | Python | MilvusClient"
 slug: /python/python/Partitions-release_partitions
-sidebar_key: python/Partitions-release_partitions
 sidebar_label: "release_partitions()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation releases the partitions in a specified collection from memory. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -96,7 +96,7 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 

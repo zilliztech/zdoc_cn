@@ -1,12 +1,11 @@
 ---
 title: "load_balance() | Python | ORM"
 slug: /python/python/utility-load_balance
-sidebar_key: python/utility-load_balance
 sidebar_label: "load_balance()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation sets up a load-balancing group between two query nodes for a specific collection. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

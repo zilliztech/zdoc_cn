@@ -1,17 +1,16 @@
 ---
 title: "optimize() | Python | MilvusClient"
 slug: /python/python/Management-optimize
-sidebar_key: python/Management-optimize
 sidebar_label: "optimize()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "- isl0 (bool) - | Python | MilvusClient"
 type: docx
 token: MhRidjHwYorxaexS8WXcaxWQnjd
-sidebar_position: 24
+sidebar_position: 26
 keywords: 
   - open source vector database
   - Vector index
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -45,7 +45,7 @@ import Admonition from '@theme/Admonition';
 
 This operation compacts small segments in a collection and returns a compaction job ID that you can poll for progress.
 
-<Admonition type="danger" icon="🚧" title="Warning">
+<Admonition type="warning" icon="🚧" title="Warning">
 
 This is a Preview version feature for non-production use only (Benchmark, POC).
 

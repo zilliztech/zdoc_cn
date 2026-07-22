@@ -1,12 +1,11 @@
 ---
 title: "drop_collection_function() | Python | MilvusClient"
 slug: /python/python/Collections-drop_collection_function
-sidebar_key: python/Collections-drop_collection_function
 sidebar_label: "drop_collection_function()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation drops an existing function from the collection. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

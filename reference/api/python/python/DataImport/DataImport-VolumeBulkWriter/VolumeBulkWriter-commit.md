@@ -1,12 +1,11 @@
 ---
 title: "commit() | Python"
 slug: /python/python/VolumeBulkWriter-commit
-sidebar_key: python/VolumeBulkWriter-commit
 sidebar_label: "commit()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation persists the buffered data to local files and uploads them to the remote volume configured in the VolumeBulkWriter instance. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

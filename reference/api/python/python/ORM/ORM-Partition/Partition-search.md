@@ -1,12 +1,11 @@
 ---
 title: "search() | Python | ORM"
 slug: /python/python/Partition-search
-sidebar_key: python/Partition-search
 sidebar_label: "search()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: v3.0.x
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -147,7 +147,7 @@ A **SearchResult** object that contains a list of **Hits** objects.
     <Admonition type="info" icon="📘" title="Notes">
 
     A **SearchResult** object contains a list of **Hits** objects, each corresponding to a query vector in the search request. 
-
+    
     A **Hits** object contains a list of **Hit** objects, each corresponding to an entity hit by the search.
 
     </Admonition>

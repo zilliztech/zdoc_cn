@@ -1,12 +1,11 @@
 ---
 title: "get_refresh_external_collection_progress() | Python | MilvusClient"
 slug: /python/python/Collections-get_refresh_external_collection_progress
-sidebar_key: python/Collections-get_refresh_external_collection_progress
 sidebar_label: "get_refresh_external_collection_progress()"
+beta: PUBLIC
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PUBLIC
 notebook: false
 description: "This operation returns the progress of a specified external collection refresh job. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,22 +1,21 @@
 ---
 title: "verify() | Python | MilvusClient"
-slug: /python/python/CollectionSchema-verify_1
-sidebar_key: python/CollectionSchema-verify_1
+slug: /python/python/CollectionSchema-verify
 sidebar_label: "verify()"
-added_since: v2.3.x
+beta: NEAR DEPRECATE
+added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation performs final validation checks on the CollectionSchema to detect any obvious problems. | Python | MilvusClient"
 type: docx
 token: TfV3dOYPyoKVSMxShrTc9SZ2nqh
 sidebar_position: 5
 keywords: 
-  - Multimodal search
-  - vector search algorithms
-  - Question answering system
-  - llm-as-a-judge
+  - AI Agent
+  - semantic search
+  - Anomaly Detection
+  - sentence transformers
   - zilliz
   - zilliz cloud
   - cloud
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "get_replicas() | Python | ORM"
 slug: /python/python/Partition-get_replicas
-sidebar_key: python/Partition-get_replicas
 sidebar_label: "get_replicas()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation gets information about the current loaded replica. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -81,7 +81,9 @@ A **Replica** object that contains the following fields:
 
         - **shard_nodes** (*set*)
 
-<Admonition type="info" icon="📘" title="What is a replica?">
+<Admonition type="info" icon="📘" title="Note">
+
+What is a replica?
 
 With replicas, Zilliz Cloud can load the same segments on multiple query nodes. If one query node has failed or is busy with a current search request when another arrives, the system can send new requests to an idle query node that has a replication of the same segment. 
 

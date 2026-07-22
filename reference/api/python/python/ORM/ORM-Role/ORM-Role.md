@@ -1,12 +1,11 @@
 ---
 title: "Role | Python | ORM"
 slug: /python/python/ORM-Role
-sidebar_key: python/ORM-Role
 sidebar_label: "Role"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "A Role instance represents a role with specific privileges to access your . | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "list_databases() | Python | MilvusClient"
 slug: /python/python/Database-list_databases
-sidebar_key: python/Database-list_databases
 sidebar_label: "list_databases()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all existing databases. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

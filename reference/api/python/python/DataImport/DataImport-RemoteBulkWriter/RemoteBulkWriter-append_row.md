@@ -1,12 +1,11 @@
 ---
 title: "append_row() | Python"
 slug: /python/python/RemoteBulkWriter-append_row
-sidebar_key: python/RemoteBulkWriter-append_row
 sidebar_label: "append_row()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation appends records to the writer. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "BulkFileType | Python"
 slug: /python/python/DataImport-BulkFileType
-sidebar_key: python/DataImport-BulkFileType
 sidebar_label: "BulkFileType"
+beta: false
 added_since: Inherit
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

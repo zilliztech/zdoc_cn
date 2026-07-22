@@ -1,22 +1,21 @@
 ---
 title: "add_field() | Python | MilvusClient"
-slug: /python/python/CollectionSchema-add_field_1
-sidebar_key: python/CollectionSchema-add_field_1
+slug: /python/python/CollectionSchema-add_field
 sidebar_label: "add_field()"
-added_since: v2.3.x
-last_modified: v3.0.x
+beta: NEAR DEPRECATE
+added_since: Inherit
+last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a field to the schema of a collection. | Python | MilvusClient"
 type: docx
 token: N3Fbd0ZZVoFo8DxJ9r8cNgcCnOd
 sidebar_position: 1
 keywords: 
-  - image similarity search
-  - Context Window
-  - Natural language search
-  - Similarity Search
+  - Audio similarity search
+  - Elastic vector database
+  - Pinecone vs Milvus
+  - Chroma vs Milvus
   - zilliz
   - zilliz cloud
   - cloud
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -98,7 +98,7 @@ add_field(
     <Admonition type="info" icon="📘" title="Notes">
 
     - Each collection has only one primary field.
-
+    
     - A primary field should be of either the **DataType.INT64** type or the **DataType.VARCHAR** type.
 
     </Admonition>
@@ -133,13 +133,15 @@ add_field(
 
     This does not apply to external collections.
 
-    <Admonition type="info" icon="📘" title="What is the partition key?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.
-
-    When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.
-
-    For details, refer to [Use Partition Key](/docs/use-partition-key) and [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md).
+    What is the partition key?
+    
+        To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.
+    
+        When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.
+    
+        For details, refer to [Use Partition Key](/docs/use-partition-key) and [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md).
 
     </Admonition>
 

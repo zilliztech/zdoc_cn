@@ -1,12 +1,11 @@
 ---
 title: "add_connection() | Python | ORM"
 slug: /python/python/Connections-add_connection
-sidebar_key: python/Connections-add_connection
 sidebar_label: "add_connection()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation adds connections to multiple Zilliz Cloud clusters for different purposes in a batch. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -91,7 +91,9 @@ add_connection(
 
         - A pair of username and password used to access the target cluster, joined by a colon (:). For example, you can set this to `username:p@ssw0rd`.
 
-<Admonition type="info" icon="📘" title="How can I get the cluster endpoint and token?">
+<Admonition type="info" icon="📘" title="Note">
+
+How can I get the cluster endpoint and token?
 
 - **Cluster endpoint**
 
@@ -130,9 +132,9 @@ None
 ```python
 from pymilvus import connections
 
-SERVERLESS_ENDPOINT = "https://in03-************.api.ali-cn-hangzhou.zillizcloud.com"
+SERVERLESS_ENDPOINT = "https://in03-************.api.gcp-us-west1.zillizcloud.com"
 SERVERLESS_TOKEN = "db_admin:************"
-DEDICATED_ENDPOINT = "https://in03-************.api.ali-cn-hangzhou.zillizcloud.com:19541"
+DEDICATED_ENDPOINT = "https://in03-************.api.gcp-us-west1.zillizcloud.com:19541"
 DEDICATED_USER = "db_admin"
 DEDICATED_PASS = "*****************"
 

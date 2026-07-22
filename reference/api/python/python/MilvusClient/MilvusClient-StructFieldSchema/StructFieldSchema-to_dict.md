@@ -1,12 +1,11 @@
 ---
 title: "to_dict() | Python | MilvusClient"
 slug: /python/python/StructFieldSchema-to_dict
-sidebar_key: python/StructFieldSchema-to_dict
 sidebar_label: "to_dict()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation converts a StructFieldSchema object to a dictionary representation. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

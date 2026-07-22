@@ -1,12 +1,11 @@
 ---
 title: "load() | Python | ORM"
 slug: /python/python/Collection-load
-sidebar_key: python/Collection-load
 sidebar_label: "load()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation loads the data of the current collection into memory. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -73,7 +73,7 @@ This operation is non-blocking. You can call `utility.wait_for_loading_complete(
 
     This exception is to be raised when any error occurs during this operation.
 
-<Admonition type="danger" icon="🚧" title="Warning">
+<Admonition type="warning" icon="🚧" title="Warning">
 
 If you try to load a collection that is not indexed, you will receive a **MilvusException**.
 

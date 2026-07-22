@@ -1,12 +1,11 @@
 ---
 title: "AzureConnectParam | Python"
 slug: /python/python/RemoteBulkWriter-AzureConnectParam
-sidebar_key: python/RemoteBulkWriter-AzureConnectParam
 sidebar_label: "AzureConnectParam"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "An AzureConnectParam instance sets connection parameters for a RemoteBulkWriter instance. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

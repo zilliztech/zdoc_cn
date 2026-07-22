@@ -1,12 +1,11 @@
 ---
 title: "delete_user() | Python | ORM"
 slug: /python/python/utility-delete_user
-sidebar_key: python/utility-delete_user
 sidebar_label: "delete_user()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes an existing user. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

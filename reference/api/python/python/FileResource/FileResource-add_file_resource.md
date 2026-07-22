@@ -1,12 +1,11 @@
 ---
 title: "add_file_resource() | Python"
 slug: /python/python/FileResource-add_file_resource
-sidebar_key: python/FileResource-add_file_resource
 sidebar_label: "add_file_resource()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "Registers a file that has already been uploaded to the object store configured for the Milvus cluster as a named file resource. Once registered, the resource can be referenced from analyzer parameters that accept an external dictionary — such as `extradictfile` on the `jieba` tokenizer, `stopwordsfile` on the `stop` filter, `wordlistfile` on the `decompounder` filter, and `synonymsfile` on the `synonym` filter — using `{\"type\" \"remote\", \"resourcename\": \"\", \"filename\": \"\"}`. The target file must exist in the object store at the time of this call; the server validates `path` synchronously and fails the request if it does not resolve. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

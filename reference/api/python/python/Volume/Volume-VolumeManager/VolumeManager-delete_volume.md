@@ -1,12 +1,11 @@
 ---
 title: "delete_volume() | Python"
 slug: /python/python/VolumeManager-delete_volume
-sidebar_key: python/VolumeManager-delete_volume
 sidebar_label: "delete_volume()"
+beta: false
 added_since: false
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation deletes a volume. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -63,7 +63,7 @@ None
 from pymilvus.bulk_writer.volume_manager import VolumeManager
 
 volume_manager = VolumeManager(
-    cloud_endpoint="https://api.cloud.zilliz.com.cn",
+    cloud_endpoint="https://api.cloud.zilliz.com",
     api_key="YOUR_API_KEY"
 )
 

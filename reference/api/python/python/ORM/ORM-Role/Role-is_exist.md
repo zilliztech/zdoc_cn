@@ -1,12 +1,11 @@
 ---
 title: "is_exist() | Python | ORM"
 slug: /python/python/Role-is_exist
-sidebar_key: python/Role-is_exist
 sidebar_label: "is_exist()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation checks whether the current role exists. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "create_partition() | Python | ORM"
 slug: /python/python/Collection-create_partition
-sidebar_key: python/Collection-create_partition
 sidebar_label: "create_partition()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a partition in the target collection. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

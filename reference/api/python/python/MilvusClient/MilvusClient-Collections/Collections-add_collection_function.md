@@ -1,12 +1,11 @@
 ---
 title: "add_collection_function() | Python | MilvusClient"
 slug: /python/python/Collections-add_collection_function
-sidebar_key: python/Collections-add_collection_function
 sidebar_label: "add_collection_function()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a new function to the collection. Functions allow you to define custom processing logic such as BM25 scoring or embedding generation. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

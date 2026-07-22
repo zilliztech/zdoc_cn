@@ -1,12 +1,11 @@
 ---
 title: "rename_collection() | Python | ORM"
 slug: /python/python/utility-rename_collection
-sidebar_key: python/utility-rename_collection
 sidebar_label: "rename_collection()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation renames an existing collection and optionally moves the collection to a new database. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

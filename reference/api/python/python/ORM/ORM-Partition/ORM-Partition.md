@@ -1,12 +1,11 @@
 ---
 title: "Partition | Python | ORM"
 slug: /python/python/ORM-Partition
-sidebar_key: python/ORM-Partition
 sidebar_label: "Partition"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "A Partition instance represents a partition within a collection. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -65,11 +65,13 @@ Partition(
 
     You can either reference a **[Collection](./ORM-Collection)** object or its name.
 
-    <Admonition type="info" icon="📘" title="What is a collection?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    A collection collects data in a two-dimensional table with a fixed number of columns and a variable number of rows. In the table, each column corresponds to a field, and each row represents an entity.
-
-    A collection can support up to 64 partitions.
+    What is a collection?
+    
+        A collection collects data in a two-dimensional table with a fixed number of columns and a variable number of rows. In the table, each column corresponds to a field, and each row represents an entity.
+    
+        A collection can support up to 64 partitions.
 
     </Admonition>
 

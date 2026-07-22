@@ -1,17 +1,16 @@
 ---
 title: "get_compaction_plans() | Python | MilvusClient"
 slug: /python/python/Management-get_compaction_plans
-sidebar_key: python/Management-get_compaction_plans
 sidebar_label: "get_compaction_plans()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns the compaction plans for a specific compaction job, including the merge plans showing which segments will be combined. | Python | MilvusClient"
 type: docx
 token: Qa8ZdRkOKocH60xujcLcOxuBnkh
-sidebar_position: 17
+sidebar_position: 18
 keywords: 
   - HNSW
   - What is unstructured data
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

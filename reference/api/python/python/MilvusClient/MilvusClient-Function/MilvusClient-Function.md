@@ -1,12 +1,11 @@
 ---
 title: "Function | Python | MilvusClient"
 slug: /python/python/MilvusClient-Function
-sidebar_key: python/MilvusClient-Function
 sidebar_label: "Function"
+beta: false
 added_since: v2.5.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "A `Function` instance for generating vector embeddings from user-provided raw data or applying a reranking strategy to the search results in Milvus. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -256,7 +256,6 @@ Function(
                 "truncation": True,                     # Optional: enable input truncation (default: True)
                 "credential": "your-voyage-api-key"   # Optional: if not set, uses VOYAGE_API_KEY env var
             }
-            
             ```
 
             **SiliconFlow Provider**:

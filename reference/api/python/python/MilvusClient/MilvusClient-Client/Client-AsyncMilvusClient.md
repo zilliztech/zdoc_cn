@@ -1,12 +1,11 @@
 ---
 title: "AsyncMilvusClient | Python | MilvusClient"
 slug: /python/python/Client-AsyncMilvusClient
-sidebar_key: python/Client-AsyncMilvusClient
 sidebar_label: "AsyncMilvusClient"
+beta: false
 added_since: v2.5.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "An AsyncMilvusClient instance represents an asynchronous Python client that connects to a specific Zilliz Cloud cluster. It provides the same parameter sets and behaviors as MilvusClient, and the only difference lies in the way you call them. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -128,7 +128,7 @@ loop = asyncio.get_event_loop()
 
 # Authentication enabled with a cluster user
 client = AsyncMilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password", # replace this with your token,
     db_name="default"
 )

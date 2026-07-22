@@ -1,12 +1,11 @@
 ---
 title: "create_alias() | Python | MilvusClient"
 slug: /python/python/Collections-create_alias
-sidebar_key: python/Collections-create_alias
 sidebar_label: "create_alias()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates an alias for an existing collection. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -77,25 +77,27 @@ create_alias(
 
     The alias of the collection. Before this operation, ensure that the alias does not already exist. If it does, exceptions will occur.
 
-    <Admonition type="info" icon="📘" title="What is a collection alias?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
-
-    On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
-
-    Below is an example of reassigning the alias of one collection to another:
-
-    Suppose there are two collections: `collection_1` and `collection_2`. There is also a collection alias named `bob`, which was originally assigned to `collection_1`:
-
-    - `collection_1`'s alias = ["bob"]
-
-    - `collection_2`'s alias = []
-
-    After calling `alter_alias("collection_2", "bob")`:
-
-    - `collection_1`'s alias = []
-
-    - `collection_2`'s alias = ["bob"]
+    What is a collection alias?
+    
+        A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
+    
+        On Zilliz Cloud, a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
+    
+        Below is an example of reassigning the alias of one collection to another:
+    
+        Suppose there are two collections: `collection_1` and `collection_2`. There is also a collection alias named `bob`, which was originally assigned to `collection_1`:
+    
+        - `collection_1`'s alias = ["bob"]
+    
+        - `collection_2`'s alias = []
+    
+        After calling `alter_alias("collection_2", "bob")`:
+    
+        - `collection_1`'s alias = []
+    
+        - `collection_2`'s alias = ["bob"]
 
     </Admonition>
 
@@ -128,7 +130,7 @@ from pymilvus import MilvusClient
 
 # 1. Create a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 

@@ -1,12 +1,11 @@
 ---
 title: "list_restore_snapshot_jobs() | Python | MilvusClient"
 slug: /python/python/Snapshot-list_restore_snapshot_jobs
-sidebar_key: python/Snapshot-list_restore_snapshot_jobs
 sidebar_label: "list_restore_snapshot_jobs()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "This operation lists all restore snapshot jobs. Optionally filter by collection name to see restore jobs targeting a specific collection. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

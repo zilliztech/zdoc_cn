@@ -1,12 +1,11 @@
 ---
 title: "remove_file_resource() | Python"
 slug: /python/python/FileResource-remove_file_resource
-sidebar_key: python/FileResource-remove_file_resource
 sidebar_label: "remove_file_resource()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "Removes a file resource previously registered via `addfileresource()` from the Milvus cluster. The call is idempotent removing a name that is not currently registered completes successfully without raising an exception. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

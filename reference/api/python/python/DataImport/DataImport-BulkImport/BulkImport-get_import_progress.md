@@ -1,14 +1,13 @@
 ---
 title: "get_import_progress() | Python"
 slug: /python/python/BulkImport-get_import_progress
-sidebar_key: python/BulkImport-get_import_progress
 sidebar_label: "get_import_progress()"
+beta: false
 added_since: Inherit
 last_modified: v2.6.x
 deprecate_since: false
-beta: false
 notebook: false
-description: "- This function returns the current status of a bulk import job. | Python"
+description: "Adds projectid, regionid, dbname, and DB-Name header behavior. | Python"
 type: docx
 token: CNQIdgQvXoux0KxpXHxca8EMnjg
 sidebar_position: 2
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -31,97 +31,119 @@ import Admonition from '@theme/Admonition';
 
 # get_import_progress()
 
-- This function returns the current status of a bulk import job.
+Adds project_id, region_id, db_name, and DB-Name header behavior.
 
-    Region ID for project-database import jobs.
+## Request Syntax\{#request-syntax}
 
-Request Syntax
-
-## get_import_progress(
+```python
+# include-start milvus
+get_import_progress(
+    url: str,
+    job_id: str,
+    api_key: str = "",
+    db_name: str = "",
+    verify: Optional[Union[bool, str]] = True,
+    cert: Optional[Union[str, tuple]] = None,
+    **kwargs,
+) -> requests.Response
+# include-end
+# include-start zilliz
+get_import_progress(
     url: str,
     job_id: str,
     cluster_id: str = "",
+    project_id: str = "",
+    region_id: str = "",
     api_key: str = "",
-    verify: bool | str = True,
-    cert: str | tuple | None = None,
+    db_name: str = "",
+    verify: Optional[Union[bool, str]] = True,
+    cert: Optional[Union[str, tuple]] = None,
     **kwargs,
-)\{#getimportprogress-url-str-jobid-str-clusterid-str-apikey-str-verify-bool}
-
-```python
-PARAMETERS:
+) -> requests.Response
+# include-end
 ```
 
-**url** (*str*) -
+**PARAMETERS:**
+
+- **url** (*str*) -
+**[REQUIRED]**
+
+    The Zilliz Cloud API server endpoint, which is `https://api.cloud.zilliz.com`.
 
 - **job_id** (*str*) -
-
-    **[REQUIRED]**
-
-    Server endpoint for bulk import APIs.
+**[REQUIRED]**
+The ID of the import job to inspect.
 
 - **cluster_id** (*str*) -
+Default: `""`
+The ID of the target Zilliz Cloud cluster.
 
-    **[REQUIRED]**
+- **project_id** (*str*) -
+Default: `""`
+The ID of the Zilliz Cloud project containing the target project database.
 
-    Import job ID returned by `bulk_import()`.
+- **region_id** (*str*) -
+Default: `""`
+The ID of the Zilliz Cloud region containing the target project database.
 
 - **api_key** (*str*) -
+Default: `""`
 
-    Cloud cluster ID.
+    The Zilliz Cloud API key used to authenticate the request.
 
-- **verify** (*bool | str*) -
+- **db_name** (*str*) -
+Default: `""`
+The database name sent in the `DB-Name` header for role-based access control.
 
-    API key for cloud authentication.
+- **verify** (*Optional[Union[bool, str]]*) -
+Default: `True`
+The TLS verification setting. Use `True` to verify with the default trust store or provide a CA certificate path.
 
-- **cert** (*str | tuple*) -
+- **cert** (*Optional[Union[str, tuple]]*) -
+Default: `None`
+The client certificate path, or a certificate and private-key pair for mutual TLS.
 
-    Database name for request routing.
+- **kwargs** (*Any*) -
+The additional options forwarded to the HTTP request.
 
-- **RETURN TYPE:**
+**RETURN TYPE:**
+
 *requests.Response*
 
-    TLS verification setting.
+**RETURNS:**
 
-- Returns the current import-job progress payload.
-
-    Client certificate path or `(cert, key)` tuple.
-
-- Examples
-
-    Additional HTTP request options.
-
-from pymilvus.bulk_writer import get_import_progress
-
-resp = get_import_progress(
-    url="https://api.cloud.zilliz.com",
-    api_key="YOUR_API_KEY",
-    cluster_id="in0x-xxx",
-    job_id="448996221577371648",
-)
-
-print(resp.json())
-
-Returns the current import-job progress payload.
-
-HTTP response with import job progress details.
+HTTP response containing the current bulk-import job state and progress.
 
 **EXCEPTIONS:**
 
 - **MilvusException**
-
-    Raised when progress lookup fails.
+Raised when the server rejects the request or the RPC fails. Inspect the server error message for exact failure details.
 
 ## Examples\{#examples}
 
+The example retrieves import progress from Zilliz Cloud.
+
 ```python
+# include-start milvus
 from pymilvus.bulk_writer import get_import_progress
 
-resp = get_import_progress(
-    url="https://api.cloud.zilliz.com.cn",
-    api_key="YOUR_API_KEY",
-    cluster_id="in0x-xxx",
-    job_id="448996221577371648",
+response = get_import_progress(
+    url="YOUR_CLUSTER_ENDPOINT",
+    api_key="YOUR_CLUSTER_TOKEN",
+    job_id="job-123",
 )
+print(response.json())
+# include-end
+# include-start zilliz
+from pymilvus.bulk_writer import get_import_progress
 
-print(resp.json())
+response = get_import_progress(
+    url="https://api.cloud.zilliz.com",
+    api_key="YOUR_API_KEY",
+    project_id="proj-xxxx",
+    region_id="aws-us-west-2",
+    job_id="job-123",
+)
+print(response.json())
+# include-end
 ```

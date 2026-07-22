@@ -1,14 +1,13 @@
 ---
 title: "describe_user() | Python | MilvusClient"
 slug: /python/python/Authentication-describe_user
-sidebar_key: python/Authentication-describe_user
 sidebar_label: "describe_user()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
-description: "This operation describes a specific user. | Python | MilvusClient"
+description: "Returns the `roles` and `description` associated with a user account. Returns an empty dictionary when the user does not exist. | Python | MilvusClient"
 type: docx
 token: TwTnduPOioywHDx8hPQc80tRnKg
 sidebar_position: 6
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -31,30 +31,30 @@ import Admonition from '@theme/Admonition';
 
 # describe_user()
 
-This operation describes a specific user.
+Returns the `roles` and `description` associated with a user account. Returns an empty dictionary when the user does not exist.
 
-## Request syntax\{#request-syntax}
+## Request Syntax\{#request-syntax}
 
 ```python
 describe_user(
     user_name: str,
-    timeout: Optional[float] = None
-) -> Dict
+    timeout: Optional[float] = None,
+    **kwargs
+) -> dict
 ```
 
 **PARAMETERS:**
 
 - **user_name** (*str*) -
+**[REQUIRED]**
+Name of the user account to describe.
 
-    **[REQUIRED]**
+- **timeout** (*Optional[float]*) -
+Default: `None`
+Maximum time, in seconds, to wait for the RPC to complete.
 
-    The name of the user to describe.
-
-- **timeout** (*float* | *None*)  
-
-    The timeout duration for this operation. 
-
-    Setting this to **None** indicates that this operation timeouts when any response arrives or any error occurs.
+- **kwargs** (*Any*) -
+Additional request context options.
 
 **RETURN TYPE:**
 
@@ -62,63 +62,33 @@ describe_user(
 
 **RETURNS:**
 
-A dictionary containing detailed information about the specified users.
-
-```python
-# {
-#       'user_name': str, 
-#       'roles': tuple
-# }
-```
+Dictionary with `user_name`, `roles`, and `description`. Returns an empty dictionary when the user is not found.
 
 - **user_name** (*str*) -
+Name of the described user account.
 
-    The name of the specified users.
+- **roles** (*list[str]*) -
+Roles assigned to the user account.
 
-- **roles** (*tuple*) - 
-
-    The roles granted to the specified user.
+- **description** (*str*) -
+Description stored for the user account.
 
 **EXCEPTIONS:**
 
 - **MilvusException**
+Raised when the server rejects the request or the RPC fails. Inspect the server error message for exact failure details.
 
-    This exception will be raised when any error occurs during this operation.
-
-- **BaseException**
-
-    This exception will be raised when this operation fails.
-
-## Example\{#example}
+## Examples\{#examples}
 
 ```python
 from pymilvus import MilvusClient
 
-# 1. Create a milvus client
-client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
-    token="user:password"
-)
-
-# 2. Create a user
-client.create_user(user_name="user_1", password="P@ssw0rd")
-
-# 3. Grant the role to the user
-client.grant_role(user_name="user_1", role_name="db_ro")
-
-# 4. Describe the user
-client.describe_user(user_name="user_1")
-
-# {'user_name': 'user_1', 'roles': ('db_ro',)}
+client = MilvusClient(uri="YOUR_CLUSTER_ENDPOINT", token="YOUR_CLUSTER_TOKEN")
+user = client.describe_user("analyst")
+print(user)
+# {
+#     "user_name": "analyst",
+#     "roles": ["read_only"],
+#     "description": "Analytics account",
+# }
 ```
-
-## Related methods\{#related-methods}
-
-- [create_user()](./Authentication-create_user)
-
-- [drop_user()](./Authentication-drop_user)
-
-- [list_users()](./Authentication-list_users)
-
-- [update_password()](./Authentication-update_password)
-

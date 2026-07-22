@@ -1,12 +1,11 @@
 ---
 title: "S3ConnectParam | Python"
 slug: /python/python/RemoteBulkWriter-S3ConnectParam
-sidebar_key: python/RemoteBulkWriter-S3ConnectParam
 sidebar_label: "S3ConnectParam"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "An S3ConnectParam instance sets connection parameters for a RemoteBulkWriter instance. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -79,20 +79,10 @@ connect_param = RemoteBulkWriter.S3ConnectParam(
 
     The value can be the URL of a MinIO service or that of any AWS S3 compatible public service.
 
-    <table>
-       <tr>
-         <th><p><strong>Service Name</strong></p></th>
-         <th><p><strong>Endpoint</strong></p></th>
-       </tr>
-       <tr>
-         <td><p><strong>AWS S3</strong></p></td>
-         <td><p>s3.amazonaws.com</p></td>
-       </tr>
-       <tr>
-         <td><p><strong>GCS</strong></p></td>
-         <td><p>storage.googleapis.com</p></td>
-       </tr>
-    </table>
+    | **Service Name** | **Endpoint** |
+    | --- | --- |
+    | **AWS S3** | s3.amazonaws.com |
+    | **GCS** | storage.googleapis.com |
 
 - **access_key** (*str*)
 

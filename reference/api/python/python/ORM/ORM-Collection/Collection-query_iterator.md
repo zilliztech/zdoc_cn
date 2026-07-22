@@ -1,12 +1,11 @@
 ---
 title: "query_iterator() | Python | ORM"
 slug: /python/python/Collection-query_iterator
-sidebar_key: python/Collection-query_iterator
 sidebar_label: "query_iterator()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns a Python iterator for you to iterate over the query results. It is useful especially when the query result contains a large volume of data. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

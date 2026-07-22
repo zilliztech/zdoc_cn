@@ -1,12 +1,11 @@
 ---
 title: "search() | Python | MilvusClient"
 slug: /python/python/Vector-search
-sidebar_key: python/Vector-search
 sidebar_label: "search()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation conducts a vector similarity search with an optional scalar filtering expression. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -317,7 +317,7 @@ from pymilvus import MilvusClient
 
 # 1. Set up a milvus client
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 
@@ -442,6 +442,5 @@ res = client.search(
 # [[{'id': 7, 'distance': 0.4801957309246063, 'entity': {}},
 #   {'id': 2, 'distance': 0.3205878734588623, 'entity': {}},
 #   {'id': 1, 'distance': 0.2993225157260895, 'entity': {}}]]
-
 ```
 

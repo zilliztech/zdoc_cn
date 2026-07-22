@@ -1,12 +1,11 @@
 ---
 title: "alter_collection_function() | Python | MilvusClient"
 slug: /python/python/Collections-alter_collection_function
-sidebar_key: python/Collections-alter_collection_function
 sidebar_label: "alter_collection_function()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation alters an existing function in the collection by replacing it with a new function schema. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

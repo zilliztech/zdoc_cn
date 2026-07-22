@@ -1,12 +1,11 @@
 ---
 title: "drop_database() | Python | ORM"
 slug: /python/python/db-drop_database
-sidebar_key: python/db-drop_database
 sidebar_label: "drop_database()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops a database using the provided database name. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

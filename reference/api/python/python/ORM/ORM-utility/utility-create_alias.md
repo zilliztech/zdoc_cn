@@ -1,12 +1,11 @@
 ---
 title: "create_alias() | Python | ORM"
 slug: /python/python/utility-create_alias
-sidebar_key: python/utility-create_alias
 sidebar_label: "create_alias()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates an alias for an existing collection. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -58,13 +58,15 @@ create_alias(
 
     The alias of the collection. Before this operation, ensure that the alias does not already exist. If it does, exceptions will occur.
 
-    <Admonition type="info" icon="📘" title="What is a collection alias?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
-
-    In , a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
-
-    Suppose there is one collection: `collection_1`. You can assign two different aliases (`bob` and `tom`) to this collection by calling `create_alias("collection_1", "bob")` and `create_alias("collection_1", "tom")`.
+    What is a collection alias?
+    
+        A collection alias is an additional name for a collection. Collection aliases are useful when you want to switch your application to a new collection without any changes to your code. 
+    
+        In , a collection alias is a globally unique identifier. One alias can only be assigned to exactly one collection. Conversely, a collection can have multiple aliases.
+    
+        Suppose there is one collection: `collection_1`. You can assign two different aliases (`bob` and `tom`) to this collection by calling `create_alias("collection_1", "bob")` and `create_alias("collection_1", "tom")`.
 
     </Admonition>
 

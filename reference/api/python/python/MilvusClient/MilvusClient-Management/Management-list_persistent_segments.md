@@ -1,17 +1,16 @@
 ---
 title: "list_persistent_segments() | Python | MilvusClient"
 slug: /python/python/Management-list_persistent_segments
-sidebar_key: python/Management-list_persistent_segments
 sidebar_label: "list_persistent_segments()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation lists all persistent (flushed) segments for a collection, including information about row count, sort status, and storage level. | Python | MilvusClient"
 type: docx
 token: QsGNdp1t3oHaunxgIZGc3PdSnof
-sidebar_position: 23
+sidebar_position: 25
 keywords: 
   - vector databases comparison
   - Faiss
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

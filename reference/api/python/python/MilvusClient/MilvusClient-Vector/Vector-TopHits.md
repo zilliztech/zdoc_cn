@@ -1,17 +1,16 @@
 ---
 title: "TopHits | Python | MilvusClient"
 slug: /python/python/Vector-TopHits
-sidebar_key: python/Vector-TopHits
 sidebar_label: "TopHits"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "A `TopHits` instance defines the representative hits returned from each bucket in a search aggregation. It specifies how many hits to return per bucket and, optionally, how to sort hits within each bucket. | Python | MilvusClient"
 type: docx
 token: EgeGdZL4LoCuv2xVUfFc9eDAnkd
-sidebar_position: 11
+sidebar_position: 12
 keywords: 
   - milvus open source
   - how does milvus work
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

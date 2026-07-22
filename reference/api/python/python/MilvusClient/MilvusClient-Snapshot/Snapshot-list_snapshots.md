@@ -1,12 +1,11 @@
 ---
 title: "list_snapshots() | Python | MilvusClient"
 slug: /python/python/Snapshot-list_snapshots
-sidebar_key: python/Snapshot-list_snapshots
 sidebar_label: "list_snapshots()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "This operation lists all snapshot names. Optionally filter by collection name to list snapshots belonging to a specific collection. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

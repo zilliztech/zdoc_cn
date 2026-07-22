@@ -1,17 +1,16 @@
 ---
 title: "GroupBy | Python | MilvusClient"
 slug: /python/python/Vector-GroupBy
-sidebar_key: python/Vector-GroupBy
 sidebar_label: "GroupBy"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "A `GroupBy` instance defines one bucket level in a search aggregation. It specifies which fields form the bucket key, how many buckets to return, which metrics to compute for each bucket, how to order buckets, whether to return representative hits, and whether to create nested child buckets. | Python | MilvusClient"
 type: docx
 token: CFS4dOq2LowXPSxB124cBwQsn0c
-sidebar_position: 10
+sidebar_position: 11
 keywords: 
   - Retrieval Augmented Generation
   - Large language model
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

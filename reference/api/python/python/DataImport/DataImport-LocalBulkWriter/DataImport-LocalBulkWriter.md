@@ -1,12 +1,11 @@
 ---
 title: "LocalBulkWriter | Python"
 slug: /python/python/DataImport-LocalBulkWriter
-sidebar_key: python/DataImport-LocalBulkWriter
 sidebar_label: "LocalBulkWriter"
+beta: false
 added_since: v2.3.x
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "A LocalBulkWriter instance rewrites your raw data locally in a format that Zilliz Cloud understands. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -81,11 +81,13 @@ writer = LocalBulkWriter(
 
     The value defaults to **536,870,912** in bytes, which is **512** MB.
 
-    <Admonition type="info" icon="📘" title="How does BulkWriter segment my data?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    The way **BulkWriter** segments your data varies with the target file type.
-
-    If the generated file exceeds the specified segment size, **BulkWriter** creates multiple files and names them in sequence numbers, each no larger than the segment size.
+    How does BulkWriter segment my data?
+    
+        The way **BulkWriter** segments your data varies with the target file type.
+    
+        If the generated file exceeds the specified segment size, **BulkWriter** creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>
 

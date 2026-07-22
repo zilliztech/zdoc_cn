@@ -1,12 +1,11 @@
 ---
 title: "NomicEmbeddingFunction | Python"
 slug: /python/python/EmbeddingModels-NomicEmbeddingFunction
-sidebar_key: python/EmbeddingModels-NomicEmbeddingFunction
 sidebar_label: "NomicEmbeddingFunction"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "NomicEmbeddingFunction is a class in pymilvus that handles encoding text into embeddings using Nomic embedding models to support embedding retrieval in Milvus. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -76,6 +76,6 @@ NomicEmbeddingFunction(
 from pymilvus.model.dense import NomicEmbeddingFunction
 
 ef = NomicEmbeddingFunction(
-    model_name="nomic-embed-text-v1.5", # Defaults to \`mistral-embed\`
+    model_name="nomic-embed-text-v1.5", # Defaults to `mistral-embed`
 )
 ```

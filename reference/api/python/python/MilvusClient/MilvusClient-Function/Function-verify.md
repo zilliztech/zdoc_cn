@@ -1,12 +1,11 @@
 ---
 title: "verify() | Python | MilvusClient"
 slug: /python/python/Function-verify
-sidebar_key: python/Function-verify
 sidebar_label: "verify()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation validates the input and output fields of a function defined in the CollectionSchema. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

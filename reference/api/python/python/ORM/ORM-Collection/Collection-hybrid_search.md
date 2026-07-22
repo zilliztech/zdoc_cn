@@ -1,12 +1,11 @@
 ---
 title: "hybrid_search() | Python | ORM"
 slug: /python/python/Collection-hybrid_search
-sidebar_key: python/Collection-hybrid_search
 sidebar_label: "hybrid_search()"
+beta: NEAR DEPRECATE
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation performs multi-vector search on a collection and returns search results after reranking. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -137,7 +137,7 @@ A **SearchResult** object that contains a list of **Hits** objects.
     <Admonition type="info" icon="📘" title="Notes">
 
     A **SearchResult** object contains a list of **Hits** objects, each corresponding to a query vector in the search request. 
-
+    
     A **Hits** object contains a list of **Hit** objects, each corresponding to an entity hit by the search.
 
     </Admonition>

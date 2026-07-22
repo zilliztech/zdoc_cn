@@ -1,12 +1,11 @@
 ---
 title: "to_numpy() | Python | MilvusClient"
 slug: /python/python/EmbeddingList-to_numpy
-sidebar_key: python/EmbeddingList-to_numpy
 sidebar_label: "to_numpy()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation converts the current EmbeddingList NumPy array containing all vector embeddings. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

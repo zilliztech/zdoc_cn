@@ -1,12 +1,11 @@
 ---
 title: "create_collection() | Python | MilvusClient"
 slug: /python/python/Collections-create_collection
-sidebar_key: python/Collections-create_collection
 sidebar_label: "create_collection()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation supports creating a collection in two distinct ways quick setup or custom setup. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -161,11 +161,13 @@ create_collection(
 
         The value defaults to **1**, indicating that one shard is to be created along with this collection.
 
-        <Admonition type="info" icon="📘" title="What is sharding?">
+        <Admonition type="info" icon="📘" title="Note">
 
-        Sharding refers to distributing write operations to different nodes to make the most of the parallel computing potential of a Milvus cluster for writing data.
-
-        By default, a collection contains one shard.
+        What is sharding?
+        
+                Sharding refers to distributing write operations to different nodes to make the most of the parallel computing potential of a Milvus cluster for writing data.
+        
+                By default, a collection contains one shard.
 
         </Admonition>
 
@@ -175,13 +177,15 @@ create_collection(
 
         This parameter is ignored if **schema** is not **None** and a field in the schema has its **is_parition_key** set to **True**.
 
-        <Admonition type="info" icon="📘" title="What is the partition key?">
+        <Admonition type="info" icon="📘" title="Note">
 
-        To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.
-
-        When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.
-
-        For details, refer to [Use Partition Key](/docs/use-partition-key) and [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md).
+        What is the partition key?
+        
+                To facilitate partition-oriented multi-tenancy, you can set a field as the partition key field so that Zilliz Cloud hashes the field values and distributes entities among the specified number of partitions accordingly.
+        
+                When retrieving entities, ensure that the partition key field is used in the boolean expression to filter out entities of a specific field value.
+        
+                For details, refer to [Use Partition Key](/docs/use-partition-key) and [Multi-tenancy](https://milvus.io/docs/multi_tenancy.md).
 
         </Admonition>
 
@@ -201,13 +205,15 @@ create_collection(
 
         The value defaults to **Bounded** (**2**) with options of **Strong** (**0**), **Session** (**1**), **Bounded** (**2**), and **Eventually** (**3**).
 
-        <Admonition type="info" icon="📘" title="What is the consistency level?">
+        <Admonition type="info" icon="📘" title="Note">
 
-        Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
-
-        Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
-
-        You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
+        What is the consistency level?
+        
+                Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
+        
+                Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
+        
+                You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
 
         </Admonition>
 
@@ -257,7 +263,7 @@ None
 from pymilvus import MilvusClient
 
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password"
 )
 ```

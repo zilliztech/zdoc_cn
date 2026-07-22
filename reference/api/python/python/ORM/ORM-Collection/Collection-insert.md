@@ -1,12 +1,11 @@
 ---
 title: "insert() | Python | ORM"
 slug: /python/python/Collection-insert
-sidebar_key: python/Collection-insert
 sidebar_label: "insert()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation inserts data into the current collection. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "list_database() | Python | ORM"
 slug: /python/python/db-list_database
-sidebar_key: python/db-list_database
 sidebar_label: "list_database()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns a list of database names from the connected Milvus instance. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,17 +1,16 @@
 ---
 title: "FunctionScore | Python | MilvusClient"
 slug: /python/python/MilvusClient-FunctionScore
-sidebar_key: python/MilvusClient-FunctionScore
 sidebar_label: "FunctionScore"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A FunctionScore instance combines multiple Function](./MilvusClient-Function)s in a configurable manner. You can use a FunctionScore instance as a ranker to combine multiple reranking [Functions. | Python | MilvusClient"
 type: docx
 token: PfJNdkuMDoCqqcxm6S2cDD6TnFh
-sidebar_position: 12
+sidebar_position: 13
 keywords: 
   - Sparse vector
   - Vector Dimension
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,22 +1,21 @@
 ---
 title: "construct_from_dict() | Python | ORM"
-slug: /python/python/CollectionSchema-construct_from_dict
-sidebar_key: python/CollectionSchema-construct_from_dict
+slug: /python/python/CollectionSchema-construct_from_dict_1
 sidebar_label: "construct_from_dict()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation constructs a CollectionSchema object from a dictionary representation. | Python | ORM"
 type: docx
 token: DYuUdc503o1TANxuGozcXhCmnRN
 sidebar_position: 3
 keywords: 
-  - cheap vector database
-  - Managed vector database
-  - Pinecone vector database
-  - Audio search
+  - Question answering system
+  - llm-as-a-judge
+  - hybrid vector search
+  - Video deduplication
   - zilliz
   - zilliz cloud
   - cloud
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

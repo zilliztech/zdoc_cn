@@ -1,12 +1,11 @@
 ---
 title: "create_resource_group() | Python | ORM"
 slug: /python/python/utility-create_resource_group
-sidebar_key: python/utility-create_resource_group
 sidebar_label: "create_resource_group()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation creates a new resource group. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -33,7 +33,9 @@ import Admonition from '@theme/Admonition';
 
 This operation creates a new resource group. 
 
-<Admonition type="info" icon="📘" title="What is a resource group?">
+<Admonition type="info" icon="📘" title="Note">
+
+What is a resource group?
 
 A resource group can hold several or all of the query nodes in a Zilliz Cloud cluster. When you load a collection by calling load(), Zilliz Cloud loads the data of the collection into certain query nodes.
 
@@ -143,7 +145,6 @@ try:
     print(f'Succeeded in creating resource group {name}.')
 except Exception:
     print(f'Failed to create resource group {name}.')
-
 ```
 
 ## Related operations\{#related-operations}

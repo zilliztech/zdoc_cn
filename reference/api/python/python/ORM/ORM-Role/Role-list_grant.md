@@ -1,12 +1,11 @@
 ---
 title: "list_grant() | Python | ORM"
 slug: /python/python/Role-list_grant
-sidebar_key: python/Role-list_grant
 sidebar_label: "list_grant()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists the relationship between the current role and the specified object. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

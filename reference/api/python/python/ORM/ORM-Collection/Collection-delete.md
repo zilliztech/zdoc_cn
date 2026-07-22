@@ -1,12 +1,11 @@
 ---
 title: "delete() | Python | ORM"
 slug: /python/python/Collection-delete
-sidebar_key: python/Collection-delete
 sidebar_label: "delete()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation deletes entities with a boolean expression. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -143,7 +143,6 @@ collection.insert(
 
 # Delete two entities
 res = collection.delete("id in [ 0, 1 ]")
-
 ```
 
 ## Related operations\{#related-operations}

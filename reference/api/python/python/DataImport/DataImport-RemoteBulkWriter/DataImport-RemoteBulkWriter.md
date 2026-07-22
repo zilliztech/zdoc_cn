@@ -1,12 +1,11 @@
 ---
 title: "RemoteBulkWriter | Python"
 slug: /python/python/DataImport-RemoteBulkWriter
-sidebar_key: python/DataImport-RemoteBulkWriter
 sidebar_label: "RemoteBulkWriter"
+beta: false
 added_since: v2.3.x
 last_modified: v2.5.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "A RemoteBulkWriter instance writes your raw data in a format that Zilliz Cloud understands into an AWS-S3-compatible bucket. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -43,7 +43,7 @@ Constructs a **RemoteBulkWriter** object with a set of parameters, such as **sch
 
 <Admonition type="info" icon="📘" title="Notes">
 
-A **RemoteBulkWriter** object intends to rewrite your raw data in a format that Zilliz Cloud understands into an AWS-S3-compatible or a Microsoft Azure Blob Storage bucket.
+A **RemoteBulkWriter** object intends to rewrite your raw data in a format that Zilliz Cloud understands into an AWS-S3-compatible bucket.
 
 </Admonition>
 
@@ -86,19 +86,42 @@ writer = RemoteBulkWriter(
 
     The value defaults to 536,870,912 in bytes, which is 512 MB.
 
-    <Admonition type="info" icon="📘" title="How does BulkWriter segment my data?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    The way **BulkWriter** segments your data varies with the target file type.
-
-    If the generated file exceeds the specified segment size, **BulkWriter** creates multiple files and names them in sequence numbers, each no larger than the segment size.
+    How does BulkWriter segment my data?
+    
+        The way **BulkWriter** segments your data varies with the target file type.
+    
+        If the generated file exceeds the specified segment size, **BulkWriter** creates multiple files and names them in sequence numbers, each no larger than the segment size.
 
     </Admonition>
 
-- **file_type** (*BulkFileType*) -
+- **file_type** (*[BulkFileType](./DataImport-BulkFileType)*) -
 
     The type of the output file.
 
     The value defaults to **BulkFileType.PARQUET**. 
+
+    Possible options are **BulkFileType.JSON**, **BulkFileType.PARQUET**, **BulkFileType.CSV**.
+
+- **config** (*dict*)
+
+    A dictionary specifying optional configurations for processing CSV files. This parameter is available only when **file_type** is set to **BulkFileType.CSV**. Example configuration:
+
+    ```python
+    config={
+        "sep": "\t",
+        "nullkey": "NULL"
+    }
+    ```
+
+    - **sep** (*string*)
+
+        The delimiter of CSV file. The value must be a string of length 1, which defaults to `","`. The following strings are not allowed: `"\0"`, `"\n"`, `"\r"`, `"""`.
+
+    - **nullkey** (*string*)
+
+        Special string representing null value. The value defaults to empty string: `""`.
 
 **RETURN TYPE:**
 

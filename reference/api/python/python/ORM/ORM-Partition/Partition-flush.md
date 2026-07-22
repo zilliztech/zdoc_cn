@@ -1,12 +1,11 @@
 ---
 title: "flush() | Python | ORM"
 slug: /python/python/Partition-flush
-sidebar_key: python/Partition-flush
 sidebar_label: "flush()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation seals all segments in the partition. Any insertions after this operation will generate a new segment. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -41,7 +41,9 @@ flush(
 )   
 ```
 
-<Admonition type="info" icon="📘" title="Can I call `flush()` after every data insertion?">
+<Admonition type="info" icon="📘" title="Note">
+
+Can I call `flush()` after every data insertion?
 
 When new data is inserted, it is written into growing segments. Once the size of a growing segment reaches its upper limit, Zilliz Cloud automatically seals the segment. 
 

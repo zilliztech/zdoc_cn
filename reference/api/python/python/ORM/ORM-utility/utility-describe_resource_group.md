@@ -1,12 +1,11 @@
 ---
 title: "describe_resource_group() | Python | ORM"
 slug: /python/python/utility-describe_resource_group
-sidebar_key: python/utility-describe_resource_group
 sidebar_label: "describe_resource_group()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation describes the details of a specific resource group. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -179,7 +179,7 @@ except Exception:
     
 # Succeeded in creating resource group rg.
 
-# Describe the details of the created resource group \`rg\`
+# Describe the details of the created resource group `rg`
 
 info = utility.describe_resource_group(name='rg')
 

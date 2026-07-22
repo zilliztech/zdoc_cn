@@ -1,12 +1,11 @@
 ---
 title: "prepare_index_params() | Python | MilvusClient"
 slug: /python/python/Management-prepare_index_params
-sidebar_key: python/Management-prepare_index_params
 sidebar_label: "prepare_index_params()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation prepares index parameters to build indexes for a specific collection. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

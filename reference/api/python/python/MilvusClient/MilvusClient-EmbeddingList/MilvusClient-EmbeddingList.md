@@ -1,12 +1,11 @@
 ---
 title: "EmbeddingList | Python | MilvusClient"
 slug: /python/python/MilvusClient-EmbeddingList
-sidebar_key: python/MilvusClient-EmbeddingList
 sidebar_label: "EmbeddingList"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "An EmbeddingList instance represents a list of vector embeddings. You can use an EmbeddingList instance to build the query vectors in a search against a vector field in an Array of Structs field. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

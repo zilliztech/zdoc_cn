@@ -1,12 +1,11 @@
 ---
 title: "CollectionSchema | Python | ORM"
 slug: /python/python/ORM-CollectionSchema
-sidebar_key: python/ORM-CollectionSchema
 sidebar_label: "CollectionSchema"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "A CollectionSchema instance represents the schema of a collection. A schema sketches the structure of a collection. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -56,9 +56,11 @@ CollectionSchema(
 
     A list of **FieldSchema** objects that define the fields in the collection schema.
 
-    <Admonition type="info" icon="📘" title="What is a field schema?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    A field schema represents and contains metadata for a single field, while **CollectionSchema** ties together a list of FieldSchema objects to define the full schema.
+    What is a field schema?
+    
+        A field schema represents and contains metadata for a single field, while **CollectionSchema** ties together a list of FieldSchema objects to define the full schema.
 
     </Admonition>
 
@@ -82,9 +84,11 @@ CollectionSchema(
 
         When you set this to **True**,  and Zilliz Cloud will create a field called **&#36;meta** to store any undefined fields and their values from the data that is inserted.
 
-        <Admonition type="info" icon="📘" title="What is a dynamic field?">
+        <Admonition type="info" icon="📘" title="Note">
 
-        If the data being inserted into the target collection includes fields that are not defined in the collection's schema, those fields will be saved in a dynamic field as key-value pairs.
+        What is a dynamic field?
+        
+                If the data being inserted into the target collection includes fields that are not defined in the collection's schema, those fields will be saved in a dynamic field as key-value pairs.
 
         </Admonition>
 
@@ -106,13 +110,15 @@ CollectionSchema(
 
         As an alternative, you can set **is_partition_key** when creating a **FieldSchema** object.
 
-        <Admonition type="info" icon="📘" title="What is a partition key?">
+        <Admonition type="info" icon="📘" title="Note">
 
-        Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.
-
-        This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.
-
-        As an alternative, you can set **partition_key_field** when creating a **CollectionSchema** object.
+        What is a partition key?
+        
+                Once a field is designated as the partition key, Zilliz Cloud automatically creates a partition for each unique value in this field and saves entities in these partitions accordingly.
+        
+                This is particularly useful when implementing data separation based on a specific key, such as partition-oriented multi-tenancy.
+        
+                As an alternative, you can set **partition_key_field** when creating a **CollectionSchema** object.
 
         </Admonition>
 

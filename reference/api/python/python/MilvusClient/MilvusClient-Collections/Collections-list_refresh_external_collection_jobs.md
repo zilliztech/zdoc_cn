@@ -1,12 +1,11 @@
 ---
 title: "list_refresh_external_collection_jobs() | Python | MilvusClient"
 slug: /python/python/Collections-list_refresh_external_collection_jobs
-sidebar_key: python/Collections-list_refresh_external_collection_jobs
 sidebar_label: "list_refresh_external_collection_jobs()"
+beta: PUBLIC
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PUBLIC
 notebook: false
 description: "This operation lists the external collection refresh jobs of all or specified collections. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

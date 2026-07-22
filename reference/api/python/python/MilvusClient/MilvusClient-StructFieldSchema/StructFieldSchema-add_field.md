@@ -1,12 +1,11 @@
 ---
 title: "add_field() | Python | MilvusClient"
 slug: /python/python/StructFieldSchema-add_field
-sidebar_key: python/StructFieldSchema-add_field
 sidebar_label: "add_field()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds a field to the schema of a struct element in an array of structs field. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

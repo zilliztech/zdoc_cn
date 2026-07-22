@@ -1,12 +1,11 @@
 ---
 title: "list_file_resources() | Python"
 slug: /python/python/FileResource-list_file_resources
-sidebar_key: python/FileResource-list_file_resources
 sidebar_label: "list_file_resources()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "Returns all file resources currently registered on the Milvus cluster. Each entry is a `FileResourceInfo` object exposing the `name` under which the resource was registered via `addfileresource()` and the `path` (object key in the configured object store) that it points to. There is no dedicated \"get\" API for a single resource — `listfileresources()` is the canonical way to inspect registered resources. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

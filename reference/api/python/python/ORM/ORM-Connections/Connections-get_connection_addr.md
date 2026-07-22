@@ -1,12 +1,11 @@
 ---
 title: "get_connection_addr() | Python | ORM"
 slug: /python/python/Connections-get_connection_addr
-sidebar_key: python/Connections-get_connection_addr
 sidebar_label: "get_connection_addr()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation retrieves the configuration of the specified connection by alias. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -69,7 +69,7 @@ from pymilvus import connections
 connections.get_connection_addr(alias="default")
 
 # Output
-# {'address': 'in03-**************.api.ali-cn-hangzhou'}
+# {'address': 'in03-**************.api.gcp-us-west1.cloud.zilliz.com:443', 'user': ''}
 ```
 
 ## Related operations\{#related-operations}

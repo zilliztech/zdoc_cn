@@ -1,12 +1,11 @@
 ---
 title: "to_flat_array() | Python | MilvusClient"
 slug: /python/python/EmbeddingList-to_flat_array
-sidebar_key: python/EmbeddingList-to_flat_array
 sidebar_label: "to_flat_array()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation converts the current EmbeddingList instance into a flattened NumPy array containing all vector embeddings concatenated. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

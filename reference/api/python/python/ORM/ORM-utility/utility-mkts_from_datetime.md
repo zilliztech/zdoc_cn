@@ -1,12 +1,11 @@
 ---
 title: "mkts_from_datetime() | Python | ORM"
 slug: /python/python/utility-mkts_from_datetime
-sidebar_key: python/utility-mkts_from_datetime
 sidebar_label: "mkts_from_datetime()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation makes a hybrid timestamp from a Python's datetime.datetime object. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

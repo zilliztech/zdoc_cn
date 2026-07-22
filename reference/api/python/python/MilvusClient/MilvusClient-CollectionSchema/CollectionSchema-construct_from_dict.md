@@ -1,22 +1,21 @@
 ---
 title: "construct_from_dict() | Python | MilvusClient"
-slug: /python/python/CollectionSchema-construct_from_dict_1
-sidebar_key: python/CollectionSchema-construct_from_dict_1
+slug: /python/python/CollectionSchema-construct_from_dict
 sidebar_label: "construct_from_dict()"
-added_since: v2.3.x
+beta: NEAR DEPRECATE
+added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation constructs a CollectionSchema object from a dictionary representation. | Python | MilvusClient"
 type: docx
 token: Ld10d5YWJofvgGxtwYscGlWunDg
 sidebar_position: 3
 keywords: 
-  - Question answering system
-  - llm-as-a-judge
-  - hybrid vector search
-  - Video deduplication
+  - cheap vector database
+  - Managed vector database
+  - Pinecone vector database
+  - Audio search
   - zilliz
   - zilliz cloud
   - cloud
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

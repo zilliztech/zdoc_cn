@@ -1,12 +1,11 @@
 ---
 title: "FunctionType | Python | MilvusClient"
 slug: /python/python/Collections-FunctionType
-sidebar_key: python/Collections-FunctionType
 sidebar_label: "FunctionType"
+beta: false
 added_since: v2.5.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

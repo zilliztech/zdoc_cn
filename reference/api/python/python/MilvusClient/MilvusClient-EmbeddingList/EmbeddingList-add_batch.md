@@ -1,12 +1,11 @@
 ---
 title: "add_batch() | Python | MilvusClient"
 slug: /python/python/EmbeddingList-add_batch
-sidebar_key: python/EmbeddingList-add_batch
 sidebar_label: "add_batch()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation adds multiple vector embeddings to the current EmbeddingList instance. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

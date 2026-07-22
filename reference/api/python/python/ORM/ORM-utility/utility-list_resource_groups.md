@@ -1,12 +1,11 @@
 ---
 title: "list_resource_groups() | Python | ORM"
 slug: /python/python/utility-list_resource_groups
-sidebar_key: python/utility-list_resource_groups
 sidebar_label: "list_resource_groups()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation lists all resource groups in the currently connected Zilliz Cloud cluster. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

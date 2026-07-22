@@ -1,12 +1,11 @@
 ---
 title: "create_database() | Python | MilvusClient"
 slug: /python/python/Database-create_database
-sidebar_key: python/Database-create_database
 sidebar_label: "create_database()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a database. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -74,8 +74,10 @@ create_database(
 
 - **properties** (*dict* | *None*) -
 
-    <Admonition type="info" icon="📘" title="This does not apply to databases for on-demand compute.">
-    
+    <Admonition type="info" icon="📘" title="Note">
+
+    This does not apply to databases for on-demand compute.
+
     </Admonition>
 
     Properties of the database to be created. Possible database properties are as follows:

@@ -1,12 +1,11 @@
 ---
 title: "drop_snapshot() | Python | MilvusClient"
 slug: /python/python/Snapshot-drop_snapshot
-sidebar_key: python/Snapshot-drop_snapshot
 sidebar_label: "drop_snapshot()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "This operation permanently deletes a snapshot. Once dropped, the snapshot data cannot be recovered. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

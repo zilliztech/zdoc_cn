@@ -1,12 +1,11 @@
 ---
 title: "drop_index_properties() | Python | MilvusClient"
 slug: /python/python/Management-drop_index_properties
-sidebar_key: python/Management-drop_index_properties
 sidebar_label: "drop_index_properties()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation drops the specified index properties. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

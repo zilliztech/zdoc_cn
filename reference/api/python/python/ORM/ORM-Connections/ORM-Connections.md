@@ -1,12 +1,11 @@
 ---
 title: "Connections | Python | ORM"
 slug: /python/python/ORM-Connections
-sidebar_key: python/ORM-Connections
 sidebar_label: "Connections"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "A Connections instance represents a pool of connections to your Zilliz Cloud clusters. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -62,7 +62,9 @@ connections.connect(
 ) 
 ```
 
-<Admonition type="info" icon="📘" title="How can I get the cluster endpoint and token?">
+<Admonition type="info" icon="📘" title="Note">
+
+How can I get the cluster endpoint and token?
 
 - **Cluster endpoint**
 

@@ -1,12 +1,11 @@
 ---
 title: "encode_documents() | Python"
 slug: /python/python/NomicEmbeddingFunction-encode_documents
-sidebar_key: python/NomicEmbeddingFunction-encode_documents
 sidebar_label: "encode_documents()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation takes in documents and encodes them into vector embeddings. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -67,7 +67,7 @@ A list where each element is a NumPy array.
 from pymilvus.model.dense import NomicEmbeddingFunction
 
 ef = NomicEmbeddingFunction(
-    model_name="nomic-embed-text-v1.5", # Defaults to \`mistral-embed\`
+    model_name="nomic-embed-text-v1.5", # Defaults to `mistral-embed`
     api_key="NOMIC_API_KEY" # Provide your Nomic API key
 )
 

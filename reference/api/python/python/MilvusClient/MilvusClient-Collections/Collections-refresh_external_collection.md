@@ -1,12 +1,11 @@
 ---
 title: "refresh_external_collection() | Python | MilvusClient"
 slug: /python/python/Collections-refresh_external_collection
-sidebar_key: python/Collections-refresh_external_collection
 sidebar_label: "refresh_external_collection()"
+beta: PUBLIC
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PUBLIC
 notebook: false
 description: "This operation scans the data files in the schema-defined external storage and generates metadata files that record their mapping relationship to those data files. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

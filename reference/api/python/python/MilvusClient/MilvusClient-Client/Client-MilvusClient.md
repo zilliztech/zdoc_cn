@@ -1,12 +1,11 @@
 ---
 title: "MilvusClient | Python | MilvusClient"
 slug: /python/python/Client-MilvusClient
-sidebar_key: python/Client-MilvusClient
 sidebar_label: "MilvusClient"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "A MilvusClient instance represents a Python client that connects to a specific Zilliz Cloud cluster. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -122,7 +122,7 @@ from pymilvus import MilvusClient
 
 # Authentication enabled with a cluster user
 client = MilvusClient(
-    uri="https://inxx-xxxxxxxxxxxx.api.ali-cn-hangzhou.zillizcloud.com:19530",
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
     token="user:password", # replace this with your token,
     db_name="default"
 )

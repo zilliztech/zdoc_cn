@@ -1,12 +1,11 @@
 ---
 title: "revoke() | Python | ORM"
 slug: /python/python/Role-revoke
-sidebar_key: python/Role-revoke
 sidebar_label: "revoke()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation revokes a privilege granted to the current role. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -73,7 +73,7 @@ revoke(
     <Admonition type="info" icon="📘" title="Notes">
 
     - To grant all privileges to a kind of object, like **[Collection](./ORM-Collection)**, **Global**, **User**, use `*` for privilege name.
-
+    
     - When `object` is set to `Global`, setting `privilege` to `\*` is not equivalent to setting it to `All`. The `All` privilege includes all permissions, including any collection and user object.
 
     </Admonition>

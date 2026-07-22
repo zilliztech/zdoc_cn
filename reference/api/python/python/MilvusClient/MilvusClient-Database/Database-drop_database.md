@@ -1,12 +1,11 @@
 ---
 title: "drop_database() | Python | MilvusClient"
 slug: /python/python/Database-drop_database
-sidebar_key: python/Database-drop_database
 sidebar_label: "drop_database()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation drops the specified database. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

@@ -1,12 +1,11 @@
 ---
 title: "commit() | Python"
 slug: /python/python/LocalBulkWriter-commit
-sidebar_key: python/LocalBulkWriter-commit
 sidebar_label: "commit()"
+beta: false
 added_since: v2.3.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation commits the appended data. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

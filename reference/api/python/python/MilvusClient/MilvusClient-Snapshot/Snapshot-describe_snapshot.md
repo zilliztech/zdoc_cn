@@ -1,12 +1,11 @@
 ---
 title: "describe_snapshot() | Python | MilvusClient"
 slug: /python/python/Snapshot-describe_snapshot
-sidebar_key: python/Snapshot-describe_snapshot
 sidebar_label: "describe_snapshot()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "This operation retrieves detailed metadata about a specific snapshot, including the source collection, partition names, creation timestamp, and storage location. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

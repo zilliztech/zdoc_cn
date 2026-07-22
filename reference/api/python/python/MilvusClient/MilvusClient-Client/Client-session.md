@@ -1,12 +1,11 @@
 ---
 title: "session() | Python | MilvusClient"
 slug: /python/python/Client-session
-sidebar_key: python/Client-session
 sidebar_label: "session()"
+beta: PUBLIC
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PUBLIC
 notebook: false
 description: "This operation creates a lightweight DQL session bound to a specific on-demand cluster. All operations performed through the session automatically include the target `clusterid`, ensuring requests are routed to the correct cluster in a multi-cluster deployment. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

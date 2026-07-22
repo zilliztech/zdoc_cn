@@ -1,12 +1,11 @@
 ---
 title: "VolumeFileManager | Python"
 slug: /python/python/Volume-VolumeFileManager
-sidebar_key: python/Volume-VolumeFileManager
 sidebar_label: "VolumeFileManager"
+beta: false
 added_since: false
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A `VolumeFileManager` instance maintains a connection to a specific Zilliz Cloud managed volume. Before uploading data files to a volume, you need to initiate a `VolumeFileManager` instance. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -89,7 +89,7 @@ A `VolumeFileManager` instance.
 from pymilvus.bulk_writer.volume_file_manager import VolumeFileManager
 
 volume_file_manager = VolumeFileManager(
-    cloud_endpoint="https://api.cloud.zilliz.com.cn",
+    cloud_endpoint="https://api.cloud.zilliz.com",
     api_key="YOUR_API_KEY",
     volume_name="my_volume"
 )

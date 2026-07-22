@@ -1,17 +1,16 @@
 ---
 title: "get_flush_all_state() | Python | MilvusClient"
 slug: /python/python/Management-get_flush_all_state
-sidebar_key: python/Management-get_flush_all_state
 sidebar_label: "get_flush_all_state()"
+beta: false
 added_since: v2.6.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation returns whether a flush-all operation has completed. Use this after calling `flushall()` to check the flush status. | Python | MilvusClient"
 type: docx
 token: G31wdmzVFo687JxZTAGctQlKnir
-sidebar_position: 19
+sidebar_position: 20
 keywords: 
   - AI chatbots
   - cosine distance
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

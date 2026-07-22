@@ -1,12 +1,11 @@
 ---
 title: "drop() | Python | ORM"
 slug: /python/python/Partition-drop
-sidebar_key: python/Partition-drop
 sidebar_label: "drop()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation drops the current partition. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

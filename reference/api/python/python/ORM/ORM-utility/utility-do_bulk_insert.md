@@ -1,12 +1,11 @@
 ---
 title: "do_bulk_insert() | Python | ORM"
 slug: /python/python/utility-do_bulk_insert
-sidebar_key: python/utility-do_bulk_insert
 sidebar_label: "do_bulk_insert()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation bulk-inserts data from specified files. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -60,29 +60,31 @@ do_bulk_insert(
 
     A list of paths to the files that contain the source data. 
 
-    <Admonition type="info" icon="📘" title="How can I prepare the source data files?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    - You can include a JSON file (*.json*) or a set of NumPy files (*.npy*) as the source data files.
-
-        - A valid JSON file has a root key named **rows**, which is a list of dictionaries with each representing an entity that matches the schema of the target collection.
-
-            If the target collection allows dynamic fields, include the dynamic fields and their values in each entity dictionary.
-
-        - A valid set of NumPy files should be named after the fields in the schema of the target collection, and the data in them should match the corresponding field definitions. 
-
-            If the target collection allows dynamic fields, create an extra file named **&#36;meta.npy** to include the dynamic fields and their values.
-
-        For details on preparing the source data files, refer to [Insert Entities from Files](https://milvus.io/docs/bulk_insert.md).
-
-    - You have to upload the source data files to the bucket defined by `minio.bucketname` in your Milvus configuration before running this operation. 
-
-        Let's take a Milvus instance set up using Docker Compose as an example, and the bucket name is `a-bucket`.
-
-        - If you upload the source data files to this bucket, you should include only the file names with extensions in the **files** list. For example, `files=["id.npy", "vector.npy"]` or `files=["data.json"]`.
-
-        - If you upload the source data files to a sub-directory in this bucket, you should include the file paths relative to the bucket. For example, if the sub-directory is `data`, the parameter settings should be `files=["data/id.npy", "data/vector.py"]` or `files=["data.json"]`.
-
-    - To find the name of the MinIO bucket your Milvus instance uses, simply log into the MinIO server and find out. 
+    How can I prepare the source data files?
+    
+        - You can include a JSON file (*.json*) or a set of NumPy files (*.npy*) as the source data files.
+    
+            - A valid JSON file has a root key named **rows**, which is a list of dictionaries with each representing an entity that matches the schema of the target collection.
+    
+                If the target collection allows dynamic fields, include the dynamic fields and their values in each entity dictionary.
+    
+            - A valid set of NumPy files should be named after the fields in the schema of the target collection, and the data in them should match the corresponding field definitions. 
+    
+                If the target collection allows dynamic fields, create an extra file named **&#36;meta.npy** to include the dynamic fields and their values.
+    
+            For details on preparing the source data files, refer to [Insert Entities from Files](https://milvus.io/docs/bulk_insert.md).
+    
+        - You have to upload the source data files to the bucket defined by `minio.bucketname` in your Milvus configuration before running this operation. 
+    
+            Let's take a Milvus instance set up using Docker Compose as an example, and the bucket name is `a-bucket`.
+    
+            - If you upload the source data files to this bucket, you should include only the file names with extensions in the **files** list. For example, `files=["id.npy", "vector.npy"]` or `files=["data.json"]`.
+    
+            - If you upload the source data files to a sub-directory in this bucket, you should include the file paths relative to the bucket. For example, if the sub-directory is `data`, the parameter settings should be `files=["data/id.npy", "data/vector.py"]` or `files=["data.json"]`.
+    
+        - To find the name of the MinIO bucket your Milvus instance uses, simply log into the MinIO server and find out. 
 
     </Admonition>
 

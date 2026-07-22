@@ -1,12 +1,11 @@
 ---
 title: "connect() | Python | ORM"
 slug: /python/python/Connections-connect
-sidebar_key: python/Connections-connect
 sidebar_label: "connect()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation establishes a connection to a Zilliz Cloud cluster using the provided alias, address, and authentication parameters. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -57,7 +57,7 @@ connect(
     <Admonition type="info" icon="📘" title="Notes">
 
     - If the specified connection alias does not exist, a new one will be added, and the parameters specified below are added as the parameters of the connection alias.
-
+    
     - If the specified connection alias has already been added by calling **add_connection()**, the parameters specified below overwrite those of the connection alias.
 
     </Admonition>

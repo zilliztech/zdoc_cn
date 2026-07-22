@@ -1,12 +1,11 @@
 ---
 title: "create_role() | Python | MilvusClient"
 slug: /python/python/Authentication-create_role
-sidebar_key: python/Authentication-create_role
 sidebar_label: "create_role()"
+beta: false
 added_since: v2.3.x
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation creates a role for role-based access control. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

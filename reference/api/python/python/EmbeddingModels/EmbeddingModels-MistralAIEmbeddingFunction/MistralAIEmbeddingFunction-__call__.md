@@ -1,12 +1,11 @@
 ---
 title: "\\_\\_call\\_\\_() | Python"
 slug: /python/python/MistralAIEmbeddingFunction-__call__
-sidebar_key: python/MistralAIEmbeddingFunction-__call__
 sidebar_label: "__call__()"
+beta: false
 added_since: v2.4.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation in MistralAIEmbeddingFunction takes a list of text strings and directly encodes them into vector embeddings. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -74,7 +74,7 @@ A list where each element is a NumPy array.
 from pymilvus.model.dense import MistralAIEmbeddingFunction
 
 ef = MistralAIEmbeddingFunction(
-    model_name="mistral-embed", # Defaults to \`mistral-embed\`
+    model_name="mistral-embed", # Defaults to `mistral-embed`
     api_key="MISTRAL_API_KEY" # Provide your Mistral AI API key
 )
 

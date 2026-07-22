@@ -1,22 +1,21 @@
 ---
 title: "to_dict() | Python | MilvusClient"
-slug: /python/python/CollectionSchema-to_dict_1
-sidebar_key: python/CollectionSchema-to_dict_1
+slug: /python/python/CollectionSchema-to_dict
 sidebar_label: "to_dict()"
-added_since: v2.3.x
+beta: NEAR DEPRECATE
+added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation converts a CollectionSchema object to a dictionary representation. | Python | MilvusClient"
 type: docx
 token: NnIxd6VYso9IBPx6bJDcJJmUnNd
 sidebar_position: 4
 keywords: 
-  - milvus db
-  - milvus vector db
-  - Zilliz Cloud
-  - what is milvus
+  - how do vector databases work
+  - vector db comparison
+  - openai vector db
+  - natural language processing database
   - zilliz
   - zilliz cloud
   - cloud
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

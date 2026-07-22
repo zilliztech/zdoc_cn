@@ -1,12 +1,11 @@
 ---
 title: "get_restore_snapshot_state() | Python | MilvusClient"
 slug: /python/python/Snapshot-get_restore_snapshot_state
-sidebar_key: python/Snapshot-get_restore_snapshot_state
 sidebar_label: "get_restore_snapshot_state()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "This operation queries the status and progress of an asynchronous restore snapshot job. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

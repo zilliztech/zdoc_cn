@@ -1,12 +1,11 @@
 ---
 title: "VolumeManager | Python"
 slug: /python/python/Volume-VolumeManager
-sidebar_key: python/Volume-VolumeManager
 sidebar_label: "VolumeManager"
+beta: false
 added_since: false
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "A `VolumeManager` instance maintains a connection to Zilliz Cloud's Volume service. Before creating, listing, or deleting volumes, you need to initiate a `VolumeManager` instance. | Python"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -82,7 +82,7 @@ A `VolumeManager` instance.
 from pymilvus.bulk_writer.volume_manager import VolumeManager
 
 volume_manager = VolumeManager(
-    cloud_endpoint="https://api.cloud.zilliz.com.cn",
+    cloud_endpoint="https://api.cloud.zilliz.com",
     api_key="YOUR_API_KEY"
 )
 ```

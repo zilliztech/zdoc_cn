@@ -1,12 +1,11 @@
 ---
 title: "Collection | Python | ORM"
 slug: /python/python/ORM-Collection
-sidebar_key: python/ORM-Collection
 sidebar_label: "Collection"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "A Collection instance represents a Milvus collection. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -63,9 +63,11 @@ Collection(
 
     The default value is **None**, indicating that a default schema is used.
 
-    <Admonition type="info" icon="📘" title="What is a schema?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    The schema is responsible for organizing data in the target collection. A valid schema should have multiple fields, which must include a primary key, a vector field, and several scalar fields.
+    What is a schema?
+    
+        The schema is responsible for organizing data in the target collection. A valid schema should have multiple fields, which must include a primary key, a vector field, and several scalar fields.
 
     </Admonition>
 
@@ -81,11 +83,13 @@ Collection(
 
     The value defaults to **1**, indicating that one shard is to be created along with this collection.
 
-    <Admonition type="info" icon="📘" title="What is sharding?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    Sharding refers to distributing write operations to different nodes to make the most of the parallel computing potential of a Milvus cluster for writing data.
-
-    By default, a collection contains one shard.
+    What is sharding?
+    
+        Sharding refers to distributing write operations to different nodes to make the most of the parallel computing potential of a Milvus cluster for writing data.
+    
+        By default, a collection contains one shard.
 
     </Admonition>
 
@@ -95,13 +99,15 @@ Collection(
 
     The value defaults to **Bounded** (**1**) with options of **Strong** (**0**), **Bounded** (**1**), **Session** (**2**), and **Eventually** (**3**).
 
-    <Admonition type="info" icon="📘" title="What is the consistency level?">
+    <Admonition type="info" icon="📘" title="Note">
 
-    Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
-
-    Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
-
-    You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
+    What is the consistency level?
+    
+        Consistency in a distributed database specifically refers to the property that ensures every node or replica has the same view of data when writing or reading data at a given time.
+    
+        Zilliz Cloud provides three consistency levels: **Strong**, **Bounded Staleness**, and **Eventually**, with **Bounded Staleness** set as the default.
+    
+        You can easily tune the consistency level when conducting a vector similarity search or query to make it best suit your application.
 
     </Admonition>
 

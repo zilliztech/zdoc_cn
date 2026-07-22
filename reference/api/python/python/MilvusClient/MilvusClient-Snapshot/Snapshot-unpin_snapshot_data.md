@@ -1,12 +1,11 @@
 ---
 title: "unpin_snapshot_data() | Python | MilvusClient"
 slug: /python/python/Snapshot-unpin_snapshot_data
-sidebar_key: python/Snapshot-unpin_snapshot_data
 sidebar_label: "unpin_snapshot_data()"
+beta: PRIVATE
 added_since: v3.0.x
 last_modified: false
 deprecate_since: false
-beta: PRIVATE
 notebook: false
 description: "This operation releases a snapshot pin created by `pinsnapshotdata()` so normal snapshot data garbage collection can resume. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

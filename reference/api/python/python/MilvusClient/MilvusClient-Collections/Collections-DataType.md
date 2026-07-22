@@ -1,12 +1,11 @@
 ---
 title: "DataType | Python | MilvusClient"
 slug: /python/python/Collections-DataType
-sidebar_key: python/Collections-DataType
 sidebar_label: "DataType"
+beta: false
 added_since: Inherit
 last_modified: v3.0.x
 deprecate_since: false
-beta: false
 notebook: false
 description: "This is an enumeration that provides the following constants. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

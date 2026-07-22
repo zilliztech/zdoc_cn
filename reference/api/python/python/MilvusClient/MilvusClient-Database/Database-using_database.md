@@ -1,12 +1,11 @@
 ---
 title: "using_database() | Python | MilvusClient"
 slug: /python/python/Database-using_database
-sidebar_key: python/Database-using_database
 sidebar_label: "using_database()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation changes the database currently in use. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';

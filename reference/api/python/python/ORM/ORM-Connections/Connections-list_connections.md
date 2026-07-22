@@ -1,12 +1,11 @@
 ---
 title: "list_connections() | Python | ORM"
 slug: /python/python/Connections-list_connections
-sidebar_key: python/Connections-list_connections
 sidebar_label: "list_connections()"
+beta: NEAR DEPRECATE
 added_since: Inherit
 last_modified: false
 deprecate_since: false
-beta: NEAR DEPRECATE
 notebook: false
 description: "This operation returns a list of all connection names and handler objects. | Python | ORM"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -61,7 +61,7 @@ None
 from pymilvus import connections
 
 connections.connect(
-    uri='https://in01-**************.ali-cn-hangzhou.zillizcloud.com:19531',
+    uri='https://in01-**************.aws-us-west-2.vectordb-uat3.zillizcloud.com:19531',
     token='admin:zilliz@123'
 )
 connections.list_connections()

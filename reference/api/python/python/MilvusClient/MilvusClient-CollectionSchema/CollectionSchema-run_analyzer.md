@@ -1,12 +1,11 @@
 ---
 title: "run_analyzer() | Python | MilvusClient"
 slug: /python/python/CollectionSchema-run_analyzer
-sidebar_key: python/CollectionSchema-run_analyzer
 sidebar_label: "run_analyzer()"
+beta: false
 added_since: v2.5.x
 last_modified: false
 deprecate_since: false
-beta: false
 notebook: false
 description: "This operation processes the input data and generates tokenized output. | Python | MilvusClient"
 type: docx
@@ -24,6 +23,7 @@ keywords:
   - pymilvus30
 displayed_sidebar: pythonSidebar
 
+displayed_sidbar: pythonSidebar
 ---
 
 import Admonition from '@theme/Admonition';
@@ -85,7 +85,7 @@ A tuple containing:
 
 ## Examples\{#examples}
 
-```plaintext
+```python
 from pymilvus import MilvusClient
 
 client = MilvusClient(
