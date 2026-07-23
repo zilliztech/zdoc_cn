@@ -766,6 +766,10 @@ function applyTranslatePatch(content) {
     .replace(/japanese/g, 'chinese');
 }
 
+function applyCnVerifyDocsPatch(content) {
+  return content.replace(/scripts\/sdk-reference-workflow\.test\.js\s+/g, '');
+}
+
 function applyCnTestFixturePatch(content) {
   return content.replace(/selectedManifest\(\{ locale: 'zh-CN' \}\)/g, "selectedManifest({ locale: 'en-US' })");
 }
@@ -782,6 +786,7 @@ function transform(relativePath, content, context = { guidesRootToken: UPSTREAM_
   if (relativePath === '.github/workflows/_fetch-guides-sources.yml') next = applyCnGuidesFetchThrottlePatch(applyOssPatch(next));
   if (relativePath === '.github/workflows/_render-guides-table.yml') next = applyRenderGuidesTableAssembledUpstreamPatch(next);
   if (relativePath === '.github/workflows/_assemble-guides.yml') next = applyAssembleGuidesAssembledUpstreamPatch(next);
+  if (relativePath === '.github/workflows/_verify-docs.yml') next = applyCnVerifyDocsPatch(next);
   if (relativePath === 'scripts/collect-build-card-notes.js') next = applyCnCollectBuildCardNotesPatch(next);
   if (relativePath === 'scripts/docs-workflow/guides-tables.js') next = applyCnGuidesTableSlugPatch(next);
   if (relativePath === 'scripts/docs-workflow/render-guides-table.js') next = applyCnRenderGuidesTableSlugNormalizationPatch(next);

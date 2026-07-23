@@ -200,7 +200,12 @@ jobs:
 `);
   writeFile(upstream, '.github/workflows/_translate-content-group.yml', 'name: translate ja-JP content group\n');
   writeFile(upstream, '.github/workflows/_translate-publish-batch.yml', 'name: translate publish Japanese batch\n');
-  writeFile(upstream, '.github/workflows/_verify-docs.yml', 'name: verify docs\n');
+  writeFile(upstream, '.github/workflows/_verify-docs.yml', `name: verify docs
+jobs:
+  verify:
+    steps:
+      - run: node --test scripts/sdk-reference-workflow.test.js scripts/restore-generated-state.test.js
+`);
   writeFile(upstream, '.github/workflows/translate-codex.yml', `name: translate codex ja-JP
 concurrency:
   group: docs-production-dev
@@ -355,6 +360,10 @@ test('write mode copies upstream workflows and applies CN mutations', () => {
     assert.match(fetchDocs, /npm ci/);
     assert.doesNotMatch(fetchDocs, /cache: pnpm/);
     assert.doesNotMatch(fetchDocs, /pnpm install --frozen-lockfile/);
+
+    const verifyDocs = readFile(fixture.root, '.github/workflows/_verify-docs.yml');
+    assert.doesNotMatch(verifyDocs, /scripts\/sdk-reference-workflow\.test\.js/);
+    assert.match(verifyDocs, /scripts\/restore-generated-state\.test\.js/);
 
     const translateCodex = readFile(fixture.root, '.github/workflows/translate-codex.yml');
     assert.match(translateCodex, /translate codex zh-CN/);

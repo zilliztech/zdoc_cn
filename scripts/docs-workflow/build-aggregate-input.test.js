@@ -26,6 +26,19 @@ test('builds artifact-only rows directly from producer terminal states', () => {
   })
 })
 
+test('does not request translation for Chinese Guides in publish mode', () => {
+  assert.deepEqual(buildAggregateInput({
+    MODE: 'publish', SELECTED_GROUP: 'guides', FINAL_VERIFICATION: 'passed',
+    GUIDES_PRODUCER: 'artifact_ready', GUIDES_SOURCE: 'published', GUIDES_SOURCE_SHA: 'a'.repeat(40),
+    GUIDES_TRANSLATOR: 'translation_ready', GUIDES_TRANSLATION: 'published', GUIDES_TRANSLATION_SHA: 'b'.repeat(40),
+  }), {
+    mode: 'publish', requestedGroups: ['guides'], groups: { guides: {
+      source: 'source_published', translation: 'skipped', translationRequested: false,
+      sourceCommitSha: 'a'.repeat(40),
+    } }, finalVerification: 'passed',
+  })
+})
+
 test('includes optional Guides translation candidate counts when supplied', () => {
   const result = buildAggregateInput({
     MODE: 'publish', SELECTED_GROUP: 'guides', FINAL_VERIFICATION: 'passed',
@@ -54,30 +67,17 @@ test('workflow passes the exact publisher result through finalization and aggreg
   assert.doesNotMatch(aggregate.env.GUIDES_TRANSLATION_SHA, /\|\|/)
 })
 
-test('aggregate input preserves the finalized Guides translation SHA exactly', () => {
-  const verifiedSha = 'b'.repeat(40)
-  const result = buildAggregateInput({
-    MODE: 'publish', SELECTED_GROUP: 'guides', FINAL_VERIFICATION: 'passed',
-    GUIDES_PRODUCER: 'artifact_ready', GUIDES_SOURCE: 'published', GUIDES_SOURCE_SHA: 'c'.repeat(40),
-    GUIDES_TRANSLATOR: 'translation_ready', GUIDES_TRANSLATION: 'published', GUIDES_TRANSLATION_SHA: verifiedSha,
-  })
-  assert.equal(result.groups.guides.translationCommitSha, verifiedSha)
-})
-
-test('aggregate input preserves nonzero Guides no_changes SHA but omits zero-batch empty SHA', () => {
-  const verifiedSha = 'd'.repeat(40)
-  const nonzero = buildAggregateInput({
-    MODE: 'publish', SELECTED_GROUP: 'guides', FINAL_VERIFICATION: 'passed',
-    GUIDES_PRODUCER: 'artifact_ready', GUIDES_SOURCE: 'no_changes',
-    GUIDES_TRANSLATOR: 'translation_ready', GUIDES_TRANSLATION: 'no_changes', GUIDES_TRANSLATION_SHA: verifiedSha,
-  })
-  assert.equal(nonzero.groups.guides.translationCommitSha, verifiedSha)
-  const zero = buildAggregateInput({
-    MODE: 'publish', SELECTED_GROUP: 'guides', FINAL_VERIFICATION: 'passed',
-    GUIDES_PRODUCER: 'artifact_ready', GUIDES_SOURCE: 'no_changes',
-    GUIDES_TRANSLATOR: 'no_changes', GUIDES_TRANSLATION: 'no_changes', GUIDES_TRANSLATION_SHA: '',
-  })
-  assert.equal(Object.hasOwn(zero.groups.guides, 'translationCommitSha'), false)
+test('aggregate input ignores legacy Guides translation results', () => {
+  for (const translation of ['published', 'no_changes']) {
+    const result = buildAggregateInput({
+      MODE: 'publish', SELECTED_GROUP: 'guides', FINAL_VERIFICATION: 'passed',
+      GUIDES_PRODUCER: 'artifact_ready', GUIDES_SOURCE: 'no_changes',
+      GUIDES_TRANSLATOR: 'translation_ready', GUIDES_TRANSLATION: translation, GUIDES_TRANSLATION_SHA: 'd'.repeat(40),
+    })
+    assert.equal(result.groups.guides.translation, 'skipped')
+    assert.equal(result.groups.guides.translationRequested, false)
+    assert.equal(Object.hasOwn(result.groups.guides, 'translationCommitSha'), false)
+  }
 })
 
 test('treats undefined and empty translation candidate inputs as absent', () => {

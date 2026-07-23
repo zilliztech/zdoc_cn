@@ -30,9 +30,11 @@ test('owns Java and Go landing pages outside their generated v2 roots', () => {
   assert.ok(getContentGroup('go').ownedPaths.includes('reference/api/go/go/go.md'));
 });
 
-test('configures durable translation batches for Guides only', () => {
+test('disables translation for Chinese Guides while keeping reference translation enabled', () => {
+  assert.equal(getContentGroup('guides').productionTranslate, false);
   assert.equal(getContentGroup('guides').durableTranslationBatchSize, 30);
   for (const group of ['python', 'java', 'node', 'go', 'cli', 'rest']) {
+    assert.equal(getContentGroup(group).productionTranslate, true);
     assert.equal(getContentGroup(group).durableTranslationBatchSize, 0);
   }
   assert.throws(() => { getContentGroup('guides').durableTranslationBatchSize = 10; }, TypeError);

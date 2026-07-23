@@ -91,16 +91,19 @@ jobs:
           [[ "$RETENTION_DAYS" =~ ^[1-9][0-9]*$ ]]
           git checkout --detach "$master_sha"
           groups=(guides python java node go cli rest)
+          translation_groups=(python java node go cli rest)
           [[ "$SELECTED_GROUP" != all ]] && groups=("$SELECTED_GROUP")
           card_parts=()
           if [[ "$SELECTED_GROUP" == all ]]; then
             card_parts=("Produce manuals (0/${#groups[@]})")
-            [[ "$PUBLISH" == true ]] && card_parts+=("Publish sources (0/${#groups[@]})" "Translate manuals (0/${#groups[@]})" "Publish translations (0/${#groups[@]})" Verify)
+            [[ "$PUBLISH" == true ]] && card_parts+=("Publish sources (0/${#groups[@]})" "Translate references (0/${#translation_groups[@]})" "Publish translations (0/${#translation_groups[@]})" Verify)
           else
             for group in "${groups[@]}"; do
               card_parts+=("Produce $group")
-              if [[ "$PUBLISH" == true ]]; then
+              if [[ "$PUBLISH" == true && "$group" != guides ]]; then
                 card_parts+=("Publish $group" "Translate $group" "Publish $group translation")
+              elif [[ "$PUBLISH" == true ]]; then
+                card_parts+=("Publish $group")
               fi
             done
             [[ "$PUBLISH" == true ]] && card_parts+=(Verify)
@@ -318,7 +321,7 @@ jobs:
       validate_command: 'node "$GITHUB_WORKSPACE/scripts/validate-generated-sidebars.js"'
   prepare_guides_translation_batches:
     needs: [prepare, publish_guides]
-    if: ${{ always() && needs.prepare.outputs.publish == 'true' && (needs.prepare.outputs.selected_group == 'all' || needs.prepare.outputs.selected_group == 'guides') && (needs.publish_guides.outputs.status == 'published' || needs.publish_guides.outputs.status == 'no_changes') }}
+    if: ${{ false }}
     uses: ./.github/workflows/_prepare-translation-batches.yml
     with:
       group: guides

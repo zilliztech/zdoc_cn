@@ -343,6 +343,9 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
         [/publish_guides_translation_batches:[\s\S]*needs: \[[^\]]*publish_guides[^\]]*\][\s\S]*source_commit_sha: \$\{\{ needs\.publish_guides\.outputs\.commit_sha \|\| needs\.prepare\.outputs\.dev_baseline_sha \}\}[\s\S]*expected_target_sha: \$\{\{ needs\.publish_guides\.outputs\.commit_sha \}\}/, 'must pass authenticated final Guides source and target identities'],
       ]
       for (const [pattern, message] of requiredPatterns) if (!pattern.test(source)) errors.push(`${file}: ${message}`)
+      if (workflow.jobs?.prepare_guides_translation_batches?.if !== '${{ false }}') {
+        errors.push(`${file}: Chinese Guides translation must remain disabled`)
+      }
       const finalizeStep = workflow.jobs?.finalize_guides_translation?.steps?.find(step => step.id === 'result')
       if (finalizeStep?.env?.BATCH_COUNT !== "${{ needs.prepare_guides_translation_batches.result != 'success' && '0' || needs.prepare_guides_translation_batches.outputs.batch_count }}" ||
           finalizeStep?.env?.BATCH_RESULT !== '${{ needs.translate_guides_batches.result }}' ||
@@ -372,6 +375,13 @@ function validateWorkflowPolicies(directory = workflowDirectory, options = {}) {
           cardNotes?.env?.CARD_GUIDES_FINAL_COMMIT_SHA !== '${{ needs.finalize_guides_translation.outputs.commit_sha }}' ||
           /resolve_final|\|\|/.test(JSON.stringify({ path: cardNotes?.env?.CARD_GUIDES_PUBLICATION_REPORT, source: cardNotes?.env?.CARD_GUIDES_SOURCE_SHA, target: cardNotes?.env?.CARD_GUIDES_TARGET_SHA }))) {
         errors.push(`${file}: aggregate must collect exact run-attempt Guides publication evidence before card notes`)
+      }
+    }
+
+    if (file === 'translate-codex.yml') {
+      const groupInput = workflow.on?.workflow_dispatch?.inputs?.group
+      if (groupInput?.default === 'guides' || groupInput?.options?.includes('guides')) {
+        errors.push(`${file}: manual translation must be scoped to reference groups`)
       }
     }
 

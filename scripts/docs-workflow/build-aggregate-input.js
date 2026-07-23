@@ -1,7 +1,7 @@
 'use strict'
 
 const fs = require('node:fs')
-const { listContentGroups } = require('./content-groups')
+const { getContentGroup, listContentGroups } = require('./content-groups')
 
 const CANDIDATE_COUNT_KEYS = ['total', 'current_delta', 'missing_target', 'stale_source']
 
@@ -26,6 +26,7 @@ function buildAggregateInput(env) {
   const requestedGroups = env.SELECTED_GROUP === 'all' ? listContentGroups() : [env.SELECTED_GROUP]
   const groups = {}
   for (const group of requestedGroups) {
+    const translationRequested = mode === 'publish' && getContentGroup(group).productionTranslate
     const prefix = group.toUpperCase()
     const producer = env[`${prefix}_PRODUCER`] || ''
     const publisher = env[`${prefix}_SOURCE`] || ''
@@ -35,13 +36,13 @@ function buildAggregateInput(env) {
       : producer !== 'artifact_ready' ? 'fetch_failed'
       : publisher === 'published' ? 'source_published'
         : publisher === 'no_changes' ? 'no_changes' : 'publish_failed'
-    let translation = mode === 'artifact_only' ? 'skipped'
+    let translation = !translationRequested ? 'skipped'
       : !['source_published', 'no_changes'].includes(source) ? 'skipped'
       : translator === 'failed' ? 'translation_failed'
         : translator === 'no_changes' ? 'no_changes'
           : translationPublisher === 'published' ? 'translation_published'
             : translationPublisher === 'no_changes' ? 'no_changes' : 'translation_failed'
-    const entry = { source, translation, translationRequested: mode === 'publish' }
+    const entry = { source, translation, translationRequested }
     if (source === 'source_published') entry.sourceCommitSha = env[`${prefix}_SOURCE_SHA`]
     if (translation === 'translation_published') entry.translationCommitSha = env[`${prefix}_TRANSLATION_SHA`]
     if (translation === 'no_changes' && env[`${prefix}_TRANSLATION_SHA`]) entry.translationCommitSha = env[`${prefix}_TRANSLATION_SHA`]

@@ -238,6 +238,15 @@ test('CN docs production supports manual dispatch and the approved schedule', ()
   assert.doesNotMatch(workflow, /Global Docs(?: Artifact-Only)? Build/)
 })
 
+test('CN docs production never starts Guides translation', () => {
+  const workflowPath = path.join(process.cwd(), '.github/workflows/fetch-docs.yml')
+  const workflow = yaml.load(fs.readFileSync(workflowPath, 'utf8'))
+  assert.equal(workflow.jobs.prepare_guides_translation_batches.if, '${{ false }}')
+  const manual = yaml.load(fs.readFileSync(path.join(process.cwd(), '.github/workflows/translate-codex.yml'), 'utf8'))
+  assert.equal(manual.on.workflow_dispatch.inputs.group.default, 'python')
+  assert.equal(manual.on.workflow_dispatch.inputs.group.options.includes('guides'), false)
+})
+
 test('content producers follow upstream-parallel source graph and serialized publishers', () => {
   const workflowPath = path.join(process.cwd(), '.github/workflows/fetch-docs.yml')
   const workflow = yaml.load(fs.readFileSync(workflowPath, 'utf8'))
@@ -574,7 +583,12 @@ test('reusable final verification uses immutable master tooling against exact fi
   assert.match(verificationStep, /run: \|\n\s+set -euo pipefail\n[\s\S]*validate-generated-sidebars\.js[^\n]*\| tee/)
   assert.ok(verificationStep.indexOf('set -euo pipefail') < verificationStep.indexOf('validate-generated-sidebars.js'))
   assert.match(workflow, /validate-workflow-policy\.js/)
-  for (const testFile of ['sdk-reference-workflow.test.js', 'restore-generated-state.test.js', 'validate-workflow-policy.test.js', 'aggregate-results.test.js', 'build-aggregate-input.test.js', 'checkpoint-contention.test.js']) assert.match(workflow, new RegExp(testFile.replaceAll('.', '\\.')))
+  for (const testFile of ['restore-generated-state.test.js', 'validate-workflow-policy.test.js', 'aggregate-results.test.js', 'build-aggregate-input.test.js', 'checkpoint-contention.test.js']) assert.match(workflow, new RegExp(testFile.replaceAll('.', '\\.')))
+  const testCommand = verificationStep.match(/node --test ([^\n]+?) 2>&1 \| tee/)
+  assert.ok(testCommand, 'final verification must run an explicit Node test list')
+  for (const testFile of testCommand[1].trim().split(/\s+/)) {
+    assert.equal(fs.existsSync(path.join(process.cwd(), testFile)), true, `final verification test must exist: ${testFile}`)
+  }
   assert.match(workflow, /actions\/upload-artifact@v4[\s\S]*if: \$\{\{ always\(\) \}\}/)
   assert.match(workflow, /value: \$\{\{ jobs\.verify\.outputs\.status \}\}/)
   assert.match(workflow, /status=passed[\s\S]*status=failed/)
@@ -1227,7 +1241,9 @@ test('manual translation wrapper calls reusable translation then publisher witho
   assert.match(workflow, /baseline_artifact_name: \$\{\{ needs\.translate\.outputs\.baseline_artifact_name \}\}/)
   assert.doesNotMatch(workflow, /secrets: inherit/)
   assert.match(workflow, /secrets:\n      TRANSLATION_AGENT_API_KEY: \$\{\{ secrets\.TRANSLATION_AGENT_API_KEY \}\}\n      REVIEW_AGENT_API_KEY: \$\{\{ secrets\.REVIEW_AGENT_API_KEY \}\}/)
-  assert.match(workflow, /commit_message: "\$\{\{ inputs\.group == 'guides' && 'i18n\(guides\): publish translations'[\s\S]*'i18n\(rest\): publish translations' \}\}"/)
+  assert.match(workflow, /options: \[python, java, node, go, cli, rest\]/)
+  assert.doesNotMatch(workflow, /options: \[guides|i18n\(guides\)/)
+  assert.match(workflow, /commit_message: "\$\{\{ inputs\.group == 'python' && 'i18n\(python\): publish translations'[\s\S]*'i18n\(rest\): publish translations' \}\}"/)
   assert.match(workflow, /TARGET_BRANCH_INPUT: \$\{\{ inputs\.target_branch \}\}/)
   const resolverStep = workflow.slice(workflow.indexOf('- id: refs'), workflow.indexOf('  translate:'))
   const resolver = resolverStep.slice(resolverStep.indexOf('        run: |'))
