@@ -1,0 +1,96 @@
+---
+title: "RevokeRole() | Go | v2"
+slug: /go/go/v2-Authentication-RevokeRole
+sidebar_label: "RevokeRole()"
+beta: false
+added_since: v2.6.x
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作从用户移除角色。 | Go | v2"
+type: docx
+token: PKWMdOpDkoIXhFxDsgrc8oQVnIf
+sidebar_position: 23
+keywords: 
+  - 向量维度
+  - ANN Search
+  - 什么是向量嵌入
+  - 向量数据库教程
+  - zilliz
+  - Zilliz Cloud
+  - cloud
+  - RevokeRole()
+  - gov230
+displayed_sidebar: goSidebar
+
+displayed_sidbar: goSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# RevokeRole()
+
+此操作从用户移除角色。
+
+```go
+func (c *Client) RevokeRole(ctx context.Context, opt RevokeRoleOption, callOpts ...grpc.CallOption) error
+```
+
+## 请求语法\{#request-syntax}
+
+```go
+option := milvusclient.NewRevokeRoleOption(userName, roleName)
+
+err := client.RevokeRole(ctx, option)
+```
+
+**参数：**
+
+- **userName** (*string*)
+
+    用户的名称。
+
+- **roleName** (*string*)
+
+    角色的名称。
+
+**返回类型：**
+
+*error*
+
+**返回：**
+
+成功时返回 nil，或返回描述出错原因的错误。
+
+**异常：**
+
+- **error**
+
+    检查 `err != nil` 以获取失败详情。
+
+## 示例\{#example}
+
+```go
+import (
+	"context"
+
+	"github.com/milvus-io/milvus/client/v2/milvusclient"
+)
+
+ctx, cancel := context.WithCancel(context.Background())
+defer cancel()
+
+cli, err := milvusclient.New(ctx, &milvusclient.ClientConfig{
+	Address: "YOUR_CLUSTER_ENDPOINT",
+})
+if err != nil {
+	// handle error
+}
+defer cli.Close(ctx)
+
+err = cli.RevokeRole(ctx, milvusclient.NewRevokeRoleOption("my_user", "my_role"))
+if err != nil {
+	// handle error
+}
+```
