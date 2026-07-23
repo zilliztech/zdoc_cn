@@ -202,7 +202,7 @@ client.create_collection(
 
 Clusters compatible with Milvus v3.0.x support Nullable StructArray Field。Nullable StructArray Field 允许 Entity 为整个 StructArray Field 存储 `null`。
 
-```plaintext
+```python
 schema.add_field(
     field_name="chunks",
     datatype=DataType.ARRAY,
@@ -225,7 +225,7 @@ Clusters compatible with Milvus v3.0.x support 向现有 Collection 添加 Struc
 
 要向现有 Collection 添加 StructArray Field，请先定义 Struct Schema。然后调用 `add_collection_struct_field()` 并设置 `nullable=True`。
 
-```plaintext
+```python
 chunk_schema = client.create_struct_field_schema()
 chunk_schema.add_field(
     field_name="text",
@@ -273,7 +273,7 @@ client.add_collection_struct_field(
 
 创建 StructArray Field 后，不能再向该现有 StructArray Field 添加新的 subfield。如果后续需要更多元素属性，请调用 `drop_collection_field()` 删除 StructArray Field，然后用更新后的 Struct Schema 添加新的 StructArray Field。
 
-```plaintext
+```python
 client.drop_collection_field(
     collection_name="tech_articles",
     field_name="chunks",

@@ -46,7 +46,7 @@ Milvus 使用基于 manifest 的 Snapshot 架构，在不复制实际向量数�
 
 在上述信息中，Milvus 会为每个 Segment 生成一个 Apache Avro manifest 文件，并将 Snapshot metadata、Collection description、Index information 以及 manifest 文件路径存储在 JSON 文件中。下面展示了 Snapshot 文件夹结构。
 
-```plaintext
+```python
 snapshots/{collection_id}/
 ├── metadata/
 │   └── {snapshot_id}.json         # Snapshot metadata（JSON 格式）

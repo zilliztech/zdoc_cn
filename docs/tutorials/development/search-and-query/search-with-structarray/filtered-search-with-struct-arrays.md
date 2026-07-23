@@ -81,7 +81,7 @@ results = client.search(
 
 当标量条件必须作用于参与 Element-level Vector Search 的同一个 Struct 元素时，请使用 `element_filter(structArrayField, predicate)`。在谓词中，使用 `$[subfield]` 引用当前 Struct 元素的标量子字段。
 
-```plaintext
+```python
 query_vector = [0.19, 0.24, 0.30, 0.37]
 
 filter_expr = (
@@ -143,7 +143,7 @@ for hits in results:
 | `MATCH_MOST` | 至多 `N` 个 Struct 元素必须满足谓词。 | `MATCH_MOST(chunks, $[section] == "appendix", threshold=1)` |
 | `MATCH_EXACT` | 恰好 `N` 个 Struct 元素必须满足谓词。 | `MATCH_EXACT(chunks, $[section] == "summary", threshold=1)` |
 
-```plaintext
+```python
 filter_expr = (
     'category == "search" && '
     'MATCH_ANY(chunks, $[section] == "index" && $[quality_score] > 0.9)'

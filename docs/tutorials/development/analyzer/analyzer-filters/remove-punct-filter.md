@@ -240,7 +240,7 @@ if err != nil {
 
 ### 预期结果\{#expected-output}
 
-```plaintext
+```sql
 ['Привет', 'Как', 'дела']
 ```
 

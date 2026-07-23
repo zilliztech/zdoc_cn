@@ -347,6 +347,6 @@ if err != nil {
 
 ### 预期输出\{#expected-output}
 
-```plaintext
+```sql
 ['the', 'milvus', 'vector', 'database', 'is', 'built', 'for', 'scale!']
 ```

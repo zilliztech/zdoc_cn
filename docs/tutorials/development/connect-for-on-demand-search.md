@@ -62,7 +62,7 @@ client = MilvusClient(
 
 使用 session 对象将后续操作绑定到按需集群。
 
-```plaintext
+```python
 session = client.session(cluster_id="inxx-xxxxxxxxxxxxxxx")
 ```
 

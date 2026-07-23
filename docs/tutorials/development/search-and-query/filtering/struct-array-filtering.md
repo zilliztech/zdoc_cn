@@ -47,19 +47,19 @@ StructArray 操作符应使用标量子字段。Vector 子字段由向量搜索�
 
 在谓词内部，使用 `$[subfield]` 引用当前 Struct 元素的标量子字段。
 
-```plaintext
+```python
 element_filter(chunks, $[section] == "index")
 ```
 
 当谓词内部使用多个条件时，所有 `$[subfield]` 引用都作用于同一个 Struct 元素：
 
-```plaintext
+```python
 element_filter(chunks, $[section] == "index" && $[quality_score] > 0.9)
 ```
 
 将 Entity-level 谓词与 `element_filter` 组合使用时，请把 `element_filter` 放在表达式末尾：
 
-```plaintext
+```python
 # Correct
 category == "index" && element_filter(chunks, $[quality_score] > 0.9)
 
@@ -87,7 +87,7 @@ element_filter(chunks, $[quality_score] > 0.9) && category == "index"
 
 如果 StructArray 中至少一个元素满足谓词，`MATCH_ANY` 的求值结果为 `true`。
 
-```plaintext
+```python
 MATCH_ANY(chunks, $[section] == "index")
 ```
 
@@ -97,7 +97,7 @@ MATCH_ANY(chunks, $[section] == "index")
 
 如果 StructArray 中每个元素都满足谓词，`MATCH_ALL` 的求值结果为 `true`。
 
-```plaintext
+```python
 MATCH_ALL(chunks, $[has_code] == true)
 ```
 
@@ -107,7 +107,7 @@ MATCH_ALL(chunks, $[has_code] == true)
 
 如果满足谓词的元素数量大于或等于 `threshold`，`MATCH_LEAST` 的求值结果为 `true`。
 
-```plaintext
+```python
 MATCH_LEAST(chunks, $[quality_score] > 0.9, threshold=2)
 ```
 
@@ -117,7 +117,7 @@ MATCH_LEAST(chunks, $[quality_score] > 0.9, threshold=2)
 
 如果满足谓词的元素数量小于或等于 `threshold`，`MATCH_MOST` 的求值结果为 `true`。
 
-```plaintext
+```python
 MATCH_MOST(chunks, $[has_code] == true, threshold=1)
 ```
 
@@ -127,7 +127,7 @@ MATCH_MOST(chunks, $[has_code] == true, threshold=1)
 
 如果满足谓词的元素数量恰好等于 `threshold`，`MATCH_EXACT` 的求值结果为 `true`。
 
-```plaintext
+```python
 MATCH_EXACT(chunks, $[section] == "filter", threshold=1)
 ```
 

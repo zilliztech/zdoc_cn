@@ -101,7 +101,7 @@ for hits in results:
 
 可以将 Grouping Search 与 StructArray 标量过滤结合使用。当标量条件应限制哪些 Struct 元素参与 Element-level Vector Search 时，请使用 `element_filter`。
 
-```plaintext
+```python
 filter_expr = (
     'category == "search" && '
     'element_filter(chunks, '

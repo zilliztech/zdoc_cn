@@ -114,7 +114,7 @@ results = client.hybrid_search(
 
 以下示例假设 `chunks` StructArray Field 有两个 Element-level Vector 子字段：`chunks[emb]` 和 `chunks[code_emb]`，且二者都使用常规 Vector metric。
 
-```plaintext
+```python
 index_chunk_req = AnnSearchRequest(
     data=[query_vector],
     anns_field="chunks[emb]",
@@ -169,7 +169,7 @@ for hits in results:
 
 当需要控制同一 Entity 中多个匹配元素如何折叠时，请在 StructArray Element-level `AnnSearchRequest` 的 `params` 中使用 `element_scope`。
 
-```plaintext
+```python
 title_req = AnnSearchRequest(
     data=[query_vector],
     anns_field="title_vector",

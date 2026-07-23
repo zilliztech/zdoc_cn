@@ -157,7 +157,7 @@ Standard Analyzer 接受以下可选参数：
 
 自定义停用词的配置示例：  
 
-<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"}]}>
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"NodeJS","value":"javascript"},{"label":"Go","value":"go"},{"label":"cURL","value":"bash"}]}>
 <TabItem value='python'>
 
 ```python
@@ -189,11 +189,16 @@ analyzer_params = {
 ```
 
 </TabItem>
-</Tabs>
 
-```plaintext
+<TabItem value='go'>
+
+```go
 analyzerParams = map[string]any{"type": "standard", "stop_words": []string{"of"}}
 ```
+
+</TabItem>
+
+<TabItem value='bash'>
 
 ```bash
 # restful
@@ -202,6 +207,9 @@ analyzerParams='{
   "stop_words": ["of"]
 }'
 ```
+
+</TabItem>
+</Tabs>
 
 定义 `analyzer_params` 后，您可以在定义集合模式时将其应用于 VARCHAR 字段。这使得 Zilliz Cloud 能够使用指定的 Analyzer 处理该字段中的文本，以实现高效的分词和过滤。更多信息，请参阅[使用示例](./analyzer-overview#example-use)。  
 
@@ -383,7 +391,7 @@ curl -X POST "YOUR_CLUSTER_ENDPOINT/v2/vectordb/common/run_analyzer" \
 
 ### 预期输出\{#expected-output}
 
-```plaintext
+```sql
 Standard analyzer output: ['the', 'milvus', 'vector', 'database', 'is', 'built', 'scale']
 ```
 

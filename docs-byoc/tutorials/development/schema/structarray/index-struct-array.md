@@ -102,7 +102,7 @@ client.create_index(
 
 对 StructArray Vector subfield 使用 `AUTOINDEX`。
 
-```plaintext
+```python
 index_params = client.prepare_index_params()
 
 index_params.add_index(
@@ -135,7 +135,7 @@ client.create_index(
 
 当你在 Filter 中使用 StructArray Scalar subfield 时，请在这些 subfield 上创建 Scalar Index。使用相同的 `structArray[subfield]` 路径语法。
 
-```plaintext
+```python
 index_params = client.prepare_index_params()
 
 index_params.add_index(
@@ -170,7 +170,7 @@ client.create_index(
 
 对 StructArray Scalar subfield 使用 `AUTOINDEX`。
 
-```plaintext
+```python
 index_params = client.prepare_index_params()
 
 index_params.add_index(

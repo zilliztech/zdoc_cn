@@ -30,7 +30,7 @@ import Grid from '@site/src/components/Grid';
 
 例如，一个 Collection 可以把一篇文章存为一个 Entity，并把文章片段存储在名为 `chunks` 的 StructArray Field 中。每个片段可以包含文本、章节元数据、质量评分，以及一个或多个 Vector embedding。
 
-```plaintext
+```json
 {
   "doc_id": 1,
   "title": "Vector search tuning guide",

@@ -58,7 +58,7 @@ import Admonition from '@theme/Admonition';
 
 `chunks` value 是 Struct 元素数组。每个元素都是一个对象，其 key 为 subfield 名称。
 
-```plaintext
+```json
 {
   "doc_id": 1,
   "title": "StructArray indexing patterns",
@@ -185,7 +185,7 @@ print(result)
 
 如果 `chunks` Field 是 Nullable，Entity 可以将整个 `chunks` Field 设置为 null。在 Python 中，使用 `None` 表示 null value。
 
-```plaintext
+```python
 client.insert(
     collection_name="tech_articles",
     data=[
@@ -212,7 +212,7 @@ Nullable StructArray Field 仅在 clusters compatible with Milvus v3.0.x 中可�
 
 你可以 Query Collection，并返回 StructArray Field 或选定 subfield。
 
-```plaintext
+```python
 rows = client.query(
     collection_name="tech_articles",
     filter="doc_id in [1, 2, 3]",

@@ -252,7 +252,7 @@ std::cout << "Collection ID: " << response.Desc().ID() << std::endl;
 
 如果您已经创建了名为 `quick_setup` 的 Collection，运行上述示例的结果如下：
 
-```plaintext
+```sql
 {
     'collection_name': 'quick_setup', 
     'auto_id': False, 

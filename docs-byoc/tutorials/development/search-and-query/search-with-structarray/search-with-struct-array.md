@@ -105,7 +105,7 @@ for hits in results:
 
 当每个 Struct 元素都应独立参与向量搜索时，请使用 Element-level Search。查询是常规 Vector，目标 Vector 子字段必须使用常规 Vector metric 建立 Index。
 
-```plaintext
+```python
 query_vector = [0.19, 0.24, 0.30, 0.37]
 
 results = client.search(
