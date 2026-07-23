@@ -1,0 +1,71 @@
+---
+title: "download-invoice | Cloud"
+slug: /cli/cli/Billing-downloadinvoice
+sidebar_label: "download-invoice"
+beta: false
+added_since: v1.0.x
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作会将发票下载为 PDF。请先使用 `zilliz billing invoices` 列出可用的发票 ID。如果未提供 `--output-file` 或 `--dir`，PDF 将保存为 `./.pdf`。| Cloud"
+type: docx
+token: RnGZdWUpmojfvHxReFicTHYEnwd
+sidebar_position: 2
+keywords: 
+  - 图像相似性搜索
+  - 上下文窗口
+  - 自然语言搜索
+  - 相似性搜索
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - download-invoice
+  - cliv14
+displayed_sidebar: cliSidebar
+
+displayed_sidbar: cliSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# download-invoice
+
+此操作会将发票下载为 PDF。请先使用 `zilliz billing invoices` 列出可用的发票 ID。如果未提供 `--output-file` 或 `--dir`，PDF 将保存为 `./<invoiceId>.pdf`。
+
+## 概要\{#synopsis}
+
+```bash
+zilliz billing download-invoice
+--invoice-id <string>
+[--output-file <path> | --dir <path>]
+```
+
+## 选项\{#options}
+
+- **--invoice-id** (*string*) -
+
+    **[必需]**
+
+    指定要下载的发票 ID。使用 `zilliz billing invoices` 列出 ID。
+
+- **--output-file, -o** (*path*) -
+
+    指定输出文件路径。如果缺少 `.pdf`，将自动追加。与 `--dir` 互斥。
+
+- **--dir, -d** (*path*) -
+
+    指定一个目录，用于将 PDF 保存为 `<dir>/<invoiceId>.pdf`。与 `--output-file` 互斥。
+
+## 示例\{#example}
+
+```bash
+# Save to ./<invoiceId>.pdf
+zilliz billing download-invoice --invoice-id inv-xxxx
+
+# Save to a specific directory
+zilliz billing download-invoice --invoice-id inv-xxxx -d ~/Downloads
+
+# Save to an explicit file path
+zilliz billing download-invoice --invoice-id inv-xxxx -o ~/Downloads/march.pdf
+```

@@ -1,0 +1,72 @@
+---
+title: "version | Cloud"
+slug: /cli/cli/Global-version
+sidebar_label: "version"
+beta: false
+added_since: v0.1.x
+last_modified: v1.4.x
+deprecate_since: false
+notebook: false
+description: "此操作显示已安装的 Zilliz CLI 版本。 | Cloud"
+type: docx
+token: MzJHdc3iSoGlKsx4D6TcoY5anOf
+sidebar_position: 1
+keywords: 
+  - 稀疏向量
+  - 向量维度
+  - ANN Search
+  - 什么是向量嵌入
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - version
+  - cliv14
+displayed_sidebar: cliSidebar
+
+displayed_sidbar: cliSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# version
+
+此操作显示已安装的 Zilliz CLI 版本。
+
+## 描述\{#description}
+
+显示已安装的 Zilliz CLI 版本。该示例还展示了如何使用全局输出选项请求 JSON 输出。
+
+## 概要\{#synopsis}
+
+```bash
+zilliz version
+```
+
+## 选项\{#options}
+
+此命令没有特定于命令的选项。
+
+## 示例\{#example}
+
+```bash
+zilliz version
+
+# 示例输出
+# zilliz 1.4.2
+
+# 输出格式是全局 CLI 选项。要获取 JSON 输出：
+zilliz version -o json
+
+# 示例输出
+# {
+#   "version": "1.4.2"
+# }
+
+# 如果有较新的 CLI 可用，升级指南将写入 stderr：
+# Tips: A new version of zilliz (1.4.2) is available. Run `zilliz upgrade` to update.
+```
+
+## Shell 补全\{#shell-completion}
+
+Shell 补全会在首次运行时自动配置，并在每次升级后再次配置。CLI 会检测已安装的 shell，例如 Bash、Zsh、Fish、Elvish 和 PowerShell，为 `zilliz` 和 `zz` 注册补全，并迁移由已移除的 `completion install` 命令创建的设置。
