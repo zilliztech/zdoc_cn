@@ -53,6 +53,9 @@ import TabItem from '@theme/TabItem';
 
 以下代码示例假设你已经有一个名为 `my_collection` 的 Collection。
 
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
 ```python
 from pymilvus import MilvusClient
 
@@ -72,9 +75,17 @@ client.create_snapshot(
 )
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
+
+</TabItem>
+
+<TabItem value='go'>
 
 ```go
 import (
@@ -100,30 +111,52 @@ createOpt := milvusclient.NewCreateSnapshotOption("backup_20240101", "my_collect
 err = client.CreateSnapshot(context.Background(), createOpt)
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # restful
 ```
+
+</TabItem>
+</Tabs>
 
 ## 列出 Snapshot \{#list-snapshots}
 
 你可以列出现有 Snapshot 的名称。
 
-```plaintext
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
 # List all snapshots for a collection
 snapshots = client.list_snapshots(
     collection_name="my_collection"
 )
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='go'>
+
+```go
 // List snapshots for collection
 listOpt := milvusclient.NewListSnapshotsOption().
     WithCollectionName("my_collection")
@@ -131,17 +164,31 @@ listOpt := milvusclient.NewListSnapshotsOption().
 snapshots, err := client.ListSnapshots(context.Background(), listOpt)
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # bash
 ```
+
+</TabItem>
+</Tabs>
 
 ## 查看 Snapshot 详情 \{#describe-snapshot}
 
 你可以获取指定 Snapshot 的详细信息。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 snapshot_info = client.describe_snapshot(
@@ -155,11 +202,19 @@ print(f"Created: {snapshot_info.create_ts}")
 print(f"Description: {snapshot_info.description}")
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='go'>
+
+```go
 describeOpt := milvusclient.NewDescribeSnapshotOption("backup_20240101")
 resp, err := client.DescribeSnapshot(context.Background(), describeOpt)
 
@@ -167,13 +222,24 @@ fmt.Printf("Snapshot ID: %d\n", resp.GetSnapshotInfo().GetId())
 fmt.Printf("Collection: %s\n", resp.GetSnapshotInfo().GetCollectionName())
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # restful
 ```
+
+</TabItem>
+</Tabs>
 
 ## Pin/unpin Snapshot 数据 \{#pin-unpin-snapshot-data}
 
@@ -181,7 +247,10 @@ fmt.Printf("Collection: %s\n", resp.GetSnapshotInfo().GetCollectionName())
 
 你还可以为 pin 操作设置生存时间（TTL），使被 pin 的数据在 TTL 到期后自动释放。
 
-```plaintext
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
 pin_id = client.pin_snapshot_data(
     snapshot_name="backup_20240101",
     collection_name="my_collection",
@@ -193,11 +262,19 @@ client.unpin_snapshot_data(
 )
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='go'>
+
+```go
 pinID, err := cli.PinSnapshotData(
     ctx,
     client.NewPinSnapshotDataOption("backup_20240101", "my_collection").WithTTLSeconds(3600),
@@ -214,13 +291,24 @@ defer func() {
 // do work with pinned snapshot data
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # restful
 ```
+
+</TabItem>
+</Tabs>
 
 ## 恢复 Snapshot \{#restore-snapshot}
 
@@ -238,7 +326,10 @@ defer func() {
 
 如需恢复 Snapshot，请执行以下操作：
 
-```plaintext
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
 # Restore snapshot to new collection
 job_id = client.restore_snapshot(
     snapshot_name="backup_20240101",
@@ -246,11 +337,19 @@ job_id = client.restore_snapshot(
 )
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='go'>
+
+```go
 restoreOpt := milvusclient.NewRestoreSnapshotOption(
     "backup_20240101", 
     "restored_collection"
@@ -262,13 +361,24 @@ if err != nil {
 }
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # restful
 ```
+
+</TabItem>
+</Tabs>
 
 有关如何监控恢复任务进度的详细信息，请参阅 [获取恢复状态](./manage-snapshots#get-restoration-state)。
 
@@ -276,34 +386,59 @@ if err != nil {
 
 如果不再需要某个 Snapshot，你可以将其删除。建议定期删除旧 Snapshot，以节省存储空间。
 
-```plaintext
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
 client.drop_snapshot(
     snapshot_name="backup_20240101"
 )
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='go'>
+
+```go
 dropOpt := milvusclient.NewDropSnapshotOption("backup_20240101")
 err := client.DropSnapshot(context.Background(), dropOpt)
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # restful
 ```
+
+</TabItem>
+</Tabs>
 
 ## 列出恢复任务 \{#list-restoration-jobs}
 
 你可以使用该 API 获取目标 Collection 已创建的 Snapshot 列表。
 
-```plaintext
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
+
+```python
 # List all restore jobs
 jobs = client.list_restore_snapshot_jobs()
 
@@ -315,11 +450,19 @@ for job in jobs:
 jobs = client.list_restore_snapshot_jobs(collection_name="my_collection")
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='go'>
+
+```go
 // List all restore jobs
 listOpt := milvusclient.NewListRestoreSnapshotJobsOption()
 jobs, err := client.ListRestoreSnapshotJobs(context.Background(), listOpt)
@@ -340,17 +483,31 @@ listOpt = milvusclient.NewListRestoreSnapshotJobsOption().
 jobs, err = client.ListRestoreSnapshotJobs(context.Background(), listOpt)
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # restful
 ```
+
+</TabItem>
+</Tabs>
 
 ## 获取恢复状态 \{#get-restoration-state}
 
 获得恢复任务 ID 后，你可以使用该 ID 查询恢复进度。
+
+<Tabs groupId="code" defaultValue='python' values={[{"label":"Python","value":"python"},{"label":"Java","value":"java"},{"label":"Go","value":"go"},{"label":"NodeJS","value":"javascript"},{"label":"cURL","value":"bash"}]}>
+<TabItem value='python'>
 
 ```python
 state = client.get_restore_snapshot_state(job_id=12345)
@@ -365,11 +522,19 @@ if state.state == "RestoreSnapshotFailed":
 print(f"Time Cost: {state.time_cost}ms")
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='java'>
+
+```java
 // java
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='go'>
+
+```go
 stateOpt := milvusclient.NewGetRestoreSnapshotStateOption(12345)
 state, err := client.GetRestoreSnapshotState(context.Background(), stateOpt)
 if err != nil {
@@ -387,10 +552,21 @@ if state.GetState() == milvuspb.RestoreSnapshotState_RestoreSnapshotFailed {
 fmt.Printf("Time Cost: %dms\n", state.GetTimeCost())
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='javascript'>
+
+```javascript
 // node.js
 ```
 
-```plaintext
+</TabItem>
+
+<TabItem value='bash'>
+
+```bash
 # restful
 ```
+
+</TabItem>
+</Tabs>
