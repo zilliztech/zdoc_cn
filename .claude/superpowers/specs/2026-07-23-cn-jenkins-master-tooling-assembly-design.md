@@ -147,18 +147,20 @@ Focused Node tests and generated-sidebar validation run before rollout in the lo
 
 The scaffold sidebar file has no runtime or test references. It can be deleted with a repository search and full build as regression evidence.
 
-### Fold `sidebarsTutorial.mjs` into `sidebarsTutorial.js`
+### Retain `sidebarsTutorial.mjs` as the Docusaurus interop boundary
 
-The MJS file is a transitional adapter whose only purpose is to rename `tutorialSidebar` to `default`. The stable sidebar module will directly export:
+The MJS file is required to rename `tutorialSidebar` to `default` safely. Docusaurus 3.10 loads sidebar modules through `jiti` with `interopDefault: true`. If a CommonJS module directly exports an object containing a `default` property, `jiti` unwraps that property and returns only the guides array instead of the complete sidebar map. Docusaurus then interprets array index `0` as a sidebar name and rejects the first category object.
+
+The CommonJS implementation therefore continues to export:
 
 ```javascript
 {
-  default: loadGuidesSidebar(),
+  tutorialSidebar: loadGuidesSidebar(),
   releasesSidebar: [...]
 }
 ```
 
-`docusaurus.config.js` will point back to `sidebarsTutorial.js`, and `sidebarsTutorial.test.js` will assert that the configured module exports both required arrays. This matches the sidebar name emitted in generated document frontmatter and removes the format adapter.
+`sidebarsTutorial.mjs` remains the explicit ESM default export that maps `tutorialSidebar` to the `default` name emitted in generated document frontmatter. `docusaurus.config.js` continues to point to the MJS file, and `sidebarsTutorial.test.js` asserts the adapter's final Docusaurus-facing shape.
 
 ### Retain the legacy BYOC version files
 
@@ -217,4 +219,4 @@ The Jenkins change is recoverable by reverting only the Groovy commit. The sideb
 - SCM polling remains tied to the requested content branch.
 - English Jenkins remains unchanged.
 - Existing Cloud and BYOC routes remain present.
-- `sidebars.js` and the transitional MJS adapter are removed without build regressions.
+- the unused `sidebars.js` scaffold is removed without build regressions, while the required MJS interop adapter remains.
