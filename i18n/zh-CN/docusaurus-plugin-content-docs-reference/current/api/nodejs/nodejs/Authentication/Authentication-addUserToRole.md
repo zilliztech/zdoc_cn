@@ -1,0 +1,104 @@
+---
+title: "addUserToRole() | Node.js"
+slug: /node/node/Authentication-addUserToRole
+sidebar_label: "addUserToRole()"
+beta: false
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作将用户添加到特定角色。 | Node.js"
+type: docx
+token: Qc72dTKgroNdHjxIG2xcwNdmnHb
+sidebar_position: 2
+keywords: 
+  - llm-as-a-judge
+  - 混合向量搜索
+  - 视频去重
+  - 视频相似性搜索
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - addUserToRole()
+  - nodejs30
+displayed_sidebar: nodeSidebar
+
+displayed_sidbar: nodeSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# addUserToRole()
+
+此操作将用户添加到特定角色。
+
+```javascript
+await milvusClient.addUserToRole(data)
+```
+
+## 请求语法\{#request-syntax}
+
+```javascript
+await milvusClient.addUserToRole({
+   username: string,
+   rolename: string,
+   timeout?: number
+ })
+```
+
+**参数：**
+
+- **username** (*string*) -
+
+    **[必需]**
+
+    用户的名称。
+
+- **rolename** (*string*) -
+
+    **[必需]**
+
+    角色的名称
+
+- **timeout** (*number*) -  
+
+    此操作的超时时长。 
+
+    将其设置为 **None** 表示此操作会在收到任何响应或发生任何错误时超时。
+
+**返回** *Promise\<ResStatus>*
+
+此方法返回一个 promise，该 promise 解析为 **ResStatus** 对象。
+
+```javascript
+{
+    code: number,
+    error_code: string | number,
+    reason: string
+}
+```
+
+**参数：**
+
+- **code** (*number*) -
+
+    表示操作结果的代码。如果此操作成功，则保持为 **0**。
+
+- **error_code** (*string* | *number*) -
+
+    表示已发生错误的错误代码。如果此操作成功，则保持为 **Success**。 
+
+- **reason** (*string*) - 
+
+    表示所报告错误原因的原因。如果此操作成功，则保持为空字符串。
+
+## 示例\{#example}
+
+```java
+await milvusClient.addUserToRole({
+    username: 'myUser',
+    roleName: 'myRole'
+});
+```
+

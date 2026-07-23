@@ -1,0 +1,62 @@
+---
+title: "BulkWriterSchema | Node.js"
+slug: /node/node/DataImport-BulkWriterSchema
+sidebar_label: "BulkWriterSchema"
+beta: false
+added_since: v2.6.12
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此接口描述 `BulkWriter` 用于验证行并生成 Milvus 可导入的 JSON 或 Parquet 文件的 collection schema。 | Node.js"
+type: docx
+token: U7w6d4gUioGzw2xmYqvcFz1Jnub
+sidebar_position: 12
+keywords: 
+  - 私有 llms
+  - nn search
+  - llm eval
+  - Sparse vs Dense
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BulkWriterSchema
+  - nodejs30
+displayed_sidebar: nodeSidebar
+
+displayed_sidbar: nodeSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# BulkWriterSchema
+
+此接口描述 `BulkWriter` 用于验证行并生成 Milvus 可导入的 JSON 或 Parquet 文件的 collection schema。
+
+```typescript
+interface BulkWriterSchema
+```
+
+**字段：**
+
+- **fields** (*FieldType[]*) -
+
+    **[必填]**
+
+    指定 collection 字段。标记为 `autoID` 或 `is_function_output` 的字段会从生成的导入文件中排除。
+
+- **enable_dynamic_field** (*boolean*) -
+
+    指定是否将 dynamic fields 收集到 `$meta` 列中。
+
+## 示例\{#example}
+
+```javascript
+const schema = {
+    enable_dynamic_field: true,
+    fields: [
+        { name: 'id', data_type: DataType.Int64, is_primary_key: true },
+        { name: 'vector', data_type: DataType.FloatVector, dim: 3 },
+    ],
+};
+```
