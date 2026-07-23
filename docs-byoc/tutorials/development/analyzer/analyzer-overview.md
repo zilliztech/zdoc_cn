@@ -209,7 +209,7 @@ if err != nil {
 
 输出结果如下：
 
-```sql
+```plaintext
 ['efficient', 'system', 'relies', 'on', 'robust', 'analyzer', 'to', 'correctly', 'process', 'text', 'various', 'applications']
 ```
 
