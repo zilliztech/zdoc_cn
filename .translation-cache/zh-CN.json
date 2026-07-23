@@ -6240,6 +6240,1146 @@
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/python/python/python.md",
       "translatedAt": "2026-07-22T23:55:36.940Z"
     },
+    "reference/api/restful/restful/restful.md": {
+      "sourceHash": "3acd042e6262b2c52d7c508e60abfb49b2ed46ce6634d772721e8ce440141f77",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/restful.md",
+      "translatedAt": "2026-07-22T23:04:14.665Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cloud-meta/cloud-meta.mdx": {
+      "sourceHash": "c0a7173c2fd8c1a78be2a2d759a607f91f424808adc368b58c93f6b941279bc9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cloud-meta/cloud-meta.mdx",
+      "translatedAt": "2026-07-22T23:03:33.990Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cloud-meta/list-cloud-providers.mdx": {
+      "sourceHash": "22efbe68cc8421af6f26dd5314e41e0536fb4b2598656e21413e3573e9c23d64",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cloud-meta/list-cloud-providers.mdx",
+      "translatedAt": "2026-07-22T23:03:33.953Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cloud-meta/list-cloud-regions.mdx": {
+      "sourceHash": "7cc60f6a64237a34f45229cd7c3f674efcade712cefaf4729bd12e7311718417",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cloud-meta/list-cloud-regions.mdx",
+      "translatedAt": "2026-07-22T23:03:47.878Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/cluster-operations.mdx": {
+      "sourceHash": "e00b377f3391e2018a57c4c0dc16997843e981c348b0b6c67ef0db9edcd0362a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/cluster-operations.mdx",
+      "translatedAt": "2026-07-22T23:03:47.763Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/create-cluster.mdx": {
+      "sourceHash": "a364248dabbd4785691cbd3ddf802259b12ac48ab37fdd21b217bf1b2dae3c26",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/create-cluster.mdx",
+      "translatedAt": "2026-07-22T23:03:52.970Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/create-serverless-cluster.mdx": {
+      "sourceHash": "82a70df599e16d958face012d7548d5af60ff9c4350108e81daa92621de20aa2",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/create-serverless-cluster.mdx",
+      "translatedAt": "2026-07-22T23:04:12.596Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/describe-cluster.mdx": {
+      "sourceHash": "774c01c67c7592d18a5492c33500ce69baa17533510ff84e88a3ba721fb118e9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/describe-cluster.mdx",
+      "translatedAt": "2026-07-22T23:04:11.190Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/drop-cluster.mdx": {
+      "sourceHash": "94bfc7e3d3ad9b97a99e1abe1d6ff6e869accb09f27667897bdd840c0e9a7ec1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/drop-cluster.mdx",
+      "translatedAt": "2026-07-22T23:04:21.918Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/list-clusters.mdx": {
+      "sourceHash": "711643cde72cd3ab12f614949de46fd2a040aae8d59155b0875b2e93f93ff71e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/list-clusters.mdx",
+      "translatedAt": "2026-07-22T23:04:22.349Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/list-projects.mdx": {
+      "sourceHash": "49da9ee581d05db568aeb4099538bc4ed842543017e42d1d435773f779ec6c31",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/list-projects.mdx",
+      "translatedAt": "2026-07-22T23:04:29.796Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/modify-cluster.mdx": {
+      "sourceHash": "8e1da0bab5eaf7d03264b11032de31498f303d76761d58000ae78dbd25c0fba8",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/modify-cluster.mdx",
+      "translatedAt": "2026-07-22T23:04:36.912Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/query-metrics.mdx": {
+      "sourceHash": "1cba48c443b7deb490aef81fe50d49a3b5505b29a2e3f74270d86bf0ac9fc639",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/query-metrics.mdx",
+      "translatedAt": "2026-07-22T23:04:43.788Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/resume-cluster.mdx": {
+      "sourceHash": "131acd3a17df45d73fac3152801d3bdbf3787eea994c15b8c3fcaa7258dfd339",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/resume-cluster.mdx",
+      "translatedAt": "2026-07-22T23:04:47.993Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/cluster-operations/suspend-cluster.mdx": {
+      "sourceHash": "5796613592429743e3d578eb3a990aa371b7e8e97cefd607fef3402d33b29f54",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/cluster-operations/suspend-cluster.mdx",
+      "translatedAt": "2026-07-22T23:05:00.107Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/control-plane.mdx": {
+      "sourceHash": "ee3dcdbae4fcb856839cf9f09d30a1d814a34b40cb24ffd7e493e7cafe09c5b7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/control-plane.mdx",
+      "translatedAt": "2026-07-22T23:04:50.324Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/import-operations/get-import-progress.mdx": {
+      "sourceHash": "0fb9691c7233061a13c8a587ed364a0b2e0a0c2929a415562344f7d15cf06961",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/import-operations/get-import-progress.mdx",
+      "translatedAt": "2026-07-22T23:05:07.886Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/import-operations/import-operations.mdx": {
+      "sourceHash": "0c514caad0e6567ce98474ed4690885f3c4b89bcf40862f71cfb73d67379a49f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/import-operations/import-operations.mdx",
+      "translatedAt": "2026-07-22T23:04:53.825Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/import-operations/import.mdx": {
+      "sourceHash": "e46a92be8c46fc7a66a162b083e09f837a8223d4ae9100fb43690a01c8be6eb4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/import-operations/import.mdx",
+      "translatedAt": "2026-07-22T23:05:13.284Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/import-operations/list-import-jobs.mdx": {
+      "sourceHash": "ab8b86bb8a499dac973240758f63a1ed7a8cd5a318cc3437d6e76595b93cf655",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/import-operations/list-import-jobs.mdx",
+      "translatedAt": "2026-07-22T23:05:17.585Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/pipeline-operations/create-pipeline.mdx": {
+      "sourceHash": "300e53accc10deb9ec501dbd0871372eeb0aa40c7ae7e38801799dfe217babf4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/pipeline-operations/create-pipeline.mdx",
+      "translatedAt": "2026-07-22T23:05:20.245Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/pipeline-operations/describe-pipeline.mdx": {
+      "sourceHash": "22e5b263dff4e3976f98e07abe43dfa3a5b81205621c78fbf5508c0f9d8d186e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/pipeline-operations/describe-pipeline.mdx",
+      "translatedAt": "2026-07-22T23:05:25.401Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/pipeline-operations/drop-pipeline.mdx": {
+      "sourceHash": "1e89174ee7a9409fee4ac3bb2a8e83af9fce1ed22af901c6b10469e7892a1670",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/pipeline-operations/drop-pipeline.mdx",
+      "translatedAt": "2026-07-22T23:05:25.951Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/pipeline-operations/list-pipelines.mdx": {
+      "sourceHash": "7709da24fbbc36fc6e656205144dbaaffb9b3ce82575ff7ba7db491e7b4e4cf5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/pipeline-operations/list-pipelines.mdx",
+      "translatedAt": "2026-07-22T23:05:40.400Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/pipeline-operations/pipeline-operations.mdx": {
+      "sourceHash": "6b6b2f2490dcab5f7cec4acf1979eeedfe50df94d11c7d691659e3d4284147bd",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/pipeline-operations/pipeline-operations.mdx",
+      "translatedAt": "2026-07-22T23:05:28.545Z"
+    },
+    "reference/api/restful/restful/v1/control-plane/pipeline-operations/run-pipeline.mdx": {
+      "sourceHash": "834cbc1eb9ba645475d1ca71af01fb468994e033002fa7ac5521b96f3aa18d86",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/control-plane/pipeline-operations/run-pipeline.mdx",
+      "translatedAt": "2026-07-22T23:05:48.627Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/collection-operations/collection-operations.mdx": {
+      "sourceHash": "5d8f490fb0575d865694748864f1c4d5e5aad9697c2fc23af7ef2b1e3a11f88a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/collection-operations/collection-operations.mdx",
+      "translatedAt": "2026-07-22T23:05:32.132Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/collection-operations/create-collection.mdx": {
+      "sourceHash": "06d3cba87591241d033fd155d7ee0ed19d6759902a351bd75ba2fa9077373883",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/collection-operations/create-collection.mdx",
+      "translatedAt": "2026-07-22T23:05:46.016Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/collection-operations/describe-collection.mdx": {
+      "sourceHash": "36ef7f2527ab51d41af49913235604dd9d5ac0e72f614423b947206e7a990cb5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/collection-operations/describe-collection.mdx",
+      "translatedAt": "2026-07-22T23:05:44.408Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/collection-operations/drop-collection.mdx": {
+      "sourceHash": "b9ee4d0aa2532d70f3d61b32b54c681cfb7ac2a3535a5a37d64efb4142dff838",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/collection-operations/drop-collection.mdx",
+      "translatedAt": "2026-07-22T23:06:10.402Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/collection-operations/list-collections.mdx": {
+      "sourceHash": "d7c6baadd1208466629bbd155aaf8a13c41ccb4c8dca0714e3c2a0e862898f6f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/collection-operations/list-collections.mdx",
+      "translatedAt": "2026-07-22T23:06:15.592Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/data-plane.mdx": {
+      "sourceHash": "5743fd22486158736aeadbad08b4d21db8655fc1be9016a6b181826df93f605a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/data-plane.mdx",
+      "translatedAt": "2026-07-22T23:06:06.020Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/vector-operations/delete.mdx": {
+      "sourceHash": "475d92131f421bec67440d6e54b60eee6373958e382036a63e25a0d82eadd1bd",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/vector-operations/delete.mdx",
+      "translatedAt": "2026-07-22T23:06:28.196Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/vector-operations/get.mdx": {
+      "sourceHash": "0d032f5b4a3b490c26acdaaf86f7192d9cc5c819168b7ef830864e09fad22650",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/vector-operations/get.mdx",
+      "translatedAt": "2026-07-22T23:06:17.307Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/vector-operations/insert.mdx": {
+      "sourceHash": "df26f17f4b6dbb9187850d8bc9d24fe3891f707533979364f4061709b2a685c3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/vector-operations/insert.mdx",
+      "translatedAt": "2026-07-22T23:06:21.776Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/vector-operations/query.mdx": {
+      "sourceHash": "d1da5f0931d9ab2746caa693f8582aca528d4742ac8345c39b007b7483857423",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/vector-operations/query.mdx",
+      "translatedAt": "2026-07-22T23:06:30.685Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/vector-operations/search.mdx": {
+      "sourceHash": "fde3248d4cbfb876a3eb0f50bf8d4715d3e488ebc672aed7198b10c149c4540e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/vector-operations/search.mdx",
+      "translatedAt": "2026-07-22T23:06:29.044Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/vector-operations/upsert.mdx": {
+      "sourceHash": "c114ac041b616e14bdf79fee46034cc1538807125e28de8af1ea9c119685fb95",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/vector-operations/upsert.mdx",
+      "translatedAt": "2026-07-22T23:06:35.538Z"
+    },
+    "reference/api/restful/restful/v1/data-plane/vector-operations/vector-operations.mdx": {
+      "sourceHash": "f5c71636ffafc1c9adec9c481ca0be57349e406096f2d69fbfbe734863231838",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/data-plane/vector-operations/vector-operations.mdx",
+      "translatedAt": "2026-07-22T23:06:42.729Z"
+    },
+    "reference/api/restful/restful/v1/error-codes.md": {
+      "sourceHash": "12c4447d9a85b489ba0146f39f16f05c323b4eeb2e18bbbb7fecc8bbf5fa8c7f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/error-codes.md",
+      "translatedAt": "2026-07-22T23:07:17.518Z"
+    },
+    "reference/api/restful/restful/v1/v1.mdx": {
+      "sourceHash": "a81bfd19b6c7959ebd3b92c66d826ecffd6cb7ba9859c93cfef2c78ef42c9fbe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v1/v1.mdx",
+      "translatedAt": "2026-07-22T23:06:41.666Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/backup-and-restore-v2.mdx": {
+      "sourceHash": "90b7c289415cc95f5ef21fad8d2624a040b2031db4dee93ddf92736429dc7d1e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/backup-and-restore-v2.mdx",
+      "translatedAt": "2026-07-22T23:06:48.108Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/create-backup-v2.mdx": {
+      "sourceHash": "8c1d6f2ca82561bf472a8b58022c7d58d9e59c9e5e1bfeb1094050e53a56149a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/create-backup-v2.mdx",
+      "translatedAt": "2026-07-22T23:06:53.632Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/delete-backup-v2.mdx": {
+      "sourceHash": "a458bfcfe5716371a94c61f0b87d72742ddb19fb50ca46087ab6affdec7bcaa6",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/delete-backup-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:03.228Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/describe-backup-v2.mdx": {
+      "sourceHash": "9b2d6fbc954495e2918507509b006683535d3c47bc24807da05c2763862c0cc9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/describe-backup-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:11.316Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/export-backup-files-v2.mdx": {
+      "sourceHash": "df0f7445d150629c6ac0d2402dd774ba2423e47f536e4b7e1a2265cc3a9f9f80",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/export-backup-files-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:14.867Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/get-backup-policy-v2.mdx": {
+      "sourceHash": "b1b12e1e240af731a1dceb1904181ce6c1feca4bacff4ebff412f8ef217f181f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/get-backup-policy-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:12.158Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/list-backups-v2.mdx": {
+      "sourceHash": "19c60e67d6e0747c2208f01fbe44d7847c8088a0a9376987a29b7117e57c8c5b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/list-backups-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:39.154Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/restore-cluster-backup-v2.mdx": {
+      "sourceHash": "089b513a691351f4815e01e73d91ae8ae20e7ed602659beaaf06ee2574a3e409",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/restore-cluster-backup-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:46.533Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/restore-collection-backup-v2.mdx": {
+      "sourceHash": "7a5708785e62526a7026ca3a3858c4146854f116fe504096111d640d9df476f7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/restore-collection-backup-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:41.634Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/backup-and-restore-v2/set-backup-policy-v2.mdx": {
+      "sourceHash": "926252d4d633eccff5f2669f69e43a22906fc9bbad495ef8b8c7bb38a4c461ae",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/backup-and-restore-v2/set-backup-policy-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:37.890Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-job-v2/cloud-job-v2.mdx": {
+      "sourceHash": "d4e0b719ed8c6d759fd4e76a7d20aa9da7516c9afff0ea8fde3280dbc7c7e0f1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-job-v2/cloud-job-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:43.631Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-job-v2/describe-job-v2.mdx": {
+      "sourceHash": "318eb674e35d124fa4981f3170fd1a9c0d70207ea780ef8d2ac55daba8f2a3c7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-job-v2/describe-job-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:00.798Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-meta-v2/cloud-meta-v2.mdx": {
+      "sourceHash": "a44a0f9f10b386cf0bf90b046d8fb2987d89fe3135d02d18dbd0f9734f0aec4d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-meta-v2/cloud-meta-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:45.617Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-meta-v2/list-cloud-providers-v2.mdx": {
+      "sourceHash": "b6ba6f59f59421b83fcaa48b7b6bac4ce4fa6541b1c17503ea10036328c0a213",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-meta-v2/list-cloud-providers-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:01.353Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-meta-v2/list-cloud-regions-v2.mdx": {
+      "sourceHash": "f87789ff37fe5fbc4bfc1d7afda7df1bf1fdabbda7a52490837ab398b5c966da",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-meta-v2/list-cloud-regions-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:14.671Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-migration-v2/cloud-migration-v2.mdx": {
+      "sourceHash": "fea2cf6b0791fb41fbd1b6cf30cb8d35ae52f2b95e098120cce5ec739709b02f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-migration-v2/cloud-migration-v2.mdx",
+      "translatedAt": "2026-07-22T23:07:54.948Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-migration-v2/migrate-from-remote-v2.mdx": {
+      "sourceHash": "ec300627c2852d0fceb60139c67ae67c7f4e993f8c69f6cbd8e852c262663500",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-migration-v2/migrate-from-remote-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:13.034Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-migration-v2/migrate-to-existing-cluster-v2.mdx": {
+      "sourceHash": "ff558200b8aec3742a4adcf1b0d478061f273d6eb03d961e8d9a9dcf57c794ba",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-migration-v2/migrate-to-existing-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:30.598Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cloud-migration-v2/migrate-to-new-dedicated-cluster-v2.mdx": {
+      "sourceHash": "aaefd7be6b7d597722cc0cccea159fe20fdb20470a0022537df0e8bfce5c84c9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cloud-migration-v2/migrate-to-new-dedicated-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:39.964Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/cluster-operations-v2.mdx": {
+      "sourceHash": "c27768df593abb1451030ae472121959999444d4ecf3af3288de8b45b03d82a1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/cluster-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:19.162Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/create-dedicated-cluster-v2.mdx": {
+      "sourceHash": "24c364d8a7fcec664c695af46042e9a101700a88bb1ec4f1b44193f89d28e258",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/create-dedicated-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:45.061Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/create-free-cluster-v2.mdx": {
+      "sourceHash": "c2d47293f33af13c28562bcff7cb6d617335488194174861adff60bcf903e07d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/create-free-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:43.298Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/create-on-demand-cluster-v2.mdx": {
+      "sourceHash": "1cbf1808db5cc9a6f1c45c3ffe6b74f633041ac9dc43aea4f6f6025c8af54b23",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/create-on-demand-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:08:51.130Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/create-serverless-cluster-v2.mdx": {
+      "sourceHash": "c075c174d863547b3705add10a7e146478008bc20dc4f97c47ee9484413fcad5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/create-serverless-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:08.242Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/delete-on-demand-cluster-v2.mdx": {
+      "sourceHash": "0d63ac85a3c4980cd0fc0b324ea764feae390458a2c4fcf07b1aca8a4776b3fc",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/delete-on-demand-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:15.579Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/describe-cluster-v2.mdx": {
+      "sourceHash": "1ed3c7a4d87037cf63c2bab2221a04855052b4c8507d128823d616df18252150",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/describe-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:03.624Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/describe-on-demand-cluster-v2.mdx": {
+      "sourceHash": "2669fcb2bd51fa83ae216d4ea47cc842580eb5fce4f4faba5967cfad98f8800b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/describe-on-demand-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:13.473Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/drop-cluster-v2.mdx": {
+      "sourceHash": "1349495f84aaeb378baf28fafa36f934f17b57c21e43a0d344599064f96d980c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/drop-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:27.604Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/list-clusters-v2.mdx": {
+      "sourceHash": "9ef831c0dae40eec9161feeaa6e6de0610f23f28dacf0678ff365fc18ebe8d75",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/list-clusters-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:28.384Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/list-on-demand-clusters-v2.mdx": {
+      "sourceHash": "efdf3730d38aa8416ef83fb053b64cc038b9a991924ac0d8a07b5551da585125",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/list-on-demand-clusters-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:37.627Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/modify-cluster-replica-v2.mdx": {
+      "sourceHash": "aae419ca36eb6bde39a85dc997a2a33cb934efd66cb42a6a02893743347a4ed2",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/modify-cluster-replica-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:46.305Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/modify-cluster-v2.mdx": {
+      "sourceHash": "1ff1ab5e9c313a35078e0ac592853b43c57ea810072a125633054e72f957d0e1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/modify-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:55.419Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/modify-on-demand-cluster-v2.mdx": {
+      "sourceHash": "71a45d1aba307f7b70afeca28eb6b7c4d5f28b585c4a115fa1215fee57f7d27d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/modify-on-demand-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:48.793Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/resume-cluster-v2.mdx": {
+      "sourceHash": "e3b341ba594fe83bdf67131221f8860c11243dbe4214679844d7de860e623502",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/resume-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:09:57.346Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/suspend-cluster-v2.mdx": {
+      "sourceHash": "c80d1f6454c9004ce68bea9bc0dda3f85fdc2d8516d5b897d70e8f7e0f13e780",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/suspend-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:09.483Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/update-dedicated-cluster-info-v2.mdx": {
+      "sourceHash": "f5210dd6e9ffcb3cb1a727c008c67b896a1992e6ede043ff1441d2c1f11634d4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/update-dedicated-cluster-info-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:11.582Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/cluster-operations-v2/update-on-demand-cluster-info-v2.mdx": {
+      "sourceHash": "244f9d02f500481cbe10318cf43d6a8b6c9284ddfe14174775719824c0b849e3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/cluster-operations-v2/update-on-demand-cluster-info-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:25.249Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/control-plane.mdx": {
+      "sourceHash": "67af985a50ca6499834132686e2e26aa825ff0e998f6534b10439b3ead70e7db",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/control-plane.mdx",
+      "translatedAt": "2026-07-22T23:10:14.707Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/extract-load-and-transform-v2/extract-load-and-transform-v2.mdx": {
+      "sourceHash": "c9c74fb464caa49772808efd61c27933d161b4b7fa088a0e1ffefca473c18a15",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/extract-load-and-transform-v2/extract-load-and-transform-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:15.913Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/extract-load-and-transform-v2/merge-data-v2.mdx": {
+      "sourceHash": "a7c5d6bc9516bd484f8a4bc40da2e8372cf5dee62866a91cb53551c6295a08e4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/extract-load-and-transform-v2/merge-data-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:19.747Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/add-secondary-clusters-v2.mdx": {
+      "sourceHash": "4c31c2a66f6bedbaed3139c963ea35b60172f4c04d245759bc9b4f9e0b2cf1f1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/add-secondary-clusters-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:43.704Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/convert-cluster-to-global-cluster-v2.mdx": {
+      "sourceHash": "bc512ce1923a09e5d6d1ec098ea4ccd993b424c3b27b84a935a77ac87427795c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/convert-cluster-to-global-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:43.096Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/create-global-cluster-v2.mdx": {
+      "sourceHash": "af621246dcf10379253bb2e0baf55810a8c2fd5e4d68037acb9f25fb33bbeb76",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/create-global-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:29.945Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/delete-global-member-cluster-v2.mdx": {
+      "sourceHash": "fc35def632c690756529e4f24c94024b37e1bab221342d9a218fe6010ef925f7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/delete-global-member-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:35.190Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/describe-global-cluster-v2.mdx": {
+      "sourceHash": "c71a52c8fc824774ea7f642fbcf533b798069c39151f296f3306fa7921e6b339",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/describe-global-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:39.548Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/failover-global-cluster-v2.mdx": {
+      "sourceHash": "2e1841a382d3acf8cd3c0a07d555ed53a5de2f1891aa7e54b9adc86e815e9faa",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/failover-global-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:00.155Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/get-global-cluster-replication-lag-v2.mdx": {
+      "sourceHash": "886daa9b7767ed19b5f4fa163367dfb1c4218df780b0843024be4aa89f8adb7c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/get-global-cluster-replication-lag-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:01.283Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/global-clusters-v2.mdx": {
+      "sourceHash": "44d30fb65018c688009ffd19b71b9fe90c2e1b8161807a03729f43d3b30fdf7f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/global-clusters-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:49.082Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/list-available-global-cluster-regions-v2.mdx": {
+      "sourceHash": "9961202a7cc527586e536ec58dab3850ad8a78c69b542518a9211c109e0247d5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/list-available-global-cluster-regions-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:07.517Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/list-global-clusters-v2.mdx": {
+      "sourceHash": "a2adedbd317a407a17c8601d8497de2091aa1b8e02c5d654eab07f6a9a8eaf78",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/list-global-clusters-v2.mdx",
+      "translatedAt": "2026-07-22T23:10:57.955Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/modify-global-cluster-cu-v2.mdx": {
+      "sourceHash": "31f055c1c5db94530a535789a1056ae7b619f0cf5ac2647909e77e435f42c60c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/modify-global-cluster-cu-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:23.336Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/remove-global-endpoint-v2.mdx": {
+      "sourceHash": "b6030f564ff0ec88acf44ae45fa55aea0cfc4a0ee78f20afbf9259d6d7a53533",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/remove-global-endpoint-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:28.327Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/global-clusters-v2/switchover-global-cluster-v2.mdx": {
+      "sourceHash": "f526d1f9e036426a47c5812676b8b0e11b356d8aa648f7ebb7f8e5e189c90d14",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/global-clusters-v2/switchover-global-cluster-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:19.408Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/import-operations-v2/create-import-jobs-v2.mdx": {
+      "sourceHash": "4861c85a189dd9b222330923154b02b2663080e0e030b8d243b306712e018659",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/import-operations-v2/create-import-jobs-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:29.231Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/import-operations-v2/get-import-job-progress-v2.mdx": {
+      "sourceHash": "01a69e423808b589a765bc6a5c631c31744af424c302306aa779710c1ef4cc27",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/import-operations-v2/get-import-job-progress-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:28.487Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/import-operations-v2/import-operations-v2.mdx": {
+      "sourceHash": "43b80011b41fbfac76c957fb6ce2b3bb4c9d0deb6227eb9763d905425caae235",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/import-operations-v2/import-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:28.164Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/import-operations-v2/list-import-jobs-v2.mdx": {
+      "sourceHash": "12b918c6887aa52812a05ea2dd7cb07dcc6f390a6a5dc1a87c30aef16d6899f8",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/import-operations-v2/list-import-jobs-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:53.389Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/invoices-v2/describe-invoice-v2.mdx": {
+      "sourceHash": "5e399018eed01ffa53bc8780de55c0c35017f83c80aef5a02a454243ae15934c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/invoices-v2/describe-invoice-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:51.252Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/invoices-v2/invoices-v2.mdx": {
+      "sourceHash": "0e4bfc9d71c30597823dcb1f725a0e2d0ea898d14bf4113c4aa1c2328c649923",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/invoices-v2/invoices-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:35.862Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/invoices-v2/list-invoices-v2.mdx": {
+      "sourceHash": "33015181d6c94f69e2996d81b7ac5f36723ca2248bb3082cb6075a879703f3b9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/invoices-v2/list-invoices-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:47.992Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/create-alert-rule-v2.mdx": {
+      "sourceHash": "2f299e761875304d8ae39d2c820ef0018ec72a46b290ab2e632956d963931e57",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/create-alert-rule-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:02.774Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/delete-alert-rule-v2.mdx": {
+      "sourceHash": "b043c2218c8aff261841df4d6ac46b1346723385077c84b19cb599b11df5f8ab",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/delete-alert-rule-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:05.609Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/list-alert-rules-v2.mdx": {
+      "sourceHash": "bfbafa4f23e9ef027e4a6f999b3f36d66d6bf1fa82318f9042145e103e025367",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/list-alert-rules-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:18.795Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/metrics-and-alerts-v2.mdx": {
+      "sourceHash": "45d8ea8ee223c4bf86eeb39cc2841ba1643cb5e5b086f42e43d9954b3003cc63",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/metrics-and-alerts-v2.mdx",
+      "translatedAt": "2026-07-22T23:11:59.880Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/query-cluster-metrics-v2.mdx": {
+      "sourceHash": "73db2185be7e3f66a461c2c7fd5867ee996c8d0b8e6df39dac86a058d4189c4b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/query-cluster-metrics-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:21.351Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/update-alert-rule-v2.mdx": {
+      "sourceHash": "865e41899b28265506a23d52720c1443fc8df137a650a5082d634a66394bd5f9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/metrics-and-alerts-v2/update-alert-rule-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:13.366Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/on-demand-compute-v2/describe-on-demand-compute-v2.mdx": {
+      "sourceHash": "91e5e950777aeb76b25106ad8d2cf348ae26e33945df74a38e245705f2c79b1d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/on-demand-compute-v2/describe-on-demand-compute-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:18.189Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/on-demand-compute-v2/enable-on-demand-compute-v2.mdx": {
+      "sourceHash": "4f85565cb6ea9b5d27a8e2b790b851e334d96ee8f03e463f6cf16e985673c54d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/on-demand-compute-v2/enable-on-demand-compute-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:22.189Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/on-demand-compute-v2/on-demand-compute-v2.mdx": {
+      "sourceHash": "3248f3abd0edf5d506dcd8987b104a8b644b8161bf1da690b96a410be8e51d4c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/on-demand-compute-v2/on-demand-compute-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:24.705Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/project-operations-v2/add-project-region-v2.mdx": {
+      "sourceHash": "7ce5b9cb39287cf53954d10151afd79e6ff5a97737f63af7a8240886b7472eaf",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/project-operations-v2/add-project-region-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:53.374Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/project-operations-v2/create-project-v2.mdx": {
+      "sourceHash": "c8832bd7905f9adb1a0c03a195585c705bd9b6e5f313c5601ed5a49fe2bf1e5d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/project-operations-v2/create-project-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:41.006Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/project-operations-v2/delete-project-v2.mdx": {
+      "sourceHash": "87d74870ed653e05088407a0754ebd7540cb9fc2dd6c172dd409f9e8b5c062ac",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/project-operations-v2/delete-project-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:36.330Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/project-operations-v2/describe-project-v2.mdx": {
+      "sourceHash": "7bceeda1ba0842b04db52fd152e36855a83643ccf1d12a13e680c4c893188054",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/project-operations-v2/describe-project-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:01.731Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/project-operations-v2/list-projects-v2.mdx": {
+      "sourceHash": "dd915e99c7dea17951b3e6670044e9145de79e0f3ba86c89dbb18209b7d82261",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/project-operations-v2/list-projects-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:44.890Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/project-operations-v2/project-operations-v2.mdx": {
+      "sourceHash": "94efbefcd5eb2b4efb225fa154587f524adfeefd9a00e70412b6f55cb9e0cf58",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/project-operations-v2/project-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:46.411Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/project-operations-v2/upgrade-project-v2.mdx": {
+      "sourceHash": "6751400a1f3f4e25d98afbc21592a38b86a908b28b8cf18a4781814404df39b5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/project-operations-v2/upgrade-project-v2.mdx",
+      "translatedAt": "2026-07-22T23:12:56.217Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/spark-job-v2/cancel-spark-job-v2.mdx": {
+      "sourceHash": "70eda6fc11ba47e60403b08cfa0e04375852e4d03b07d9c5447b8bfea19565b5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/spark-job-v2/cancel-spark-job-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:00.643Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/spark-job-v2/create-spark-job-v2.mdx": {
+      "sourceHash": "04462ab5a6cc90980542f698290993dc2bed89c93243ca6b0c44ea1e76f91b91",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/spark-job-v2/create-spark-job-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:07.584Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/spark-job-v2/describe-spark-job-v2.mdx": {
+      "sourceHash": "a06ff7a060dfd1e163d40b5524277a3be0bde24081e948bc03e6b2fa9316a48b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/spark-job-v2/describe-spark-job-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:23.174Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/spark-job-v2/list-spark-jobs-v2.mdx": {
+      "sourceHash": "a0d35e0686335db6fb8a235365d62beea14692db236c79dfecc04e14f9d11deb",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/spark-job-v2/list-spark-jobs-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:22.619Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/spark-job-v2/spark-job-v2.mdx": {
+      "sourceHash": "55ede67c8342c1a0d1dd35f76b7fd142c003e2ed989625dd89bca5a1d89cb7fe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/spark-job-v2/spark-job-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:09.495Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/spark-job-v2/validate-spark-job-artifact-v2.mdx": {
+      "sourceHash": "0cbe30be95e7b9488af90b1cee3c630d35e93b7ee0953bc43f0e5adafe90dd76",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/spark-job-v2/validate-spark-job-artifact-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:15.735Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/storage-integration-operations-v2/create-storage-integration-v2.mdx": {
+      "sourceHash": "16842226974810300ab80d4b1404f5d2dbaaa5fa465fdf68daf3a27398bfd994",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/storage-integration-operations-v2/create-storage-integration-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:38.456Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/storage-integration-operations-v2/delete-storage-integration-v2.mdx": {
+      "sourceHash": "2896d24daffbc35a78af532063b991e45202878cf0d528ad2ceabd01560c3a1d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/storage-integration-operations-v2/delete-storage-integration-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:42.566Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/storage-integration-operations-v2/describe-storage-integration-v2.mdx": {
+      "sourceHash": "a6c9fb8ef0039b4dd9a38ca900225428886e0150feba1c60ac9a8d315be4487a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/storage-integration-operations-v2/describe-storage-integration-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:51.108Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/storage-integration-operations-v2/generate-storage-integration-authorization-materials-v2.mdx": {
+      "sourceHash": "6600e8f1be5d21c1de23d5ec2cde9c8d4667dc557e19af85a051ea8c4be2f6fe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/storage-integration-operations-v2/generate-storage-integration-authorization-materials-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:45.722Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/storage-integration-operations-v2/list-storage-integrations-v2.mdx": {
+      "sourceHash": "bd13235394dce25a798515278c73b0870fca8052e3d3bf20819ad12797dc3235",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/storage-integration-operations-v2/list-storage-integrations-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:53.194Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/storage-integration-operations-v2/storage-integration-operations-v2.mdx": {
+      "sourceHash": "cdf5e4314ed912653c4a3dea4c251c02a08c1362c86afffbcfe585120adbf767",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/storage-integration-operations-v2/storage-integration-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:48.751Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/storage-integration-operations-v2/validate-storage-integration-v2.mdx": {
+      "sourceHash": "0ca8de37af0afed5585d788ce9e1f7e8a803cc1fc839e28b408e849027bef9f3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/storage-integration-operations-v2/validate-storage-integration-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:09.335Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/usage-v2/query-daily-usage-v2.mdx": {
+      "sourceHash": "ec4194f30eebb12846460874bdb7a259d5b3771d4cf7fb9ca71ca680ea536359",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/usage-v2/query-daily-usage-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:59.543Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/usage-v2/usage-v2.mdx": {
+      "sourceHash": "119a8acec5b8b1671090c6f9f12259e0ef16096e16b5966e7d239c7e18515b38",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/usage-v2/usage-v2.mdx",
+      "translatedAt": "2026-07-22T23:13:57.064Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/volume-operations-v2/create-volume-v2.mdx": {
+      "sourceHash": "bd3d9630c34a22a92ab03004a5928d76b474ab93379320209efe14577e5dc45d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/volume-operations-v2/create-volume-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:23.651Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/volume-operations-v2/delete-volume-v2.mdx": {
+      "sourceHash": "242e23874a503e18897d251fb20ce5ddf72fe6e3b0605c4b416e46aa81d056c0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/volume-operations-v2/delete-volume-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:08.401Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/volume-operations-v2/describe-volume-v2.mdx": {
+      "sourceHash": "c7fc6f406b753213e0b94d34df34f381ee8912b94ab653ca745b7f3e0b10be3e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/volume-operations-v2/describe-volume-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:26.842Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/volume-operations-v2/list-volumes-v2.mdx": {
+      "sourceHash": "06db15f04a27e2eb6b4557909d3209b9caed9f2630621ec2435cc2645c36ac67",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/volume-operations-v2/list-volumes-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:39.508Z"
+    },
+    "reference/api/restful/restful/v2/control-plane/volume-operations-v2/volume-operations-v2.mdx": {
+      "sourceHash": "05f0873979b19e361deb1187e0877228d6978bf61474806f1d7c49832410260b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/control-plane/volume-operations-v2/volume-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:16.289Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/alias-operations-v2/alias-operations-v2.mdx": {
+      "sourceHash": "6900b46b09a994bace137bab337a0e6c92ce67b9e5d5c1e24296c7d0e089c920",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/alias-operations-v2/alias-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:32.602Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/alias-operations-v2/alter-alias-v2.mdx": {
+      "sourceHash": "bac3f696a50355a56e4e5ceffb4bb690ccdf5ae00729932a7b88685e1dd1118c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/alias-operations-v2/alter-alias-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:55.685Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/alias-operations-v2/create-alias-v2.mdx": {
+      "sourceHash": "a9fc009de68c3ccc8078c96745ec1d8c5f1be79ce623ad74545cfef3815ca283",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/alias-operations-v2/create-alias-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:44.547Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/alias-operations-v2/describe-alias-v2.mdx": {
+      "sourceHash": "3bb9a0160f0dc94c02d01f401572f9a7ec8b35c1979d1af9b172bdc8b9da83aa",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/alias-operations-v2/describe-alias-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:50.988Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/alias-operations-v2/drop-alias-v2.mdx": {
+      "sourceHash": "a0bab26baa314442903d6e241355a51c3302619cf20a828efd2de95cf2d47681",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/alias-operations-v2/drop-alias-v2.mdx",
+      "translatedAt": "2026-07-22T23:14:53.277Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/alias-operations-v2/list-aliases-v2.mdx": {
+      "sourceHash": "4e1fada1e307c1b7bb6312abb69a801d9da854bc6096213adfc614232cd1856b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/alias-operations-v2/list-aliases-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:07.353Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/add-collection-field-v2.mdx": {
+      "sourceHash": "37797272ccc3f430a9f971507c61d335ad71784d8813517fb8c1d32cb5cc60dc",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/add-collection-field-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:14.984Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/add-function-to-collection-v2.mdx": {
+      "sourceHash": "7c5c067d14f5bba947bf6a7b2a6941f93ad86a525bb0bbb2d15d0d11f714a85c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/add-function-to-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:29.153Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/alter-collection-properties-v2.mdx": {
+      "sourceHash": "60309082dabac6a9a1af237894cdd4d5a8acacb637b869501a9b10a3acf45bdc",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/alter-collection-properties-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:16.354Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/alter-field-properties-v2.mdx": {
+      "sourceHash": "d3a3c9e4cd82618c626f57d87fc7aac021ff1e0cb076bcbc7b517ae8aa6a65a6",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/alter-field-properties-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:23.140Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/alter-function-in-collection-v2.mdx": {
+      "sourceHash": "5421bb4b77623e218577149d1d1c1fa5e2087cbec495d61c5ddc0f7d353aa9ed",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/alter-function-in-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:28.521Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/collection-operations-v2.mdx": {
+      "sourceHash": "f690b8ce9fabb79de0f0fe0674b3ed27dbf94e68885e2c95400eecc5d706b6f0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/collection-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:21.692Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/compact-collection-v2.mdx": {
+      "sourceHash": "77d14901ab7a679256c5ba8e74f94addddc11cfd5c4a20c32c5560617bad2c8a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/compact-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:34.147Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/create-collection-v2.mdx": {
+      "sourceHash": "27e471658baf8e2840d19adbd87d059be8181ba58124cb98c4313eebce0141a1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/create-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:34.409Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/describe-collection-v2.mdx": {
+      "sourceHash": "d2b84fca90451670f3fdcd34bcefc6186d6e01d8328f35106b0e493f0f8a46dd",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/describe-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:37.763Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/describe-external-collection-refresh-job-v2.mdx": {
+      "sourceHash": "98f82875d795d2cd89b279523db5c1e0190362ac8006c0775ca8c9a6a47098cc",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/describe-external-collection-refresh-job-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:54.365Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/drop-collection-properties-v2.mdx": {
+      "sourceHash": "a6eaa9371a0357a7db8e8b50764dd3f7599b1816bc54e7ef251971507fbb42db",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/drop-collection-properties-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:46.709Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/drop-collection-v2.mdx": {
+      "sourceHash": "9ff3fa0bdf77c8576f286401e22fde0e4099ad45dfa449f489063ac9081a86a2",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/drop-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:45.795Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/drop-function-from-collection-v2.mdx": {
+      "sourceHash": "6bf6bbee76ca6d1746c5a97bcfa6ab11bdc688384aebedf1773b3c8392285799",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/drop-function-from-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:12.637Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/flush-collection-v2.mdx": {
+      "sourceHash": "3ea38033031f6822041919bd0e4b150c896346a14afe797d271f898e4c57c354",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/flush-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:01.480Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/get-collection-load-state-v2.mdx": {
+      "sourceHash": "c1c467622f09206230dd05e3919caa71d1caaeeb01ec4d7f7f0f3b4a98643081",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/get-collection-load-state-v2.mdx",
+      "translatedAt": "2026-07-22T23:15:59.163Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/get-collection-stats-v2.mdx": {
+      "sourceHash": "974439163711b60d4fac090567e8ee6726d629abb618450f33b84984e7834e55",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/get-collection-stats-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:03.953Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/get-compaction-state-v2.mdx": {
+      "sourceHash": "378cf2d7ef4a7fd0c150f154b6bb67a97c93b3174ad010849b0e2c3b6ca02e10",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/get-compaction-state-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:04.969Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/has-collection-v2.mdx": {
+      "sourceHash": "4df7222de7568daf0e715900d5e8f191f8de628e15bab749f3529acf7f0c590b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/has-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:12.583Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/list-collections-v2.mdx": {
+      "sourceHash": "abf2b6b0cca1a2169b2e25eb29b115c967bd281834f0dfe74e2b8f5f97c25d63",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/list-collections-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:14.187Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/list-external-collection-refresh-jobs-v2.mdx": {
+      "sourceHash": "34d04b7b7fe5e720978ddbfdf7e6159520e773f1b63da940703722a4def2b814",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/list-external-collection-refresh-jobs-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:30.928Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/load-collection-v2.mdx": {
+      "sourceHash": "6f1dcbc69527ebe409612b2025d1949a32cfde8962f577ef853bc009cf01b2eb",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/load-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:24.802Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/refresh-external-collection-v2.mdx": {
+      "sourceHash": "fd8df7f5f43ff93ebfb43ce2ef45cb281880e73441da1cd40105a0858ba493e5",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/refresh-external-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:22.804Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/refresh-load-v2.mdx": {
+      "sourceHash": "a0bc60b75cd5de18357d8b49f6bdb41bef219c9d4e94e735e11262b701507211",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/refresh-load-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:23.790Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/release-collection-v2.mdx": {
+      "sourceHash": "ad0785da1c2b29a77403036d1ad4ad3337b30af10ed1c3443a33e4841b5619e4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/release-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:31.443Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/rename-collection-v2.mdx": {
+      "sourceHash": "affaf0cc12500cff09ef7ace61791910764bc0c8ea834adc30d0eb0e010500af",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/rename-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:39.740Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/run-analyzer-v2.mdx": {
+      "sourceHash": "4972e41f97c49b13a69eb3475dbcd7226b56cfddc4088d8dbc1340d695f697d3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/run-analyzer-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:38.831Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/collection-operations-v2/truncate-collection-v2.mdx": {
+      "sourceHash": "a4978d5dd945792b671ccd1d5162fd2e4b0aba6a2fc9effb31e94f551f0fb5a3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/collection-operations-v2/truncate-collection-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:43.454Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/data-plane.mdx": {
+      "sourceHash": "2bedff94b1fa5c20e3bd61be3b6c3f4a56857b2a36efeed20b1efe8d7b76ca5e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/data-plane.mdx",
+      "translatedAt": "2026-07-22T23:16:48.610Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/database-operations-v2/alter-database-properties-v2.mdx": {
+      "sourceHash": "68983541c41750d733ee29c56d66a4a32a8d083ccb8ddfd7e10e2e18979746d7",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/database-operations-v2/alter-database-properties-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:04.522Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/database-operations-v2/create-database-v2.mdx": {
+      "sourceHash": "2c85b9a85b02c199b858655fa34211c49123e4f94e7c266904b90c16b13be814",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/database-operations-v2/create-database-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:59.689Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/database-operations-v2/database-operations-v2.mdx": {
+      "sourceHash": "8708161878989ea3c37a89f27391a696e0fe10b739016f8f5d37af0062ee7b85",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/database-operations-v2/database-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:49.283Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/database-operations-v2/describe-database-v2.mdx": {
+      "sourceHash": "a9ec8610afe81d532d0577945800a1e289cc4f5a7801281158fedcaff5158315",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/database-operations-v2/describe-database-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:11.121Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/database-operations-v2/drop-database-properties-v2.mdx": {
+      "sourceHash": "bf6b4cc5389051758382bcffe73f2fbacb147164f2fb248b2c1c8021b2860e00",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/database-operations-v2/drop-database-properties-v2.mdx",
+      "translatedAt": "2026-07-22T23:16:59.344Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/database-operations-v2/drop-database-v2.mdx": {
+      "sourceHash": "c8efe3483fd667973ef24b1f81176d36ecfa6ebc42fc7008151d6a5c23319267",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/database-operations-v2/drop-database-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:12.871Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/database-operations-v2/list-databases-v2.mdx": {
+      "sourceHash": "7ba29364d807dd9186285e5b7383c8ff5bb38c5bb53d667329fa5013bdcf936f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/database-operations-v2/list-databases-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:22.789Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/index-operations-v2/alter-index-properties-v2.mdx": {
+      "sourceHash": "0d1fa222d2a80f99f2de386d6fa0bd72604eaad4f8a8d0fe7fd6bfb7537bfc84",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/index-operations-v2/alter-index-properties-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:24.793Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/index-operations-v2/create-index-v2.mdx": {
+      "sourceHash": "0f05733e03f61609b3210d6799b171bad3e0e645b851049ead0b30b1fe637d87",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/index-operations-v2/create-index-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:40.617Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/index-operations-v2/describe-index-v2.mdx": {
+      "sourceHash": "899f5e2807b711b3ddf98b7cbcbb686a75b50457a6ee387c0c392a1bd2006f85",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/index-operations-v2/describe-index-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:37.484Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/index-operations-v2/drop-index-properties-v2.mdx": {
+      "sourceHash": "cc3c28845b8bbbee85a105dabe92e7aa0039bc21e30e320ef5c129b732df4c7e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/index-operations-v2/drop-index-properties-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:34.419Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/index-operations-v2/drop-index-v2.mdx": {
+      "sourceHash": "706714866791d61675acd555e1b2ccf0e39946265b7252d217b0cbbd071fdc4c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/index-operations-v2/drop-index-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:53.982Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/index-operations-v2/index-operations-v2.mdx": {
+      "sourceHash": "e0a8f97ff2e9599b512aeb941f0b738f17c6ca66d081b577332b331f93f05119",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/index-operations-v2/index-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:47.487Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/index-operations-v2/list-indexes-v2.mdx": {
+      "sourceHash": "5ac705bfa44eaef84bda082d49259185516f65a1902e9744ccd44a9dd8706d84",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/index-operations-v2/list-indexes-v2.mdx",
+      "translatedAt": "2026-07-22T23:17:48.534Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/create-partition-v2.mdx": {
+      "sourceHash": "5645ea9700ba09f2fbea46d07b48083e47582177a3ba9ef4f94e5931077ed5e1",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/create-partition-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:09.417Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/drop-partition-v2.mdx": {
+      "sourceHash": "ff99595dcc98783ce6c819d5d20a192051dc0dd2af7880306c281e2342a9c263",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/drop-partition-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:19.079Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/get-partition-statistics-v2.mdx": {
+      "sourceHash": "7e73bb8a91c1a122f1ea953f081c4223d5f4fab243e0ef9e4c8dc944cd5bf03d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/get-partition-statistics-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:11.617Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/has-partition-v2.mdx": {
+      "sourceHash": "9c4b042a23eb710fd94d5ee2a66fff787a232b76d2f560e2c82aedf02f2a452f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/has-partition-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:17.228Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/list-partitions-v2.mdx": {
+      "sourceHash": "8c6545ca94a86e224164d8fefeab56ae573d55c79625bffcbeef6f71a188bb95",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/list-partitions-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:32.394Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/load-partitions-v2.mdx": {
+      "sourceHash": "ca23026f99943d90ee2fd8fec6d5d19b7c9642064293ab7ba8194090dcb7395b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/load-partitions-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:36.193Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/partition-operations-v2.mdx": {
+      "sourceHash": "0f9bfa4c6a914b9891fd7e328c8606ee15519ae21128d4a6a7b51236ae7094d2",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/partition-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:23.964Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/partition-operations-v2/release-partitions-v2.mdx": {
+      "sourceHash": "1d9101715b11e7236c01678a2aa888432bbae88dfa53efbab9a07a47557bebb3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/partition-operations-v2/release-partitions-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:40.472Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/privilege-group-operations-v2/add-privileges-to-group-v2.mdx": {
+      "sourceHash": "15ecd9052463165932fa7021824a1e61e1683ab28b8a845d6d190ea2c3f0a8fe",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/privilege-group-operations-v2/add-privileges-to-group-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:48.408Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/privilege-group-operations-v2/create-privilege-group-v2.mdx": {
+      "sourceHash": "b370a2644020c10836e8f616d39f311b386a98319dafc00b762b91bae52b1991",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/privilege-group-operations-v2/create-privilege-group-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:41.267Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/privilege-group-operations-v2/drop-privilege-group-v2.mdx": {
+      "sourceHash": "1e4475c463ab76faf4a6e136911893f92f31269ea1c8770a9f280c7dc7e66807",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/privilege-group-operations-v2/drop-privilege-group-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:48.243Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/privilege-group-operations-v2/list-privilege-groups-v2.mdx": {
+      "sourceHash": "b20752b6ae3d60e5146df5239acb88cef10c7efa3d43932e7e2a22e5dab12cf4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/privilege-group-operations-v2/list-privilege-groups-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:48.536Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/privilege-group-operations-v2/privilege-group-operations-v2.mdx": {
+      "sourceHash": "141f009fe640605cc1c522aca4a81d6d6b871ebce9347bfde883c48355feb50b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/privilege-group-operations-v2/privilege-group-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:47.038Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/privilege-group-operations-v2/remove-privileges-from-group-v2.mdx": {
+      "sourceHash": "a1c8e834e8cf311d3cbfcc1a99df9e103d33bd3b01c7575f34d0c95c545e8b8a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/privilege-group-operations-v2/remove-privileges-from-group-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:13.670Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/alter-role-v2.mdx": {
+      "sourceHash": "cc188483fb0a64d86a56041d963da7be54e5bbcf793edddea88e54ffee29e2f4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/alter-role-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:58.419Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/create-role-v2.mdx": {
+      "sourceHash": "b5631d6b828333c4a49ce58e41fe16081d179cb7cc5e2a9e29c2c000f862937f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/create-role-v2.mdx",
+      "translatedAt": "2026-07-22T23:18:57.470Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/describe-role-v2.mdx": {
+      "sourceHash": "9186f6987aaaa82b6e661de5675f6e33d78ae9d299e114ef848772eaa44393fa",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/describe-role-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:18.891Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/drop-role-v2.mdx": {
+      "sourceHash": "ff78388aa454960db9e86af4fcfbcbb065e7688525e9318f1d9e536115ae872c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/drop-role-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:16.470Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/grant-privilege-to-role-v2-v2.mdx": {
+      "sourceHash": "71e68a7f19076f945510f974193d29671d5a06af8b4659b3fe2da6564b186b8c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/grant-privilege-to-role-v2-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:20.659Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/grant-privilege-to-role-v2.mdx": {
+      "sourceHash": "2bf17248a0a9e48f220b5407aed3c968147db309da8e1d978f827e806b0b5b6e",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/grant-privilege-to-role-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:38.646Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/list-roles-v2.mdx": {
+      "sourceHash": "19e38a4f049dd0d1d12a51cc19e0a82a55480b7b8bfe861099a12a9f6c4bcde2",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/list-roles-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:26.218Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/revoke-privilege-from-role-v2-v2.mdx": {
+      "sourceHash": "4e7e37067cb887018c8a8ebc4fffcf8cf1fca9590c190a0356b39956410b87c6",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/revoke-privilege-from-role-v2-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:37.230Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/revoke-privilege-from-role-v2.mdx": {
+      "sourceHash": "33393bf23b3580a2cc85c8ad35329caabfb9b835531ec5df83bc8e4b1836221a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/revoke-privilege-from-role-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:37.994Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/role-operations-v2/role-operations-v2.mdx": {
+      "sourceHash": "3b478774ae68127e83dd90920446bb48043151d7a9d9a34573dc546e6a50d7c4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/role-operations-v2/role-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:31.705Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/create-user-v2.mdx": {
+      "sourceHash": "fd218226ae0809698b4f9d7b2e69528462371c963b1ab32ddc5a3152bddc9a78",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/create-user-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:42.247Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/describe-user-v2.mdx": {
+      "sourceHash": "5db66c4f7ad607b8f378b511eb286aace4ccc5180a54612977131da8d0534b42",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/describe-user-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:04.508Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/drop-user-v2.mdx": {
+      "sourceHash": "06d7c323188ea0a89e0f2b0425166e68d4718e8a00a441089bcfe58ddd5c981f",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/drop-user-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:45.026Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/grant-role-to-user-v2.mdx": {
+      "sourceHash": "80e0909a1f6a438d88c386559f8b2f7004b4a69ba6cbdb337c08f62618c921b4",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/grant-role-to-user-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:47.400Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/list-users-v2.mdx": {
+      "sourceHash": "e53f44dcd5c4f518540b85898aa436b00dc4a2b6f432dc380fcb332b0af5d08d",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/list-users-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:51.713Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/revoke-role-from-user-v2.mdx": {
+      "sourceHash": "10ebe2dd0cac3016fd1c35fd77e97e90afc0fcb765dfcfd4410bff115eca107c",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/revoke-role-from-user-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:55.634Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/update-user-v2.mdx": {
+      "sourceHash": "c3c0eb4f66ffab07a5129280f856bd2a286b26fb337afa0466b48f052cf11d3a",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/update-user-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:56.210Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/user-operations-v2/user-operations-v2.mdx": {
+      "sourceHash": "857589d2dcd95a814b090d6d31a0a52fe131aba772fed04e384b55d21af66dcb",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/user-operations-v2/user-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:19:57.952Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/delete-v2.mdx": {
+      "sourceHash": "df0c6711cdd915e434a44f788644e32069965a69cfde796f23a7d825c5a1fbd3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/delete-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:05.139Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/get-v2.mdx": {
+      "sourceHash": "93e227c29d6845a3d2809a03a34fabb2a000f0878a082df714bfe1159ddb0862",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/get-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:13.302Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/hybrid-search-v2.mdx": {
+      "sourceHash": "207bcb99717529d9a91312dcbffd1ca1609eacf89cabc2c33e2d431e78d4e2c3",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/hybrid-search-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:24.275Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/insert-v2.mdx": {
+      "sourceHash": "a00710a5e0659781f6d8e80b00e3efa685147adc5ed7d5ee8406429048729550",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/insert-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:24.436Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/query-v2.mdx": {
+      "sourceHash": "cc539d7e1f147da5ba24a42fc536a790c478044ca2a5d4d22757cc64510db879",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/query-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:31.983Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/search-v2.mdx": {
+      "sourceHash": "83683095bf14bc08b25f1049c43665739d93dfa46efe18a4127816b5720bbc24",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/search-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:37.324Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/upsert-v2.mdx": {
+      "sourceHash": "620609177ef8b7bc33b51d5175f4cbbe3e95a883016a61c9bafe0f62b2dea018",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/upsert-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:35.355Z"
+    },
+    "reference/api/restful/restful/v2/data-plane/vector-operations-v2/vector-operations-v2.mdx": {
+      "sourceHash": "6786bcd5f81543b52ed32a9abe25f084b162f6480fb8722e647b200ca4079258",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/data-plane/vector-operations-v2/vector-operations-v2.mdx",
+      "translatedAt": "2026-07-22T23:20:40.798Z"
+    },
+    "reference/api/restful/restful/v2/error-codes-v2.md": {
+      "sourceHash": "907d0f1372a45c6076487a000a4587f4afb13f6cd3421bbfdf24c31455733315",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/error-codes-v2.md",
+      "translatedAt": "2026-07-22T23:21:25.524Z"
+    },
+    "reference/api/restful/restful/v2/v2.mdx": {
+      "sourceHash": "af50e881d60556d064fcd6cfb8a926b741e947deb85a2e9a7e8e049b9621bbc9",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/v2/v2.mdx",
+      "translatedAt": "2026-07-22T23:20:39.637Z"
+    },
+    "reference/api/restful/restful/versioning.md": {
+      "sourceHash": "290064f2beab7f287d0572d940ec267c95b9d4cb34a244a7c2ee52968294cfe0",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/restful/restful/versioning.md",
+      "translatedAt": "2026-07-22T23:20:46.500Z"
+    },
     "reference/cli/cli/CloudManagement/CloudManagement-Backup/Backup-create.md": {
       "sourceHash": "da2361f36c4370c35d97eff2300fe49a4de35f484c41504dd8c74385357e7930",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/cli/cli/CloudManagement/CloudManagement-Backup/Backup-create.md",
