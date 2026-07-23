@@ -1,0 +1,92 @@
+---
+title: "StructFieldSchema | Java | v2"
+slug: /java/java/v2-Collections-StructFieldSchema
+sidebar_label: "StructFieldSchema"
+beta: false
+added_since: v2.6.x
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "StructFieldSchema 实例表示 Struct 数组字段中 Struct 元素的 schema。schema 勾勒出其 Struct 元素的结构。 | Java | v2"
+type: docx
+token: DCszdG9rCoZxhfxfAuOcNsXRnOc
+sidebar_position: 8
+keywords: 
+  - Sparse vs Dense
+  - Dense vector
+  - Hierarchical Navigable Small Worlds
+  - Dense embedding
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - StructFieldSchema
+  - javaV230
+displayed_sidebar: javaSidebar
+
+displayed_sidbar: javaSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# StructFieldSchema
+
+**StructFieldSchema** 实例表示 Struct 数组字段中 Struct 元素的 schema。schema 勾勒出其 Struct 元素的结构。
+
+```java
+io.milvus.v2.service.collection.request.CreateCollectionReq.StructFieldSchema
+```
+
+<Admonition type="info" icon="📘" title="注意">
+
+此类无法被显式实例化。你需要使用 Struct 数组字段描述一个 collection，才能查看其实例。
+
+</Admonition>
+
+## 示例\{#example}
+
+以下示例说明如何创建 Struct 数组字段，并向其 Struct 元素添加字段。
+
+```java
+import io.milvus.v2.common.DataType;
+import io.milvus.v2.service.collection.request.AddFieldReq;
+import io.milvus.v2.service.collection.request.CreateCollectionReq;
+
+CreateCollectionReq.CollectionSchema collectionSchema = CreateCollectionReq.CollectionSchema.builder()
+        .build();
+        
+collectionSchema.addField(AddFieldReq.builder()
+        .fieldName(STRUCT_FIELD)
+        .description("clips of a film")
+        .dataType(DataType.Array)
+        .elementType(DataType.Struct)
+        .maxCapacity(100)
+        .addStructField(AddFieldReq.builder()
+                .fieldName(FRAME_FIELD)
+                .description("from which frame this clip begin")
+                .dataType(DataType.Int32)
+                .build())
+        .addStructField(AddFieldReq.builder()
+                .fieldName(CLIP_VECTOR_FIELD)
+                .description("embedding of a clip")
+                .dataType(DataType.FloatVector)
+                .dimension(VECTOR_DIM)
+                .build())
+        .addStructField(AddFieldReq.builder()
+                .fieldName(DESC_FIELD)
+                .description("description of a clip")
+                .dataType(DataType.VarChar)
+                .maxLength(1024)
+                .build())
+        .addStructField(AddFieldReq.builder()
+                .fieldName(DESC_VECTOR_FIELD)
+                .description("embedding of description")
+                .dataType(DataType.FloatVector)
+                .dimension(VECTOR_DIM)
+                .build())
+        .build());
+```
+
+## 方法\{#methods}
+
+以下是 `StructFieldSchema` 类的方法：

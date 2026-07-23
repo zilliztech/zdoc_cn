@@ -1,0 +1,133 @@
+---
+title: "loadPartitions() | Java | v2"
+slug: /java/java/v2-Partitions-loadPartitions
+sidebar_label: "loadPartitions()"
+beta: false
+added_since: v2.3.x
+last_modified: v2.6.x
+deprecate_since: false
+notebook: false
+description: "此操作会从内存中释放指定 collection 中的 partition。 | Java | v2"
+type: docx
+token: MH8cdNxkgoliJ5xU0f9cBKqunYe
+sidebar_position: 6
+keywords: 
+  - rag vector database
+  - 什么是 vector db
+  - 什么是 vector database
+  - vector database 对比
+  - zilliz
+  - Zilliz Cloud
+  - cloud
+  - loadPartitions()
+  - javaV230
+displayed_sidebar: javaSidebar
+
+displayed_sidbar: javaSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# loadPartitions()
+
+此操作会从内存中释放指定 collection 中的 partition。
+
+```java
+public void loadPartitions(LoadPartitionsReq request)
+```
+
+## 请求语法\{#request-syntax}
+
+```java
+loadPartitions(LoadPartitionsReq.builder()
+    .databaseName(String databaseName)
+    .collectionName(String collectionName)
+    .partitionNames(List<String> partitionNames)
+    .numReplicas(Integer numReplicas)
+    .sync(Boolean sync)
+    .timeout(Long timeout)
+    .refresh(Boolean refresh)
+    .loadFields(List<String> loadFields)
+    .skipLoadDynamicField(Boolean skipLoadDynamicField)
+    .resourceGroups(List<String> resourceGroups)
+    .build()
+);
+```
+
+**BUILDER 方法：**
+
+- `databaseName(String databaseName)` -
+
+    database 的名称。如果未指定，则默认为当前 database。
+
+- `collectionName(String collectionName)` -
+
+    目标 collection 的名称。
+
+- `partitionNames(List<String> partitionNames)` -
+
+    要作为目标的 partition 名称列表。
+
+- `numReplicas(Integer numReplicas)` -
+
+    要加载的副本数量。
+
+- `sync(Boolean sync)` -
+
+    是否同步等待操作完成。
+
+- `timeout(Long timeout)` -
+
+    超时时长，单位为毫秒。
+
+- `refresh(Boolean refresh)` -
+
+    是否刷新加载以包含新字段。
+
+- `loadFields(List<String> loadFields)` -
+
+    要加载的特定字段名称列表。
+
+- `skipLoadDynamicField(Boolean skipLoadDynamicField)` -
+
+    是否跳过加载动态字段。
+
+- `resourceGroups(List<String> resourceGroups)` -
+
+    用于负载均衡的资源组名称列表。
+
+**返回：**
+
+*void*
+
+*void*
+
+**异常：**
+
+- **MilvusClientException**
+
+    当此操作期间发生任何错误时，将引发此异常。
+
+## 示例\{#example}
+
+```java
+import io.milvus.v2.client.ConnectConfig;
+import io.milvus.v2.client.MilvusClientV2;
+import io.milvus.v2.service.partition.request.LoadPartitionsReq;
+
+// 1. Set up a client
+ConnectConfig connectConfig = ConnectConfig.builder()
+        .uri("YOUR_CLUSTER_ENDPOINT")
+        .token("YOUR_CLUSTER_TOKEN")
+        .build();
+        
+MilvusClientV2 client = new MilvusClientV2(connectConfig);
+
+// 2. Load partition in collection
+LoadPartitionsReq loadPartitionsReq = LoadPartitionsReq.builder()
+        .collectionName("test")
+        .partitionNames(Collections.singletonList("test_partition"))
+        .build();
+client.loadPartitions(loadPartitionsReq);
+```

@@ -1,0 +1,87 @@
+---
+title: "getFlushAllState() | Java | v2"
+slug: /java/java/v2-Management-getFlushAllState
+sidebar_label: "getFlushAllState()"
+beta: false
+added_since: v3.0.x
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作检查之前的 flush-all 操作是否已完成。当你异步调用 `flushAll` 并需要轮询完成状态时使用它。 | Java | v2"
+type: docx
+token: U55Vd0IR9oz8m9xS76scr4KDnNh
+sidebar_position: 26
+keywords: 
+  - knn 算法
+  - HNSW
+  - 什么是非结构化数据
+  - 向量嵌入
+  - zilliz
+  - Zilliz Cloud
+  - cloud
+  - getFlushAllState()
+  - javaV230
+displayed_sidebar: javaSidebar
+
+displayed_sidbar: javaSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# getFlushAllState()
+
+此操作检查之前的 flush-all 操作是否已完成。当你异步调用 `flushAll` 并需要轮询完成状态时使用它。
+
+```java
+public GetFlushAllStateResp getFlushAllState(GetFlushAllStateReq request)
+```
+
+## 请求语法\{#request-syntax}
+
+```java
+getFlushAllState(GetFlushAllStateReq.builder()
+    .databaseName(String databaseName)
+    .flushAllTs(Long flushAllTs)
+    .build());
+```
+
+**BUILDER METHODS:**
+
+- `databaseName(String databaseName)`
+
+    调用 `flushAll` 时使用的数据库。
+
+- `flushAllTs(Long flushAllTs)`
+
+    `flushAll` 返回的 flush-all 时间戳。
+
+**返回：**
+
+*GetFlushAllStateResp*
+
+**异常：**
+
+- **MilvusClientException**
+
+    当验证失败或服务器针对该操作返回错误时，会抛出此异常。
+
+## 示例\{#example}
+
+```java
+MilvusClientV2 client = new MilvusClientV2(ConnectConfig.builder()
+    .uri("YOUR_CLUSTER_ENDPOINT")
+    .token("YOUR_CLUSTER_TOKEN")
+    .build());
+
+FlushAllResp flush = client.flushAll(FlushAllReq.builder()
+    .databaseName("default")
+    .build());
+GetFlushAllStateResp state = client.getFlushAllState(GetFlushAllStateReq.builder()
+    .databaseName("default")
+    .flushAllTs(flush.getFlushAllTs())
+    .build());
+System.out.println(state.getFlushed());
+```
+
+{/* category: Management; action: CREATE; addedSince: v3.0.x */}

@@ -1,0 +1,189 @@
+---
+title: "hybridSearch() | Java | v2"
+slug: /java/java/v2-Vector-hybridSearch
+sidebar_label: "hybridSearch()"
+beta: false
+added_since: v2.4.x
+last_modified: v3.0.x
+deprecate_since: false
+notebook: false
+description: "此操作在 collection 上执行多 vector 搜索，并在重排序后返回搜索结果。 | Java | v2"
+type: docx
+token: R1NDdFPnVo4wTuxvHjFcozc8nMa
+sidebar_position: 3
+keywords: 
+  - Faiss
+  - 视频搜索
+  - AI 幻觉
+  - AI Agent
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - hybridSearch()
+  - javaV230
+displayed_sidebar: javaSidebar
+
+displayed_sidbar: javaSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# hybridSearch()
+
+此操作在 collection 上执行多 vector 搜索，并在重排序后返回搜索结果。
+
+```java
+public SearchResp hybridSearch(HybridSearchReq request)
+```
+
+## 请求语法\{#request-syntax}
+
+```java
+hybridSearch(HybridSearchReq.builder()
+    .databaseName(String databaseName)
+    .collectionName(String collectionName)
+    .clusterId(String clusterId)
+    .partitionNames(List<String> partitionNames)
+    .searchRequests(List<AnnSearchReq> searchRequests)
+    .topK(int topK)
+    .limit(long limit)
+    .outFields(List<String> outFields)
+    .offset(long offset)
+    .roundDecimal(int roundDecimal)
+    .consistencyLevel(ConsistencyLevel consistencyLevel)
+    .groupByFieldName(String groupByFieldName)
+    .groupSize(Integer groupSize)
+    .strictGroupSize(Boolean strictGroupSize)
+    .functionScore(FunctionScore functionScore)
+    .build()
+);
+```
+
+**构建器方法：**
+
+- `databaseName(String databaseName)`
+
+    数据库的名称。如果未指定，则默认为当前数据库。
+
+- `collectionName(String collectionName)`
+
+    目标 collection 的名称。
+
+- `clusterId(String clusterId)`
+
+    此 vector 读取请求的目标 cluster ID。当多个请求应共享同一 cluster ID 时，请使用 `session(String clusterId)`。
+
+- `partitionNames(List<String> partitionNames)`
+
+    要作为目标的 partition 名称列表。
+
+- `searchRequests(List<AnnSearchReq> searchRequests)`
+
+    用于 hybrid search 的 AnnSearchReq 对象列表。
+
+- `topK(int topK)`
+
+    要返回的顶部结果数量。
+
+- `limit(long limit)`
+
+    要返回的最大结果数量。
+
+- `outFields(List<String> outFields)`
+
+    要包含在输出中的字段名称列表。
+
+- `offset(long offset)`
+
+    返回前要跳过的结果数量。
+
+- `roundDecimal(int roundDecimal)`
+
+    distance/score 四舍五入的小数位数。
+
+- `consistencyLevel(ConsistencyLevel consistencyLevel)`
+
+    该操作的 consistency level。
+
+- `groupByFieldName(String groupByFieldName)`
+
+    用于对搜索结果进行分组的字段名称。
+
+- `groupSize(Integer groupSize)`
+
+    每组返回的结果数量。
+
+- `strictGroupSize(Boolean strictGroupSize)`
+
+    是否严格强制执行 group size。
+
+- `functionScore(FunctionScore functionScore)`
+
+    用于自定义评分的 FunctionScore 对象。
+
+**返回：**
+
+*SearchResp*
+
+*SearchResp*
+
+**异常：**
+
+- **MilvusClientException**
+
+    当此操作期间发生任何错误时，将抛出此异常。
+
+## 示例\{#example}
+
+```java
+import io.milvus.v2.service.vector.request.AnnSearchReq;
+import io.milvus.v2.service.vector.request.HybridSearchReq;
+import io.milvus.v2.service.vector.request.FunctionScore;
+import io.milvus.v2.service.vector.request.ranker.WeightedRanker;
+import io.milvus.v2.service.vector.response.SearchResp;
+import io.milvus.v2.common.ConsistencyLevel;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+// Build ANN search requests for multiple vector fields
+List<AnnSearchReq> searchRequests = new ArrayList<>();
+searchRequests.add(AnnSearchReq.builder()
+        .vectorFieldName("float_vector")
+        .vectors(floatVectors)
+        .params("{\"nprobe\": 10}")
+        .limit(10)
+        .build());
+searchRequests.add(AnnSearchReq.builder()
+        .vectorFieldName("binary_vector")
+        .vectors(binaryVectors)
+        .limit(50)
+        .build());
+searchRequests.add(AnnSearchReq.builder()
+        .vectorFieldName("sparse_vector")
+        .vectors(sparseVectors)
+        .limit(100)
+        .build());
+
+// Hybrid search with WeightedRanker via FunctionScore
+SearchResp searchResp = client.hybridSearch(HybridSearchReq.builder()
+        .collectionName("my_collection")
+        .searchRequests(searchRequests)
+        .functionScore(FunctionScore.builder()
+                .addFunction(WeightedRanker.builder()
+                        .weights(Arrays.asList(0.2f, 0.5f, 0.6f))
+                        .build())
+                .build())
+        .limit(5)
+        .consistencyLevel(ConsistencyLevel.BOUNDED)
+        .build());
+
+List<List<SearchResp.SearchResult>> searchResults = searchResp.getSearchResults();
+for (List<SearchResp.SearchResult> results : searchResults) {
+    for (SearchResp.SearchResult result : results) {
+        System.out.println(result);
+    }
+}
+```
