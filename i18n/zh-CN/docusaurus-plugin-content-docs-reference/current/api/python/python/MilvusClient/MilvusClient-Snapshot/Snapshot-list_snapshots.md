@@ -1,0 +1,80 @@
+---
+title: "list_snapshots() | Python | MilvusClient"
+slug: /python/python/Snapshot-list_snapshots
+sidebar_label: "list_snapshots()"
+beta: PRIVATE
+added_since: v3.0.x
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作列出所有 snapshot 名称。也可以按 collection 名称进行筛选，以列出属于特定 collection 的 snapshot。| Python | MilvusClient"
+type: docx
+token: WgmLdM6nUogd7LxGtmfc5dBKnku
+sidebar_position: 6
+keywords: 
+  - milvus vector database
+  - milvus db
+  - milvus vector db
+  - Zilliz Cloud
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - list_snapshots()
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+displayed_sidbar: pythonSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# list_snapshots()
+
+此操作列出所有 snapshot 名称。也可以按 collection 名称进行筛选，以列出属于特定 collection 的 snapshot。
+
+## 请求语法\{#request-syntax}
+
+```python
+list_snapshots(
+    collection_name: str = "",
+    timeout: Optional[float] = None,
+    **kwargs
+) -> List[str]
+```
+
+**参数：**
+
+- **collection_name** (*str*) -
+用于筛选 snapshot 的可选 collection 名称。如果为空，则列出所有 snapshot。
+
+- **timeout** (*Optional[float]*) -
+允许 RPC 执行的可选时长，单位为秒。
+
+**返回类型：**
+
+*List[str]*
+
+snapshot 名称列表。
+
+**异常：**
+
+- **MilvusException**
+
+    如果操作失败。
+
+## 示例\{#examples}
+
+```python
+from pymilvus import MilvusClient
+
+client = MilvusClient(uri="YOUR_CLUSTER_ENDPOINT")
+
+# List all snapshots for a specific collection
+snapshots = client.list_snapshots(collection_name="my_collection")
+print(snapshots)
+# ['backup_20260401', 'backup_20260418']
+
+# List all snapshots across all collections
+all_snapshots = client.list_snapshots()
+```

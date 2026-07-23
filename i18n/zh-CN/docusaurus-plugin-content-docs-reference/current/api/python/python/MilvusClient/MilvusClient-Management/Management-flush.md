@@ -1,0 +1,94 @@
+---
+title: "flush() | Python | MilvusClient"
+slug: /python/python/Management-flush
+sidebar_label: "flush()"
+beta: false
+added_since: v2.4.x
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作会刷新流式数据并封存段。不建议在所有数据都已插入 collection 后调用此操作，以避免产生小段，这可能会降低搜索性能。 | Python | MilvusClient"
+type: docx
+token: JnPrdOiPyo2e5gxzzFycbnvwnSd
+sidebar_position: 6
+keywords: 
+  - HNSW
+  - 什么是非结构化数据
+  - 向量嵌入
+  - 向量存储
+  - zilliz
+  - Zilliz Cloud
+  - cloud
+  - flush()
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+displayed_sidbar: pythonSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# flush()
+
+此操作会刷新流式数据并封存段。不建议在所有数据都已插入 collection 后调用此操作，以避免产生小段，这可能会降低搜索性能。
+
+<Admonition type="info" icon="📘" title="备注">
+
+这仅适用于托管 collection。
+
+</Admonition>
+
+## 请求语法\{#request-syntax}
+
+```python
+flush(
+    self,
+    collection_name: str,
+    timeout: Optional[float] = None,
+    **kwargs,
+)
+```
+
+**参数：**
+
+- **collection_name** (*str*) -
+
+    目标 collection 的名称。
+
+- **timeout** (*Optional[float]*) - 
+
+    此操作的超时时长。
+
+    将其设置为 None 表示此操作会在收到任何响应或发生任何错误时超时。
+
+**返回类型：**
+
+*NoneType*
+
+**返回：**
+
+*None*
+
+**异常：**
+
+- **MilvusException**
+
+    当此操作期间发生任何错误时，尤其是在指定的别名不存在时，将引发此异常。
+
+## 示例\{#example}
+
+```python
+from pymilvus import MilvusClient
+
+# 1. Create a milvus client
+client = MilvusClient(
+    uri="https://inxx-xxxxxxxxxxxx.api.gcp-us-west1.zillizcloud.com:19530",
+    token="user:password"
+)
+
+client.flush(
+    collection_name="collection_name"
+)
+```
+

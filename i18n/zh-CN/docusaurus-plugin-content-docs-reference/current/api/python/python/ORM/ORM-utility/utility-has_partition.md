@@ -1,0 +1,115 @@
+---
+title: "has_partition() | Python | ORM"
+slug: /python/python/utility-has_partition
+sidebar_label: "has_partition()"
+beta: NEAR DEPRECATE
+added_since: Inherit
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作用于检查分区是否存在。 | Python | ORM"
+type: docx
+token: KsmadNcXRoElO2xJi5HcJO57nwb
+sidebar_position: 18
+keywords: 
+  - Milvus 开源
+  - Milvus 如何工作
+  - Zilliz vector database
+  - Zilliz database
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - has_partition()
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+displayed_sidbar: pythonSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# has_partition()
+
+此操作用于检查分区是否存在。
+
+## 请求语法\{#request-syntax}
+
+```python
+has_partition(
+    collection_name: str,
+    partition_name: str,
+    using: str = "default",
+    timeout: float | None,
+)
+```
+
+**参数：**
+
+- **collection_name** (*str*) -
+
+    **[必需]**
+    现有集合的名称。
+
+    将其设置为不存在的集合会导致 **MilvusException**。
+
+- **partition_name** (*str*) -
+
+    **[必需]**
+    分区的名称。
+
+- **using** (*str*) - 
+
+    所使用连接的别名。
+
+    默认值为 **default**，表示此操作使用默认连接。
+
+- **timeout** (*float* | *None*)  
+
+    此操作的超时时长。将其设置为 **None** 表示此操作在收到任何响应或发生任何错误时超时。
+
+**返回类型：**
+
+*bool*
+
+**返回：**
+一个布尔值，表示指定的分区是否存在。
+
+**异常：**
+
+- **MilvusException**
+
+    当此操作期间发生任何错误时，尤其是在指定别名不存在时，将抛出此异常。
+
+## 示例\{#examples}
+
+```python
+from pymilvus import connections, utility
+
+# Connect to YOUR_CLUSTER_ENDPOINT
+connections.connect()
+
+# Get an existing collection
+collection = Collection(name="test_collection")
+
+# Check whether a partition exist
+collection.has_partition(
+    collection_name="test_collection",
+    partition_name="test_partition",
+) # True
+```
+
+## 相关操作\{#related-operations}
+
+以下操作与 `has_partition()` 相关：
+
+- [drop_collection()](./utility-drop_collection)
+
+- [flush_all()](./utility-flush_all)
+
+- [has_collection()](./utility-has_collection)
+
+- [list_collections()](./utility-list_collections)
+
+- [rename_collection()](./utility-rename_collection)
+

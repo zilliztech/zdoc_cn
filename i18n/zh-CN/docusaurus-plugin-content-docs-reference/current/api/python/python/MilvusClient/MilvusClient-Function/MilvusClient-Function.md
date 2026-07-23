@@ -1,0 +1,392 @@
+---
+title: "Function | Python | MilvusClient"
+slug: /python/python/MilvusClient-Function
+sidebar_label: "Function"
+beta: false
+added_since: v2.5.x
+last_modified: v3.0.x
+deprecate_since: false
+notebook: false
+description: "一个 `Function` 实例，用于从用户提供的原始数据生成向量嵌入，或在 Milvus 中对搜索结果应用重排序策略。| Python | MilvusClient"
+type: docx
+token: GaCYdVohYoHFhrx897zcmcNfn6e
+sidebar_position: 3
+keywords: 
+  - 稀疏向量
+  - 向量维度
+  - ANN Search
+  - 什么是向量嵌入
+  - zilliz
+  - Zilliz Cloud
+  - cloud
+  - Function
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+displayed_sidbar: pythonSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# Function
+
+一个 `Function` 实例，用于从用户提供的原始数据生成向量嵌入，或在 Milvus 中对搜索结果应用重排序策略。
+
+```python
+class pymilvus.Function
+```
+
+## 构造函数\{#constructor}
+
+此构造函数初始化一个新的 `Function` 实例，用于将用户的原始数据转换为向量嵌入，或对搜索结果应用重排序策略。这通过自动化流程实现，可简化相似性搜索操作。
+
+```python
+Function(
+    name: str,
+    function_type: FunctionType,
+    input_field_names: Union[str, List[str]],
+    output_field_names: Union[str, List[str]],
+    description: str = "",
+)
+```
+
+**参数：**
+
+- `name` (*str*) -
+
+    **[必需]**
+
+    函数的名称。此标识符用于在查询和集合中引用该函数。
+
+- `function_type` (*[FunctionType](./Collections-FunctionType)*) -
+
+    **[必需]**
+
+    要使用的嵌入函数类型。可选值：
+
+    - FunctionType.BM25：基于 BM25 排名算法从 VARCHAR 或 TEXT 字段生成稀疏向量。
+
+    - FunctionType.TEXTEMBEDDING：从 VARCHAR 或 TEXT 字段生成可捕获语义含义的稠密向量。
+
+    - `FunctionType.MINHASH`：生成用于近似文档之间 [Jaccard 相似度](https://en.wikipedia.org/wiki/Jaccard_index)的二进制向量。
+
+- `FunctionType.RERANK`：对搜索结果应用重排序策略。
+
+- `input_field_names` (*Union[str, List[str]]*) -
+
+    **[必需]**
+
+    包含需要转换为向量表示的原始数据的 VARCHAR 或 TEXT 字段名称。对于 FunctionType.BM25 和 FunctionType.TEXTEMBEDDING，此参数仅接受一个字段名称。
+
+- `output_field_names` (*Union[str, List[str]]*) -
+
+    用于存储生成的嵌入的字段名称。它应对应于集合 Schema 中定义的向量字段。此参数仅接受一个字段名称。
+
+    <Admonition type="info" icon="📘" title="Notes">
+
+    这仅在你将 `function_type` 设置为 `FunctionType.BM25` 和 `FunctionType.TEXTEMBEDDING` 时适用。
+
+    </Admonition>
+
+- `params` (*dict*) -
+
+    嵌入/排名函数的配置字典。支持的键因 `function_type` 而异：
+
+    - `FunctionType.BM25`：无需参数。传入空字典或完全省略即可。
+
+    - `FunctionType.TEXTEMBEDDING`：
+
+        - `provider` (*str*) -
+
+            嵌入模型提供商。可选值如下：
+
+            - `openai` ([OpenAI](https://milvus.io/docs/openai.md))
+
+            - `azure_openai` ([Microsoft Azure OpenAI](https://milvus.io/docs/azure-openai.md))
+
+            - `dashscope` ([DashScope](https://milvus.io/docs/dashscope.md))
+
+            - `bedrock` ([Amazon Bedrock](https://milvus.io/docs/bedrock.md))
+
+            - `vertexai` ([Google Cloud Vertext AI](https://milvus.io/docs/vertex-ai.md))
+
+            - `voyageai` ([Voyage AI](https://milvus.io/docs/voyage-ai.md))
+
+            - `cohere` ([Cohere](https://milvus.io/docs/cohere.md))
+
+            - `siliconflow` ([SiliconFlow](https://milvus.io/docs/siliconflow.md))
+
+            - `TEI` ([Hugging Face Text Embedding Inference](https://milvus.io/docs/hugging-face-tei.md))
+
+        - `model_name` (*str*) -
+
+            要使用的嵌入模型名称。该值随提供商而变化。有关详细信息，请参阅各自的文档页面。
+
+        - `credential` (*str*) -
+
+            在 `milvus.yaml` 顶层 `credential:` 部分中定义的凭据标签。
+
+            - 提供该标签时，Milvus 会检索匹配的密钥对或 API token，并在服务器端对请求进行签名。
+
+            - 省略该标签 (`None`) 时，Milvus 会回退到在 `milvus.yaml` 中为目标模型提供商显式配置的凭据。
+
+            - 如果标签未知或引用的密钥缺失，调用将失败。
+
+        - `dim` (*str*) -
+
+            输出嵌入的维度数。对于 OpenAI 的第三代模型，你可以缩短完整向量以降低成本和延迟，同时不会显著损失语义信息。更多信息请参阅 [OpenAI 公告博客文章](https://openai.com/blog/new-embedding-models-and-api-updates)。
+
+            <Admonition type="info" icon="📘" title="Notes">
+
+            如果你缩短向量维度，请确保 Schema 的 `add_field` 方法中为向量字段指定的 `dim` 值与嵌入函数的最终输出维度匹配。
+
+            </Admonition>
+
+    - `FunctionType.RERANK`：根据 reranker 类型配置 `params`：
+
+        - **Weighted Ranker**
+
+            ```python
+            params = {
+                "reranker": "weighted", # Required
+                "weights": [0.1, 0.9], # List[float], weights per search path ∈ [0,1]
+                "norm_score": True  # Optional
+            }
+            ```
+
+            - `reranker` (*str*)：指定要使用的重排序方法。必须设置为 `weighted` 才能使用 Weighted Ranker。
+
+            - `weights` (*List[float]*)：与每条搜索路径对应的权重数组；取值 ∈ [0,1]。有关详细信息，请参阅 [Weighted Ranker 的机制](https://milvus.io/docs/weighted-ranker.md#Mechanism-of-Weighted-Ranker)。
+
+            - `norm_score` (*boolean*)：是否在加权前对原始分数进行归一化（使用 arctan）。有关详细信息，请参阅 [Weighted Ranker 的机制](https://milvus.io/docs/weighted-ranker.md#Mechanism-of-Weighted-Ranker)。
+
+        - **RRF Ranker**
+
+            ```python
+            params = {
+                "reranker": "rrf", # Required
+                "k": 100  # Optional (default: 60)
+            }
+            ```
+
+            - `reranker` (*str*)：指定要使用的重排序方法。必须设置为 `"rrf"` 才能使用 RRF Ranker。
+
+            - `k` (*int*)：控制文档排名影响的平滑参数；较高的 `k` 会降低对靠前排名的敏感度。取值范围：(0, 16384)；默认值：`60`。有关详细信息，请参阅 [RRF Ranker 的机制](https://milvus.io/docs/rrf-ranker.md#Mechanism-of-RRF-Ranker)。
+
+        - **Decay Ranker**
+
+            ```python
+            params={
+                "reranker": "decay",            # Specify decay reranker. Must be "decay"
+                "function": "gauss",            # Choose decay function type: "gauss", "exp", or "linear"
+                "origin": 1720000000,           # Reference point (e.g., Unix timestamp)
+                "scale": 7 * 24 * 60 * 60,      # 7 days in seconds
+                "offset": 24 * 60 * 60,         # 1 day no-decay zone
+                "decay": 0.5                    # Half score at scale distance
+            }
+            ```
+
+            - `reranker` (*str*)：指定要使用的重排序方法。必须设置为 `"decay"` 才能启用衰减排名功能。
+
+            - `function` (*str*)：指定要应用的数学衰减排名器。可选值：`"gauss"`、`"expr"`、`"linear"`。有关详细信息，请参阅[选择合适的 Decay Ranker](https://milvus.io/docs/decay-ranker-overview.md#Choose-the-right-decay-ranker)。
+
+            - `origin` (*int*)：计算衰减分数的参考点。
+
+            - `scale`  (*int*)：相关性下降到 `decay` 值时的距离或时间。
+
+            - `offset` (*int*)：在 `origin` 周围创建一个“无衰减区”，其中条目保持满分（衰减分数 = 1.0）。
+
+            - `decay` (*float*)：在 `scale` 距离处的分数值，用于控制曲线陡峭程度。
+
+            有关衰减排名的详细信息，请参阅 [Decay Ranker 概述](https://milvus.io/docs/decay-ranker-overview.md)。
+
+        - **Model Ranker**
+
+            **TEI Provider**：
+
+            ```python
+            params={
+                "reranker": "model",  # Specify model reranker. Must be "model"
+                "provider": "tei",  # Choose provider: "tei" or "vllm"
+                "queries": ["machine learning for time series"],  # Query text
+                "endpoint": "http://model-service:8080",  # Model service endpoint
+                "max_client_batch_size": 32,  # Optional (default: 32)
+                "truncate": True,                # Optional: Truncate the inputs that are longer than the maximum supported size
+                "truncation_direction": "Right",    # Optional: Direction to truncate the inputs
+            }
+            ```
+
+            **vLLM Provider**：
+
+            ```python
+            params={
+                "reranker": "model",        # Specifies model-based reranking
+                "provider": "vllm",         # Specifies vLLM service
+                "queries": ["renewable energy developments"],  # Query text
+                "endpoint": "http://localhost:8080",  # vLLM service address
+                "max_client_batch_size": 64,              # Optional: batch size
+                "truncate_prompt_tokens": 256,  # Optional: Use last 256 tokens
+            }
+            ```
+
+            **Cohere Provider**：
+
+            ```python
+            params = {
+                "reranker": "model",                  # Enables model-based reranking
+                "provider": "cohere",                 # Specifies Cohere as the service provider
+                "model_name": "rerank-english-v3.0",  # Cohere rerank model to use
+                "queries": ["renewable energy developments"],  # Query text for relevance evaluation
+                "max_client_batch_size": 128,         # Optional: batch size for model service requests (default: 128)
+                "max_tokens_per_doc": 4096,           # Optional: max tokens per document (default: 4096)
+                "credential": "your-cohere-api-key" # Optional: authentication credential for Cohere API
+            }
+            ```
+
+            **Voyage AI Provider**：
+
+            ```python
+            params = {
+                "reranker": "model",                    # Enables model-based reranking
+                "provider": "voyageai",                 # Specifies Voyage AI as the service provider
+                "model_name": "rerank-2.5",             # Voyage AI reranker to use
+                "queries": ["renewable energy developments"],  # Query text for relevance evaluation
+                "max_client_batch_size": 128,           # Optional: batch size for model service requests (default: 128)
+                "truncation": True,                     # Optional: enable input truncation (default: True)
+                "credential": "your-voyage-api-key"   # Optional: if not set, uses VOYAGE_API_KEY env var
+            }
+            ```
+
+            **SiliconFlow Provider**：
+
+            ```python
+            params = {
+                "reranker": "model",                        # Enables model-based reranking
+                "provider": "siliconflow",                  # Specifies SiliconFlow as the service provider
+                "model_name": "BAAI/bge-reranker-v2-m3",    # SiliconFlow reranking model to use
+                "queries": ["renewable energy developments"],  # Query text for relevance evaluation
+                "max_client_batch_size": 128,               # Optional: batch size for model service requests (default: 128)
+                "max_chunks_per_doc": 5,                    # Optional: max chunks per document for supported models
+                "overlap_tokens": 50,                       # Optional: token overlap between chunks for supported models
+                "credential": "your-siliconflow-api-key"  # Optional: if not set, uses SILICONFLOW_API_KEY env var
+            }
+            ```
+
+            - `reranker` (*str*)：必须设置为 `"model"` 以启用基于模型的重排序。
+
+            - `provider` (*str*)：用于重排序的模型服务提供商。可选值：`"tei"` 或 `"vllm"`。有关详细信息，请参阅[根据需求选择模型提供商](https://milvus.io/docs/model-ranker-overview.md#Choose-a-model-provider-for-your-needs)。
+
+            - `queries` (*List[str]*)：重排序模型用于计算相关性分数的查询字符串列表。
+
+            - `endpoint` (*str*)：模型服务的 URL。
+
+            - `max_client_batch_size` *(int)*：单个批次中要处理的最大文档数。默认值：32。
+
+            - `truncate` *(bool)*：**[仅 TEI]** 是否截断超过最大支持大小的输入。有关详细信息，请参阅 [TEI Ranker](https://milvus.io/docs/tei-ranker.md)。
+
+            - `truncation_direction` (*str*)：**[仅 TEI]** 截断方向（`"Left"` 或 `"Right"`）。有关详细信息，请参阅 [TEI Ranker](https://milvus.io/docs/tei-ranker.md)。
+
+            - `truncate_prompt_tokens` *(int)*：**[仅 vLLM]** 截断时从 prompt 末尾保留的词元数。有关详细信息，请参阅 [vLLM Ranker](https://milvus.io/docs/vllm-ranker.md)。
+
+            - `max_tokens_per_doc` *(int)*：**[仅 Cohere]** 每个文档的最大词元数。长文档将被自动截断到指定的词元数。有关详细信息，请参阅 [Cohere Ranker](https://milvus.io/docs/cohere-ranker.md)。
+
+            - `truncation` *(bool)*：**[仅 Voyage AI]** 是否截断输入，以满足查询和文档的“上下文长度限制”。有关详细信息，请参阅 [Voyage AI Ranker](https://milvus.io/docs/voyage-ai-ranker.md)。
+
+            - `max_chunks_per_doc` *(int)*：**[仅 SiliconFlow]** 从文档中生成的最大分块数。有关详细信息，请参阅 [SiliconFLow Ranker](https://milvus.io/docs/siliconflow-ranker.md)。
+
+            - `overlap_tokens`  *(int)*：**[仅 SiliconFlow]** 文档被分块时相邻分块之间的重叠词元数。有关详细信息，请参阅 [SiliconFLow Ranker](https://milvus.io/docs/siliconflow-ranker.md)。
+
+- `description` (*str*) -
+
+    **[可选]**
+
+    对函数用途的简要描述。这对于大型项目中的文档记录或提高清晰度很有用，默认值为空字符串。
+
+**返回类型：**
+
+`Function` 实例，封装用于将原始数据转换为向量嵌入的特定处理行为。
+
+**返回值：**
+
+一个可注册到 Milvus 集合的 `Function` 对象，用于在数据插入期间自动生成嵌入。
+
+**异常：**
+
+- `UnknownFunctionType`
+
+    当指定了不受支持或无法识别的函数类型时，将引发此异常。
+
+- `FunctionIncorrectInputOutputType`
+
+    当 `input_field_names` 或 `output_field_names` 中的一个或多个字段名称不是字符串时，将引发此异常。
+
+- `FunctionDuplicateInputs`
+
+    当 `input_field_names` 中存在重复的字段名称时，将引发此异常。
+
+- `FunctionDuplicateOutputs`
+
+    当 `output_field_names` 中存在重复的字段名称时，将引发此异常。
+
+- `FunctionCommonInputOutput`
+
+    当 `input_field_names` 和 `output_field_names` 之间存在重叠时，将引发此异常，这意味着同一个字段名称同时出现在两者中。
+
+## 示例\{#examples}
+
+- 使用 `BM25`
+
+    ```python
+    from pymilvus import Function, FunctionType
+    
+    # use BM25
+    bm25_function = Function(
+        name="bm25_fn",
+        input_field_names=["document_content"],
+        output_field_names=["sparse_vector"],
+        function_type=FunctionType.BM25,
+    )
+    ```
+
+- 使用 `TEXTEMBEDDING`
+
+    ```python
+    from pymilvus import Function, FunctionType
+    
+    # use TEXTEMBEDDING
+    text_embedding_function = Function(
+        name="openai_embedding",                        # Unique identifier for this embedding function
+        function_type=FunctionType.TEXTEMBEDDING,       # Type of embedding function
+        input_field_names=["document"],                 # Scalar field to embed
+        output_field_names=["dense"],                   # Vector field to store embeddings
+        params={                                        # Provider-specific configuration (highest priority)
+            "provider": "openai",                       # Embedding model provider
+            "model_name": "text-embedding-3-small",     # Embedding model
+            # "credential": "apikey1",                    # Optional: Credential label specified in milvus.yaml
+            # Optional parameters:
+            # "dim": "1536",                            # Optionally shorten the output vector dimension
+            # "user": "user123"                         # Optional: identifier for API tracking
+        }
+    )
+    ```
+
+- 使用 `RERANK`
+
+    ```python
+    from pymilvus import Function, FunctionType
+    
+    # use RERANK
+    model_ranker = Function(
+        name="semantic_ranker",  # Function identifier
+        input_field_names=["document"],  # VARCHAR field to use for reranking
+        function_type=FunctionType.RERANK,  # Must be set to RERANK
+        params={
+            "reranker": "model",  # Specify model reranker. Must be "model"
+            "provider": "tei",  # Choose provider: "tei" or "vllm"
+            "queries": ["machine learning for time series"],  # Query text
+            "endpoint": "http://model-service:8080",  # Model service endpoint
+            # "max_client_batch_size": 32  # Optional: batch size for processing
+        }
+    )
+    ```

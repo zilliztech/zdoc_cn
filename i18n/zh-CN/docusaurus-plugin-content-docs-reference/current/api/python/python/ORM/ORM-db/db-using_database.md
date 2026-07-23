@@ -1,0 +1,97 @@
+---
+title: "using_database() | Python | ORM"
+slug: /python/python/db-using_database
+sidebar_label: "using_database()"
+beta: NEAR DEPRECATE
+added_since: Inherit
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作将某个数据库设置为当前连接的默认数据库。| Python | ORM"
+type: docx
+token: GXXTd7JIgoUKhzxiI6ncWtwjnVc
+sidebar_position: 4
+keywords: 
+  - LLM 幻觉
+  - 多模态搜索
+  - vector 搜索算法
+  - 问答系统
+  - zilliz
+  - Zilliz Cloud
+  - 云
+  - using_database()
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+displayed_sidbar: pythonSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# using_database()
+
+此操作将某个数据库设置为当前连接的默认数据库。
+
+## 请求语法\{#request-syntax}
+
+Milvus 集群随附一个名为 **default** 的默认数据库。所有集合操作都在默认数据库内执行。你可以使用此方法来更改默认数据库。
+
+```python
+using_database(
+    db_name: str,
+    using: str
+)
+```
+
+**参数：**
+
+- **db_name** (*string*) -
+
+    **[必需]**
+
+    要设置为默认数据库的数据库名称。
+
+- **using** (*string*) -
+
+    连接的别名。默认为 **default**。
+
+**返回类型：**
+
+None
+
+**返回：**
+
+None
+
+**异常：**
+
+None
+
+## 示例\{#examples}
+
+```python
+from pymilvus import connections, db
+
+conn = connections.connect(
+    host="127.0.0.1", 
+    port=19530
+)
+
+db.using_database("test")
+
+## You can directly use a database upon the connection as follows.
+## However, the specified database should exist beforehand.
+conn = connections.connect(host="127.0.0.1", port=19530, db_name="test")
+```
+
+## 相关操作\{#related-operations}
+
+以下操作与 `using_database()` 相关：
+
+- [create_database()](./db-create_database)
+
+- [drop_database()](./db-drop_database)
+
+- [list_database()](./db-list_database)
+

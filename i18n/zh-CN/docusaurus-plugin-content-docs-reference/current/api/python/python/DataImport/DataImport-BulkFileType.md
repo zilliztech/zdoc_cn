@@ -1,0 +1,66 @@
+---
+title: "BulkFileType | Python"
+slug: /python/python/DataImport-BulkFileType
+sidebar_label: "BulkFileType"
+beta: false
+added_since: Inherit
+last_modified: v2.5.x
+deprecate_since: false
+notebook: false
+description: "这是一个提供以下常量的枚举。| Python"
+type: docx
+token: NV3Ud1M9iojhaSxZY4ec8RjgnlP
+sidebar_position: 1
+keywords: 
+  - llm eval
+  - 稀疏 vs 稠密
+  - 稠密向量
+  - 分层可导航小世界
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - BulkFileType
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+displayed_sidbar: pythonSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# BulkFileType
+
+这是一个提供以下常量的枚举。
+
+## 常量\{#constants}
+
+- **NPY** = 1
+
+    将文件类型设置为 **NumPy** (*.npy*)。
+
+- **JSON** = 2
+
+    将文件类型设置为 **JSON** (*.json*)。 
+
+- **PARQUET** = 3
+
+    将文件类型设置为 [Parquet](https://parquet.apache.org/) (*.parquet*)。
+
+- **CSV** = 4
+
+    将文件类型设置为 **CSV** (*.csv*)。
+
+## 示例\{#examples}
+
+```python
+from pymilvus import LocalBulkWriter, BulkFileType
+
+local_writer = LocalBulkWriter(
+    schema=schema,
+    local_path=Path(OUTPUT_PATH).joinpath('json'),
+    segment_size=4*1024*1024,
+    # highlight-next
+    file_type=BulkFileType.PARQUET
+)
+```

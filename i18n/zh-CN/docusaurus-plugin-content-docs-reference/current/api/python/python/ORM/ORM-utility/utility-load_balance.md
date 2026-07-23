@@ -1,0 +1,105 @@
+---
+title: "load_balance() | Python | ORM"
+slug: /python/python/utility-load_balance
+sidebar_label: "load_balance()"
+beta: NEAR DEPRECATE
+added_since: Inherit
+last_modified: false
+deprecate_since: false
+notebook: false
+description: "此操作会在特定 collection 的两个 query node 之间设置一个负载均衡组。 | Python | ORM"
+type: docx
+token: XYNMdg3Vpo3SE7xTRVqcJNvrn0d
+sidebar_position: 32
+keywords: 
+  - 向量化
+  - k 近邻算法
+  - ANNS
+  - Vector search
+  - zilliz
+  - zilliz cloud
+  - cloud
+  - load_balance()
+  - pymilvus30
+displayed_sidebar: pythonSidebar
+
+displayed_sidbar: pythonSidebar
+---
+
+import Admonition from '@theme/Admonition';
+
+
+# load_balance()
+
+此操作会在特定 collection 的两个 query node 之间设置一个负载均衡组。
+
+## 请求语法\{#request-syntax}
+
+```python
+load_balance(
+    collection_name: str,
+    src_node_id: int,
+    dst_node_ids: list[int] | None,
+    sealed_segment_ids: list[int] | None,
+    timeout: float | None,
+    using: str = "default",
+)
+```
+
+**参数：**
+
+- **collection_name** (*str*) -
+**[必需]**
+
+    要为其设置负载均衡组的现有 collection 的名称。
+
+- **src_node_id** (*int*) -
+**[必需]**
+
+    该 collection 当前使用的 query node 的 ID。
+
+- **dst_node_ids** (*list[int]*) -
+
+    要添加到负载均衡组的 query node 的 ID。
+
+- **sealed_segment_ids** (*list[int]*) -
+
+    要进行负载均衡的 sealed segment 的 ID。
+
+- **timeout** (*float*)  
+
+    此操作的超时时长。将其设置为 **None** 表示当收到任何响应或发生任何错误时，此操作超时。
+
+- **using** (*str*) - 
+
+    所使用连接的别名。
+
+    默认值为 **default**，表示此操作使用默认连接。
+
+**返回类型：**
+
+*NoneType*
+
+**返回：**
+None
+
+**异常：**
+
+不适用
+
+## 示例\{#examples}
+
+```python
+from pymilvus import connections, utility
+
+# Connect to YOUR_CLUSTER_ENDPOINT
+connections.connect()
+
+utility.load_balance(
+    collection_name="test_collection",
+    src_node_id=446781855410073001,
+    dst_node_ids=[478798283048914039],
+    sealed_segment_ids=None,
+)
+```
+
