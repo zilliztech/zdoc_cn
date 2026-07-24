@@ -9,7 +9,7 @@
   "source_branch": "dev",
   "publish_url": "https://docs.cloud-uat3.zilliz.com",
   "link_check_remote": "https://docs.zilliz.com",
-  "generated_at": "2026-07-23T23:01:25.807Z",
+  "generated_at": "2026-07-24T07:29:23.743Z",
   "source_dir": "./plugins/lark-docs/meta/sources/guides",
   "base_app_token": "I6YUb1M0JajHrqsJGcLcZNh7neP",
   "records": [
@@ -6546,7 +6546,7 @@
       "doc_token": "GZriwpM0Gi7fcukuo8xc736VnBh",
       "doc_link": "https://zilliverse.feishu.cn/wiki/GZriwpM0Gi7fcukuo8xc736VnBh",
       "source_file": "GZriwpM0Gi7fcukuo8xc736VnBh.json",
-      "source_hash": "a6e90049c398e2841a6fb3df057770fbcc185d75c6b9b34aa01d0a3b8516d1b5",
+      "source_hash": "1cfd8d5f16afd772bf64f1b634742bf95b23e69817d1db011b5b70b189a26bd5",
       "node_metadata": {
         "requested_token": "GZriwpM0Gi7fcukuo8xc736VnBh",
         "requested_node_token": "GZriwpM0Gi7fcukuo8xc736VnBh",
@@ -6560,14 +6560,14 @@
         "parent_node_token": "FqTCwzQ7pifaAKkajQdchERrnEd",
         "node_create_time": "1735030009",
         "obj_create_time": "1735030009",
-        "obj_edit_time": "1783073806",
+        "obj_edit_time": "1784870899",
         "revision_id": null
       },
       "node_token": "GZriwpM0Gi7fcukuo8xc736VnBh",
       "origin_node_token": "GZriwpM0Gi7fcukuo8xc736VnBh",
       "obj_token": "Su6sdKAWAoltSQxkuB2cJzf1nGf",
       "obj_type": "docx",
-      "obj_edit_time": "1783073806",
+      "obj_edit_time": "1784870899",
       "revision_id": null,
       "outgoing_tokens": [
         "GZriwpM0Gi7fcukuo8xc736VnBh",

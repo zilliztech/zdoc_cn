@@ -135,7 +135,7 @@ import Admonition from '@theme/Admonition';
 
 | **操作** | **项目管理员** | **集群管理员** | **项目读写** | **项目只读** |
 | --- | --- | --- | --- | --- |
-| 床架 Collection | ✅ | ✅ | ✅ | ❌ |
+| 创建 Collection | ✅ | ✅ | ✅ | ❌ |
 | Drop Collection | ✅ | ✅ | ✅ | ❌ |
 | List/Describe Collection | ✅ | ✅ | ✅ | ✅ |
 | Insert/Upsert | ✅ | ✅ | ✅ | ❌ |
