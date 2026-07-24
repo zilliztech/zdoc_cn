@@ -260,7 +260,7 @@ import Admonition from '@theme/Admonition';
      <th><p><strong>项目只读</strong></p></th>
    </tr>
    <tr>
-     <td><p>床架 Collection</p></td>
+     <td><p>创建 Collection</p></td>
      <td><p>✅</p></td>
      <td><p>✅</p></td>
      <td><p>✅</p></td>
