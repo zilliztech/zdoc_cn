@@ -3091,9 +3091,9 @@
       "translatedAt": "2026-07-22T23:00:51.572Z"
     },
     "reference/api/java/java/v2/v2-Client/v2-Client-ConnectConfig.md": {
-      "sourceHash": "140cd31461983e776658dafd716bd45d34715bdfbfafca288acfec9454a3aee8",
+      "sourceHash": "098664ad42e01d65c90a1f47009f56a5d1fb345f0356a87e4ed52ddba1fc686f",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Client/v2-Client-ConnectConfig.md",
-      "translatedAt": "2026-07-22T23:01:13.513Z"
+      "translatedAt": "2026-07-24T07:01:12.365Z"
     },
     "reference/api/java/java/v2/v2-Client/v2-Client-MilvusClientV2.md": {
       "sourceHash": "4cf06e1555d8696c23e179ff7bd9d4c3b9d5850b52b9414e74ed0590bda30b0f",
@@ -3111,9 +3111,9 @@
       "translatedAt": "2026-07-22T23:00:40.941Z"
     },
     "reference/api/java/java/v2/v2-Client/v2-Client-getServerVersionV2.md": {
-      "sourceHash": "8d99189e8a75a09d33cf52e90a16f39165758f60f7830b865b6b0d5e39890dd9",
+      "sourceHash": "2f9722693af1cdc78dae0b01b3d63d9359c17fc02ca8bf5a458912f1ef0d0614",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Client/v2-Client-getServerVersionV2.md",
-      "translatedAt": "2026-07-22T23:00:56.377Z"
+      "translatedAt": "2026-07-24T07:00:48.448Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-CollectionSchema/v2-CollectionSchema-addField.md": {
       "sourceHash": "ef8b80575507dd5a756b3192877457f93d6dcb0160a1697cd6dcf1f5123abcac",
@@ -3216,9 +3216,9 @@
       "translatedAt": "2026-07-22T23:06:20.671Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-Function/v2-Function-FunctionType.md": {
-      "sourceHash": "54f53ea32f1a868505dfa111df4abafaca161b2903160e1703d6d5e051d027b4",
+      "sourceHash": "aa0894692ba8e665a022224612e7046f26b8d6c2c125e560d4bf90b294e3d229",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-Function/v2-Function-FunctionType.md",
-      "translatedAt": "2026-07-22T23:05:48.891Z"
+      "translatedAt": "2026-07-24T07:01:36.503Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-Function/v2-Function-ModelRanker.md": {
       "sourceHash": "36e006219ae2e41a73f4ca7769c2f95f1b4990f33a5f8f1e23029bd1fb0afeb1",
@@ -3286,14 +3286,19 @@
       "translatedAt": "2026-07-22T23:01:30.879Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-addCollectionFunction.md": {
-      "sourceHash": "08f5b370f27cd9bca9e7abe046354385561e7cd0468362eeeaf605b156f44a4b",
+      "sourceHash": "84ea2b7fc2268b20ecd6ff3a1ae3649a200f4fe40236465a24aa1b83268805c4",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-addCollectionFunction.md",
-      "translatedAt": "2026-07-22T23:01:56.528Z"
+      "translatedAt": "2026-07-24T07:00:51.894Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-addCollectionStructField.md": {
       "sourceHash": "408d29e9161503d5464caafdd3c517a478ee6418cc19aaaf2a4a49960281fa45",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-addCollectionStructField.md",
       "translatedAt": "2026-07-22T23:01:54.304Z"
+    },
+    "reference/api/java/java/v2/v2-Collections/v2-Collections-addFunctionField.md": {
+      "sourceHash": "6a9db4fd09ef5a6230ecff9deb2a28b49db7fd127161027ed1cab6b95e25af17",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-addFunctionField.md",
+      "translatedAt": "2026-07-24T07:01:32.787Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-alterAlias.md": {
       "sourceHash": "4809bf02da0fe37e00636e49e96bb42033701bf0443e13a9c5a18d34809d8eac",
@@ -3355,30 +3360,40 @@
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-dropCollection.md",
       "translatedAt": "2026-07-22T23:04:26.295Z"
     },
+    "reference/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionField.md": {
+      "sourceHash": "7a0a117cd76506b0c77c8b5b72eef98e17b3126903d74287239b4192f7488d75",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionField.md",
+      "translatedAt": "2026-07-24T07:01:35.950Z"
+    },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionFieldProperties.md": {
       "sourceHash": "d56036f1d01664e0dabdd3dba4e77272758137742a673f9823ef2861518d2161",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionFieldProperties.md",
       "translatedAt": "2026-07-22T23:04:35.062Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionFunction.md": {
-      "sourceHash": "86e90811ca05a061617d9e1ef21da15c6469bfa1e38c7eecdae56262ee830b99",
+      "sourceHash": "9e9d57270c7ab13ab9abaa06b80bb6bb46ab5fe9b6ab2ced96aeb977d187be6e",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionFunction.md",
-      "translatedAt": "2026-07-22T23:04:24.151Z"
+      "translatedAt": "2026-07-24T07:01:25.175Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionProperties.md": {
       "sourceHash": "8908ad65bb6c67d9842ee1611d1c08264b438b89fbc12d14560021a1a940a295",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-dropCollectionProperties.md",
       "translatedAt": "2026-07-22T23:04:43.870Z"
     },
+    "reference/api/java/java/v2/v2-Collections/v2-Collections-dropFunctionField.md": {
+      "sourceHash": "fde46e980574fbe013948dcf573466638e55271b0d1e865e2b3e75ba1cf2fa65",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-dropFunctionField.md",
+      "translatedAt": "2026-07-24T07:01:23.613Z"
+    },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-getCollectionStats.md": {
-      "sourceHash": "ec13204b3bca384b6ca6c0c3711f7fa121fae669877d6a43c92a362d6730a851",
+      "sourceHash": "29199aff1309d96d15ca10526717c59e4b3b140acfe6723a7b0ecdb3a8e9c4e2",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-getCollectionStats.md",
-      "translatedAt": "2026-07-22T23:06:15.157Z"
+      "translatedAt": "2026-07-24T07:01:41.361Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-getLoadStateV2.md": {
-      "sourceHash": "a34cf75751c2f20e18cf55a45381a6c6375571dd358ca398257625ef01d7c152",
+      "sourceHash": "ee089df51f32e01f67ef32d7ee793db4b48f18b8dc8ce4df27a66b32c73f37a8",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Collections/v2-Collections-getLoadStateV2.md",
-      "translatedAt": "2026-07-22T23:06:18.259Z"
+      "translatedAt": "2026-07-24T07:01:51.042Z"
     },
     "reference/api/java/java/v2/v2-Collections/v2-Collections-hasCollection.md": {
       "sourceHash": "9825ba278ecd5184a67a9ef90ed33d21fc27f7b9a157eb9421f21cfc0b0b30d5",
@@ -3410,20 +3425,30 @@
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-BulkFileType.md",
       "translatedAt": "2026-07-22T23:08:28.586Z"
     },
+    "reference/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-abortImport.md": {
+      "sourceHash": "a0aea0faf68521586c5db1628d1f09bc2fb4dfa228c9189b3e742dccb4e82164",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-abortImport.md",
+      "translatedAt": "2026-07-24T07:02:24.975Z"
+    },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-bulkImport.md": {
-      "sourceHash": "8d52d953c9753888e7d04f01301c36c5bd1570ae32b92e3101ee6b1c430baa00",
+      "sourceHash": "4bea7042e8de5b05a647c5eee71c6942326cd61d0ba49c6aff38c355932b72dd",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-bulkImport.md",
-      "translatedAt": "2026-07-22T23:09:11.228Z"
+      "translatedAt": "2026-07-24T07:02:37.694Z"
+    },
+    "reference/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-commitImport.md": {
+      "sourceHash": "b57e01861cbcc1e15a699fd37fdace4de75ebfbcb6874c7965aa6b3f6968f859",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-commitImport.md",
+      "translatedAt": "2026-07-24T07:02:25.288Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-getImportProgress.md": {
-      "sourceHash": "052e6d411c94be60d03255fccf6215f6c840657d7abacb2e07cb041767d9e130",
+      "sourceHash": "c5defc42afac1dabb257469d1b145e3932e891706dc7b0ba60d7432fb567ef3e",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-getImportProgress.md",
-      "translatedAt": "2026-07-22T23:08:53.557Z"
+      "translatedAt": "2026-07-24T07:02:31.419Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-listImportJobs.md": {
-      "sourceHash": "fc2c7bf7ca91cc2cc20c185fddc455d3df81468ad44da57caefebaa070001f04",
+      "sourceHash": "5a8b722f9ee7d052b501af9cd6ede6189bda9aa13d690938397852b87f3e147e",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-BulkImport-listImportJobs.md",
-      "translatedAt": "2026-07-22T23:08:36.636Z"
+      "translatedAt": "2026-07-24T07:03:04.036Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-BulkImport/v2-DataImport-BulkImport.md": {
       "sourceHash": "f1ffb0f80d732fdfd95bb3083b2e520eea4be14d4f445496c08b2cbb6bd0c73f",
@@ -3436,9 +3461,9 @@
       "translatedAt": "2026-07-22T23:09:13.471Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-LocalBulkWriter/v2-LocalBulkWriter-appendRow.md": {
-      "sourceHash": "c7f6f5ce7ff6d0a83abb65b98be3a402ee9b239abd9593d884db182cb973e5f9",
+      "sourceHash": "8d5757857eae7fedba00261b2fb51eb252f521684aaa68489c5e3bde718eae0b",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-LocalBulkWriter/v2-LocalBulkWriter-appendRow.md",
-      "translatedAt": "2026-07-22T23:08:55.669Z"
+      "translatedAt": "2026-07-24T07:02:40.357Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-LocalBulkWriter/v2-LocalBulkWriter-close.md": {
       "sourceHash": "c6e12d3647f9ad2b428371a79299a0f6e23a1674b505f7719a99a1d32c61c649",
@@ -3466,9 +3491,9 @@
       "translatedAt": "2026-07-22T23:10:06.823Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-RemoteBulkWriter/v2-RemoteBulkWriter-appendRow.md": {
-      "sourceHash": "89730743bede46527276d2100e96054383f4212c558bd359953c7f490a06e9d9",
+      "sourceHash": "c23368e7e107f6198e19236a1590b742b02b7680e396b6fb311f413350ed9d05",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-RemoteBulkWriter/v2-RemoteBulkWriter-appendRow.md",
-      "translatedAt": "2026-07-22T23:09:38.298Z"
+      "translatedAt": "2026-07-24T07:02:45.918Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-RemoteBulkWriter/v2-RemoteBulkWriter-close.md": {
       "sourceHash": "6b6ef88844d83d319c7179f3e7b20a370848349cc229d85d3ef4b6b0804700fd",
@@ -3491,14 +3516,14 @@
       "translatedAt": "2026-07-22T23:09:50.313Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-VolumeBulkWriter/v2-DataImport-VolumeBulkWriter.md": {
-      "sourceHash": "bad434dde4a71671c9207dc3c5d4c4810808d33270506ce8b6959e0734850e7b",
+      "sourceHash": "22096bdcbfeeb02e2f2c3605cd566700593638023ca6ee535158ef7ac2778fbf",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-VolumeBulkWriter/v2-DataImport-VolumeBulkWriter.md",
-      "translatedAt": "2026-07-22T23:11:06.207Z"
+      "translatedAt": "2026-07-24T07:03:03.152Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-VolumeBulkWriter/v2-VolumeBulkWriter-appendRow.md": {
-      "sourceHash": "b97fd0a4eb44988b4f507295f7f569750a8af549ee681b69020f8d59c28d88d6",
+      "sourceHash": "983e53371a18c2ba1704ae9ada8691f968fe2ca72cc683f4e0b37e33d62ddc83",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-DataImport/v2-DataImport-VolumeBulkWriter/v2-VolumeBulkWriter-appendRow.md",
-      "translatedAt": "2026-07-22T23:10:04.748Z"
+      "translatedAt": "2026-07-24T07:02:57.317Z"
     },
     "reference/api/java/java/v2/v2-DataImport/v2-DataImport-VolumeBulkWriter/v2-VolumeBulkWriter-close.md": {
       "sourceHash": "f6a11cd5d66b889a5332c3fb1eb04dd194af45fde835ae4e85a5593cd65c0f56",
@@ -3631,19 +3656,19 @@
       "translatedAt": "2026-07-22T23:12:13.134Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-flushAll.md": {
-      "sourceHash": "472ab2579c3ccf80f8c6c911462877c13179a5589849f0e6b53ada9f8bfdd31f",
+      "sourceHash": "342873cd1a32c01db8a1fc323d41fe8f021286509e75a3524ffad7881eb11e67",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Management/v2-Management-flushAll.md",
-      "translatedAt": "2026-07-22T23:11:56.330Z"
+      "translatedAt": "2026-07-24T07:03:06.544Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-getCompactionPlans.md": {
-      "sourceHash": "117f3830812bb30343a36fb99048476bdfa720ed5ec5ec06cbbb47754eafe93f",
+      "sourceHash": "bd09d3455fdcbbfedecc63799a19d0cb631cb816506ca0040b083e8196927fa7",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Management/v2-Management-getCompactionPlans.md",
-      "translatedAt": "2026-07-22T23:12:25.601Z"
+      "translatedAt": "2026-07-24T07:03:33.292Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-getFlushAllState.md": {
-      "sourceHash": "3317c67296cdf0a3b3c602e117f57bc9974caa8689a2bcd34f4c29d59a80dc45",
+      "sourceHash": "c1f1dba9d2792ed9bfdb5b8976780e673adcd702422172816fb4e030fb00cdc2",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Management/v2-Management-getFlushAllState.md",
-      "translatedAt": "2026-07-22T23:12:14.504Z"
+      "translatedAt": "2026-07-24T07:03:17.915Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-getLoadState.md": {
       "sourceHash": "a51a79792dd12961a55f9a03a3d5310089677135e4f3de50e68d2e522d454621",
@@ -3651,14 +3676,14 @@
       "translatedAt": "2026-07-22T23:12:48.956Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-getRefreshExternalCollectionProgress.md": {
-      "sourceHash": "9cc3ce1895ca3f74e0948da0112813a9b2a2eef9abf3619b7e8ca069f63ce1f7",
+      "sourceHash": "dffc8d4471d8f93644db2497647f654d7435ac90af015ad6e26f51a9d6086883",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Management/v2-Management-getRefreshExternalCollectionProgress.md",
-      "translatedAt": "2026-07-22T23:12:55.617Z"
+      "translatedAt": "2026-07-24T07:03:31.130Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-getServerVersion.md": {
-      "sourceHash": "ab4dda98a2a8c21f20e407bd4182a73837b8b6abecf328883329c89432cf2caa",
+      "sourceHash": "c357714fa96df9c6948122721fb99f463218e12c6a4ad10d4afa13a5bea69a05",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Management/v2-Management-getServerVersion.md",
-      "translatedAt": "2026-07-22T23:12:44.205Z"
+      "translatedAt": "2026-07-24T07:03:37.261Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-listIndexes.md": {
       "sourceHash": "5906d1edd10ff4f4409d5544916609628ccd003ca6e3c16eaf5d9a041a4ac393",
@@ -3666,9 +3691,9 @@
       "translatedAt": "2026-07-22T23:13:25.064Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-listRefreshExternalCollectionJobs.md": {
-      "sourceHash": "284d49bbd2fef847b3f3638ecfc87d4ae7b11e97eaf97993b1889e4981bc1119",
+      "sourceHash": "b431446c3263ca67b76f965c7beca98c77b626abdf7dbc2b55207f0c3b6b720f",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Management/v2-Management-listRefreshExternalCollectionJobs.md",
-      "translatedAt": "2026-07-22T23:13:17.588Z"
+      "translatedAt": "2026-07-24T07:03:40.652Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-loadCollection.md": {
       "sourceHash": "6a2f0ee35df79c3b9cf2ae46d064adf2c873d4656e2b6fc02c21ff5db37d8f34",
@@ -3676,9 +3701,9 @@
       "translatedAt": "2026-07-22T23:13:39.275Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-refreshExternalCollection.md": {
-      "sourceHash": "58a7552ebb79fcd4306842ab4351376465e830aa082b3748ca47ceaa6a1ed27e",
+      "sourceHash": "ca6845e566ab7fe40519d2d478c98812c2c01c8e06cbadf10f5937dd80c16875",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Management/v2-Management-refreshExternalCollection.md",
-      "translatedAt": "2026-07-22T23:13:49.083Z"
+      "translatedAt": "2026-07-24T07:03:52.863Z"
     },
     "reference/api/java/java/v2/v2-Management/v2-Management-refreshLoad.md": {
       "sourceHash": "f40f0112e9c978ecbf4d809bae35e560363adb97a3279745667ac814ec8e5562",
@@ -3699,11 +3724,6 @@
       "sourceHash": "392303e79b68c3d6692efae03bf164c1c20103daf03a73226813cfff750606cd",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Partitions/v2-Partitions-dropPartition.md",
       "translatedAt": "2026-07-22T23:14:15.402Z"
-    },
-    "reference/api/java/java/v2/v2-Partitions/v2-Partitions-getPartitionStats.md": {
-      "sourceHash": "4a022bf3bd3ea7c1fafff5d6ffc7ba30825885b81c6279f2b3eb7c71b573726b",
-      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Partitions/v2-Partitions-getPartitionStats.md",
-      "translatedAt": "2026-07-22T23:14:45.622Z"
     },
     "reference/api/java/java/v2/v2-Partitions/v2-Partitions-hasPartition.md": {
       "sourceHash": "ad2383f10a6d862444f007f1600dd3f9f36ef0d8f4cfca87c666208a55f83e15",
@@ -3826,14 +3846,14 @@
       "translatedAt": "2026-07-22T23:17:00.902Z"
     },
     "reference/api/java/java/v2/v2-Vector/v2-Vector-insert.md": {
-      "sourceHash": "7390e091e3566e2eb9427873047b3952e1e340546c954f104af353431bb785d9",
+      "sourceHash": "5cb661d3f4a176788838189554cde52776033369a9b432fac5a763b6cb5a8f6b",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Vector/v2-Vector-insert.md",
-      "translatedAt": "2026-07-22T23:17:01.835Z"
+      "translatedAt": "2026-07-24T07:04:18.540Z"
     },
     "reference/api/java/java/v2/v2-Vector/v2-Vector-query.md": {
-      "sourceHash": "9f5cc0786f7180e7b1243b7e18084eaba7caeb44d2ad71665c07a86ec55f5a28",
+      "sourceHash": "1126030b725fb0c2f7b7fb5978f790876800bf08491576cb9a269e759be7ff40",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Vector/v2-Vector-query.md",
-      "translatedAt": "2026-07-22T23:17:39.425Z"
+      "translatedAt": "2026-07-24T07:04:40.156Z"
     },
     "reference/api/java/java/v2/v2-Vector/v2-Vector-queryIterator.md": {
       "sourceHash": "3961ab5fcd4bac4f9156ea9d3ba56d5528ad824c02583c99ece8eaf3985215e5",
@@ -3846,9 +3866,9 @@
       "translatedAt": "2026-07-22T23:17:24.259Z"
     },
     "reference/api/java/java/v2/v2-Vector/v2-Vector-search.md": {
-      "sourceHash": "488ff95287d0d930f4fc592e29e2acdf04d1d99bc8137f956c9e7df066ece5f6",
+      "sourceHash": "8b806041689dd5ac4ddb31ecb5f4b49cff2577d912929c91be395622478968f3",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Vector/v2-Vector-search.md",
-      "translatedAt": "2026-07-22T23:18:18.025Z"
+      "translatedAt": "2026-07-24T07:05:04.332Z"
     },
     "reference/api/java/java/v2/v2-Vector/v2-Vector-searchIterator.md": {
       "sourceHash": "84bcea8c906cbb7d54ecf867424de8d09e4b0e5e1e8768e2f4b41e9316fb1814",
@@ -3856,19 +3876,29 @@
       "translatedAt": "2026-07-22T23:17:55.135Z"
     },
     "reference/api/java/java/v2/v2-Vector/v2-Vector-upsert.md": {
-      "sourceHash": "023c9662e95bc11ab34556e17dd084c57ee415965e888468a0cc54cc5d5d00e3",
+      "sourceHash": "6929e5a487fb60ee4446485970941b5eb5ad4d10aae061b90358276fbc10bda6",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Vector/v2-Vector-upsert.md",
-      "translatedAt": "2026-07-22T23:18:28.292Z"
+      "translatedAt": "2026-07-24T07:04:38.409Z"
     },
     "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-Volume-VolumeFileManager.md": {
       "sourceHash": "ee4fa5af37eed1f92d1279bc0a54fd35159e544fb387bb4822263c06b1965efc",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-Volume-VolumeFileManager.md",
       "translatedAt": "2026-07-22T23:18:17.714Z"
     },
+    "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-VolumeFileManager-shutdownGracefully.md": {
+      "sourceHash": "2dc8c2c3fed1966e8a62bdfac1f2b70673e6121aeaa42960e8ead370fd8ca34b",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-VolumeFileManager-shutdownGracefully.md",
+      "translatedAt": "2026-07-24T07:04:28.609Z"
+    },
+    "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-VolumeFileManager-uploadFiles.md": {
+      "sourceHash": "56c27003ff4a612b0c32a7cd74d3bdf35663423ae80f2baa4aa24f5ae1b49d56",
+      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-VolumeFileManager-uploadFiles.md",
+      "translatedAt": "2026-07-24T07:04:49.267Z"
+    },
     "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-VolumeFileManager-uploadFilesAsync.md": {
-      "sourceHash": "3d811ea33604603c5677fad8baa8850a9960264163a421f148db2b93704e178a",
+      "sourceHash": "d2050233183e1ac6351bdafc63cc39932aff667dfdea95b9f844bc71478f0edf",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Volume/v2-Volume-VolumeFileManager/v2-VolumeFileManager-uploadFilesAsync.md",
-      "translatedAt": "2026-07-22T23:18:34.162Z"
+      "translatedAt": "2026-07-24T07:05:02.302Z"
     },
     "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeManager/v2-Volume-VolumeManager.md": {
       "sourceHash": "2bfb1b59bfeadd32c6f7f81118a477b716c701593099eb8af6839fc861fff7da",
@@ -3876,9 +3906,9 @@
       "translatedAt": "2026-07-22T23:18:55.032Z"
     },
     "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeManager/v2-VolumeManager-createVolume.md": {
-      "sourceHash": "4833cb292b411995d57debe95c6a949a143d21aeae33caff6e2221ecad76811b",
+      "sourceHash": "39726fdab5ab580616509bab37e33269c1cf42264e57abbb1814027a30d82b65",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Volume/v2-Volume-VolumeManager/v2-VolumeManager-createVolume.md",
-      "translatedAt": "2026-07-22T23:19:01.868Z"
+      "translatedAt": "2026-07-24T07:05:07.433Z"
     },
     "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeManager/v2-VolumeManager-deleteVolume.md": {
       "sourceHash": "ea73acc256d48b9b130c47063cae3b326d9c3888a556091288df16a87a8d9e53",
@@ -3886,14 +3916,9 @@
       "translatedAt": "2026-07-22T23:19:09.318Z"
     },
     "reference/api/java/java/v2/v2-Volume/v2-Volume-VolumeManager/v2-VolumeManager-listVolumes.md": {
-      "sourceHash": "3f11d9e34d9f931c04a17790fb5010060372c8d9a6ab5fe2086a1b1196eb2104",
+      "sourceHash": "6cb992de448347f8b552f1ef4b131f4883637969e560cbfe66085bb2d750f871",
       "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Volume/v2-Volume-VolumeManager/v2-VolumeManager-listVolumes.md",
-      "translatedAt": "2026-07-22T23:18:56.557Z"
-    },
-    "reference/api/java/java/v2/v2-Volume/v2-VolumeFileManager-shutdownGracefully.md": {
-      "sourceHash": "42c8a564954d84ddbaca49f6d478322ed11a74ee90ae71f8aa47a2d7ce5ce30f",
-      "targetPath": "i18n/zh-CN/docusaurus-plugin-content-docs-reference/current/api/java/java/v2/v2-Volume/v2-VolumeFileManager-shutdownGracefully.md",
-      "translatedAt": "2026-07-22T23:19:15.606Z"
+      "translatedAt": "2026-07-24T07:05:27.649Z"
     },
     "reference/api/nodejs/nodejs/Authentication/Authentication-addUserToRole.md": {
       "sourceHash": "2327f0fb04431ab8a2df5f813d10b724f1e7f6fa118e428d253afcb4ed21a32c",

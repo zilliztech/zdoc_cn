@@ -7,17 +7,17 @@ added_since: v3.0.x
 last_modified: false
 deprecate_since: false
 notebook: false
-description: "此操作列出所有外部 collection 刷新作业，可选择按 collection 名称进行筛选。| Java | v2"
+description: "此操作列出所有 external-collection 刷新作业，可选择按 collection 名称过滤。 | Java | v2"
 type: docx
 token: P9MFdEHMKoAfshxQhamcWrGknWg
-sidebar_position: 28
+sidebar_position: 30
 keywords: 
   - 检索增强生成
   - 大语言模型
   - 向量化
   - k 近邻算法
   - zilliz
-  - Zilliz Cloud
+  - zilliz cloud
   - cloud
   - listRefreshExternalCollectionJobs()
   - javaV230
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # listRefreshExternalCollectionJobs()
 
-此操作列出所有外部 collection 刷新作业，可选择按 collection 名称进行筛选。
+此操作列出所有 external-collection 刷新作业，可选择按 collection 名称过滤。
 
 ```java
 public ListRefreshExternalCollectionJobsResp listRefreshExternalCollectionJobs(ListRefreshExternalCollectionJobsReq request)
@@ -51,23 +51,23 @@ listRefreshExternalCollectionJobs(ListRefreshExternalCollectionJobsReq.builder()
 
 - `databaseName(String databaseName)` -
 
-    数据库名称。如果未指定，默认为当前数据库。
+    数据库名称。如果未指定，则默认为当前数据库。
 
 - `collectionName(String collectionName)` -
 
-    用于筛选的 collection 名称。如果为空，则返回数据库中所有 collection 的作业。
+    用于过滤的 collection 名称。如果为空，则返回数据库中所有 collection 的作业。
 
 **返回：**
 
 *ListRefreshExternalCollectionJobsResp*
 
-响应封装了可通过 `getJobs()` 访问的 `List<RefreshExternalCollectionJobInfo>`。每个作业信息条目公开 `jobId`、`collectionName`、`state`、`progress`、`reason`、`externalSource`、`startTime` 和 `endTime` — 其结构与 `getRefreshExternalCollectionProgress()` 返回的条目相同。
+响应包装了可通过 `getJobs()` 访问的 `List<RefreshExternalCollectionJobInfo>`。每个作业信息条目公开 `jobId`、`collectionName`、`state`、`progress`、`reason`、`externalSource`、`startTime` 和 `endTime` — 其形状与 `getRefreshExternalCollectionProgress()` 返回的条目相同。
 
 **异常：**
 
 - **MilvusClientException**
 
-    当此操作期间发生任何错误时，将抛出此异常。
+    当此操作期间发生任何错误时，将引发此异常。
 
 ## 示例\{#example}
 

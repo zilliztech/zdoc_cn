@@ -7,17 +7,17 @@ added_since: v3.0.x
 last_modified: false
 deprecate_since: false
 notebook: false
-description: "此操作获取服务器版本信息。当除了版本字符串之外还需要构建时间、Git commit、Go 版本和部署模式时，请使用 `detail(true)`。 | Java | v2"
+description: "此操作获取服务器版本信息。当除了版本字符串之外，还需要构建时间、Git commit、Go 版本和部署模式时，请使用 `detail(true)`。| Java | v2"
 type: docx
 token: KrSgdfCaJosFp5xwHIAcV0tAnec
-sidebar_position: 5
+sidebar_position: 6
 keywords: 
   - 图像搜索
   - LLMs
   - 机器学习
   - RAG
   - zilliz
-  - zilliz cloud
+  - Zilliz Cloud
   - cloud
   - getServerVersionV2()
   - javaV230
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # getServerVersionV2()
 
-此操作获取服务器版本信息。当除了版本字符串之外还需要构建时间、Git commit、Go 版本和部署模式时，请使用 `detail(true)`。
+此操作获取服务器版本信息。当除了版本字符串之外，还需要构建时间、Git commit、Go 版本和部署模式时，请使用 `detail(true)`。
 
 ```java
 public GetServerVersionResp getServerVersionV2(GetServerVersionReq request)
@@ -45,7 +45,7 @@ getServerVersionV2(GetServerVersionReq.builder()
     .build());
 ```
 
-**构建器方法：**
+**BUILDER 方法：**
 
 - `detail(Boolean detail)`
 
@@ -59,7 +59,7 @@ getServerVersionV2(GetServerVersionReq.builder()
 
 - **MilvusClientException**
 
-    当验证失败或服务器为此操作返回错误时，将抛出此异常。
+    当验证失败或服务器针对此操作返回错误时，将抛出此异常。
 
 ## 示例\{#example}
 

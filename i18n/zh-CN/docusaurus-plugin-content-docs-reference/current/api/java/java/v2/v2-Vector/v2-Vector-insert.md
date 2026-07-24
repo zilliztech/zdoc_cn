@@ -4,15 +4,15 @@ slug: /java/java/v2-Vector-insert
 sidebar_label: "insert()"
 beta: false
 added_since: v2.3.x
-last_modified: v2.6.x
+last_modified: v3.0.x
 deprecate_since: false
 notebook: false
-description: "此操作将数据插入到特定 collection 中。 | Java | v2"
+description: "对 auto-ID 字段、函数输出字段、动态字段和 Struct 值的插入行验证逻辑保持一致。 | Java | v2"
 type: docx
-token: Y0N1dL4bVoyUnXxfSu7cjrgRnlc
+token: DKs7dzHI5oaJvlxezuAcuMVzn9c
 sidebar_position: 4
 keywords: 
-  - Chroma 与 Milvus 对比
+  - Chroma 与 Milvus
   - Annoy vector 搜索
   - milvus
   - Zilliz
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # insert()
 
-此操作将数据插入到特定 collection 中。
+对 auto-ID 字段、函数输出字段、动态字段和 Struct 值的插入行验证逻辑保持一致。
 
 ```java
 public InsertResp insert(InsertReq request)
@@ -40,30 +40,29 @@ public InsertResp insert(InsertReq request)
 ## 请求语法\{#request-syntax}
 
 ```java
-insert(InsertReq.builder()
-    .data(List<JsonObject> data)
-    .databaseName(String databaseName)
-    .collectionName(String collectionName)
-    .partitionName(String partitionName)
-    .build()
-);
+InsertReq.builder()
+    .data(data)
+    .databaseName(databaseName)
+    .collectionName(collectionName)
+    .partitionName(partitionName)
+    .build();
 ```
 
-**BUILDER METHODS:**
+**构建器方法：**
 
-- `data(List<JsonObject> data)` -
+- `data(List<JsonObject> data)`
 
-    要作为 JSON 对象插入/upsert 的数据行列表。
+    要插入的行。字段名称和值必须符合 collection schema。
 
-- `databaseName(String databaseName)` -
+- `databaseName(String databaseName)`
 
-    database 的名称。如果未指定，则默认为当前 database。
+    database 的名称。省略时默认为当前 database。
 
-- `collectionName(String collectionName)` -
+- `collectionName(String collectionName)`
 
     目标 collection 的名称。
 
-- `partitionName(String partitionName)` -
+- `partitionName(String partitionName)`
 
     目标 partition 的名称。
 
@@ -71,42 +70,21 @@ insert(InsertReq.builder()
 
 *InsertResp*
 
-一个 **InsertResp** 对象，包含有关已插入实体数量的信息。
+包含已插入实体的数量以及适用时生成的主键。
 
 **异常：**
 
 - **MilvusClientException**
 
-    在此操作期间发生任何错误时，将引发此异常。
+    当请求验证、传输或服务器执行失败时抛出。请查看异常消息以了解确切的失败原因。
 
 ## 示例\{#example}
 
+演示如何使用经审核的 v3.0.x API 调用 insert()。
+
 ```java
-import com.google.gson.JsonObject;
-import io.milvus.v2.client.ConnectConfig;
-import io.milvus.v2.client.MilvusClientV2;
-import io.milvus.v2.service.vector.request.InsertReq;
-
-// 1. Set up a client
-ConnectConfig connectConfig = ConnectConfig.builder()
-        .uri("YOUR_CLUSTER_ENDPOINT")
-        .token("YOUR_CLUSTER_TOKEN")
-        .build();
-        
-MilvusClientV2 client = new MilvusClientV2(connectConfig);
-
-// 2. Add one row to the collection, the collection has an "id" field
-// and a "vector" field with dimension 2
-JsonObject row = new JsonObject();
-List<Float> vectorList = new ArrayList<>();
-vectorList.add(1.0f);
-vectorList.add(2.0f);
-row.add("vector", gson.toJsonTree(vectorList));
-row.addProperty("id", 0L);
-
-InsertReq insertReq = InsertReq.builder()
-        .collectionName("test")
-        .data(Collections.singletonList(row))
-        .build();
-client.insert(insertReq);
+InsertResp response = client.insert(InsertReq.builder()
+    .collectionName("books")
+    .data(rows)
+    .build());
 ```

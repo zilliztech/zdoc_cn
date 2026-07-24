@@ -7,12 +7,12 @@ added_since: v2.6.x
 last_modified: v3.0.x
 deprecate_since: false
 notebook: false
-description: "ConnectConfig 构建器保存创建 `MilvusClientV2` 实例时使用的连接配置。使用构建器模式配置所有连接参数，包括身份验证、TLS、超时和 keepalive 设置。 | Java | v2"
+description: "ConnectConfig builder 保存创建 `MilvusClientV2` 实例时使用的连接配置。使用 builder 模式配置所有连接参数，包括身份验证、TLS、超时和 keepalive 设置。 | Java | v2"
 type: docx
 token: ErNidktYPodbDxxow0xcV5qHnof
-sidebar_position: 4
+sidebar_position: 5
 keywords: 
-  - Pinecone 向量数据库
+  - Pinecone vector 数据库
   - 音频搜索
   - 什么是语义搜索
   - Embedding 模型
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # ConnectConfig
 
-ConnectConfig 构建器保存创建 `MilvusClientV2` 实例时使用的连接配置。使用构建器模式配置所有连接参数，包括身份验证、TLS、超时和 keepalive 设置。
+ConnectConfig builder 保存创建 `MilvusClientV2` 实例时使用的连接配置。使用 builder 模式配置所有连接参数，包括身份验证、TLS、超时和 keepalive 设置。
 
 ```java
 ConnectConfig.builder()
@@ -58,7 +58,7 @@ ConnectConfig.builder()
     .build()
 ```
 
-**构建器方法：**
+**BUILDER 方法：**
 
 - `uri(String uri)` -
 
@@ -84,43 +84,43 @@ ConnectConfig.builder()
 
 - `connectTimeoutMs(long connectTimeoutMs)` -
 
-    连接期间等待 gRPC channel 达到 READY 状态的超时时间（毫秒）。默认值：`10000`。
+    连接期间等待 gRPC channel 达到 READY 状态的超时时间（以毫秒为单位）。默认值：`10000`。
 
 - `keepAliveTimeMs(long keepAliveTimeMs)` -
 
-    发送到服务器的 keepalive ping 之间的间隔（毫秒）。默认值：`10000`。
+    发送到服务器的 keepalive ping 之间的间隔（以毫秒为单位）。默认值：`10000`。
 
 - `keepAliveTimeoutMs(long keepAliveTimeoutMs)` -
 
-    在关闭连接之前等待 keepalive ping 确认的超时时间（毫秒）。默认值：`5000`。
+    在关闭连接之前等待 keepalive ping 确认的超时时间（以毫秒为单位）。默认值：`5000`。
 
 - `keepAliveWithoutCalls(boolean keepAliveWithoutCalls)` -
 
-    当为 `true` 时，即使没有活跃的 RPC，也会发送 keepalive ping。默认值：`true`。
+    当为 `true` 时，即使没有活动 RPC，也会发送 keepalive ping。默认值：`true`。
 
 - `rpcDeadlineMs(long rpcDeadlineMs)` -
 
-    单次 RPC 调用允许的最长持续时间（毫秒）。值为 `0` 时禁用 deadline。默认值：`0`。
+    单个 RPC 调用允许的最大持续时间（以毫秒为单位）。值为 `0` 时禁用 deadline。默认值：`0`。
 
 - `secure(Boolean secure)` -
 
-    启用 TLS 加密。当 URI 以 `https` 开头时，无论此设置如何，TLS 始终会启用。默认值：`false`。
+    启用 TLS 加密。当 URI 以 `https` 开头时，无论此设置如何，始终启用 TLS。默认值：`false`。
 
 - `enablePrecheck(boolean enablePrecheck)` -
 
-    当为 `true` 时，在返回客户端之前执行连接检查。默认值：`false`。
+    当为 `true` 时，在返回 client 之前执行连接检查。默认值：`false`。
 
 - `idleTimeoutMs(long idleTimeoutMs)` -
 
-    空闲连接关闭前的时间（毫秒）。默认值：`86400000`（24 小时）。
+    空闲连接在多长时间后关闭（以毫秒为单位）。默认值：`86400000`（24 小时）。
 
 - `clientKeyPath(String clientKeyPath)` -
 
-    用于双向 TLS (mTLS) 的客户端私钥文件路径。默认值：`null`。
+    用于双向 TLS (mTLS) 的 client 私钥文件路径。默认值：`null`。
 
 - `clientPemPath(String clientPemPath)` -
 
-    用于双向 TLS (mTLS) 的客户端证书文件路径。默认值：`null`。
+    用于双向 TLS (mTLS) 的 client 证书文件路径。默认值：`null`。
 
 - `caPemPath(String caPemPath)` -
 
@@ -132,7 +132,7 @@ ConnectConfig.builder()
 
 - `serverName(String serverName)` -
 
-    用于 TLS 证书验证的服务器名称覆盖。默认值：`null`。
+    用于 TLS 证书验证的服务器名称覆盖值。默认值：`null`。
 
 - `proxyAddress(String proxyAddress)` -
 
@@ -140,7 +140,7 @@ ConnectConfig.builder()
 
 - `option(Map<String, String> option)` -
 
-    在连接时转发到服务器 `ClientInfo.reserved` 字段中的任意键值对。可用于传递服务器能够理解的客户端元数据或功能标志。默认值为空 map。
+    在连接时转发到服务器 `ClientInfo.reserved` 字段的任意键值对。适用于传递服务器能够理解的 client 端元数据或功能标志。默认值为空 map。
 
 ## 示例\{#example}
 

@@ -1,25 +1,25 @@
 ---
-title: "uploadFilesAsync | Java | v2"
-slug: /java/java/v2-Volume-VolumeFileManager/v2-VolumeFileManager-uploadFilesAsync
-sidebar_label: "uploadFilesAsync"
+title: "uploadFiles() | Java | v2"
+slug: /java/java/v2-VolumeFileManager-uploadFiles
+sidebar_label: "uploadFiles()"
 beta: false
-added_since: false
-last_modified: v3.0.x
+added_since: v3.0.x
+last_modified: false
 deprecate_since: false
 notebook: false
-description: "将文件或目录异步上传到 Zilliz Cloud volume，并支持可配置的重试、并发、分片上传和进度报告。 | Java | v2"
+description: "同步将文件或目录上传到 Zilliz Cloud volume，并支持重试、并发、分片和进度控制。 | Java | v2"
 type: docx
-token: Op8ydBXyZo2rlZxhgfNcaC3unRg
-sidebar_position: 5
+token: FiyGdmoSHoDbrPxhSdncsMWbnhc
+sidebar_position: 4
 keywords: 
-  - 分层可导航小世界
-  - 密集嵌入
-  - Faiss 向量数据库
-  - Chroma 向量数据库
+  - IVF
+  - knn
+  - 图像搜索
+  - LLMs
   - zilliz
-  - zilliz cloud
+  - Zilliz Cloud
   - cloud
-  - uploadFilesAsync
+  - uploadFiles()
   - javaV230
 displayed_sidebar: javaSidebar
 
@@ -29,12 +29,12 @@ displayed_sidbar: javaSidebar
 import Admonition from '@theme/Admonition';
 
 
-# uploadFilesAsync()
+# uploadFiles()
 
-将文件或目录异步上传到 Zilliz Cloud volume，并支持可配置的重试、并发、分片上传和进度报告。
+同步将文件或目录上传到 Zilliz Cloud volume，并支持重试、并发、分片和进度控制。
 
 ```java
-public CompletableFuture<UploadFilesResult> uploadFilesAsync(UploadFilesRequest request)
+public UploadFilesResult uploadFiles(UploadFilesRequest request)
 ```
 
 ## 请求语法\{#request-syntax}
@@ -63,7 +63,7 @@ UploadFilesRequest.builder()
 
 - `uploadConcurrency(int uploadConcurrency)`
 
-    并发上传的最大文件数。
+    并发上传文件的最大数量。
 
 - `maxRetries(int maxRetries)`
 
@@ -71,7 +71,7 @@ UploadFilesRequest.builder()
 
 - `retryIntervalMillis(long retryIntervalMillis)`
 
-    重试尝试之间的延迟时间，以毫秒为单位。
+    重试尝试之间的延迟时间，单位为毫秒。
 
 - `progressListener(ProgressListener progressListener)`
 
@@ -79,11 +79,11 @@ UploadFilesRequest.builder()
 
 - `partSizeBytes(long partSizeBytes)`
 
-    分片上传的分片大小，以字节为单位。非正值将启用自动大小设置。
+    分片上传的分片大小，单位为字节。非正值将启用自动大小设置。
 
-**返回值：**
+**返回：**
 
-*CompletableFuture&lt;UploadFilesResult&gt;*
+*UploadFilesResult*
 
 标识目标 volume 和已上传路径。
 
@@ -91,12 +91,12 @@ UploadFilesRequest.builder()
 
 - **Exception**
 
-    当请求验证、传输或服务器执行失败时抛出。请检查异常消息以获取确切的失败原因。
+    当请求验证、传输或服务器执行失败时抛出。请查看异常消息以了解确切的失败原因。
 
 ## 示例\{#example}
 
 ```java
-CompletableFuture<UploadFilesResult> future = manager.uploadFilesAsync(UploadFilesRequest.builder()
+UploadFilesResult result = manager.uploadFiles(UploadFilesRequest.builder()
     .sourceFilePath("./data")
     .targetVolumePath("imports/")
     .uploadConcurrency(5)

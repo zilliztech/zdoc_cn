@@ -10,10 +10,10 @@ notebook: false
 description: "此操作返回已连接服务器的版本字符串。| Java | v2"
 type: docx
 token: FuDHdadxHoX9qSxe4aac4wzNnRh
-sidebar_position: 23
+sidebar_position: 26
 keywords: 
-  - hnsw 算法
-  - vector 相似度搜索
+  - HNSW 算法
+  - 向量相似度搜索
   - 近似最近邻搜索
   - DiskANN
   - zilliz
@@ -47,7 +47,7 @@ public String getServerVersion()
 
 - **MilvusClientException**
 
-    在此操作期间发生任何错误时，将抛出此异常。
+    当此操作期间发生任何错误时，将引发此异常。
 
 ## 示例\{#example}
 

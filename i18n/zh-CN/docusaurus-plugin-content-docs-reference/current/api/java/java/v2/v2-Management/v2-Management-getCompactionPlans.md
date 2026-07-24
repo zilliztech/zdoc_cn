@@ -7,17 +7,17 @@ added_since: v2.6.x
 last_modified: v2.6.x
 deprecate_since: false
 notebook: false
-description: "此操作返回特定压缩任务的压缩计划，包括显示将合并哪些段的合并计划。 | Java | v2"
+description: "此操作返回特定压缩任务的压缩计划，包括显示哪些段将被合并的合并计划。 | Java | v2"
 type: docx
 token: BDNBdbEOioqnlKxRd3DcY7wRncg
-sidebar_position: 22
+sidebar_position: 23
 keywords: 
-  - 什么是 vector databases
-  - vector databases 比较
+  - 什么是 vector database
+  - vector database 对比
   - Faiss
   - 视频搜索
   - zilliz
-  - zilliz cloud
+  - Zilliz Cloud
   - cloud
   - getCompactionPlans()
   - javaV230
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # getCompactionPlans()
 
-此操作返回特定压缩任务的压缩计划，包括显示将合并哪些段的合并计划。
+此操作返回特定压缩任务的压缩计划，包括显示哪些段将被合并的合并计划。
 
 ```java
 public GetCompactionPlansResp getCompactionPlans(GetCompactionPlansReq request)
@@ -46,13 +46,13 @@ getCompactionPlans(GetCompactionPlansReq.builder()
 );
 ```
 
-**BUILDER 方法：**
+**BUILDER METHODS:**
 
 - `compactionID(Long compactionID)` -
 
     **[必需]**
 
-    `compact()` 返回的压缩任务 ID。
+    由 `compact()` 返回的压缩任务 ID。
 
 **返回：**
 

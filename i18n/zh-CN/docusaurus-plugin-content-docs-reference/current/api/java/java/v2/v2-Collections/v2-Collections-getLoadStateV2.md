@@ -7,10 +7,10 @@ added_since: v3.0.x
 last_modified: false
 deprecate_since: false
 notebook: false
-description: "此操作获取 collection 或 partition 的详细加载状态信息。当你同时需要当前加载状态和加载进度时使用。 | Java | v2"
+description: "此操作获取 collection 或 partition 的详细加载状态信息。当你同时需要当前加载状态和加载进度时使用它。 | Java | v2"
 type: docx
 token: JEgudTxxYocs2VxLjgccpB7SnOb
-sidebar_position: 38
+sidebar_position: 41
 keywords: 
   - 开源 vector db
   - vector database 示例
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # getLoadStateV2()
 
-此操作获取 collection 或 partition 的详细加载状态信息。当你同时需要当前加载状态和加载进度时使用。
+此操作获取 collection 或 partition 的详细加载状态信息。当你同时需要当前加载状态和加载进度时使用它。
 
 ```java
 public GetLoadStateResp getLoadStateV2(GetLoadStateReq request)
@@ -47,7 +47,7 @@ getLoadStateV2(GetLoadStateReq.builder()
     .build());
 ```
 
-**BUILDER 方法：**
+**构建器方法：**
 
 - `databaseName(String databaseName)`
 
@@ -55,13 +55,13 @@ getLoadStateV2(GetLoadStateReq.builder()
 
 - `collectionName(String collectionName)`
 
-    要检查加载状态的 collection。
+    要检查其加载状态的 collection。
 
 - `partitionName(String partitionName)`
 
     可选的 partition 名称。省略它可检查 collection 级别的加载状态。
 
-**返回：**
+**返回值：**
 
 *GetLoadStateResp*
 
@@ -69,7 +69,7 @@ getLoadStateV2(GetLoadStateReq.builder()
 
 - **MilvusClientException**
 
-    当验证失败或服务器针对此操作返回错误时，将引发此异常。
+    当验证失败或服务器针对此操作返回错误时，将抛出此异常。
 
 ## 示例\{#example}
 

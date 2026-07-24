@@ -7,10 +7,10 @@ added_since: v3.0.x
 last_modified: false
 deprecate_since: false
 notebook: false
-description: "此操作会刷新数据库中所有 collection 的插入缓冲区。在备份、验证或需要持久化所有最近写入的工作流之前使用它。 | Java | v2"
+description: "此操作会刷新数据库中所有 collection 的插入缓冲区。请在备份、验证或需要持久化所有近期写入的工作流之前使用它。 | Java | v2"
 type: docx
 token: KQqgduahOo13yOxiRMgcfXQxnxd
-sidebar_position: 25
+sidebar_position: 22
 keywords: 
   - 近似最近邻搜索
   - DiskANN
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # flushAll()
 
-此操作会刷新数据库中所有 collection 的插入缓冲区。在备份、验证或需要持久化所有最近写入的工作流之前使用它。
+此操作会刷新数据库中所有 collection 的插入缓冲区。请在备份、验证或需要持久化所有近期写入的工作流之前使用它。
 
 ```java
 public FlushAllResp flushAll(FlushAllReq request)
@@ -46,11 +46,11 @@ flushAll(FlushAllReq.builder()
     .build());
 ```
 
-**构建器方法：**
+**BUILDER 方法：**
 
 - `databaseName(String databaseName)`
 
-    应刷新其 collection 的数据库。省略它将使用当前数据库上下文。
+    要刷新其 collection 的数据库。省略它以使用当前数据库上下文。
 
 - `waitFlushedTimeoutMs(Long waitFlushedTimeoutMs)`
 
@@ -64,7 +64,7 @@ flushAll(FlushAllReq.builder()
 
 - **MilvusClientException**
 
-    当验证失败或服务器针对此操作返回错误时，将引发此异常。
+    当验证失败或服务器为此操作返回错误时，将引发此异常。
 
 ## 示例\{#example}
 

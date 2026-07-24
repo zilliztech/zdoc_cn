@@ -7,15 +7,15 @@ added_since: v2.5.x
 last_modified: false
 deprecate_since: false
 notebook: false
-description: "此操作将准备好的数据文件导入 Zilliz Cloud。要了解如何准备数据文件，请阅读 Prepare Data Import。 | Java | v2"
+description: "从 Milvus 或 Zilliz Cloud 中准备好的数据文件创建批量导入作业。 | Java | v2"
 type: docx
-token: S0ITdsnpYoDpH9xKv9fcBhe5nWA
+token: HlcKdFOnpouIUjxL5hLcUU1GnFb
 sidebar_position: 2
 keywords: 
   - 信息检索
   - 降维
   - hnsw 算法
-  - 向量相似性搜索
+  - vector 相似性搜索
   - zilliz
   - zilliz cloud
   - cloud
@@ -31,7 +31,7 @@ import Admonition from '@theme/Admonition';
 
 # bulkImport()
 
-此操作将准备好的数据文件导入 Zilliz Cloud。要了解如何准备数据文件，请阅读[准备数据导入](/docs/prepare-data-import)。
+从 Milvus 或 Zilliz Cloud 中准备好的数据文件创建批量导入作业。
 
 ```java
 public static String bulkImport(String url, BaseImportRequest request)
@@ -39,120 +39,89 @@ public static String bulkImport(String url, BaseImportRequest request)
 
 ## 请求语法\{#request-syntax}
 
+将存储桶数据导入 Zilliz Cloud 时使用此请求。
+
 ```java
-bulkImport.bulkImport(
-    url, 
-    request
-)
+CloudImportRequest.builder()
+    .apiKey(apiKey)
+    .clusterId(clusterId)
+    .projectId(projectId)
+    .regionId(regionId)
+    .dbName(dbName)
+    .collectionName(collectionName)
+    .partitionName(partitionName)
+    .objectUrls(objectUrls)
+    .objectUrl(objectUrl)
+    .accessKey(accessKey)
+    .secretKey(secretKey)
+    .token(token)
+    .options(options)
+    .build();
 ```
 
 **参数：**
 
-- **url** (*String*) -
+- **apiKey** (*String*) -
+身份验证凭证。Cloud 请求使用 Zilliz Cloud API key，Milvus 请求使用 `username:password`。
 
-    Zilliz Cloud 的控制平面 API 端点。端点 URL 应采用以下格式：
+- **clusterId** (*String*) -
+基于集群的部署的集群标识符。对于项目数据库部署，请改用 `projectId` 和 `regionId`。
 
-    ```python
-    https://api.cloud.zilliz.com
-    ```
+- **projectId** (*String*) -
+项目数据库部署的项目标识符。与 `regionId` 搭配使用，而不是 `clusterId`。
 
-- **request** (*[BaseImportRequest](./v2-BulkImport-bulkImport#baseimportrequest)*) -  
+- **regionId** (*String*) -
+项目数据库部署的区域标识符。与 `projectId` 搭配使用，而不是 `clusterId`。
 
-    一个 **BaseImportRequest** 实例。
+- **dbName** (*String*) -
+默认值：`default`
+Dedicated 部署的目标数据库名称。
 
-**返回类型：**
+- **collectionName** (*String*) -
+目标 collection 名称。
 
-*String*
+- **partitionName** (*String*) -
+默认值：`default`
+当 collection 不使用 partition key 时的目标 partition 名称。
+
+- **objectUrls** (*List&lt;List&lt;String&gt;&gt;*) -
+要导入的存储桶文件夹或文件。支持多个路径和文件组。
+
+- **objectUrl** (*String*) -
+已弃用的单个存储桶文件夹或文件 URL。新的集成请使用 `objectUrls`。
+
+- **accessKey** (*String*) -
+存储访问密钥。与 `secretKey` 搭配使用；对于临时凭证，还需与 `token` 搭配使用。
+
+- **secretKey** (*String*) -
+存储密钥。与 `accessKey` 搭配使用；对于临时凭证，还需与 `token` 搭配使用。
+
+- **token** (*String*) -
+使用短期凭证时的临时存储凭证令牌。
+
+- **options** (*Map&lt;String, Object&gt;*) -
+传递给服务的其他导入选项。
 
 **返回：**
 
-已创建导入任务的 ID。
+*String*
 
-## BaseImportRequest\{#baseimportrequest}
-
-**BaseImportRequest** 实例在 **CloudImportRequest** 中实现。
-
-### CloudImportRequest\{#cloudimportrequest}
-
-```java
-CloudImportRequest.builder()
-    .apiKey(String apiKey)
-    .objectUrl(String objectUrl)
-    .accessKey(String accessKey)
-    .secrectKey(String secrectKey)
-    .clusterId(String clusterId)
-    .dbName(String dbName)
-    .collectionName(String collectionName)
-    .partitionName(String partitionName)
-    .build()
-```
-
-**构建器方法：**
-
-- `apiKey(String apiKey)`
-
-    一个具有足够权限来操作集群的有效 Zilliz Cloud API 密钥。
-
-- `objectUrl(String objectUrl)`
-
-    你的数据文件在某个块存储桶中的 URL。以下是一些知名块存储服务的示例：
-
-    ```python
-    # Google Cloud Storage
-    gs://{bucket-name}/{object-path}/
-    
-    # AWS S3
-    s3://{bucket-name}/{object-path}/
-    ```
-
-- `accessKey(String accessKey)`
-
-    用于验证数据文件访问权限的访问密钥。
-
-- `secrectKey(String secrectKey)`
-
-    用于验证数据文件访问权限的密钥。
-
-- `clusterId(String clusterId)`
-
-    此操作的目标集群的实例 ID。
-
-    你可以在 Zilliz Cloud 控制台的集群详情页面获取集群的实例 ID。
-
-- `dbName(String dbName)`
-
-    目标数据库的名称。此参数的值默认为 `default`。
-
-- `collectionName(String collectionName)`
-
-    此操作的目标集群中的集合名称。
-
-- `partitionName(String partitionName)`
-
-    此操作的目标集群中的分区名称。该值默认为 `default`。
+一个 JSON 响应，其中 `data.jobId` 标识已创建的导入作业。
 
 ## 示例\{#example}
 
+为 Zilliz Cloud 中的项目数据库创建导入作业。
+
 ```java
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import io.milvus.bulkwriter.request.import_.MilvusImportRequest;
-import io.milvus.bulkwriter.restful.BulkImportUtils;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-CloudImportRequest cloudImportRequest = CloudImportRequest.builder()
-        .objectUrl(objectUrl).accessKey(accessKey).secretKey(secretKey)
-        .clusterId(clusterId).collectionName(collectionName)
-        .apiKey(apiKey)
-        .build();
-String bulkImportResult = BulkImportUtils.bulkImport(url, cloudImportRequest);
-
-Gson GSON_INSTANCE = new Gson();
-JsonObject result = GSON_INSTANCE.fromJson(bulkImportResult, JsonObject.class);
-String jobId = result.getAsJsonObject("data").get("jobId").getAsString();
-System.out.println("Create a bulkInert task, job id: " + jobId);
+CloudImportRequest request = CloudImportRequest.builder()
+    .projectId(PROJECT_ID)
+    .regionId(REGION_ID)
+    .collectionName("books")
+    .objectUrls(List.of(List.of("s3://bucket/books.parquet")))
+    .accessKey(ACCESS_KEY)
+    .secretKey(SECRET_KEY)
+    .apiKey(API_KEY)
+    .build();
+String response = BulkImportUtils.bulkImport("https://api.cloud.zilliz.com", request);
 ```
 

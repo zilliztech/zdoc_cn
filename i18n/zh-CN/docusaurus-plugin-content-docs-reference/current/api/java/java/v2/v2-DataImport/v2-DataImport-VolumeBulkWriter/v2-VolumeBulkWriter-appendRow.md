@@ -4,20 +4,20 @@ slug: /java/java/v2-VolumeBulkWriter-appendRow
 sidebar_label: "appendRow()"
 beta: false
 added_since: v2.6.x
-last_modified: false
+last_modified: v3.0.x
 deprecate_since: false
 notebook: false
-description: "此操作将一行数据追加到 VolumeBulkWriter 缓冲区。当缓冲区已满或调用 `commit()` 时，数据将被写入文件。 | Java | v2"
+description: "验证并向 writer 追加一行。当缓冲数据超过配置的 `chunkSize` 时，writer 会自动提交当前文件。 | Java | v2"
 type: docx
-token: TfLbdZoRvoa4RyxUWwncTDm2nHh
+token: IBAFdWOAKogmCIxHzVIc4NaDn4g
 sidebar_position: 1
 keywords: 
   - Vector index
-  - vector database open source
-  - open source vector db
-  - vector database example
+  - 开源 vector database
+  - 开源 vector db
+  - vector database 示例
   - zilliz
-  - zilliz cloud
+  - Zilliz Cloud
   - cloud
   - appendRow()
   - javaV230
@@ -31,43 +31,31 @@ import Admonition from '@theme/Admonition';
 
 # appendRow()
 
-此操作将一行数据追加到 VolumeBulkWriter 缓冲区。当缓冲区已满或调用 `commit()` 时，数据将被写入文件。
+验证并向 writer 追加一行。当缓冲数据超过配置的 `chunkSize` 时，writer 会自动提交当前文件。
+
+[`StructFieldSchema`](./v2-Collections-StructFieldSchema) 字段可以包含 binary、float16、bfloat16 和 int8 vector 值。
 
 ```java
-public void appendRow(JsonObject rowData) throws IOException, InterruptedException
+public void appendRow(JsonObject rowData)
 ```
-
-**参数：**
-
-- **rowData** (*JsonObject*) -
-
-    表示单行数据的 JSON 对象。
 
 **返回：**
 
 *void*
 
+此操作不返回值。
+
 **异常：**
 
-- **IOException**
+- **Exception**
 
-    这是一个受检异常，当此操作期间发生任何数据读取或数据写入错误时抛出。
-
-- **InterruptedException**
-
-    这是一个受检异常，当当前处于“阻塞”状态（等待、休眠或以其他方式占用）的线程被另一个线程使用 `Thread.interrupt()` 方法中断时抛出。
-
-- **MilvusClientException**
-
-    当此操作期间发生任何错误时，将引发此异常。
+    当请求验证、传输或服务器执行失败时抛出。请查看异常消息以了解确切的失败原因。
 
 ## 示例\{#example}
 
 ```java
-VolumeBulkWriter writer = new VolumeBulkWriter(config);
 JsonObject row = new JsonObject();
 row.addProperty("id", 1L);
-row.add("vector", gson.toJsonTree(new float[]{0.1f, 0.2f, 0.3f}));
+row.addProperty("title", "Dune");
 writer.appendRow(row);
 ```
-
