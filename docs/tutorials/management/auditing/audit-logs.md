@@ -58,23 +58,66 @@ import Procedures from '@site/src/components/Procedures';
 
 以下是转发到存储桶的审计日志条目示例：
 
-```json
-{
-    "date": "2025-01-21T08:45:56.556286Z",
-    "action": "CreateAlias",
-    "cluster_id": "in01-b5a7e190615ef9f",
-    "database": "database2",
-    "interface": "Restful",
-    "log_type": "AUDIT",
-    "params": {
-        "collection": "collection1"
-    },
-    "status": "Receive",
-    "time": 1737449156556,
-    "trace_id": "b599063b9d0cfcf9d756ddbbef56ab5b",
-    "user": "zcloud_apikey_admin"
-}
-```
+- **创建 Collection**
+
+    ```json
+    {
+      "action": "CreateCollection",
+      "cluster_id": "inxx-xxxxxxxxxxxxxxx",
+      "connection_uid": 456912553983082500,
+      "database": "default",
+      "interface": "Grpc",
+      "log_type": "AUDIT",
+      "params": {
+        "collection": "test_audit",
+        "consistency_level": 2
+      },
+      "status": "Receive",
+      "timestamp": 1742983070463,
+      "trace_id": "216a8129c06fd3d93a47bd69fa0a65ad",
+      "user": "key-hwjsxhwppegkatwjaivsgf"
+    }
+    ```
+
+- **创建 Index**
+
+    ```json
+    {
+      "action": "CreateIndex",
+      "cluster_id": "inxx-xxxxxxxxxxxxxxx",
+      "connection_uid": 456912553983082500,
+      "database": "default",
+      "interface": "Grpc",
+      "log_type": "AUDIT",
+      "params": {
+        "collection": "test_audit"
+      },
+      "status": "Receive",
+      "timestamp": 1742983070645,
+      "trace_id": "4402e7bfc498dd06be1408c7e6a7954d",
+      "user": "key-hwjsxhwppegkatwjaivsgf"
+    }
+    ```
+
+- **删除 Index**
+
+    ```json
+    {
+      "action": "DropIndex",
+      "cluster_id": "inxx-xxxxxxxxxxxxxxx",
+      "connection_uid": 456912553983082500,
+      "database": "default",
+      "interface": "Grpc",
+      "log_type": "AUDIT",
+      "params": {
+        "collection": "test_audit"
+      },
+      "status": "Receive",
+      "timestamp": 1742983073378,
+      "trace_id": "066ec33c3f55d3edbf7d01c6270024e2",
+      "user": "key-hwjsxhwppegkatwjaivsgf"
+    }
+    ```
 
 有关审计日志支持的操作和对应的字段，请参阅[审计日志参考](./audit-logs-ref)。
 
