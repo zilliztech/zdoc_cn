@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "模型供应商集成用于将 Zilliz Cloud 连接到第三方模型服务，并将该模型供应商提供的能力引入到你的项目中。 | Cloud"
+description: "在外部服务商托管的文本 Embedding 模型或重新排序模型，必须先让该服务商能够对来自你项目的请求进行身份验证，Zilliz Cloud 才能调用该模型。模型服务集成在项目级别存储服务商颁发的凭证，并为 Zilliz Cloud 提供一个可供文本 Embedding 和重新排序功能引用的集成 ID。这样便无需在各个 Function 或 Ranker 配置中分别填写凭证。 | Cloud"
 type: origin
 token: Psarw6886iSZAvkYGnnclLBgnVd
 sidebar_position: 1
@@ -24,41 +24,38 @@ import Procedures from '@site/src/components/Procedures';
 
 # 模型供应商
 
-**模型供应商集成**用于将 **Zilliz Cloud** 连接到第三方模型服务，并将该模型供应商提供的能力引入到你的项目中。
+在外部服务商托管的文本 Embedding 模型或重新排序模型，必须先让该服务商能够对来自你项目的请求进行身份验证，Zilliz Cloud 才能调用该模型。**模型服务集成**在项目级别存储服务商颁发的凭证，并为 Zilliz Cloud 提供一个可供文本 Embedding 和重新排序功能引用的集成 ID。这样便无需在各个 Function 或 Ranker 配置中分别填写凭证。
 
-一个模型供应商集成可以：
+<Admonition type="info" icon="📘" title="说明">
 
-- 存储访问模型供应商所需的认证信息
+创建模型服务集成不会产生费用。外部服务商可能会收取模型推理费用，向服务商发送数据也可能产生[数据传输费用](./data-transfer-cost)。
 
-- 集成使用模型供应商支持的能力（例如文本向量化或重排序）
+</Admonition>
 
-## 何时需要模型供应商集成\{#when-you-need-a-model-provider-integration}
+## 支持的模型服务提供商\{#supported-model-providers}
 
-仅当你希望在 Zilliz Cloud 中使用**基于模型的能力**时，才需要创建模型供应商集成，包括：
+以下模型服务提供商可与 Zilliz Cloud 集成：
 
-- **Text Embedding Function**：使用外部模型将原始文本转换为稠密向量。详情请参阅 [Text Embedding Function](./undefined)。
+| **模型服务提供商** | **支持的 Zilliz Cloud 功能** | **所需凭证** |
+| --- | --- | --- |
+| **OpenAI** | Text Embedding Function | API 密钥。获取方法请参阅 [OpenAI API 快速入门](https://developers.openai.com/api/docs/quickstart#create-and-export-an-api-key)。 |
+| **Cohere** | Text Embedding Function 和基于模型的 Ranker | API 密钥。获取方法请参阅 [API 密钥和速率限制](https://docs.cohere.com/docs/rate-limits)。 |
+| **Voyage AI** | Text Embedding Function 和基于模型的 Ranker | API 密钥。获取方法请参阅 [API 密钥和 Python 客户端](https://docs.voyageai.com/docs/api-key-and-installation)。 |
+| **Hugging Face** | [Text Embedding Function](./undefined) 和 [Hugging Face Ranker](./undefined) | 具有 Make calls to Inference Providers 权限的用户访问令牌。获取方法请参阅[用户访问令牌](https://huggingface.co/docs/hub/en/security-tokens)。 |
 
-- **Model Ranker**：使用外部重排序模型对搜索结果进行重新排序。详情请参阅 [Model Ranker](./undefined)。
+<Admonition type="info" icon="📘" title="说明">
 
-本地能力（如 BM25、混合排序器以及基于规则的排序器）**不需要**模型供应商集成。
+从外部服务提供商选择模型时，请确认该服务商当前为所需任务提供此模型。模型可用性、任务支持情况、稳定性、延迟和输出质量取决于服务商及所选模型。在生产环境中使用模型之前，请针对你的工作负载评估这些属性。
 
-## 计费说明\{#billing-considerations}
-
-创建模型供应商集成本身不会产生费用。但在使用外部模型供应商时，可能会产生以下额外成本：
-
-- 模型供应商收取的费用
-
-- 在进行向量化或重排序时产生的数据传输费用。详情请参阅[数据传输费用](./data-transfer-cost)。
-
-仅当实际执行基于模型的函数或排序器时，才会产生计费。
+</Admonition>
 
 ## 开始前\{#before-you-start}
 
-在创建模型供应商集成之前，请确保满足以下条件：
+创建模型服务集成前，请确保：
 
-- 你在目标 Zilliz Cloud 项目中拥有**组织管理员**或**项目管理员**权限。如果权限不足，请联系你的 Zilliz Cloud 组织所有者。
+- 你对目标 Zilliz Cloud 项目拥有 Organization Owner 或 Project Admin 权限。如果权限不足，请联系你的 Zilliz Cloud Organization Owner。
 
-- 你已准备好要集成的模型供应商所需的有效 API Key。
+- 你已获得所选模型服务提供商要求的凭证。请参阅[支持的模型服务提供商](./integrate-with-model-providers#supported-model-providers)。
 
 ## 创建模型供应商集成\{#create-a-model-provider-integration}
 
@@ -81,6 +78,8 @@ import Procedures from '@site/src/components/Procedures';
     - **集成名称**：为该集成指定一个唯一名称（例如：**test**）
 
     - **集成描述（可选）**：填写该集成的说明（例如：**用于模型供应商**）
+
+    - **Provider（仅适用于 Hugging Face）**：保留默认值 `hf-inference`。Hugging Face Text Embedding 和 Hugging Face Ranker 目前仅支持此 Inference Provider。
 
 1. 点击**下一步**，进入**凭证信息**配置：
 
@@ -116,15 +115,19 @@ import Procedures from '@site/src/components/Procedures';
 
 ## 下一步\{#next-steps}
 
-创建模型供应商集成后，你可以：
+创建模型服务集成后，你可以：
 
-- 将其与 **Text Embedding Function** 结合使用，将文本转换为稠密向量
+- 将其与 Text Embedding Function 配合使用，将文本转换为密集向量。
 
-- 将其与 **Model Ranker** 结合使用，对搜索结果进行重排序
+- 使用基于模型的 Ranker 对搜索结果重新排序。
 
-详细操作请参阅：
+有关详细操作说明，请参阅：
 
-- [Text Embedding Function](./undefined)
+- [硅基流动](./siliconflow)
 
-- [Model Ranker](./undefined)
+- [Hugging Face](./undefined)
+
+- [硅基流动 Ranker](./siliconflow-model-ranker)
+
+- [Hugging Face Ranker](./undefined)
 

@@ -9,7 +9,7 @@
   "source_branch": "dev",
   "publish_url": "https://docs.cloud-uat3.zilliz.com",
   "link_check_remote": "https://docs.zilliz.com",
-  "generated_at": "2026-07-28T07:31:33.324Z",
+  "generated_at": "2026-07-28T15:29:51.055Z",
   "source_dir": "./plugins/lark-docs/meta/sources/guides",
   "base_app_token": "I6YUb1M0JajHrqsJGcLcZNh7neP",
   "records": [
@@ -3166,7 +3166,7 @@
       "doc_token": "GKEewZ99aij5Twk7OecceHdsnMg",
       "doc_link": "https://zilliverse.feishu.cn/wiki/GKEewZ99aij5Twk7OecceHdsnMg",
       "source_file": "GKEewZ99aij5Twk7OecceHdsnMg.json",
-      "source_hash": "ccd172d12b02919072b0569795bc2b06559be3678e988aa8fd545803b8b222a1",
+      "source_hash": "3b96fa20d178e18da6577fc6b5950c909dc02cc07d4f2cf77ba037f3f7950611",
       "node_metadata": {
         "requested_token": "GKEewZ99aij5Twk7OecceHdsnMg",
         "requested_node_token": "GKEewZ99aij5Twk7OecceHdsnMg",
@@ -3180,14 +3180,14 @@
         "parent_node_token": "FI8pwZYA7iIbNWkYp4xcEu5Xnab",
         "node_create_time": "1758158952",
         "obj_create_time": "1758158952",
-        "obj_edit_time": "1779879097",
+        "obj_edit_time": "1785228203",
         "revision_id": null
       },
       "node_token": "GKEewZ99aij5Twk7OecceHdsnMg",
       "origin_node_token": "GKEewZ99aij5Twk7OecceHdsnMg",
       "obj_token": "KgzkdPpMhowITrxHJIccOHTgnJg",
       "obj_type": "docx",
-      "obj_edit_time": "1779879097",
+      "obj_edit_time": "1785228203",
       "revision_id": null,
       "outgoing_tokens": [
         "EfjMwCJrAiY2M4kyo8vcPhOhn1c",
@@ -8620,7 +8620,7 @@
       "doc_token": "OcSgw7LJwiyuC2kdymbcWDV6nNg",
       "doc_link": "https://zilliverse.feishu.cn/wiki/OcSgw7LJwiyuC2kdymbcWDV6nNg",
       "source_file": "OcSgw7LJwiyuC2kdymbcWDV6nNg.json",
-      "source_hash": "d5c36e995177007bddc196644c69c77cf2a2f95fd1115ff5b85564e98c3f5eca",
+      "source_hash": "e8cbb5a9ae41becf08c4e2cc843612436ca27fc0cf3c27a25992a6818a380f24",
       "node_metadata": {
         "requested_token": "OcSgw7LJwiyuC2kdymbcWDV6nNg",
         "requested_node_token": "OcSgw7LJwiyuC2kdymbcWDV6nNg",
@@ -8634,14 +8634,14 @@
         "parent_node_token": "BEo3wjHfwiCjSxkmrlQcD7QAnhb",
         "node_create_time": "1739068404",
         "obj_create_time": "1739068404",
-        "obj_edit_time": "1785221029",
+        "obj_edit_time": "1785222783",
         "revision_id": null
       },
       "node_token": "OcSgw7LJwiyuC2kdymbcWDV6nNg",
       "origin_node_token": "OcSgw7LJwiyuC2kdymbcWDV6nNg",
       "obj_token": "CQ6KduD09owM2nx6R9HcPpbEndx",
       "obj_type": "docx",
-      "obj_edit_time": "1785221029",
+      "obj_edit_time": "1785222783",
       "revision_id": null,
       "outgoing_tokens": [
         "Bt3swdJKaigDQgkrzSwcoEEgnV4",
@@ -10984,7 +10984,7 @@
       "doc_token": "Psarw6886iSZAvkYGnnclLBgnVd",
       "doc_link": "https://zilliverse.feishu.cn/wiki/Psarw6886iSZAvkYGnnclLBgnVd",
       "source_file": "Psarw6886iSZAvkYGnnclLBgnVd.json",
-      "source_hash": "6ae2b097b6f8d8ae2746f16e4259ddb91cb2dd1ca08975c3a5c6e65eb8383c8d",
+      "source_hash": "06b937397d5eef16acb40e6cad5ae6468c694c292585e055cacd92249d0b6fe8",
       "node_metadata": {
         "requested_token": "Psarw6886iSZAvkYGnnclLBgnVd",
         "requested_node_token": "Psarw6886iSZAvkYGnnclLBgnVd",
@@ -10998,19 +10998,22 @@
         "parent_node_token": "LFcgwSSo1i1sLUkYgH4cpAM3nqf",
         "node_create_time": "1762919696",
         "obj_create_time": "1762919696",
-        "obj_edit_time": "1770706233",
+        "obj_edit_time": "1785235151",
         "revision_id": null
       },
       "node_token": "Psarw6886iSZAvkYGnnclLBgnVd",
       "origin_node_token": "Psarw6886iSZAvkYGnnclLBgnVd",
       "obj_token": "BPgBdvfQYoPLR8xiDMuch9Aonwc",
       "obj_type": "docx",
-      "obj_edit_time": "1770706233",
+      "obj_edit_time": "1785235151",
       "revision_id": null,
       "outgoing_tokens": [
-        "HJbKw7hD8iCNlNklhqOcVBsFnSd",
-        "OVc4wDypbi8zEQk9h5fcbnzrnKe",
-        "RZoSwcpJniF0ZxkfhaDcFUHin4A"
+        "FRwPwoZN4ieZeQkEog7cO3EHnMb",
+        "Psarw6886iSZAvkYGnnclLBgnVd",
+        "RZoSwcpJniF0ZxkfhaDcFUHin4A",
+        "XMTNwxeHOiIGU5ksWpvcBlCmnPb",
+        "Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt",
+        "ZhnIwddbqi8R8ekhLiXcho3CnZf"
       ],
       "output_paths": []
     }
@@ -13823,7 +13826,7 @@
       "labels": "",
       "slug": "",
       "targets": [],
-      "progress": "Not Start Yet",
+      "progress": "",
       "doc_token": "ZhnIwddbqi8R8ekhLiXcho3CnZf",
       "doc_link": "https://zilliverse.feishu.cn/wiki/ZhnIwddbqi8R8ekhLiXcho3CnZf",
       "ref_target": "ZhnIwddbqi8R8ekhLiXcho3CnZf",
@@ -13863,6 +13866,25 @@
       "doc_token": "FRwPwoZN4ieZeQkEog7cO3EHnMb",
       "doc_link": "https://zilliverse.feishu.cn/wiki/FRwPwoZN4ieZeQkEog7cO3EHnMb",
       "ref_target": "FRwPwoZN4ieZeQkEog7cO3EHnMb",
+      "ref_target_token": null
+    },
+    {
+      "record_id": "recvqF87zdJlsS",
+      "table_id": "tblr7Zec2ReTfRmw",
+      "table_name": "ai-models",
+      "placement_type": "ref",
+      "parent_record_ids": [
+        "recvneu7dIxgyz"
+      ],
+      "order": 6,
+      "title": "Hugging Face Ranker",
+      "labels": "",
+      "slug": "",
+      "targets": [],
+      "progress": "",
+      "doc_token": "Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt",
+      "doc_link": "https://zilliverse.feishu.cn/wiki/Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt",
+      "ref_target": "Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt",
       "ref_target_token": null
     },
     {
@@ -18405,7 +18427,7 @@
   "table_digests": {
     "tblMuHkoG4qMugeX": "a580c5dfc85b86081a9ee052c0e856221f4fd98110cb1b0c591348d7cd236a74",
     "tbloC4PVprwYo0P0": "b8197e50f2151f8dd08173607cf1f81594f511a2c5ad4ba0ef1504a6cb35b024",
-    "tblr7Zec2ReTfRmw": "30f29f6ed2ebe89693962f459697dc595c101f2138b69f03a31821b70766b69c",
+    "tblr7Zec2ReTfRmw": "80cb0332e43f0c42e1c03c2f6d1e6f3808ffe6f87a78a81365ae4a2463292b22",
     "tblRaa3JnIhllHb9": "9247f42c6a318cabca309e97af2a806de7a7e45fd7b46f201742307e534e8d57",
     "tblsw6S3J0ekcgNB": "f556888c8be78a570a218a669060e8e17d60bee062f3e1fce9c6e794429bd807",
     "tblYpqCgevikMomb": "ca0587a61432f3472a84556ff28452a6b5832cc63ffc7d1d7728397156f05272"
