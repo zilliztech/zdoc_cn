@@ -65,23 +65,66 @@ import Procedures from '@site/src/components/Procedures';
 
 以下是转发到存储桶的审计日志条目示例：
 
-```json
-{
-    "date": "2025-01-21T08:45:56.556286Z",
-    "action": "CreateAlias",
-    "cluster_id": "in01-b5a7e190615ef9f",
-    "database": "database2",
-    "interface": "Restful",
-    "log_type": "AUDIT",
-    "params": {
-        "collection": "collection1"
-    },
-    "status": "Receive",
-    "time": 1737449156556,
-    "trace_id": "b599063b9d0cfcf9d756ddbbef56ab5b",
-    "user": "zcloud_apikey_admin"
-}
-```
+- **创建 Collection**
+
+    ```json
+    {
+      "action": "CreateCollection",
+      "cluster_id": "inxx-xxxxxxxxxxxxxxx",
+      "connection_uid": 456912553983082500,
+      "database": "default",
+      "interface": "Grpc",
+      "log_type": "AUDIT",
+      "params": {
+        "collection": "test_audit",
+        "consistency_level": 2
+      },
+      "status": "Receive",
+      "timestamp": 1742983070463,
+      "trace_id": "216a8129c06fd3d93a47bd69fa0a65ad",
+      "user": "key-hwjsxhwppegkatwjaivsgf"
+    }
+    ```
+
+- **创建 Index**
+
+    ```json
+    {
+      "action": "CreateIndex",
+      "cluster_id": "inxx-xxxxxxxxxxxxxxx",
+      "connection_uid": 456912553983082500,
+      "database": "default",
+      "interface": "Grpc",
+      "log_type": "AUDIT",
+      "params": {
+        "collection": "test_audit"
+      },
+      "status": "Receive",
+      "timestamp": 1742983070645,
+      "trace_id": "4402e7bfc498dd06be1408c7e6a7954d",
+      "user": "key-hwjsxhwppegkatwjaivsgf"
+    }
+    ```
+
+- **删除 Index**
+
+    ```json
+    {
+      "action": "DropIndex",
+      "cluster_id": "inxx-xxxxxxxxxxxxxxx",
+      "connection_uid": 456912553983082500,
+      "database": "default",
+      "interface": "Grpc",
+      "log_type": "AUDIT",
+      "params": {
+        "collection": "test_audit"
+      },
+      "status": "Receive",
+      "timestamp": 1742983073378,
+      "trace_id": "066ec33c3f55d3edbf7d01c6270024e2",
+      "user": "key-hwjsxhwppegkatwjaivsgf"
+    }
+    ```
 
 有关审计日志支持的操作和对应的字段，请参阅[审计日志参考](./audit-logs-ref)。
 
@@ -99,7 +142,7 @@ import Procedures from '@site/src/components/Procedures';
 
 ### 操作步骤\{#procedure}
 
-![zh-configure-auditing-1](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-configure-auditing-1.png "zh-configure-auditing-1")
+![I1hiwIU8lh04ADbBQdGceiHTnFM](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/I1hiwIU8lh04ADbBQdGceiHTnFM.png)
 
 <Procedures>
 
@@ -107,9 +150,9 @@ import Procedures from '@site/src/components/Procedures';
 
 1. 在目标项目页面，选择**集群**。
 
-1. 进入目标集群的详情页面，选择**审计日志**选项卡。当集群处于创建中、删除中或已删除状态时，该选项卡将不可用。
+1. 进入目标集群的详情页面，选择**日志**选项卡。当集群处于创建中、删除中或已删除状态时，该选项卡将不可用。
 
-1. 在**审计日志**区域，点击**开启**。
+1. 在**审计日志**区域，点击**配置**。
 
 1. 在弹出的对话框中，指定对象存储集成配置信息：
 
@@ -125,7 +168,7 @@ import Procedures from '@site/src/components/Procedures';
 
     - **导出路径**：指定在存储桶中存放审计日志的目录路径。
 
-1. 点击**开启**。当**审计日志**状态显示为**运行中**时，说明已成功启用。如果状态显示为异常，请参阅[常见问题](./audit-logs#faq)获取故障排查方法。
+1. 点击**保存**。当**审计日志**状态显示为**运行中**时，说明已成功启用。如果状态显示为异常，请参阅[常见问题](./audit-logs#faq)获取故障排查方法。
 
 </Procedures>
 
@@ -137,7 +180,7 @@ import Procedures from '@site/src/components/Procedures';
 
 启用审计日志后，您可以根据需要编辑其配置或将其禁用。
 
-![zh-configure-auditing-2](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/zh-configure-auditing-2.png "zh-configure-auditing-2")
+![HFfowWebphLNCMbB7yacq1C1nzc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/HFfowWebphLNCMbB7yacq1C1nzc.png)
 
 ## 常见问题\{#faq}
 
