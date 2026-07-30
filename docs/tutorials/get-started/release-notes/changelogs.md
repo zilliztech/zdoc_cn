@@ -8,7 +8,7 @@ last_modified: FALSE
 deprecate_since: FALSE
 beta: FALSE
 notebook: FALSE
-description: "最近更新：2026 年 7 月 21 日 | Cloud"
+description: "最近更新：2026 年 7 月 30 日 | Cloud"
 type: origin
 token: JziCwn071iCV1tkX4NZcwGSDnmc
 sidebar_position: 1
@@ -28,7 +28,7 @@ import Grid from '@site/src/components/Grid';
 
 # 变更日志
 
-**最近更新**：2026 年 7 月 21 日
+**最近更新**：2026 年 7 月 30 日
 
 <Grid columnSize="2" widthRatios="24,75">
 

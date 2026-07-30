@@ -32,6 +32,24 @@ import Grid from '@site/src/components/Grid';
 
     <div>
 
+        **2026-07-30**
+
+    </div>
+
+    <div>
+
+        ## 功能增强（Enhancements）\{#enhancements}
+
+        - **BYOC 现已支持按需计费** - BYOC 组织在 vCPU 用量超限后可以继续扩容。这部分超限的用量将计入按需计费，并呈现在您的用量和账单中。更多内容，可参考[了解 BYOC 账单](/docs/byoc/understand-byoc-billing)。
+
+    </div>
+
+</Grid>
+
+<Grid columnSize="2" widthRatios="20,80">
+
+    <div>
+
         **2026-07-21**
 
     </div>
