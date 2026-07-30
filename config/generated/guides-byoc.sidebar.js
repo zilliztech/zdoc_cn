@@ -1637,12 +1637,6 @@ module.exports = [
             "id": "tutorials/management/billing-management/view-invoice",
             "label": "了解账单",
             "key": "doc:tutorials/management/billing-management/view-invoice"
-          },
-          {
-            "type": "category",
-            "label": "按 Marketplace 账号拆分账单",
-            "key": "category:tutorials/management/billing-management/marketplace",
-            "items": []
           }
         ]
       },

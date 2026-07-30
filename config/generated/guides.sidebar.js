@@ -1958,15 +1958,15 @@ module.exports = [
           },
           {
             "type": "doc",
+            "id": "tutorials/management/billing-management/notice-on-config-changes",
+            "label": "变更配置费用说明",
+            "key": "doc:tutorials/management/billing-management/notice-on-config-changes"
+          },
+          {
+            "type": "doc",
             "id": "tutorials/management/billing-management/failed-payments-organization-recovery",
             "label": "处理支付失败与组织冻结",
             "key": "doc:tutorials/management/billing-management/failed-payments-organization-recovery"
-          },
-          {
-            "type": "category",
-            "label": "按 Marketplace 账号拆分账单",
-            "key": "category:tutorials/management/billing-management/marketplace",
-            "items": []
           },
           {
             "type": "doc",

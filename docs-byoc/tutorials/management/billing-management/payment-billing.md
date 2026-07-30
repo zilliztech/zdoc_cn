@@ -87,5 +87,3 @@ import Admonition from '@theme/Admonition';
 
     - 配置账单告警，提前发现支付或使用风险。
 
-如果您的组织被冻结或支付失败，请更新支付方式以恢复访问。详情请参见[处理支付失败与组织冻结](./failed-payments-organization-recovery)。
-

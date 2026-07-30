@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-30T07:35:04.859Z",
+  "generated_at": "2026-07-30T15:26:09.997Z",
   "source_dir": "./plugins/lark-docs/meta/sources/guides",
   "base_app_token": "I6YUb1M0JajHrqsJGcLcZNh7neP",
   "base_table_id": "*",
   "summary": {
-    "canonical_tokens": 279,
-    "scanned_sources": 279,
-    "skipped_noncanonical_sources": 159,
-    "content_links": 1262,
-    "broken_content_links": 130
+    "canonical_tokens": 280,
+    "scanned_sources": 280,
+    "skipped_noncanonical_sources": 158,
+    "content_links": 1261,
+    "broken_content_links": 129
   },
   "broken_content_links": [
     {
@@ -893,21 +893,6 @@
       "raw_url": "https://zilliverse.feishu.cn/wiki/SbePwiLrZi2hZqk5NpRcmramnEN",
       "url": "https://zilliverse.feishu.cn/wiki/SbePwiLrZi2hZqk5NpRcmramnEN",
       "token": "SbePwiLrZi2hZqk5NpRcmramnEN",
-      "kind": "wiki",
-      "anchor": null
-    },
-    {
-      "reason": "missing canonical",
-      "source_file": "MeCPwj8n0i2x1BksjOHc3OKRn55.json",
-      "source_type": "mention_doc",
-      "source_token": "MeCPwj8n0i2x1BksjOHc3OKRn55",
-      "source_title": "集群扩缩容",
-      "source_slug": "scale-cluster",
-      "block_id": "MyUpdjKiKoqkS3xcdvVchgUunkb",
-      "link_text": "变更配置费用说明",
-      "raw_url": "https://zilliverse.feishu.cn/wiki/GMCvwBlS7io85jkiW0icumJnn6A",
-      "url": "https://zilliverse.feishu.cn/wiki/GMCvwBlS7io85jkiW0icumJnn6A",
-      "token": "GMCvwBlS7io85jkiW0icumJnn6A",
       "kind": "wiki",
       "anchor": null
     },

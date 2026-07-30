@@ -24,7 +24,7 @@ import Procedures from '@site/src/components/Procedures';
 
 对公转账是指通过银行汇款的方式将资金充值到您的 Zilliz Cloud 组织现金余额中，用于支付使用 Zilliz Cloud 产生的费用。目前，Zilliz Cloud 界面仅支持通过**专属账号**进行汇款。
 
-专属账号是指 Zilliz Cloud 为每个组织分配的专属汇款账号，在 Zilliz Cloud [发票](./manage-invoice)信息显示的银行账号基础上增加了 9 位专属识别数字。当您使用专属账号进行汇款时，系统会通过 9 位专属识别数字实时将款项汇入 Zilliz Cloud 银行账户中，5-10 分钟后系统自动将汇款金额充值到对应的 Zilliz Cloud 组织现金余额中。
+当您使用专属账号进行汇款时，系统会通过 9 位专属识别数字实时将款项汇入 Zilliz Cloud 银行账户中，5-10 分钟后系统自动将汇款金额充值到对应的 Zilliz Cloud 组织现金余额中。
 
 <Admonition type="info" icon="📘" title="📘 说明">
 

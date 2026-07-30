@@ -122,7 +122,7 @@ Zilliz Cloud 提供多种方式来扩缩容集群资源。根据您的工作负�
 
 1. （可选）您可以选择是否在扩容的同时**延长集群有效期**。
 
-1. 检查订单金额，点击**扩容**。如需了解集群升配与续订的费用计算规则，请参考[变更配置费用说明](./undefined)。
+1. 检查订单金额，点击**扩容**。如需了解集群升配与续订的费用计算规则，请参考[变更配置费用说明](./notice-on-config-changes)。
 
     ![scale-annual-subscription-cluster-cn](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/scale-annual-subscription-cluster-cn.png "scale-annual-subscription-cluster-cn")
 
