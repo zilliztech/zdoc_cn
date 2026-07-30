@@ -10,7 +10,7 @@ notebook: FALSE
 description: "Zilliz Cloud 控制台提供专门的订单页面，方便您统一集中管理订单。 | Cloud"
 type: origin
 token: FJU5wklQuiAJASkHAFlcQShDn9e
-sidebar_position: 9
+sidebar_position: 10
 displayed_sidebar: default
 
 ---

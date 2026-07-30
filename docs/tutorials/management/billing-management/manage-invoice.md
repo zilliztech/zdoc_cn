@@ -10,7 +10,7 @@ notebook: FALSE
 description: "您可以对 Zilliz Cloud 上的账单申请开具发票。具体开票方式根据您的支付方式有所不同。 | Cloud"
 type: origin
 token: JTuUwoHUyiqJU6kuu30cN9ibnkh
-sidebar_position: 5
+sidebar_position: 6
 displayed_sidebar: default
 
 ---

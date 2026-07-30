@@ -10,7 +10,7 @@ notebook: FALSE
 description: "监控账单告警可帮助您跟踪 Zilliz Cloud 组织的近期使用量、优惠券有效期、和现金余额。这些告警有助于您及时发现异常支出，并及时更新支付方式，从而降低服务中断风险。 | Cloud"
 type: origin
 token: VHz6wyqArieXOpkujoRctW0hnng
-sidebar_position: 8
+sidebar_position: 9
 displayed_sidebar: default
 
 ---

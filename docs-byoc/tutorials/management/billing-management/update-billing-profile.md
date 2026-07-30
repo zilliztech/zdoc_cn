@@ -1,5 +1,5 @@
 ---
-title: "更新账单接收信息 | Cloud"
+title: "更新账单接收信息 | BYOC"
 slug: /update-billing-profile
 sidebar_label: "更新账单接收信息"
 beta: FALSE
@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "账单接收信息包含用于接收账单和发票的联系人信息和地址。请及时更新账单接收信息。 | Cloud"
+description: "账单接收信息包含用于接收账单和发票的联系人信息和地址。请及时更新账单接收信息。 | BYOC"
 type: origin
 token: YJNZwKdCTia9L7k5o93cdAUynOg
 sidebar_position: 4

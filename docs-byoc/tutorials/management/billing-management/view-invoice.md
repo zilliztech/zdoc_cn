@@ -1,5 +1,5 @@
 ---
-title: "了解账单 | Cloud"
+title: "了解账单 | BYOC"
 slug: /view-invoice
 sidebar_label: "了解账单"
 beta: FALSE
@@ -7,7 +7,7 @@ added_since: FALSE
 last_modified: FALSE
 deprecate_since: FALSE
 notebook: FALSE
-description: "Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud 进行实际结算。 | Cloud"
+description: "Zilliz Cloud 按月度出账单，您可以根据账单数据与 Zilliz Cloud 进行实际结算。 | BYOC"
 type: origin
 token: NhbHwPiL2i4KWskrcO4cDrSNnzh
 sidebar_position: 5

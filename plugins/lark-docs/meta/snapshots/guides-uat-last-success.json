@@ -9,7 +9,7 @@
   "source_branch": "dev",
   "publish_url": "https://docs.cloud-uat3.zilliz.com",
   "link_check_remote": "https://docs.zilliz.com",
-  "generated_at": "2026-07-29T23:00:00.863Z",
+  "generated_at": "2026-07-30T07:35:05.198Z",
   "source_dir": "./plugins/lark-docs/meta/sources/guides",
   "base_app_token": "I6YUb1M0JajHrqsJGcLcZNh7neP",
   "records": [
@@ -9158,6 +9158,46 @@
       "output_paths": []
     },
     {
+      "record_id": "recvqPPe3Jp2OT",
+      "table_id": "tblMuHkoG4qMugeX",
+      "table_name": "运维指南",
+      "placement_type": "canonical",
+      "title": "BYOC 计费模式",
+      "slug": "understand-byoc-billing",
+      "doc_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+      "doc_link": "https://zilliverse.feishu.cn/wiki/HnUxw64aKibN0RkFBEsceIi2noL?from=from_copylink",
+      "source_file": "HnUxw64aKibN0RkFBEsceIi2noL.json",
+      "source_hash": "6d6816c587a215fd26169001069e480e7059f13fca20c87a8e16c4d57a6094e7",
+      "node_metadata": {
+        "requested_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+        "requested_node_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+        "node_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+        "origin_node_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+        "obj_token": "SxiRdzDgcoBavBxRUnrchWEFnGb",
+        "obj_type": "docx",
+        "node_type": "origin",
+        "title": "了解 BYOC 账单",
+        "space_id": "7314489394450956292",
+        "parent_node_token": "RDMDwm8ojizBA7keZgjcakTOnGd",
+        "node_create_time": "1785392681",
+        "obj_create_time": "1785392681",
+        "obj_edit_time": "1785394087",
+        "revision_id": null
+      },
+      "node_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+      "origin_node_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+      "obj_token": "SxiRdzDgcoBavBxRUnrchWEFnGb",
+      "obj_type": "docx",
+      "obj_edit_time": "1785394087",
+      "revision_id": null,
+      "outgoing_tokens": [
+        "DeRWwlqYKiH76okxiaBcVFPjnMg",
+        "NhbHwPiL2i4KWskrcO4cDrSNnzh",
+        "Uj7IwJpneijPROkAZN7cJRLInrc"
+      ],
+      "output_paths": []
+    },
+    {
       "record_id": "recvmSFyy3xAp1",
       "table_id": "tblMuHkoG4qMugeX",
       "table_name": "运维指南",
@@ -9167,7 +9207,7 @@
       "doc_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
       "doc_link": "https://zilliverse.feishu.cn/wiki/Uj7IwJpneijPROkAZN7cJRLInrc",
       "source_file": "Uj7IwJpneijPROkAZN7cJRLInrc.json",
-      "source_hash": "a7086c0a49fa1cf3a125a99e2c30d3f691bc391380effbc09cd0d2e2f383ddee",
+      "source_hash": "9ed055488dec8a9936584c53a79ffebd9c9389e2208a0917131d2160ba5d0d45",
       "node_metadata": {
         "requested_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
         "requested_node_token": "Uj7IwJpneijPROkAZN7cJRLInrc",
@@ -9210,7 +9250,7 @@
       "doc_token": "VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
       "doc_link": "https://zilliverse.feishu.cn/wiki/VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
       "source_file": "VRLOw9Mc7iPWnCkZs2YcoGwSnLh.json",
-      "source_hash": "09785a22e7df2c4b13c1f804977ec039fb58b00b25eefebe57d015b6569937a5",
+      "source_hash": "6bcb273b0416e96423076e0ecc11d18c32e120fdc706219af61399e3588186d3",
       "node_metadata": {
         "requested_token": "VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
         "requested_node_token": "VRLOw9Mc7iPWnCkZs2YcoGwSnLh",
@@ -9248,7 +9288,7 @@
       "doc_token": "JZqrwH8V8i6a3jktSQgcyXAEnAg",
       "doc_link": "https://zilliverse.feishu.cn/wiki/JZqrwH8V8i6a3jktSQgcyXAEnAg",
       "source_file": "JZqrwH8V8i6a3jktSQgcyXAEnAg.json",
-      "source_hash": "6f2265850a32e038835250c1c4d1845613fc7bfd3681fd3bcbd6bb219a207b25",
+      "source_hash": "b991c826b3938cae110537f299544da0926c38f1af100e84e75689d9fb679164",
       "node_metadata": {
         "requested_token": "JZqrwH8V8i6a3jktSQgcyXAEnAg",
         "requested_node_token": "JZqrwH8V8i6a3jktSQgcyXAEnAg",
@@ -9287,7 +9327,7 @@
       "doc_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
       "doc_link": "https://zilliverse.feishu.cn/wiki/UTRZwxLf3ikwvbkXrKjcWAwOnmg",
       "source_file": "UTRZwxLf3ikwvbkXrKjcWAwOnmg.json",
-      "source_hash": "dd653606ddea789c23ee99de707a5465ef567d0a343eef183f29ac636968e197",
+      "source_hash": "faede918b3f8392d7c3fb608eb3bf0830bad918bc91ec527efe4839ec4c8dd21",
       "node_metadata": {
         "requested_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
         "requested_node_token": "UTRZwxLf3ikwvbkXrKjcWAwOnmg",
@@ -9327,7 +9367,7 @@
       "doc_token": "LNxnwCaoeiwvxVkQqCTcWmMFn5g",
       "doc_link": "https://zilliverse.feishu.cn/wiki/LNxnwCaoeiwvxVkQqCTcWmMFn5g",
       "source_file": "LNxnwCaoeiwvxVkQqCTcWmMFn5g.json",
-      "source_hash": "ff761b76829f55bf92dd95124d2ddb8fd3176d1c977bc773b878ecfc8584cd8b",
+      "source_hash": "59341d643e75f3a9560f1f102ad2ab6da8acee2f422abca33b00b34434a655fa",
       "node_metadata": {
         "requested_token": "LNxnwCaoeiwvxVkQqCTcWmMFn5g",
         "requested_node_token": "LNxnwCaoeiwvxVkQqCTcWmMFn5g",
@@ -9367,7 +9407,7 @@
       "doc_token": "YJNZwKdCTia9L7k5o93cdAUynOg",
       "doc_link": "https://zilliverse.feishu.cn/wiki/YJNZwKdCTia9L7k5o93cdAUynOg",
       "source_file": "YJNZwKdCTia9L7k5o93cdAUynOg.json",
-      "source_hash": "fad5c757c89e31095c37f4624c62f714983c26ac16d322681ecee4a8c5aed942",
+      "source_hash": "1253087f67613efd9e34379a0cb8c0537d88430170a8da2e52b41167b908410c",
       "node_metadata": {
         "requested_token": "YJNZwKdCTia9L7k5o93cdAUynOg",
         "requested_node_token": "YJNZwKdCTia9L7k5o93cdAUynOg",
@@ -9403,7 +9443,7 @@
       "doc_token": "NhbHwPiL2i4KWskrcO4cDrSNnzh",
       "doc_link": "https://zilliverse.feishu.cn/wiki/NhbHwPiL2i4KWskrcO4cDrSNnzh",
       "source_file": "NhbHwPiL2i4KWskrcO4cDrSNnzh.json",
-      "source_hash": "ac9b77796bc92eff3505bb5dab09f877d601b01f4ce6a18b03fb8da0bdf94e8a",
+      "source_hash": "541afd355f8f97aee2f6c1b69254fb792c0b710870c2f85194ee5dccde2a6500",
       "node_metadata": {
         "requested_token": "NhbHwPiL2i4KWskrcO4cDrSNnzh",
         "requested_node_token": "NhbHwPiL2i4KWskrcO4cDrSNnzh",
@@ -9442,7 +9482,7 @@
       "doc_token": "JTuUwoHUyiqJU6kuu30cN9ibnkh",
       "doc_link": "https://zilliverse.feishu.cn/wiki/JTuUwoHUyiqJU6kuu30cN9ibnkh",
       "source_file": "JTuUwoHUyiqJU6kuu30cN9ibnkh.json",
-      "source_hash": "e0fe39d387d30d4bae5689ffb6d6610f13b30c6ef49879206653fa2462873baa",
+      "source_hash": "cf7af3316cebff3be42dde8017fb4b63e0898c1d3a21f316912307e72d9d2bdd",
       "node_metadata": {
         "requested_token": "JTuUwoHUyiqJU6kuu30cN9ibnkh",
         "requested_node_token": "JTuUwoHUyiqJU6kuu30cN9ibnkh",
@@ -9482,7 +9522,7 @@
       "doc_token": "OzZfwGPsaiFv7zkFpPOcOKddnSd",
       "doc_link": "https://zilliverse.feishu.cn/wiki/OzZfwGPsaiFv7zkFpPOcOKddnSd",
       "source_file": "OzZfwGPsaiFv7zkFpPOcOKddnSd.json",
-      "source_hash": "58c12d8dff35244a276f6ced794ace41072981aeff0d1595616e6085a2a39d06",
+      "source_hash": "18a4bef26c2643711044937baa97500e9a7850fc9ada9d4e0581aa741ac54ecb",
       "node_metadata": {
         "requested_token": "OzZfwGPsaiFv7zkFpPOcOKddnSd",
         "requested_node_token": "OzZfwGPsaiFv7zkFpPOcOKddnSd",
@@ -9518,7 +9558,7 @@
       "doc_token": "VHz6wyqArieXOpkujoRctW0hnng",
       "doc_link": "https://zilliverse.feishu.cn/wiki/VHz6wyqArieXOpkujoRctW0hnng",
       "source_file": "VHz6wyqArieXOpkujoRctW0hnng.json",
-      "source_hash": "17ca29f35f7e456cbd73cea9b874191cb4ae9db9aacaeae4b94dcedc23d87c2f",
+      "source_hash": "5c1bc92012b06e37c3cba695aad303c0bf6fdf0a9f2651d2a57f508f37648750",
       "node_metadata": {
         "requested_token": "VHz6wyqArieXOpkujoRctW0hnng",
         "requested_node_token": "VHz6wyqArieXOpkujoRctW0hnng",
@@ -9556,7 +9596,7 @@
       "doc_token": "FJU5wklQuiAJASkHAFlcQShDn9e",
       "doc_link": "https://zilliverse.feishu.cn/wiki/FJU5wklQuiAJASkHAFlcQShDn9e",
       "source_file": "FJU5wklQuiAJASkHAFlcQShDn9e.json",
-      "source_hash": "2e9f116004d1da8b9ad36b78363742cd3e2cbc5d7e6d2e93548b0e2a3c354037",
+      "source_hash": "0aa5e4b3040f39c77b159df3f40fd41ab038adefc456b7a1a1da7f851a7f0543",
       "node_metadata": {
         "requested_token": "FJU5wklQuiAJASkHAFlcQShDn9e",
         "requested_node_token": "FJU5wklQuiAJASkHAFlcQShDn9e",
@@ -9596,7 +9636,7 @@
       "doc_token": "BMzFwP8BbiUeAbkZ0abcDIHlnle",
       "doc_link": "https://zilliverse.feishu.cn/wiki/BMzFwP8BbiUeAbkZ0abcDIHlnle",
       "source_file": "BMzFwP8BbiUeAbkZ0abcDIHlnle.json",
-      "source_hash": "0ae214180bee15706d06fce6b6819e2e7385b3d28fc36bc50d5ef36ccea627c9",
+      "source_hash": "ba919632ad3f4ac670fd3d705fca6d9c5223d36fb8c2f5084059916b64faeb0c",
       "node_metadata": {
         "requested_token": "BMzFwP8BbiUeAbkZ0abcDIHlnle",
         "requested_node_token": "BMzFwP8BbiUeAbkZ0abcDIHlnle",
@@ -9636,7 +9676,7 @@
       "doc_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
       "doc_link": "https://zilliverse.feishu.cn/wiki/XEvpwUMfFirFkNkQZofcwUTcnvd",
       "source_file": "XEvpwUMfFirFkNkQZofcwUTcnvd.json",
-      "source_hash": "e545b06d197bdf3ccb3fe775fbe4bdc716745b4b16117b51abd8a4bd30ee3736",
+      "source_hash": "9382231182a90d075c42bed20c11f09d2f8994cbb7c71266a1375c592f1ba13d",
       "node_metadata": {
         "requested_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
         "requested_node_token": "XEvpwUMfFirFkNkQZofcwUTcnvd",
@@ -9677,7 +9717,7 @@
       "doc_token": "Gc0Cw50sPikX4vkCxU7cw7kunzb",
       "doc_link": "https://zilliverse.feishu.cn/wiki/Gc0Cw50sPikX4vkCxU7cw7kunzb",
       "source_file": "Gc0Cw50sPikX4vkCxU7cw7kunzb.json",
-      "source_hash": "a0cc63b376ce14fc4cb8c60daf044168e3348628dd934c96d848be7074ce23ff",
+      "source_hash": "9a0d72a2108df1ef1ce4cfedd807e51ef35bf8d3ece86742d2dba42f839b26e3",
       "node_metadata": {
         "requested_token": "Gc0Cw50sPikX4vkCxU7cw7kunzb",
         "requested_node_token": "Gc0Cw50sPikX4vkCxU7cw7kunzb",
@@ -9719,7 +9759,7 @@
       "doc_token": "MfZawdBV9iFGi4k7HRbcyyj2nCh",
       "doc_link": "https://zilliverse.feishu.cn/wiki/MfZawdBV9iFGi4k7HRbcyyj2nCh",
       "source_file": "MfZawdBV9iFGi4k7HRbcyyj2nCh.json",
-      "source_hash": "c852c1ce2201e350210e649342f54e9080c55e88bf1139428255662b4ff3131e",
+      "source_hash": "d37b260b488c77d6939521382cecad6f1e51b6c3260e30ae9b3d553c6729779d",
       "node_metadata": {
         "requested_token": "MfZawdBV9iFGi4k7HRbcyyj2nCh",
         "requested_node_token": "MfZawdBV9iFGi4k7HRbcyyj2nCh",
@@ -9766,7 +9806,7 @@
       "doc_token": "Lv3Awu3uHiZ99AkGKXYc7D0JnCd",
       "doc_link": "https://zilliverse.feishu.cn/wiki/Lv3Awu3uHiZ99AkGKXYc7D0JnCd",
       "source_file": "Lv3Awu3uHiZ99AkGKXYc7D0JnCd.json",
-      "source_hash": "6f1bf494e755b7276eff30aa1a691b6a1de1f2b1dc4bffea9c8bdc2c14abbda3",
+      "source_hash": "17cad5156b1e50b07933dcd6a2d141acc973871d1ff0d332d35ca0267d32f189",
       "node_metadata": {
         "requested_token": "Lv3Awu3uHiZ99AkGKXYc7D0JnCd",
         "requested_node_token": "Lv3Awu3uHiZ99AkGKXYc7D0JnCd",
@@ -9806,7 +9846,7 @@
       "doc_token": "LuNmwpQRKiOz4ZkEkl4cTkNtnpk",
       "doc_link": "https://zilliverse.feishu.cn/wiki/LuNmwpQRKiOz4ZkEkl4cTkNtnpk",
       "source_file": "LuNmwpQRKiOz4ZkEkl4cTkNtnpk.json",
-      "source_hash": "6c91b29e9eda3ba58c96f87c6e14e5a2a556282ffda264ecf688ac98187b3e2e",
+      "source_hash": "3d73ad18c7ff3bcea8a7f0fa0b951ad9f84b25e90ecf7d4f2a38b2cf64852d91",
       "node_metadata": {
         "requested_token": "LuNmwpQRKiOz4ZkEkl4cTkNtnpk",
         "requested_node_token": "LuNmwpQRKiOz4ZkEkl4cTkNtnpk",
@@ -9842,7 +9882,7 @@
       "doc_token": "RZoSwcpJniF0ZxkfhaDcFUHin4A",
       "doc_link": "https://zilliverse.feishu.cn/wiki/RZoSwcpJniF0ZxkfhaDcFUHin4A",
       "source_file": "RZoSwcpJniF0ZxkfhaDcFUHin4A.json",
-      "source_hash": "6e877c8110a9ca37eff5c0d7b8b210eb6083db66b69007b876317910fd4b43dd",
+      "source_hash": "9d18b461a6ac4bd6dd085ecfe0570447e9819559319dc7f9e65565ba3cf61f69",
       "node_metadata": {
         "requested_token": "RZoSwcpJniF0ZxkfhaDcFUHin4A",
         "requested_node_token": "RZoSwcpJniF0ZxkfhaDcFUHin4A",
@@ -9883,7 +9923,7 @@
       "doc_token": "HrONwUQ4riQnbgkZGY0ceLp9nUg",
       "doc_link": "https://zilliverse.feishu.cn/wiki/HrONwUQ4riQnbgkZGY0ceLp9nUg",
       "source_file": "HrONwUQ4riQnbgkZGY0ceLp9nUg.json",
-      "source_hash": "5434ca33740cad4e96274d73b3adb52ea5ccb282fa5a3e7160d12103a2803406",
+      "source_hash": "4af8833f84b9556a0cd0e8f1aa44ea77449f810aaf26a406cabb5bce80a54da1",
       "node_metadata": {
         "requested_token": "HrONwUQ4riQnbgkZGY0ceLp9nUg",
         "requested_node_token": "HrONwUQ4riQnbgkZGY0ceLp9nUg",
@@ -9923,7 +9963,7 @@
       "doc_token": "DeRWwlqYKiH76okxiaBcVFPjnMg",
       "doc_link": "https://zilliverse.feishu.cn/wiki/DeRWwlqYKiH76okxiaBcVFPjnMg",
       "source_file": "DeRWwlqYKiH76okxiaBcVFPjnMg.json",
-      "source_hash": "5047cc87df28a7e2d0e5daaf5980930b1817de8c443bc6f62fdefe153a8e750c",
+      "source_hash": "89f61115656dee2559ecf266866fdc4852c10647c62ffa8282e3d6c9df023cea",
       "node_metadata": {
         "requested_token": "DeRWwlqYKiH76okxiaBcVFPjnMg",
         "requested_node_token": "DeRWwlqYKiH76okxiaBcVFPjnMg",
@@ -9962,7 +10002,7 @@
       "doc_token": "ObcZwiYelidyeTk8HGaclpWTnFe",
       "doc_link": "https://zilliverse.feishu.cn/wiki/ObcZwiYelidyeTk8HGaclpWTnFe",
       "source_file": "ObcZwiYelidyeTk8HGaclpWTnFe.json",
-      "source_hash": "a9f941b40ba920f7f868531c75971f42e7b49aa5eab50caf03af3f60a78cac71",
+      "source_hash": "09f2cda1e2d6dd72dd70e5af0c06fefb64f813133b282627f06b3df4d608be00",
       "node_metadata": {
         "requested_token": "ObcZwiYelidyeTk8HGaclpWTnFe",
         "requested_node_token": "ObcZwiYelidyeTk8HGaclpWTnFe",
@@ -10014,7 +10054,7 @@
       "doc_token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
       "doc_link": "https://zilliverse.feishu.cn/wiki/A8UFwSbMniMl6IkpJkNc4HsHnLc",
       "source_file": "A8UFwSbMniMl6IkpJkNc4HsHnLc.json",
-      "source_hash": "9144c2b61db72468892b614729390a203a44554aa881f88ce0254da7f343143e",
+      "source_hash": "d794e54ba9ed9943b81e48c2fc5fe09daad3a7b28151c6ad00b370c9fd1fd188",
       "node_metadata": {
         "requested_token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
         "requested_node_token": "A8UFwSbMniMl6IkpJkNc4HsHnLc",
@@ -10055,7 +10095,7 @@
       "doc_token": "KOD2wN5jDimhSOk1GshcUbn2nJe",
       "doc_link": "https://zilliverse.feishu.cn/wiki/KOD2wN5jDimhSOk1GshcUbn2nJe",
       "source_file": "KOD2wN5jDimhSOk1GshcUbn2nJe.json",
-      "source_hash": "b63a3196def51a845950460d9a7ff0b4a10a9ad05abef2bd12204f1451653549",
+      "source_hash": "6f5a1202585d787d8e04cd756c5b4ea4a058885573f876125a45eb3696085dab",
       "node_metadata": {
         "requested_token": "KOD2wN5jDimhSOk1GshcUbn2nJe",
         "requested_node_token": "KOD2wN5jDimhSOk1GshcUbn2nJe",
@@ -13076,7 +13116,7 @@
       "ref_target_token": null
     },
     {
-      "record_id": "recvmSFyy3xAp1",
+      "record_id": "recvqPPe3Jp2OT",
       "table_id": "tblMuHkoG4qMugeX",
       "table_name": "management",
       "placement_type": "canonical",
@@ -13084,6 +13124,27 @@
         "recvmSFx3sk92S"
       ],
       "order": 100,
+      "title": "BYOC 计费模式",
+      "labels": "",
+      "slug": "understand-byoc-billing",
+      "targets": [
+        "zilliz.paas"
+      ],
+      "progress": "Draft",
+      "doc_token": "HnUxw64aKibN0RkFBEsceIi2noL",
+      "doc_link": "https://zilliverse.feishu.cn/wiki/HnUxw64aKibN0RkFBEsceIi2noL?from=from_copylink",
+      "ref_target": null,
+      "ref_target_token": null
+    },
+    {
+      "record_id": "recvmSFyy3xAp1",
+      "table_id": "tblMuHkoG4qMugeX",
+      "table_name": "management",
+      "placement_type": "canonical",
+      "parent_record_ids": [
+        "recvmSFx3sk92S"
+      ],
+      "order": 101,
       "title": "支付方式与账单",
       "labels": "支付方式与账单",
       "slug": "payment-billing",
@@ -13105,7 +13166,7 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 101,
+      "order": 102,
       "title": "设置支付方式",
       "labels": "设置支付方式",
       "slug": "set-up-payment-method",
@@ -13127,11 +13188,12 @@
       "parent_record_ids": [
         "recvmSFzeOxFXt"
       ],
-      "order": 102,
+      "order": 103,
       "title": "企业认证",
       "labels": "企业认证",
       "slug": "enterprise-verification",
       "targets": [
+        "zilliz.paas",
         "zilliz.saas"
       ],
       "progress": "Draft",
@@ -13148,11 +13210,12 @@
       "parent_record_ids": [
         "recvmSFzeOxFXt"
       ],
-      "order": 103,
+      "order": 104,
       "title": "现金充值（对公转账）",
       "labels": "现金充值（对公转账）",
       "slug": "cash-recharge",
       "targets": [
+        "zilliz.paas",
         "zilliz.saas"
       ],
       "progress": "Draft",
@@ -13169,11 +13232,12 @@
       "parent_record_ids": [
         "recvmSFzeOxFXt"
       ],
-      "order": 104,
+      "order": 105,
       "title": "订阅阿里云云市场",
       "labels": "订阅阿里云云市场",
       "slug": "aliyun-marketplace",
       "targets": [
+        "zilliz.paas",
         "zilliz.saas"
       ],
       "progress": "Draft",
@@ -13190,11 +13254,12 @@
       "parent_record_ids": [
         "recvmSFzeOxFXt"
       ],
-      "order": 105,
+      "order": 106,
       "title": "订阅亚马逊云科技 Marketplace",
       "labels": "订阅亚马逊云科技 Marketplace",
       "slug": "amazon-marketplace-cn",
       "targets": [
+        "zilliz.paas",
         "zilliz.saas"
       ],
       "progress": "Draft",
@@ -13211,11 +13276,12 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 106,
+      "order": 107,
       "title": "更新账单接收信息",
       "labels": "更新账单接收信息",
       "slug": "update-billing-profile",
       "targets": [
+        "zilliz.paas",
         "zilliz.saas"
       ],
       "progress": "Draft",
@@ -13232,11 +13298,12 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 107,
+      "order": 108,
       "title": "了解账单",
       "labels": "了解账单",
       "slug": "view-invoice",
       "targets": [
+        "zilliz.paas",
         "zilliz.saas"
       ],
       "progress": "Draft",
@@ -13253,7 +13320,7 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 108,
+      "order": 109,
       "title": "开具发票",
       "labels": "开具发票",
       "slug": "manage-invoice",
@@ -13274,7 +13341,7 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 109,
+      "order": 110,
       "title": "处理支付失败与组织冻结",
       "labels": "处理支付失败与组织冻结",
       "slug": "failed-payments-organization-recovery",
@@ -13295,7 +13362,7 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 110,
+      "order": 111,
       "title": "按 Marketplace 账号拆分账单",
       "labels": "按 Marketplace 账号拆分账单",
       "slug": "",
@@ -13314,7 +13381,7 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 111,
+      "order": 112,
       "title": "设置账单告警",
       "labels": "设置账单告警",
       "slug": "monitor-billing-alerts",
@@ -13335,7 +13402,7 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 112,
+      "order": 113,
       "title": "管理订单",
       "labels": "管理订单",
       "slug": "manage-orders",
@@ -13356,7 +13423,7 @@
       "parent_record_ids": [
         "recvmSFx3sk92S"
       ],
-      "order": 113,
+      "order": 114,
       "title": "续订说明",
       "labels": "续订说明",
       "slug": "renewal",
@@ -13375,7 +13442,7 @@
       "table_name": "management",
       "placement_type": "section",
       "parent_record_ids": [],
-      "order": 114,
+      "order": 115,
       "title": "成本管理",
       "labels": "成本管理",
       "slug": "cost-management",
@@ -13394,7 +13461,7 @@
       "parent_record_ids": [
         "recvmSFxOlMLgQ"
       ],
-      "order": 115,
+      "order": 116,
       "title": "了解费用",
       "labels": "了解费用",
       "slug": "understand-cost",
@@ -13413,7 +13480,7 @@
       "parent_record_ids": [
         "recvmSFE8Fp67L"
       ],
-      "order": 116,
+      "order": 117,
       "title": "按需计算费用",
       "labels": "按需计算费用",
       "slug": "on-demand-compute-cost",
@@ -13434,7 +13501,7 @@
       "parent_record_ids": [
         "recvmSFE8Fp67L"
       ],
-      "order": 117,
+      "order": 118,
       "title": "Dedicated 集群费用",
       "labels": "Dedicated 集群费用",
       "slug": "dedicated-cluster-cost",
@@ -13455,7 +13522,7 @@
       "parent_record_ids": [
         "recvmSFE8Fp67L"
       ],
-      "order": 118,
+      "order": 119,
       "title": "Serverless 集群费用",
       "labels": "Serverless 集群费用",
       "slug": "serverless-cluster-cost",
@@ -13476,7 +13543,7 @@
       "parent_record_ids": [
         "recvmSFE8Fp67L"
       ],
-      "order": 119,
+      "order": 120,
       "title": "存储费用",
       "labels": "存储费用",
       "slug": "storage-cost",
@@ -13497,7 +13564,7 @@
       "parent_record_ids": [
         "recvmSFE8Fp67L"
       ],
-      "order": 120,
+      "order": 121,
       "title": "存储请求费用",
       "labels": "存储请求费用",
       "slug": "storage-request-cost",
@@ -13518,7 +13585,7 @@
       "parent_record_ids": [
         "recvmSFE8Fp67L"
       ],
-      "order": 121,
+      "order": 122,
       "title": "数据传输费用",
       "labels": "数据传输费用",
       "slug": "data-transfer-cost",
@@ -13539,7 +13606,7 @@
       "parent_record_ids": [
         "recvmSFE8Fp67L"
       ],
-      "order": 122,
+      "order": 123,
       "title": "审计日志费用",
       "labels": "审计日志费用",
       "slug": "audit-log-cost",
@@ -13560,11 +13627,12 @@
       "parent_record_ids": [
         "recvmSFxOlMLgQ"
       ],
-      "order": 123,
+      "order": 124,
       "title": "分析成本",
       "labels": "分析成本",
       "slug": "analyze-cost",
       "targets": [
+        "zilliz.paas",
         "zilliz.saas"
       ],
       "progress": "Draft",
@@ -13581,7 +13649,7 @@
       "parent_record_ids": [
         "recvmSFxOlMLgQ"
       ],
-      "order": 124,
+      "order": 125,
       "title": "成本优化",
       "labels": "成本优化",
       "slug": "cost-optimization",
@@ -13600,7 +13668,7 @@
       "table_name": "management",
       "placement_type": "canonical",
       "parent_record_ids": [],
-      "order": 125,
+      "order": 126,
       "title": "使用限制",
       "labels": "使用限制",
       "slug": "limits",
@@ -13622,7 +13690,7 @@
       "parent_record_ids": [
         "recvmSFKOVOzcA"
       ],
-      "order": 126,
+      "order": 127,
       "title": "API 异同",
       "labels": "API 异同",
       "slug": "api-comparison",
@@ -13826,7 +13894,7 @@
       "labels": "",
       "slug": "",
       "targets": [],
-      "progress": "",
+      "progress": "Suspended",
       "doc_token": "ZhnIwddbqi8R8ekhLiXcho3CnZf",
       "doc_link": "https://zilliverse.feishu.cn/wiki/ZhnIwddbqi8R8ekhLiXcho3CnZf",
       "ref_target": "ZhnIwddbqi8R8ekhLiXcho3CnZf",
@@ -13881,7 +13949,7 @@
       "labels": "",
       "slug": "",
       "targets": [],
-      "progress": "",
+      "progress": "Suspended",
       "doc_token": "Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt",
       "doc_link": "https://zilliverse.feishu.cn/wiki/Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt",
       "ref_target": "Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt",
@@ -18425,9 +18493,9 @@
     }
   ],
   "table_digests": {
-    "tblMuHkoG4qMugeX": "a580c5dfc85b86081a9ee052c0e856221f4fd98110cb1b0c591348d7cd236a74",
+    "tblMuHkoG4qMugeX": "dfbd5e3a3316255e6eefe6275b6aa33a586cf34450e47fe3743230a188d593b6",
     "tbloC4PVprwYo0P0": "b8197e50f2151f8dd08173607cf1f81594f511a2c5ad4ba0ef1504a6cb35b024",
-    "tblr7Zec2ReTfRmw": "80cb0332e43f0c42e1c03c2f6d1e6f3808ffe6f87a78a81365ae4a2463292b22",
+    "tblr7Zec2ReTfRmw": "89a8935372fdf493362212a0d880963196f4117afaa70943dcac9b416b959b03",
     "tblRaa3JnIhllHb9": "9247f42c6a318cabca309e97af2a806de7a7e45fd7b46f201742307e534e8d57",
     "tblsw6S3J0ekcgNB": "f556888c8be78a570a218a669060e8e17d60bee062f3e1fce9c6e794429bd807",
     "tblYpqCgevikMomb": "ca0587a61432f3472a84556ff28452a6b5832cc63ffc7d1d7728397156f05272"

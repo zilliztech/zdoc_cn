@@ -1585,6 +1585,12 @@ module.exports = [
         "items": [
           {
             "type": "doc",
+            "id": "tutorials/management/billing-management/understand-byoc-billing",
+            "label": "BYOC 计费模式",
+            "key": "doc:tutorials/management/billing-management/understand-byoc-billing"
+          },
+          {
+            "type": "doc",
             "id": "tutorials/management/billing-management/payment-billing",
             "label": "支付方式与账单",
             "key": "doc:tutorials/management/billing-management/payment-billing"
@@ -1593,7 +1599,44 @@ module.exports = [
             "type": "category",
             "label": "设置支付方式",
             "key": "category:tutorials/management/billing-management/set-up-payment-method",
-            "items": []
+            "items": [
+              {
+                "type": "doc",
+                "id": "tutorials/management/billing-management/set-up-payment-method/enterprise-verification",
+                "label": "企业认证",
+                "key": "doc:tutorials/management/billing-management/set-up-payment-method/enterprise-verification"
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/management/billing-management/set-up-payment-method/cash-recharge",
+                "label": "现金充值（对公转账）",
+                "key": "doc:tutorials/management/billing-management/set-up-payment-method/cash-recharge"
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/management/billing-management/set-up-payment-method/aliyun-marketplace",
+                "label": "订阅阿里云云市场",
+                "key": "doc:tutorials/management/billing-management/set-up-payment-method/aliyun-marketplace"
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/management/billing-management/set-up-payment-method/amazon-marketplace-cn",
+                "label": "订阅亚马逊云科技 Marketplace",
+                "key": "doc:tutorials/management/billing-management/set-up-payment-method/amazon-marketplace-cn"
+              }
+            ]
+          },
+          {
+            "type": "doc",
+            "id": "tutorials/management/billing-management/update-billing-profile",
+            "label": "更新账单接收信息",
+            "key": "doc:tutorials/management/billing-management/update-billing-profile"
+          },
+          {
+            "type": "doc",
+            "id": "tutorials/management/billing-management/view-invoice",
+            "label": "了解账单",
+            "key": "doc:tutorials/management/billing-management/view-invoice"
           },
           {
             "type": "category",
@@ -1613,6 +1656,12 @@ module.exports = [
             "label": "了解费用",
             "key": "category:tutorials/management/cost-management/understand-cost",
             "items": []
+          },
+          {
+            "type": "doc",
+            "id": "tutorials/management/cost-management/analyze-cost",
+            "label": "分析成本",
+            "key": "doc:tutorials/management/cost-management/analyze-cost"
           }
         ]
       },

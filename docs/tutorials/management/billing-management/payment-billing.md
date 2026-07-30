@@ -10,7 +10,7 @@ notebook: FALSE
 description: "本指南介绍 Zilliz Cloud 支持的支付方式、支付优先级，以及管理发票和订阅时需要注意的事项。 | Cloud"
 type: origin
 token: Uj7IwJpneijPROkAZN7cJRLInrc
-sidebar_position: 1
+sidebar_position: 2
 displayed_sidebar: default
 
 ---
