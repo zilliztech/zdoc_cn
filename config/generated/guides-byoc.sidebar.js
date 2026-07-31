@@ -19,19 +19,19 @@ module.exports = [
       {
         "type": "category",
         "label": "快速开始",
-        "key": "category:tutorials/get-started/cn-recvmzwqlreobp",
+        "key": "category:tutorials/get-started/quickstarts",
         "items": [
           {
             "type": "doc",
-            "id": "tutorials/get-started/cn-recvmzwqlreobp/cli-and-agent-integration-guide",
+            "id": "tutorials/get-started/quickstarts/cli-and-agent-integration-guide",
             "label": "快速开始：安装 CLI 与 Agent 集成",
-            "key": "doc:tutorials/get-started/cn-recvmzwqlreobp/cli-and-agent-integration-guide"
+            "key": "doc:tutorials/get-started/quickstarts/cli-and-agent-integration-guide"
           },
           {
             "type": "doc",
-            "id": "tutorials/get-started/cn-recvmzwqlreobp/quick-start",
+            "id": "tutorials/get-started/quickstarts/quick-start",
             "label": "快速开始：使用 Serving 集群",
-            "key": "doc:tutorials/get-started/cn-recvmzwqlreobp/quick-start"
+            "key": "doc:tutorials/get-started/quickstarts/quick-start"
           }
         ]
       },
@@ -268,43 +268,43 @@ module.exports = [
           {
             "type": "category",
             "label": "使用 StructArray 搜索",
-            "key": "category:tutorials/development/search-and-query/search-with-structarray",
+            "key": "category:tutorials/development/search-and-query/struct-array-search",
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/development/search-and-query/search-with-structarray/search-with-struct-array",
+                "id": "tutorials/development/search-and-query/struct-array-search/search-with-struct-array",
                 "label": "使用 StructArray 进行 Basic Vector Search",
-                "key": "doc:tutorials/development/search-and-query/search-with-structarray/search-with-struct-array"
+                "key": "doc:tutorials/development/search-and-query/struct-array-search/search-with-struct-array"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/search-and-query/search-with-structarray/filtered-search-with-struct-arrays",
+                "id": "tutorials/development/search-and-query/struct-array-search/filtered-search-with-struct-arrays",
                 "label": "使用 StructArray 进行 Filtered Search",
-                "key": "doc:tutorials/development/search-and-query/search-with-structarray/filtered-search-with-struct-arrays"
+                "key": "doc:tutorials/development/search-and-query/struct-array-search/filtered-search-with-struct-arrays"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/search-and-query/search-with-structarray/range-search-with-struct-arrays",
+                "id": "tutorials/development/search-and-query/struct-array-search/range-search-with-struct-arrays",
                 "label": "使用 StructArray 进行 Range Search",
-                "key": "doc:tutorials/development/search-and-query/search-with-structarray/range-search-with-struct-arrays"
+                "key": "doc:tutorials/development/search-and-query/struct-array-search/range-search-with-struct-arrays"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/search-and-query/search-with-structarray/grouping-search-with-struct-array",
+                "id": "tutorials/development/search-and-query/struct-array-search/grouping-search-with-struct-array",
                 "label": "使用 StructArray 进行 Grouping Search",
-                "key": "doc:tutorials/development/search-and-query/search-with-structarray/grouping-search-with-struct-array"
+                "key": "doc:tutorials/development/search-and-query/struct-array-search/grouping-search-with-struct-array"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/search-and-query/search-with-structarray/hybrid-search-with-struct-array",
+                "id": "tutorials/development/search-and-query/struct-array-search/hybrid-search-with-struct-array",
                 "label": "使用 StructArray 进行 Hybrid Search",
-                "key": "doc:tutorials/development/search-and-query/search-with-structarray/hybrid-search-with-struct-array"
+                "key": "doc:tutorials/development/search-and-query/struct-array-search/hybrid-search-with-struct-array"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/search-and-query/search-with-structarray/tutorial-colbert-colpali",
+                "id": "tutorials/development/search-and-query/struct-array-search/tutorial-colbert-colpali",
                 "label": "使用 EmbeddingList 搜索：ColBERT 和 ColPali",
-                "key": "doc:tutorials/development/search-and-query/search-with-structarray/tutorial-colbert-colpali"
+                "key": "doc:tutorials/development/search-and-query/struct-array-search/tutorial-colbert-colpali"
               }
             ]
           },
@@ -427,13 +427,13 @@ module.exports = [
           {
             "type": "category",
             "label": "在控制台管理 Collection",
-            "key": "category:tutorials/development/collection/manage-collection-on-console",
+            "key": "category:tutorials/development/collection/collection-on-console",
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/development/collection/manage-collection-on-console/manage-collections-console",
+                "id": "tutorials/development/collection/collection-on-console/manage-collections-console",
                 "label": "管理 Collection (控制台)",
-                "key": "doc:tutorials/development/collection/manage-collection-on-console/manage-collections-console"
+                "key": "doc:tutorials/development/collection/collection-on-console/manage-collections-console"
               }
             ]
           }
@@ -508,68 +508,62 @@ module.exports = [
           {
             "type": "category",
             "label": "JSON 类型",
-            "key": "category:tutorials/development/schema/json-field",
+            "key": "category:tutorials/development/schema/json-fields",
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/json-field/json-field-overview",
+                "id": "tutorials/development/schema/json-fields/json-field-overview",
                 "label": "JSON 概述",
-                "key": "doc:tutorials/development/schema/json-field/json-field-overview"
+                "key": "doc:tutorials/development/schema/json-fields/json-field-overview"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/json-field/json-indexing",
+                "id": "tutorials/development/schema/json-fields/json-indexing",
                 "label": "JSON 索引",
-                "key": "doc:tutorials/development/schema/json-field/json-indexing"
+                "key": "doc:tutorials/development/schema/json-fields/json-indexing"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/json-field/json-shredding",
+                "id": "tutorials/development/schema/json-fields/json-shredding",
                 "label": "JSON Shredding",
-                "key": "doc:tutorials/development/schema/json-field/json-shredding"
+                "key": "doc:tutorials/development/schema/json-fields/json-shredding"
               }
             ]
           },
           {
             "type": "category",
-            "label": "Array 类型",
-            "key": "category:tutorials/development/schema/use-array-fields",
-            "items": []
-          },
-          {
-            "type": "category",
             "label": "StructArray",
-            "key": "category:tutorials/development/schema/structarray",
+            "key": "category:tutorials/development/schema/struct-array",
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/structarray/use-array-of-structs",
+                "id": "tutorials/development/schema/struct-array/use-array-of-structs",
                 "label": "StructArray 概述",
-                "key": "doc:tutorials/development/schema/structarray/use-array-of-structs"
+                "key": "doc:tutorials/development/schema/struct-array/use-array-of-structs"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/structarray/create-struct-array",
+                "id": "tutorials/development/schema/struct-array/create-struct-array",
                 "label": "创建 StructArray Field",
-                "key": "doc:tutorials/development/schema/structarray/create-struct-array"
+                "key": "doc:tutorials/development/schema/struct-array/create-struct-array"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/structarray/struct-array-limits",
+                "id": "tutorials/development/schema/struct-array/struct-array-limits",
                 "label": "StructArray 限制",
-                "key": "doc:tutorials/development/schema/structarray/struct-array-limits"
+                "key": "doc:tutorials/development/schema/struct-array/struct-array-limits"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/structarray/insert-struct-array",
+                "id": "tutorials/development/schema/struct-array/insert-struct-array",
                 "label": "向 StructArray Field 插入数据",
-                "key": "doc:tutorials/development/schema/structarray/insert-struct-array"
+                "key": "doc:tutorials/development/schema/struct-array/insert-struct-array"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/schema/structarray/index-struct-array",
+                "id": "tutorials/development/schema/struct-array/index-struct-array",
                 "label": "为 StructArray Field 创建 Index",
-                "key": "doc:tutorials/development/schema/structarray/index-struct-array"
+                "key": "doc:tutorials/development/schema/struct-array/index-struct-array"
               }
             ]
           },
@@ -856,7 +850,7 @@ module.exports = [
           {
             "type": "category",
             "label": "Text Embedding Function",
-            "key": "category:tutorials/development/function/text-embedding-functions",
+            "key": "category:tutorials/development/function/text-ebmedding-funcs",
             "items": []
           },
           {
@@ -988,43 +982,43 @@ module.exports = [
           {
             "type": "category",
             "label": "分词器参考",
-            "key": "category:tutorials/development/analyzer/tokenizer",
+            "key": "category:tutorials/development/analyzer/analyzer-tokenizers",
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/development/analyzer/tokenizer/standard-tokenizer",
+                "id": "tutorials/development/analyzer/analyzer-tokenizers/standard-tokenizer",
                 "label": "Standard 分词器",
-                "key": "doc:tutorials/development/analyzer/tokenizer/standard-tokenizer"
+                "key": "doc:tutorials/development/analyzer/analyzer-tokenizers/standard-tokenizer"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/analyzer/tokenizer/whitespace-tokenizer",
+                "id": "tutorials/development/analyzer/analyzer-tokenizers/whitespace-tokenizer",
                 "label": "Whitespace",
-                "key": "doc:tutorials/development/analyzer/tokenizer/whitespace-tokenizer"
+                "key": "doc:tutorials/development/analyzer/analyzer-tokenizers/whitespace-tokenizer"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/analyzer/tokenizer/jieba-tokenizer",
+                "id": "tutorials/development/analyzer/analyzer-tokenizers/jieba-tokenizer",
                 "label": "Jieba",
-                "key": "doc:tutorials/development/analyzer/tokenizer/jieba-tokenizer"
+                "key": "doc:tutorials/development/analyzer/analyzer-tokenizers/jieba-tokenizer"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/analyzer/tokenizer/lindera-tokenizer",
+                "id": "tutorials/development/analyzer/analyzer-tokenizers/lindera-tokenizer",
                 "label": "Lindera",
-                "key": "doc:tutorials/development/analyzer/tokenizer/lindera-tokenizer"
+                "key": "doc:tutorials/development/analyzer/analyzer-tokenizers/lindera-tokenizer"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/analyzer/tokenizer/icu-tokenizer",
+                "id": "tutorials/development/analyzer/analyzer-tokenizers/icu-tokenizer",
                 "label": "ICU",
-                "key": "doc:tutorials/development/analyzer/tokenizer/icu-tokenizer"
+                "key": "doc:tutorials/development/analyzer/analyzer-tokenizers/icu-tokenizer"
               },
               {
                 "type": "doc",
-                "id": "tutorials/development/analyzer/tokenizer/language-identifier-tokenizer",
+                "id": "tutorials/development/analyzer/analyzer-tokenizers/language-identifier-tokenizer",
                 "label": "Language Identifier",
-                "key": "doc:tutorials/development/analyzer/tokenizer/language-identifier-tokenizer"
+                "key": "doc:tutorials/development/analyzer/analyzer-tokenizers/language-identifier-tokenizer"
               }
             ]
           },
@@ -1246,7 +1240,7 @@ module.exports = [
           {
             "type": "category",
             "label": "按需计算",
-            "key": "category:tutorials/management/clusters/cn-recvmsesappzh6",
+            "key": "category:tutorials/management/clusters/on-demand-compute",
             "items": []
           },
           {
@@ -1271,7 +1265,7 @@ module.exports = [
           {
             "type": "category",
             "label": "存储集成",
-            "key": "category:tutorials/management/volume/cn-recvmsfhfdsfky",
+            "key": "category:tutorials/management/volume/storage-integrations",
             "items": []
           }
         ]
@@ -1310,52 +1304,52 @@ module.exports = [
       {
         "type": "category",
         "label": "数据迁移",
-        "key": "category:tutorials/management/cn-recvmseit6ebvl",
+        "key": "category:tutorials/management/migrations",
         "items": [
           {
             "type": "category",
             "label": "从 Milvus 迁移至 Zilliz Cloud",
-            "key": "category:tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus",
+            "key": "category:tutorials/management/migrations/migrate-from-milvus",
             "link": {
               "type": "doc",
-              "id": "tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/migrate-from-milvus"
+              "id": "tutorials/management/migrations/migrate-from-milvus/migrate-from-milvus"
             },
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-backup-files",
+                "id": "tutorials/management/migrations/migrate-from-milvus/via-backup-files",
                 "label": "通过备份文件从 Milvus 迁移至 Zilliz Cloud",
-                "key": "doc:tutorials/management/cn-recvmseit6ebvl/migrate-from-milvus/via-backup-files"
+                "key": "doc:tutorials/management/migrations/migrate-from-milvus/via-backup-files"
               }
             ]
           },
           {
             "type": "category",
             "label": "从外部数据源迁移",
-            "key": "category:tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx",
+            "key": "category:tutorials/management/migrations/migrate-from-external-sources",
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/zilliz-cloud-ips",
+                "id": "tutorials/management/migrations/migrate-from-external-sources/zilliz-cloud-ips",
                 "label": "Zilliz Cloud IP",
-                "key": "doc:tutorials/management/cn-recvmseit6ebvl/cn-recvmsfop1ewwx/zilliz-cloud-ips"
+                "key": "doc:tutorials/management/migrations/migrate-from-external-sources/zilliz-cloud-ips"
               }
             ]
           },
           {
             "type": "category",
             "label": "Zilliz Cloud 跨集群迁移",
-            "key": "category:tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters",
+            "key": "category:tutorials/management/migrations/migrate-between-clusters",
             "link": {
               "type": "doc",
-              "id": "tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/migrate-between-clusters"
+              "id": "tutorials/management/migrations/migrate-between-clusters/migrate-between-clusters"
             },
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/offline-migration",
+                "id": "tutorials/management/migrations/migrate-between-clusters/offline-migration",
                 "label": "离线迁移",
-                "key": "doc:tutorials/management/cn-recvmseit6ebvl/migrate-between-clusters/offline-migration"
+                "key": "doc:tutorials/management/migrations/migrate-between-clusters/offline-migration"
               }
             ]
           }
@@ -1364,48 +1358,48 @@ module.exports = [
       {
         "type": "category",
         "label": "指标与告警",
-        "key": "category:tutorials/management/cn-recvmsej5nnlco",
+        "key": "category:tutorials/management/metrics-alerts",
         "items": [
           {
             "type": "doc",
-            "id": "tutorials/management/cn-recvmsej5nnlco/metrics-alerts-reference",
+            "id": "tutorials/management/metrics-alerts/metrics-alerts-reference",
             "label": "指标快速参考",
-            "key": "doc:tutorials/management/cn-recvmsej5nnlco/metrics-alerts-reference"
+            "key": "doc:tutorials/management/metrics-alerts/metrics-alerts-reference"
           },
           {
             "type": "doc",
-            "id": "tutorials/management/cn-recvmsej5nnlco/view-cluster-metric-charts",
+            "id": "tutorials/management/metrics-alerts/view-cluster-metric-charts",
             "label": "查看集群性能指标",
-            "key": "doc:tutorials/management/cn-recvmsej5nnlco/view-cluster-metric-charts"
+            "key": "doc:tutorials/management/metrics-alerts/view-cluster-metric-charts"
           },
           {
             "type": "doc",
-            "id": "tutorials/management/cn-recvmsej5nnlco/manage-organization-alerts",
+            "id": "tutorials/management/metrics-alerts/manage-organization-alerts",
             "label": "管理组织告警",
-            "key": "doc:tutorials/management/cn-recvmsej5nnlco/manage-organization-alerts"
+            "key": "doc:tutorials/management/metrics-alerts/manage-organization-alerts"
           },
           {
             "type": "doc",
-            "id": "tutorials/management/cn-recvmsej5nnlco/manage-project-alerts",
+            "id": "tutorials/management/metrics-alerts/manage-project-alerts",
             "label": "管理项目告警",
-            "key": "doc:tutorials/management/cn-recvmsej5nnlco/manage-project-alerts"
+            "key": "doc:tutorials/management/metrics-alerts/manage-project-alerts"
           },
           {
             "type": "doc",
-            "id": "tutorials/management/cn-recvmsej5nnlco/manage-notification-channels",
+            "id": "tutorials/management/metrics-alerts/manage-notification-channels",
             "label": "管理告警渠道",
-            "key": "doc:tutorials/management/cn-recvmsej5nnlco/manage-notification-channels"
+            "key": "doc:tutorials/management/metrics-alerts/manage-notification-channels"
           },
           {
             "type": "category",
             "label": "可观测性集成",
-            "key": "category:tutorials/management/cn-recvmsej5nnlco/observability-integrations",
+            "key": "category:tutorials/management/metrics-alerts/observability-integrations",
             "items": [
               {
                 "type": "doc",
-                "id": "tutorials/management/cn-recvmsej5nnlco/observability-integrations/prometheus-monitoring",
+                "id": "tutorials/management/metrics-alerts/observability-integrations/prometheus-monitoring",
                 "label": "Prometheus 监控",
-                "key": "doc:tutorials/management/cn-recvmsej5nnlco/observability-integrations/prometheus-monitoring"
+                "key": "doc:tutorials/management/metrics-alerts/observability-integrations/prometheus-monitoring"
               }
             ]
           }

@@ -1,6 +1,6 @@
 # guides Incremental Fetch Plan
 
-Generated: 2026-07-30T22:30:53.704Z
+Generated: 2026-07-31T07:04:58.281Z
 Mode: full
 Build env: uat
 Source dir: `./plugins/lark-docs/meta/sources/guides`
@@ -8,7 +8,7 @@ Source dir: `./plugins/lark-docs/meta/sources/guides`
 ## Summary
 
 - Changed docs: 0
-- Expanded docs: 277
+- Expanded docs: 279
 - Removed docs: 0
 - Warnings: 1
 
@@ -281,6 +281,7 @@ Source dir: `./plugins/lark-docs/meta/sources/guides`
 - XvR4wXgb2iGBZ3kuUgVcRLWmnEd
 - XweAwx0lriFJXhkMyb1c40v9nNh
 - Xz97wLGqdiZXFxke1DlcEefpn7b
+- Y8zAw8Nr5iMpsRkKcQRc3Rn8nXt
 - YBlmwO9ajiU4tYklnjmc6fJPn8e
 - YJNZwKdCTia9L7k5o93cdAUynOg
 - YUETwzDssiTUs9kCSn4cgUYLnrd
@@ -293,6 +294,7 @@ Source dir: `./plugins/lark-docs/meta/sources/guides`
 - ZcogwnZR6iN4fikl98QcjQgQnQe
 - ZdWIwmiQCiKcIlkAHAZc1tDSngs
 - Ze9bwp7rJis0HGkYXftcC1k8nic
+- ZhnIwddbqi8R8ekhLiXcho3CnZf
 - ZoE3wx0LKiYLtrklb5Jc2gc8nD5
 - Zy1KwpriziqRlqka3Oxc0W4tnhg
 

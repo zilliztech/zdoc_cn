@@ -41,7 +41,7 @@ import Procedures from '@site/src/components/Procedures';
 | **OpenAI** | Text Embedding Function | API 密钥。获取方法请参阅 [OpenAI API 快速入门](https://developers.openai.com/api/docs/quickstart#create-and-export-an-api-key)。 |
 | **Cohere** | Text Embedding Function 和基于模型的 Ranker | API 密钥。获取方法请参阅 [API 密钥和速率限制](https://docs.cohere.com/docs/rate-limits)。 |
 | **Voyage AI** | Text Embedding Function 和基于模型的 Ranker | API 密钥。获取方法请参阅 [API 密钥和 Python 客户端](https://docs.voyageai.com/docs/api-key-and-installation)。 |
-| **Hugging Face** | [Text Embedding Function](./undefined) 和 [Hugging Face Ranker](./undefined) | 具有 Make calls to Inference Providers 权限的用户访问令牌。获取方法请参阅[用户访问令牌](https://huggingface.co/docs/hub/en/security-tokens)。 |
+| **Hugging Face** | [Text Embedding Function](./hugging-face) 和 [Hugging Face Ranker](./hugging-face-ranker) | 具有 Make calls to Inference Providers 权限的用户访问令牌。获取方法请参阅[用户访问令牌](https://huggingface.co/docs/hub/en/security-tokens)。 |
 
 <Admonition type="info" icon="📘" title="说明">
 
@@ -125,9 +125,9 @@ import Procedures from '@site/src/components/Procedures';
 
 - [硅基流动](./siliconflow)
 
-- [Hugging Face](./undefined)
+- [Hugging Face](./hugging-face)
 
 - [硅基流动 Ranker](./siliconflow-model-ranker)
 
-- [Hugging Face Ranker](./undefined)
+- [Hugging Face Ranker](./hugging-face-ranker)
 
