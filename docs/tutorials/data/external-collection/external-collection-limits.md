@@ -40,15 +40,11 @@ import Admonition from '@theme/Admonition';
 
 - 您不能使用 Partition，因此也不支持 Partition Key 和 。
 
-- 您无法在 Schema 中定义 Functions。
-
-- External Collection 创建后，您无法修改其 Schema。
-
-- 您无法使用基于 BM25 的 Text Match。
-
 - 要使外部数据可用于查询，您必须先创建索引，然后手动触发 `RefreshExternalCollection`，以便 Zilliz Cloud 为数据构建元数据和索引。
 
 - External Collection 当前不支持备份恢复和数据迁移。
+
+- 仅支持在按需计算场景下的 Database 中创建 External Collection。即将支持在 Serving Dedicated 集群中创建 External Collection。
 
 下表详细比较了 External Collection 和 Managed Collection 所支持的操作。
 
@@ -56,7 +52,7 @@ import Admonition from '@theme/Admonition';
    <tr>
      <th colspan="2"></th>
      <th><p><strong>Managed Collection</strong></p><p>(Serving 集群)</p></th>
-     <th><p><strong>External Collection</strong></p><p>(Serving 集群 or 按需计算场景下的 Database)</p></th>
+     <th><p><strong>External Collection</strong></p><p>(按需计算场景下的 Database)</p></th>
      <th><p><strong>Managed Collection</strong></p><p>(按需计算场景下的 Database)</p></th>
    </tr>
    <tr>
@@ -142,7 +138,7 @@ import Admonition from '@theme/Admonition';
      <td rowspan="2"><p><strong>Schema</strong></p></td>
      <td><p><strong>AddField</strong></p></td>
      <td><p>✅</p></td>
-     <td><p>❌</p></td>
+     <td><p>✅</p></td>
      <td><p>✅</p></td>
    </tr>
    <tr>
@@ -286,13 +282,13 @@ import Admonition from '@theme/Admonition';
    <tr>
      <td><p><strong>Functions</strong></p></td>
      <td><p>✅</p></td>
-     <td><p>❌</p></td>
+     <td><p>✅</p></td>
      <td><p>✅</p></td>
    </tr>
    <tr>
      <td><p><strong>Full-text Search/Text Match</strong></p></td>
      <td><p>✅</p></td>
-     <td><p>❌</p></td>
+     <td><p>✅</p></td>
      <td><p>✅</p></td>
    </tr>
    <tr>
