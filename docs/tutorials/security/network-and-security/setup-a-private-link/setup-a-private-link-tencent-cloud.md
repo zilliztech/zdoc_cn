@@ -19,11 +19,8 @@ keywords:
   - 大模型向量数据库
   - 私网
   - 腾讯云
-
 ---
-
 import Admonition from '@theme/Admonition';
-
 
 import Procedures from '@site/src/components/Procedures';
 
@@ -39,31 +36,27 @@ import Procedures from '@site/src/components/Procedures';
 
 </Admonition>
 
-Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会[收取一定费用](https://help.aliyun.com/zh/privatelink/product-overview/billing-description)。
+Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能会[收取一定费用](https://cloud.tencent.com/document/product/1451/57263)。
 
 ## 配置思路\{#configuration-roadmap}
 
 如需启用访问 Zilliz Cloud 集群的私网连接，您需要：
 
 - 通过腾讯云控制台指定云服务地域开通私网连接，并在您的 VPC 中创建一个终端节点。
-
 - 将上述信息提交给 Zilliz Cloud 以完成信息登记。
-
 - 前往腾讯云控制台，使用该域名前缀创建一条私网解析记录。
 
 ## 前提条件\{#before-you-start}
 
 - 您已经注册了 Zilliz Cloud。
-
 - 您已经创建了 Zilliz Cloud 腾讯云集群。
-
 - 您在上述 Zilliz Cloud 腾讯云集群所在云服务地域有 [VPC](https://console.cloud.tencent.com/vpc/vpc)。
 
-    该 VPC 中部署了需要访问上述 Zilliz Cloud 腾讯云集群的业务资源。如果您尚未创建 VPC，可前往腾讯云[私有网络](https://console.cloud.tencent.com/vpc/vpc)管理界面，完成创建。
+  该 VPC 中部署了需要访问上述 Zilliz Cloud 腾讯云集群的业务资源。如果您尚未创建 VPC，可前往腾讯云[私有网络](https://console.cloud.tencent.com/vpc/vpc)管理界面，完成创建。
 
 ## 创建 Private Endpoint\{#create-private-endpoint}
 
-本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 阿里云集群创建私网连接。
+本节将按照配置思路详细介绍如何为您的 Zilliz Cloud 腾讯云集群创建私网连接。
 
 登陆 Zilliz Cloud，选择合适的项目。在项目左侧导航栏中选择**网络 > 私网连接**，并单击**创建 Private Endpoint**。
 
@@ -100,14 +93,12 @@ Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能�
 <Procedures>
 
 1. 将左上角的云服务地域修改为您的 Zilliz Cloud 腾讯云集群所在地域（示例值为**北京**）。
+2. 并在其右侧的下拉选项框中选择需要访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC（示例值为 **Default-VPC (172.21.0.0/16)**）。
+3. 单击**新建**，在弹出的**新建终端节点**中填写必要的信息。
 
-1. 并在其右侧的下拉选项框中选择需要访问您的 Zilliz Cloud 腾讯云集群的业务资源所在 VPC（示例值为 **Default-VPC (172.21.0.0/16)**）。
+   ![CeJ5b0nByojIMXx0r6aclR31ncg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CeJ5b0nByojIMXx0r6aclR31ncg.png "CeJ5b0nByojIMXx0r6aclR31ncg")
 
-1. 单击**新建**，在弹出的**新建终端节点**中填写必要的信息。
-
-    ![CeJ5b0nByojIMXx0r6aclR31ncg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/CeJ5b0nByojIMXx0r6aclR31ncg.png "CeJ5b0nByojIMXx0r6aclR31ncg")
-
-    <table>
+   <table>
        <tr>
          <th><p>参数名称</p></th>
          <th><p>参数说明</p></th>
@@ -141,10 +132,9 @@ Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能�
          <td><p>Zilliz Cloud 帐户相关信息。</p><p>请选择 <strong>其它账户</strong>，并填写之前复制或记录的 <strong>Zilliz Cloud 腾讯云帐号 ID (UIN)</strong> 和 <strong>Zilliz 终端节点服务 ID。</strong></p></td>
        </tr>
     </table>
+4. 单击**验证**并**确定**后，返回[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面。复制 **ID/名称**列中的终端节点实例 ID。
 
-1. 单击**验证**并**确定**后，返回[终端节点](https://console.cloud.tencent.com/vpc/vpce)管理界面。复制 **ID/名称**列中的终端节点实例 ID。
-
-    ![Gb92bR4HRoMBtOxwnDncFJLrnQg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Gb92bR4HRoMBtOxwnDncFJLrnQg.png "Gb92bR4HRoMBtOxwnDncFJLrnQg")
+   ![Gb92bR4HRoMBtOxwnDncFJLrnQg](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/Gb92bR4HRoMBtOxwnDncFJLrnQg.png "Gb92bR4HRoMBtOxwnDncFJLrnQg")
 
 </Procedures>
 
@@ -165,7 +155,6 @@ Zilliz Cloud 不会针对私网连接收费，但您的云服务提供商可能�
 此时，您需要复制或记录
 
 - 该终端节点的 **IP 地址**（示例值为 **172.21.0.4**）
-
 - 您的 Zilliz Cloud 腾讯云集群私网连接地址 （示例值为 **in01-xxxxxxxxxxx-privatelink.tc-ap-xxxxxxx**）。
 
 ## 获取 Private Endpoint\{#obtain-a-private-link}
@@ -186,17 +175,15 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 
 1. 开通私有域解析服务。如已开通，可忽略此步骤。
 
-    ![UX11bvnEJo9P6wxFHdicnVCIn6d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UX11bvnEJo9P6wxFHdicnVCIn6d.png "UX11bvnEJo9P6wxFHdicnVCIn6d")
+   ![UX11bvnEJo9P6wxFHdicnVCIn6d](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/UX11bvnEJo9P6wxFHdicnVCIn6d.png "UX11bvnEJo9P6wxFHdicnVCIn6d")
+2. 进入**私有域列表**，单击**新建私有域**。
 
-1. 进入**私有域列表**，单击**新建私有域**。
+   ![O7iPbju0RoHKtnxHHjKcCarLnIh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/O7iPbju0RoHKtnxHHjKcCarLnIh.png "O7iPbju0RoHKtnxHHjKcCarLnIh")
+3. 填写私有域解析相关信息。
 
-    ![O7iPbju0RoHKtnxHHjKcCarLnIh](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/O7iPbju0RoHKtnxHHjKcCarLnIh.png "O7iPbju0RoHKtnxHHjKcCarLnIh")
+   ![J25YbPFCYo8j5gxwk98cbjv0nkc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/J25YbPFCYo8j5gxwk98cbjv0nkc.png "J25YbPFCYo8j5gxwk98cbjv0nkc")
 
-1. 填写私有域解析相关信息。
-
-    ![J25YbPFCYo8j5gxwk98cbjv0nkc](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/J25YbPFCYo8j5gxwk98cbjv0nkc.png "J25YbPFCYo8j5gxwk98cbjv0nkc")
-
-    <table>
+   <table>
        <tr>
          <th><p>参数名称</p></th>
          <th><p>参数说明</p></th>
@@ -211,17 +198,15 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
        </tr>
     </table>
 
-    其它参数保持默认即可。
+   其它参数保持默认即可。
+4. 单击**确定**，即可查看已创建的私有域记录。
 
-1. 单击**确定**，即可查看已创建的私有域记录。
+   ![IQepbWHV6o7BKixCms0cEQQ3n0O](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IQepbWHV6o7BKixCms0cEQQ3n0O.png "IQepbWHV6o7BKixCms0cEQQ3n0O")
+5. 单击刚才创建的私有域记录**操作**列中的**解析**，并在解析记录列表中添加解析记录。
 
-    ![IQepbWHV6o7BKixCms0cEQQ3n0O](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/IQepbWHV6o7BKixCms0cEQQ3n0O.png "IQepbWHV6o7BKixCms0cEQQ3n0O")
+   ![B4uJbhlDOogfjrxkNjdcaT1fnZC](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/B4uJbhlDOogfjrxkNjdcaT1fnZC.png "B4uJbhlDOogfjrxkNjdcaT1fnZC")
 
-1. 单击刚才创建的私有域记录**操作**列中的**解析**，并在解析记录列表中添加解析记录。
-
-    ![B4uJbhlDOogfjrxkNjdcaT1fnZC](https://zdoc-images.oss-cn-hangzhou.aliyuncs.com/B4uJbhlDOogfjrxkNjdcaT1fnZC.png "B4uJbhlDOogfjrxkNjdcaT1fnZC")
-
-    <table>
+   <table>
        <tr>
          <th><p>参数名称</p></th>
          <th><p>参数说明</p></th>
@@ -240,7 +225,7 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
        </tr>
     </table>
 
-    其它参数保持默认即可。添加完成后，单击**保存**。
+   其它参数保持默认即可。添加完成后，单击**保存**。
 
 </Procedures>
 
@@ -257,19 +242,15 @@ Private Endpoint 创建完成后，您可以前往**集群详情**页查看该�
 <Procedures>
 
 1. 前往目标集群的**集群详情**页面。
-
-1. 找到**连接信息**部分。
-
-1. 点击集群公共 Endpoint 旁边的**设置图标**。
-
-1. 阅读弹窗信息，然后点击**关闭**。
+2. 找到**连接信息**部分。
+3. 点击集群公共 Endpoint 旁边的**设置图标**。
+4. 阅读弹窗信息，然后点击**关闭**。
 
 </Procedures>
 
 <Admonition type="info" icon="📘" title="说明">
 
 - 私网连接仅影响数据面（Data Plane）的操作。控制面（Control Plane）的操作仍然可以通过公网进行。
-
 - 重新启用公共 Endpoint 后，请您耐心等待。本地 DNS 缓存过期后公网访问才可生效。
 
 </Admonition>
